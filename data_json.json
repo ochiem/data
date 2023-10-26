@@ -4,9 +4,9 @@
             "name": "KUCOIN",
             "endpoint": "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=",
             "response": {
-                                    "bid": "data.bestBid",
-                                    "ask": "data.bestAsk"
-                                },
+                            "bid": "data.bestBid",
+                            "ask": "data.bestAsk"
+                        },
             "pairs": {
                                 "0": "USDT",
                                 "1": "BTC",
