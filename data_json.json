@@ -59,18 +59,20 @@
         "link": "https://www.okx.com/trade-spot/"
    }
     ],
-    "server_corss": [
-        "https://server15.povaf41444.workers.dev/?",
-        "https://server16.niromaf426.workers.dev/?",
-        "https://server17.kasoda9624.workers.dev/?",
-        "https://server18.befim19137.workers.dev/?",
-        "https://server19.gafigaf751.workers.dev/?",
-        "https://server20.gayomep515.workers.dev/?",
-        "https://server21.becibov328.workers.dev/?",
-        "https://server22.togid93865.workers.dev/?",
-        "https://server24.yaleve6056.workers.dev/?",
-        "https://server23.bagotof270.workers.dev/?"
-    ],
+    "server_corss": [ 
+      {
+          "0": "https://server15.povaf41444.workers.dev/?",
+          "1":"https://server16.niromaf426.workers.dev/?",
+          "2": "https://server17.kasoda9624.workers.dev/?",
+          "3":"https://server18.befim19137.workers.dev/?",
+          "4":"https://server19.gafigaf751.workers.dev/?",
+          "5":"https://server20.gayomep515.workers.dev/?",
+          "6": "https://server21.becibov328.workers.dev/?",
+          "7" : "https://server22.togid93865.workers.dev/?",
+          "8" : "https://server24.yaleve6056.workers.dev/?",
+          "9" : "https://server23.bagotof270.workers.dev/?"
+    }
+  ],
     "chains": [
         {
             "id": "1",
