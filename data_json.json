@@ -17,7 +17,7 @@
         },
         {
             "name": "BINANCE",
-            "endpoint": "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=",
+            "endpoint": "https://api.binance.me/api/v3/ticker/bookTicker?symbol=",
             "response": {
                                   "bid": "bidPrice",
                                   "ask": "askPrice"
@@ -28,7 +28,7 @@
                               "2": "ETH",
                               "3": "BNB"
                           }, 
-            "link": "https://www.kucoin.com/trade/"
+            "link": "https://www.binance.me/en/trade/"
         },
         {
             "name": "INDODAX",
