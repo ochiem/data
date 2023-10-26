@@ -1,25 +1,65 @@
 {
-    "market": [
+    "markets": [
         {
-            "name_market": "kucoin",
+            "name": "KUCOIN",
             "endpoint": "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=",
             "response": {
-                            "bid": "data.bestBid",
-                            "ask": "data.bestAsk"
-                        },
-            "link_market": "https://www.kucoin.com/trade/"
+                                    "bid": "data.bestBid",
+                                    "ask": "data.bestAsk"
+                                },
+            "pairs": {
+                                "0": "USDT",
+                                "1": "BTC",
+                                "2": "ETH"
+                            },           
+
+            "link": "https://www.kucoin.com/trade/"
         },
         {
-            "name_market": "BINANCE",
+            "name": "BINANCE",
             "endpoint": "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=",
             "response": {
-                            "bid": "bidPrice",
-                            "ask": "askPrice"
+                                  "bid": "bidPrice",
+                                  "ask": "askPrice"
+                              },
+            "pairs": {
+                              "0": "USDT",
+                              "1": "BTC",
+                              "2": "ETH",
+                              "3": "BNB"
+                          }, 
+            "link": "https://www.kucoin.com/trade/"
+        },
+        {
+            "name": "INDODAX",
+            "endpoint": "https://www.okx.com/api/v5/market/ticker?instId=",
+            "response": {
+                          "bid": "data[0].bidPx,",
+                          "ask": "data[0].askPx"
                         },
-            "link_market": "https://www.kucoin.com/trade/"
-        }
+            "pairs": {
+                          "0": "USDT",
+                          "1": "BTC"
+                      },           
+
+            "link": "https://www.okx.com/trade-spot/"
+       },
+       {
+        "name": "OKEX",
+        "endpoint": "https://www.okx.com/api/v5/market/ticker?instId=",
+        "response": {
+                      "bid": "data[0].bidPx,",
+                      "ask": "data[0].askPx"
+                    },
+        "pairs": {
+                      "0": "USDT",
+                      "1": "BTC"
+                  },           
+
+        "link": "https://www.okx.com/trade-spot/"
+   },
     ],
-    "server": [
+    "server_corss": [
         "https://server15.povaf41444.workers.dev/?",
         "https://server16.niromaf426.workers.dev/?",
         "https://server17.kasoda9624.workers.dev/?",
@@ -34,50 +74,62 @@
     "chains": [
         {
             "id": "1",
-            "name_chain": "ETH",
+            "name": "ETH",
             "base_url": "https://bscscan.com/token/",
-            "pair": [
+            "pairs": [
                         {
-                            "name_pair": "ETH",
-                            "sc_pair": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-                            "desimal_pair": "18"
+                            "name": "ETH",
+                            "sc": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                            "desimal": "18"
                         },
                         {
-                            "name_pair": "USDT",
-                            "sc_pair": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-                            "desimal_pair": "6"
+                            "name": "USDT",
+                            "sc": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                            "desimal": "6"
                         },
                         {
-                            "name_pair": "BNT",
-                            "sc_pair": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
-                            "desimal_pair": "18"
+                            "name": "BNT",
+                            "sc": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
+                            "desimal": "18"
                         }
                     ]
         },
         {
             "id": "56",
-            "name_chain": "BSC",
+            "name": "BSC",
             "base_url": "https://ethscan.com/token/",
-            "pair": [
+            "pairs": [
                         {
-                          "name_pair": "USDT",
-                          "sc_pair": "0x55d398326f99059fF775485246999027B3197955",
-                          "desimal_pair": "18"
+                          "name": "USDT",
+                          "sc": "0x55d398326f99059fF775485246999027B3197955",
+                          "desimal": "18"
                         },
                         {
-                            "name_pair": "BNB",
-                            "sc_pair": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-                            "desimal_pair": "18"
+                            "name": "BNB",
+                            "sc": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                            "desimal": "18"
                         }
                     ]
         },
         {
             "id": "42161",
-            "name_chain": "arb",
-            "base_url": "https://erbscan.io/token/"
+            "name": "arb",
+            "base_url": "https://erbscan.io/token/",
+            "pairs": [
+              {
+                "name": "USDT",
+                "sc": "0x55d398326f99059fF775485246999027B3197955",
+                "desimal": "18"
+              },
+              {
+                  "name": "BNB",
+                  "sc": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                  "desimal": "18"
+              }
+          ]
         }
     ],
-    "token": [
+    "tokens": [
         {
             "name":"BINANCE_BSC",
             "wallet_stock":"0x8894E0a0c962CB723c1976a4421c95949bE2D4E3",
