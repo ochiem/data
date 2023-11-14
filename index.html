@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>MULTI SCAN :: CEX vs DEX</title>
-    <link rel="icon" href="https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-1/scan-62.png" type="image/x-icon">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQos_LsWFzeI_g7U-lmaA3z1netW2USOsXkQ&usqp=CAU" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
@@ -16,12 +16,13 @@
             color: rgb(5, 125, 39);
             font-weight: bolder;
         }
-          body {
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 12px;
+        body {
+          font-family:sans-serif; 
+          font-size: 14px;
+          font-weight: bold;
           padding: 8px;
-          background-image: linear-gradient(#71f21f,#e7efd8, #a0f179);
-          color: #202124;
+          background-image: linear-gradient(#9389eb,#e7efd8, #95a6ed);
+          color: #000;
         }        
         a{
             color:black;
@@ -33,33 +34,33 @@
             color:black;
         }
         .token{
-          background-color: #dd6a1e;
+          background-color: #b574fc;
           color: rgb(255, 254, 254);
           text-align: center;
         }
-       .inch {
+       .PARA {
         text-align: center;
-      background-color: rgb(241, 171, 185); /* Ganti dengan warna yang Anda inginkan */
+      background-color: rgb(255 193 193); /* Ganti dengan warna yang Anda inginkan */
        }
        .binance {
         text-align: center;
-      background-color: rgb(240, 206, 32); /* Ganti dengan warna yang Anda inginkan */
+      background-color: rgb(250 189 36); /* Ganti dengan warna yang Anda inginkan */
        }
        .open {
         text-align: center;
-      background-color: #d769ec; /* Ganti dengan warna yang Anda inginkan */
+      background-color: #69d5ec; /* Ganti dengan warna yang Anda inginkan */
        }
        .matcha {
         text-align: center;
       background-color: #93ef93; /* Ganti dengan warna yang Anda inginkan */
        }
-       .PARA {
+       .inch {
         text-align: center;
-      background-color: #64b3ef; /* Ganti dengan warna yang Anda inginkan */
+      background-color: #8bef64; /* Ganti dengan warna yang Anda inginkan */
        }
        .KYBER {
         text-align: center;
-      background-color: #15e167; /* Ganti dengan warna yang Anda inginkan */
+      background-color: #e9ea1d; /* Ganti dengan warna yang Anda inginkan */
        }
 
        .ODOS {
@@ -129,15 +130,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 style="text-align: center; color:blue;"><img src="https://ambon.go.id/wp-content/uploads/2018/01/new-animated-gif-icon-10.gif" width="25x25"/> MULTI SCAN :: SETTING DATA </h3><hr/>
+            <h3 style="text-align: center; color:#120305;"><img src="https://ambon.go.id/wp-content/uploads/2018/01/new-animated-gif-icon-10.gif" width="25x25"/> MULTI SCAN :: SETTING DATA </h3><hr/>
             <form id="form1">
 
                 <div class="form-row">
-                    <div class="form-group col-md-3" style="text-align: center; ">
-                      <label for="name" style="color: red;font-size: 17px;"> TOKEN :</label>
-                        <input type="password" id="token" value="NTYwNjA3NDg4NCAyMDIzLTExLTE1IFdFQl9UUklBTCBZRVM=" required="required"> <button type="button" id="checkBtn" class="btn btn-danger"  >BUKA KUNCI </button>
+                    <div class="form-group col-md-2" style="text-align: center; ">
+                      <label for="name" style="color: #120305;font-size: 17px;"> TOKEN :</label>
+                        <input type="password" id="token" value="NTYwNjA3NDg4NCAyMDIzLTExLTE2IFRFU1RFUi1YIFlFU1czQi0wUDFULUczPTM=" required="required"> <button type="button" id="checkBtn" class="btn btn-danger"  >BUKA KUNCI </button>
                         <div class="error-message"></div>
-                        <input type="text" id="idserver" readonly="readonly" style="display: none;">
+                        <label for="idserver" style="display: none;" id="idserver"></label> 
                         <div class="error-message"></div>
                         <label for="exdate" id="exdate"></label>                  
                     </div>
@@ -152,11 +153,21 @@
                     <div class="form-group col-md-1">
                         <label for="mkiri">SCAN SPEED</label>
                         <select id="delay" name="delay" >
-                          <option value="1900" selected>STANDART</option>
-                          <option value="1800" >MEDIUM</option>
-                          <option value="1700">FAST</option>
+                          <option value="1650" selected>STANDART</option>
+                          <option value="1550" >MEDIUM</option>
+                          <option value="1400">FAST</option>
                         </select>
                     </div>
+
+                    <div class="form-group col-md-1" >
+                      <label for="netpnl">SERVER</label>
+                      <select id="serverdex" name="serverdex" >
+                        <option value="SERVER1" selected>SERVER1</option>
+                        <option value="SERVER2">SERVER2</option>
+                        <option value="SERVER3">SERVER3</option>   
+                    </select>                            
+                   </div>
+                           
                     <div class="form-group col-md-1">
                         <label for="netpnl">BRUTO PNL</label>
                         <input type="checkbox"  id="checkboxFilter" style="display: none;" checked="checked">
@@ -166,23 +177,23 @@
                         <label for="netpnl">ID TELE</label>
                         <input type="number"  class="form-control" checked="checked"  id="idtele" name="input1"  readonly required>
                     </div>
-                  <div class="form-group col-md-2">
+                  <div class="form-group col-md-1">
                         <div class="form-group">
                             <div><label for="input2">PAIR DEX</label></div>
                             <label for="option1">
                                 <input type="radio" id="option1" name="radioOption" checked="checked" value="USDT"> USDT
                             </label>
-                            <label for="option4">
+                           <!-- <label for="option4">
                                 <input type="radio" id="option2" name="radioOption" value="USDC"> USDC
                             </label>
 
                             <label for="option4">
                                 <input type="radio" id="option5" name="radioOption" value="FDUSD"> FDUSD
                             </label>
-
+                            
                             <label for="option4">
                               <input type="radio" id="option3" name="radioOption" value="BTC"> BTC
-                           </label>
+                           </label>-->
 
                             <label for="option5">
                                 <input type="radio" id="option4" name="radioOption" value="BNB"> BNB
@@ -190,14 +201,19 @@
 
                         </div> 
                     </div>
-                    <div class="form-group col-md-1" >
-                      <label for="netpnl">SERVER</label>
-                      <select id="serverdex" name="serverdex" >
-                        <option value="SERVER1" selected>SERVER1</option>
-                        <option value="SERVER2">SERVER2</option>
-                        <option value="SERVER3">SERVER3</option>   
-                     </select>                            
+
+                    <div class="form-group col-md-3"><label for="input2">MARKET DEX</label>
+                      <div id="akses" style="display: none;">
+                        
+                          <input  type="checkbox" id="1inch" checked class="myCheckbox"> <label class="form-check-label" for="autorun">1INCH</label>
+                          <input type="checkbox" id="open"  class="myCheckbox"> <label class="form-check-label" for="autorun">OPEN</label>
+                          <input type="checkbox" id="PARA"   class="myCheckbox"> <label class="form-check-label" for="autorun">PARA</label> 
+                          <input type="checkbox" id="KYBER"   class="myCheckbox"> <label class="form-check-label" for="autorun">KYBER</label>                           
+                          <input type="checkbox" id="ODOS"   class="myCheckbox"> <label class="form-check-label" for="autorun">ODOS</label>                                                    
+
+                      </div>
                   </div>
+
                 </div>
 
                 <div class="form-row">
@@ -311,18 +327,13 @@
             </div>
           
 
-                    <div class="form-group col-md-4">
-                        <div id="akses" style="display: none;">
-                            <input  type="checkbox" id="1inch" checked class="myCheckbox"> <label class="form-check-label" for="autorun">1INCH</label>
-                            <input type="checkbox" id="open"  class="myCheckbox"> <label class="form-check-label" for="autorun">OPEN</label>
-                            <input type="checkbox" id="PARA"   class="myCheckbox"> <label class="form-check-label" for="autorun">PARA</label> 
-                            <input type="checkbox" id="KYBER"   class="myCheckbox"> <label class="form-check-label" for="autorun">KYBER</label>                           
-                            <input type="checkbox" id="ODOS"   class="myCheckbox"> <label class="form-check-label" for="autorun">ODOS</label>                           
-                            <input type="checkbox"  id="autorun">     <label class="form-check-label" for="autorun">AUTORUN</label>&nbsp;&nbsp;
-                            <button type="button" id="start"    class="btn btn-primary">START</button>&nbsp;&nbsp;<button  type="button" id="refresh2"  class="btn btn-danger">STOP</button>&nbsp;&nbsp;
-                            
-                        </div>
-                    </div>
+            <div class="form-group col-md-2">
+              <label for="netpnl">
+              <input type="checkbox"  id="autorun">     <label class="form-check-label" for="autorun">AUTORUN</label></label>
+              <button type="button" id="start"    class="btn btn-primary">START</button>&nbsp;&nbsp;<button  type="button" id="refresh2"  class="btn btn-danger">STOP</button>&nbsp;&nbsp;
+           </div>
+
+
                 </div>
 
             </form>
@@ -330,7 +341,7 @@
     </div>
     <div class="row">
         <div class="table-responsive table-sm ">
-            <h5 id="hasil" style="margin:15px 0px; text-align: center;">:: HASIL SCANNING</h5> 
+          <h5 id="hasil" style="margin:15px 0px;text-align: center;background-color: aliceblue;padding: 12px;">:: HASIL SCANNING</h5>
 
             <h2 id="gwei" style="color:rgb(228, 92, 13); font-weight: bolder; font-size:14px; text-align: center;"></h2><hr/>
             <div class="row" style="text-align: center; color: blue;">
@@ -354,7 +365,7 @@
             <div class="tableFixHead">
               
             <table id="myTable" class="table table-striped table-hover">
-                <thead style="background-color: bisque; margin: 0.4em; ">
+                <thead style="color:#000000; margin: 0.4em; ">
                 <tr>
                     <th class="token">NO</th>
                     <th class="binance">BINANCE</th>
@@ -1699,7 +1710,7 @@
 
      function cekTOKEN(){
          // event.preventDefault();
-          var encryptionKey = '0P1T-G3=3P4Y';
+          var encryptionKey = 'W3B-0P1T-G3=3';
           var encryptedDate = $('#token').val();
           
           var decryptedDate = atob(encryptedDate, encryptionKey);
@@ -1718,8 +1729,9 @@
           localStorage.setItem('idtele', words[0]);
           localStorage.setItem('idserver', words[2]);
           localStorage.setItem('exdate', words[1]);
+          localStorage.setItem('key', words[3]);
 
-          if (currentDate <= words[1]) {
+          if (currentDate <= words[1] && words[3]=='YES'+encryptionKey) {
             $("#akses").show();
             $('#checkBtn').hide();
             $("#exdate").text("Tgl Expired : " + localStorage.getItem('exdate'));
@@ -1752,6 +1764,7 @@
         $('input[type="number"]').prop('disabled', false);
         $('input[type="checkbox"]').prop('disabled', false);
         $('input[type="radio"]').prop('disabled', false);
+
       //  $("#akses").show();
       var userToken = localStorage.getItem('token');
       if (userToken) {
