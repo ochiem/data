@@ -387,9 +387,8 @@
                 mendapatkan
                 ID TELEGRAM </li>
               <li>NET PNL - PNL bersih setelah dipotong FEE, filter sinyal yg ingin diterima, gunakan titik penganti koma
-              </li>    <li>Untuk refresh manual, tekan icon diatas </li>
-              <li>Jika status yg muncul <label style="color:red; font-size:14px;"><b>FAILED</b></label> TERUS, coba mode pesawat
-                beberapa detik </li>
+              </li>  
+                <li>JIKA BANYAK ERROR "KENA LIMIT", SILAKAN COBA GANTI SERVER!! </li>
               <li>Pastikan sudah START dengan BOT TELEGRAM ini : @mini_server_bot, cari BOT tersebut ditelegram </li>
             </ol>
             </p>
@@ -2374,7 +2373,8 @@
 
                     var row = $('<tr>');
                             row.append($('<td>').addClass("token").html(dataOutBinance.no));
-                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.askPrice+"</a> <br/> 1INCH:"+dataOutBinance.Server1INCHKiri.substring(8,16)+"<br/> PARA:"+dataOutBinance.ServerPARAKiri.substring(8,16)+""));  
+                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.askPrice+"</a>"));
+                              // <br/> 1INCH:"+dataOutBinance.Server1INCHKiri.substring(8,13)+"| PARA:"+dataOutBinance.ServerPARAKiri.substring(8,13)+"| ODOS:"+dataOutBinance.ServerODOSKiri.substring(8,13)));  
                         
                               if ($('#kiri').is(':checked')) {
                                 if ($('#1inch').is(':checked')) {
@@ -2485,7 +2485,8 @@
                                     $('#myTable').find('th#KYBERkanan').css("display","none");
                              }
 
-                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.bidPrice+"</a> <br/> 1INCH:"+dataOutBinance.Server1INCHKanan.substring(8,16)+"<br/> PARA:"+dataOutBinance.ServerPARAKanan.substring(8,16)+""));
+                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.bidPrice+"</a>"));
+                              // <br/> 1INCH:"+dataOutBinance.Server1INCHKanan.substring(8,13)+"| PARA:"+dataOutBinance.ServerPARAKanan.substring(8,13)+"| ODOS:"+dataOutBinance.ServerODOSKanan.substring(8,13)));
                             $('#myTable').append(row);
 
                     },
@@ -2753,7 +2754,7 @@
                             };
 
                       
-                        var text ="<a href=#buy1INCH"+dataIn1inch.token+"> 1INCH : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataIn1inch.token+"</a>  PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataIn1inch.token).replace("", "")+"' target=_blank> [DP] </a> <br/>"; 
+                        var text ="<a href=#buy1INCH"+dataIn1inch.token+"> 1INCH : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataIn1inch.token+"</a>  PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>"; 
                         var sinyal =parseInt(localStorage.getItem('Kanan1INCHSinyal'))+1 ;
                         var text1 ="<a href='https://app.1inch.io/#/56/classic/swap/" +dataOUT.scFrom +"/" +dataOUT.scTo +"' target=_blank>"+harga1INCH.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                         var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3080,7 +3081,7 @@
                             modalR:localStorage.getItem('mkanan')
                         };
  
-               var text ="<a href=#buyOPEN"+dataInOPEN.token+">OPEN : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInOPEN.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInOPEN.token).replace("", "")+"' target=_blank> [DP] </a><br/>";
+               var text ="<a href=#buyOPEN"+dataInOPEN.token+">OPEN : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInOPEN.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInOPEN.token).replace("USDT", "")+"' target=_blank> [DP] </a><br/>";
                var sinyal =parseInt(localStorage.getItem('KananOPENSinyal')+1);
                var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaOPEN.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3408,7 +3409,7 @@
                         };
 
 
-               var text ="<a href=#buyPARA"+dataInPARA.token+"> PARA : </a> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>"+dataInPARA.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInPARA.token).replace("", "")+"' target=_blank> [DP] </a><br/>";
+               var text ="<a href=#buyPARA"+dataInPARA.token+"> PARA : </a> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>"+dataInPARA.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInPARA.token).replace("USDT", "")+"' target=_blank> [DP] </a><br/>";
                var sinyal =parseInt(localStorage.getItem('KananPARASinyal')+1);
                var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaPARA.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3738,7 +3739,7 @@
                           };
 
 
-                var text ="<a href=#buyKYBER"+dataInKYBER.token+">KYBER : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInKYBER.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInKYBER.token).replace("", "")+"' target=_blank> [DP] </a> <br/>";
+                var text ="<a href=#buyKYBER"+dataInKYBER.token+">KYBER : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInKYBER.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInKYBER.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KananKYBERSinyal')+1);
                 var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaKYBER.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3959,7 +3960,7 @@
                 modalL: localStorage.getItem("mkiri"),
               };
 
-              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("", "")+"' target=_blank> [DP] </a> <br/>";
+              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KananODOSSinyal')+1);
                 var text1 ="<a href='https://app.odos.xyz/' target=_blank>"+hargaODOS.toFixed(7)+"</a><br/> Fee:"+totalFeeKiri.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3972,7 +3973,7 @@
                             "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
                             " \n MODAL : <b> "+ dataOUT.modalL + "</b> | PNL : <b>"+ dataOUT.PNL + "$ </b> "+
-                            " \n <b>BUY : </b> <a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"'>" +dataOUT.buy +"</a>"+
+                            " \n <b>BUY : </b> <a href='https://app.odos.xyz/' target=_blank>" +dataOUT.buy +"</a>"+
                             " \n <b>SELL : </b><a href='https://www.binance.me/en/trade/" +dataOUT.pair +"?from=markets%26theme=light%26type=spot'>" + dataOUT.sell +"</a>"+
                             " \n ESTIMASI FEE SWAP : <b>" + dataOUT.FeeSwap +"$</b>"+
                             " \n ESTIMASI TOTAL FEE : <b>" + dataOUT.totalfee +"$</b>"+
@@ -3980,7 +3981,7 @@
 
               if (PNL > parseFloat(dataInODOS.innetPNL)) {
                 // alert (PNL+""+dataInODOS.innetPNL);
-                $("#sinyalkiri").append(text13);
+                $("#sinyalkiri").append(text);
                 // var currentRow = $('#BNTto'+dataInODOS.token).html(textVolBNT);
                 //var currentRow = $('#BNTPNLto'+dataInODOS.token).html(textBNTUSDT);
                 var currentRow = $("#sellODOS" + dataInODOS.token)
@@ -4014,24 +4015,26 @@
               }
             },
             error: function (jqXHR, textStatus, errorThrown) {
-              if (jqXHR.status === 400) {
+              if (jqXHR.status == 400) {
                 // Parse respons JSON
-                try {
+                
                   var errorResponse = JSON.parse(jqXHR.responseText);
                   // Cek jika properti 'description' ada dalam respons JSON
-                  if (errorResponse && errorResponse.description) {
-                    var errorMessage = errorResponse.description;
-                    var alert1 = errorMessage;
+                  if (errorResponse && errorResponse.detail=="No viable path found") {
+                    // var errorMessage = errorResponse.detail;
+                    var alert1 = "TIDAK ADA LP (" + jqXHR.status + ")";;
                   } else {
-                    var alert1 = "Error " + jqXHR.status + ": Bad Request";
+                    var alert1 = "KOIN TIDAK TERDAFTAR (" + jqXHR.status + ")";
                   }
-                } catch (e) {
-                  var alert1 = "Error " + jqXHR.status + ": Bad Request";
-                }
-              }
-              if (jqXHR.status === 429) {
+                
+                  // var alert1 = "Error " + jqXHR.status + ": Bad Request";
+                
+              }else if (jqXHR.status == 429) {
                 var alert1 = "KENA LIMIT";
-              } else {
+              }else if (jqXHR.status == 200) {
+                var alert1 = " TIDAK DAPAT HARGA";
+              }
+               else {
                 var alert1 = jqXHR.statusText + "(" + jqXHR.status + ")";
               }
 
@@ -4166,9 +4169,9 @@
                 modalR: localStorage.getItem("mkanan"),
               };
 
-              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("", "")+"' target=_blank> [DP] </a> <br/>";
+              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KananODOSSinyal')+1);
-                var text1 ="<a href='https://app.odos.xyz/' target=_blank>"+hargaODOS.toFixed(7)+"</a>"+hargaODOS.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
+                var text1 ="<a href='https://app.odos.xyz/' target=_blank>"+hargaODOS.toFixed(7)+"</a>"+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
                 var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
                 var text13 ="ODOS : <a href=#buyODOS"+dataInODOS.token+">"+dataInODOS.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
@@ -4179,14 +4182,14 @@
                             "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
                             " \n MODAL : <b> "+ dataOUT.modalR + "</b> | PNL : <b>"+ dataOUT.PNL + "$ </b> "+
-                            " \n <b>BUY : </b> <a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"'>" +dataOUT.buy +"</a>"+
+                            " \n <b>BUY : </b> <a href='<a href='https://app.odos.xyz/' target=_blank>" +dataOUT.buy +"</a>"+
                             " \n <b>SELL : </b><a href='https://www.binance.me/en/trade/" +dataOUT.pair +"?from=markets%26theme=light%26type=spot'>" + dataOUT.sell +"</a>"+
                             " \n ESTIMASI FEE SWAP : <b>" + dataOUT.FeeSwap +"$</b>"+
                             " \n ESTIMASI TOTAL FEE : <b>" + dataOUT.totalfee +"$</b>"+
                             " \n -----------------------------------------";
 
               if (PNL > parseFloat(dataInODOS.innetPNL)) {
-                $("#sinyalkanan").append(text13);
+                $("#sinyalkanan").append(text);
                 var currentRow = $("#buyODOS" + dataInODOS.token)
                   .css({ "background-color": "green", color: "white" })
                   .html(text1)
@@ -4218,26 +4221,28 @@
               //  console.log(`Cek data ODOS berhasil!!`);
             },
             error: function (jqXHR, textStatus, errorThrown) {
-              if (jqXHR.status === 400) {
+              if (jqXHR.status == 400) {
                 // Parse respons JSON
-                try {
+                
                   var errorResponse = JSON.parse(jqXHR.responseText);
                   // Cek jika properti 'description' ada dalam respons JSON
-                  if (errorResponse && errorResponse.description) {
-                    var errorMessage = errorResponse.description;
-                    var alert1 = errorMessage;
+                  if (errorResponse && errorResponse.detail=="No viable path found") {
+                    // var errorMessage = errorResponse.detail;
+                    var alert1 = "TIDAK ADA LP (" + jqXHR.status + ")";;
                   } else {
-                    var alert1 = "Error " + jqXHR.status + ": Bad Request";
+                    var alert1 = "KOIN TIDAK TERDAFTAR (" + jqXHR.status + ")";
                   }
-                } catch (e) {
-                  var alert1 = "Error " + jqXHR.status + ": Bad Request";
-                }
-              }
-              if (jqXHR.status === 429) {
+                
+                  // var alert1 = "Error " + jqXHR.status + ": Bad Request";
+                
+              }else if (jqXHR.status == 429) {
                 var alert1 = "KENA LIMIT";
+              }else if (jqXHR.status == 200) {
+                var alert1 = "TIDAK DAPAT HARGA";
               } else {
                 var alert1 = jqXHR.statusText + "(" + jqXHR.status + ")";
               }
+
               KananODOSError = KananODOSError + 1;
               localStorage.setItem("KananODOSError", KananODOSError);
               $("#lKananODOSError").text(
