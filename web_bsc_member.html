@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>MULTI SCAN :: CEX vs DEX</title>
-    <link rel="icon" href="https://w7.pngwing.com/pngs/797/864/png-transparent-mcafee-virusscan-computer-icons-antivirus-software-computer-virus-scan-miscellaneous-avg-antivirus-software-thumbnail.png" type="image/x-icon">
-    
+    <link rel="icon" href="https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-1/scan-62.png" type="image/x-icon">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         #sinyalkiri{
@@ -135,7 +134,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-3" style="text-align: center; ">
                       <label for="name" style="color: red;font-size: 17px;"> TOKEN :</label>
-                        <input type="password" id="token" value="NTYwNjA3NDg4NCAyMDIzLTExLTE1IFdFQl9UUklBTCBZRVM=" required="required"> <button type="button" id="checkBtn" class="btn btn-danger" >BUKA KUNCI </button>
+                        <input type="password" id="token" value="" required="required"> <button type="button" id="checkBtn" class="btn btn-danger" >BUKA KUNCI </button>
                         <div class="error-message"></div>
                         <input type="text" id="idserver" readonly="readonly" style="display: none;">
                         <div class="error-message"></div>
@@ -419,13 +418,63 @@
      localStorage.setItem('idx', extractedChars);
      localStorage.setItem('SERVERDEX', 'SERVER2');
 
-       
+     /*var userToken = localStorage.getItem('token');
+      if (userToken) {
+        cekTOKEN(); 
+      } */
        $('input[type="text"]').prop('disabled', false);
         $('input[type="number"]').prop('disabled', false);
         $('input[type="checkbox"]').prop('disabled', false);
         $('input[type="radio"]').prop('disabled', false);
       //  $("#akses").show();
       
+      function cekTOKEN(){
+         // event.preventDefault();
+          var encryptionKey = '0P1T-G3=3P4Y';
+          var encryptedDate = $('#token').val();
+          
+          var decryptedDate = atob(encryptedDate, encryptionKey);
+          var currentDate = new Date().toISOString().slice(0, 10);
+
+          // Membagi kata-kata
+          var words = decryptedDate.split(' ');
+          words.forEach(function (word) {
+            $('#idtele').val(words[0]);
+          });
+          console.log("ID TELE : " + words[0]);
+
+          $('#idtele').val(words[0]);
+          $('#idserver').val(words[2]);
+          localStorage.setItem('token', encryptedDate);
+          localStorage.setItem('idtele', words[0]);
+          localStorage.setItem('idserver', words[2]);
+          localStorage.setItem('exdate', words[1]);
+
+          if (currentDate <= words[1]) {
+            $("#akses").show();
+            $('#checkBtn').hide();
+            $("#exdate").text("Tgl Expired : " + localStorage.getItem('exdate'));
+            $("#start").show();
+
+            console.log("buka kunci");
+            console.log("tgl skrg : " + currentDate);
+            console.log("batas waktu : " + words[1]);
+            console.log("id server : " + words[2]);
+
+            $('input[type="text"]').prop('disabled', false);
+            $('input[type="number"]').prop('disabled', false);
+            $('input[type="checkbox"]').prop('disabled', false);
+            $('input[type="radio"]').prop('disabled', false);
+           
+          } else {
+            $("#exdate").text("TOKEN TIDAK BERLAKU!!");
+            console.log("kunci tertutup");
+            console.log("tgl skrg : " + currentDate);
+            console.log("batas waktu : " + words[1]);
+            console.log("id server : " + words[2]);
+          }      
+      }
+
       var serverURLs = [
       "https://1.iiknrbtxoz.workers.dev/?",
       "https://2.5iz3h20guj.workers.dev/?",
@@ -525,6 +574,15 @@
             "https://new5.nafeyis928.workers.dev/?",
       ];
 
+       // Function to update the server array
+       function updateServerArray(serverArray) {
+          for (var i = 0; i < serverURLs.length; i++) {
+                localStorage.setItem('Server' + (i + 1), serverURLs[i]);
+            }
+          // Perform actions based on the selected server array
+          console.log("Selected Server Array:", serverArray);
+        }
+
 // Event handler for dropdown change
     $("#serverdex").on("change", function() {
         var selectedServer = $(this).val();
@@ -540,20 +598,12 @@
         }
         // Add more conditions for additional servers if needed
       });
-       // Function to update the server array
-  function updateServerArray(serverArray) {
-    for (var i = 0; i < serverURLs.length; i++) {
-          localStorage.setItem('Server' + (i + 1), serverURLs[i]);
-      }
-    // Perform actions based on the selected server array
-    console.log("Selected Server Array:", serverArray);
-  }
+
 
   // Initial setup (you can choose the default serverdex array here)
   updateServerArray(serverURLs3);
       // Memasukkan URL server ke dalam localStorage
 
-      
         $('#mkiri').val(localStorage.getItem('mkiri'));
         $('#mkanan').val(localStorage.getItem('mkanan'));
         $('#idtele').val(localStorage.getItem('idtele'));
@@ -590,26 +640,6 @@
       }
       if (localStorage.getItem('api1INCHKanan31') != null) {
         $('#api1INCHKanan31').val(localStorage.getItem('api1INCHKanan31'));
-      }
-
-      if (localStorage.getItem('apiMATCHAKiri') != null) {
-        $('#apiMATCHAKiri').val(localStorage.getItem('apiMATCHAKiri'));
-      }
-      if (localStorage.getItem('apiMATCHAKanan') != null) {
-        $('#apiMATCHAKanan').val(localStorage.getItem('apiMATCHAKanan'));
-      }
-      if (localStorage.getItem('apiMATCHAKiri2') != null) {
-        $('#apiMATCHAKiri2').val(localStorage.getItem('apiMATCHAKiri2'));
-      }
-      if (localStorage.getItem('apiMATCHAKanan2') != null) {
-        $('#apiMATCHAKanan2').val(localStorage.getItem('apiMATCHAKanan2'));
-      }
-
-      if (localStorage.getItem('apiDODO') != null) {
-        $('#apiDODO').val(localStorage.getItem('apiDODO'));
-      }
-      if (localStorage.getItem('apiDODO2') != null) {
-        $('#apiDODO2').val(localStorage.getItem('apiDODO2'));
       }
 
  var tickers =[
@@ -1984,8 +2014,8 @@
                     }
           }
       $('#checkBtn').click(function (event) {      
-
-        event.preventDefault();
+        cekTOKEN();
+       /* event.preventDefault();
         var encryptionKey = '0P1T-G3=3P4Y';
         var encryptedDate = $('#token').val();
 
@@ -2028,7 +2058,7 @@
           console.log("tgl skrg : " + currentDate);
           console.log("batas waktu : " + words[1]);
           console.log("id server : " + words[2]);
-        }
+        }*/
       });
         // BUTTON START SCAN
         var nama = ""
@@ -2436,7 +2466,7 @@
                                     $('#myTable').find('th#KYBERkiri').css("display","none");
                               } 
 
-                              row.append($('<td class=token>').css({"color":"white","text-align":"center"}).html(" iconCP "+(dataOutBinance.token).replace("USDT", "")+" | "+link+' <br/>'+linkStok));
+                              row.append($('<td class=token>').css({"color":"white","text-align":"center"}).html(""+(dataOutBinance.token).replace("USDT", "")+" | "+link+' <br/>'+linkStok));
 
                             if ($('#kanan').is(':checked')) {
                                 if ($('#1inch').is(':checked')) {
