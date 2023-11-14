@@ -2643,7 +2643,7 @@
                             if (errorResponse && errorResponse.description) {
                                 var errorMessage = errorResponse.description;
                                 if(errorMessage==="insufficient liquidity"){
-                                    var alert1="Tidak ADA LP";
+                                    var alert1="NO LP";
                                      ELP=ELP+1;
 
                                     localStorage.setItem("ELP",ELP);
@@ -2820,7 +2820,7 @@
                             if (errorResponse && errorResponse.description) {
                                var errorMessage = errorResponse.description;
                                if(errorMessage==="insufficient liquidity"){
-                                 var alert1="Tidak ADA LP";
+                                 var alert1="NO LP";
                                  ELP=ELP+1;
                                  localStorage.setItem("ELP",ELP);
                                //  $("#ErrorLP").text("#ERROR NO LP : "+localStorage.getItem('ELP'));
@@ -4022,9 +4022,9 @@
                   // Cek jika properti 'description' ada dalam respons JSON
                   if (errorResponse && errorResponse.detail=="No viable path found") {
                     // var errorMessage = errorResponse.detail;
-                    var alert1 = "TIDAK ADA LP (" + jqXHR.status + ")";;
+                    var alert1 = "NO LP";
                   } else {
-                    var alert1 = "KOIN TIDAK TERDAFTAR (" + jqXHR.status + ")";
+                    var alert1 = "NO TERDAFTAR";
                   }
                 
                   // var alert1 = "Error " + jqXHR.status + ": Bad Request";
@@ -4228,9 +4228,9 @@
                   // Cek jika properti 'description' ada dalam respons JSON
                   if (errorResponse && errorResponse.detail=="No viable path found") {
                     // var errorMessage = errorResponse.detail;
-                    var alert1 = "TIDAK ADA LP (" + jqXHR.status + ")";;
+                    var alert1 = "NO LP";
                   } else {
-                    var alert1 = "KOIN TIDAK TERDAFTAR (" + jqXHR.status + ")";
+                    var alert1 = "NO TERDAFTAR";
                   }
                 
                   // var alert1 = "Error " + jqXHR.status + ": Bad Request";
