@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WEB BSC :: CEX vs DEX</title>
+    <title>MULTI SCAN :: CEX vs DEX</title>
+    <link rel="icon" href="https://thumbs.dreamstime.com/b/black-mix-icon-smart-scan-security-antivirus-logo-scan-technology-electronic-black-mix-icon-smart-scan-technology-157623380.jpg" type="image/x-icon">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         #sinyalkiri{
@@ -127,7 +129,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 style="text-align: center; color:blue;"><img src="https://ambon.go.id/wp-content/uploads/2018/01/new-animated-gif-icon-10.gif" width="25x25"/> MULTI DEX BSC :: SETTING DATA </h3><hr/>
+            <h3 style="text-align: center; color:blue;"><img src="https://ambon.go.id/wp-content/uploads/2018/01/new-animated-gif-icon-10.gif" width="25x25"/> MULTI SCAN :: SETTING DATA </h3><hr/>
             <form id="form1">
 
                 <div class="form-row">
@@ -2280,7 +2282,7 @@
 
                    for (var i = 0; i < group.length; i++) {
   
-                         var a =(groupIndex * 4 + i);
+                         var a =(groupIndex * 5 + i);
                          console.log('Index Data Awal: ' + (groupIndex * 5 + i) + ', Nilai: ' + group[a]);
                            if (a % 5 === 0) {
                              processSentIndex(a, delay,localStorage.getItem('api1INCHKiri31'),localStorage.getItem('api1INCHKanan31'),localStorage.getItem('Server5'),localStorage.getItem('Server10'),localStorage.getItem('Server15'),localStorage.getItem('Server20'),localStorage.getItem('Server21'),localStorage.getItem('Server22'));
@@ -2516,10 +2518,10 @@
                         Server1INCHKiri+"https://api.1inch.dev/swap/v5.2/56/quote?src="+dataIn1inch.scFrom+
                         "&dst="+dataIn1inch.scTo+
                         "&amount=" +
-                    //    jumlahL+"&includeGas=true";
-                        jumlahL+"&includeGas=true&protocols=PANCAKESWAP,VENUS,JULSWAP,BAKERYSWAP,BSC_ONE_INCH_LP,ACRYPTOS,BSC_DODO,APESWAP,SPARTAN_V2,VSWAP,VPEGSWAP,HYPERSWAP,BSC_DODO_V2,SWAPSWIPE,ELLIPSIS_FINANCE,BSC_NERVE,BSC_SMOOTHY_FINANCE,CHEESESWAP,PANCAKESWAP_V2,MDEX,WARDEN,WAULTSWAP,BSC_ONE_INCH_LIMIT_ORDER,BSC_ONE_INCH_LIMIT_ORDER_V2,ACSI_FINANCE,GAMBIT_FINANCE,JETSWAP,BSC_UNIFI,BSC_KYBER_DMM,BSC_BI_SWAP,BSC_DOPPLE,BABYSWAP,BSC_PMM2MM,WOOFI,BSC_ELK,BSC_SYNAPSE,BSC_AUTOSHARK,BSC_CAFE_SWAP,PLANET_FINANCE,BSC_ANNEX_FINANCE,BSC_ANNEX_SWAP,BSC_RADIOSHACK,BSC_KYBERSWAP_ELASTIC,BSC_FSTSWAP,BSC_NOMISWAP,BSC_CONE,BSC_KYBER_DMM_STATIC,WOMBATSWAP,BSC_NOMISWAP_STABLE,BSC_PANCAKESWAP_STABLE,BSC_BABYDOGE,BSC_THENA,BSC_WOOFI_V2,BSC_KYOTOSWAP,BSC_TRADERJOE,BSC_TRADERJOE_V2,BSC_UNISWAP_V3,BSC_TRIDENT,BSC_MAVERICK_V1,BSC_PANCAKESWAP_V3,BSC_THENA_V3,BSC_TRADERJOE_V2_1,BSC_NOMISWAPEPCS,BSC_USDFI,BSC_LEVEL_FINANCE,BSC_DODO_V3,BSC_SMARDEX,BSC_PMM13";
+                        jumlahL+"&includeGas=true";
+                    //    jumlahL+"&includeGas=true&protocols=PANCAKESWAP,VENUS,JULSWAP,BAKERYSWAP,BSC_ONE_INCH_LP,ACRYPTOS,BSC_DODO,APESWAP,SPARTAN_V2,VSWAP,VPEGSWAP,HYPERSWAP,BSC_DODO_V2,SWAPSWIPE,ELLIPSIS_FINANCE,BSC_NERVE,BSC_SMOOTHY_FINANCE,CHEESESWAP,PANCAKESWAP_V2,MDEX,WARDEN,WAULTSWAP,BSC_ONE_INCH_LIMIT_ORDER,BSC_ONE_INCH_LIMIT_ORDER_V2,ACSI_FINANCE,GAMBIT_FINANCE,JETSWAP,BSC_UNIFI,BSC_KYBER_DMM,BSC_BI_SWAP,BSC_DOPPLE,BABYSWAP,BSC_PMM2MM,WOOFI,BSC_ELK,BSC_SYNAPSE,BSC_AUTOSHARK,BSC_CAFE_SWAP,PLANET_FINANCE,BSC_ANNEX_FINANCE,BSC_ANNEX_SWAP,BSC_RADIOSHACK,BSC_KYBERSWAP_ELASTIC,BSC_FSTSWAP,BSC_NOMISWAP,BSC_CONE,BSC_KYBER_DMM_STATIC,WOMBATSWAP,BSC_NOMISWAP_STABLE,BSC_PANCAKESWAP_STABLE,BSC_BABYDOGE,BSC_THENA,BSC_WOOFI_V2,BSC_KYOTOSWAP,BSC_TRADERJOE,BSC_TRADERJOE_V2,BSC_UNISWAP_V3,BSC_TRIDENT,BSC_MAVERICK_V1,BSC_PANCAKESWAP_V3,BSC_THENA_V3,BSC_TRADERJOE_V2_1,BSC_NOMISWAPEPCS,BSC_USDFI,BSC_LEVEL_FINANCE,BSC_DODO_V3,BSC_SMARDEX,BSC_PMM13";
 
-              console.log(apiUrl);          
+              console.log("URL KIRI 1INCH"+apiUrl);          
               $.ajax({
                 url:apiUrl,
                 method: 'GET',
@@ -2551,6 +2553,7 @@
                     console.log(`NET PNL : ${netpnl} `);
                     console.log(`FEE SWAP : ${FeeSwap} `);
                     console.log(`Prosentase : ${persen} `);
+                    console.log(`URL : ${apiUrl} `);
                     console.log(`--------------------------------------`);
                   
 
@@ -2614,7 +2617,7 @@
                              
                               $('#sinyalkiri').append(text);
                               var currentRow = $('#sell1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text1).addClass('inch');
-                              var currentRow = $('#sellPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text2).addClass('inch');
+                              var currentRow = $('#sellPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text3).addClass('inch');
                               currentRow.append();
 
                              var jKiri1INCHSinyal = Kiri1INCHSinyal+1;
@@ -2694,10 +2697,10 @@
                         Server1INCHKanan+"https://api.1inch.dev/swap/v5.2/56/quote?src="+dataIn1inch.scTo+
                         "&dst="+dataIn1inch.scFrom+
                         "&amount=" +
-        //               jumlahR+"&includeGas=true";
-                      jumlahR+"&includeGas=true&protocols=PANCAKESWAP,VENUS,JULSWAP,BAKERYSWAP,BSC_ONE_INCH_LP,ACRYPTOS,BSC_DODO,APESWAP,SPARTAN_V2,VSWAP,VPEGSWAP,HYPERSWAP,BSC_DODO_V2,SWAPSWIPE,ELLIPSIS_FINANCE,BSC_NERVE,BSC_SMOOTHY_FINANCE,CHEESESWAP,PANCAKESWAP_V2,MDEX,WARDEN,WAULTSWAP,BSC_ONE_INCH_LIMIT_ORDER,BSC_ONE_INCH_LIMIT_ORDER_V2,ACSI_FINANCE,GAMBIT_FINANCE,JETSWAP,BSC_UNIFI,BSC_KYBER_DMM,BSC_BI_SWAP,BSC_DOPPLE,BABYSWAP,BSC_PMM2MM,WOOFI,BSC_ELK,BSC_SYNAPSE,BSC_AUTOSHARK,BSC_CAFE_SWAP,PLANET_FINANCE,BSC_ANNEX_FINANCE,BSC_ANNEX_SWAP,BSC_RADIOSHACK,BSC_KYBERSWAP_ELASTIC,BSC_FSTSWAP,BSC_NOMISWAP,BSC_CONE,BSC_KYBER_DMM_STATIC,WOMBATSWAP,BSC_NOMISWAP_STABLE,BSC_PANCAKESWAP_STABLE,BSC_BABYDOGE,BSC_THENA,BSC_WOOFI_V2,BSC_KYOTOSWAP,BSC_TRADERJOE,BSC_TRADERJOE_V2,BSC_UNISWAP_V3,BSC_TRIDENT,BSC_MAVERICK_V1,BSC_PANCAKESWAP_V3,BSC_THENA_V3,BSC_TRADERJOE_V2_1,BSC_NOMISWAPEPCS,BSC_USDFI,BSC_LEVEL_FINANCE,BSC_DODO_V3,BSC_SMARDEX,BSC_PMM13";
+                      jumlahR+"&includeGas=true";
+        //              jumlahR+"&includeGas=true&protocols=PANCAKESWAP,VENUS,JULSWAP,BAKERYSWAP,BSC_ONE_INCH_LP,ACRYPTOS,BSC_DODO,APESWAP,SPARTAN_V2,VSWAP,VPEGSWAP,HYPERSWAP,BSC_DODO_V2,SWAPSWIPE,ELLIPSIS_FINANCE,BSC_NERVE,BSC_SMOOTHY_FINANCE,CHEESESWAP,PANCAKESWAP_V2,MDEX,WARDEN,WAULTSWAP,BSC_ONE_INCH_LIMIT_ORDER,BSC_ONE_INCH_LIMIT_ORDER_V2,ACSI_FINANCE,GAMBIT_FINANCE,JETSWAP,BSC_UNIFI,BSC_KYBER_DMM,BSC_BI_SWAP,BSC_DOPPLE,BABYSWAP,BSC_PMM2MM,WOOFI,BSC_ELK,BSC_SYNAPSE,BSC_AUTOSHARK,BSC_CAFE_SWAP,PLANET_FINANCE,BSC_ANNEX_FINANCE,BSC_ANNEX_SWAP,BSC_RADIOSHACK,BSC_KYBERSWAP_ELASTIC,BSC_FSTSWAP,BSC_NOMISWAP,BSC_CONE,BSC_KYBER_DMM_STATIC,WOMBATSWAP,BSC_NOMISWAP_STABLE,BSC_PANCAKESWAP_STABLE,BSC_BABYDOGE,BSC_THENA,BSC_WOOFI_V2,BSC_KYOTOSWAP,BSC_TRADERJOE,BSC_TRADERJOE_V2,BSC_UNISWAP_V3,BSC_TRIDENT,BSC_MAVERICK_V1,BSC_PANCAKESWAP_V3,BSC_THENA_V3,BSC_TRADERJOE_V2_1,BSC_NOMISWAPEPCS,BSC_USDFI,BSC_LEVEL_FINANCE,BSC_DODO_V3,BSC_SMARDEX,BSC_PMM13";
 
-            console.log(apiUrl);      
+            //console.log("URL 1inH KANAN : "+apiUrl);      
               $.ajax({
                 url:apiUrl,
                 method: 'GET',
@@ -2727,6 +2730,7 @@
                     console.log(`NET PNL : ${netpnl} `);
                     console.log(`FEE SWAP : ${FeeSwap} `);
                     console.log(`Prosentase : ${persen} `);
+                    console.log(`URL : ${apiUrl} `);
                     console.log(`--------------------------------------`)
                  
 
@@ -2788,7 +2792,7 @@
                               
                               $('#sinyalkanan').append(text);
                               var currentRow = $('#buy1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text1).addClass('inch');
-                              var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text2).addClass('inch');
+                              var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text3).addClass('inch');
                               currentRow.append();
 
                               var jKanan1INCHSinyal = Kanan1INCHSinyal+1;
@@ -2961,7 +2965,7 @@
                          
                           $('#sinyalkiri').append(text);
                           var currentRow = $('#sellOPEN'+dataInOPEN.token).html(text1).css({"background-color":"green","color": "white"}).addClass('open');
-                          var currentRow = $('#sellPNLOPEN'+dataInOPEN.token).css({"background-color":"green","color": "white"}).html(text2).addClass('open');
+                          var currentRow = $('#sellPNLOPEN'+dataInOPEN.token).css({"background-color":"green","color": "white"}).html(text3).addClass('open');
                           currentRow.append();
 
                           var jKiriOPENSinyal = KiriOPENSinyal+1;
@@ -3119,7 +3123,7 @@
                           $('#sinyalkanan').append(text);
                         
                           var currentRow = $('#buyOPEN'+dataInOPEN.token).css({"background-color":"green","color": "white"}).html(text1).addClass('open');
-                          var currentRow = $('#buyPNLOPEN'+dataInOPEN.token).css({"background-color":"green","color": "white"}).html(text2).addClass('open');
+                          var currentRow = $('#buyPNLOPEN'+dataInOPEN.token).css({"background-color":"green","color": "white"}).html(text3).addClass('open');
                           currentRow.append();
 
                           var jKananOPENSinyal = KananOPENSinyal+1;
@@ -3281,7 +3285,7 @@
                          
                           $('#sinyalkiri').append(text);
                           var currentRow = $('#sellPARA'+dataInPARA.token).html(text1).css({"background-color":"green","color": "white"}).addClass('PARA');
-                          var currentRow = $('#sellPNLPARA'+dataInPARA.token).css({"background-color":"green","color": "white"}).html(text2).addClass('PARA');
+                          var currentRow = $('#sellPNLPARA'+dataInPARA.token).css({"background-color":"green","color": "white"}).html(text3).addClass('PARA');
                           currentRow.append();
 
                           var jKiriPARASinyal = KiriPARASinyal+1;
@@ -3447,7 +3451,7 @@
                           $('#sinyalkanan').append(text);
                         
                           var currentRow = $('#buyPARA'+dataInPARA.token).css({"background-color":"green","color": "white"}).html(text1).addClass('PARA');
-                          var currentRow = $('#buyPNLPARA'+dataInPARA.token).css({"background-color":"green","color": "white"}).html(text2).addClass('PARA');
+                          var currentRow = $('#buyPNLPARA'+dataInPARA.token).css({"background-color":"green","color": "white"}).html(text3).addClass('PARA');
                           currentRow.append();
 
                           var jKananPARASinyal = KananPARASinyal+1;
@@ -3606,7 +3610,7 @@
                          
                           $('#sinyalkiri').append(text);
                           var currentRow = $('#sellKYBER'+dataInKYBER.token).html(text1).css({"background-color":"green","color": "white"}).addClass('KYBER');
-                          var currentRow = $('#sellPNLKYBER'+dataInKYBER.token).css({"background-color":"green","color": "white"}).html(text2).addClass('KYBER');
+                          var currentRow = $('#sellPNLKYBER'+dataInKYBER.token).css({"background-color":"green","color": "white"}).html(text3).addClass('KYBER');
                           currentRow.append();
 
                           var jKiriKYBERSinyal = KiriKYBERSinyal+1;
@@ -3777,7 +3781,7 @@
                             $('#sinyalkanan').append(text);
                           
                             var currentRow = $('#buyKYBER'+dataInKYBER.token).css({"background-color":"green","color": "white"}).html(text1).addClass('KYBER');
-                            var currentRow = $('#buyPNLKYBER'+dataInKYBER.token).css({"background-color":"green","color": "white"}).html(text2).addClass('KYBER');
+                            var currentRow = $('#buyPNLKYBER'+dataInKYBER.token).css({"background-color":"green","color": "white"}).html(text3).addClass('KYBER');
                             currentRow.append();
 
                             var jKananKYBERSinyal = KananKYBERSinyal+1;
