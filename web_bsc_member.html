@@ -2377,8 +2377,8 @@
                     $("#info").css("color", "green");
                     $("#info").text("CEK PAIR - BINANCE : " + dataInBinance.pair +" [OK] " );
 
-                    var linkStok= '<a href="https://bscscan.com/token/'+dataOutBinance.scFrom+'?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3" target="_blank"> STOK </a>';
-                    var link='<a href="https://bscscan.com/token/'+dataOutBinance.scFrom+'" target="_blank">[ SC ]</a>';
+                    var linkStok= 'STOK [ <a href="https://bscscan.com/token/'+dataOutBinance.scFrom+'?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3" target="_blank"> 1 </a> | <a href="https://bscscan.com/token/'+dataOutBinance.scFrom+'?a=0xe2fc31F816A9b94326492132018C3aEcC4a93aE1" target="_blank"> 2 </a> ]';
+                    var link=' <a href="https://bscscan.com/token/'+dataOutBinance.scFrom+'" target="_blank">[ SC ]</a>';
                     var statusChecked = dataOutBinance.status ? 'checked' : '';
 
                     var row = $('<tr>');
@@ -2436,7 +2436,7 @@
                                     $('#myTable').find('th#KYBERkiri').css("display","none");
                               } 
 
-                              row.append($('<td class=token>').css({"color":"white","text-align":"center"}).html(""+(dataOutBinance.token).replace("USDT", "")+""+link+' <br/>'+linkStok));
+                              row.append($('<td class=token>').css({"color":"white","text-align":"center"}).html(""+(dataOutBinance.token).replace("USDT", "")+" CP | "+link+' <br/>'+linkStok));
 
                             if ($('#kanan').is(':checked')) {
                                 if ($('#1inch').is(':checked')) {
