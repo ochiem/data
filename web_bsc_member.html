@@ -417,6 +417,7 @@
      var userAgent = navigator.userAgent;
      var extractedChars = userAgent.substring(40,45);
      localStorage.setItem('idx', extractedChars);
+     localStorage.setItem('SERVERDEX', 'SERVER2');
 
        
        $('input[type="text"]').prop('disabled', false);
@@ -2662,9 +2663,12 @@
 
                         localStorage.setItem("Elimit",Elimit);
                        // $("#ErrorLimit").text("#ERROR LIMIT API : "+localStorage.getItem('Elimit'));
+                    }else if (jqXHR.status === 200){
+                          var alert1="ERROR";
                     }else {
                        console.log("xxxxx",jqXHR);
-                        var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        // var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        var alert1="ERROR";
                     }
                     Kiri1INCHError =Kiri1INCHError+1;
                     localStorage.setItem("Kiri1INCHError",Kiri1INCHError)
@@ -2678,7 +2682,7 @@
                     $("#info1").css("color", "red");
                     $("#info1").text("STATUS KIRI: " + dataIn1inch.token +" [ "+alert1+"]" );
                     console.error("Cek data 1INCH gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                }
+                },timeout: 5000
             });
         }
 
@@ -2711,103 +2715,103 @@
                 },
                 success: function(res1INCH) {
 
-                $("#info2").css("color", "green");
-                $("#info2").text("API: "+api1INCHKanan.substring(0,7)+" #STATUS KANAN : " + dataIn1inch.token +" [OK]" );
+                  $("#info2").css("color", "green");
+                  $("#info2").text("API: "+api1INCHKanan.substring(0,7)+" #STATUS KANAN : " + dataIn1inch.token +" [OK]" );
 
-                var harga1INCH = (dataIn1inch.modalR / (res1INCH.toAmount / Math.pow(10, dataIn1inch.desFrom)));
-                var PNL =((dataIn1inch.modalR/ harga1INCH)*dataIn1inch.bidPrice)-dataIn1inch.modalR;
-                var persen = ((dataIn1inch.bidPrice-harga1INCH)/dataIn1inch.bidPrice)*100;
-                var FeeSwap = ((res1INCH.gas/ Math.pow(10, 9))*gaseth)*Priceeth;
-                var totalFeeKanan = parseFloat(dataIn1inch.modalR * 0.001) + parseFloat(FeeSwap) ;
-                var netpnl = parseFloat(PNL-totalFeeKanan).toFixed(2);
-                var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
+                  var harga1INCH = (dataIn1inch.modalR / (res1INCH.toAmount / Math.pow(10, dataIn1inch.desFrom)));
+                  var PNL =((dataIn1inch.modalR/ harga1INCH)*dataIn1inch.bidPrice)-dataIn1inch.modalR;
+                  var persen = ((dataIn1inch.bidPrice-harga1INCH)/dataIn1inch.bidPrice)*100;
+                  var FeeSwap = ((res1INCH.gas/ Math.pow(10, 9))*gaseth)*Priceeth;
+                  var totalFeeKanan = parseFloat(dataIn1inch.modalR * 0.001) + parseFloat(FeeSwap) ;
+                  var netpnl = parseFloat(PNL-totalFeeKanan).toFixed(2);
+                  var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
 
-                    console.log(`----- 1INCH KANAN ${dataIn1inch.token} --------`);
-                    console.log(`MODAL : ${dataIn1inch.modalR} `);
-                    console.log(`1INCH BUY : ${harga1INCH} `);
-                    console.log(`BINANCE SELL : ${dataIn1inch.bidPrice} `);
-                    console.log(`TOTAL FEE : ${totalFeeKanan} `);
-                    console.log(`PNL : ${PNL} `);
-                    console.log(`NET PNL : ${netpnl} `);
-                    console.log(`FEE SWAP : ${FeeSwap} `);
-                    console.log(`Prosentase : ${persen} `);
-                    console.log(`URL : ${apiUrl} `);
-                    console.log(`--------------------------------------`)
-                 
+                      console.log(`----- 1INCH KANAN ${dataIn1inch.token} --------`);
+                      console.log(`MODAL : ${dataIn1inch.modalR} `);
+                      console.log(`1INCH BUY : ${harga1INCH} `);
+                      console.log(`BINANCE SELL : ${dataIn1inch.bidPrice} `);
+                      console.log(`TOTAL FEE : ${totalFeeKanan} `);
+                      console.log(`PNL : ${PNL} `);
+                      console.log(`NET PNL : ${netpnl} `);
+                      console.log(`FEE SWAP : ${FeeSwap} `);
+                      console.log(`Prosentase : ${persen} `);
+                      console.log(`URL : ${apiUrl} `);
+                      console.log(`--------------------------------------`)
+                  
 
-                            var dataOUT = {
-                                idserver: localStorage.getItem('idserver'),
-                                market : "KANAN",
-                                PNL : PNL.toFixed(2),
-                                netPNL : netpnl,
-                                totalfee : totalFeeKanan.toFixed(2),
-                                FeeSwap : FeeSwap.toFixed(2),
-                                persen : persen.toFixed(2),
-                                pair: dataIn1inch.token,
-                                scTo: dataIn1inch.scFrom,
-                                desTo: dataIn1inch.desFrom,
-                                scFrom: dataIn1inch.scTo,
-                                desFrom: dataIn1inch.desTo,
-                                sell : dataIn1inch.bidPrice,
-                                buy : harga1INCH.toFixed(7),
-                                modalR:localStorage.getItem('mkanan')
-                            };
+                              var dataOUT = {
+                                  idserver: localStorage.getItem('idserver'),
+                                  market : "KANAN",
+                                  PNL : PNL.toFixed(2),
+                                  netPNL : netpnl,
+                                  totalfee : totalFeeKanan.toFixed(2),
+                                  FeeSwap : FeeSwap.toFixed(2),
+                                  persen : persen.toFixed(2),
+                                  pair: dataIn1inch.token,
+                                  scTo: dataIn1inch.scFrom,
+                                  desTo: dataIn1inch.desFrom,
+                                  scFrom: dataIn1inch.scTo,
+                                  desFrom: dataIn1inch.desTo,
+                                  sell : dataIn1inch.bidPrice,
+                                  buy : harga1INCH.toFixed(7),
+                                  modalR:localStorage.getItem('mkanan')
+                              };
 
-                      
-                        var text ="<a href=#buy1INCH"+dataIn1inch.token+"> 1INCH : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataIn1inch.token+"</a>  PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>"; 
-                        var sinyal =parseInt(localStorage.getItem('Kanan1INCHSinyal'))+1 ;
-                        var text1 ="<a href='https://app.1inch.io/#/56/classic/swap/" +dataOUT.scFrom +"/" +dataOUT.scTo +"' target=_blank>"+harga1INCH.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
-                        var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
-                        var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a>  PNL:"+PNL.toFixed(2)+"$ <br/>"; 
+                        
+                          var text ="<a href=#buy1INCH"+dataIn1inch.token+"> 1INCH : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataIn1inch.token+"</a>  PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>"; 
+                          var sinyal =parseInt(localStorage.getItem('Kanan1INCHSinyal'))+1 ;
+                          var text1 ="<a href='https://app.1inch.io/#/56/classic/swap/" +dataOUT.scFrom +"/" +dataOUT.scTo +"' target=_blank>"+harga1INCH.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
+                          var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
+                          var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a>  PNL:"+PNL.toFixed(2)+"$ <br/>"; 
 
-                        var message =
-                          "#<b>"+localStorage.getItem('idserver')+"-BOTS:1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
-                          " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/address/" + dataOUT.scTo +"'>[ SC ]</a>"+
-                          "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
-                         // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
-                          " \n MODAL : <b> "+ dataOUT.modalR + "</b> | PNL : <b>"+ dataOUT.PNL + "$ </b> "+
-                          " \n <b>BUY : </b> <a href='https://app.1inch.io/#/56/classic/swap/" +dataOUT.scTo +"/" +dataOUT.scFrom +"'>" +dataOUT.buy +"</a>"+
-                          " \n <b>SELL : </b><a href='https://www.binance.me/en/trade/" +dataOUT.pair +"?from=markets%26theme=light%26type=spot'>" + dataOUT.sell +"</a>"+
-                          " \n ESTIMASI FEE SWAP : <b>" + dataOUT.FeeSwap +"$</b>"+
-                          " \n ESTIMASI TOTAL FEE : <b>" + dataOUT.totalfee +"$</b>"+
-                          " \n -----------------------------------------";
+                          var message =
+                            "#<b>"+localStorage.getItem('idserver')+"-BOTS:1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                            " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/address/" + dataOUT.scTo +"'>[ SC ]</a>"+
+                            "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
+                          // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
+                            " \n MODAL : <b> "+ dataOUT.modalR + "</b> | PNL : <b>"+ dataOUT.PNL + "$ </b> "+
+                            " \n <b>BUY : </b> <a href='https://app.1inch.io/#/56/classic/swap/" +dataOUT.scTo +"/" +dataOUT.scFrom +"'>" +dataOUT.buy +"</a>"+
+                            " \n <b>SELL : </b><a href='https://www.binance.me/en/trade/" +dataOUT.pair +"?from=markets%26theme=light%26type=spot'>" + dataOUT.sell +"</a>"+
+                            " \n ESTIMASI FEE SWAP : <b>" + dataOUT.FeeSwap +"$</b>"+
+                            " \n ESTIMASI TOTAL FEE : <b>" + dataOUT.totalfee +"$</b>"+
+                            " \n -----------------------------------------";
 
-                        if($('#checkboxFilter').is(':checked')) {
-                            if (PNL > dataIn1inch.innetPNL) {
-                              
-                              $('#sinyalkanan').append(text);
-                              var currentRow = $('#buy1INCH'+dataIn1inch.token).html(text1).css({"background-color":"green","color": "white"}).addClass('inch');
-                              var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text3).addClass('inch');
-                              currentRow.append();
+                          if($('#checkboxFilter').is(':checked')) {
+                              if (PNL > dataIn1inch.innetPNL) {
+                                
+                                $('#sinyalkanan').append(text);
+                                var currentRow = $('#buy1INCH'+dataIn1inch.token).html(text1).css({"background-color":"green","color": "white"}).addClass('inch');
+                                var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text3).addClass('inch');
+                                currentRow.append();
 
-                              var jKanan1INCHSinyal = Kanan1INCHSinyal+1;
-                              localStorage.setItem("Kanan1INCHSinyal",jKanan1INCHSinyal)
-                              $("#lKanan1INCHSinyal").text(localStorage.getItem('Kanan1INCHSinyal'));
-                              MultisendMessage(message);
-                            }else{
-                              var currentRow = $('#buy1INCH'+dataIn1inch.token).css({"text-align":"center"}).html(text1).addClass('inch');
-                              var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"text-align":"center"}).html(text3).addClass('inch');
-                            }
-                          } else {
-                            if ( !isNaN(PNL) && netpnl > totalFeeKanan ){
-                              
-                              $('#sinyalkanan').append(text);
-                              var currentRow = $('#buy1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text1).addClass('inch');
-                              var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text3).addClass('inch');
-                              currentRow.append();
+                                var jKanan1INCHSinyal = Kanan1INCHSinyal+1;
+                                localStorage.setItem("Kanan1INCHSinyal",jKanan1INCHSinyal)
+                                $("#lKanan1INCHSinyal").text(localStorage.getItem('Kanan1INCHSinyal'));
+                                MultisendMessage(message);
+                              }else{
+                                var currentRow = $('#buy1INCH'+dataIn1inch.token).css({"text-align":"center"}).html(text1).addClass('inch');
+                                var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"text-align":"center"}).html(text3).addClass('inch');
+                              }
+                            } else {
+                              if ( !isNaN(PNL) && netpnl > totalFeeKanan ){
+                                
+                                $('#sinyalkanan').append(text);
+                                var currentRow = $('#buy1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text1).addClass('inch');
+                                var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).css({"background-color":"green","color": "white"}).html(text3).addClass('inch');
+                                currentRow.append();
 
-                              var jKanan1INCHSinyal = Kanan1INCHSinyal+1;
-                              localStorage.setItem("Kanan1INCHSinyal",jKanan1INCHSinyal)
-                              $("#lKanan1INCHSinyal").text(localStorage.getItem('Kanan1INCHSinyal'));
-                              MultisendMessage(message);
-                            }else{
-                              var currentRow = $('#buy1INCH'+dataIn1inch.token).html(text1).addClass('inch');
-                              var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).html(text3).addClass('inch');
-                              currentRow.append();
-                            }
+                                var jKanan1INCHSinyal = Kanan1INCHSinyal+1;
+                                localStorage.setItem("Kanan1INCHSinyal",jKanan1INCHSinyal)
+                                $("#lKanan1INCHSinyal").text(localStorage.getItem('Kanan1INCHSinyal'));
+                                MultisendMessage(message);
+                              }else{
+                                var currentRow = $('#buy1INCH'+dataIn1inch.token).html(text1).addClass('inch');
+                                var currentRow = $('#buyPNL1INCH'+dataIn1inch.token).html(text3).addClass('inch');
+                                currentRow.append();
+                              }
 
-                        };
-
+                          };
+               
               //  console.log(`Cek data 1INCH berhasil!!`);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
@@ -2841,7 +2845,8 @@
 
                     }else {
                         console.log("xxxx ",jqXHR);
-                        var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        // var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        var alert1="ERROR";
                     }
                     Kanan1INCHError =Kanan1INCHError+1;
                     console.log("error kanan"+Kanan1INCHError);
@@ -2857,7 +2862,7 @@
                     $("#info2").text("STATUS KANAN : " + dataIn1inch.token +" [ "+alert1+"]" );
                     console.error("Cek data 1INCH gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
                     
-                }
+                },timeout: 5000
             });
         }
 
@@ -3002,7 +3007,8 @@
                     }else if (jqXHR.status === 429){
                          var alert1="KENA LIMIT";
                     }else {
-                        var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        // var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        var alert1="ERROR";
                     }
 
                     KiriOPENError = KiriOPENError+1;
@@ -3016,7 +3022,7 @@
                     $("#info12").css("color", "red");
                     $("#info12").text("STATUS KIRI : " + dataInOPEN.token +" [FAILED]" );
                     console.error("Cek data OPEN gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                }
+                },timeout: 5000
             });
         }
 
@@ -3158,7 +3164,8 @@
                     }else if (jqXHR.status === 429){
                                 var alert1="KENA LIMIT";
                     } else {
-                        var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        // var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        var alert1="ERROR";
                     }
                     
                     KananOPENError = KananOPENError+1;
@@ -3172,7 +3179,7 @@
                     $("#info22").css("color", "red");
                     $("#info22").text("STATUS KANAN : " + dataInOPEN.token +" [FAILED]" );
                     console.error("Cek data OPEN gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                }
+                },timeout: 5000
             });
         }
 
@@ -3322,7 +3329,8 @@
                     }else if (jqXHR.status === 429){
                          var alert1="KENA LIMIT";
                     }else {
-                        var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        // var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        var alert1="ERROR";
                     }
 
                     KiriPARAError = KiriPARAError+1;
@@ -3336,7 +3344,7 @@
                     $("#info123").css("color", "red");
                     $("#info123").text("KIRI : " + dataInPARA.token +" [FAILED]" );
                     console.error("Cek data PARA gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                }
+                },timeout: 5000
             });
         }
 
@@ -3486,7 +3494,8 @@
                     }else if (jqXHR.status === 429){
                                 var alert1="KENA LIMIT";
                     } else {
-                        var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        // var alert1=jqXHR.statusText + "(" + jqXHR.status + ")";
+                        var alert1="ERROR";
                     }
                     
                     KananPARAError = KananPARAError+1;
@@ -3500,7 +3509,7 @@
                     $("#info223").css("color", "red");
                     $("#info223").text("KANAN : " + dataInPARA.token +" [FAILED]" );
                     console.error("Cek data PARA gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                }
+                },timeout: 5000
             });
         }
 
@@ -3655,8 +3664,9 @@
                       var alert1 = "limit rate";
                     } else {
                       // Show a general error message for other statuses
-                      var errorMessage = "KENA LIMIT";
-                      var alert1 = errorMessage;
+                      // var errorMessage = "KENA LIMIT";
+                      // var alert1 = errorMessage;
+                      var alert1="ERROR";
                     }
                     
 
@@ -3671,7 +3681,7 @@
                     $("#info123").css("color", "red");
                     $("#info123").text("KIRI : " + dataInKYBER.token +"[" +alert1+"]" );
                     console.error("Cek data KYBER gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                }
+                },timeout: 5000
             });
         }
 
@@ -3824,8 +3834,9 @@
                           var alert1 = "limit rate";
                         } else {
                           // Show a general error message for other statuses
-                          var errorMessage = "KENA LIMIT";
-                          var alert1 = errorMessage;
+                          // var errorMessage = "KENA LIMIT";
+                          // var alert1 = errorMessage;
+                          var alert1="ERROR";
                         }
 
                       KananKYBERError = KananKYBERError+1;
@@ -3839,7 +3850,7 @@
                       $("#info223").css("color", "red");
                       $("#info223").text("KANAN : " + dataInKYBER.token +"[" +alert1+"]" );
                       console.error("Cek data KYBER gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                  }
+                  },timeout: 5000
               });
           }
 
@@ -3871,14 +3882,14 @@
 
             // sourceWhitelist: ["Bancor V2", "Bancor V3"],
 
-            // "sourceBlacklist":[
-            //         "Convex CRV Depositor",
+             "sourceBlacklist":[
+                "Acsi Finance Weighted",
             //         "Convex FXS Depositor",
             //         "Curve Crypto Factory",
             //         "Curve Crypto Registry",
             //         "Curve Factory",
             //         "Curve Registry",
-            //     ],
+                 ],
             referralCode: 0,
             slippageLimitPercent: 0.4,
           };
@@ -4024,7 +4035,7 @@
                     // var errorMessage = errorResponse.detail;
                     var alert1 = "NO LP";
                   } else {
-                    var alert1 = "NO TERDAFTAR";
+                    var alert1 = "NO LISTING";
                   }
                 
                   // var alert1 = "Error " + jqXHR.status + ": Bad Request";
@@ -4032,10 +4043,11 @@
               }else if (jqXHR.status == 429) {
                 var alert1 = "KENA LIMIT";
               }else if (jqXHR.status == 200) {
-                var alert1 = " TIDAK DAPAT HARGA";
+                var alert1 = " NO PRICE";
               }
                else {
-                var alert1 = jqXHR.statusText + "(" + jqXHR.status + ")";
+                // var alert1 = jqXHR.statusText + "(" + jqXHR.status + ")";
+                var alert1="ERROR";
               }
 
               KiriODOSError = KiriODOSError + 1;
@@ -4053,7 +4065,7 @@
               $("#info123").css("color", "red");
               $("#info123").text("KIRI : " + dataInODOS.token + " [FAILED]");
               console.error("Cek data ODOS gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-            },
+            },timeout: 5000
           });
         }
 
@@ -4085,14 +4097,14 @@
 
             // sourceWhitelist: ["Bancor V2", "Bancor V3"],
 
-            // "sourceBlacklist":[
-            //     "Convex CRV Depositor",
+             "sourceBlacklist":[
+                "Acsi Finance Weighted",
             //     "Convex FXS Depositor",
             //     "Curve Crypto Factory",
             //     "Curve Crypto Registry",
             //     "Curve Factory",
             //     "Curve Registry",
-            // ],
+            ],
             referralCode: 0,
             slippageLimitPercent: 0.4,
           };
@@ -4230,7 +4242,7 @@
                     // var errorMessage = errorResponse.detail;
                     var alert1 = "NO LP";
                   } else {
-                    var alert1 = "NO TERDAFTAR";
+                    var alert1 = "NO LISTING";
                   }
                 
                   // var alert1 = "Error " + jqXHR.status + ": Bad Request";
@@ -4238,9 +4250,10 @@
               }else if (jqXHR.status == 429) {
                 var alert1 = "KENA LIMIT";
               }else if (jqXHR.status == 200) {
-                var alert1 = "TIDAK DAPAT HARGA";
+                var alert1 = "NO PRICE";
               } else {
-                var alert1 = jqXHR.statusText + "(" + jqXHR.status + ")";
+                // var alert1 = jqXHR.statusText + "(" + jqXHR.status + ")";
+                var alert1="ERROR";
               }
 
               KananODOSError = KananODOSError + 1;
@@ -4260,7 +4273,7 @@
               $("#info223").css("color", "red");
               $("#info223").text("KANAN : " + dataInODOS.token + " [FAILED]");
               console.error("Cek data ODOS gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-            },
+            },timeout: 5000
           });
         }
    
