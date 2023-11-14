@@ -3662,7 +3662,7 @@
                     }
                     */
                     error: function(jqXHR, textStatus, errorThrown) {
-                    if (jqXHR.status === 429) {
+                    if (jqXHR.status == 429) {
                       var alert1 = "limit rate";
                     } else {
                       // Show a general error message for other statuses
@@ -3832,7 +3832,7 @@
                       }
                       */
                       error: function(jqXHR, textStatus, errorThrown) {
-                        if (jqXHR.status === 429) {
+                        if (jqXHR.status == 429) {
                           var alert1 = "limit rate";
                         } else {
                           // Show a general error message for other statuses
