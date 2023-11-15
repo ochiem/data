@@ -2461,7 +2461,7 @@
 
                     var row = $('<tr>');
                             row.append($('<td>').addClass("token").html(dataOutBinance.no));
-                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.askPrice+"</a>"));
+                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.askPrice+"</a> <br/> SERVER:"+dataOutBinance.Server1INCHKiri.substring(8,15)+"| API:"+dataOutBinance.api1INCHKiri.substring(1,5)+""));
                               // <br/> 1INCH:"+dataOutBinance.Server1INCHKiri.substring(8,13)+"| PARA:"+dataOutBinance.ServerPARAKiri.substring(8,13)+"| ODOS:"+dataOutBinance.ServerODOSKiri.substring(8,13)));  
                         
                               if ($('#kiri').is(':checked')) {
@@ -2573,7 +2573,7 @@
                                     $('#myTable').find('th#KYBERkanan').css("display","none");
                              }
 
-                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.bidPrice+"</a>"));
+                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.bidPrice+"</a> <br/> SERVER:"+dataOutBinance.Server1INCHKanan.substring(8,15)+" | API:"+dataOutBinance.api1INCHKanan.substring(1,5)+""));
                               // <br/> 1INCH:"+dataOutBinance.Server1INCHKanan.substring(8,13)+"| PARA:"+dataOutBinance.ServerPARAKanan.substring(8,13)+"| ODOS:"+dataOutBinance.ServerODOSKanan.substring(8,13)));
                             $('#myTable').append(row);
 
