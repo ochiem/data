@@ -4023,7 +4023,7 @@
                             "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
                             " \n MODAL : <b> "+ dataOUT.modalL + "</b> | PNL : <b>"+ dataOUT.PNL + "$ </b> "+
-                            " \n <b>BUY : </b> <a href='https://app.odos.xyz/' target=_blank>" +dataOUT.buy +"</a>"+
+                            " \n <b>BUY : </b> <a href='https://app.odos.xyz' target=_blank>" +dataOUT.buy +"</a>"+
                             " \n <b>SELL : </b><a href='https://www.binance.me/en/trade/" +dataOUT.pair +"?from=markets%26theme=light%26type=spot'>" + dataOUT.sell +"</a>"+
                             " \n ESTIMASI FEE SWAP : <b>" + dataOUT.FeeSwap +"$</b>"+
                             " \n ESTIMASI TOTAL FEE : <b>" + dataOUT.totalfee +"$</b>"+
@@ -4222,7 +4222,7 @@
 
               var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KananODOSSinyal')+1);
-                var text1 ="<a href='https://app.odos.xyz/' target=_blank>"+hargaODOS.toFixed(7)+"</a>"+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
+                var text1 ="<a href='https://app.odos.xyz' target=_blank>"+hargaODOS.toFixed(7)+"</a>"+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
                 var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
                 var text13 ="ODOS : <a href=#buyODOS"+dataInODOS.token+">"+dataInODOS.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
