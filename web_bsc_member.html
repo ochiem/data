@@ -614,8 +614,8 @@
 
        // Function to update the server array
        function updateServerArray(serverArray) {
-          for (var i = 0; i < serverURLs.length; i++) {
-                localStorage.setItem('Server' + (i + 1), serverURLs[i]);
+          for (var i = 0; i < serverArray.length; i++) {
+                localStorage.setItem('Server' + (i + 1), serverArray[i]);
             }
           // Perform actions based on the selected server array
           console.log("Selected Server Array:", serverArray);
@@ -2461,7 +2461,7 @@
 
                     var row = $('<tr>');
                             row.append($('<td>').addClass("token").html(dataOutBinance.no));
-                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.askPrice+"</a> <br/> SERVER:"+dataOutBinance.Server1INCHKiri.substring(8,15)+"| API:"+dataOutBinance.api1INCHKiri.substring(1,5)+""));
+                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.askPrice+"</a> <br/> SERV:"+dataOutBinance.Server1INCHKiri.substring(8,15)+"| API:"+dataOutBinance.api1INCHKiri.substring(1,5)+""));
                               // <br/> 1INCH:"+dataOutBinance.Server1INCHKiri.substring(8,13)+"| PARA:"+dataOutBinance.ServerPARAKiri.substring(8,13)+"| ODOS:"+dataOutBinance.ServerODOSKiri.substring(8,13)));  
                         
                               if ($('#kiri').is(':checked')) {
@@ -2573,7 +2573,7 @@
                                     $('#myTable').find('th#KYBERkanan').css("display","none");
                              }
 
-                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.bidPrice+"</a> <br/> SERVER:"+dataOutBinance.Server1INCHKanan.substring(8,15)+" | API:"+dataOutBinance.api1INCHKanan.substring(1,5)+""));
+                            row.append($('<td class=binance>').html("<a href= https://www.binance.me/en/trade/"+dataOutBinance.token+" target=_blank>"+dataOutBinance.bidPrice+"</a> <br/> SERV:"+dataOutBinance.Server1INCHKanan.substring(8,15)+" | API:"+dataOutBinance.api1INCHKanan.substring(1,5)+""));
                               // <br/> 1INCH:"+dataOutBinance.Server1INCHKanan.substring(8,13)+"| PARA:"+dataOutBinance.ServerPARAKanan.substring(8,13)+"| ODOS:"+dataOutBinance.ServerODOSKanan.substring(8,13)));
                             $('#myTable').append(row);
 
@@ -2719,7 +2719,7 @@
 
                         };
 
-                },
+                },timeout: 8000,
                 error: function(jqXHR, textStatus, errorThrown) {
                   if (jqXHR.status === 400) {
                         // Parse respons JSON
@@ -2785,7 +2785,7 @@
                         Server1INCHKanan+"https://api.1inch.dev/swap/v5.2/56/quote?src="+dataIn1inch.scTo+
                         "&dst="+dataIn1inch.scFrom+
                         "&amount=" +
-                      jumlahR+"&includeGas=true";
+                          jumlahR+"&includeGas=true";
         //              jumlahR+"&includeGas=true&protocols=PANCAKESWAP,VENUS,JULSWAP,BAKERYSWAP,BSC_ONE_INCH_LP,ACRYPTOS,BSC_DODO,APESWAP,SPARTAN_V2,VSWAP,VPEGSWAP,HYPERSWAP,BSC_DODO_V2,SWAPSWIPE,ELLIPSIS_FINANCE,BSC_NERVE,BSC_SMOOTHY_FINANCE,CHEESESWAP,PANCAKESWAP_V2,MDEX,WARDEN,WAULTSWAP,BSC_ONE_INCH_LIMIT_ORDER,BSC_ONE_INCH_LIMIT_ORDER_V2,ACSI_FINANCE,GAMBIT_FINANCE,JETSWAP,BSC_UNIFI,BSC_KYBER_DMM,BSC_BI_SWAP,BSC_DOPPLE,BABYSWAP,BSC_PMM2MM,WOOFI,BSC_ELK,BSC_SYNAPSE,BSC_AUTOSHARK,BSC_CAFE_SWAP,PLANET_FINANCE,BSC_ANNEX_FINANCE,BSC_ANNEX_SWAP,BSC_RADIOSHACK,BSC_KYBERSWAP_ELASTIC,BSC_FSTSWAP,BSC_NOMISWAP,BSC_CONE,BSC_KYBER_DMM_STATIC,WOMBATSWAP,BSC_NOMISWAP_STABLE,BSC_PANCAKESWAP_STABLE,BSC_BABYDOGE,BSC_THENA,BSC_WOOFI_V2,BSC_KYOTOSWAP,BSC_TRADERJOE,BSC_TRADERJOE_V2,BSC_UNISWAP_V3,BSC_TRIDENT,BSC_MAVERICK_V1,BSC_PANCAKESWAP_V3,BSC_THENA_V3,BSC_TRADERJOE_V2_1,BSC_NOMISWAPEPCS,BSC_USDFI,BSC_LEVEL_FINANCE,BSC_DODO_V3,BSC_SMARDEX,BSC_PMM13";
 
             //console.log("URL 1inH KANAN : "+apiUrl);      
@@ -2896,7 +2896,7 @@
                           };
                
               //  console.log(`Cek data 1INCH berhasil!!`);
-                },
+                },timeout: 8000,
                 error: function(jqXHR, textStatus, errorThrown) {
 
                   if (jqXHR.status === 400) {
