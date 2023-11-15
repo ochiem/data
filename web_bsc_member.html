@@ -19,7 +19,7 @@
           font-family: Arial, Helvetica, sans-serif;
           font-size: 12px;
           padding: 8px;
-          background-image: linear-gradient(#71f21f,#e7efd8, #a0f179);
+          background-image: linear-gradient(#9389eb,#e7efd8, #95a6ed);
           color: #202124;
         }        
         a{
@@ -195,6 +195,8 @@
                         <option value="SERVER1" selected>SERVER1</option>
                         <option value="SERVER2">SERVER2</option>
                         <option value="SERVER3">SERVER3</option>   
+                        <option value="SERVER4">SERVER4</option>
+                        <option value="SERVER5">SERVER5</option>
                      </select>                            
                   </div>
                 </div>
@@ -476,39 +478,40 @@
       }
 
       var serverURLs = [
-      "https://1.iiknrbtxoz.workers.dev/?",
-      "https://2.5iz3h20guj.workers.dev/?",
-      "https://3.g5l3krmasa-bda.workers.dev/?",
-      "https://4.7gggrv7tyo.workers.dev/?",
-      "https://5.1mynz671ti.workers.dev/?",
-      "https://6.6dn6rtqjng.workers.dev/?",
-      "https://7.zk3dvkv4pp.workers.dev/?",
-      "https://8.c58qvb11ew.workers.dev/?",
-      "https://9.n9zkqpbdpb.workers.dev/?",
-      "https://10.tximoyq5se.workers.dev/?",
-      "https://server1.ciwayeh967.workers.dev/?",
-      "https://yazid3.yazidcrypto7.workers.dev/?",
-      "https://yazid5.bustomi.workers.dev/?",
-      "https://yazid4.yazidcrypto3.workers.dev/?",
-      "https://yoeazd2.yoeaz2324.workers.dev/?",
-      "https://server6.hejij49077.workers.dev/?",
-      "https://server7.gejac16482.workers.dev/?",
-      "https://server8.xotolo5853.workers.dev/?",
-      "https://server9.dopacer193.workers.dev/?",
-      "https://server10.samoker104.workers.dev/?",
-          "https://worker-royal-sound-0576.koban78574.workers.dev/?",
-          "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
-          "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
-          "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
-          "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
-          "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
-          "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
-          "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
-          "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+        "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+        "https://server1.ciwayeh967.workers.dev/?",
+        "https://yazid3.yazidcrypto7.workers.dev/?",
+        "https://yazid5.bustomi.workers.dev/?",
+        "https://yazid4.yazidcrypto3.workers.dev/?",
+        "https://yoeazd2.yoeaz2324.workers.dev/?",
+        "https://server6.hejij49077.workers.dev/?",
+        "https://server7.gejac16482.workers.dev/?",
+        "https://server8.xotolo5853.workers.dev/?",
+        "https://server9.dopacer193.workers.dev/?",
+        "https://server10.samoker104.workers.dev/?",
       ];
 
       var serverURLs2 = [
-       "https://server11.jiser33752.workers.dev/?",
+        "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+        "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+        "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+        "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+        "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+        "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+        "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+        "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+        "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+        "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
         "https://server12.yitijex843.workers.dev/?",
         "https://server13.lovah68689.workers.dev/?",
         "https://server14.setopit195.workers.dev/?",
@@ -518,6 +521,9 @@
         "https://server18.befim19137.workers.dev/?",
         "https://server19.gafigaf751.workers.dev/?",
         "https://server20.gayomep515.workers.dev/?",
+      ];
+
+      var serverURLs3 = [
         "https://server21.becibov328.workers.dev/?",
         "https://server22.togid93865.workers.dev/?",
         "https://server24.yaleve6056.workers.dev/?",
@@ -529,9 +535,6 @@
         "https://new4.xebidi4752.workers.dev/?",
         "https://new5.cibiyec145.workers.dev/?",
         "https://new5.nafeyis928.workers.dev/?",
-        "https://server1.ciwayeh967.workers.dev/?",
-        "https://yazid3.yazidcrypto7.workers.dev/?",
-        "https://yazid5.bustomi.workers.dev/?",
         "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
         "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
         "https://cors.gemul-putra.workers.dev/?",
@@ -541,23 +544,12 @@
         "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
         "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
         "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
-
       ];
 
-      var serverURLs3 = [
-         "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?",
+      var serverURLs4 = [
+        "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?",
         "https://proxykiri.awokawok.workers.dev/?",
         "https://proxykanan.awokawok.workers.dev/?",
-        "https://1.iiknrbtxoz.workers.dev/?",
-        "https://2.5iz3h20guj.workers.dev/?",
-        "https://3.g5l3krmasa-bda.workers.dev/?",
-        "https://4.7gggrv7tyo.workers.dev/?",
-        "https://5.1mynz671ti.workers.dev/?",
-        "https://6.6dn6rtqjng.workers.dev/?",
-        "https://7.zk3dvkv4pp.workers.dev/?",
-        "https://8.c58qvb11ew.workers.dev/?",
-        "https://9.n9zkqpbdpb.workers.dev/?",
-        "https://10.tximoyq5se.workers.dev/?",
         "https://myserver1.nehavef167.workers.dev/?",
         "https://server2.holabaj699.workers.dev/?",
         "https://myserver3.ceteg74201.workers.dev/?",
@@ -573,9 +565,32 @@
         "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
         "https://server4.dajom23364.workers.dev/?",
         "https://server3.hopevap663.workers.dev/?",
-        "https://new5.cibiyec145.workers.dev/?",
-        "https://new5.nafeyis928.workers.dev/?",
-      ];
+        "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+        "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+      ]
+
+      var serverURLs5 = [
+        "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+        "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+        "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+        "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+        "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+        "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+        "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+        "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+        "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+        "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+        "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+        "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+        "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+        "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
+        "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+        "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+      ]
 
        // Function to update the server array
        function updateServerArray(serverArray) {
@@ -592,9 +607,13 @@
         localStorage.setItem('SERVERDEX', selectedServer);
         alert("SERVER DEX SUDAH DIGANTI", localStorage.getItem('SERVERDEX'));
         // Update the array based on the selected server
-        if (selectedServer === "SERVER1") {
+        if (selectedServer === "SERVER5") {
+          updateServerArray(serverURLs5);
+        } else if (selectedServer === "SERVER4") {
+          updateServerArray(serverURLs4);
+        }else if (selectedServer === "SERVER3") {
           updateServerArray(serverURLs3);
-        } else if (selectedServer === "SERVER2") {
+        }else if (selectedServer === "SERVER2") {
           updateServerArray(serverURLs2);
         }else{
           updateServerArray(serverURLs);
@@ -603,8 +622,8 @@
       });
 
 
-  // Initial setup (you can choose the default serverdex array here)
-  updateServerArray(serverURLs3);
+        // Initial setup (you can choose the default serverdex array here)
+        updateServerArray(serverURLs);
       // Memasukkan URL server ke dalam localStorage
 
         $('#mkiri').val(localStorage.getItem('mkiri'));
@@ -2283,7 +2302,7 @@
             var pair = localStorage.getItem('pair');
             var no=0;
 
-                function processSentIndex(index, delay,apikiri,apikanan,Server1INCHKiri,Server1INCHKanan,ServerPARAKiri,ServerPARAKanan,ServerODOSKiri,ServerODOSKanan) {
+                function processSentIndex(index, delay,apikiri,apikanan,Server1INCHKiri,Server1INCHKanan,ServerODOSKiri,ServerODOSKanan) {
                     var coin = coinData[index];
                    // setTimeout(function() {
                         if (coin.status == true) {
@@ -2304,8 +2323,6 @@
                                 api1INCHKanan:apikanan,
                                 Server1INCHKiri:Server1INCHKiri,
                                 Server1INCHKanan:Server1INCHKanan,
-                                ServerPARAKiri:ServerPARAKiri,
-                                ServerPARAKanan:ServerPARAKanan,
                                 ServerODOSKiri:ServerODOSKiri,
                                 ServerODOSKanan:ServerODOSKanan,
                             };
@@ -2327,15 +2344,15 @@
                          var a =(groupIndex * 5 + i);
                          console.log('Index Data Awal: ' + (groupIndex * 5 + i) + ', Nilai: ' + group[a]);
                            if (a % 5 === 0) {
-                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri31'),localStorage.getItem('api1INCHKanan31'),localStorage.getItem('Server5'),localStorage.getItem('Server10'),localStorage.getItem('Server15'),localStorage.getItem('Server20'),localStorage.getItem('Server21'),localStorage.getItem('Server22'));
+                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri31'),localStorage.getItem('api1INCHKanan31'),localStorage.getItem('Server5'),localStorage.getItem('Server10'),localStorage.getItem('Server15'),localStorage.getItem('Server20'));
                            }else  if (a % 5 === 1) {
-                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri22'),localStorage.getItem('api1INCHKanan22'),localStorage.getItem('Server4'),localStorage.getItem('Server9'),localStorage.getItem('Server14'),localStorage.getItem('Server19'),localStorage.getItem('Server23'),localStorage.getItem('Server24'));
+                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri22'),localStorage.getItem('api1INCHKanan22'),localStorage.getItem('Server4'),localStorage.getItem('Server9'),localStorage.getItem('Server14'),localStorage.getItem('Server19'));
                            } else if (a % 5 === 2) {
-                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri21'),localStorage.getItem('api1INCHKanan21'),localStorage.getItem('Server3'),localStorage.getItem('Server8'),localStorage.getItem('Server13'),localStorage.getItem('Server18'),localStorage.getItem('Server25'),localStorage.getItem('Server26'));
+                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri21'),localStorage.getItem('api1INCHKanan21'),localStorage.getItem('Server3'),localStorage.getItem('Server8'),localStorage.getItem('Server13'),localStorage.getItem('Server18'));
                            }else if (a % 5 === 3) {
-                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri2'),localStorage.getItem('api1INCHKanan2'),localStorage.getItem('Server2'),localStorage.getItem('Server7'),localStorage.getItem('Server12'),localStorage.getItem('Server17'),localStorage.getItem('Server27'),localStorage.getItem('Server28'));                           
+                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri2'),localStorage.getItem('api1INCHKanan2'),localStorage.getItem('Server2'),localStorage.getItem('Server7'),localStorage.getItem('Server12'),localStorage.getItem('Server17'));                           
                            } else if(a % 5 === 4){
-                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri'),localStorage.getItem('api1INCHKanan'),localStorage.getItem('Server1'),localStorage.getItem('Server6'),localStorage.getItem('Server11'),localStorage.getItem('Server16'),localStorage.getItem('Server29'),localStorage.getItem('Server30'));   
+                             processSentIndex(a, delay,localStorage.getItem('api1INCHKiri'),localStorage.getItem('api1INCHKanan'),localStorage.getItem('Server1'),localStorage.getItem('Server6'),localStorage.getItem('Server11'),localStorage.getItem('Server16'));   
                            }
                            console.log("jalan grup pay");
                        }    
@@ -2552,14 +2569,12 @@
           var api1INCHKiri = dataIn1inch.api1INCHKiri;
           var Server1INCHKiri = dataIn1inch.Server1INCHKiri;
           var Kiri1INCHSinyal = parseInt(localStorage.getItem('Kiri1INCHSinyal'));
-         // var Kiri1INCHError = parseInt(localStorage.getItem('Kiri1INCHError'));
-        //  var Elimit =parseInt(localStorage.getItem('Elimit'));
-        //  var ELP =parseInt(localStorage.getItem('ELP'));
+       
           var gaseth = localStorage.getItem('gaseth');
           var Priceeth = localStorage.getItem('Priceeth');
 
           var apiUrl =
-                        Server1INCHKiri+"https://api.1inch.dev/swap/v5.2/56/quote?src="+dataIn1inch.scFrom+
+                         Server1INCHKiri+"https://api.1inch.dev/swap/v5.2/56/quote?src="+dataIn1inch.scFrom+
                         "&dst="+dataIn1inch.scTo+
                         "&amount=" +
                         jumlahL+"&includeGas=true";
@@ -2734,9 +2749,7 @@
           var api1INCHKanan = dataIn1inch.api1INCHKanan;
           var Server1INCHKanan = dataIn1inch.Server1INCHKanan;
           var Kanan1INCHSinyal = parseInt(localStorage.getItem('Kanan1INCHSinyal'));
-         // var Kanan1INCHError =parseInt(localStorage.getItem('Kanan1INCHError'));
-         //var Elimit =parseInt(localStorage.getItem('Elimit'));
-         // var ELP =parseInt(localStorage.getItem('ELP'));
+
           var gaseth = localStorage.getItem('gaseth');
           var Priceeth = localStorage.getItem('Priceeth');
           
@@ -3234,7 +3247,7 @@
           var ServerPARAKiri = dataInPARA.ServerPARAKiri;
          
           var apiUrl =
-                        "https://apiv5.PARAswap.io/prices/?"+
+                         "https://apiv5.paraswap.io/prices/?"+
                         "srcToken="+dataInPARA.scFrom+
                         "&srcDecimals="+dataInPARA.desFrom+
                         "&destToken="+dataInPARA.scTo+
@@ -3397,10 +3410,9 @@
           var Priceeth = localStorage.getItem('Priceeth');
           var KananPARASinyal = parseInt(localStorage.getItem('KananPARASinyal'));
           var ServerPARAKanan = dataInPARA.ServerPARAKanan;
-         // var KananPARAError = parseInt(localStorage.getItem('KananPARAError'));
          
           var apiUrl =
-                        "https://apiv5.PARAswap.io/prices/?"+
+          "https://apiv5.paraswap.io/prices/?"+
                         "destToken="+dataInPARA.scFrom+
                         "&destDecimals="+dataInPARA.desFrom+
                         "&srcToken="+dataInPARA.scTo+
@@ -4368,6 +4380,7 @@
               $('input[type="checkbox"]').prop('disabled', false);
               $('input[type="radio"]').prop('disabled', false);
               $('input[type="number"]').prop('disabled', false);
+              $('select').prop('disabled', false);
 
             }
           }
