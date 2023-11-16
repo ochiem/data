@@ -395,7 +395,7 @@
               <li>NET PNL - PNL bersih setelah dipotong FEE, filter sinyal yg ingin diterima, gunakan titik penganti koma
               </li>  
                 <li>JIKA BANYAK ERROR "KENA LIMIT", SILAKAN COBA GANTI SERVER!! </li>
-              <li>Pastikan sudah START dengan BOT TELEGRAM ini : @mini_server_bot, cari BOT tersebut ditelegram </li>
+              <li>Pastikan sudah START dengan BOT TELEGRAM ini : @@multiscan_dex_bot, cari BOT tersebut ditelegram </li>
             </ol>
             </p>
         </div>
@@ -2321,9 +2321,9 @@
 
             
             if($('#autorun').prop('checked')){
-              sendStatusTELE("AUTORUN",localStorage.getItem('sx'),nama);
+              sendStatusTELE("AUTO",localStorage.getItem('sx'),nama);
             }else{
-              sendStatusTELE("MANUAL",localStorage.getItem('sx'),nama);
+              sendStatusTELE("START",localStorage.getItem('sx'),nama);
             }
         // Perulangan dengan penundaan (delay)
             var delay = localStorage.getItem('delay');
@@ -2670,7 +2670,7 @@
                         var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
                         
                         var message =
-                            "#<b>"+localStorage.getItem('idserver')+"-BOTS:1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                            "MULTISCAN-<b>"+localStorage.getItem('idserver')+":1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
                             " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"'>[ SC ]</a>"+
                             "  <a href='https://bscscan.com/token/"+dataOUT.scFrom+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -2848,7 +2848,7 @@
                           var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a>  PNL:"+PNL.toFixed(2)+"$ <br/>"; 
 
                           var message =
-                            "#<b>"+localStorage.getItem('idserver')+"-BOTS:1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                            "MULTISCAN-<b>"+localStorage.getItem('idserver')+":1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
                             " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>[ SC ]</a>"+
                             "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                           // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3019,7 +3019,7 @@
                         var text13 ="OPEN  : <a href=#sellOPEN"+dataInOPEN.token+">"+dataInOPEN.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
 
                         var message =
-                        "#<b>"+localStorage.getItem('idserver')+"-BOTS:OPEN#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                        "MULTISCAN-<b>"+localStorage.getItem('idserver')+":OPEN#"+sinyal+"</b>"+" \n -----------------------------------------"+
                         " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"'>[ SC ]</a>"+
                         " <a href='https://bscscan.com/token/"+dataOUT.scFrom+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                        // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3178,7 +3178,7 @@
                var text13 ="OPEN : <a href=#buyOPEN"+dataInOPEN.token+">"+dataInOPEN.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
 
                var message =
-                          "#<b>"+localStorage.getItem('idserver')+"-BOTS:OPEN#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                          "MULTISCAN-<b>"+localStorage.getItem('idserver')+":OPEN#"+sinyal+"</b>"+" \n -----------------------------------------"+
                           " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>[ SC ]</a>"+
                           "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                          // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3341,7 +3341,7 @@
                         var text13 ="PARA : <a href=#sellPARA"+dataInPARA.token+">"+dataInPARA.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
 
                         var message =
-                        "#<b>"+localStorage.getItem('idserver')+"-BOTS:PARA#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                        "MULTISCAN-<b>"+localStorage.getItem('idserver')+":PARA#"+sinyal+"</b>"+" \n -----------------------------------------"+
                         " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"'>[ SC ]</a>"+
                         " <a href='https://bscscan.com/token/"+dataOUT.scFrom+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                        // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3507,7 +3507,7 @@
                var text13 ="PARA : <a href=#buyPARA"+dataInPARA.token+">"+dataInPARA.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
 
                var message =
-                          "#<b>"+localStorage.getItem('idserver')+"-BOTS:PARA#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                          "MULTISCAN-<b>"+localStorage.getItem('idserver')+":PARA#"+sinyal+"</b>"+" \n -----------------------------------------"+
                           " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>[ SC ]</a>"+
                           "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                          // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3667,7 +3667,7 @@
                         var text13 ="KYBER : <a href=#sellKYBER"+dataInKYBER.token+">"+dataInKYBER.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
 
                         var message =
-                        "#<b>"+localStorage.getItem('idserver')+"-BOTS:KYBER#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                        "MULTISCAN-<b>"+localStorage.getItem('idserver')+":KYBER#"+sinyal+"</b>"+" \n -----------------------------------------"+
                         " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"'>[ SC ]</a>"+
                         " <a href='https://bscscan.com/token/"+dataOUT.scFrom+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                        // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3839,7 +3839,7 @@
                 var text13 ="KYBER : <a href=#buyKYBER"+dataInKYBER.token+">"+dataInKYBER.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
 
                 var message =
-                            "#<b>"+localStorage.getItem('idserver')+"-BOTS:KYBER#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                            "MULTISCAN-<b>"+localStorage.getItem('idserver')+":KYBER#"+sinyal+"</b>"+" \n -----------------------------------------"+
                             " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>[ SC ]</a>"+
                             "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -3937,7 +3937,7 @@
           }
 
         function swapKeODOS(dataInODOS) {
-          var KDODOSinyal = parseInt(localStorage.getItem("KananDODOSinyal"));
+          var KiriODOSSinyal = parseInt(localStorage.getItem("KiriDODOSinyal"));
           var jumlahL = Math.pow(10, dataInODOS.desFrom) * dataInODOS.jumlahL;
           var jumlahL = BigInt(Math.round(Number(jumlahL)));
           var ServerKiri = dataInODOS.ServerODOSKiri;
@@ -4061,7 +4061,7 @@
                 var text13 ="ODOS : <a href=#buyODOS"+dataInODOS.token+">"+dataInODOS.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
 
               var message =
-                            "#<b>"+localStorage.getItem('idserver')+"-BOTS:ODOS#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                            "MULTISCAN-<b>"+localStorage.getItem('idserver')+":ODOS#"+sinyal+"</b>"+" \n -----------------------------------------"+
                             " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"'>[ SC ]</a>"+
                             "  <a href='https://bscscan.com/token/"+dataOUT.scFrom+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -4271,7 +4271,7 @@
                 var text13 ="ODOS : <a href=#buyODOS"+dataInODOS.token+">"+dataInODOS.token+"</a> PNL :"+PNL.toFixed(2)+"$ <br/>";
 
                 var message =
-                            "#<b>"+localStorage.getItem('idserver')+"-BOTS:ODOS#"+sinyal+"</b>"+" \n -----------------------------------------"+
+                            "MULTISCAN-<b>"+localStorage.getItem('idserver')+":ODOS#"+sinyal+"</b>"+" \n -----------------------------------------"+
                             " \n "+dataOUT.market+" : <b>#" + dataOUT.pair +"</b> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>[ SC ]</a>"+
                             "  <a href='https://bscscan.com/token/"+dataOUT.scTo+"?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3'>[ STOK ]</a>"+
                            // " \n NET OPIT : "+dataOUT.netPNL+"$ (<b>"+ dataOUT.persen +" %</b>)"+
@@ -4421,7 +4421,7 @@
             { chat_id: -1002129760604}
             ];
 
-            var token = '6657662766:AAHaZaa1sbSMJ629Cr9c91soR5zxM3Wrqkw';
+            var token = '6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ';
             var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
 
             // Loop melalui daftar pengguna
@@ -4470,12 +4470,12 @@
                 var toterrorKYBER = parseInt(localStorage.getItem('KiriKYBERError')) + parseInt(localStorage.getItem('KananKYBERError'));
                
                 var message = 
-                    "#"+localStorage.getItem('idserver')+" <b>[WEB-"+status+"#"+sx+"]</b>"+"";
+                    "MULTISCAN-"+localStorage.getItem('idserver')+" <b>["+status+"#"+sx+"]</b>"+"";
 //                    "\nKIRI: "+localStorage.getItem('mkiri')+" KANAN: "+localStorage.getItem('mkanan')+" PNL: "+localStorage.getItem('netpnl')+"$"+
  //                   "\n** LAMA EKSEKUSI "+localStorage.getItem('duration')+" detik **";
 
                     
-            var token = '6657662766:AAHaZaa1sbSMJ629Cr9c91soR5zxM3Wrqkw';
+            var token = '6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ';
             var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
 
             // Loop melalui daftar pengguna
@@ -4504,7 +4504,7 @@
         }
       
           $('#refresh2').click(function() {
-          sendStatusTELE("RESTART",localStorage.getItem('sx'),nama);
+          sendStatusTELE("STOP",localStorage.getItem('sx'),nama);
           location.reload(); // Melakukan refresh halaman
           alert("REFRESH PAGE akan DILAKUKAN...!!");
         });
