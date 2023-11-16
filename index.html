@@ -136,7 +136,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-2" style="text-align: center; ">
                       <label for="name" style="color: #120305;font-size: 17px;"> TOKEN :</label>
-                        <input type="password" id="token" value="NTYwNjA3NDg4NCAyMDIzLTExLTE2IFRFU1RFUi1YIFlFU1czQi0wUDFULUczPTM=" required="required"> <button type="button" id="checkBtn" class="btn btn-danger"  >BUKA KUNCI </button>
+                        <input type="password" id="token" value="" required="required"> <button type="button" id="checkBtn" class="btn btn-danger"  >BUKA KUNCI </button>
                         <div class="error-message"></div>
                         <label for="idserver" style="display: none;" id="idserver"></label> 
                         <div class="error-message"></div>
@@ -209,7 +209,7 @@
                           <input type="checkbox" id="open"  class="myCheckbox"> <label class="form-check-label" for="autorun">OPEN</label>
                           <input type="checkbox" id="PARA"   class="myCheckbox"> <label class="form-check-label" for="autorun">PARA</label> 
                           <input type="checkbox" id="KYBER"   class="myCheckbox"> <label class="form-check-label" for="autorun">KYBER</label>                           
-                          <input type="checkbox" id="ODOS"   class="myCheckbox"> <label class="form-check-label" for="autorun">ODOS</label>                                                    
+                          <input type="checkbox" id="ODOS" checked  class="myCheckbox"> <label class="form-check-label" for="autorun">ODOS</label>                                                    
 
                       </div>
                   </div>
@@ -2775,7 +2775,7 @@
                     $("#info1").css("color", "red");
                     $("#info1").text("STATUS KIRI: " + dataIn1inch.token +" [ "+alert1+"]" );
                     console.error("Cek data 1INCH gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                },timeout: 5000
+                },timeout: 10000
             });
         }
 
@@ -2955,7 +2955,7 @@
                     $("#info2").text("STATUS KANAN : " + dataIn1inch.token +" [ "+alert1+"]" );
                     console.error("Cek data 1INCH gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
                     
-                },timeout: 5000
+                },timeout: 12000
             });
         }
 
@@ -3115,7 +3115,7 @@
                     $("#info12").css("color", "red");
                     $("#info12").text("STATUS KIRI : " + dataInOPEN.token +" [FAILED]" );
                     console.error("Cek data OPEN gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                },timeout: 5000
+                },timeout: 12000
             });
         }
 
@@ -3272,7 +3272,7 @@
                     $("#info22").css("color", "red");
                     $("#info22").text("STATUS KANAN : " + dataInOPEN.token +" [FAILED]" );
                     console.error("Cek data OPEN gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                },timeout: 5000
+                },timeout: 12000
             });
         }
 
@@ -3437,7 +3437,7 @@
                     $("#info123").css("color", "red");
                     $("#info123").text("KIRI : " + dataInPARA.token +" [FAILED]" );
                     console.error("Cek data PARA gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                },timeout: 5000
+                },timeout: 12000
             });
         }
 
@@ -3602,7 +3602,7 @@
                     $("#info223").css("color", "red");
                     $("#info223").text("KANAN : " + dataInPARA.token +" [FAILED]" );
                     console.error("Cek data PARA gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                },timeout: 5000
+                },timeout: 12000
             });
         }
 
@@ -3774,7 +3774,7 @@
                     $("#info123").css("color", "red");
                     $("#info123").text("KIRI : " + dataInKYBER.token +"[" +alert1+"]" );
                     console.error("Cek data KYBER gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                },timeout: 5000
+                },timeout: 12000
             });
         }
 
@@ -3943,7 +3943,7 @@
                       $("#info223").css("color", "red");
                       $("#info223").text("KANAN : " + dataInKYBER.token +"[" +alert1+"]" );
                       console.error("Cek data KYBER gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-                  },timeout: 5000
+                  },timeout: 12000
               });
           }
 
@@ -3984,7 +3984,7 @@
             //         "Curve Registry",
                  ],
             referralCode: 0,
-            slippageLimitPercent: 0.4,
+            slippageLimitPercent: 0.1,
           };
           // console.log("RE DATA :" +requestData);
 
@@ -4158,7 +4158,7 @@
               $("#info123").css("color", "red");
               $("#info123").text("KIRI : " + dataInODOS.token + " [FAILED]");
               console.error("Cek data ODOS gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-            },timeout: 5000
+            },timeout: 12000
           });
         }
 
@@ -4199,7 +4199,7 @@
             //     "Curve Registry",
             ],
             referralCode: 0,
-            slippageLimitPercent: 0.4,
+            slippageLimitPercent: 0.1,
           };
 
           // console.log("RE DATA :" +requestData);
@@ -4366,7 +4366,7 @@
               $("#info223").css("color", "red");
               $("#info223").text("KANAN : " + dataInODOS.token + " [FAILED]");
               console.error("Cek data ODOS gagal: " + alert1); // Tampilkan pesan kesalahan jika terjadi
-            },timeout: 5000
+            },timeout: 12000
           });
         }
    
