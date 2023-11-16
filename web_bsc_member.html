@@ -374,7 +374,7 @@
                     <th  class="open" colspan="2" id="openkanan" >OPEN <span id="lKananOPENSinyal" class="badge badge-success"> </span><span id="lKananOPENError" class="badge badge-danger"></span></th>
                     <th  class="PARA" colspan="2" id="PARAkanan" >PARA <span id="lKananPARASinyal" class="badge badge-success"> </span><span id="lKananPARAError" class="badge badge-danger"></span></th>
                     <th  class="KYBER" colspan="2" id="KYBERkanan" >KYBER <span id="lKananKYBERSinyal" class="badge badge-success"> </span><span id="lKananKYBERError" class="badge badge-danger"> </span></th>
-                    <th  class="ODOS" colspan="2" id="ODOSkanan" >ODOS <span id="lkananODOSSinyal" class="badge badge-success"> </span><span id="lkananODOSError" class="badge badge-danger"> </span></th>
+                    <th  class="ODOS" colspan="2" id="ODOSKanan" >ODOS <span id="lKananODOSSinyal" class="badge badge-success"> </span><span id="lKananODOSError" class="badge badge-danger"> </span></th>
                   <th class="binance">BINANCE</th>
                 </tr>
                 </thead>
@@ -2191,6 +2191,8 @@
        KananPARAError=0;
        KiriKYBERError=0;
        KananKYBERError=0;
+       KiriODOSError=0;
+       KananODOSError=0;
 
         var startTime = new Date().getTime();
         localStorage.setItem('startTime',startTime);
@@ -2562,7 +2564,7 @@
                                       row.append($('<td id=buyPNLODOS'+dataOutBinance.token+'>').text(""));
                                       swapDariODOS(dataOutBinance);
                                 }else{                              
-                                      $('#myTable').find('th#ODOSkanan').css("display","none");
+                                      $('#myTable').find('th#ODOSKanan').css("display","none");
                                 } 
 
                             }else{
