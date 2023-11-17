@@ -128,7 +128,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 style="text-align: center; color:blue;"><img src="https://ambon.go.id/wp-content/uploads/2018/01/new-animated-gif-icon-10.gif" width="25x25"/> MULTI SCAN :: SETTING DATA </h3><hr/>
+            <h3 style="text-align: center; color:blue;"><img src="https://ambon.go.id/wp-content/uploads/2018/01/new-animated-gif-icon-10.gif" width="25x25"/> MULTI SCAN V.01:: SETTING DATA </h3><hr/>
             <form id="form1">
 
                 <div class="form-row">
@@ -2664,12 +2664,12 @@
                             modalL:localStorage.getItem('mkiri')
                         };
 
-                        var text ="<a href=#sell1INCH"+dataIn1inch.token+">1INCH : </a> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataIn1inch.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [WD] </a> <br/>";
+                        var text ="<a href=#sell1INCH"+dataIn1inch.token+">1INCH : </a> <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataIn1inch.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [WD] </a> <br/>";
                         var sinyal = parseInt(localStorage.getItem('Kiri1INCHSinyal'))+1 ;
                         var text1 ="<a href='https://app.1inch.io/#/56/classic/swap/"+dataOUT.scFrom+"/"+dataOUT.scTo +"' target=_blank>"+harga1INCH.toFixed(7)+" </a> <br/> Fee:"+totalFeeKiri.toFixed(2)+"$";
                         var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
                         var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
-                        var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
+                        var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a> PNL:"+PNL.toFixed(2)+" $ <br/>";
                         
                         var message =
                             "MULTISCAN-<b>"+localStorage.getItem('idserver')+":1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
@@ -2843,11 +2843,11 @@
                               };
 
                         
-                          var text ="<a href=#buy1INCH"+dataIn1inch.token+"> 1INCH : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataIn1inch.token+"</a>  PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>"; 
+                          var text ="<a href=#buy1INCH"+dataIn1inch.token+"> 1INCH : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataIn1inch.token+"</a>  PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataIn1inch.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>"; 
                           var sinyal =parseInt(localStorage.getItem('Kanan1INCHSinyal'))+1 ;
                           var text1 ="<a href='https://app.1inch.io/#/56/classic/swap/" +dataOUT.scFrom +"/" +dataOUT.scTo +"' target=_blank>"+harga1INCH.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                           var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
-                          var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a>  PNL:"+PNL.toFixed(2)+"$ <br/>"; 
+                          var text13 = "1INCH : <a href=#sell1INCH"+dataIn1inch.token+">"+dataIn1inch.token+" </a>  PNL:"+PNL.toFixed(2)+" $ <br/>"; 
 
                           var message =
                             "MULTISCAN-<b>"+localStorage.getItem('idserver')+":1INCH#"+sinyal+"</b>"+" \n -----------------------------------------"+
@@ -3013,12 +3013,12 @@
                             modalL:localStorage.getItem('mkiri')
                         };
 
-                        var text ="<a href=#sellOPEN"+dataInOPEN.token+">OPEN  :  </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInOPEN.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataInOPEN.token).replace("USDT", "")+"' target=_blank> [WD] </a> <br/>";
+                        var text ="<a href=#sellOPEN"+dataInOPEN.token+">OPEN  :  </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInOPEN.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataInOPEN.token).replace("USDT", "")+"' target=_blank> [WD] </a> <br/>";
                         var sinyal =parseInt(localStorage.getItem('KiriOPENSinyal'))+1;
                         var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaOPEN.toFixed(7)+" </a> <br/> Fee:"+totalFeeKiri.toFixed(2)+"$";
                         var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
                         var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
-                        var text13 ="OPEN  : <a href=#sellOPEN"+dataInOPEN.token+">"+dataInOPEN.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
+                        var text13 ="OPEN  : <a href=#sellOPEN"+dataInOPEN.token+">"+dataInOPEN.token+" </a> PNL:"+PNL.toFixed(2)+" $ <br/>";
 
                         var message =
                         "MULTISCAN-<b>"+localStorage.getItem('idserver')+":OPEN#"+sinyal+"</b>"+" \n -----------------------------------------"+
@@ -3172,7 +3172,7 @@
                             modalR:localStorage.getItem('mkanan')
                         };
  
-               var text ="<a href=#buyOPEN"+dataInOPEN.token+">OPEN : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInOPEN.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInOPEN.token).replace("USDT", "")+"' target=_blank> [DP] </a><br/>";
+               var text ="<a href=#buyOPEN"+dataInOPEN.token+">OPEN : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInOPEN.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInOPEN.token).replace("USDT", "")+"' target=_blank> [DP] </a><br/>";
                var sinyal =parseInt(localStorage.getItem('KananOPENSinyal')+1);
                var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaOPEN.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3335,12 +3335,12 @@
                             modalL:localStorage.getItem('mkiri')
                         };
 
-                        var text ="<a href=#sellPARA"+dataInPARA.token+">PARA : </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInPARA.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataInPARA.token).replace("USDT", "")+"' target=_blank> [WD] </a><br/>";
+                        var text ="<a href=#sellPARA"+dataInPARA.token+">PARA : </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInPARA.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataInPARA.token).replace("USDT", "")+"' target=_blank> [WD] </a><br/>";
                         var sinyal =parseInt(localStorage.getItem('KiriPARASinyal'))+1;
                         var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaPARA.toFixed(7)+" </a> <br/> Fee:"+totalFeeKiri.toFixed(2)+"$";
                         var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";                        
                         var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
-                        var text13 ="PARA : <a href=#sellPARA"+dataInPARA.token+">"+dataInPARA.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
+                        var text13 ="PARA : <a href=#sellPARA"+dataInPARA.token+">"+dataInPARA.token+" </a> PNL:"+PNL.toFixed(2)+" $ <br/>";
 
                         var message =
                         "MULTISCAN-<b>"+localStorage.getItem('idserver')+":PARA#"+sinyal+"</b>"+" \n -----------------------------------------"+
@@ -3501,7 +3501,7 @@
                         };
 
 
-               var text ="<a href=#buyPARA"+dataInPARA.token+"> PARA : </a> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>"+dataInPARA.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInPARA.token).replace("USDT", "")+"' target=_blank> [DP] </a><br/>";
+               var text ="<a href=#buyPARA"+dataInPARA.token+"> PARA : </a> <a href='https://bscscan.com/token/" + dataOUT.scTo +"'>"+dataInPARA.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInPARA.token).replace("USDT", "")+"' target=_blank> [DP] </a><br/>";
                var sinyal =parseInt(localStorage.getItem('KananPARASinyal')+1);
                var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaPARA.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -3661,12 +3661,12 @@
                             modalL:localStorage.getItem('mkiri')
                         };
 
-                        var text ="<a href=#sellKYBER"+dataInKYBER.token+">KYBER : </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInKYBER.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataInKYBER.token).replace("USDT", "")+"' target=_blank> [WD] </a><br/>";
+                        var text ="<a href=#sellKYBER"+dataInKYBER.token+">KYBER : </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInKYBER.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/"+(dataInKYBER.token).replace("USDT", "")+"' target=_blank> [WD] </a><br/>";
                         var sinyal =parseInt(localStorage.getItem('KiriKYBERSinyal'))+1;
                         var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaKYBER.toFixed(7)+" </a> <br/> Fee:"+totalFeeKiri.toFixed(2)+"$";
                         var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";                        
                         var text3 =""+PNL.toFixed(2)+"$<br/>"+persen.toFixed(2)+"%";
-                        var text13 ="KYBER : <a href=#sellKYBER"+dataInKYBER.token+">"+dataInKYBER.token+" </a> PNL:"+PNL.toFixed(2)+"$ <br/>";
+                        var text13 ="KYBER : <a href=#sellKYBER"+dataInKYBER.token+">"+dataInKYBER.token+" </a> PNL:"+PNL.toFixed(2)+" $ <br/>";
 
                         var message =
                         "MULTISCAN-<b>"+localStorage.getItem('idserver')+":KYBER#"+sinyal+"</b>"+" \n -----------------------------------------"+
@@ -3833,7 +3833,7 @@
                           };
 
 
-                var text ="<a href=#buyKYBER"+dataInKYBER.token+">KYBER : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInKYBER.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInKYBER.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
+                var text ="<a href=#buyKYBER"+dataInKYBER.token+">KYBER : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInKYBER.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInKYBER.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KananKYBERSinyal')+1);
                 var text1 ="<a href='https://swap.defillama.com/?chain=bsc&from="+dataOUT.scFrom+"&to="+dataOUT.scTo +"' target=_blank>"+hargaKYBER.toFixed(7)+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -4055,7 +4055,7 @@
                 modalL: localStorage.getItem("mkiri"),
               };
 
-              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [WD] </a> <br/>";
+              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scFrom +"' target=_blank>"+dataInODOS.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [WD] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KiriODOSSinyal')+1);
                 var text1 ="<a href='https://app.odos.xyz' target=_blank>"+hargaODOS.toFixed(7)+"</a><br/> Fee:"+totalFeeKiri.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
@@ -4265,7 +4265,7 @@
                 modalR: localStorage.getItem("mkanan"),
               };
 
-              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL:"+PNL.toFixed(2)+"$ <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
+              var text ="<a href=#buyODOS"+dataInODOS.token+">ODOS : </a>  <a href='https://bscscan.com/token/" + dataOUT.scTo +"' target=_blank>"+dataInODOS.token+"</a> PNL: "+PNL.toFixed(2)+"$ :: <span style=color:blue;> SWAP: "+FeeSwap.toFixed(2)+"$</span> <a href='https://www.binance.me/en/my/wallet/account/main/deposit/crypto/"+(dataInODOS.token).replace("USDT", "")+"' target=_blank> [DP] </a> <br/>";
                 var sinyal =parseInt(localStorage.getItem('KananODOSSinyal')+1);
                 var text1 ="<a href='https://app.odos.xyz' target=_blank>"+hargaODOS.toFixed(7)+"</a>"+"<br/> Fee:"+totalFeeKanan.toFixed(2)+"$";
                 var text2 =""+netpnl+"$<br/>"+persen.toFixed(2)+"%";
