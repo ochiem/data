@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MODAL v.01</title>
+    <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/current-assets-3716445-3104684.png" type="image/x-icon">
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      .kiri {
+        text-align: left;
+      }
+      .kanan {
+        text-align: right;
+      }
+      .besar {
+        font-size: 20px;
+      }
+      .kecil {
+        font-size: 14px;
+      }
+      .merah {
+        color: rgb(244, 18, 18);
+        font-weight: bolder;
+      }
+      .ijo {
+        color: rgb(9, 152, 54);
+        font-weight: bolder;
+      }
+      .biru {
+        color: rgb(17, 39, 232);
+        font-weight: bolder;
+      }
+      .container {
+        margin-top: 30px;
+        max-width: 1250px;
+      }
+
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var ratePrice = {
+        usdt: 1,
+        idr: 0,
+        btc: 0,
+        eth: 0,
+        bnb: 0,
+        random: 0,
+      };
+
+      var last = "";
+
+      function rateKalkulator() {
+        $.getJSON(
+          "https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
+        )
+          .done(function (response) {
+            response.forEach((res) => {
+              switch (res.symbol) {
+                case "BTCUSDT":
+                  ratePrice["btc"] = res.price;
+                  break;
+                case "ETHUSDT":
+                  ratePrice["eth"] = res.price;
+                  break;
+                case "BNBUSDT":
+                  ratePrice["bnb"] = res.price;
+                  break;
+                case "USDTBIDR":
+                  ratePrice["idr"] = res.price;
+                  break;
+              }
+            });
+          })
+          .fail(function (error) {
+            console.log(error);
+          });
+        last ? convertCurrency(last) : null;
+      }
+
+      rateKalkulator();
+
+      function getRandom() {
+        var symbolRandom = $("#symbol").val();
+        console.log(symbolRandom.toUpperCase());
+        if (symbolRandom) {
+          $.getJSON(
+            "https://www.binance.me/api/v3/ticker/price?symbol=" +
+              symbolRandom.toUpperCase() +
+              "USDT"
+          )
+            .done(function (response) {
+              console.log(response);
+
+              ratePrice["random"] = response.price;
+
+              var usdt = 1 * ratePrice["random"];
+              var idr = usdt * ratePrice["idr"];
+              var btc = usdt / ratePrice["btc"];
+              var eth = usdt / ratePrice["eth"];
+              var bnb = usdt / ratePrice["bnb"];
+              idr = Math.round(idr, 0);
+
+              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
+              document.getElementById("idr" + "price").value =
+                idr.toLocaleString("id-ID", {
+                  currency: "IDR",
+                });
+              document.getElementById("btc" + "price").value = btc.toFixed(10);
+              document.getElementById("eth" + "price").value = eth.toFixed(9);
+              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
+
+              document.getElementById("random" + "price").value = 1;
+
+              $("#randget").text("Update");
+              $("#symbol").prop("disabled", true);
+              $("#randreset").prop("hidden", false);
+
+              $("#randomprice").prop("disabled", false);
+            })
+            .fail(function (error) {
+              console.log(error);
+              $("#randomprice").prop("disabled", true);
+              document.getElementById("random" + "price").value = 0;
+              const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 2500,
+                didOpen: (toast) => {
+                  toast.addEventListener("mouseenter", Swal.stopTimer);
+                  toast.addEventListener("mouseleave", Swal.resumeTimer);
+                },
+              });
+
+              Toast.fire({
+                icon: "error",
+                title: "Periksa Symbol!!",
+              });
+            });
+        } else {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2500,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: "error",
+            title: "Symbol tidak boleh kosong",
+          });
+        }
+      }
+
+      function resetRandom() {
+        $("#randget").text("Get");
+        $("#symbol").prop("disabled", false);
+        $("#randreset").prop("hidden", true);
+        $("#randomprice").prop("disabled", true);
+
+        ratePrice["random"] = 0;
+
+        document.getElementById("usdt" + "price").value = 0;
+        document.getElementById("idr" + "price").value = 0;
+        document.getElementById("btc" + "price").value = 0;
+        document.getElementById("eth" + "price").value = 0;
+        document.getElementById("bnb" + "price").value = 0;
+        document.getElementById("random" + "price").value = 0;
+        document.getElementById("symbol").value = "";
+      }
+
+      function convertCurrency(base) {
+        const baseValue = parseFloat(
+          document.getElementById(base + "price").value
+        );
+
+        if (!isNaN(baseValue)) {
+          switch (base) {
+            case "usdt":
+              last = base;
+              var idr = (baseValue / ratePrice[base]) * ratePrice["idr"];
+              var btc = baseValue / ratePrice["btc"];
+              var eth = baseValue / ratePrice["eth"];
+              var bnb = baseValue / ratePrice["bnb"];
+              var random = baseValue / ratePrice["random"];
+              idr = Math.round(idr, 0);
+
+              document.getElementById("idr" + "price").value =
+                idr.toLocaleString("id-ID", {
+                  currency: "IDR",
+                });
+              document.getElementById("btc" + "price").value = btc.toFixed(10);
+              document.getElementById("eth" + "price").value = eth.toFixed(9);
+              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
+              ratePrice["random"]
+                ? (document.getElementById("random" + "price").value =
+                    random.toFixed(5))
+                : null;
+
+              break;
+
+            case "idr":
+              last = base;
+
+              var usdt = (baseValue / ratePrice[base]) * ratePrice["usdt"];
+              var btc = usdt / ratePrice["btc"];
+              var eth = usdt / ratePrice["eth"];
+              var bnb = usdt / ratePrice["bnb"];
+              var random = usdt / ratePrice["random"];
+
+              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
+              document.getElementById("btc" + "price").value = btc.toFixed(10);
+              document.getElementById("eth" + "price").value = eth.toFixed(9);
+              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
+              ratePrice["random"]
+                ? (document.getElementById("random" + "price").value =
+                    random.toFixed(4))
+                : null;
+              break;
+
+            case "btc":
+              last = base;
+
+              var usdt = baseValue * ratePrice[base];
+              var idr = usdt * ratePrice["idr"];
+              var eth = usdt / ratePrice["eth"];
+              var bnb = usdt / ratePrice["bnb"];
+              var random = usdt / ratePrice["random"];
+              idr = Math.round(idr, 0);
+
+              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
+              document.getElementById("idr" + "price").value =
+                idr.toLocaleString("id-ID", {
+                  currency: "IDR",
+                });
+              document.getElementById("eth" + "price").value = eth.toFixed(9);
+              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
+              ratePrice["random"]
+                ? (document.getElementById("random" + "price").value =
+                    random.toFixed(4))
+                : null;
+
+              break;
+
+            case "eth":
+              last = base;
+
+              var usdt = baseValue * ratePrice[base];
+              var idr = usdt * ratePrice["idr"];
+              var btc = usdt / ratePrice["btc"];
+              var bnb = usdt / ratePrice["bnb"];
+              var random = usdt / ratePrice["random"];
+              idr = Math.round(idr, 0);
+
+              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
+              document.getElementById("idr" + "price").value =
+                idr.toLocaleString("id-ID", {
+                  currency: "IDR",
+                });
+              document.getElementById("btc" + "price").value = btc.toFixed(10);
+              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
+              ratePrice["random"]
+                ? (document.getElementById("random" + "price").value =
+                    random.toFixed(4))
+                : null;
+
+              break;
+
+            case "bnb":
+              last = base;
+
+              var usdt = baseValue * ratePrice[base];
+              var idr = usdt * ratePrice["idr"];
+              var btc = usdt / ratePrice["btc"];
+              var eth = usdt / ratePrice["eth"];
+              var random = usdt / ratePrice["random"];
+              idr = Math.round(idr, 0);
+
+              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
+              document.getElementById("idr" + "price").value =
+                idr.toLocaleString("id-ID", {
+                  currency: "IDR",
+                });
+              document.getElementById("btc" + "price").value = btc.toFixed(10);
+              document.getElementById("eth" + "price").value = eth.toFixed(9);
+              ratePrice["random"]
+                ? (document.getElementById("random" + "price").value =
+                    random.toFixed(4))
+                : null;
+
+              break;
+
+            default:
+              var usdt = baseValue * ratePrice["random"];
+              var idr = usdt * ratePrice["idr"];
+              var btc = usdt / ratePrice["btc"];
+              var eth = usdt / ratePrice["eth"];
+              var bnb = usdt / ratePrice["bnb"];
+              idr = Math.round(idr, 0);
+
+              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
+              document.getElementById("idr" + "price").value =
+                idr.toLocaleString("id-ID", {
+                  currency: "IDR",
+                });
+              document.getElementById("btc" + "price").value = btc.toFixed(10);
+              document.getElementById("eth" + "price").value = eth.toFixed(9);
+              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h3 style="text-align: center">APLIKASI MODAL v.01</h3>
+      <hr />
+      <form>
+        <div class="row">
+          <!-- Kolom Kiri -->
+          <div class="col-md-6">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <label class="form-check-label"> API BINANCE </label>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="apikey"
+                placeholder="API KEY"
+                value=""
+                required
+              />
+            </div>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <label class="form-check-label"> SECRET BINANCE </label>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="secretkey"
+                placeholder="SECRET KEY"
+                value=""
+                required
+              />
+            </div>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <label class="form-check-label"> MODAL AWAL </label>
+                </div>
+              </div>
+              <input
+                type="number"
+                class="form-control"
+                id="MODALAWAL"
+                placeholder="MODAL AWAL"
+                value="1"
+                required
+              />
+              <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label" id="RPMODAL"> </label>
+              </div>
+            </div>
+            </div>
+
+          </div>
+
+          <!-- Kolom Kanan -->
+          <div class="col-md-6">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <label class="form-check-label"> WALLET BSC </label>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="bscwallet"
+                placeholder="WALLET BSC"
+                value=""
+                required
+              />
+            </div>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <label class="form-check-label"> WALLET ERC </label>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                id="ercwallet"
+                placeholder="WALLET ERC"
+                value=""
+                required
+              />
+            </div>
+            <button type="submit" id="setdata" class="btn btn-warning">
+              SET DATA
+            </button>
+            <input
+              type="button"
+              id="resetmodal"
+              value="RESET"
+              class="btn btn-danger"
+            />
+
+            &nbsp;
+
+            <span class="merah kecil">LAST SET : </span>
+            <span id="dateset" class="biru kecil"></span>
+          </div>
+        </div>
+      </form>
+      <hr />
+
+      <div class="row">
+        <div class="col-md-7">
+          <h4 style="text-align: center">DETAIL TABEL ASSET</h4>
+          <div class="kanan">
+            <span class="biru kecil">LAST UPDATE : </span>
+            <span class="ijo kecil" id="dateupdate"></span>
+          </div>
+          <table id="myTable" class="table table-striped table-hover">
+            <thead>
+              <tr class="table-warning merah">
+                <th>MODAL</th>
+                <th>BINANCE</th>
+                <th>ERC</th>
+                <th>BSC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BNB</td>
+                <td id="BNBBINANCE">?</td>
+                <td>X</td>
+                <td id="BNBBSC">?</td>
+              </tr>
+              <tr>
+                <td>ETH</td>
+                <td id="ETHBINANCE">?</td>
+                <td id="ETHERC">?</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <td>USDT</td>
+                <td id="USDTBINANCE">?</td>
+                <td id="USDTERC">?</td>
+                <td id="USDTBSC">?</td>
+              </tr>
+              <tr class="table-info biru">
+                <th>TOTAL</th>
+                <th id="TOTALBINANCE">0</th>
+                <th id="TOTALERC">0</th>
+                <th id="TOTALBSC">0</th>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row kiri">
+            <div class="col-md-12">
+              <span class="ijo besar">TOTAL ALL : </span>
+              <span id="TOTALALL" class="biru besar"></span>&nbsp;&nbsp; |
+              &nbsp;&nbsp;
+              <span class="ijo besar">PNL : </span>
+              <span id="PNLALL"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-info"
+                id="kalkulator"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                KALKULATOR
+              </button>
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        KALKULATOR
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="input-group mb-2 input-group-sm">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <label class="form-check-label"> USDT </label>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="usdtprice"
+                            placeholder="0"
+                            value=""
+                            required
+                            oninput="convertCurrency('usdt')"
+                          />
+                        </div>
+                        <div class="input-group mb-2 input-group-sm">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <label class="form-check-label"> IDR </label>
+                            </div>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="idrprice"
+                            placeholder="0"
+                            value=""
+                            required
+                            oninput="convertCurrency('idr')"
+                          />
+                        </div>
+                        <div class="input-group mb-2 input-group-sm">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <label class="form-check-label"> BTC </label>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="btcprice"
+                            placeholder="0"
+                            value=""
+                            required
+                            oninput="convertCurrency('btc')"
+                          />
+                        </div>
+                        <div class="input-group mb-2 input-group-sm">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <label class="form-check-label"> ETH </label>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="ethprice"
+                            placeholder="0"
+                            value=""
+                            required
+                            oninput="convertCurrency('eth')"
+                          />
+                        </div>
+                        <div class="input-group mb-2 input-group-sm">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <label class="form-check-label"> BNB </label>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="bnbprice"
+                            placeholder="0"
+                            value=""
+                            required
+                            oninput="convertCurrency('bnb')"
+                          />
+                        </div>
+                        <div class="input-group mb-2 input-group-sm">
+                          <input
+                            type="text"
+                            class="form-control col-3 text-uppercase"
+                            id="symbol"
+                            placeholder="NAMA KOIN"
+                            value=""
+                            required
+                          />
+                          <input
+                            type="number"
+                            class="form-control col-7"
+                            id="randomprice"
+                            placeholder="0"
+                            value=""
+                            oninput="convertCurrency('random')"
+                            required
+                            disabled
+                          />
+                          <button
+                            type="button"
+                            class="btn btn-primary btn-sm col-2"
+                            onclick="getRandom()"
+                            id="randget"
+                          >
+                            Get
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            onclick="resetRandom()"
+                            id="randreset"
+                            hidden
+                          >
+                            X
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer m-auto">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="rateKalkulator()"
+                      >
+                        Update Price
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-right">
+              <input
+                type="button"
+                id="refresh"
+                value="REFRESH"
+                class="btn btn-success"
+              />
+              <input
+                type="button"
+                id="update"
+                value="UPDATE"
+                class="btn btn-primary"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <h4 style="text-align: center">HISTORY</h4>
+          <table
+            id="myTable2"
+            class="table table-sm table-striped table-hover"
+            style="font-size: 12px; text-align: center"
+          >
+            <thead>
+              <tr class="table-success">
+                <th>LAST UPDATE</th>
+                <th>AWAL</th>
+                <th>AKHIR</th>
+                <th>PNL ALL</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!-- Tambahkan link ke file JavaScript jQuery di sini -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(async function () {
+        var Modalidr = await USDTIDR(localStorage.getItem('MODALAWAL'));        
+        $("#RPMODAL").text("RP. "+ Modalidr);
+
+        //  updatehistory();
+        $("#USDTBSC").text(localStorage.getItem("USDTBSC"));
+        $("#BNBBSC").text(localStorage.getItem("BNBBSC"));
+
+        $("#USDTERC").text(localStorage.getItem("USDTERC"));
+        $("#ETHERC").text(localStorage.getItem("ETHERC"));
+
+        $("#USDTBINANCE").text(localStorage.getItem("USDTBINANCE"));
+        $("#BNBBINANCE").text(localStorage.getItem("BNBBINANCE"));
+        $("#ETHBINANCE").text(localStorage.getItem("ETHBINANCE"));
+
+        $("#TOTALERC").text(localStorage.getItem("TOTALERC"));
+        $("#TOTALBSC").text(localStorage.getItem("TOTALBSC"));
+        $("#TOTALBINANCE").text(localStorage.getItem("TOTALBINANCE"));
+        $("#TOTALALL").text(localStorage.getItem("TOTALALL"));
+        $("#PNLALL").text(localStorage.getItem("PNLALL"));
+
+        if (localStorage.getItem("apikey") != null) {
+          $("#apikey").val(localStorage.getItem("apikey"));
+        }
+
+        if (localStorage.getItem("secretkey") != null) {
+          $("#secretkey").val(localStorage.getItem("secretkey"));
+        }
+
+        if (localStorage.getItem("bscwallet") != null) {
+          $("#bscwallet").val(localStorage.getItem("bscwallet"));
+        }
+
+        if (localStorage.getItem("ercwallet") != null) {
+          $("#ercwallet").val(localStorage.getItem("ercwallet"));
+        }
+
+        if (localStorage.getItem("MODALAWAL") != null) {
+          $("#MODALAWAL").val(localStorage.getItem("MODALAWAL"));
+        }
+
+        if (localStorage.getItem("dateset") != null) {
+          $("#dateset").text(localStorage.getItem("dateset"));
+        }
+
+        if (localStorage.getItem("dateupdate") != null) {
+          $("#dateupdate").text(localStorage.getItem("dateupdate"));
+        }
+
+        var nilai = parseFloat($("#PNLALL").text());
+        var idr = await USDTIDR(nilai);
+        //  console.log("PNL : "+ nilai);
+        if (nilai < 0) {
+          $("span#PNLALL")
+            .addClass("merah besar")
+            .removeClass("ijo")
+            .html(nilai + " ( Rp. " + idr + " )");
+        } else if (nilai >= 0) {
+          $("span#PNLALL")
+            .addClass("ijo besar")
+            .removeClass("merah")
+            .html(nilai + " ( Rp. " + idr + " )");
+        }
+
+        $("#setdata").click(async function (e) {
+          e.preventDefault();
+
+          $("#setdata").prop("disabled", true);
+          $("#update").prop("disabled", true);
+          $("#refresh").prop("disabled", true);
+          $("#resetmodal").prop("disabled", true);
+          var currentDate = new Date();
+          var apikey = $("#apikey").val();
+          var secretkey = $("#secretkey").val();
+          var bscwallet = $("#bscwallet").val();
+          var ercwallet = $("#ercwallet").val();
+          var MODALAWAL = $("#MODALAWAL").val();
+
+          if (
+            apikey === "" ||
+            secretkey === "" ||
+            bscwallet === "" ||
+            ercwallet === "" ||
+            MODALAWAL === ""
+          ) {
+            newAlert("Mohon isi semua kolom!");
+            return;
+          }
+
+          var dateset =
+            currentDate.toLocaleDateString() +
+            " | " +
+            currentDate.toLocaleTimeString();
+
+          // Simpan nilai ke local storage
+          localStorage.setItem("apikey", apikey);
+          localStorage.setItem("secretkey", secretkey);
+          localStorage.setItem("bscwallet", bscwallet);
+          localStorage.setItem("ercwallet", ercwallet);
+          localStorage.setItem("MODALAWAL", MODALAWAL);
+          localStorage.setItem("dateset", dateset);
+
+          // Tampilkan tanggal terakhir di layar
+          $("#dateset").text(dateset);
+
+          await UPDATEPNL("refresh");
+          updatehistory("START");
+          newAlert("BERHASIL SETTING MODAL!!");
+        });
+
+        $("#update").click(async function () {
+          $("#setdata").prop("disabled", true);
+          $("#update").prop("disabled", true);
+          $("#refresh").prop("disabled", true);
+          $("#resetmodal").prop("disabled", true);
+          await UPDATEPNL("update");
+          newAlert("BERHASIL MENGUPDATE MODAL!!");
+        });
+
+        $("#refresh").click(async function () {
+          $("#setdata").prop("disabled", true);
+          $("#update").prop("disabled", true);
+          $("#refresh").prop("disabled", true);
+          $("#resetmodal").prop("disabled", true);
+          await UPDATEPNL("refresh");
+          newAlert("ANDA BERHASIL MEREFRESH!!");
+        });
+
+        $("#resetmodal").click(async function () {
+          var konfirmasi = confirm("INGIN RESET MODAL?");
+
+          // Cek apakah pengguna mengklik "OK" atau "Batal"
+          if (konfirmasi) {
+            // localStorage.removeItem("historyData");
+            var currentDate = new Date();
+
+            $("#MODALAWAL").val(localStorage.getItem("TOTALALL"));
+            var MODALAWAL = $("#MODALAWAL").val();
+            localStorage.setItem("MODALAWAL", MODALAWAL);
+            var currentDate = new Date();
+
+            var apikey = $("#apikey").val();
+            var secretkey = $("#secretkey").val();
+            var bscwallet = $("#bscwallet").val();
+            var ercwallet = $("#ercwallet").val();
+
+            var dateset =
+              currentDate.toLocaleDateString() +
+              " | " +
+              currentDate.toLocaleTimeString();
+
+            // Simpan nilai ke local storage
+            localStorage.setItem("apikey", apikey);
+            localStorage.setItem("secretkey", secretkey);
+            localStorage.setItem("bscwallet", bscwallet);
+            localStorage.setItem("ercwallet", ercwallet);
+            localStorage.setItem("MODALAWAL", MODALAWAL);
+            localStorage.setItem("dateset", dateset);
+
+            // Tampilkan tanggal terakhir di layar
+            $("#dateset").text(dateset);
+
+            await UPDATEPNL("refresh");
+            newAlert("BERHASIL MERESET MODAL!!");
+            updatehistory("RESET");
+          }
+        });
+
+        async function UPDATEPNL(aksi) {
+          if (aksi == "update") {
+            var currentDate = new Date();
+
+            // $("#MODALAWAL").val(localStorage.getItem("TOTALALL"));
+            var MODALAWAL = $("#MODALAWAL").val();
+            localStorage.setItem("MODALAWAL", MODALAWAL);
+            var currentDate = new Date();
+
+            var apikey = $("#apikey").val();
+            var secretkey = $("#secretkey").val();
+            var bscwallet = $("#bscwallet").val();
+            var ercwallet = $("#ercwallet").val();
+            var MODALAWAL = $("#MODALAWAL").val();
+
+            var dateset =
+              currentDate.toLocaleDateString() +
+              " | " +
+              currentDate.toLocaleTimeString();
+
+            // Simpan nilai ke local storage
+            localStorage.setItem("apikey", apikey);
+            localStorage.setItem("secretkey", secretkey);
+            localStorage.setItem("bscwallet", bscwallet);
+            localStorage.setItem("ercwallet", ercwallet);
+            localStorage.setItem("MODALAWAL", MODALAWAL);
+            localStorage.setItem("dateset", dateset);
+
+            // Tampilkan tanggal terakhir di layar
+            $("#dateset").text(dateset);
+
+            updatehistory("UPDATE");
+            await UPDATEPNL();
+          } else {
+            try {
+              loading();
+              var bscwallet = $("#bscwallet").val();
+              var ercwallet = $("#ercwallet").val();
+              getBINANCEASSET(), GetETHERC("", ercwallet, 18, "ETHERC");
+              GetTOKENERC(
+                "0xdac17f958d2ee523a2206206994597c13d831ec7",
+                ercwallet,
+                6,
+                "USDTERC"
+              );
+
+              var currentDate = new Date();
+              var dateupdate =
+                currentDate.toLocaleDateString() +
+                " | " +
+                currentDate.toLocaleTimeString();
+              localStorage.setItem("dateupdate", dateupdate);
+
+              // var bscwallet = $("#bscwallet").val();
+              // var ercwallet = $("#ercwallet").val();
+              //GET ALL BINANCE ASSET
+
+              //BNB
+              const bnb = await GetBNBBSC("", bscwallet, 18, "BNBBSC");
+              //USDT
+              const usdt = await GetTOKENBSC(
+                "0x55d398326f99059ff775485246999027b3197955",
+                bscwallet,
+                18,
+                "USDTBSC"
+              );
+
+              var TOTALBSC = parseFloat(bnb) + parseFloat(usdt);
+              // console.log(TOTALBSC, bnb, usdt);
+              $("#TOTALBSC").text(parseFloat(TOTALBSC).toFixed(2));
+              localStorage.setItem("TOTALBSC", parseFloat(TOTALBSC).toFixed(2));
+
+              //ETH
+              const eth = await GetETHERC("", ercwallet, 18, "ETHERC");
+              //USDT
+              const usdterc = await GetTOKENERC(
+                "0xdac17f958d2ee523a2206206994597c13d831ec7",
+                ercwallet,
+                6,
+                "USDTERC"
+              );
+
+              var TOTALERC = parseFloat(eth) + parseFloat(usdterc);
+
+              localStorage.setItem("TOTALERC", parseFloat(TOTALERC).toFixed(2));
+              $("#TOTALERC").text(parseFloat(TOTALERC).toFixed(2));
+
+              var TOTALALL =
+                parseFloat(localStorage.getItem("TOTALBINANCE")) +
+                parseFloat(localStorage.getItem("TOTALBSC")) +
+                parseFloat(localStorage.getItem("TOTALERC"));
+
+              $("#TOTALALL").text(parseFloat(TOTALALL).toFixed(2));
+              localStorage.setItem("TOTALALL", parseFloat(TOTALALL).toFixed(2));
+
+              var PNLALL =
+                parseFloat(localStorage.getItem("TOTALALL")) -
+                parseFloat(localStorage.getItem("MODALAWAL"));
+
+              $("#PNLALL").text(parseFloat(PNLALL).toFixed(2));
+              localStorage.setItem("PNLALL", parseFloat(PNLALL).toFixed(2));
+
+              var nilai = parseFloat(PNLALL).toFixed(2);
+              var idr = await USDTIDR(nilai);
+              if (nilai < 0) {
+                $("span#PNLALL")
+                  .addClass("merah besar")
+                  .removeClass("ijo")
+                  .html(parseFloat(PNLALL).toFixed(2) + " ( Rp. " + idr + " )");
+              } else if (nilai >= 0) {
+                $("span#PNLALL")
+                  .addClass("ijo besar")
+                  .removeClass("merah")
+                  .html(parseFloat(PNLALL).toFixed(2) + " ( Rp. " + idr + " )");
+              }
+
+              $("#dateupdate").text(dateupdate);
+            } catch {}
+          }
+          $("#setdata").prop("disabled", false);
+          $("#update").prop("disabled", false);
+          $("#refresh").prop("disabled", false);
+          $("#resetmodal").prop("disabled", false);
+        }
+
+        async function USDTIDR(usdt) {
+          return new Promise((resolve, reject) => {
+            $.ajax({
+              url: "https://indodax.com/api/ticker/usdtidr",
+              success: function (response) {
+                var USDTRate = response.ticker.last;
+                localStorage.setItem("USDTRate", USDTRate);
+                console.log("Latest Rate Price USDTRate:", USDTRate);
+
+                var idrusdt = usdt * USDTRate;
+                console.log("USDT TO IDR : " + idrusdt);
+
+                resolve(idrusdt.toLocaleString());
+              },
+              error: function (xhr, status, error) {
+                console.log("Error get Price Rate USDTRate:", error);
+                reject(error);
+              },
+            });
+          });
+        }
+
+        function findBalance(balances, symbol) {
+          for (var i = 0; i < balances.length; i++) {
+            if (balances[i].asset === symbol) {
+              return balances[i].free;
+            }
+          }
+          return "N/A";
+        }
+
+        async function getBINANCEASSET() {
+          var apiKey = $("#apikey").val();
+          var apiSecret = $("#secretkey").val();
+
+          // Binance API URL
+          var apiUrl = "https://api.binance.me/api/v3/account";
+
+          // Create a timestamp for the request
+          var timestamp = new Date().getTime();
+
+          // Create a signature for the request
+          var signature = CryptoJS.HmacSHA256(
+            "timestamp=" + timestamp,
+            apiSecret
+          ).toString(CryptoJS.enc.Hex);
+
+          // Set up the request headers
+          var headers = {
+            "X-MBX-APIKEY": apiKey,
+          };
+
+          // Make the API call
+          $.ajax({
+            url: apiUrl + "?timestamp=" + timestamp + "&signature=" + signature,
+            method: "GET",
+            headers: headers,
+            dataType: "json",
+            success: function (data) {
+              var balances = data.balances;
+              var bnbBalance = findBalance(balances, "BNB");
+              var ethBalance = findBalance(balances, "ETH");
+              var usdtBalance = findBalance(balances, "USDT");
+
+              localStorage.setItem(
+                "USDTBINANCE",
+                parseFloat(usdtBalance).toFixed(2)
+              );
+              $("td#USDTBINANCE").text(parseFloat(usdtBalance * 1).toFixed(2));
+
+              localStorage.setItem(
+                "BNBBINANCE",
+                parseFloat(
+                  bnbBalance * localStorage.getItem("Pricebnb")
+                ).toFixed(2)
+              );
+              $("td#BNBBINANCE").text(
+                parseFloat(
+                  bnbBalance * localStorage.getItem("Pricebnb")
+                ).toFixed(2)
+              );
+
+              localStorage.setItem(
+                "ETHBINANCE",
+                parseFloat(
+                  ethBalance * localStorage.getItem("Priceeth")
+                ).toFixed(2)
+              );
+              $("td#ETHBINANCE").text(
+                parseFloat(
+                  ethBalance * localStorage.getItem("Priceeth")
+                ).toFixed(2)
+              );
+
+              var TOTALBINANCE =
+                parseFloat(localStorage.getItem("BNBBINANCE")) +
+                parseFloat(localStorage.getItem("ETHBINANCE")) +
+                parseFloat(localStorage.getItem("USDTBINANCE"));
+              $("#TOTALBINANCE").text(parseFloat(TOTALBINANCE).toFixed(2));
+              localStorage.setItem(
+                "TOTALBINANCE",
+                parseFloat(TOTALBINANCE).toFixed(2)
+              );
+
+              // Tampilkan saldo BNB, ETH, dan USDT
+              /* var balanceInfo = 'Saldo BNB: ' + bnbBalance + '<br>';
+                              balanceInfo += 'Saldo ETH: ' + ethBalance + '<br>';
+                              balanceInfo += 'Saldo USDT: ' + usdtBalance;
+                              $("#balances").html(balanceInfo);
+                              */
+            },
+            error: function (error) {
+              console.error("Error:", error);
+              //  $("#balances").html('Error fetching account balances.');
+            },
+          });
+        }
+
+        async function GetTOKENBSC(token, address, desimal, tokenset) {
+          return new Promise((resolve, reject) => {
+            var apiUrl =
+              "https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=" +
+              token +
+              "&address=" +
+              address +
+              "&tag=latest&apikey=VTXAJJKJ7QUBPF8WYTQ36GD5UPM9W1J8CJ";
+
+            // Panggil REST API
+            $.ajax({
+              url: apiUrl,
+              success: function (response) {
+                var juml = response.result / Math.pow(10, desimal);
+                localStorage.setItem(tokenset, juml.toFixed(2));
+                $("td#" + tokenset + "").text(juml.toFixed(2));
+                resolve(juml.toFixed(2));
+              },
+
+              error: function (xhr, status, error) {
+                console.log("Error get Price Rate Pair:", error);
+                $("td#" + tokenset + "").text(error);
+                reject(error);
+              },
+            });
+          });
+        }
+
+        async function GetBNBBSC(token, address, desimal, tokenset) {
+          return new Promise((resolve, reject) => {
+            $.getJSON("https://api.binance.me/api/v3/ticker/24hr", {
+              symbol: "BNBUSDT",
+            })
+              .done(function (response) {
+                localStorage.setItem("Pricebnb", response.lastPrice);
+              })
+              .fail(function (error) {
+                console.log("Error calling BNBUSDT:", error);
+                reject(error);
+              });
+
+            var apiUrl =
+              "https://api.bscscan.com/api?module=account&action=balance&address=" +
+              address +
+              "&tag=latest&apikey=VTXAJJKJ7QUBPF8WYTQ36GD5UPM9W1J8CJ";
+
+            // Panggil REST API
+            $.ajax({
+              url: apiUrl,
+              success: function (response) {
+                var juml =
+                  (response.result / Math.pow(10, desimal)) *
+                  localStorage.getItem("Pricebnb");
+                localStorage.setItem(tokenset, juml.toFixed(2));
+                $("td#" + tokenset + "").text(juml.toFixed(2));
+                resolve(juml.toFixed(2));
+              },
+
+              error: function (xhr, status, error) {
+                console.log("Error get Price Rate Pair:", error);
+                $("td#" + tokenset + "").text(error);
+                reject(error);
+              },
+            });
+          });
+        }
+
+        async function GetTOKENERC(token, address, desimal, tokenset) {
+          return new Promise((resolve, reject) => {
+            var apiUrl =
+              "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=" +
+              token +
+              "&address=" +
+              address +
+              "&tag=latest&apikey=YZTQWGJEWWWFYP6CZ9CMJ229SP66T5WSC1";
+
+            // Panggil REST API
+            $.ajax({
+              url: apiUrl,
+              success: function (response) {
+                var juml = response.result / Math.pow(10, desimal);
+                localStorage.setItem(tokenset, juml.toFixed(2));
+                $("td#" + tokenset + "").text(juml.toFixed(2));
+                resolve(juml.toFixed(2));
+              },
+
+              error: function (xhr, status, error) {
+                console.log("Error get Price Rate Pair:", error);
+                $("td#" + tokenset + "").text(error);
+                reject(error);
+              },
+            });
+          });
+        }
+
+        async function GetETHERC(token, address, desimal, tokenset) {
+          return new Promise((resolve, reject) => {
+            $.getJSON("https://api.binance.me/api/v3/ticker/24hr", {
+              symbol: "ETHUSDT",
+            })
+              .done(function (response) {
+                localStorage.setItem("Priceeth", response.lastPrice);
+              })
+              .fail(function (error) {
+                console.log("Error calling ETHUSDT:", error);
+                reject(error);
+              });
+
+            var apiUrl =
+              "https://api.etherscan.io/api?module=account&action=balance&address=" +
+              address +
+              "&tag=latest&apikey=YZTQWGJEWWWFYP6CZ9CMJ229SP66T5WSC1";
+
+            // Panggil REST API
+            $.ajax({
+              url: apiUrl,
+              success: function (response) {
+                var juml =
+                  (response.result / Math.pow(10, desimal)) *
+                  localStorage.getItem("Priceeth");
+                localStorage.setItem(tokenset, juml.toFixed(2));
+                $("td#" + tokenset + "").text(juml.toFixed(2));
+                resolve(juml.toFixed(2));
+              },
+
+              error: function (xhr, status, error) {
+                console.log("Error get Price Rate Pair:", error);
+                $("td#" + tokenset + "").text(error);
+                reject(error);
+              },
+            });
+          });
+        }
+
+        // $("#refresh").click(function () {
+        //   UPDATEPNL();
+        //   location.reload();
+        //   alert("REFRESH AKAN DILAKUKAN...!!");
+        // });
+
+        function updatehistory(action) {
+          var currentDate = new Date();
+          var dateset =
+            currentDate.toLocaleDateString() +
+            " | " +
+            currentDate.toLocaleTimeString();
+
+          // Get values for NO, LAST UPDATE, LAST MODAL, and LAST PNL
+          var lastupdateValue = dateset;
+          var lastmodalValue = localStorage.getItem("TOTALALL");
+          var lastpnlValue = localStorage.getItem("PNLALL");
+
+          // Create a new history item
+          var historyItem = {
+            firstmodal: parseFloat(lastmodalValue - lastpnlValue).toFixed(2),
+            lastupdate: lastupdateValue,
+            lastmodal: lastmodalValue,
+            lastpnl: lastpnlValue,
+            status: action,
+          };
+
+          // Add the history item to the historyData array
+          historyData.push(historyItem);
+
+          // Store the updated historyData array in local storage
+          localStorage.setItem("historyData", JSON.stringify(historyData));
+
+          // Update the table with the new data
+          updateTable();
+        }
+
+        var historyData = [];
+        // Function to update the table with history data
+        function updateTable() {
+          // Clear existing table rows
+          $("#myTable2 tbody").empty();
+          //$("#myTable2 tbody tr:not(:first)").remove();
+
+          // Iterate through historyData and add rows to the table
+          console.log(historyData);
+          for (
+            var i = historyData.length - 1;
+            i >= historyData.length - 11;
+            i--
+          ) {
+            var row = historyData[i];
+            if (i == -1) {
+              return;
+            }
+            var newRow = $("<tr>");
+            newRow.append("<td>" + row.lastupdate + "</td>");
+            newRow.append(
+              "<td>" + parseFloat(row.firstmodal).toFixed(2) + "</td>"
+            );
+            newRow.append("<td>" + row.lastmodal + "</td>");
+            newRow.append("<td>" + row.lastpnl + "</td>");
+            newRow.append("<td>" + row.status + "</td>");
+            $("#myTable2 tbody").append(newRow);
+          }
+        }
+
+        function loading() {
+          $("td#BNBBINANCE").html(
+            "<div class='spinner-border spinner-border-sm' role='status'> <span class='sr-only' >Loading</span></div>"
+          );
+          $("td#BNBBSC").html(
+            "<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only' >Loading...</span>   </div>"
+          );
+          $("td#ETHBINANCE").html(
+            "<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only' >Loading...</span></div>"
+          );
+          $("td#ETHERC").html(
+            "<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only' >Loading...</span></div>"
+          );
+          $("td#USDTBINANCE").html(
+            "<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only' >Loading...</span></div>"
+          );
+          $("td#USDTERC").html(
+            "<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only' >Loading...</span></div>"
+          );
+          $("td#USDTBSC").html(
+            "<div class='spinner-border spinner-border-sm' role='status'><span class='sr-only' >Loading...</span></div>"
+          );
+          $("th#TOTALBINANCE").html("...");
+          $("th#TOTALERC").html("...");
+          $("th#TOTALBSC").html("...");
+          $("#TOTALALL").text("...");
+          $("#PNLALL").text("...");
+        }
+
+        function newAlert(text) {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2500,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            title: text,
+          });
+        }
+
+        // Load history data from local storage on page load
+        var storedHistoryData = localStorage.getItem("historyData");
+        if (storedHistoryData) {
+          historyData = JSON.parse(localStorage.getItem("historyData"));
+          updateTable();
+        } else {
+          $("#update").prop("disabled", true);
+          $("#refresh").prop("disabled", true);
+          $("#resetmodal").prop("disabled", true);
+        }
+      });
+    </script>
+  </body>
+</html>
