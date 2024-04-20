@@ -594,7 +594,7 @@
     "id_grup": "-1002079288809"
   },
   "token": [
-    {
+  {
       "symbol": "ETH_USDT",
       "chains": [
         {
@@ -619,6 +619,13 @@
           "status": true
         },
         {
+          "chain": "base",
+          "sc": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+          "desimal": 18,
+          "wd": 0,
+          "status": true
+        },
+        {
           "chain": "fantom",
           "sc": "0x74b23882a30290451A17c44f4F05243b6b58C76d",
           "desimal": 18,
@@ -626,8 +633,39 @@
           "status": true
         }
       ]
+    },
+    {
+      "symbol": "BTC_USDT",
+      "chains": [
+        {
+          "chain": "arb",
+          "sc": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+          "desimal": 18,
+          "wd": 0,
+          "status": true
+        },
+        {
+          "chain": "avax",
+          "sc": "0x408d4cd0adb7cebd1f1a1c33a0ba2098e1295bab",
+          "desimal": 8,
+          "wd": 0,
+          "status": true
+        },
+        {
+          "chain": "matic",
+          "sc": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
+          "desimal": 8,
+          "wd": 0,
+          "status": true
+        },
+        {
+          "chain": "fantom",
+          "sc": "0x321162Cd933E2Be498Cd2267a90534A804051b11",
+          "desimal": 8,
+          "wd": 0,
+          "status": true
+        }
+      ]
     }
-
-
   ]
 }
