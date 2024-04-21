@@ -1084,7 +1084,7 @@
             "status": true
         },
         {
-            "symbol": "galagamesidr",
+            "symbol": "galagames_idr",
             "desimal": 8,
             "sc": "0xd1d2Eb1B1e90B638588728b4130137D262C87cae",
             "wd": 0,
@@ -1266,7 +1266,7 @@
             "status": true
         },
         {
-            "symbol": "lyfelidr",
+            "symbol": "lyfel_idr",
             "desimal": 18,
             "sc": "0xd87de4ccef2c2fe651bc4d130cb1a365248f21fa",
             "wd": 0,
