@@ -593,7 +593,8 @@
         "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
         "id_grup": "-1002079288809"
     },
-    "token": [
+    "token": 
+[
         {
             "symbol": "1inchidr",
             "desimal": 18,
@@ -633,6 +634,12 @@
             "symbol": "agixidr",
             "desimal": 8,
             "sc": "0x5b7533812759b45c2b44c19e320ba2cd2681b542",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "agiidr",
+            "desimal": 18,
+            "sc": "0x7dA2641000Cbb407C329310C461b2cB9c70C3046",
             "wd": 0,
             "status": true
         },
@@ -854,6 +861,13 @@
             "status": true
         },
         {
+            "symbol": "cyberidr",
+            "desimal": 18,
+            "sc": "0x14778860e937f509e651192a90589de711fb88a9",
+            "wd": 0,
+            "status": true
+        },
+        {
             "symbol": "chzidr",
             "desimal": 18,
             "sc": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
@@ -957,6 +971,12 @@
             "sc": "0x0b4bdc478791897274652dc15ef5c135cae61e60",
             "wd": 0,
             "status": true
+        },{
+            "symbol": "defiidr",
+            "desimal": 18,
+            "sc": "0x6B0FaCA7bA905a86F221CEb5CA404f605e5b3131",
+            "wd": 0,
+            "status": true
         },
         {
             "symbol": "dentidr",
@@ -1015,9 +1035,9 @@
             "status": true
         },
         {
-            "symbol": "ethidr",
+            "symbol": "ethfiidr",
             "desimal": 18,
-            "sc": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "sc": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
             "wd": 0,
             "status": true
         },
@@ -1305,6 +1325,12 @@
             "symbol": "mkridr",
             "desimal": 18,
             "sc": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+            "wd": 0,
+            "status": true
+        }, {
+            "symbol": "mntidr",
+            "desimal": 8,
+            "sc": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354",
             "wd": 0,
             "status": true
         },
@@ -1736,6 +1762,12 @@
             "status": true
         },
         {
+            "symbol": "zetaidr",
+            "desimal": 18,
+            "sc": "0xf091867ec603a6628ed83d274e835539d82e9cc8",
+            "wd": 0,
+            "status": true
+        },{
             "symbol": "zrxidr",
             "desimal": 18,
             "sc": "0xe41d2489571d322189246dafa5ebde1f4699f498",
@@ -1743,4 +1775,5 @@
             "status": true
         }
     ]
+
 }
