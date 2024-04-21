@@ -1287,13 +1287,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "mblidr",
-            "desimal": 18,
-            "sc": "0xb879da8b24c9b8685de8526cf492e954f165d74b",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "mcidr",
             "desimal": 18,
