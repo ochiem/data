@@ -1625,7 +1625,7 @@
             "status": true
         },
         {
-            "symbol": "threshold_idr",
+            "symbol": "thresholdidr",
             "desimal": 18,
             "sc": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
             "wd": 0,
