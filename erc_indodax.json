@@ -1477,7 +1477,7 @@
             "status": true
         },
         {
-            "symbol": "rev_idr",
+            "symbol": "revidr",
             "desimal": 6,
             "sc": "0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9",
             "wd": 0,
