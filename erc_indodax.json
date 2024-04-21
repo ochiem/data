@@ -1470,7 +1470,7 @@
             "status": true
         },
         {
-            "symbol": "repv2idr",
+            "symbol": "repidr",
             "desimal": 18,
             "sc": "0x221657776846890989a759ba2973e427dff5c9bb",
             "wd": 0,
