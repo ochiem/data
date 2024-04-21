@@ -749,7 +749,7 @@
             "status": true
         },
         {
-            "symbol": "auctionbidr",
+            "symbol": "auctionidr",
             "desimal": 18,
             "sc": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
             "wd": 0,
