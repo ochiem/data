@@ -1631,7 +1631,7 @@
             "status": true
         },
         {
-            "symbol": "tidr",
+            "symbol": "threshold_idr",
             "desimal": 18,
             "sc": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
             "wd": 0,
@@ -1652,7 +1652,7 @@
             "wd": 1e-8
         },
         {
-            "symbol": "tokoidr",
+            "symbol": "toko_idr",
             "desimal": 18,
             "sc": "0xa0f0546eb5e3ee7e8cfc5da12e5949f3ae622675",
             "wd": 0,
