@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3480/3480965.png" type="image/x-icon" />
+  <title>:: APLIKASI MODAL</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .kiri {
+      text-align: left;
+    }
+
+    .kanan {
+      text-align: right;
+    }
+
+    .besar {
+      font-size: 20px;
+    }
+
+    .kecil {
+      font-size: 14px;
+    }
+
+    .merah {
+      color: rgb(244, 18, 18);
+      font-weight: bolder;
+    }
+
+    .ijo {
+      color: rgb(9, 152, 54);
+      font-weight: bolder;
+    }
+
+    .biru {
+      color: rgb(17, 39, 232);
+      font-weight: bolder;
+    }
+
+    .container {
+      margin-top: 30px;
+      max-width: 1250px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h3 style="text-align: center">:: MULTICHECKER MODAL v.1</h3>
+    <hr />
+    <form>
+      <div class="row">
+        <!-- Kolom Kiri -->
+        <div class="col-md-6">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> API BINANCE </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="apikey" placeholder="API KEY"
+              value="" required />
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> SECRET BINANCE </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="secretkey" placeholder="SECRET KEY"
+              value="" required />
+          </div>
+          
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> MODAL AWAL </label>
+              </div>
+            </div>
+            <input type="number" class="form-control" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label" id="RPMODAL"> </label>
+                &nbsp;&nbsp;<i class="bi bi-arrow-clockwise" id="reload"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Kolom Kanan -->
+        <div class="col-md-6">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> API GATE </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="apikeyGATE" placeholder="API KEY"
+              value="" required />
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> SECRET GATE </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="secretkeyGATE" placeholder="SECRET KEY"
+              value="" required />
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> WALLET BSC </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="bscwallet" placeholder="WALLET BSC"
+              value="" required />
+          </div>
+          <!-- <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> WALLET ERC </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="ercwallet" placeholder="WALLET ERC"
+              value="" required />
+          </div> -->
+
+          <!-- <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <label class="form-check-label"> ADDRESS SOL </label>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="solwallet" placeholder="ADDRESS SOL"
+              value="" required />
+          </div> -->
+          <button type="submit" id="setdata" class="btn btn-warning">
+            SET DATA
+          </button>
+          <input type="button" id="resetmodal" value="RESET" class="btn btn-danger" />
+          &nbsp;
+          <span class="merah kecil">LAST SET : </span>
+          <span id="dateset" class="biru kecil"></span>
+        </div>
+      </div>
+    </form>
+    <hr />
+
+    <div class="row">
+      <div class="col-md-7">
+        <h4 style="text-align: center">DETAIL TABEL ASSET</h4>
+        <div class="kanan">
+          <span class="biru kecil">LAST UPDATE : </span>
+          <span class="ijo kecil" id="dateupdate"></span>
+        </div>
+        <table id="myTable" class="table table-striped table-hover">
+          <thead>
+            <tr class="table-warning merah">
+              <th>MODAL</th>
+              <th>BINANCE</th>
+              <th>GATE</th>
+              <!-- <th>ERC</th> -->
+              <th>BSC</th>
+              <!-- <th>SOLANA</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BNB</td>
+              <td id="BNBBINANCE">?</td>
+              <td>X</td>
+              <!-- <td>X</td> -->
+              <td id="BNBBSC">?</td>
+              <!-- <td>X</td> -->
+            </tr>
+            <!-- <tr>
+              <td>ETH</td>
+              <td id="ETHBINANCE">?</td>
+              <td id="ETHGATE">?</td>
+              <td id="ETHERC">?</td>
+              <td>X</td>
+              <td>X</td>
+            </tr> -->
+            <tr>
+              <td>USDT</td>
+              <td id="USDTBINANCE">?</td>
+              <td id="USDTGATE">?</td>
+              <!-- <td id="USDTERC">?</td> -->
+              <td id="USDTBSC">?</td>
+              <!-- <td id="USDTSOL">?</td> -->
+            </tr>
+            <!-- <tr>
+              <td>SOL</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td></td>
+              <td id="SOLSOL">?</td>
+            </tr> -->
+            <tr class="table-info biru">
+              <th>TOTAL</th>
+              <th id="TOTALBINANCE">0</th>
+              <th id="TOTALGATE">0</th>
+              <!-- <th id="TOTALERC">0</th> -->
+              <th id="TOTALBSC">0</th>
+              <!-- <th id="TOTALSOL">0</th> -->
+            </tr>
+          </tbody>
+        </table>
+        <div class="row kiri">
+          <div class="col-md-12">
+            <span class="ijo besar">TOTAL ALL : </span>
+            <span id="TOTALALL" class="biru besar"></span>&nbsp;&nbsp; |
+            &nbsp;&nbsp;
+            <span class="ijo besar">PNL : </span>
+            <span id="PNLALL"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-info" id="kalkulator" data-toggle="modal" data-target="#exampleModal">
+              KALKULATOR
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      KALKULATOR
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="input-group mb-2 input-group-sm">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <label class="form-check-label"> USDT </label>
+                          </div>
+                        </div>
+                        <input type="number" class="form-control" id="usdtprice" placeholder="0" value="" required
+                          oninput="convertCurrency('usdt')" />
+                      </div>
+                      <div class="input-group mb-2 input-group-sm">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <label class="form-check-label"> IDR </label>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" id="idrprice" placeholder="0" value="" required
+                          oninput="convertCurrency('idr')" />
+                      </div>
+                      <div class="input-group mb-2 input-group-sm">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <label class="form-check-label"> BTC </label>
+                          </div>
+                        </div>
+                        <input type="number" class="form-control" id="btcprice" placeholder="0" value="" required
+                          oninput="convertCurrency('btc')" />
+                      </div>
+                      <div class="input-group mb-2 input-group-sm">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <label class="form-check-label"> ETH </label>
+                          </div>
+                        </div>
+                        <input type="number" class="form-control" id="ethprice" placeholder="0" value="" required
+                          oninput="convertCurrency('eth')" />
+                      </div>
+                      <div class="input-group mb-2 input-group-sm">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <label class="form-check-label"> BNB </label>
+                          </div>
+                        </div>
+                        <input type="number" class="form-control" id="bnbprice" placeholder="0" value="" required
+                          oninput="convertCurrency('bnb')" />
+                      </div>
+                      <div class="input-group mb-2 input-group-sm">
+                        <input type="text" class="form-control col-3 text-uppercase" id="symbol" placeholder="NAMA KOIN"
+                          value="" required />
+                        <input type="number" class="form-control col-7" id="randomprice" placeholder="0" value=""
+                          oninput="convertCurrency('random')" required disabled />
+                        <button type="button" class="btn btn-primary btn-sm col-2" onclick="getRandom()" id="randget">
+                          Get
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm" onclick="resetRandom()" id="randreset"
+                          hidden>
+                          X
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer m-auto">
+                    <button type="button" class="btn btn-primary" onclick="rateKalkulator()">
+                      Update Price
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col text-right">
+            <input type="button" id="refresh" value="REFRESH" class="btn btn-success" />
+            <input type="button" id="update" value="UPDATE" class="btn btn-primary" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <h4 style="text-align: center">HISTORY</h4>
+        <table id="myTable2" class="table table-sm table-striped table-hover"
+          style="font-size: 12px; text-align: center">
+          <thead>
+            <tr class="table-success">
+              <th>LAST UPDATE</th>
+              <th>AWAL</th>
+              <th>AKHIR</th>
+              <th>PNL ALL</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <!-- Tambahkan link ke file JavaScript jQuery di sini -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script>
+
+    function _0x131d(){var _0x57bef5=['random','reload','idr','\x20|\x20','preventDefault','#apikeyGATE','removeClass','fire','usdt','73881rIxmbz','BNBBINANCE','#update','PNLALL','toLocaleString','https://cors.gemul-putra.workers.dev/?https://api.gateio.ws','enc','&address=','#dateset','getItem','click','timestamp=','asset','log','top-end','Latest\x20Rate\x20Price\x20USDTRate:','parse','#BNBBSC','append','/api/v4','balance','Priceeth','https://www.binance.me/api/v3/ticker/price?symbol=','USDTBINANCE','?timestamp=','Pricebnb','#TOTALGATE','ETH','/tokens','https://api.etherscan.io/api?module=account&action=balance&address=','Error\x20get\x20Price\x20Rate\x20Pair:','toUpperCase','#refresh','toFixed','btc','https://api.bscscan.com/api?module=account&action=balance&address=','resumeTimer','Mohon\x20isi\x20semua\x20kolom!','#USDTBSC','#apikey','value','push','</td>','secretkeyGATE','Get','2443410QMhMBG','id-ID','lastupdate','eth','TOTALBSC','https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]','BNBBSC','symbol','RP.\x20','td#USDTGATE','bscwallet','getJSON','...','secretkey','#symbol','disabled','td#ETHBINANCE','historyModal','#resetmodal','ETHUSDT','firstmodal','USDT\x20TO\x20IDR\x20:\x20','USDTGATE','last','setItem','toLocaleDateString','&tag=latest&apikey=YZTQWGJEWWWFYP6CZ9CMJ229SP66T5WSC1','ETHBINANCE','ready','solwallet','#ETHERC','HmacSHA512','span#PNLALL','ijo','UPDATE','apikey','TOTALGATE','html','USDT','error','mouseenter','IDR','result','#TOTALBINANCE','7jIFHLQ','prop','0x55d398326f99059ff775485246999027b3197955','status','fail','#secretkeyGATE','Error:','1670hLzBoQ','balances','SHA512','1164136Crxgla','https://indodax.com/api/ticker/usdtidr','USDTSOL','getTime','https://api.binance.me/api/v3/ticker/24hr','currency','BNBUSDT','#myTable2\x20tbody','BERHASIL\x20MERESET\x20MODAL!!','ajax','#dateupdate','price','#bscwallet','ijo\x20besar','&signature=','TOTALBINANCE','td#USDTBINANCE','mouseleave','\x20(\x20Rp.\x20','GAGAL\x20CEK\x20SALDO\x20-\x20API\x20GATE!!','td#','TOTALALL','https://api.solana.fm/v1/addresses/','dateset','Periksa\x20Symbol!!','pow','BNB','done','#BNBBINANCE','<div\x20class=\x27spinner-border\x20spinner-border-sm\x27\x20role=\x27status\x27><span\x20class=\x27sr-only\x27\x20>Loading...</span></div>','BERHASIL\x20SETTING\x20MODAL!!','text','#USDTGATE','#USDTBINANCE','#setdata','1429684JXeaLP','HmacSHA256','floor','length','hidden','<div\x20class=\x27spinner-border\x20spinner-border-sm\x27\x20role=\x27status\x27><span\x20class=\x27sr-only\x27\x20>Loading...</span>\x20\x20\x20</div>','toLocaleTimeString','START','free','available','<td>','10DXTkSl','application/json','apikeyGATE','round','dateupdate','th#TOTALBSC','#ETHBINANCE','#TOTALBSC','&tag=latest&apikey=VTXAJJKJ7QUBPF8WYTQ36GD5UPM9W1J8CJ','339hpiJRX','#TOTALALL','N/A','22546tRAIWk','th#TOTALGATE','stopTimer','addEventListener','val','#MODALAWAL','refresh','getElementById','#secretkey','merah','#randomprice','ANDA\x20BERHASIL\x20MEREFRESH!!','lastPrice','Error\x20calling\x20ETHUSDT:','#PNLALL','https://api.binance.me/api/v3/account','update','5931992ORNmvq','lastmodal','16452161UuCEOZ','find','bnb','USDTBSC','td#USDTSOL','lastpnl','addClass','Symbol\x20tidak\x20boleh\x20kosong','#USDTSOL','MODALAWAL','Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB','Hex','mixin','#reload','merah\x20besar'];_0x131d=function(){return _0x57bef5;};return _0x131d();}var _0xc8e981=_0x2d02;(function(_0x239b36,_0x25fd76){var _0x2464ae=_0x2d02,_0xdcb5e5=_0x239b36();while(!![]){try{var _0x1e5290=parseInt(_0x2464ae(0x23e))/0x1+parseInt(_0x2464ae(0x18d))/0x2*(parseInt(_0x2464ae(0x18a))/0x3)+parseInt(_0x2464ae(0x21b))/0x4*(parseInt(_0x2464ae(0x181))/0x5)+-parseInt(_0x2464ae(0x1e5))/0x6+parseInt(_0x2464ae(0x211))/0x7*(parseInt(_0x2464ae(0x19e))/0x8)+parseInt(_0x2464ae(0x1b8))/0x9*(-parseInt(_0x2464ae(0x218))/0xa)+-parseInt(_0x2464ae(0x1a0))/0xb;if(_0x1e5290===_0x25fd76)break;else _0xdcb5e5['push'](_0xdcb5e5['shift']());}catch(_0x2b4dfa){_0xdcb5e5['push'](_0xdcb5e5['shift']());}}}(_0x131d,0xb7e9f));var ratePrice={'usdt':0x1,'idr':0x0,'btc':0x0,'eth':0x0,'bnb':0x0,'random':0x0},last='';function _0x2d02(_0x415424,_0x414b95){var _0x131d09=_0x131d();return _0x2d02=function(_0x2d025c,_0x4521b5){_0x2d025c=_0x2d025c-0x181;var _0x2cdbd4=_0x131d09[_0x2d025c];return _0x2cdbd4;},_0x2d02(_0x415424,_0x414b95);}function rateKalkulator(){var _0x555f6f=_0x2d02;$[_0x555f6f(0x1f0)](_0x555f6f(0x1ea))[_0x555f6f(0x236)](function(_0x45b545){_0x45b545['forEach'](_0x4e917d=>{var _0x151bd9=_0x2d02;switch(_0x4e917d['symbol']){case'BTCUSDT':ratePrice[_0x151bd9(0x1da)]=_0x4e917d[_0x151bd9(0x226)];break;case _0x151bd9(0x1f8):ratePrice[_0x151bd9(0x1e8)]=_0x4e917d[_0x151bd9(0x226)];break;case _0x151bd9(0x221):ratePrice[_0x151bd9(0x1a2)]=_0x4e917d[_0x151bd9(0x226)];break;case'USDTBIDR':ratePrice[_0x151bd9(0x1b1)]=_0x4e917d[_0x151bd9(0x226)];break;}});})[_0x555f6f(0x215)](function(_0x181831){var _0x80453d=_0x555f6f;console[_0x80453d(0x1c5)](_0x181831);}),last?convertCurrency(last):null;}rateKalkulator();function getRandom(){var _0x1a5b18=_0x2d02,_0x29fe62=$(_0x1a5b18(0x1f3))['val']();console['log'](_0x29fe62['toUpperCase']());if(_0x29fe62)$[_0x1a5b18(0x1f0)](_0x1a5b18(0x1ce)+_0x29fe62[_0x1a5b18(0x1d7)]()+'USDT')[_0x1a5b18(0x236)](function(_0x3e9a4a){var _0x47841e=_0x1a5b18;console[_0x47841e(0x1c5)](_0x3e9a4a),ratePrice['random']=_0x3e9a4a['price'];var _0x4b76e3=0x1*ratePrice[_0x47841e(0x1af)],_0x1fb489=_0x4b76e3*ratePrice[_0x47841e(0x1b1)],_0x26bab6=_0x4b76e3/ratePrice[_0x47841e(0x1da)],_0xbb137b=_0x4b76e3/ratePrice[_0x47841e(0x1e8)],_0x39cea5=_0x4b76e3/ratePrice[_0x47841e(0x1a2)];_0x1fb489=Math['round'](_0x1fb489,0x0),document[_0x47841e(0x194)]('usdt'+_0x47841e(0x226))['value']=_0x4b76e3[_0x47841e(0x1d9)](0x7),document[_0x47841e(0x194)](_0x47841e(0x1b1)+_0x47841e(0x226))[_0x47841e(0x1e0)]=_0x1fb489[_0x47841e(0x1bc)](_0x47841e(0x1e6),{'currency':_0x47841e(0x20e)}),document[_0x47841e(0x194)](_0x47841e(0x1da)+_0x47841e(0x226))[_0x47841e(0x1e0)]=_0x26bab6[_0x47841e(0x1d9)](0xa),document['getElementById']('eth'+_0x47841e(0x226))[_0x47841e(0x1e0)]=_0xbb137b[_0x47841e(0x1d9)](0x9),document[_0x47841e(0x194)](_0x47841e(0x1a2)+_0x47841e(0x226))[_0x47841e(0x1e0)]=_0x39cea5['toFixed'](0x8),document[_0x47841e(0x194)](_0x47841e(0x1af)+'price')[_0x47841e(0x1e0)]=0x1,$('#randget')['text']('Update'),$(_0x47841e(0x1f3))[_0x47841e(0x212)]('disabled',!![]),$('#randreset')[_0x47841e(0x212)]('hidden',![]),$(_0x47841e(0x197))[_0x47841e(0x212)]('disabled',![]);})[_0x1a5b18(0x215)](function(_0x5464b6){var _0x5de1b7=_0x1a5b18;console[_0x5de1b7(0x1c5)](_0x5464b6),$(_0x5de1b7(0x197))[_0x5de1b7(0x212)](_0x5de1b7(0x1f4),!![]),document[_0x5de1b7(0x194)](_0x5de1b7(0x1af)+_0x5de1b7(0x226))['value']=0x0;const _0x154b90=Swal[_0x5de1b7(0x1ac)]({'toast':!![],'position':'top-end','showConfirmButton':![],'timer':0x9c4,'didOpen':_0x448565=>{var _0x288e52=_0x5de1b7;_0x448565[_0x288e52(0x190)](_0x288e52(0x20d),Swal[_0x288e52(0x18f)]),_0x448565[_0x288e52(0x190)](_0x288e52(0x22c),Swal[_0x288e52(0x1dc)]);}});_0x154b90[_0x5de1b7(0x1b6)]({'icon':_0x5de1b7(0x20c),'title':_0x5de1b7(0x233)});});else{const _0x118115=Swal['mixin']({'toast':!![],'position':_0x1a5b18(0x1c6),'showConfirmButton':![],'timer':0x9c4,'didOpen':_0x688b6c=>{var _0x354b3a=_0x1a5b18;_0x688b6c['addEventListener']('mouseenter',Swal[_0x354b3a(0x18f)]),_0x688b6c[_0x354b3a(0x190)](_0x354b3a(0x22c),Swal['resumeTimer']);}});_0x118115[_0x1a5b18(0x1b6)]({'icon':_0x1a5b18(0x20c),'title':_0x1a5b18(0x1a7)});}}function resetRandom(){var _0x4c48fa=_0x2d02;$('#randget')['text'](_0x4c48fa(0x1e4)),$(_0x4c48fa(0x1f3))[_0x4c48fa(0x212)](_0x4c48fa(0x1f4),![]),$('#randreset')[_0x4c48fa(0x212)](_0x4c48fa(0x242),!![]),$(_0x4c48fa(0x197))[_0x4c48fa(0x212)]('disabled',!![]),ratePrice[_0x4c48fa(0x1af)]=0x0,document[_0x4c48fa(0x194)](_0x4c48fa(0x1b7)+_0x4c48fa(0x226))[_0x4c48fa(0x1e0)]=0x0,document[_0x4c48fa(0x194)]('idr'+'price')['value']=0x0,document[_0x4c48fa(0x194)](_0x4c48fa(0x1da)+'price')[_0x4c48fa(0x1e0)]=0x0,document['getElementById'](_0x4c48fa(0x1e8)+_0x4c48fa(0x226))[_0x4c48fa(0x1e0)]=0x0,document['getElementById'](_0x4c48fa(0x1a2)+_0x4c48fa(0x226))[_0x4c48fa(0x1e0)]=0x0,document[_0x4c48fa(0x194)](_0x4c48fa(0x1af)+'price')[_0x4c48fa(0x1e0)]=0x0,document[_0x4c48fa(0x194)](_0x4c48fa(0x1ec))[_0x4c48fa(0x1e0)]='';}function convertCurrency(_0x2ab094){var _0x222a93=_0x2d02;const _0xfa6ad6=parseFloat(document[_0x222a93(0x194)](_0x2ab094+_0x222a93(0x226))[_0x222a93(0x1e0)]);if(!isNaN(_0xfa6ad6))switch(_0x2ab094){case _0x222a93(0x1b7):last=_0x2ab094;var _0x28d566=_0xfa6ad6/ratePrice[_0x2ab094]*ratePrice[_0x222a93(0x1b1)],_0x23f5bc=_0xfa6ad6/ratePrice['btc'],_0x2813a9=_0xfa6ad6/ratePrice[_0x222a93(0x1e8)],_0x3638eb=_0xfa6ad6/ratePrice[_0x222a93(0x1a2)],_0x86eb6f=_0xfa6ad6/ratePrice[_0x222a93(0x1af)];_0x28d566=Math[_0x222a93(0x184)](_0x28d566,0x0),document[_0x222a93(0x194)](_0x222a93(0x1b1)+'price')[_0x222a93(0x1e0)]=_0x28d566['toLocaleString'](_0x222a93(0x1e6),{'currency':_0x222a93(0x20e)}),document[_0x222a93(0x194)](_0x222a93(0x1da)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x23f5bc[_0x222a93(0x1d9)](0xa),document[_0x222a93(0x194)](_0x222a93(0x1e8)+'price')[_0x222a93(0x1e0)]=_0x2813a9[_0x222a93(0x1d9)](0x9),document[_0x222a93(0x194)]('bnb'+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x3638eb[_0x222a93(0x1d9)](0x8),ratePrice[_0x222a93(0x1af)]?document['getElementById']('random'+_0x222a93(0x226))['value']=_0x86eb6f['toFixed'](0x5):null;break;case _0x222a93(0x1b1):last=_0x2ab094;var _0xf2b831=_0xfa6ad6/ratePrice[_0x2ab094]*ratePrice[_0x222a93(0x1b7)],_0x23f5bc=_0xf2b831/ratePrice[_0x222a93(0x1da)],_0x2813a9=_0xf2b831/ratePrice[_0x222a93(0x1e8)],_0x3638eb=_0xf2b831/ratePrice[_0x222a93(0x1a2)],_0x86eb6f=_0xf2b831/ratePrice['random'];document[_0x222a93(0x194)](_0x222a93(0x1b7)+_0x222a93(0x226))['value']=_0xf2b831['toFixed'](0x7),document['getElementById'](_0x222a93(0x1da)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x23f5bc['toFixed'](0xa),document[_0x222a93(0x194)]('eth'+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x2813a9[_0x222a93(0x1d9)](0x9),document[_0x222a93(0x194)](_0x222a93(0x1a2)+'price')[_0x222a93(0x1e0)]=_0x3638eb[_0x222a93(0x1d9)](0x8),ratePrice['random']?document['getElementById'](_0x222a93(0x1af)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x86eb6f[_0x222a93(0x1d9)](0x4):null;break;case _0x222a93(0x1da):last=_0x2ab094;var _0xf2b831=_0xfa6ad6*ratePrice[_0x2ab094],_0x28d566=_0xf2b831*ratePrice[_0x222a93(0x1b1)],_0x2813a9=_0xf2b831/ratePrice[_0x222a93(0x1e8)],_0x3638eb=_0xf2b831/ratePrice[_0x222a93(0x1a2)],_0x86eb6f=_0xf2b831/ratePrice[_0x222a93(0x1af)];_0x28d566=Math[_0x222a93(0x184)](_0x28d566,0x0),document[_0x222a93(0x194)](_0x222a93(0x1b7)+'price')[_0x222a93(0x1e0)]=_0xf2b831[_0x222a93(0x1d9)](0x7),document[_0x222a93(0x194)](_0x222a93(0x1b1)+_0x222a93(0x226))['value']=_0x28d566[_0x222a93(0x1bc)]('id-ID',{'currency':_0x222a93(0x20e)}),document[_0x222a93(0x194)](_0x222a93(0x1e8)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x2813a9['toFixed'](0x9),document[_0x222a93(0x194)](_0x222a93(0x1a2)+_0x222a93(0x226))['value']=_0x3638eb['toFixed'](0x8),ratePrice['random']?document[_0x222a93(0x194)]('random'+'price')[_0x222a93(0x1e0)]=_0x86eb6f[_0x222a93(0x1d9)](0x4):null;break;case _0x222a93(0x1e8):last=_0x2ab094;var _0xf2b831=_0xfa6ad6*ratePrice[_0x2ab094],_0x28d566=_0xf2b831*ratePrice[_0x222a93(0x1b1)],_0x23f5bc=_0xf2b831/ratePrice[_0x222a93(0x1da)],_0x3638eb=_0xf2b831/ratePrice['bnb'],_0x86eb6f=_0xf2b831/ratePrice[_0x222a93(0x1af)];_0x28d566=Math[_0x222a93(0x184)](_0x28d566,0x0),document[_0x222a93(0x194)](_0x222a93(0x1b7)+'price')[_0x222a93(0x1e0)]=_0xf2b831[_0x222a93(0x1d9)](0x7),document[_0x222a93(0x194)](_0x222a93(0x1b1)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x28d566['toLocaleString']('id-ID',{'currency':'IDR'}),document[_0x222a93(0x194)](_0x222a93(0x1da)+'price')[_0x222a93(0x1e0)]=_0x23f5bc[_0x222a93(0x1d9)](0xa),document[_0x222a93(0x194)](_0x222a93(0x1a2)+_0x222a93(0x226))['value']=_0x3638eb[_0x222a93(0x1d9)](0x8),ratePrice['random']?document[_0x222a93(0x194)](_0x222a93(0x1af)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x86eb6f[_0x222a93(0x1d9)](0x4):null;break;case _0x222a93(0x1a2):last=_0x2ab094;var _0xf2b831=_0xfa6ad6*ratePrice[_0x2ab094],_0x28d566=_0xf2b831*ratePrice[_0x222a93(0x1b1)],_0x23f5bc=_0xf2b831/ratePrice[_0x222a93(0x1da)],_0x2813a9=_0xf2b831/ratePrice[_0x222a93(0x1e8)],_0x86eb6f=_0xf2b831/ratePrice['random'];_0x28d566=Math['round'](_0x28d566,0x0),document['getElementById'](_0x222a93(0x1b7)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0xf2b831['toFixed'](0x7),document['getElementById'](_0x222a93(0x1b1)+'price')[_0x222a93(0x1e0)]=_0x28d566[_0x222a93(0x1bc)]('id-ID',{'currency':_0x222a93(0x20e)}),document[_0x222a93(0x194)](_0x222a93(0x1da)+'price')[_0x222a93(0x1e0)]=_0x23f5bc[_0x222a93(0x1d9)](0xa),document[_0x222a93(0x194)](_0x222a93(0x1e8)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x2813a9[_0x222a93(0x1d9)](0x9),ratePrice[_0x222a93(0x1af)]?document['getElementById']('random'+_0x222a93(0x226))['value']=_0x86eb6f[_0x222a93(0x1d9)](0x4):null;break;default:var _0xf2b831=_0xfa6ad6*ratePrice[_0x222a93(0x1af)],_0x28d566=_0xf2b831*ratePrice[_0x222a93(0x1b1)],_0x23f5bc=_0xf2b831/ratePrice[_0x222a93(0x1da)],_0x2813a9=_0xf2b831/ratePrice[_0x222a93(0x1e8)],_0x3638eb=_0xf2b831/ratePrice['bnb'];_0x28d566=Math[_0x222a93(0x184)](_0x28d566,0x0),document[_0x222a93(0x194)](_0x222a93(0x1b7)+'price')[_0x222a93(0x1e0)]=_0xf2b831[_0x222a93(0x1d9)](0x7),document['getElementById'](_0x222a93(0x1b1)+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x28d566[_0x222a93(0x1bc)](_0x222a93(0x1e6),{'currency':_0x222a93(0x20e)}),document[_0x222a93(0x194)]('btc'+_0x222a93(0x226))[_0x222a93(0x1e0)]=_0x23f5bc[_0x222a93(0x1d9)](0xa),document[_0x222a93(0x194)]('eth'+_0x222a93(0x226))['value']=_0x2813a9[_0x222a93(0x1d9)](0x9),document[_0x222a93(0x194)](_0x222a93(0x1a2)+'price')[_0x222a93(0x1e0)]=_0x3638eb['toFixed'](0x8);}}$(document)[_0xc8e981(0x201)](async function(){var _0x283a7a=_0xc8e981;$(_0x283a7a(0x1ad))['on'](_0x283a7a(0x1c2),function(){var _0x1296d8=_0x283a7a;location[_0x1296d8(0x1b0)]();});var _0x3d93b6=await _0x170be8(localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1a9)));$('#RPMODAL')['text'](_0x283a7a(0x1ed)+_0x3d93b6),$(_0x283a7a(0x1de))[_0x283a7a(0x23a)](localStorage[_0x283a7a(0x1c1)]('USDTBSC')),$(_0x283a7a(0x1c9))[_0x283a7a(0x23a)](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1eb))),$(_0x283a7a(0x1a8))[_0x283a7a(0x23a)](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x21d))),$(_0x283a7a(0x23b))['text'](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1fb))),$(_0x283a7a(0x203))[_0x283a7a(0x23a)](localStorage[_0x283a7a(0x1c1)]('ETHERC')),$(_0x283a7a(0x23c))[_0x283a7a(0x23a)](localStorage['getItem']('USDTBINANCE')),$(_0x283a7a(0x237))['text'](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1b9))),$(_0x283a7a(0x187))['text'](localStorage[_0x283a7a(0x1c1)]('ETHBINANCE')),$(_0x283a7a(0x188))[_0x283a7a(0x23a)](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1e9))),$(_0x283a7a(0x210))[_0x283a7a(0x23a)](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x22a))),$(_0x283a7a(0x1d2))['text'](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x209))),$(_0x283a7a(0x18b))['text'](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x230))),$(_0x283a7a(0x19b))['text'](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1bb)));localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x208))!=null&&$(_0x283a7a(0x1df))[_0x283a7a(0x191)](localStorage['getItem']('apikey'));localStorage['getItem'](_0x283a7a(0x1f2))!=null&&$('#secretkey')[_0x283a7a(0x191)](localStorage[_0x283a7a(0x1c1)]('secretkey'));localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x183))!=null&&$(_0x283a7a(0x1b4))[_0x283a7a(0x191)](localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x183)));localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1e3))!=null&&$(_0x283a7a(0x216))[_0x283a7a(0x191)](localStorage['getItem'](_0x283a7a(0x1e3)));localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1ef))!=null&&$(_0x283a7a(0x227))[_0x283a7a(0x191)](localStorage['getItem']('bscwallet'));localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x1a9))!=null&&$(_0x283a7a(0x192))[_0x283a7a(0x191)](localStorage['getItem'](_0x283a7a(0x1a9)));localStorage[_0x283a7a(0x1c1)](_0x283a7a(0x232))!=null&&$(_0x283a7a(0x1c0))[_0x283a7a(0x23a)](localStorage['getItem'](_0x283a7a(0x232)));localStorage['getItem']('dateupdate')!=null&&$(_0x283a7a(0x225))[_0x283a7a(0x23a)](localStorage['getItem'](_0x283a7a(0x185)));var _0x4c713d=parseFloat($(_0x283a7a(0x19b))[_0x283a7a(0x23a)]()),_0x414942=await _0x170be8(_0x4c713d);if(_0x4c713d<0x0)$(_0x283a7a(0x205))['addClass'](_0x283a7a(0x1ae))[_0x283a7a(0x1b5)](_0x283a7a(0x206))[_0x283a7a(0x20a)](_0x4c713d+_0x283a7a(0x22d)+_0x414942+'\x20)');else _0x4c713d>=0x0&&$(_0x283a7a(0x205))['addClass']('ijo\x20besar')['removeClass']('merah')['html'](_0x4c713d+_0x283a7a(0x22d)+_0x414942+'\x20)');$(_0x283a7a(0x23d))[_0x283a7a(0x1c2)](async function(_0x433fb1){var _0x776a2d=_0x283a7a;_0x433fb1[_0x776a2d(0x1b3)](),$(_0x776a2d(0x23d))['prop'](_0x776a2d(0x1f4),!![]),$(_0x776a2d(0x1ba))[_0x776a2d(0x212)](_0x776a2d(0x1f4),!![]),$(_0x776a2d(0x1d8))[_0x776a2d(0x212)](_0x776a2d(0x1f4),!![]),$(_0x776a2d(0x1f7))[_0x776a2d(0x212)]('disabled',!![]);var _0x5b692f=new Date(),_0x5c88b1=$('#apikey')['val'](),_0x237c4f=$(_0x776a2d(0x195))[_0x776a2d(0x191)](),_0x4711a3=$(_0x776a2d(0x227))[_0x776a2d(0x191)](),_0x12d710=$(_0x776a2d(0x192))[_0x776a2d(0x191)](),_0x4591af=$(_0x776a2d(0x1b4))[_0x776a2d(0x191)](),_0x94bd0a=$(_0x776a2d(0x216))[_0x776a2d(0x191)]();if(_0x5c88b1===''||_0x237c4f===''||_0x4711a3===''||_0x4591af===''||_0x94bd0a===''||_0x12d710===''){_0x15f3f5(_0x776a2d(0x1dd));return;}var _0x4fb91a=_0x5b692f['toLocaleDateString']()+'\x20|\x20'+_0x5b692f[_0x776a2d(0x244)]();localStorage['setItem'](_0x776a2d(0x208),_0x5c88b1),localStorage['setItem'](_0x776a2d(0x1f2),_0x237c4f),localStorage['setItem'](_0x776a2d(0x1ef),_0x4711a3),localStorage[_0x776a2d(0x1fd)]('MODALAWAL',_0x12d710),localStorage['setItem']('dateset',_0x4fb91a),localStorage[_0x776a2d(0x1fd)](_0x776a2d(0x183),_0x4591af),localStorage[_0x776a2d(0x1fd)](_0x776a2d(0x1e3),_0x94bd0a),$(_0x776a2d(0x1c0))[_0x776a2d(0x23a)](_0x4fb91a),await _0x1bf668(_0x776a2d(0x193)),_0x330ad6(_0x776a2d(0x245)),_0x15f3f5(_0x776a2d(0x239));}),$(_0x283a7a(0x1ba))[_0x283a7a(0x1c2)](async function(){var _0x3966ad=_0x283a7a;$('#setdata')[_0x3966ad(0x212)]('disabled',!![]),$(_0x3966ad(0x1ba))[_0x3966ad(0x212)](_0x3966ad(0x1f4),!![]),$('#refresh')[_0x3966ad(0x212)]('disabled',!![]),$(_0x3966ad(0x1f7))[_0x3966ad(0x212)](_0x3966ad(0x1f4),!![]),await _0x1bf668(_0x3966ad(0x19d)),_0x15f3f5('BERHASIL\x20MENGUPDATE\x20MODAL!!');}),$('#refresh')[_0x283a7a(0x1c2)](async function(){var _0x56f474=_0x283a7a;$(_0x56f474(0x23d))[_0x56f474(0x212)]('disabled',!![]),$(_0x56f474(0x1ba))[_0x56f474(0x212)](_0x56f474(0x1f4),!![]),$(_0x56f474(0x1d8))[_0x56f474(0x212)]('disabled',!![]),$('#resetmodal')[_0x56f474(0x212)](_0x56f474(0x1f4),!![]),await _0x1bf668(_0x56f474(0x193)),_0x15f3f5(_0x56f474(0x198));}),$(_0x283a7a(0x1f7))[_0x283a7a(0x1c2)](async function(){var _0x3d3d4e=_0x283a7a,_0x39324d=confirm('INGIN\x20RESET\x20MODAL?');if(_0x39324d){var _0x7c31fe=new Date();$(_0x3d3d4e(0x192))[_0x3d3d4e(0x191)](localStorage[_0x3d3d4e(0x1c1)](_0x3d3d4e(0x230)));var _0x23f22c=$(_0x3d3d4e(0x192))[_0x3d3d4e(0x191)]();localStorage[_0x3d3d4e(0x1fd)](_0x3d3d4e(0x1a9),_0x23f22c);var _0x7c31fe=new Date(),_0xdbcde=$(_0x3d3d4e(0x1df))[_0x3d3d4e(0x191)](),_0x2d5e2c=$(_0x3d3d4e(0x195))[_0x3d3d4e(0x191)](),_0x40d3db=$(_0x3d3d4e(0x1b4))[_0x3d3d4e(0x191)](),_0x440de5=$(_0x3d3d4e(0x216))[_0x3d3d4e(0x191)](),_0x4c86e8=$('#bscwallet')[_0x3d3d4e(0x191)](),_0x2cfd4e=_0x7c31fe[_0x3d3d4e(0x1fe)]()+'\x20|\x20'+_0x7c31fe[_0x3d3d4e(0x244)]();localStorage[_0x3d3d4e(0x1fd)](_0x3d3d4e(0x208),_0xdbcde),localStorage[_0x3d3d4e(0x1fd)]('secretkey',_0x2d5e2c),localStorage[_0x3d3d4e(0x1fd)](_0x3d3d4e(0x183),_0x40d3db),localStorage[_0x3d3d4e(0x1fd)](_0x3d3d4e(0x1e3),_0x440de5),localStorage[_0x3d3d4e(0x1fd)](_0x3d3d4e(0x1ef),_0x4c86e8),localStorage[_0x3d3d4e(0x1fd)](_0x3d3d4e(0x1a9),_0x23f22c),localStorage['setItem'](_0x3d3d4e(0x232),_0x2cfd4e),$(_0x3d3d4e(0x1c0))[_0x3d3d4e(0x23a)](_0x2cfd4e),await _0x1bf668(_0x3d3d4e(0x193)),_0x15f3f5(_0x3d3d4e(0x223)),_0x330ad6('RESET');}});async function _0x1bf668(_0x42d95e){var _0x52d395=_0x283a7a;if(_0x42d95e==_0x52d395(0x19d)){var _0xbd6159=new Date(),_0x42f20c=$('#MODALAWAL')['val']();localStorage[_0x52d395(0x1fd)](_0x52d395(0x1a9),_0x42f20c);var _0xbd6159=new Date(),_0x549c57=$(_0x52d395(0x1df))[_0x52d395(0x191)](),_0x559257=$(_0x52d395(0x195))[_0x52d395(0x191)](),_0xf4517a=$(_0x52d395(0x1b4))[_0x52d395(0x191)](),_0x60f1d9=$('#secretkeyGATE')[_0x52d395(0x191)](),_0x1fd6e0=$(_0x52d395(0x227))[_0x52d395(0x191)](),_0x42f20c=$('#MODALAWAL')[_0x52d395(0x191)](),_0x366650=_0xbd6159[_0x52d395(0x1fe)]()+_0x52d395(0x1b2)+_0xbd6159[_0x52d395(0x244)]();localStorage[_0x52d395(0x1fd)](_0x52d395(0x208),_0x549c57),localStorage[_0x52d395(0x1fd)](_0x52d395(0x1f2),_0x559257),localStorage[_0x52d395(0x1fd)]('apikeyGATE',_0xf4517a),localStorage[_0x52d395(0x1fd)](_0x52d395(0x1e3),_0x60f1d9),localStorage[_0x52d395(0x1fd)](_0x52d395(0x1ef),_0x1fd6e0),localStorage['setItem']('MODALAWAL',_0x42f20c),localStorage[_0x52d395(0x1fd)](_0x52d395(0x232),_0x366650),$(_0x52d395(0x1c0))['text'](_0x366650),_0x330ad6(_0x52d395(0x207)),await _0x1bf668();}else try{_0xedea29();var _0x1fd6e0=$(_0x52d395(0x227))[_0x52d395(0x191)]();_0x4eed1d(),(_0x39f7dd(),_0x2e452b());var _0xbd6159=new Date(),_0x59662d=_0xbd6159[_0x52d395(0x1fe)]()+'\x20|\x20'+_0xbd6159[_0x52d395(0x244)]();localStorage[_0x52d395(0x1fd)](_0x52d395(0x185),_0x59662d);const _0x193f08=await _0x57d5b9('',_0x1fd6e0,0x12,_0x52d395(0x1eb)),_0x170756=await _0x265b5b(_0x52d395(0x213),_0x1fd6e0,0x12,_0x52d395(0x1a3));var _0xd8b73c=parseFloat(_0x193f08)+parseFloat(_0x170756);$(_0x52d395(0x188))[_0x52d395(0x23a)](parseFloat(_0xd8b73c)['toFixed'](0x2)),localStorage[_0x52d395(0x1fd)](_0x52d395(0x1e9),parseFloat(_0xd8b73c)[_0x52d395(0x1d9)](0x2));var _0x186b67=localStorage[_0x52d395(0x1c1)](_0x52d395(0x1fb));localStorage[_0x52d395(0x1fd)]('TOTALGATE',parseFloat(_0x186b67)[_0x52d395(0x1d9)](0x2)),$('#TOTALGATE')[_0x52d395(0x23a)](parseFloat(_0x186b67)[_0x52d395(0x1d9)](0x2));var _0x24dadc=parseFloat(localStorage[_0x52d395(0x1c1)](_0x52d395(0x22a)))+parseFloat(localStorage[_0x52d395(0x1c1)](_0x52d395(0x1e9)))+parseFloat(localStorage[_0x52d395(0x1c1)](_0x52d395(0x209)));$(_0x52d395(0x18b))[_0x52d395(0x23a)](parseFloat(_0x24dadc)[_0x52d395(0x1d9)](0x2)),localStorage[_0x52d395(0x1fd)](_0x52d395(0x230),parseFloat(_0x24dadc)[_0x52d395(0x1d9)](0x2));var _0x614b53=parseFloat(localStorage['getItem'](_0x52d395(0x230)))-parseFloat(localStorage[_0x52d395(0x1c1)](_0x52d395(0x1a9)));$(_0x52d395(0x19b))[_0x52d395(0x23a)](parseFloat(_0x614b53)['toFixed'](0x2)),localStorage['setItem'](_0x52d395(0x1bb),parseFloat(_0x614b53)[_0x52d395(0x1d9)](0x2));var _0x186844=parseFloat(_0x614b53)[_0x52d395(0x1d9)](0x2),_0x22fa5e=await _0x170be8(_0x186844);if(_0x186844<0x0)$(_0x52d395(0x205))[_0x52d395(0x1a6)](_0x52d395(0x1ae))[_0x52d395(0x1b5)](_0x52d395(0x206))[_0x52d395(0x20a)](parseFloat(_0x614b53)[_0x52d395(0x1d9)](0x2)+_0x52d395(0x22d)+_0x22fa5e+'\x20)');else _0x186844>=0x0&&$(_0x52d395(0x205))[_0x52d395(0x1a6)](_0x52d395(0x228))[_0x52d395(0x1b5)](_0x52d395(0x196))[_0x52d395(0x20a)](parseFloat(_0x614b53)[_0x52d395(0x1d9)](0x2)+_0x52d395(0x22d)+_0x22fa5e+'\x20)');$(_0x52d395(0x225))[_0x52d395(0x23a)](_0x59662d);}catch{}$('#setdata')[_0x52d395(0x212)](_0x52d395(0x1f4),![]),$(_0x52d395(0x1ba))[_0x52d395(0x212)](_0x52d395(0x1f4),![]),$(_0x52d395(0x1d8))[_0x52d395(0x212)](_0x52d395(0x1f4),![]),$('#resetmodal')[_0x52d395(0x212)](_0x52d395(0x1f4),![]);}async function _0x170be8(_0x2ed9a4){return new Promise((_0xe5a6c4,_0x5f1d4e)=>{var _0x1094f6=_0x2d02;$[_0x1094f6(0x224)]({'url':_0x1094f6(0x21c),'success':function(_0x5967de){var _0x38db29=_0x1094f6,_0x231103=_0x5967de['ticker'][_0x38db29(0x1fc)];localStorage[_0x38db29(0x1fd)]('USDTRate',_0x231103),console[_0x38db29(0x1c5)](_0x38db29(0x1c7),_0x231103);var _0x525ed1=_0x2ed9a4*_0x231103;console[_0x38db29(0x1c5)](_0x38db29(0x1fa)+_0x525ed1),_0xe5a6c4(_0x525ed1['toLocaleString']());},'error':function(_0x56356e,_0x244710,_0x45d1cb){var _0x3063de=_0x1094f6;console[_0x3063de(0x1c5)]('Error\x20get\x20Price\x20Rate\x20USDTRate:',_0x45d1cb),_0x5f1d4e(_0x45d1cb);}});});}function _0x3cab50(_0x2351fc,_0x3139cd){var _0x2710ac=_0x283a7a;for(var _0x1bb8b5=0x0;_0x1bb8b5<_0x2351fc[_0x2710ac(0x241)];_0x1bb8b5++){if(_0x2351fc[_0x1bb8b5][_0x2710ac(0x1c4)]===_0x3139cd)return _0x2351fc[_0x1bb8b5][_0x2710ac(0x246)];}return _0x2710ac(0x18c);}async function _0x4eed1d(){var _0x49e187=_0x283a7a,_0x1a7cd7=$(_0x49e187(0x1df))[_0x49e187(0x191)](),_0x296102=$(_0x49e187(0x195))['val'](),_0x256df5=_0x49e187(0x19c),_0x2bf7bc=new Date()[_0x49e187(0x21e)](),_0x4ab3f9=CryptoJS[_0x49e187(0x23f)](_0x49e187(0x1c3)+_0x2bf7bc,_0x296102)['toString'](CryptoJS[_0x49e187(0x1be)][_0x49e187(0x1ab)]),_0x4642dc={'X-MBX-APIKEY':_0x1a7cd7};$[_0x49e187(0x224)]({'url':_0x256df5+_0x49e187(0x1d0)+_0x2bf7bc+_0x49e187(0x229)+_0x4ab3f9,'method':'GET','headers':_0x4642dc,'dataType':'json','success':function(_0x270b30){var _0xcf12d3=_0x49e187,_0x51f46f=_0x270b30[_0xcf12d3(0x219)],_0x2babcf=_0x3cab50(_0x51f46f,_0xcf12d3(0x235)),_0x2ddfae=_0x3cab50(_0x51f46f,_0xcf12d3(0x1d3)),_0x346c61=_0x3cab50(_0x51f46f,_0xcf12d3(0x20b));localStorage[_0xcf12d3(0x1fd)]('USDTBINANCE',parseFloat(_0x346c61)['toFixed'](0x2)),$(_0xcf12d3(0x22b))[_0xcf12d3(0x23a)](parseFloat(_0x346c61*0x1)['toFixed'](0x2)),localStorage[_0xcf12d3(0x1fd)]('BNBBINANCE',parseFloat(_0x2babcf*localStorage[_0xcf12d3(0x1c1)]('Pricebnb'))[_0xcf12d3(0x1d9)](0x2)),$('td#BNBBINANCE')[_0xcf12d3(0x23a)](parseFloat(_0x2babcf*localStorage[_0xcf12d3(0x1c1)](_0xcf12d3(0x1d1)))[_0xcf12d3(0x1d9)](0x2)),localStorage[_0xcf12d3(0x1fd)](_0xcf12d3(0x200),parseFloat(_0x2ddfae*localStorage[_0xcf12d3(0x1c1)](_0xcf12d3(0x1cd)))[_0xcf12d3(0x1d9)](0x2)),$(_0xcf12d3(0x1f5))[_0xcf12d3(0x23a)](parseFloat(_0x2ddfae*localStorage['getItem']('Priceeth'))[_0xcf12d3(0x1d9)](0x2));var _0x325d93=parseFloat(localStorage['getItem'](_0xcf12d3(0x1b9)))+parseFloat(localStorage[_0xcf12d3(0x1c1)](_0xcf12d3(0x200)))+parseFloat(localStorage[_0xcf12d3(0x1c1)](_0xcf12d3(0x1cf)));$(_0xcf12d3(0x210))['text'](parseFloat(_0x325d93)[_0xcf12d3(0x1d9)](0x2)),localStorage[_0xcf12d3(0x1fd)](_0xcf12d3(0x22a),parseFloat(_0x325d93)[_0xcf12d3(0x1d9)](0x2));},'error':function(_0xabdd7b){var _0x217eb7=_0x49e187;console['error'](_0x217eb7(0x217),_0xabdd7b);}});}async function _0x265b5b(_0x263048,_0x5a1863,_0x36177c,_0x385732){return new Promise((_0x1fee12,_0x419a1e)=>{var _0x33bb17=_0x2d02,_0x468d12='https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress='+_0x263048+_0x33bb17(0x1bf)+_0x5a1863+_0x33bb17(0x189);$[_0x33bb17(0x224)]({'url':_0x468d12,'success':function(_0x125feb){var _0x4e9dea=_0x33bb17,_0x3446f3=_0x125feb['result']/Math[_0x4e9dea(0x234)](0xa,_0x36177c);localStorage[_0x4e9dea(0x1fd)](_0x385732,_0x3446f3[_0x4e9dea(0x1d9)](0x2)),$('td#'+_0x385732+'')[_0x4e9dea(0x23a)](_0x3446f3[_0x4e9dea(0x1d9)](0x2)),_0x1fee12(_0x3446f3[_0x4e9dea(0x1d9)](0x2));},'error':function(_0x599a5c,_0xc348b8,_0x17fa95){var _0x508e59=_0x33bb17;console[_0x508e59(0x1c5)](_0x508e59(0x1d6),_0x17fa95),$(_0x508e59(0x22f)+_0x385732+'')[_0x508e59(0x23a)](_0x17fa95),_0x419a1e(_0x17fa95);}});});}async function _0x57d5b9(_0x33e2a8,_0x1829f1,_0x937a91,_0xcf43ee){return new Promise((_0x4ed883,_0x5ef343)=>{var _0x52cacf=_0x2d02;$[_0x52cacf(0x1f0)](_0x52cacf(0x21f),{'symbol':_0x52cacf(0x221)})[_0x52cacf(0x236)](function(_0x42262e){var _0xfde6b5=_0x52cacf;localStorage[_0xfde6b5(0x1fd)](_0xfde6b5(0x1d1),_0x42262e['lastPrice']);})[_0x52cacf(0x215)](function(_0x448964){console['log']('Error\x20calling\x20BNBUSDT:',_0x448964),_0x5ef343(_0x448964);});var _0x1129ee=_0x52cacf(0x1db)+_0x1829f1+_0x52cacf(0x189);$[_0x52cacf(0x224)]({'url':_0x1129ee,'success':function(_0x470b95){var _0x16aae2=_0x52cacf,_0x1d5a56=_0x470b95[_0x16aae2(0x20f)]/Math[_0x16aae2(0x234)](0xa,_0x937a91)*localStorage['getItem'](_0x16aae2(0x1d1));localStorage[_0x16aae2(0x1fd)](_0xcf43ee,_0x1d5a56[_0x16aae2(0x1d9)](0x2)),$(_0x16aae2(0x22f)+_0xcf43ee+'')['text'](_0x1d5a56[_0x16aae2(0x1d9)](0x2)),_0x4ed883(_0x1d5a56['toFixed'](0x2));},'error':function(_0x29b5bb,_0x505c29,_0x441a0b){var _0x3b5330=_0x52cacf;console[_0x3b5330(0x1c5)]('Error\x20get\x20Price\x20Rate\x20Pair:',_0x441a0b),$(_0x3b5330(0x22f)+_0xcf43ee+'')[_0x3b5330(0x23a)](_0x441a0b),_0x5ef343(_0x441a0b);}});});}async function _0x259955(_0x59cfa3,_0x495182,_0x9a86a8,_0x48e8bf){return new Promise((_0x353c9c,_0x402503)=>{var _0x22f36f=_0x2d02,_0x3aea00='https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress='+_0x59cfa3+'&address='+_0x495182+_0x22f36f(0x1ff);$[_0x22f36f(0x224)]({'url':_0x3aea00,'success':function(_0x1e3db1){var _0x565ead=_0x22f36f,_0x471217=_0x1e3db1[_0x565ead(0x20f)]/Math[_0x565ead(0x234)](0xa,_0x9a86a8);localStorage['setItem'](_0x48e8bf,_0x471217['toFixed'](0x2)),$('td#'+_0x48e8bf+'')[_0x565ead(0x23a)](_0x471217[_0x565ead(0x1d9)](0x2)),_0x353c9c(_0x471217['toFixed'](0x2));},'error':function(_0x31c1ec,_0x5ae368,_0x507082){var _0xc51655=_0x22f36f;console[_0xc51655(0x1c5)](_0xc51655(0x1d6),_0x507082),$(_0xc51655(0x22f)+_0x48e8bf+'')[_0xc51655(0x23a)](_0x507082),_0x402503(_0x507082);}});});}async function _0x39f7dd(){var _0x477f61=_0x283a7a,_0x24b9ad=localStorage[_0x477f61(0x1c1)](_0x477f61(0x183)),_0x3f7606=localStorage[_0x477f61(0x1c1)](_0x477f61(0x1e3)),_0x5b1c90=_0x477f61(0x1bd),_0x31d056=_0x477f61(0x1cb),_0x6f394b='GET',_0x2bde4a='/spot/accounts',_0x288071='',_0xd4771d='',_0x26cbbf=Math[_0x477f61(0x240)](new Date()[_0x477f61(0x21e)]()/0x3e8),_0x3d8be5=CryptoJS[_0x477f61(0x21a)](_0xd4771d)['toString'](),_0x46d5ec=_0x6f394b+'\x0a'+_0x31d056+_0x2bde4a+'\x0a'+_0x288071+'\x0a'+_0x3d8be5+'\x0a'+_0x26cbbf,_0x4fd868=CryptoJS[_0x477f61(0x204)](_0x46d5ec,_0x3f7606)['toString'](),_0x38772e=_0x5b1c90+_0x31d056+_0x2bde4a;$['ajax']({'url':_0x38772e,'method':_0x6f394b,'headers':{'Accept':_0x477f61(0x182),'Content-Type':_0x477f61(0x182),'Timestamp':_0x26cbbf,'KEY':_0x24b9ad,'SIGN':_0x4fd868},'success':function(_0x43c507){var _0x588423=_0x477f61,_0x52af35=_0x43c507[_0x588423(0x1a1)](function(_0x1cd0b8){var _0x47e407=_0x588423;return _0x1cd0b8[_0x47e407(0x220)]==='USDT';}),_0x3f46a7=_0x43c507[_0x588423(0x1a1)](function(_0x3fa737){var _0x40af66=_0x588423;return _0x3fa737[_0x40af66(0x220)]===_0x40af66(0x1d3);});localStorage[_0x588423(0x1fd)]('USDTGATE',parseFloat(_0x52af35[_0x588423(0x247)])[_0x588423(0x1d9)](0x2)),$(_0x588423(0x23b))[_0x588423(0x23a)](parseFloat(_0x52af35['available'])[_0x588423(0x1d9)](0x2)),console[_0x588423(0x1c5)](parseFloat(_0x52af35['available'])[_0x588423(0x1d9)](0x2));var _0x5c4cbf=parseFloat(localStorage['getItem'](_0x588423(0x1fb)));$(_0x588423(0x1d2))['text'](parseFloat(_0x5c4cbf)[_0x588423(0x1d9)](0x2)),localStorage[_0x588423(0x1fd)](_0x588423(0x209),parseFloat(_0x5c4cbf)[_0x588423(0x1d9)](0x2));},'error':function(_0x12bcb0){var _0x2ef070=_0x477f61;console[_0x2ef070(0x20c)](_0x12bcb0),Swal[_0x2ef070(0x1b6)](_0x2ef070(0x22e));}});}async function _0x2e452b(){var _0x247382=_0x283a7a,_0x621d9e=localStorage[_0x247382(0x1c1)](_0x247382(0x202));return new Promise((_0x5d0319,_0x486935)=>{var _0x3e03c5=_0x247382,_0x442ffe=_0x3e03c5(0x231)+_0x621d9e+_0x3e03c5(0x1d4);$[_0x3e03c5(0x224)]({'url':_0x442ffe,'success':function(_0x47a191){var _0xccec94=_0x3e03c5,_0x1b1ae2=_0x47a191['tokens'],_0x4f784c=_0x1b1ae2[_0xccec94(0x1aa)][_0xccec94(0x1cc)];console[_0xccec94(0x1c5)](_0x4f784c),localStorage[_0xccec94(0x1fd)](_0xccec94(0x21d),_0x4f784c),$(_0xccec94(0x1a8))[_0xccec94(0x23a)](parseFloat(_0x4f784c)[_0xccec94(0x1d9)](0x2)),_0x5d0319(_0x4f784c);},'error':function(_0x504c35,_0x308cce,_0x415710){var _0x1e9a10=_0x3e03c5;console['log']('Error\x20get\x20Price\x20Rate\x20Pair:',_0x415710),$(_0x1e9a10(0x22f)+'USDTSOL'+'')['text'](_0x415710),_0x486935(_0x415710);}});});}async function _0xe0ebe0(_0x228bab,_0x45eae0,_0x411b13,_0xcafa05){return new Promise((_0x2c16fd,_0x17a26a)=>{var _0x4f75f5=_0x2d02;$[_0x4f75f5(0x1f0)](_0x4f75f5(0x21f),{'symbol':_0x4f75f5(0x1f8)})[_0x4f75f5(0x236)](function(_0x4bab38){var _0x5b7d79=_0x4f75f5;localStorage[_0x5b7d79(0x1fd)]('Priceeth',_0x4bab38[_0x5b7d79(0x199)]);})[_0x4f75f5(0x215)](function(_0x26547f){var _0x3b5dbb=_0x4f75f5;console['log'](_0x3b5dbb(0x19a),_0x26547f),_0x17a26a(_0x26547f);});var _0x152067=_0x4f75f5(0x1d5)+_0x45eae0+_0x4f75f5(0x1ff);$[_0x4f75f5(0x224)]({'url':_0x152067,'success':function(_0x363a67){var _0x5e512e=_0x4f75f5,_0x5f2bc3=_0x363a67['result']/Math[_0x5e512e(0x234)](0xa,_0x411b13)*localStorage[_0x5e512e(0x1c1)]('Priceeth');localStorage['setItem'](_0xcafa05,_0x5f2bc3[_0x5e512e(0x1d9)](0x2)),$(_0x5e512e(0x22f)+_0xcafa05+'')[_0x5e512e(0x23a)](_0x5f2bc3[_0x5e512e(0x1d9)](0x2)),_0x2c16fd(_0x5f2bc3[_0x5e512e(0x1d9)](0x2));},'error':function(_0x1eb555,_0x407575,_0x27396b){var _0x49ac5=_0x4f75f5;console[_0x49ac5(0x1c5)](_0x49ac5(0x1d6),_0x27396b),$('td#'+_0xcafa05+'')[_0x49ac5(0x23a)](_0x27396b),_0x17a26a(_0x27396b);}});});}function _0x330ad6(_0x334235){var _0x29a886=_0x283a7a,_0x425684=new Date(),_0x315a8d=_0x425684[_0x29a886(0x1fe)]()+'\x20|\x20'+_0x425684[_0x29a886(0x244)](),_0x5368f2=_0x315a8d,_0x5647d2=localStorage[_0x29a886(0x1c1)](_0x29a886(0x230)),_0x4bda20=localStorage[_0x29a886(0x1c1)](_0x29a886(0x1bb)),_0x293c1c={'firstmodal':parseFloat(_0x5647d2-_0x4bda20)['toFixed'](0x2),'lastupdate':_0x5368f2,'lastmodal':_0x5647d2,'lastpnl':_0x4bda20,'status':_0x334235};_0x34621a[_0x29a886(0x1e1)](_0x293c1c),localStorage[_0x29a886(0x1fd)]('historyModal',JSON['stringify'](_0x34621a)),_0x418165();}var _0x34621a=[];function _0x418165(){var _0x54c60b=_0x283a7a;$(_0x54c60b(0x222))['empty'](),console[_0x54c60b(0x1c5)](_0x34621a);for(var _0x28baf8=_0x34621a[_0x54c60b(0x241)]-0x1;_0x28baf8>=_0x34621a[_0x54c60b(0x241)]-0xb;_0x28baf8--){var _0x3a512c=_0x34621a[_0x28baf8];if(_0x28baf8==-0x1)return;var _0x2a2e09=$('<tr>');_0x2a2e09[_0x54c60b(0x1ca)](_0x54c60b(0x248)+_0x3a512c[_0x54c60b(0x1e7)]+_0x54c60b(0x1e2)),_0x2a2e09[_0x54c60b(0x1ca)](_0x54c60b(0x248)+parseFloat(_0x3a512c[_0x54c60b(0x1f9)])[_0x54c60b(0x1d9)](0x2)+_0x54c60b(0x1e2)),_0x2a2e09['append'](_0x54c60b(0x248)+_0x3a512c[_0x54c60b(0x19f)]+'</td>'),_0x2a2e09[_0x54c60b(0x1ca)](_0x54c60b(0x248)+_0x3a512c[_0x54c60b(0x1a5)]+'</td>'),_0x2a2e09['append'](_0x54c60b(0x248)+_0x3a512c[_0x54c60b(0x214)]+_0x54c60b(0x1e2)),$(_0x54c60b(0x222))[_0x54c60b(0x1ca)](_0x2a2e09);}}function _0xedea29(){var _0xc28a77=_0x283a7a;$('td#BNBBINANCE')['html']('<div\x20class=\x27spinner-border\x20spinner-border-sm\x27\x20role=\x27status\x27>\x20<span\x20class=\x27sr-only\x27\x20>Loading</span></div>'),$('td#BNBBSC')[_0xc28a77(0x20a)](_0xc28a77(0x243)),$(_0xc28a77(0x1f5))[_0xc28a77(0x20a)](_0xc28a77(0x238)),$('td#ETHERC')[_0xc28a77(0x20a)](_0xc28a77(0x238)),$(_0xc28a77(0x22b))['html'](_0xc28a77(0x238)),$('td#USDTBSC')[_0xc28a77(0x20a)](_0xc28a77(0x238)),$(_0xc28a77(0x1ee))[_0xc28a77(0x20a)](_0xc28a77(0x238)),$(_0xc28a77(0x1a4))[_0xc28a77(0x20a)](_0xc28a77(0x238)),$('th#TOTALBINANCE')[_0xc28a77(0x20a)](_0xc28a77(0x1f1)),$(_0xc28a77(0x18e))[_0xc28a77(0x20a)]('...'),$(_0xc28a77(0x186))[_0xc28a77(0x20a)](_0xc28a77(0x1f1)),$(_0xc28a77(0x18b))[_0xc28a77(0x23a)](_0xc28a77(0x1f1)),$('#PNLALL')['text'](_0xc28a77(0x1f1));}function _0x15f3f5(_0x528c86){var _0x473458=_0x283a7a;const _0x5a945f=Swal[_0x473458(0x1ac)]({'toast':!![],'position':_0x473458(0x1c6),'showConfirmButton':![],'timer':0x9c4,'didOpen':_0x5d50e9=>{var _0xe5f2ca=_0x473458;_0x5d50e9[_0xe5f2ca(0x190)](_0xe5f2ca(0x20d),Swal[_0xe5f2ca(0x18f)]),_0x5d50e9['addEventListener'](_0xe5f2ca(0x22c),Swal[_0xe5f2ca(0x1dc)]);}});_0x5a945f[_0x473458(0x1b6)]({'title':_0x528c86});}var _0x287065=localStorage['getItem'](_0x283a7a(0x1f6));_0x287065?(_0x34621a=JSON[_0x283a7a(0x1c8)](localStorage[_0x283a7a(0x1c1)]('historyModal')),_0x418165()):($(_0x283a7a(0x1ba))[_0x283a7a(0x212)](_0x283a7a(0x1f4),!![]),$(_0x283a7a(0x1d8))['prop'](_0x283a7a(0x1f4),!![]),$(_0x283a7a(0x1f7))[_0x283a7a(0x212)](_0x283a7a(0x1f4),!![]));});
+  </script>
+</body>
+
+</html>
