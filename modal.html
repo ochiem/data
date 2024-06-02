@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MODAL v.01</title>
-    <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/current-assets-3716445-3104684.png" type="image/x-icon">
+    <title>MODAL</title>
     <script src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js
 "></script>
@@ -47,294 +46,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
         margin-top: 30px;
         max-width: 1250px;
       }
-
     </style>
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      var ratePrice = {
-        usdt: 1,
-        idr: 0,
-        btc: 0,
-        eth: 0,
-        bnb: 0,
-        random: 0,
-      };
-
-      var last = "";
-
-      function rateKalkulator() {
-        $.getJSON(
-          "https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
-        )
-          .done(function (response) {
-            response.forEach((res) => {
-              switch (res.symbol) {
-                case "BTCUSDT":
-                  ratePrice["btc"] = res.price;
-                  break;
-                case "ETHUSDT":
-                  ratePrice["eth"] = res.price;
-                  break;
-                case "BNBUSDT":
-                  ratePrice["bnb"] = res.price;
-                  break;
-                case "USDTBIDR":
-                  ratePrice["idr"] = res.price;
-                  break;
-              }
-            });
-          })
-          .fail(function (error) {
-            console.log(error);
-          });
-        last ? convertCurrency(last) : null;
-      }
-
-      rateKalkulator();
-
-      function getRandom() {
-        var symbolRandom = $("#symbol").val();
-        console.log(symbolRandom.toUpperCase());
-        if (symbolRandom) {
-          $.getJSON(
-            "https://www.binance.me/api/v3/ticker/price?symbol=" +
-              symbolRandom.toUpperCase() +
-              "USDT"
-          )
-            .done(function (response) {
-              console.log(response);
-
-              ratePrice["random"] = response.price;
-
-              var usdt = 1 * ratePrice["random"];
-              var idr = usdt * ratePrice["idr"];
-              var btc = usdt / ratePrice["btc"];
-              var eth = usdt / ratePrice["eth"];
-              var bnb = usdt / ratePrice["bnb"];
-              idr = Math.round(idr, 0);
-
-              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-              document.getElementById("idr" + "price").value =
-                idr.toLocaleString("id-ID", {
-                  currency: "IDR",
-                });
-              document.getElementById("btc" + "price").value = btc.toFixed(10);
-              document.getElementById("eth" + "price").value = eth.toFixed(9);
-              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-
-              document.getElementById("random" + "price").value = 1;
-
-              $("#randget").text("Update");
-              $("#symbol").prop("disabled", true);
-              $("#randreset").prop("hidden", false);
-
-              $("#randomprice").prop("disabled", false);
-            })
-            .fail(function (error) {
-              console.log(error);
-              $("#randomprice").prop("disabled", true);
-              document.getElementById("random" + "price").value = 0;
-              const Toast = Swal.mixin({
-                toast: true,
-                position: "top-end",
-                showConfirmButton: false,
-                timer: 2500,
-                didOpen: (toast) => {
-                  toast.addEventListener("mouseenter", Swal.stopTimer);
-                  toast.addEventListener("mouseleave", Swal.resumeTimer);
-                },
-              });
-
-              Toast.fire({
-                icon: "error",
-                title: "Periksa Symbol!!",
-              });
-            });
-        } else {
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 2500,
-            didOpen: (toast) => {
-              toast.addEventListener("mouseenter", Swal.stopTimer);
-              toast.addEventListener("mouseleave", Swal.resumeTimer);
-            },
-          });
-
-          Toast.fire({
-            icon: "error",
-            title: "Symbol tidak boleh kosong",
-          });
-        }
-      }
-
-      function resetRandom() {
-        $("#randget").text("Get");
-        $("#symbol").prop("disabled", false);
-        $("#randreset").prop("hidden", true);
-        $("#randomprice").prop("disabled", true);
-
-        ratePrice["random"] = 0;
-
-        document.getElementById("usdt" + "price").value = 0;
-        document.getElementById("idr" + "price").value = 0;
-        document.getElementById("btc" + "price").value = 0;
-        document.getElementById("eth" + "price").value = 0;
-        document.getElementById("bnb" + "price").value = 0;
-        document.getElementById("random" + "price").value = 0;
-        document.getElementById("symbol").value = "";
-      }
-
-      function convertCurrency(base) {
-        const baseValue = parseFloat(
-          document.getElementById(base + "price").value
-        );
-
-        if (!isNaN(baseValue)) {
-          switch (base) {
-            case "usdt":
-              last = base;
-              var idr = (baseValue / ratePrice[base]) * ratePrice["idr"];
-              var btc = baseValue / ratePrice["btc"];
-              var eth = baseValue / ratePrice["eth"];
-              var bnb = baseValue / ratePrice["bnb"];
-              var random = baseValue / ratePrice["random"];
-              idr = Math.round(idr, 0);
-
-              document.getElementById("idr" + "price").value =
-                idr.toLocaleString("id-ID", {
-                  currency: "IDR",
-                });
-              document.getElementById("btc" + "price").value = btc.toFixed(10);
-              document.getElementById("eth" + "price").value = eth.toFixed(9);
-              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-              ratePrice["random"]
-                ? (document.getElementById("random" + "price").value =
-                    random.toFixed(5))
-                : null;
-
-              break;
-
-            case "idr":
-              last = base;
-
-              var usdt = (baseValue / ratePrice[base]) * ratePrice["usdt"];
-              var btc = usdt / ratePrice["btc"];
-              var eth = usdt / ratePrice["eth"];
-              var bnb = usdt / ratePrice["bnb"];
-              var random = usdt / ratePrice["random"];
-
-              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-              document.getElementById("btc" + "price").value = btc.toFixed(10);
-              document.getElementById("eth" + "price").value = eth.toFixed(9);
-              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-              ratePrice["random"]
-                ? (document.getElementById("random" + "price").value =
-                    random.toFixed(4))
-                : null;
-              break;
-
-            case "btc":
-              last = base;
-
-              var usdt = baseValue * ratePrice[base];
-              var idr = usdt * ratePrice["idr"];
-              var eth = usdt / ratePrice["eth"];
-              var bnb = usdt / ratePrice["bnb"];
-              var random = usdt / ratePrice["random"];
-              idr = Math.round(idr, 0);
-
-              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-              document.getElementById("idr" + "price").value =
-                idr.toLocaleString("id-ID", {
-                  currency: "IDR",
-                });
-              document.getElementById("eth" + "price").value = eth.toFixed(9);
-              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-              ratePrice["random"]
-                ? (document.getElementById("random" + "price").value =
-                    random.toFixed(4))
-                : null;
-
-              break;
-
-            case "eth":
-              last = base;
-
-              var usdt = baseValue * ratePrice[base];
-              var idr = usdt * ratePrice["idr"];
-              var btc = usdt / ratePrice["btc"];
-              var bnb = usdt / ratePrice["bnb"];
-              var random = usdt / ratePrice["random"];
-              idr = Math.round(idr, 0);
-
-              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-              document.getElementById("idr" + "price").value =
-                idr.toLocaleString("id-ID", {
-                  currency: "IDR",
-                });
-              document.getElementById("btc" + "price").value = btc.toFixed(10);
-              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-              ratePrice["random"]
-                ? (document.getElementById("random" + "price").value =
-                    random.toFixed(4))
-                : null;
-
-              break;
-
-            case "bnb":
-              last = base;
-
-              var usdt = baseValue * ratePrice[base];
-              var idr = usdt * ratePrice["idr"];
-              var btc = usdt / ratePrice["btc"];
-              var eth = usdt / ratePrice["eth"];
-              var random = usdt / ratePrice["random"];
-              idr = Math.round(idr, 0);
-
-              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-              document.getElementById("idr" + "price").value =
-                idr.toLocaleString("id-ID", {
-                  currency: "IDR",
-                });
-              document.getElementById("btc" + "price").value = btc.toFixed(10);
-              document.getElementById("eth" + "price").value = eth.toFixed(9);
-              ratePrice["random"]
-                ? (document.getElementById("random" + "price").value =
-                    random.toFixed(4))
-                : null;
-
-              break;
-
-            default:
-              var usdt = baseValue * ratePrice["random"];
-              var idr = usdt * ratePrice["idr"];
-              var btc = usdt / ratePrice["btc"];
-              var eth = usdt / ratePrice["eth"];
-              var bnb = usdt / ratePrice["bnb"];
-              idr = Math.round(idr, 0);
-
-              document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-              document.getElementById("idr" + "price").value =
-                idr.toLocaleString("id-ID", {
-                  currency: "IDR",
-                });
-              document.getElementById("btc" + "price").value = btc.toFixed(10);
-              document.getElementById("eth" + "price").value = eth.toFixed(9);
-              document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-          }
-        }
-      }
-    </script>
   </head>
   <body>
     <div class="container">
-      <h3 style="text-align: center">APLIKASI MODAL v.01</h3>
+      <h3 style="text-align: center">SETTING DATA ASSET</h3>
       <hr />
       <form>
         <div class="row">
@@ -384,13 +100,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
                 value="1"
                 required
               />
-              <div class="input-group-prepend">
-              <div class="input-group-text">
-                <label class="form-check-label" id="RPMODAL"> </label>
-              </div>
             </div>
-            </div>
-
           </div>
 
           <!-- Kolom Kanan -->
@@ -429,11 +139,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
               SET DATA
             </button>
             <input
-              type="button"
-              id="resetmodal"
-              value="RESET"
-              class="btn btn-danger"
-            />
+            type="button"
+            id="resetmodal"
+            value="RESET"
+            class="btn btn-danger"
+          />
 
             &nbsp;
 
@@ -496,189 +206,20 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
               <span id="PNLALL"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <button
-                type="button"
-                class="btn btn-info"
-                id="kalkulator"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                KALKULATOR
-              </button>
+          <div class="kanan">
+            <input
+            type="button"
+            id="refresh"
+            value="REFRESH"
+            class="btn btn-success"
+          />
+            <input
+              type="button"
+              id="update"
+              value="UPDATE"
+              class="btn btn-primary"
+            />
 
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                        KALKULATOR
-                      </h5>
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="input-group mb-2 input-group-sm">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                              <label class="form-check-label"> USDT </label>
-                            </div>
-                          </div>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="usdtprice"
-                            placeholder="0"
-                            value=""
-                            required
-                            oninput="convertCurrency('usdt')"
-                          />
-                        </div>
-                        <div class="input-group mb-2 input-group-sm">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                              <label class="form-check-label"> IDR </label>
-                            </div>
-                          </div>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="idrprice"
-                            placeholder="0"
-                            value=""
-                            required
-                            oninput="convertCurrency('idr')"
-                          />
-                        </div>
-                        <div class="input-group mb-2 input-group-sm">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                              <label class="form-check-label"> BTC </label>
-                            </div>
-                          </div>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="btcprice"
-                            placeholder="0"
-                            value=""
-                            required
-                            oninput="convertCurrency('btc')"
-                          />
-                        </div>
-                        <div class="input-group mb-2 input-group-sm">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                              <label class="form-check-label"> ETH </label>
-                            </div>
-                          </div>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="ethprice"
-                            placeholder="0"
-                            value=""
-                            required
-                            oninput="convertCurrency('eth')"
-                          />
-                        </div>
-                        <div class="input-group mb-2 input-group-sm">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                              <label class="form-check-label"> BNB </label>
-                            </div>
-                          </div>
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="bnbprice"
-                            placeholder="0"
-                            value=""
-                            required
-                            oninput="convertCurrency('bnb')"
-                          />
-                        </div>
-                        <div class="input-group mb-2 input-group-sm">
-                          <input
-                            type="text"
-                            class="form-control col-3 text-uppercase"
-                            id="symbol"
-                            placeholder="NAMA KOIN"
-                            value=""
-                            required
-                          />
-                          <input
-                            type="number"
-                            class="form-control col-7"
-                            id="randomprice"
-                            placeholder="0"
-                            value=""
-                            oninput="convertCurrency('random')"
-                            required
-                            disabled
-                          />
-                          <button
-                            type="button"
-                            class="btn btn-primary btn-sm col-2"
-                            onclick="getRandom()"
-                            id="randget"
-                          >
-                            Get
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-danger btn-sm"
-                            onclick="resetRandom()"
-                            id="randreset"
-                            hidden
-                          >
-                            X
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer m-auto">
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        onclick="rateKalkulator()"
-                      >
-                        Update Price
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col text-right">
-              <input
-                type="button"
-                id="refresh"
-                value="REFRESH"
-                class="btn btn-success"
-              />
-              <input
-                type="button"
-                id="update"
-                value="UPDATE"
-                class="btn btn-primary"
-              />
-            </div>
           </div>
         </div>
 
@@ -700,29 +241,28 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
             </thead>
             <tbody></tbody>
           </table>
+
+
         </div>
       </div>
       <hr />
     </div>
     <!-- Tambahkan link ke file JavaScript jQuery di sini -->
-
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
       integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
     <script>
       $(document).ready(async function () {
-        var Modalidr = await USDTIDR(localStorage.getItem('MODALAWAL'));        
-        $("#RPMODAL").text("RP. "+ Modalidr);
-
         //  updatehistory();
+
         $("#USDTBSC").text(localStorage.getItem("USDTBSC"));
         $("#BNBBSC").text(localStorage.getItem("BNBBSC"));
 
@@ -851,7 +391,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
 
           // Cek apakah pengguna mengklik "OK" atau "Batal"
           if (konfirmasi) {
-            // localStorage.removeItem("historyData");
+           
+           // localStorage.removeItem("historyData");
             var currentDate = new Date();
 
             $("#MODALAWAL").val(localStorage.getItem("TOTALALL"));
@@ -883,6 +424,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
             await UPDATEPNL("refresh");
             newAlert("BERHASIL MERESET MODAL!!");
             updatehistory("RESET");
+            
           }
         });
 
@@ -890,7 +432,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
           if (aksi == "update") {
             var currentDate = new Date();
 
-            // $("#MODALAWAL").val(localStorage.getItem("TOTALALL"));
+           // $("#MODALAWAL").val(localStorage.getItem("TOTALALL"));
             var MODALAWAL = $("#MODALAWAL").val();
             localStorage.setItem("MODALAWAL", MODALAWAL);
             var currentDate = new Date();
@@ -969,9 +511,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
               );
 
               var TOTALERC = parseFloat(eth) + parseFloat(usdterc);
-
+              
+              
               localStorage.setItem("TOTALERC", parseFloat(TOTALERC).toFixed(2));
               $("#TOTALERC").text(parseFloat(TOTALERC).toFixed(2));
+             
 
               var TOTALALL =
                 parseFloat(localStorage.getItem("TOTALBINANCE")) +
@@ -1047,7 +591,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
           var apiSecret = $("#secretkey").val();
 
           // Binance API URL
-          var apiUrl = "https://api.binance.me/api/v3/account";
+          var apiUrl =
+            "https://server12.yitijex843.workers.dev/?https://api.binance.me/api/v3/account";
 
           // Create a timestamp for the request
           var timestamp = new Date().getTime();
@@ -1159,7 +704,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
 
         async function GetBNBBSC(token, address, desimal, tokenset) {
           return new Promise((resolve, reject) => {
-            $.getJSON("https://api.binance.me/api/v3/ticker/24hr", {
+            $.getJSON("https://server12.yitijex843.workers.dev/?https://api.binance.me/api/v3/ticker/24hr", {
               symbol: "BNBUSDT",
             })
               .done(function (response) {
@@ -1226,7 +771,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
 
         async function GetETHERC(token, address, desimal, tokenset) {
           return new Promise((resolve, reject) => {
-            $.getJSON("https://api.binance.me/api/v3/ticker/24hr", {
+            $.getJSON("https://server12.yitijex843.workers.dev/?https://api.binance.me/api/v3/ticker/24hr", {
               symbol: "ETHUSDT",
             })
               .done(function (response) {
@@ -1320,9 +865,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
             }
             var newRow = $("<tr>");
             newRow.append("<td>" + row.lastupdate + "</td>");
-            newRow.append(
-              "<td>" + parseFloat(row.firstmodal).toFixed(2) + "</td>"
-            );
+            newRow.append("<td>" +parseFloat(row.firstmodal).toFixed(2) + "</td>");
             newRow.append("<td>" + row.lastmodal + "</td>");
             newRow.append("<td>" + row.lastpnl + "</td>");
             newRow.append("<td>" + row.status + "</td>");
@@ -1359,7 +902,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
           $("#PNLALL").text("...");
         }
 
-        function newAlert(text) {
+        function newAlert(text){
           const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
