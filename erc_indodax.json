@@ -1310,13 +1310,7 @@
             "status": true
         },
        
-        {
-            "symbol": "mcidr",
-            "desimal": 18,
-            "sc": "0x949d48eca67b17269629c7194f4b727d4ef9e5d6",
-            "wd": 0,
-            "status": true
-        },
+     
         {
             "symbol": "mkridr",
             "desimal": 18,
