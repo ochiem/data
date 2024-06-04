@@ -608,6 +608,12 @@
             "sc": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
             "wd": 0,
             "status": true
+        }, {
+            "symbol": "arkmidr",
+            "desimal": 18,
+            "sc": "0x6E2a43be0B1d33b726f0CA3b8de60b3482b8b050",
+            "wd": 0,
+            "status": true
         },
         {
             "symbol": "abyssidr",
@@ -840,6 +846,20 @@
             "status": true
         },
         {
+            "symbol": "ctcidr",
+            "desimal": 18,
+            "sc": "0xa3EE21C306A700E682AbCdfe9BaA6A08F3820419",
+            "wd": 0,
+            "status": true
+        },
+        {
+            "symbol": "duskidr",
+            "desimal": 18,
+            "sc": "0x940a2dB1B7008B6C776d4faaCa729d6d4A4AA551",
+            "wd": 0,
+            "status": true
+        },
+        {
             "symbol": "celidr",
             "desimal": 4,
             "sc": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
@@ -1068,6 +1088,12 @@
             "sc": "0x720cd16b011b987da3518fbf38c3071d4f0d1495",
             "wd": 0,
             "status": true
+        },{
+            "symbol": "fetidr",
+            "desimal": 18,
+            "sc": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+            "wd": 0,
+            "status": true
         },
         {
             "symbol": "ftmidr",
@@ -1101,6 +1127,13 @@
             "symbol": "glmidr",
             "desimal": 18,
             "sc": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
+            "wd": 0,
+            "status": true
+        },
+        {
+            "symbol": "gtcidr",
+            "desimal": 18,
+            "sc": "0xDe30da39c46104798bB5aA3fe8B9e0e1F348163F",
             "wd": 0,
             "status": true
         },
@@ -1143,6 +1176,13 @@
             "symbol": "hotidr",
             "desimal": 18,
             "sc": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
+            "wd": 0,
+            "status": true
+        },
+        {
+            "symbol": "jasmyidr",
+            "desimal": 18,
+            "sc": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC",
             "wd": 0,
             "status": true
         },
@@ -1431,6 +1471,12 @@
             "symbol": "polyidr",
             "desimal": 18,
             "sc": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "polsidr",
+            "desimal": 18,
+            "sc": "0x83e6f1e41cdd28eaceb20cb649155049fac3d5aa",
             "wd": 0,
             "status": true
         },
