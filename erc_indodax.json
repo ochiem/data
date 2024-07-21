@@ -630,13 +630,7 @@
             "status": true
         },
        
-        {
-            "symbol": "agixidr",
-            "desimal": 8,
-            "sc": "0x5b7533812759b45c2b44c19e320ba2cd2681b542",
-            "wd": 0,
-            "status": true
-        },{
+       {
             "symbol": "agiidr",
             "desimal": 18,
             "sc": "0x7dA2641000Cbb407C329310C461b2cB9c70C3046",
