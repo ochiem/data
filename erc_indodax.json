@@ -1226,13 +1226,6 @@
             "status": true
         },
         {
-            "symbol": "lyfelidr",
-            "desimal": 18,
-            "sc": "0xd87de4ccef2c2fe651bc4d130cb1a365248f21fa",
-            "wd": 0,
-            "status": true
-        },
-        {
             "symbol": "manaidr",
             "desimal": 18,
             "sc": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
