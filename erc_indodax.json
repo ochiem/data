@@ -1764,6 +1764,32 @@
             "wd": 0,
             "status": true
         }
+    ,{
+            "symbol": "metisidr",
+            "desimal": 18,
+            "sc": "0x9E32b13ce7f2E80A01932B42553652E053D6ed8e",
+            "wd": 0,
+            "status": true
+        }
+    ,{
+            "symbol": "phaidr",
+            "desimal": 18,
+            "sc": "0x6c5bA91642F10282b576d91922Ae6448C9d52f4E",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "vanryidr",
+            "desimal": 18,
+            "sc": "0x8DE5B80a0C1B02Fe4976851D030B36122dbb8624",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "turboidr",
+            "desimal": 18,
+            "sc": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+            "wd": 0,
+            "status": true
+        }
     ]
 
 }
