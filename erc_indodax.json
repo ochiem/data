@@ -813,13 +813,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "btridr",
-            "desimal": 18,
-            "sc": "0x5ea82c27efc7634f1c5ad20a3561c453433a2f3a",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "c98idr",
             "desimal": 18,
@@ -876,13 +870,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "cindidr",
-            "desimal": 18,
-            "sc": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "comboidr",
             "desimal": 18,
@@ -904,13 +892,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "creidr",
-            "desimal": 18,
-            "sc": "0x115ec79f1de567ec68b7ae7eda501b406626478e",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "croidr",
             "desimal": 8,
@@ -939,20 +921,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "dadidr",
-            "desimal": 9,
-            "sc": "0x5b322514ff727253292637d9054301600c2c81e8",
-            "wd": 0,
-            "status": true
-        },
-        {
-            "symbol": "daiidr",
-            "desimal": 18,
-            "sc": "0x6b175474e89094c44da98b954eedeac495271d0f",
-            "wd": 0,
-            "status": true
-        },
+        
         {
             "symbol": "daoidr",
             "desimal": 18,
@@ -967,13 +936,7 @@
             "status": true,
             "wd": 1e-8
         },
-        {
-            "symbol": "daxidr",
-            "desimal": 18,
-            "sc": "0x0b4bdc478791897274652dc15ef5c135cae61e60",
-            "wd": 0,
-            "status": true
-        },{
+       {
             "symbol": "defiidr",
             "desimal": 18,
             "sc": "0x6B0FaCA7bA905a86F221CEb5CA404f605e5b3131",
@@ -1120,20 +1083,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "gscidr",
-            "desimal": 18,
-            "sc": "0x228ba514309ffdf03a81a205a6d040e429d6e80c",
-            "wd": 0,
-            "status": true
-        },
-        {
-            "symbol": "hartidr",
-            "desimal": 18,
-            "sc": "0x52928c95c4c7e934e0efcfab08853a0e4558861d",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "hedgidr",
             "desimal": 18,
@@ -1339,13 +1289,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "oceanidr",
-            "desimal": 18,
-            "sc": "0x967da4048cd07ab37855c090aaf366e4ce1b9f48",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "octoidr",
             "desimal": 18,
@@ -1661,13 +1605,7 @@
             "status": true,
             "wd": 1e-8
         },
-        {
-            "symbol": "tokoidr",
-            "desimal": 18,
-            "sc": "0xa0f0546eb5e3ee7e8cfc5da12e5949f3ae622675",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "umaidr",
             "desimal": 18,
