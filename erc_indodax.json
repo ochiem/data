@@ -799,13 +799,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "bntidr",
-            "desimal": 18,
-            "sc": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-            "wd": 0,
-            "status": true
-        },
+
         {
             "symbol": "botxidr",
             "desimal": 18,
@@ -1352,13 +1346,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "oxtidr",
-            "desimal": 18,
-            "sc": "0x4575f41308ec1483f3d399aa9a2826d74da13deb",
-            "wd": 0,
-            "status": true
-        },
+     
         {
             "symbol": "pandoidr",
             "desimal": 18,
@@ -1484,13 +1472,6 @@
             "sc": "0xb753428af26e81097e7fd17f40c88aaa3e04902c",
             "wd": 0,
             "status": true
-        },
-        {
-            "symbol": "stptidr",
-            "sc": "0xde7d85157d9714eadf595045cc12ca4a5f3e2adb",
-            "desimal": 18,
-            "status": true,
-            "wd": 1e-8
         },
         {
             "symbol": "sgtidr",
