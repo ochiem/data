@@ -1267,6 +1267,12 @@
             "sc": "0xf433089366899d83a9f26a773d59ec7ecf30355e",
             "wd": 0,
             "status": true
+        },{
+            "symbol": "mocaidr",
+            "desimal": 18,
+            "sc": "0xF944e35f95E819E752f3cCB5Faf40957d311e8c5",
+            "wd": 0,
+            "status": true
         },
         {
             "symbol": "musicidr",
