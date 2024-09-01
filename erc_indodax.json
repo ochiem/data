@@ -637,13 +637,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "agldidr",
-            "desimal": 18,
-            "sc": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
-            "wd": 0,
-            "status": true
-        },
+      
         {
             "symbol": "aiozidr",
             "desimal": 18,
@@ -707,13 +701,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "arpaidr",
-            "desimal": 18,
-            "sc": "0xba50933c268f567bdc86e1ac131be072c6b0b71a",
-            "wd": 0,
-            "status": true
-        },
+      
         
         {
             "symbol": "ataidr",
@@ -843,13 +831,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "chridr",
-            "desimal": 6,
-            "sc": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "cyberidr",
             "desimal": 18,
@@ -1311,13 +1293,7 @@
             "wd": 0,
             "status": true
         },
-        {
-            "symbol": "onitidr",
-            "desimal": 18,
-            "sc": "0x410e731c2970Dce3AdD351064AcF5cE9E33FDBf0",
-            "wd": 0,
-            "status": true
-        },
+       
         {
             "symbol": "omidr",
             "desimal": 18,
@@ -1693,6 +1669,102 @@
             "symbol": "turboidr",
             "desimal": 18,
             "sc": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "l3idr",
+            "desimal": 18,
+            "sc": "0x88909D489678dD17aA6D9609F89B0419Bf78FD9a",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "mogidr",
+            "desimal": 18,
+            "sc": "0xaaeE1A9723aaDB7afA2810263653A34bA2C21C7a",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "skyaidr",
+            "desimal": 18,
+            "sc": "0x623cD3a3EdF080057892aaF8D773Bbb7A5C9b6e9",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "skyaidr",
+            "desimal": 18,
+            "sc": "0x623cD3a3EdF080057892aaF8D773Bbb7A5C9b6e9",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "game2idr",
+            "desimal": 18,
+            "sc": "0x825459139C897D769339f295E962396C4F9E4A4D",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "taikoidr",
+            "desimal": 18,
+            "sc": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "renzoidr",
+            "desimal": 18,
+            "sc": "0x3B50805453023a91a8bf641e279401a0b23FA6F9",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "beamidr",
+            "desimal": 18,
+            "sc": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "taikoidr",
+            "desimal": 18,
+            "sc": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "strkidr",
+            "desimal": 18,
+            "sc": "0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "enaidr",
+            "desimal": 18,
+            "sc": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "pendleidr",
+            "desimal": 18,
+            "sc": "0x808507121b80c02388fad14726482e061b8da827",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "omniidr",
+            "desimal": 18,
+            "sc": "0x36E66fbBce51e4cD5bd3C62B637Eb411b18949D4",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "lgoldidr",
+            "desimal": 18,
+            "sc": "0x27778E14Ce36d3B85e1efFeB43816a17bBB7088A",
+            "wd": 0,
+            "status": true
+        }{
+            "symbol": "fancidr",
+            "desimal": 18,
+            "sc": "0xbB126042235E6bD38B17744cb31a8bF4A206c045",
+            "wd": 0,
+            "status": true
+        },{
+            "symbol": "aevoidr",
+            "desimal": 18,
+            "sc": "0xB528edBef013aff855ac3c50b381f253aF13b997",
             "wd": 0,
             "status": true
         }
