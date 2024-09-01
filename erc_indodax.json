@@ -1690,12 +1690,6 @@
             "wd": 0,
             "status": true
         },{
-            "symbol": "skyaidr",
-            "desimal": 18,
-            "sc": "0x623cD3a3EdF080057892aaF8D773Bbb7A5C9b6e9",
-            "wd": 0,
-            "status": true
-        }{
             "symbol": "taikoidr",
             "desimal": 18,
             "sc": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
@@ -1711,12 +1705,6 @@
             "symbol": "beamidr",
             "desimal": 18,
             "sc": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
-            "wd": 0,
-            "status": true
-        },{
-            "symbol": "taikoidr",
-            "desimal": 18,
-            "sc": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
             "wd": 0,
             "status": true
         },{
