@@ -505,9 +505,7 @@ $(document).ready(function () {
         var interval = GPX_savedData.jedaTimeGroup; 
         var intervalKoin = GPX_savedData.jedaKoin; 
         var autorun = false;
-        var user = localStorage.getItem("GPX_user");
-
-        sendStatusTELE(user,'ONLINE');
+        var user = localStorage.getItem("GPX_user");       
 
         cekDataAwal();
         setNullInfo();
@@ -1054,7 +1052,7 @@ $(document).ready(function () {
            
         // menjalankan scanning
         $("#startSCAN").on("click", function() {
-
+            sendStatusTELE(user,'ONLINE');
             $('tbody tr').remove();
             $('input[type="checkbox"]').prop('disabled', true);
             $('input[type="radio"]').prop('disabled', true);
