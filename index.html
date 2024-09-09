@@ -793,7 +793,7 @@
                 }
 
                 // Check if any validation fails, hide the button
-                if (!isDataMasterValid || !isLPODOSValid || !isServerCorsValid || !isDataSettingValid) {
+                if (!isDataMasterValid || !isLPODOSValid || !isServerCorsValid || !isDataSettingValid ) {
                     $("button#startSCAN.uk-button.uk-button-primary").hide();
                     $("#info").hide();
                 } else {
@@ -2772,7 +2772,7 @@
 
                 var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
                     "\n <b> MARKET : " +Nama_Chain.toUpperCase()+' BINANCE</b>'+
-                    "\n <b> ID UNIX : </b>" + data.id +
+                  //  "\n <b> ID UNIX : </b>" + data.id +
                     "\n <b> PROVIDER : </b> " + data.name +
                     "\n <b> IP : </b>" + data.ip+
                     "\n ----------------------------------------------";
