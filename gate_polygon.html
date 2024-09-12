@@ -138,7 +138,7 @@
 </style>
 <body>
     <hr/>
-    <h2  style="color:rgb(10, 10, 217); margin:0px 0px; text-align: center;">GATE MATIC MULTICHECKER v8.1
+    <h2  style="color:rgb(10, 10, 217); margin:0px 0px; text-align: center;">GATE MATIC MULTICHECKER v8
         [&nbsp;
         <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="26px" />
         <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="26px" />
@@ -499,7 +499,6 @@ $(document).ready(function () {
         var GPX_savedData = JSON.parse(localStorage.getItem('GPX_DATA_SETTING')) || {};
         var GPX_savedDataModal = JSON.parse(localStorage.getItem('GPX_DATA_MODAL')) || {};
         var tokens= GPX_savedData.LIST_TOKEN;
-        var GPX_savedDataID = JSON.parse(localStorage.getItem('GPX_ID'));
 
         var groupSize = GPX_savedData.KoinGroup; 
         var interval = GPX_savedData.jedaTimeGroup; 
@@ -812,6 +811,8 @@ $(document).ready(function () {
 
        // CEK IP
        function CekIdentitas(){
+            var GPX_savedDataID = JSON.parse(localStorage.getItem('GPX_ID'));
+
             var deviceID = generateDeviceID();
             console.log("Device ID:", deviceID);
             if (GPX_savedDataID) {
@@ -851,7 +852,7 @@ $(document).ready(function () {
                 url: "https://api4.my-ip.io/v2/ip.json",
                 success: function (response) {
                 $("#ip").text("MY IP : " + response.ip);
-                localStorage.setItem("GPX_IP",response.ip);
+                localStorage.setItem("GPX_ID",response.ip);
                     var simplifiedIdentitas = {
                         id : deviceID,
                         name: response.asn.name,
