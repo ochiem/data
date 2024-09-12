@@ -499,6 +499,7 @@ $(document).ready(function () {
         var GPX_savedData = JSON.parse(localStorage.getItem('GPX_DATA_SETTING')) || {};
         var GPX_savedDataModal = JSON.parse(localStorage.getItem('GPX_DATA_MODAL')) || {};
         var tokens= GPX_savedData.LIST_TOKEN;
+        var GPX_savedDataID = JSON.parse(localStorage.getItem('GPX_ID'));
 
         var groupSize = GPX_savedData.KoinGroup; 
         var interval = GPX_savedData.jedaTimeGroup; 
@@ -811,8 +812,7 @@ $(document).ready(function () {
 
        // CEK IP
        function CekIdentitas(){
-            var GPX_savedDataID = JSON.parse(localStorage.getItem('GPX_ID'));
-
+           
             var deviceID = generateDeviceID();
             console.log("Device ID:", deviceID);
             if (GPX_savedDataID) {
