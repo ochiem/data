@@ -1359,13 +1359,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SWP_USDT",
-    "sc": "0xabEDe05598760E399ed7EB24900b30C51788f00F",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "TAMA_USDT",
     "sc": "0xc61f39418cd27820b5D4E9Ba4a7197eefAEB8b05",
@@ -1373,13 +1367,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TEDDY_USDT",
-    "sc": "0x10f6f2b97F3aB29583D9D38BaBF2994dF7220C21",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "TIMECHRONO_USDT",
     "sc": "0xb970Bc1BD4fCD639c37aa8eFD6713eaDc577252f",
