@@ -776,13 +776,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DES_USDT",
-    "sc": "0xa062fc09cA6bdeb2f6E3b77E1d4e09C42C964742",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "DEUS_USDT",
     "sc": "0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44",
