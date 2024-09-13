@@ -784,13 +784,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DEVT_USDT",
-    "sc": "0x17D9dd3F1f1E2E5F723edd26Ebc14d042A4125b0",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "DG_USDT",
     "sc": "0xef938b6da8576a896f6e0321ef80996f4890f9c4",
@@ -1522,7 +1516,7 @@
   {
     "symbol": "WSDM_USDT",
     "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
-    "desimal": 18,
+    "desimal": 6,
     "wd": 0,
     "status": true
   },
