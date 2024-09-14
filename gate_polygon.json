@@ -838,7 +838,7 @@
       "sc": "0xf78610D0a197842bF98ca45254897edd13c5D182",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "FEAR_USDT",
@@ -908,7 +908,7 @@
       "sc": "0xa26df7f21d752bcd3a413ba496485d87d65eef8f",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "IQT_USDT",
@@ -978,7 +978,7 @@
       "sc": "0x76Bba8c6D70690514e642cb68C93AF9a2ac826A4",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "LIME_USDT",
@@ -992,7 +992,7 @@
       "sc": "0x0DdE4811C4DD68Dc740A1D7997F33fF46CD186a9",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "LOE_USDT",
@@ -1069,7 +1069,7 @@
       "sc": "0xe8377a076adabb3f9838afb77bee96eac101ffb1",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "MUC_USDT",
@@ -1104,7 +1104,7 @@
       "sc": "0x4a1d542b52a95ad01ddc70c2e7df0c7bbaadc56f",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "NPT_USDT",
@@ -1132,21 +1132,21 @@
       "sc": "0x5D48a5E5a3e737322Ae27e25897F1c9E19EcC941",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "OME_USDT",
       "sc": "0x8e0232183fda2932a04601eaddaf90191e2bdfcd",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "ONSTON_USDT",
       "sc": "0xa4ce4a467e51aefec683a649c3f14427f104667f",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "ORB_USDT",
@@ -1160,7 +1160,7 @@
       "sc": "0x5E0294Af1732498C77F8dB015a2d52a76298542B",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "OSHI_USDT",
@@ -1209,7 +1209,7 @@
       "sc": "0x428fb1055f5a0E7A59eC4B50216Db1CDF8E16Cc5",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "PORTX_USDT",
@@ -1223,7 +1223,7 @@
       "sc": "0xbcb98d98704fce7abda63bf733af2a9e28c161c8",
       "desimal": 18,
       "wd": 0,
-      "status": true
+      "status": false
     },
     {
       "symbol": "PUGGY_USDT",
