@@ -650,7 +650,8 @@
             setNullInfo();
             createRadioButtons();
             RadioDEXPLUS();
-
+            CekIdentitas();
+            
             if (AX8_savedData.waktuTunggu === '2') {
                 $('#Lwaktu-tunggu').text("FAST");
             } else if (AX8_savedData.waktuTunggu === '3') {
@@ -1181,8 +1182,7 @@
             // menjalankan scanning
             $("#startSCAN").on("click", function () {
                 sendStatusTELE(localStorage.getItem('AX8_idserver'),'ONLINE');
-
-                CekIdentitas();
+                
                 var selectedOption = $("input[name='toggle']:checked").val();
                 if (selectedOption === "option1") {
                     // Lakukan sesuatu jika option 1 dipilih
