@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+
+    <link rel="icon" href="https://s1.coincarp.com/logo/2/bitget.png?style=200&v=1691679367" type="image/x-icon">
+
+</head>
+<style>
+     #scanprogress {
+        font-size: 16px;
+        color: #0b0808;
+      }
+      #scanbar {
+        text-align: center;
+        width:100%;
+        height:21px;
+        border:1px solid #000;
+        margin:5px 0px;
+      }
+      #bar {
+        width:100%;
+        background-color:#87f6f6;
+        height:100%;
+      }
+        .binance {
+            text-align: center;
+            background-color: rgb(250 189 36); /* Ganti dengan warna yang Anda inginkan */
+       }
+       img:hover {
+                transform: scale(1.5); /* You can adjust the scale factor as needed */
+            }
+        a{
+            color:black;
+        }
+        a:hover{
+            color:rgb(0, 4, 128);
+        }
+        .ijo {
+        color: black;
+        background-color:rgb(231 255 127);
+      }
+
+      .biru {
+        color: black;
+        background-color:rgb(238 170 231);
+      }
+
+      .merah{
+        color: rgb(250, 249, 249) !important;
+        background-color:#f5a29f!important;
+      }
+      .error{
+        color: #353030;
+        background-color: #f7d7d7!important;
+      }
+      .INCH {
+            text-align: center;
+        background-color: #f0ebdc; /* Ganti dengan warna yang Anda inginkan */
+       }
+       .MATCHA {
+            text-align: center;
+        background-color: #abd2fb; /* Ganti dengan warna yang Anda inginkan */
+       }
+       .ODOS {
+            text-align: center;
+        background-color: rgb(220, 255, 231); /* Ganti dengan warna yang Anda inginkan */
+       }
+        .uk-container {
+            width: 96%;
+            max-width: none;
+        }
+
+        .sticky-header {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+           
+        }
+
+        /* Style untuk sel dalam header */
+        .sticky-header th {    
+            background-color: #87f6f6;
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+            font-size: 13px;
+            height: 20px;
+            vertical-align: middle;
+            margin: 3px 0px; 
+        }
+
+        /* Style untuk isi tabel */
+        .table-content {
+            overflow-y: auto;
+            max-height: 800px; /* Tentukan ketinggian maksimum tabel yang ingin Anda tampilkan */
+        }
+        .uk-table td, .uk-table th {
+            margin: 2px 0px; /* Ubah nilai margin sesuai kebutuhan */
+            padding: 4px 0px; /* Ubah nilai padding sesuai kebutuhan */
+            font-size: 13px;
+            vertical-align: middle;
+        }
+        .uk-table-striped-custom > tbody > tr:nth-child(4n-3),
+        .uk-table-striped-custom > tbody > tr:nth-child(4n-2) {
+            background-color: #f0f0f0; /* Warna striping disesuaikan sesuai keinginan Anda */
+        }
+
+        .custom-thead input[type="number"] {
+            background-color: inherit;
+            padding: 5px;
+            border: none;
+            width: 60px; /* Adjust the width as needed */
+            text-align: center; /* Center the text within the input */
+        }
+
+        /* Style $ symbol next to the input elements */
+        .custom-thead th input[type="number"]::after {
+            content: "$";
+            margin-left: 0px; /* Adjust the margin as needed */
+            color: inherit;
+        }
+
+        /* Optional: Style the $ symbol inside the input for better alignment */
+        .custom-thead th input[type="number"] {
+            padding-right: 0px; /* Adjust the padding as needed */
+            box-sizing: border-box;
+            color: rgb(65, 137, 246);
+        }
+</style>
+<body>
+    <hr/>
+    <h2  style="color:rgb(38, 193, 236); margin:0px 0px; text-align: center;">BITGET - <label id="namachain"></label> :: MULTICHECKER v1
+        [&nbsp;
+        <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="26px" />
+        <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="26px" />
+        <img id="cek_wallet" title="CEK WALLET BINANCE" src="https://cdn-icons-png.flaticon.com/512/3757/3757881.png"  width="26px" />
+        <a href="manajemen_aset.html" target="_blank"> <img title="MANAJEMEN ASET" src="https://cdn-icons-png.flaticon.com/512/4021/4021642.png" width="26px" /></a>
+
+        &nbsp;]
+      </h2>
+    <!-- Modal UIKIT -->
+    <div id="modal-setting" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">:: SETTING DEX CHECKER</h2>
+               
+            </div>
+            <div class="uk-modal-body">
+                <form> 
+                    <!-- Grid UIkit untuk 2 kolom -->
+                    <div class="uk-grid-small" uk-grid>
+                        
+                        <div class="uk-width-1-2">
+                            
+                            <!-- Kolom pertama -->
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <h3 style="text-align: center; margin: 12px 0px; color: #1317e1;">:: SETINGAN PERMODALAN</h3>
+                                <!-- Modal 1INCH -->
+                                <h5 style="margin: 12px 0px;color: #e4322c;">Modal 1INCH</h5>
+
+                                <!-- Modal Kecil -->
+                                <div class="uk-flex uk-flex-middle ">
+                                    <div >
+                                        <label for="mKiriKecil1INCH" class="uk-text-primary">Kiri</label>
+                                        <input type="number" id="mKiriKecil1INCH" class="uk-input" value="0" required>
+                                    </div>
+                                    <div >
+                                    <label for="mKananKecil1INCH" class="uk-text-success">Kanan</label>
+                                    <input type="number" id="mKananKecil1INCH" class="uk-input" value="0" required>
+                                </div>
+                                </div>
+
+                                <h5 style="margin: 12px 0px;color: #e4322c;">Modal KYBERSWAP</h5>
+                                <div class="uk-flex uk-flex-middle ">
+                                <div>
+                                    <label for="mKiriKecilKYBERSWAP" class="uk-text-primary">Kiri</label>
+                                    <input type="number" id="mKiriKecilKYBERSWAP" class="uk-input" value="0" required>
+                                </div>
+                                    <div>
+                                    <label for="mKananKecilKYBERSWAP" class="uk-text-success">Kanan</label>
+                                    <input type="number" id="mKananKecilKYBERSWAP" class="uk-input" value="0" required>
+                                </div>
+                                </div>
+
+                                <h5 style="margin: 12px 0px; color: #e4322c;">Modal ODOS</h5>                                                    
+                            <!-- Modal Kecil -->
+                            <div class="uk-flex uk-flex-middle ">
+                                <div >
+                                    <label for="mKiriKecilODOS" class="uk-text-primary">Kiri</label>
+                                    <input type="number" id="mKiriKecilODOS" class="uk-input" value="0" required>
+                                </div>
+                                <div >
+                                <label for="mKananKecilODOS" class="uk-text-success">Kanan</label>
+                                <input type="number" id="mKananKecilODOS" class="uk-input" value="0" required>
+                            </div>
+                            </div>
+
+                            <h5 style="margin: 12px 0px; color: #e4322c;">Modal PARASWAP</h5>       
+                            <div class="uk-flex uk-flex-middle ">
+                            <div>
+                                <label for="mKiriKecilPARASWAP" class="uk-text-primary">Kiri</label>
+                                <input type="number" id="mKiriKecilPARASWAP" class="uk-input" value="0" required>
+                            </div>
+                                <div>
+                                <label for="mKananKecilPARASWAP" class="uk-text-success">Kanan</label>
+                                <input type="number" id="mKananKecilPARASWAP" class="uk-input" value="0" required>
+                            </div>
+                            </div>
+
+                                <!-- Modal MATCHA -->
+                                <h5 style="margin: 12px 0px; color: #e4322c;">Modal MATCHA</h5>
+                            <!-- Modal Kecil -->
+                                <div class="uk-flex uk-flex-middle ">
+                                <div >
+                                    <label for="mKiriKecilMATCHA" class="uk-text-primary">Kiri </label>
+                                    <input type="number" id="mKiriKecilMATCHA" class="uk-input" value="0" required>
+                                </div>
+                                <div >
+                                    <label for="mKananKecilMATCHA" class="uk-text-success">Kanan </label>
+                                    <input type="number" id="mKananKecilMATCHA" class="uk-input" value="0" required>
+                                </div>
+                            </div>
+                            
+                                <!-- Modal UNIZEN -->
+                                <h5 style="margin: 12px 0px; color: #e4322c;">Modal UNIZEN</h5>
+                            <!-- Modal Kecil -->
+                            <div class="uk-flex uk-flex-middle ">
+                                <div>
+                                    <label for="mKiriKecilUNIZEN" class="uk-text-primary">Kiri </label>
+                                    <input type="number" id="mKiriKecilUNIZEN" class="uk-input" value="0" required>
+                                </div>
+                                <div>
+                                    <label for="mKananKecilUNIZEN" class="uk-text-success">Kanan </label>
+                                    <input type="number" id="mKananKecilUNIZEN" class="uk-input" value="0" required>
+                                </div>
+                            </div>  
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <!-- Kolom kedua -->
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <h3 style="text-align: center; margin: 12px 0px; color: #1317e1;">:: SETINGAN SCANNER</h3>
+                                <label for="pnl">NICK NAME:</label>
+                                <input type="text" id="user"  class="uk-input" required>
+
+                                <div class="uk-flex uk-flex-middle uk-margin ">
+                                    <!-- <div style="display: none;"> -->
+                                       <div>
+                                           <label for="jeda-time-group" class="uk-text-danger">SCAN PERKOIN : </label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4" checked name="koin-group"> 4</label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" name="koin-group"> 5</label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="6"  name="koin-group"> 6</label> 
+                                           &nbsp; |  &nbsp;
+                                        </div>
+                                       <div>
+                                            <label for="SPEEDSCAN" class="uk-text-danger">SPEED SCAN</label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" checkbox name="waktu-tunggu"> NORMAL </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4" name="waktu-tunggu"> MEDIUM </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" name="waktu-tunggu"> FAST </label>
+                                        </div>
+                                   </div>
+                                <div>
+                                </div>
+                                
+
+                                <div class="uk-flex uk-flex-middle uk-margin ">
+                                 <!-- <div style="display: none;"> -->
+                                    <div>
+                                        <label for="jeda-koin" class="uk-text-warning">FILTER PNL</label><br/>
+                                        <input class="uk-input" type="number" id="inFilterPNL" value="0" name="filterpnl" >         
+                                    </div>
+                                    <div>
+                                        <label for="jeda-time-group" class="uk-text-danger">JEDA / GROUP {1500}</label><br/>
+                                        <input class="uk-input" id="jeda-time-group" type="number" value="1500" name="jeda-time-group" >
+                                    </div>
+                                    <div>
+                                        <label for="jeda-koin" class="uk-text-primary">JEDA / KOIN {500}</label><br/>
+                                        <input class="uk-input" type="number" id="jeda-koin" value="500" name="jeda-koin" > 
+                                    </div>
+                                </div>
+
+                                    <div>
+                                        <label for="walletMETA" class="uk-text-danger">WALLET METAMASK</label><br />
+                                        <input class="uk-input" type="text" id="walletMETA" name="walletMETA" >
+                                    </div>
+                                <div><br/>
+                                       
+                                        <div>
+                                        <label for="jeda-koin" class="uk-text-warning">PAIR DEX</label>    
+                                        <br/><label for="sc-address">SC Address:</label>
+                                        <input type="text" id="sc-addresspair" readonly value="" class="uk-input" >
+                                        
+                                        <label for="des-pair">Des Pair:</label>
+                                        <input type="text" readonly id="des-pair" value="" class="uk-input" >
+                    
+                                        <label for="symbo-pair">Symbol Pair:</label>
+                                        <input type="text" readonly id="symbol-pair" value="" class="uk-input" > 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol untuk menutup modal -->
+                    <p class="uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Tutup</button>
+                        <button type="button" id="save-button" class="uk-button uk-button-primary">SIMPAN</button>  
+                    </p>
+             
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-container uk-margin-top">
+        <form>
+        <div class="uk-margin">
+             <div class="uk-grid uk-child-width-1-5@s " uk-grid>
+                <!-- <div class="uk-flex uk-flex-wrap uk-grid-divider"> -->
+        
+                    <div class="uk-width-auto@m">
+                        <div>
+                            <label class="uk-form-label uk-text-secondary"><b>SETUP SCANNER [&nbsp;<label
+                                        class="uk-form-label uk-text-danger"><label
+                                            class="uk-form-label uk-text-success" id="Lwaktu-tunggu"></label> </label> ]
+                                </b> </label> <br />
+                            <label class="uk-form-label uk-text-success">
+                                <input type="checkbox" class="uk-checkbox" id="kiriSWOOP" /> &nbsp;ADD ON <input
+                                    type="checkbox" class="uk-checkbox" checked id="ls" />&nbsp;<label
+                                    class="uk-form-label uk-text-danger">KIRI</label>&nbsp;
+                            </label>
+                            <br />
+                            <label class="uk-form-label uk-text-success">
+                                <input type="checkbox" class="uk-checkbox" id="kananSWOOP" /> &nbsp;ADD ON <input
+                                    type="checkbox" class="uk-checkbox" checked id="rs" />&nbsp;<label
+                                    class="uk-form-label uk-text-danger">KANAN</label>&nbsp;
+                            </label>
+                            <br />
+                            <label class="uk-text uk-text-danger" id="ip">...</label> <br/>  
+                            <label class="uk-form-label uk-text-secondary"><b>SERVER :</b></label>
+                            <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio"
+                                    value="0" checkbox name="urlRadio"> A</label>
+                            <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio"
+                                    value="1" name="urlRadio"> B</label>
+                            <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio"
+                                    value="2" name="urlRadio"> C</label>
+
+                        </div>
+                    </div>
+
+                <div  class="uk-width-auto@m">
+                    <div>
+                        <label class="uk-form-label uk-text-secondary"><b>PILIHAN DEX [ <label
+                                    class="uk-form-label uk-text-danger" id="JmlKoin"></label> KOIN ] </b></label>
+                    </div>
+                <label class="uk-form-label uk-text-primary" > 
+                        <input type="checkbox" class="uk-checkbox cdx_1inch" checked id="D1INCH" /> 1INCH
+                        <input type="checkbox" class="uk-checkbox cdx_matcha" checked id="DMATCHA" /> MATCHA 
+                        <input type="checkbox" class="uk-checkbox cdx_unizen"  id="DUNIZEN" /> UNIZEN <br/>
+
+                        <input type="checkbox" class="uk-checkbox cdx_odos" checked id="DODOS" /> <span id="modalLPODOS">ODOS&nbsp;</span>
+                        <input type="checkbox" class="uk-checkbox cdx_kyberswap"   id="DKYBERSWAP" /> KYBER                        
+                        <input type="checkbox" class="uk-checkbox cdx_paraswap"  id="DPARASWAP" /> PARA
+                    </label>
+                    
+                    <br/><label class="uk-form-label uk-text-danger"><b>FILTER PNL :</b> </label> 
+                    <label class="uk-form-label uk-text-warning" id="LFilterPNL"></label> | 
+                    <label class="uk-form-label uk-text-danger"><b>GWEI :</b> </label> 
+                    <label class="uk-form-label uk-text-warning" id="LGwei"></label>
+                    <br/> <input type="checkbox" class="uk-checkbox" id="Cautorun" /> <span
+                    class="uk-form-label uk-text-danger uk-text-small" id="autorun"> AUTORUN</span>
+                <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;"
+                    id="startSCAN">START</button>
+                <input type="radio" name="toggle" checked value="option2"> A <input type="radio" name="toggle"
+                    value="option1"> Z
+                <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;"
+                    id="refresh">STOP</button>
+                </div>
+
+                <div class="uk-width-auto@m uk-width-expand@m">                        
+                        <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>                
+                        <div class="uk-text uk-text-small uk-text-secondary ">                        
+                            <b>1INCH</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> ]<br/> 
+                            <b>MATCHA</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalmatcha"> </label> ]<br/> 
+                            <b>UNIZEN</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalunizen"> </label> ]<br/> 
+                            <b>ODOS</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos">  </label> ]<br/>
+                            <b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]<br/> 
+                            <b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]<br/> 
+                        </div>
+                </div>
+
+
+            </div>  
+        </div> 
+
+        </form>
+
+        <label class="uk-text uk-text-success" id="hasil"></label> <div id="scanprogress">Wait</div> 
+        <div id="scanbar">
+            <div id="bar" style="text-align: center;"> </div>
+        </div>
+        
+    </div>
+
+    <!-- Modal LIST LP ODOS -->
+    <div uk-modal id="myModalLPODOS">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+        <h5 class="uk-modal-title">LIVE :: DAFTAR LP ODOS</h5>
+        </div>
+        <div class="uk-modal-body">
+        <div id="apiResultODOS">
+            <span id="checkboxLPODOS"></span>
+        </div>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+        <button class="uk-button uk-button-danger uk-modal-close" type="button">TUTUP</button>
+        <button id="simpanlpODOS" class="uk-button uk-button-primary">SIMPAN</button>
+        </div>
+    </div>
+    </div>
+      
+   <!-- TABEL HASIL SCANNER -->
+    <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover">
+        <div class="tableFixHead table-content">
+            <table class="uk-table  uk-sticky uk-table-striped-custom ">
+                <thead class="custom-thead uk-overflow-auto sticky-header">
+            <!-- <div class="table-content">
+                <table class="uk-table uk-sticky uk-table-striped-custom">
+                    <thead class="sticky-header"> -->
+                    <tr>  
+                        <th class="uk-text-danger"> VOL BUY </th>                           
+                        <th  class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKiri1INCHSinyal"></span> 1INCH </th>
+                        <th  class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKiriODOSSinyal"></span> ODOS </th>
+                        <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
+                        <th  class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
+                        <th class="uk-text-secondary dx_matcha"> <span class="uk-badge" id="lKiriMATCHASinyal"></span> MATCHA</th>
+                        <th class="uk-text-secondary dx_unizen"> <span class="uk-badge" id="lKiriUNIZENSinyal"></span> UNIZEN</th>
+                       
+                        <th rowspan="2" style="background-color: #87f6f6; color: rgb(10, 11, 12);">&nbsp;MODAL <br/>& TOKEN&nbsp;</th>
+                        <th  class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
+                        <th  class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
+                        <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
+                        <th  class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKananPARASWAPSinyal"></span> PARA </th>
+                        <th class="uk-text-secondary dx_matcha"> <span class="uk-badge" id="lKananMATCHASinyal"></span> MATCHA </th>
+                        <th class="uk-text-secondary dx_unizen"> <span class="uk-badge" id="lKananUNIZENSinyal"></span> UNIZEN </th>                        
+                        <th class="uk-text-danger"> VOL SELl </th>
+                    </tr>
+                    <tr>       
+                        <th class="uk-text-danger"> PRICE </th>                     
+                        <th  class="uk-text-danger dx_1inch">  <span class="uk-text uk-text-small" id="LmKiriKecil1INCH"></span> $</th>
+                        <th  class="uk-text-danger dx_odos">  <span class="uk-text uk-text-small" id="LmKiriKecilODOS"></span> $</th>
+                        <th  class="uk-text-danger dx_kyberswap">  <span class="uk-text uk-text-small" id="LmKiriKecilKYBERSWAP"></span> $</th>
+                        <th  class="uk-text-danger dx_paraswap">  <span class="uk-text uk-text-small" id="LmKiriKecilPARASWAP"></span> $</th>
+                        <th  class="uk-text-danger dx_matcha">  <span class="uk-text uk-text-small" id="LmKiriKecilMATCHA"></span> $</th>
+                        <th  class="uk-text-danger dx_unizen">  <span class="uk-text uk-text-small" id="LmKiriKecilUNIZEN"></span> $</th>
+
+                        <th  class="uk-text-danger dx_1inch"> <span class="uk-text uk-text-small" id="LmKananKecil1INCH"></span> $</th>
+                        <th  class="uk-text-danger dx_odos">  <span class="uk-text uk-text-small" id="LmKananKecilODOS"></span> $</th>
+                        <th  class="uk-text-danger dx_kyberswap">  <span class="uk-text uk-text-small" id="LmKananKecilKYBERSWAP"></span> $</th>
+                        <th  class="uk-text-danger dx_paraswap"> <span class="uk-text uk-text-small" id="LmKananKecilPARASWAP"></span> $</th>
+                        <th  class="uk-text-danger dx_matcha"> <span class="uk-text uk-text-small" id="LmKananKecilMATCHA"></span> $</th>
+                        <th  class="uk-text-danger dx_unizen"> <span class="uk-text uk-text-small" id="LmKananKecilUNIZEN"></span> $</th>
+                        <th class="uk-text-danger"> PRICE </th>
+                    </tr>
+                </thead>
+                
+                <tbody id="TabelBINANCE" style="text-align: center;"></tbody>
+            </table>
+        </div>
+    </div>    
+
+<script>
+$(document).ready(function () {
+
+        //SETTING GLOBAL CHAIN, LOCALSTORAGE BBTX_
+        const Kode_Chain = 56;
+        const Nama_Chain = "bsc";
+        const URL_Chain = "https://bscscan.com";
+        const DATAJSON ='https://multiscan-ruby.vercel.app/BSC/bitget_bsc.json';
+
+        //SETTING GLOBAL DEX
+        const PAIRDEX= "USDT";
+        const SCPAIRDEX= "0x55d398326f99059fF775485246999027B3197955";
+        const DESPAIRDEX= 18;
+        const BaseFEEDEX = "BNBUSDT";
+
+        //SETTING GLOBAL CEX BITGET
+        const CHAINCEX = "BEP20";        
+        const WALLETCEX ='0x1AB4973a48dc892Cd9971ECE8e01DcC7688f8F23';
+
+        var BBTX_savedSettingData = JSON.parse(localStorage.getItem('BBTX_DATA_SETTING')) || {};
+        var BBTX_savedModal = JSON.parse(localStorage.getItem('BBTX_DATA_MODAL')) || {};
+        var tokens= BBTX_savedSettingData.LIST_TOKEN;
+        var BBTX_savedSettingDataID = JSON.parse(localStorage.getItem('BBTX_ID'));
+
+        if (!BBTX_savedSettingDataID) {
+            CekIdentitas(); 
+           // location.reload();
+        }
+
+        var groupSize = BBTX_savedSettingData.KoinGroup; 
+        var interval = BBTX_savedSettingData.jedaTimeGroup; 
+        var intervalKoin = BBTX_savedSettingData.jedaKoin; 
+        var autorun = false;
+        var user = localStorage.getItem('BBTX_user');
+            if (!user) {
+               user = "Unknown User"; // fallback jika tidak ada nilai
+            } 
+
+        $('title').text(Nama_Chain.toUpperCase());
+        $('#namachain').text(Nama_Chain.toUpperCase());
+
+        cekDataAwal();
+        setNullInfo();
+        createRadioButtons();
+
+        function checkInput() {
+            var allFilled = true;
+            $('#modal-setting form input[type="number"], #modal-setting form input[type="text"]').each(function() {
+            if ($(this).val() === '') {
+                allFilled = false;
+               // console.log('Ada input kosong atau tidak terisi ID:', this.id);
+                return false;
+            }
+            });
+            return allFilled;
+        }
+
+        // Fungsi untuk mengaktifkan tombol save-button
+        function enableSaveButton() {
+            if (checkInput()) {
+            $('#save-button').prop('disabled', false);
+            } else {
+            $('#save-button').prop('disabled', true);
+            }
+        }
+
+        // Jalankan fungsi enableSaveButton pada saat awal
+        enableSaveButton();
+
+        // Jalankan fungsi enableSaveButton pada saat inputan berubah
+        $('#modal-setting form input[type="number"], #modal-setting form input[type="text"]').on('input', function() {
+            enableSaveButton();
+        });
+
+        // Jalankan fungsi enableSaveButton pada saat radio button berubah
+        $('#modal-setting form input[type="radio"]').on('change', function() {
+            enableSaveButton();
+        });
+
+        if (BBTX_savedSettingData.waktuTunggu === '3') {
+            $('#Lwaktu-tunggu').text("FAST");
+        } else if (BBTX_savedSettingData.waktuTunggu === '4') {
+            $('#Lwaktu-tunggu').text("MEDIUM");
+        } else if (BBTX_savedSettingData.waktuTunggu === '5') {
+            $('#Lwaktu-tunggu').text("NORMAL");
+        }
+
+        function setNullInfo(){
+            localStorage.setItem('BBTX_Kiri1INCHSinyal',0);
+            localStorage.setItem('BBTX_Kanan1INCHSinyal',0);
+
+            localStorage.setItem('BBTX_KiriODOSSinyal',0);
+            localStorage.setItem('BBTX_KananODOSSinyal',0);
+            
+            localStorage.setItem('BBTX_KiriMATCHASinyal',0);
+            localStorage.setItem('BBTX_KananMATCHASinyal',0);
+
+            localStorage.setItem('BBTX_KiriUNIZENSinyal',0);
+            localStorage.setItem('BBTX_KananUNIZENSinyal',0);
+
+            localStorage.setItem('BBTX_KiriPARASWAPSinyal',0);
+            localStorage.setItem('BBTX_KananPARASWAPSinyal',0);
+
+            localStorage.setItem('BBTX_KiriKYBERSWAPSinyal',0);
+            localStorage.setItem('BBTX_KananKYBERSWAPSinyal',0);
+                
+            $("#lKiri1INCHSinyal").text("");
+            $("#lKanan1INCHSinyal").text("");
+
+            $("#lKiriODOSSinyal").text("");
+            $("#lKananODOSSinyal").text("");
+
+            $("#lKiriMATCHASinyal").text("");
+            $("#lKananMATCHASinyal").text("");
+
+            $("#lKiriUNIZENSinyal").text("");
+            $("#lKananUNIZENSinyal").text("");
+
+            $("#lKiriPARASWAPSinyal").text("");
+            $("#lKananKYBERSWAPSinyal").text("");
+
+            $("#lKiriUNIZENSinyal").text("");
+            $("#lKananUNIZENSinyal").text("");
+
+            $("#sinyal1inch").text("");
+            $("#sinyalodos").text("");
+            $("#sinyalmatcha").text("");
+            $("#sinyalunizen").text("");
+            $("#sinyalparaswap").text("");
+            $("#sinyalkyberswap").text("");
+            
+            // CEX LP DEX
+            var dataLPODOS = localStorage.getItem('BBTX_LPODOS');
+            var jumlahLPODOS = dataLPODOS ? JSON.parse(dataLPODOS).length : 0;
+            $("#modalLPODOS").text("ODOS [ "+jumlahLPODOS+" ]"); 
+
+        }
+
+        // CEK SEMUA DATA AWAL
+        function cekDataAwal(){     
+            var BBTX_LPODOS = JSON.parse(localStorage.getItem('BBTX_LPODOS'));
+            var BBTX_SERVERCORS = JSON.parse(localStorage.getItem('BBTX_SERVERCORS'));
+            var BBTX_DATA_MASTER = JSON.parse(localStorage.getItem('BBTX_DATA_MASTER'));
+            var BBTX_DATA_SETTING = JSON.parse(localStorage.getItem('BBTX_DATA_SETTING'));
+            var BBTX_DATA_MODAL = JSON.parse(localStorage.getItem('BBTX_DATA_MODAL'));
+
+            // Inisialisasi status validasi
+            var isDataMasterValid = true;
+            var isLPODOSValid = true;
+            var isServerCorsValid = true;
+            var isDataSettingValid = true;
+            var isDataSettingModalValid = true;
+
+            // Validasi BBTX_DATA_MASTER
+            if (BBTX_DATA_MASTER === null || BBTX_DATA_MASTER === undefined || Object.keys(BBTX_DATA_MASTER).length === 0) {
+                isDataMasterValid = false;
+                $("#cek").append("SINKRONISASI DATA DAHULU!<br/>");
+            }
+
+            // Validasi BBTX_LPODOS
+            if (BBTX_LPODOS === null || BBTX_LPODOS === undefined || Object.keys(BBTX_LPODOS).length === 0) {
+                isLPODOSValid = false;
+                $("#cek").append("CEK, SETTING LP ODOS!<br/>");
+            }
+
+            // Validasi BBTX_SERVERCORS
+            if (BBTX_SERVERCORS === null || BBTX_SERVERCORS === undefined) {
+                isServerCorsValid = false;
+                $("#cek").append("CEK,PIIHAN SERVER!<br/>");
+            }
+
+            // Validasi BBTX_DATA_SETTING
+            if (BBTX_DATA_SETTING === null || BBTX_DATA_SETTING === undefined || !BBTX_DATA_SETTING.waktuTunggu || !BBTX_DATA_SETTING.KoinGroup || Object.keys(BBTX_DATA_SETTING).length === 0) {
+                isDataSettingValid = false;
+                $("#cek").append("CEK, SETTINGAN SCANNER !<br/>");
+            }else{
+                coinTrueStatus();
+            }
+
+            // Validasi BBTX_DATA_MODAL
+            if (BBTX_DATA_MODAL === null || BBTX_DATA_MODAL === undefined || Object.keys(BBTX_DATA_MODAL).length === 0) {
+                isDataSettingModalValid = false;
+                $("#cek").append("CEK, SETTINGAN MODAL !<br/>");
+            }
+
+            // Check if any validation fails, hide the button
+            if (!isDataMasterValid || !isLPODOSValid || !isServerCorsValid || !isDataSettingValid) {
+                $("button#startSCAN.uk-button.uk-button-primary").hide();
+            } else {
+                if(!user){
+                    $("#cek").append("NICKNAME HARUS DI ISI !!!<br/>");
+                    $("#startSCAN").hide();
+                }else{
+                    $("button#startSCAN.uk-button.uk-button-primary").show();
+                }
+            }
+            
+            if (!($("#D1INCH").prop('checked') || $("#DODOS").prop('checked') || $("#DMATCHA").prop('checked') || $("#DUNIZEN").prop('checked') )) {
+                $("#cek").append("CEK, PILIH DEX<br/>");
+                $("button#startSCAN.uk-button.uk-button-primary").hide();
+             }           
+        }           
+
+        // Function to save checkbox status DEX in local storage
+        function saveDEXStatus(checkboxId, status) {
+            localStorage.setItem("BBTX_"+checkboxId, status);
+        }
+
+        // Function to get checkbox status from local storage
+        function getDEXStatus(checkboxId) {
+            return localStorage.getItem("BBTX_"+checkboxId) === 'true';
+        }
+        // Function change hitung status coin
+        function coinTrueStatus(){
+            var countTrueStatus = 0;
+                var coinData = BBTX_savedSettingData.LIST_TOKEN;
+                $.each(coinData, function(index, coin) {
+                    if (coin.status === true) {
+                        countTrueStatus++;
+                        var TotalCoins = parseInt(localStorage.setItem('BBTX_TotalCoins',countTrueStatus));
+                    }
+                });
+            $("label#JmlKoin").text(localStorage.getItem('BBTX_TotalCoins') + "/" + groupSize);
+
+            $("#pairDex").text(BBTX_savedSettingData.symbolPair);    
+        }
+
+        $('label#JmlKoin').on('click', dowloadJSON);
+
+        function dowloadJSON() {
+            var gmbData = localStorage.getItem('BBTX_DATA_SETTING');
+            if (gmbData) {
+                var jsonData = JSON.parse(gmbData);
+                var listToken = { "LIST_TOKEN": jsonData.LIST_TOKEN };
+                var jsonContent = JSON.stringify(listToken, null, 2);
+                var downloadLink = document.createElement('a');
+                downloadLink.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(jsonContent);
+                downloadLink.download = localStorage.getItem('BBTX_TotalCoins') + "_" + "TOKEN.json";
+                downloadLink.click();
+            } else {
+                alert('DATA TOKEN KOSONG');
+            }
+
+        }
+        // Function to create radio buttons dynamically
+        function createRadioButtons() {
+                // Add event listener for radio button change
+                $('input[name="urlRadio"]').on('change', function () {
+                    // Store the selected URL in localStorage
+                    var selectedUrl = $('input[name="urlRadio"]:checked').val();
+                    localStorage.setItem('BBTX_SERVERCORS', selectedUrl);
+                    location.reload();
+                });
+
+                // Check the last selected URL if available in localStorage
+                var lastSelectedUrl = localStorage.getItem('BBTX_SERVERCORS');
+                if (lastSelectedUrl) {
+                    $('input[name="urlRadio"][value="' + lastSelectedUrl + '"]').prop('checked', true);
+                }
+        }
+
+        // SET FORM INPUT MODAL
+        $('#mKiriKecil1INCH').val(BBTX_savedModal.mKiriKecil1INCH || '');
+        $('#mKiriKecilKYBERSWAP').val(BBTX_savedModal.mKiriKecilKYBERSWAP || '');
+        $('#mKananKecil1INCH').val(BBTX_savedModal.mKananKecil1INCH || '');
+        $('#mKananKecilKYBERSWAP').val(BBTX_savedModal.mKananKecilKYBERSWAP || '');
+        $('#mKiriKecilODOS').val(BBTX_savedModal.mKiriKecilODOS || '');
+        $('#mKiriKecilPARASWAP').val(BBTX_savedModal.mKiriKecilPARASWAP || '');
+
+        $('#mKananKecilODOS').val(BBTX_savedModal.mKananKecilODOS || '');
+        $('#mKananKecilPARASWAP').val(BBTX_savedModal.mKananKecilPARASWAP || '');
+        $('#mKiriKecilMATCHA').val(BBTX_savedModal.mKiriKecilMATCHA || '');
+        $('#mKiriKecilUNIZEN').val(BBTX_savedModal.mKiriKecilUNIZEN || '');
+        $('#mKananKecilMATCHA').val(BBTX_savedModal.mKananKecilMATCHA || '');
+        $('#mKananKecilUNIZEN').val(BBTX_savedModal.mKananKecilUNIZEN || '');
+
+        // SET INFO MODAL
+        $('#LmKiriKecil1INCH').text(BBTX_savedModal.mKiriKecil1INCH || '');
+        $('#LmKananKecil1INCH').text(BBTX_savedModal.mKananKecil1INCH || '');
+
+        $('#LmKiriKecilKYBERSWAP').text(BBTX_savedModal.mKiriKecilKYBERSWAP || '');
+        $('#LmKananKecilKYBERSWAP').text(BBTX_savedModal.mKananKecilKYBERSWAP || '');
+
+        $('#LmKiriKecilPARASWAP').text(BBTX_savedModal.mKiriKecilPARASWAP || '');
+        $('#LmKananKecilPARASWAP').text(BBTX_savedModal.mKananKecilPARASWAP || '');
+
+        $('#LmKiriKecilODOS').text(BBTX_savedModal.mKiriKecilODOS || '');
+        $('#LmKananKecilODOS').text(BBTX_savedModal.mKananKecilODOS || '');
+
+        $('#LmKiriKecilMATCHA').text(BBTX_savedModal.mKiriKecilMATCHA || '');
+        $('#LmKananKecilMATCHA').text(BBTX_savedModal.mKananKecilMATCHA || '');
+
+        $('#LmKananKecilUNIZEN').text(BBTX_savedModal.mKananKecilUNIZEN || '');
+        $('#LmKiriKecilUNIZEN').text(BBTX_savedModal.mKiriKecilUNIZEN || '');
+
+        // SET SETINGAN APLIKASI
+        $('#sc-addresspair').val(BBTX_savedSettingData.scAddressPair || '');
+        $('#des-pair').val(BBTX_savedSettingData.desPair || '');
+        $('#symbol-pair').val(BBTX_savedSettingData.symbolPair || '');
+
+        $('#inFilterPNL').val(BBTX_savedModal.FilterPNL || '');
+        $('#jeda-time-group').val(BBTX_savedSettingData.jedaTimeGroup || '');                       
+        $('#jeda-koin').val(BBTX_savedSettingData.jedaKoin || '');
+
+        $('#LKoinGroup').text(BBTX_savedSettingData.KoinGroup || '');
+
+        $('#LFilterPNL').text(BBTX_savedModal.FilterPNL || '');
+        
+        $('#walletMETA').val(BBTX_savedSettingData.walletMETA || '');
+    
+        $('#user').val(user || '');
+        
+        function setMODAL(){
+            var modalData = {
+                mKiriKecil1INCH: $('#mKiriKecil1INCH').val() || '',
+                mKiriKecilKYBERSWAP: $('#mKiriKecilKYBERSWAP').val() || '',
+
+                mKananKecil1INCH: $('#mKananKecil1INCH').val() || '',
+                mKananKecilKYBERSWAP: $('#mKananKecilKYBERSWAP').val() || '',
+
+                mKiriKecilODOS: $('#mKiriKecilODOS').val() || '',
+                mKiriKecilPARASWAP: $('#mKiriKecilPARASWAP').val() || '',
+                
+                mKananKecilODOS: $('#mKananKecilODOS').val() || '',
+                mKananKecilPARASWAP: $('#mKananKecilPARASWAP').val() || '',
+
+                mKiriKecilMATCHA: $('#mKiriKecilMATCHA').val() || '',
+                mKiriKecilUNIZEN: $('#mKiriKecilUNIZEN').val() || '',
+                
+                mKananKecilMATCHA: $('#mKananKecilMATCHA').val() || '',
+                mKananKecilUNIZEN: $('#mKananKecilUNIZEN').val() || '',
+
+                 FilterPNL: $('#inFilterPNL').val() || ''
+            };
+            localStorage.setItem('BBTX_DATA_MODAL', JSON.stringify(modalData));
+        }
+
+       // $('#pnl').val(BBTX_savedSettingData.pnl || '');
+
+       // CEK IP
+       function CekIdentitas(){
+           console.warn("JALANKAN CEK ID");
+            var deviceID = generateDeviceID();
+
+            function generateDeviceID() {
+                var userAgent = navigator.userAgent;
+                var screenResolution = window.screen.width + "x" + window.screen.height;
+                var timezoneOffset = new Date().getTimezoneOffset();
+                var language = navigator.language;
+
+                var deviceID = userAgent + screenResolution + timezoneOffset + language;
+                var hashedDeviceID = hashCode(deviceID);
+
+                return hashedDeviceID;
+            }
+
+            function hashCode(str) {
+                var hash = 0;
+                if (str.length == 0) return hash;
+                for (var i = 0; i < str.length; i++) {
+                    var char = str.charCodeAt(i);
+                    hash = (hash << 5) - hash + char;
+                    hash = hash & hash; 
+                }
+                return hash;
+            }
+
+            $.ajax({
+                url: "https://api4.my-ip.io/v2/ip.json",
+                success: function (response) {
+                    var simplifiedIdentitas = {
+                        id : deviceID,
+                        name: response.asn.name,
+                        ip: response.ip
+                    };
+
+                // Simpan data ke localStorage
+                localStorage.setItem('BBTX_ID', JSON.stringify(simplifiedIdentitas));
+                var BBTX_savedSettingDataID = JSON.parse(localStorage.getItem('BBTX_ID'));
+
+               // console.log("Device ID:", deviceID);
+                if (BBTX_savedSettingDataID) {
+                    $("#ip").text("IP: " + BBTX_savedSettingDataID.ip);
+                    toastr.success("ANDA MENDAPATKAN IP : "+BBTX_savedSettingDataID.ip);
+                } else {
+                    $("#ip").text("IP ???");
+                }
+
+                },
+
+                error: function (error) {
+                   // $("#ip").text("MY IP : ??? " );
+                   console.error("FAILED GET IP");
+                   toastr.error("GAGAL CEK IP!!");
+                },
+            });
+       }
+
+        function saveFormDataSetting() {
+            var user = $("#user").val();
+            localStorage.setItem("BBTX_user", user);
+
+            var existingSettingData = JSON.parse(localStorage.getItem('BBTX_DATA_SETTING')) || {};
+
+            // Update specific arrays in BBTX_DATA_SETTING
+            existingSettingData.LIST_TOKEN = existingSettingData.LIST_TOKEN || [];
+            existingSettingData.SERVERCORS = existingSettingData.SERVERCORS || [];
+
+            existingSettingData.jedaTimeGroup = $('#jeda-time-group').val();
+            existingSettingData.waktuTunggu = $('input[name="waktu-tunggu"]:checked').val();
+            existingSettingData.KoinGroup = $('input[name="koin-group"]:checked').val();
+            existingSettingData.jedaKoin = $('#jeda-koin').val();
+           // existingSettingData.FilterPNL = $('#inFilterPNL').val();
+
+            existingSettingData.walletMETA = $('#walletMETA').val();
+
+            existingSettingData.scAddressPair = $('#sc-addresspair').val();
+            existingSettingData.desPair = $('#des-pair').val();
+            existingSettingData.symbolPair = $('#symbol-pair').val();
+
+            // Explicitly update LIST_TOKEN and SERVERCORS arrays
+            existingSettingData.LIST_TOKEN = /* your logic to update LIST_TOKEN */
+            existingSettingData.SERVERCORS = /* your logic to update SERVERCORS */
+
+            // Save the updated data to localStorage
+            localStorage.setItem('BBTX_DATA_SETTING', JSON.stringify(existingSettingData));
+
+            setMODAL();
+            // Menutup modal setelah menyimpan data
+            UIkit.modal("#modal-setting").hide();
+
+            alert("SETTING BERHASIL!!");
+            location.reload();
+        };
+
+    
+        function feeGasGwei() {
+            $.when(
+                $.ajax({
+                    url: 'https://data-api.binance.vision/api/v3/ticker/24hr?symbol='+BaseFEEDEX,
+                    method: 'GET'
+                }),
+                $.ajax({
+                    url: 'https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/'+Kode_Chain+'/suggestedGasFees',
+                    method: 'GET'
+                })
+            ).done(function(PriceResponse, gasResponse) {
+                var lastPrice = PriceResponse[0].lastPrice;
+                localStorage.setItem('BBTX_PriceGAS', lastPrice);
+                
+                var mediumGasFee = gasResponse[0].low.suggestedMaxFeePerGas;
+                localStorage.setItem('BBTX_gasGWEI', mediumGasFee);
+                
+                $("#LGwei").text("" +parseFloat(localStorage.getItem('BBTX_gasGWEI')).toFixed(2));
+
+                console.log('Medium Gas Fee:', mediumGasFee);
+            }).fail(function(xhr, status, error) {
+                console.error('Failed to fetch data:', error);
+            });
+        }
+
+        function importDataJSON(){
+            localStorage.removeItem('BBTX_DATA_MASTER');
+            localStorage.removeItem('BBTX_DATA_SETTING');
+            $.ajax({
+                url: DATAJSON,
+                    success : function(response) {
+
+                    var serverCORS = response.serverCORS;
+                    var token = response.token;
+                    var tele_token = response.telegram.token;
+                    var id_grup = response.telegram.id_grup;
+                        
+                    var DataJSON={
+                        TOKEN:tele_token,
+                        ID_GRUP:id_grup,
+                        LIST_TOKEN :token,
+                        SERVERCORS :serverCORS,
+                        jedaTimeGroup:1500,
+                        jedaKoin:500,
+                        scAddressPair:SCPAIRDEX,
+                        symbolPair:PAIRDEX,
+                        desPair:DESPAIRDEX,
+                        KoinGroup: 1,
+                        waktuTunggu:5,
+                        FilterPNL:0,
+                        DEX: ['1INCH', 'MATCHA', 'KYBERSWAP', 'PARASWAP', 'ODOS', 'UNIZEN']
+                    }
+
+                    localStorage.setItem('BBTX_DATA_MASTER',JSON.stringify(DataJSON));
+                    localStorage.setItem('BBTX_DATA_SETTING',JSON.stringify(DataJSON));                         
+
+                     },
+
+                     error: function(xhr, status, error) {
+                        alert('SYNC DATA GAGAL\n' +
+                            'Status: ' + status + '\n' +
+                            'Error: ' + error + '\n' +
+                            'Response Text: ' + xhr.responseText);
+                    }
+                });
+            }
+
+        // Event listener for save button click
+        $('#save-button').on('click', saveFormDataSetting);
+
+        // Menampilkan modal settingan
+        $("#set-modal").on("click", function() {
+            var lastSelctspeed = BBTX_savedSettingData.waktuTunggu;
+                if (lastSelctspeed) {
+                    $('input[name="waktu-tunggu"][value="' + lastSelctspeed + '"]').prop('checked', true);
+                }
+            var lastSelctspeed2 = BBTX_savedSettingData.KoinGroup;
+            if (lastSelctspeed2) {
+                    $('input[name="koin-group"][value="' + lastSelctspeed2 + '"]').prop('checked', true);
+            }
+            UIkit.modal("#modal-setting").show();
+        });
+
+        $('#simpanlpODOS').click(function() {
+            var checkedCheckboxes = [];
+            $("#checkboxLPODOS input:checked").each(function() {
+            checkedCheckboxes.push($(this).val());
+            });
+
+            localStorage.setItem("BBTX_LPODOS",JSON.stringify(checkedCheckboxes));
+            toastr.success('SETTING LP ODOS BERHASIL!!');
+            location.reload();
+
+        })
+
+        // MEMBUAT MODAL UNTUK MENAMPILKAN LIST LP ODOS
+        $('span#modalLPODOS').click(function() {
+          $('#checkboxLPODOS').children().remove();
+
+                $.ajax({
+                    url: "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?https://api.odos.xyz/info/liquidity-sources/"+Kode_Chain+"",
+                    type: "GET",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    success: function(data) {
+                        // Display API result in the modal body
+                        var protocols = data.sources
+
+                        data.sources.forEach(function(source, index) {
+                          $('#checkboxLPODOS').append('<label> <input type="checkbox" id="checkbox' + index + '" value="' + source + '" checked> ' + source + '&nbsp;</label>');
+                        });
+
+                        UIkit.modal('#myModalLPODOS').show();
+
+                    },
+                    error: function(error) {
+                        console.error("Error fetching data from the API", error);
+                    }
+                });
+        });
+
+        $('#syncDATA').on('click', function() {       
+             importDataJSON(); 
+            // toastr.success('SINKRONISASI BERHASIL!!,<br/> LANJUTKAN KE SETTINGAN');
+            alert('SINKRONISASI BERHASIL, LANJUTKAN KE SETTINGAN!!');
+             location.reload();
+         });
+
+         highlightEmptyInputs();
+        // Function to highlight empty inputs with red background
+        function highlightEmptyInputs() {
+            $('.uk-input').each(function() {
+                if ($(this).val().trim() === '') {
+                    $(this).toggleClass('uk-form-danger');
+                } else {
+                    $(this).removeClass('uk-form-danger');
+                }
+            });
+        }
+           
+        // menjalankan scanning
+        $("#startSCAN").on("click", function() {
+            $('tbody tr').remove();
+            $('input[type="checkbox"]').prop('disabled', true);
+            $('input[type="radio"]').prop('disabled', true);
+            $('input[type="number"]').prop('disabled', true);
+
+            var selectedOption = $("input[name='toggle']:checked").val();
+                if (selectedOption === "option1") {
+                    // Lakukan sesuatu jika option 1 dipilih
+                    tokens.reverse();
+                }
+
+            var startTime = new Date().getTime();
+            localStorage.setItem('BBTX_startTime',startTime);
+            $("#startSCAN").hide();
+            $("#refresh").show();
+
+            $("#LFilterPNL").text("" + BBTX_savedModal.FilterPNL + "$");
+            setNullInfo()
+            CekIdentitas();
+            
+            sendStatusTELE(user,'ONLINE');
+
+            processTokenData(tokens, groupSize);
+        });
+
+        //FUNGSI AUTORUN
+        
+        $('input#Cautorun').change(function() {
+            if ($(this).is(':checked')) {
+                autorun=true;
+            } else {
+                autorun=false;
+            }
+        });
+        
+        // FUNGSI CHECKBOX DISABLE/ENABLE  COIN           
+        $(document).on('click', '.statusKoinCheckbox', function() {
+            var coinData = BBTX_savedSettingData.LIST_TOKEN;   
+            var symbol = $(this).data('index');
+            var status = $(this).prop('checked');
+            var namacoin =  symbol;
+                    
+                coinData.find((token)=>{
+                    if(token.symbol == symbol){
+                        namacoin = token.symbol
+                        token.status=status
+                    }
+                });
+
+            alert("STATUS KOIN '"+namacoin.replace("USDT", "")+ "' BERUBAH!!");
+            // Save the updated data back to localStorage
+            coinData = coinData;
+            localStorage.setItem('BBTX_DATA_SETTING', JSON.stringify({...BBTX_savedSettingData,LIST_TOKEN:coinData}));
+            coinTrueStatus();
+        });
+        // Check the status of checkboxes and show/hide corresponding rows
+        function updateTableVisibility() {
+            var dexSettings = [];
+            $(".dx_1inch, .dx_odos, .dx_matcha, .dx_unizen, .dx_kyberswap, .dx_paraswap").hide();
+
+            if ($('#D1INCH').is(':checked')) {
+                $(".dx_1inch").show();
+                dexSettings.push("1INCH");
+            }
+
+            if ($('#DODOS').is(':checked')) {
+                $(".dx_odos").show();
+                dexSettings.push("ODOS");
+            }
+
+            if ($('#DMATCHA').is(':checked')) {
+                $(".dx_matcha").show();
+                dexSettings.push("MATCHA");
+            }
+
+            if ($('#DUNIZEN').is(':checked')) {
+                $(".dx_unizen").show();
+                dexSettings.push("UNIZEN");
+            }
+
+            if ($('#DPARASWAP').is(':checked')) {
+                $(".dx_paraswap").show();
+                dexSettings.push("paraswap");
+            }
+
+            if ($('#DKYBERSWAP').is(':checked')) {
+                $(".dx_kyberswap").show();
+                dexSettings.push("kyberswap");
+            }
+
+             // Simpan ke localStorage
+           // localStorage.setItem("BBTX_DATA_SETTING", JSON.stringify({DEX: dexSettings}));
+        }
+        // Initial visibility check
+        updateTableVisibility();
+
+        // Attach event listeners to checkbox changes
+        $('#D1INCH, #DODOS, #DMATCHA, #DUNIZEN, #DKYBERSWAP, #DPARASWAP').change(function () {
+            updateTableVisibility();
+        });
+
+        var grupKoin = [];
+        var currentGrupKoinTotalRequests = 0;
+        var currentGrupKoinRequests = 0;
+        var currentProcessingIndex = 0;
+        // Function to divide tokens into groups and process them with intervals
+        function processTokenData(tokens, groupSize) {
+                localStorage.setItem("BBTX_counter",0);
+                var countTrueStatus = localStorage.getItem("BBTX_TotalCoins");
+                var tokensWithTrueStatus = tokens.filter(function(token) {
+                    return token.status === true;
+                });
+
+                // Menghitung jumlah grup yang dibutuhkan
+                var numOfGroups = Math.ceil(tokensWithTrueStatus.length / groupSize);
+                //console.log("Jumlah GRoup"+numOfGroups)
+                grupKoin = [];
+                currentProcessingIndex = 0;
+                for (var i = 0; i < numOfGroups; i++) {
+                    var startIdx = i * groupSize;
+                    var endIdx = (i + 1) * groupSize;
+                    var tokenGroup = tokensWithTrueStatus.slice(startIdx, endIdx);
+
+                    var timejeda = i * interval;
+                    //digrupkan dulu
+                    grupKoin.push(tokenGroup);
+                }
+
+                //jalankan grup pertama
+                prosesGroup(0);
+        }
+
+        function prosesGroup(index){
+            //reset jumlah request
+            currentGrupKoinRequests = 0;
+
+            //set current index
+            currentProcessingIndex = index;
+
+            //grup koin yg saat ini diproses
+            let grup = grupKoin[currentProcessingIndex];
+
+            //hitung total request seharusnya untuk grup saat ini
+            //dapatkan jmlh dex yg discan
+            let jmlhModal = 0;
+            if($('#D1INCH').is(':checked')) {
+                if($('#ls').is(':checked')) { jmlhModal++; }
+                if($('#rs').is(':checked')) { jmlhModal++; }
+            }
+            if($('#DODOS').is(':checked')) { 
+                if($('#ls').is(':checked')) { jmlhModal++; }
+                if($('#rs').is(':checked')) { jmlhModal++; }
+            }
+            if($('#DMATCHA').is(':checked')) { 
+                if($('#ls').is(':checked')) { jmlhModal++; }
+                if($('#rs').is(':checked')) { jmlhModal++; }
+            }
+            if($('#DUNIZEN').is(':checked')) { 
+                if($('#ls').is(':checked')) { jmlhModal++; }
+                if($('#rs').is(':checked')) { jmlhModal++; }
+            }
+            if($('#DPARASWAP').is(':checked')) { 
+                if($('#ls').is(':checked')) { jmlhModal++; }
+                if($('#rs').is(':checked')) { jmlhModal++; }
+            }
+            if($('#DKYBERSWAP').is(':checked')) { 
+                if($('#ls').is(':checked')) { jmlhModal++; }
+                if($('#rs').is(':checked')) { jmlhModal++; }
+            }
+
+            currentGrupKoinTotalRequests = grup.length * jmlhModal;
+
+          // console.log("JUMLAH SCAN : " + currentGrupKoinTotalRequests);
+            //jalankan proses anggota dari grup koin saat ini
+            grup.forEach(function(token,IndexAnggota){
+                var symbol=GantiSymbol(token.symbol,"USDT","");
+                var counter = parseInt(localStorage.getItem('BBTX_counter'));
+                var jcounter = counter+1;
+                localStorage.setItem("BBTX_counter",jcounter);  
+                setTimeout(function () {
+                    updateProgress(jcounter, symbol);
+                    Scanning(token, IndexAnggota + 1);
+                      feeGasGwei();
+                  //  console.log(token.symbol + " anggota ke -",IndexAnggota+1);
+                }, BBTX_savedSettingData.jedaKoin * IndexAnggota);
+            });
+        }
+
+        //fungsi ini dipanggil setiap selesai request, baik error atau ndak.
+        function selesaiProsesAnggota(){
+            //increment currentGrupKoinRequests
+            currentGrupKoinRequests++;
+
+            //cek apakah semua anggota sdh diproses
+            if(currentGrupKoinRequests == currentGrupKoinTotalRequests){
+                //semua anggota sudah diproses. lanjutkan prosesGroup berikutnya
+                //tapi cek dulu, apakah grupKoin berikutnya masih ada
+                if(currentProcessingIndex < grupKoin.length){
+                    setTimeout(function(){
+                        prosesGroup(currentProcessingIndex+1);
+                    },BBTX_savedSettingData.jedaTimeGroup);
+                }
+            }
+        }
+
+        function GantiSymbol(simbol,awal,akhir) {
+            if (simbol.endsWith(awal)) {
+                var pasanganPerdagangan = simbol.replace(awal,akhir);
+                return pasanganPerdagangan;
+            }
+            return simbol;
+        }
+
+        $('#cek_wallet').on('click', CekWalletBitget);
+
+        // fungsi cek price pair
+        function cekPricePAIR(){
+          var pair = BBTX_savedSettingData.symbolPair;
+          var sc = BBTX_savedSettingData.scAddressPair;
+          var des = BBTX_savedSettingData.desPair;
+
+                if(BBTX_savedSettingData.symbolPair=="USDT"){
+                    localStorage.setItem('BBTX_PriceRateBuy', 1);
+                    localStorage.setItem('BBTX_PriceRateSell', 1);                     
+                }else{
+                    $.ajax({
+                    url: 'https://data-api.binance.vision/api/v3/ticker/24hr?',
+                    data: {
+                        symbol: BBTX_savedSettingData.symbolPair+"USDT"
+                    },
+                    success : function(response) {
+                        var PriceRateBuy = parseFloat(response.askPrice).toFixed(8);
+                        var PriceRateSell = parseFloat(response.bidPrice).toFixed(8);
+
+                        localStorage.setItem('BBTX_PriceRateBuy', PriceRateBuy);
+                        localStorage.setItem('BBTX_PriceRateSell', PriceRateSell);                     
+                    },
+
+                    error: function(xhr, status, error) {
+                    console.log('Error get Price Rate Pair:', error);
+                    toastr.error('CEK KONEKSI BINANCE ANDA / AKTIFKAN CORS!!');
+                    }
+                });
+            }
+        }
+        
+        function CekWalletBitget(){
+            $.ajax({
+                url: 'https://api.bitget.com/api/v2/spot/public/coins',
+                method: "GET",
+                success: function(response) {
+                    toastr.success('UPDATE WALLET BITGET BERHASIL!!');
+                    // Filter data untuk coin dengan network BSC
+                    console.log(response);
+                    const coinsWithChain = response.data.filter(function(item) {
+                    return item.chains.some(function(chain) {
+                            return chain.chain === CHAINCEX;
+                        });
+                    });
+
+                    // Ambil hanya koin beserta status deposit dan withdraw untuk chain SOL
+                    const coinDepositWithdrawStatus = coinsWithChain.map(function(item) {
+                        const CEXChain = item.chains.find(function(chain) {
+                            return chain.chain === CHAINCEX;
+                        });
+                        
+                        return {
+                            coin: item.coin,
+                            feeWDs: CEXChain ? CEXChain.withdrawFee : 0,
+                            depositEnable: CEXChain ? CEXChain.rechargeable === "true" : false,
+                            withdrawEnable: CEXChain ? CEXChain.withdrawable === "true" : false
+                        };
+                    });
+
+                    // Simpan data pada localStorage
+                    localStorage.setItem("BBTX_WALLETFEEWD", JSON.stringify(coinDepositWithdrawStatus));
+                  
+                },
+                error: function(xhr, status, error) {
+                    toastr.error('UPDATE WALLET GAGAL, MASALAH KONEKSI!!');
+                }
+            });
+          }
+
+
+          function checkStatusKoin(coin) {
+                // Mendapatkan data dari localStorage
+                const walletData = JSON.parse(localStorage.getItem("BBTX_WALLETFEEWD"));
+
+                // Mencari koin yang sesuai dengan parameter coin
+                const selectedCoin = walletData.find(function (item) {
+                    return item.coin === coin;
+                });
+                // Jika koin ditemukan
+                if (selectedCoin) {
+                    // Tentukan status deposit dan withdraw
+                    var depositStatus = selectedCoin.depositEnable ? "Aktif" : "Tidak aktif";
+                    var withdrawStatus = selectedCoin.withdrawEnable ? "Aktif" : "Tidak aktif";
+
+                    // Tentukan warna dan tulisan untuk deposit dan withdraw
+                    var dpColor = selectedCoin.depositEnable ? "primary" : "danger";
+                    var dpText = selectedCoin.depositEnable ? "[DP]" : "DX";
+                    var wdColor = selectedCoin.withdrawEnable ? "primary" : "danger";
+                    var wdText = selectedCoin.withdrawEnable ? "[WD]" : "WX";
+
+                    // Tampilkan label deposit dan withdraw dengan warna yang sesuai
+                    var dpLabel = '<span class="uk-text-' + dpColor + '">' + dpText + '</span>';
+                    var wdLabel = '<span class="uk-text-' + wdColor + '">' + wdText + '</span>';
+                    $("#wallet_" + coin).html(wdLabel + "<span style='color:red;'> " + coin + " </span>" + dpLabel);
+
+                } else {
+                    console.log("Koin " + coin + " tidak ditemukan dalam data.");
+                }
+            }
+
+        function getPriceBitget(coins,modal,index, callback) {
+             var walletData = JSON.parse(localStorage.getItem("BBTX_WALLETFEEWD"));
+                if (walletData === null) {
+                    toastr.error("REFRESH & UPDATE FEE WD DAHULU!<br/>");
+                }
+
+                var NameToken = GantiSymbol(coins.symbol, "USDT", "");
+                const selectedCoin = walletData.find(function (item) {
+                    return item.coin === NameToken;
+                });
+
+                if (selectedCoin) {
+                    var withdrawFee = selectedCoin.feeWDs;
+                } 
+
+            $.ajax({
+                url: 'https://api.bitget.com/api/v2/spot/market/orderbook?symbol=' +coins.symbol+'',
+                method: 'GET',
+                success: function(response) { 
+                    if (response.data.asks.length === 0 || response.data.bids.length === 0) {
+                        console.warn('Empty asks or bids array. Skipping cekHarga Bitget.');
+                        callback(null, null);  // Indicate success with no data
+                        selesaiProsesAnggota();
+                     }else{
+                        cekPricePAIR();
+
+                            var dataOUT = {};
+                            dataOUT.price_buy = response.data.asks[0][0];
+                            dataOUT.price_buy1 = response.data.asks[1][0];
+                            dataOUT.price_buy2 = response.data.asks[2][0];
+                            dataOUT.price_buy3 = response.data.asks[3][0];
+                            dataOUT.price_buy4 = response.data.asks[4][0];
+                            dataOUT.vol_buy = (parseFloat(response.data.asks[0][1]) * dataOUT.price_buy).toFixed(2);
+                            dataOUT.vol_buy1 = (parseFloat(response.data.asks[1][1]) * dataOUT.price_buy1).toFixed(2);
+                            dataOUT.vol_buy2 = (parseFloat(response.data.asks[2][1]) * dataOUT.price_buy2).toFixed(2);
+                            dataOUT.vol_buy3 = (parseFloat(response.data.asks[3][1]) * dataOUT.price_buy3).toFixed(2);
+                            dataOUT.vol_buy4 = (parseFloat(response.data.asks[4][1]) * dataOUT.price_buy4).toFixed(2);
+
+                            dataOUT.price_sell = response.data.bids[0][0];
+                            dataOUT.price_sell1 = response.data.bids[1][0];
+                            dataOUT.price_sell2 = response.data.bids[2][0];
+                            dataOUT.price_sell3 = response.data.bids[3][0];
+                            dataOUT.price_sell4 = response.data.bids[4][0];
+                            dataOUT.vol_sell = (parseFloat(response.data.bids[0][1]) * dataOUT.price_sell).toFixed(2);
+                            dataOUT.vol_sell1 = (parseFloat(response.data.bids[1][1]) * dataOUT.price_sell1).toFixed(2);
+                            dataOUT.vol_sell2 = (parseFloat(response.data.bids[2][1]) * dataOUT.price_sell2).toFixed(2);
+                            dataOUT.vol_sell3 = (parseFloat(response.data.bids[3][1]) * dataOUT.price_sell3).toFixed(2);
+                            dataOUT.vol_sell4 = (parseFloat(response.data.bids[4][1]) * dataOUT.price_sell4).toFixed(2);
+
+                            dataOUT.symbol = GantiSymbol(coins.symbol,"USDT","");
+                            dataOUT.modal = modal;
+                            dataOUT.amount_in_sell = modal / response.data.asks[0][0];
+                            dataOUT.amount_in_buy = modal / parseFloat(localStorage.getItem('BBTX_PriceRateSell')) ;
+                            dataOUT.PriceRateBuy = parseFloat(localStorage.getItem('BBTX_PriceRateBuy'));
+                            dataOUT.PriceRateSell = parseFloat(localStorage.getItem('BBTX_PriceRateSell'));
+                            dataOUT.feeWD = withdrawFee*response.data.asks[0][0];
+                            
+                            $("#vol1_buy_mk_bin_Bitget_" + dataOUT.symbol).html("<label class='uk-text-primary'>~"+dataOUT.price_buy+" : "+dataOUT.vol_buy+"$ <br/> ~"+dataOUT.price_buy1+" : "+dataOUT.vol_buy1+"$</label>");
+                            $("#vol2_buy_mk_bin_Bitget_" + dataOUT.symbol).html("<label class='uk-text-primary'>~"+dataOUT.price_buy2+" : "+dataOUT.vol_buy2+"$ <br/> ~"+dataOUT.price_buy3+" : "+dataOUT.vol_buy3+"$ </label>");
+                            $("#vol1_sell_mk_bin_Bitget_" + dataOUT.symbol).html("<label class='uk-text-danger'>~"+dataOUT.price_sell+" : "+dataOUT.vol_sell+"$ <br/> ~"+dataOUT.price_sell1+" : "+dataOUT.vol_sell1+"$ </label>");
+                            $("#vol2_sell_mk_bin_Bitget_" + dataOUT.symbol).html("<label class='uk-text-danger'>~"+dataOUT.price_sell2+" : "+dataOUT.vol_sell2+"$  <br/> ~"+dataOUT.price_sell3+" : "+dataOUT.vol_sell3+"$ </label>");
+
+                            callback(null, dataOUT);
+                    } 
+                },
+                error: function(error) {
+                    callback('Error calling API pertama: ' + error);
+                    toastr.error('KONEKSI BITGET GAGAL, TOKEN '+coins.symbol+' !!');
+                    selesaiProsesAnggota();
+                }
+            });
+        }
+
+        function LogEksekusi(dex, posisi, token, modal, PNL, priceBUY, priceSELL, FeeSwap, totalFee, wd, selisihPersen) {
+                console.log("---- " + dex.toUpperCase() + " # " + posisi + " : " + token + " ---  ");
+                console.log(" MODAL : " + modal);
+                console.log(" PRICE BUY : " + priceBUY);
+                console.log(" PRICE SELL : " + priceSELL);
+                console.log(" PNL : " + PNL);
+                console.log(" FILTER PNL : " + BBTX_savedModal.FilterPNL);
+                console.log(" TOTAL FEE : " + totalFee);
+                console.log(" FEE WD : " + wd);
+                console.log(" GAS : " + localStorage.getItem('BBTX_gasGWEI'));
+                console.log(" PRICE "+BaseFEEDEX+" : " + localStorage.getItem('BBTX_PriceGAS'));
+                console.log(" FEE SWAP : " + FeeSwap);
+                console.log(" PNL NETTO : " + (Number(PNL) - Number(totalFee)));
+                console.log(" PERSEN : " + selisihPersen);
+                console.log("-------------------------  ");
+            }
+
+        function EntryTable(action, posisi, SymbolCEX, NameToken, price, wd, FeeSwap, totalFee) {
+                if (action == "sell") {
+                    $("#cex_buy_" + posisi + "_" + NameToken + "").html("<a href=https://www.bitget.com/spot/"+SymbolCEX+" target=_blank ><label class=uk-text-primary>" + price + " </label></a> <a href=https://www.bitget.com/asset/withdraw target=_blank> <br/> <label class=uk-text-primary>WD:" + (wd).toFixed(2) + "#SW:" + (FeeSwap).toFixed(3) + "</label> </a>");
+                }
+
+                if (action == "buy") {
+                    $("#cex_sell_" + posisi + "_" + NameToken + "").html("<a href=https://www.bitget.com/spot/"+SymbolCEX+" target=_blank ><label class=uk-text-danger>" + price + "</a> </label> <a href=https://www.bitget.com/asset/recharge?coinId=2 target=_blank> <br/> <label class=uk-text-secondary>DP:</label><label class=uk-text-danger>-" + totalFee.toFixed(2) + "#SW:" + parseFloat(FeeSwap).toFixed(3) + "</label></a>");
+                }
+
+            }
+
+        function InfoSinyal(side, action, posisi, DEXPLUS, NameToken, PNL, totalFee, Nama_Chain) {
+            var newLocalStorageKey = 'BBTX_' + side + DEXPLUS + 'Sinyal';
+            var newElementID = '#l' + side + DEXPLUS + 'Sinyal';
+
+            var currentSinyal = parseInt(localStorage.getItem(newLocalStorageKey) || "0", 10);
+            var newSinyal = currentSinyal + 1;
+
+            localStorage.setItem(newLocalStorageKey, newSinyal);
+            $(newElementID).text(localStorage.getItem(newLocalStorageKey));
+
+            var sLink = action === "sell" ? "<a href='#cex_buy_" + posisi + "_"+NameToken+"' class='sell-link'>" + NameToken + "</a>" :
+                "<a href='#cex_sell_" + posisi + "_"+NameToken+"' class='buy-link'>" + NameToken + "</a>";
+            $("#sinyal" + DEXPLUS.toLowerCase()).append(' ' + sLink + ':' + (PNL - totalFee).toFixed(1) + '$ |');
+            $("a." + (action === "sell" ? 'sell-link' : 'buy-link')).css('color', action === "sell" ? 'green' : 'red');
+            $("#cex_" + (action === "sell" ? 'buy' : 'sell') + "_" + posisi+ "_"+NameToken+"").addClass('ijo');
+        }
+        
+        function cekHarga1INCH(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS,PriceRate) {
+                var Kiri1INCHSinyal = parseInt(localStorage.getItem('BBTX_Kiri1INCHSinyal'));
+                var Kanan1INCHSinyal = parseInt(localStorage.getItem('BBTX_Kanan1INCHSinyal'));
+                var ISERVERCORS = parseInt(localStorage.getItem('BBTX_SERVERCORS'));
+
+                var ServerCORS = (action === "sell") ? (parseInt(ServerCORS) + parseInt(groupSize)) : ServerCORS;
+
+                var amount_in = Math.pow(10, des_input) * amount;
+                var amount_in = BigInt(Math.round(Number(amount_in)));
+
+                var NameToken=GantiSymbol(symbol,"USDT","");
+
+                var apiUrl = "https://api-defillama.1inch.io/v5.2/" + Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
+
+                $.ajax({
+                    url: apiUrl,
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json",
+                        'Content-Type': "application/json; charset=utf-8"
+                    },
+                    timeout: parseInt(BBTX_savedSettingData.waktuTunggu) * 1000,
+                    beforeSend: function () {
+                        $("#dex_" + action + "_" + posisi).html('load..');
+                    },
+                    success: function (response, textStatus, xhr) {
+                        setTimeout(function () {
+                            if (xhr.status === 200 && !response) {
+                                // Tangani kasus ketika status 200 tapi tidak ada respons
+                                var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=# title='NO RESPONSE'>ERROR-X</a>");
+                            } else {
+                                //console.log(response)
+                                var amount_out = parseFloat(response.toAmount) / Math.pow(10, des_output);
+                                var FeeSwap = ((response.gas / Math.pow(10, 9) *parseFloat( localStorage.getItem('BBTX_gasGWEI'))))  *parseFloat( localStorage.getItem('BBTX_PriceGAS'));
+
+                                if (action == "sell") {
+                                    var PNL = parseFloat(amount_out*PriceRate - modal);
+                                    var priceDEX =((Number(modal)+PNL)/(modal/price)).toFixed(8); 
+
+                                    var totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                                    var selisihPersen = ((priceDEX - price) / price) * 100;
+
+                                    EntryTable(action, "mk_bin_1inch", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                    LogEksekusi("1INCH", "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen);
+                                }
+
+                                if (action == "buy") {
+
+                                    var priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                                    var PNL = parseFloat(((modal / priceDEX) * price) - modal);
+
+                                    var totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+                                    var selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+
+                                    EntryTable(action, "mk_1inch_bin", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                    LogEksekusi("1INCH", "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen);
+
+                                }
+
+                                if (BBTX_savedModal.FilterPNL == 0) {
+                                    $('#LFilterPNL').text('> FEE');
+                                    var filterPNLValue = totalFee + (modal * 0.1 / 100);
+                                } else {
+                                    var filterPNLValue = parseFloat(BBTX_savedModal.FilterPNL);
+                                }
+
+                                if (PNL > filterPNLValue) {
+                                    if (action === "sell") {
+                                        InfoSinyal('Kiri', 'sell', "mk_bin_1inch", "1INCH", NameToken, PNL, totalFee);
+                                        MultisendMessage(Nama_Chain, "1INCH", 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee);
+                                    } else if (action === "buy") {
+                                        InfoSinyal('Kanan', 'buy', "mk_1inch_bin", "1INCH", NameToken, PNL, totalFee)
+                                        MultisendMessage(Nama_Chain, "1INCH", 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee);
+                                    }
+
+                                    var warna = "ijo";
+                                    var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label uk-label-success'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                                } else {
+                                    var warna = "";
+                                    var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-text-danger'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                                }
+
+                                var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=https://app.1inch.io/#/" + Kode_Chain + "/advanced/swap/" + sc_input + "/" + sc_output + " target=_blank>" + priceDEX + "</a></br>" + PNL + "");
+                                var currentRow = $("#dex_" + action + "_" + posisi).toggleClass(warna);
+                                currentRow.append();
+                            }
+                        }, 0);
+                    },
+                    error: function (xhr, status, error) {
+                        if (status === "timeout") {
+                            var warna = "merah";
+                            var alert = " DI SKIP ";
+                        } else if (xhr.status === 0) {
+                            var warna = "merah";
+                            var alert = "NOL RESPONSE - SERING SCAN";
+                        } else if (xhr.status == 200) {
+                            var warna = "merah";
+                            var alert = "RESPONSE KOSONG";
+                        } else if (xhr.status == 429) {
+                            var warna = "merah";
+                            var alert = "KENA LIMIT";
+                        } else if (xhr.status === 403) {
+                            var warna = "merah";
+                            var alert = "TERBLOKIR"
+                        } else if (xhr.status === 401) {
+                            var warna = "merah";
+                            var alert = "GAGAL RESPON"
+                        } else if (xhr.status === 404) {
+                            var warna = "merah";
+                            var alert = "Permintaan tidak ditemukan";
+                        } else if (xhr.status === 400) {
+                            var warna = "merah";
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            if (errorResponse && errorResponse.description == "insufficient liquidity") {
+                                var alert = "NO LP";
+                            } else {
+                                var alert = "KONEKSI BURUK";
+                            }
+                        }
+                        else if (xhr.status === 500) {
+                            var warna = "merah";
+                            var alert = "Kesalahan server internal";
+                        } else if (xhr.status === 503) {
+                            var warna = "merah";
+                            var alert = "Layanan tidak tersedia";
+                        } else if (xhr.responseJSON && xhr.responseJSON.error) {
+                            var alert = xhr.responseJSON.error;
+                        } else {
+                            var warna = "merah";
+                            var alert = xhr.status;
+                        }
+
+                        if (action === "buy") {
+                            $("#cex_sell_" + posisi).addClass(warna);
+                        }
+
+                        if (action === "sell") {
+                            $("#cex_buy_" + posisi).addClass(warna);
+                        }
+                        var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=https://app.1inch.io/#/" + Kode_Chain + "/advanced/swap/" + sc_input + "/" + sc_output + " title='" + alert + "' target=_blank>ERROR</a>").toggleClass(warna);
+                        currentRow.append();
+                    },
+                    complete: function () {
+                        selesaiProsesAnggota();
+                    },
+                });
+            }
+             
+        function cekHargaODOS(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS,PriceRate) {
+            var listlpodos = JSON.parse(localStorage.getItem("BBTX_LPODOS"));
+            var KiriODOSSinyal = parseInt(localStorage.getItem('BBTX_KiriODOSSinyal'));
+            var KananODOSSinyal = parseInt(localStorage.getItem('BBTX_KananODOSSinyal'));
+            var ISERVERCORS = parseInt(localStorage.getItem('BBTX_SERVERCORS'));
+
+            var ServerCORS = (action === "sell") ? (parseInt(ServerCORS) + parseInt(groupSize)) : ServerCORS;
+
+            var amount_in = Math.pow(10, des_input) * amount;
+            var amount_in = BigInt(Math.round(Number(amount_in)));
+
+            var NameToken=GantiSymbol(symbol,"USDT","");
+
+            var apiUrl = "https://api.odos.xyz/sor/quote/v2";
+            var requestData = {
+                chainId: Kode_Chain,
+                inputTokens: [
+                    {
+                        amount: amount_in.toString(),
+                        tokenAddress: sc_input,
+                    },
+                ],
+                outputTokens: [
+                    {
+                        proportion: 1,
+                        tokenAddress: sc_output,
+                    },
+                ],
+                sourceWhitelist: listlpodos,
+                referralCode: 0,
+                slippageLimitPercent: 0.3,
+            };
+
+            $.ajax({
+                url: apiUrl,
+                type: "POST",
+                dataType: "json",
+                timeout: parseInt(BBTX_savedSettingData.waktuTunggu) * 1000,
+                contentType: "application/json",
+                data: JSON.stringify(requestData),
+                beforeSend: function () {
+                    $("#dex_" + action + "_" + posisi).html('load..');
+                },
+                success: function (response, textStatus, xhr) {
+                    setTimeout(function () {
+                        if (xhr.status === 200 && !response) {
+                            // Tangani kasus ketika status 200 tapi tidak ada respons
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=# title='NO RESPONSE'>ERROR</a>").toggleClass("limit");
+                        }
+                        else {
+                            //console.log(response)
+                            var amount_out = response.outValues;
+                            var FeeSwap = response.gasEstimateValue;
+
+                            if (action == "sell") {
+                                var PNL = Number(amount_out - modal);
+                                var priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(9);
+
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                                var selisihPersen = ((priceDEX - price) / price) * 100;
+
+                                EntryTable(action, "mk_bin_odos", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("ODOS", "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (action == "buy") {
+
+                                var amount_out = parseFloat(response.outAmounts) / Math.pow(10, des_output);
+                                var priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                                var PNL = ((modal / priceDEX) * price) - modal;
+
+                                var selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+
+                                EntryTable(action, "mk_odos_bin", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("ODOS", "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (BBTX_savedModal.FilterPNL == 0) {
+                                $('#LFilterPNL').text('> FEE');
+                                var filterPNLValue = totalFee + (modal * 0.1 / 100);
+                            } else {
+                                var filterPNLValue = parseFloat(BBTX_savedModal.FilterPNL);
+                            }
+
+                            if (PNL > filterPNLValue) {
+                                if (action === "sell") {
+                                    InfoSinyal('Kiri', 'sell', "mk_bin_odos", "ODOS", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, "ODOS", 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee);
+                                } else if (action === "buy") {
+                                    InfoSinyal('Kanan', 'buy', "mk_odos_bin", "ODOS", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, "ODOS", 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee);
+                                }
+
+                                var warna = "ijo";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label uk-label-success'>" + (PNL - totalFee).toFixed(2) + "</span>";
+
+                            } else {
+                                var warna = "";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-text-danger'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                            }
+
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://app.odos.xyz target=_blank>" + priceDEX + "</a></br>" + PNL + "");
+                            var currentRow = $("#dex_" + action + "_" + posisi).toggleClass(warna);
+                            currentRow.append();
+                        }
+                    }, 0);
+                },
+                error: function (xhr, status, error) {
+                    var warna = "merah";
+                    if (status === "timeout") {
+                        var warna = "merah";
+                        var alert = "DI SKIP";
+                    } else if (xhr.status == 400) {
+                        var errorResponse = JSON.parse(xhr.responseText);
+                        var alert = errorResponse.detail;
+                    } else if (xhr.status == 429) {
+                        var warna = "merah";
+                        var alert = " KENA LIMIT ";
+                    } else if (xhr.status == 200) {
+                        var warna = "merah";
+                        var alert = "NO RESPONSE";
+                    } else if (xhr.status == 0) {
+                        var warna = "merah";
+                        var alert = "NO RESPONSE";
+                    } else {
+                        var alert = xhr.status;
+                    }
+
+                    if (action === "buy") {
+                        $("#cex_sell_" + posisi).addClass(warna);
+                    }
+
+                    if (action === "sell") {
+                        $("#cex_buy_" + posisi).addClass(warna);
+                    }
+
+                    var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=https://app.odos.xyz title='" + alert + "' target=_blank>ERROR</a>").toggleClass(warna);
+                    currentRow.append();
+                },
+                complete: function () {
+                    selesaiProsesAnggota();
+                },
+            });
+        }
+       
+        function cekHargaMATCHA(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, key, wd, PriceRate) {
+            var amount_in = Math.pow(10, des_input) * amount;
+            var amount_in = BigInt(Math.round(Number(amount_in)));
+
+            var KiriMATCHASinyal = parseInt(localStorage.getItem('BBTX_KiriMATCHASinyal'));
+            var KananMATCHASinyal = parseInt(localStorage.getItem('BBTX_KananMATCHASinyal'));
+
+            var NameToken=GantiSymbol(symbol,"USDT","");
+
+            var apiUrl = "https://"+Nama_Chain+".api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
+
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                headers: {
+                    '0x-api-key': key,
+                },
+                timeout: parseInt(BBTX_savedSettingData.waktuTunggu) * 1000,
+                beforeSend: function () {
+                    $("#dex_" + action + "_" + posisi).html('load..');
+                },
+                success: function (response, textStatus, xhr) {
+                    setTimeout(function () {
+                        if (xhr.status === 200 && !response) {
+                            // Tangani kasus ketika status 200 tapi tidak ada respons
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=# title='NO RESPONSE'>ERROR</a>").toggleClass("limit");
+                        } else {
+                            //console.log(response)
+                            var amount_out = response.buyAmount / Math.pow(10, des_output);
+                            var FeeSwap = ((response.estimatedGas / Math.pow(10, 9)) *parseFloat( localStorage.getItem('BBTX_gasGWEI')))  *parseFloat( localStorage.getItem('BBTX_PriceGAS'));
+
+                            if (action == "sell") {
+
+                                var PNL = Number(amount_out*PriceRate - modal);
+                                var priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(9);;
+
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                                var selisihPersen = ((priceDEX - price) / price) * 100;
+
+                                EntryTable(action, "mk_bin_matcha", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("MATCHA", "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen);
+
+                            }
+
+                            if (action == "buy") {
+
+                                var amount_out = parseFloat(response.buyAmount) / Math.pow(10, des_output);
+                                var priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                                var PNL = ((modal / priceDEX) * price) - modal;
+
+                                var selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+
+                                EntryTable(action, "mk_matcha_bin", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("MATCHA", "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (BBTX_savedModal.FilterPNL == 0) {
+                                $('#LFilterPNL').text('> FEE');
+                                var filterPNLValue = totalFee + (modal * 0.1 / 100);
+                            } else {
+                                var filterPNLValue = parseFloat(BBTX_savedModal.FilterPNL);
+                            }
+
+                            if (PNL > filterPNLValue) {
+                                if (action === "sell") {
+                                    InfoSinyal('Kiri', 'sell', "mk_bin_matcha", "MATCHA", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, "MATCHA", 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee);
+                                } else if (action === "buy") {
+                                    InfoSinyal('Kanan', 'buy', "mk_matcha_bin", "MATCHA", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, "MATCHA", 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee);
+                                }
+
+                                var warna = "ijo";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label uk-label-success'>" + (PNL - totalFee).toFixed(2) + "</span>";
+
+                            } else {
+                                var warna = "";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-text-danger'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                            }
+
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://matcha.xyz/tokens/" + Nama_Chain + "/" + sc_input.toLowerCase() + "?buyChain=" + Kode_Chain + "&buyAddress=" + sc_output.toLowerCase() + " target=_blank>" + priceDEX + "</a></br>" + PNL + "");
+                            var currentRow = $("#dex_" + action + "_" + posisi).toggleClass(warna);
+                            currentRow.append();
+                        }
+                    }, 0);
+                },
+                error: function (xhr, status, error) {
+                    var warna = "merah";
+                    if (status === "timeout") {
+                        var warna = "merah";
+                        var alert = " DI SKIP ";
+                    } else if (xhr.status == 400) {
+                        var errorResponse = JSON.parse(xhr.responseText);
+                        //var alert = "NO LP";  
+                        var alert = errorResponse;
+                    } else if (xhr.status == 429) {
+                        var warna = "merah";
+                        var alert = " KENA LIMIT ";
+                    } else if (xhr.status == 200) {
+                        var warna = "merah";
+                        var alert = " NO RESPONSE";
+                    } else if (xhr.status == 0) {
+                        var alert = " CORS";
+                    } else {
+                        var alert = xhr.status;
+                    }
+
+                    if (action === "buy") {
+                        $("#cex_sell_" + posisi).addClass(warna);
+                    }
+
+                    if (action === "sell") {
+                        $("#cex_buy_" + posisi).addClass(warna);
+                    }
+                    var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://matcha.xyz/tokens/" + Nama_Chain + "/" + sc_input + " title='" + alert + "' target=_blank>ERROR</a>").toggleClass(warna);
+                    currentRow.append();
+                },
+                complete: function () {
+                    selesaiProsesAnggota();
+                },
+            });
+        }
+       
+        function cekHargaKYBER(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS,PriceRate) {
+            var amount_in = Math.pow(10, des_input) * amount;
+            var amount_in = BigInt(Math.round(Number(amount_in)));
+
+            var KiriKYBERSWAPSinyal = parseInt(localStorage.getItem('BBTX_KiriKYBERSWAPSinyal'));
+            var KananKYBERSWAPSinyal = parseInt(localStorage.getItem('BBTX_KananKYBERSWAPSinyal'));
+
+            var NameToken=GantiSymbol(symbol,"USDT","");
+
+            var ISERVERCORS = parseInt(localStorage.getItem('BBTX_SERVERCORS'));
+
+            var ServerCORS = (action === "sell") ? (parseInt(ServerCORS) + parseInt(groupSize)) : ServerCORS;
+
+            var apiUrl = BBTX_savedSettingData.SERVERCORS[ISERVERCORS][ServerCORS] + "https://aggregator-api.kyberswap.com/" + Nama_Chain + "/route/encode?tokenIn=" + sc_input + "&tokenOut=" + sc_output + "&amountIn=" + amount_in + "&to=0x2315FAa4CE7A4cEA50Ae9DEC252Be620c6e454ca&saveGas=0&gasInclude=1&slippageTolerance=1&clientData={%22source%22:%22DefiLlama%22}";
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                timeout: parseInt(BBTX_savedSettingData.waktuTunggu) * 1000,
+                beforeSend: function () {
+                    $("#dex_" + action + "_" + posisi).html('load..');
+                },
+                success: function (response, textStatus, xhr) {
+                    setTimeout(function () {
+                        if (xhr.status === 200 && !response) {
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=# title='NO RESPONSE'>ERROR</a>").toggleClass("limit");
+                        } else {
+                            //console.log(response)
+                            var amount_out = response.outputAmount / Math.pow(10, des_output);
+                            var FeeSwap = ((response.totalGas / Math.pow(10, 9)) *parseFloat( localStorage.getItem('BBTX_gasGWEI')))  *parseFloat( localStorage.getItem('BBTX_PriceGAS'));
+
+                            if (action == "sell") {
+                                var PNL = Number(amount_out*PriceRate - modal);
+                                var priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(8);
+
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                                var selisihPersen = ((priceDEX - price) / price) * 100;
+
+                                EntryTable(action, "mk_bin_kyberswap", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("KYBER", "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (action == "buy") {
+                                var priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                                var PNL = (amount_out * price) - modal;
+
+                                var selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+
+                                EntryTable(action, "mk_kyberswap_bin", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("KYBER", "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (BBTX_savedModal.FilterPNL == 0) {
+                                $('#LFilterPNL').text('> FEE');
+                                var filterPNLValue = totalFee + (modal * 0.1 / 100);
+                            } else {
+                                var filterPNLValue = parseFloat(BBTX_savedModal.FilterPNL);
+                            }
+
+                            if (PNL > filterPNLValue) {
+                                if (action === "sell") {
+                                    InfoSinyal('Kiri', 'sell', "mk_bin_kyberswap", "KYBERSWAP", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, "KYBERSWAP", 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee);
+                                } else if (action === "buy") {
+                                    InfoSinyal('Kanan', 'buy', "mk_kyberswap_bin", "KYBERSWAP", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, "KYBERSWAP", 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee);
+                                }
+
+                                var warna = "ijo";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label uk-label-success'>" + (PNL - totalFee).toFixed(2) + "</span>";
+
+                            } else {
+                                var warna = "";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-text-danger'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                            }
+
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://kyberswap.com/swap/" + Nama_Chain + "/" + NameToken + "-to-usdt target=_blank>" + priceDEX + "</a></br>" + PNL + "");
+                            var currentRow = $("#dex_" + action + "_" + posisi).toggleClass(warna);
+                            currentRow.append();
+                        }
+                    }, 0);
+                },
+                error: function (xhr, status, error) {
+                    var warna = "merah";
+                    if (status === "timeout") {
+                        var warna = "merah";
+                        var alert = " DI SKIP ";
+                    } else if (xhr.status == 400) {
+                        var errorResponse = JSON.parse(xhr.responseText);
+                        var alert = errorResponse;
+                    } else if (xhr.status == 429) {
+                        var alert = "LIMITED";
+                    } else if (xhr.status == 200) {
+                        var warna = "merah";
+                        var alert = " NO RESPONSE";
+                    } else if (xhr.status == 0) {
+                        var alert = " CORS";
+                    } else {
+                        var alert = xhr.status;
+                    }
+
+                    if (action === "buy") {
+                        $("#cex_sell_" + posisi).addClass(warna);
+                    }
+
+                    if (action === "sell") {
+                        $("#cex_buy_" + posisi).addClass(warna);
+                    }
+
+                    var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://kyberswap.com/swap/" + Nama_Chain + "/" + NameToken + "-to-usdt title='" + alert + "' target=_blank>ERROR</a>").toggleClass(warna);
+                    currentRow.append();
+                },
+                complete: function () {
+                    selesaiProsesAnggota();
+                },
+            });
+        }
+        
+        function cekHargaPARA(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS,PriceRate) {
+            var amount_in = amount;
+            var amount_in = Math.pow(10, des_input) * amount;
+            var amount_in = BigInt(Math.round(Number(amount_in)));
+
+            var KiriPARASWAPSinyal = parseInt(localStorage.getItem('BBTX_KiriPARASWAPSinyal'));
+            var KananPARASWAPSinyal = parseInt(localStorage.getItem('BBTX_KananPARASWAPSinyal'));
+
+            var NameToken=GantiSymbol(symbol,"USDT","");
+
+            var ISERVERCORS = parseInt(localStorage.getItem('BBTX_SERVERCORS'));
+
+            var ServerCORS = (action === "sell") ? (parseInt(ServerCORS) + parseInt(groupSize)) : ServerCORS;
+
+            var apiUrl = "https://apiv5.PARASWAP.io/prices/?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                timeout: parseInt(BBTX_savedSettingData.waktuTunggu) * 1000,
+                beforeSend: function () {
+                    $("#dex_" + action + "_" + posisi).html('load..');
+                },
+                success: function (response, textStatus, xhr) {
+                    setTimeout(function () {
+                        if (xhr.status === 200 && !response) {
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("<a href=# title='NO RESPONSE'>ERROR</a>").toggleClass("limit");
+                        } else {
+                            //console.log(response)
+                            var amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
+                            var FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
+
+                            if (action == "sell") {
+                                var PNL = Number(amount_out*PriceRate - modal);
+                                var priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(8);;
+
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                                var selisihPersen = ((priceDEX - price) / price) * 100;
+
+                                EntryTable(action, "mk_bin_paraswap", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("PARA", "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (action == "buy") {
+                                var priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                                var PNL = (amount_out * price) - modal;
+
+                                var selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+                                var totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+
+                                EntryTable(action, "mk_paraswap_bin", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi("PARA", "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            if (BBTX_savedModal.FilterPNL == 0) {
+                                $('#LFilterPNL').text('> FEE');
+                                var filterPNLValue = totalFee + (modal * 0.1 / 100);
+                            } else {
+                                var filterPNLValue = parseFloat(BBTX_savedModal.FilterPNL);
+                            }
+
+                            if (PNL > filterPNLValue) {
+                                if (action === "sell") {
+                                    InfoSinyal('Kiri', 'sell', "mk_bin_paraswap", "PARASWAP", NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, 'PARASWAP', 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee);
+                                } else if (action === "buy") {
+                                    InfoSinyal('Kanan', 'buy', "mk_paraswap_bin", "PARASWAP", NameToken, PNL, totalFee)
+                                    MultisendMessage(Nama_Chain, 'PARASWAP', 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee);
+                                }
+
+                                var warna = "ijo";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label uk-label-success'>" + (PNL - totalFee).toFixed(2) + "</span>";
+
+                            } else {
+                                var warna = "";
+                                var PNL = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-text-danger'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                            }
+
+                            var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://app.paraswap.io/#/" + sc_input + "-" + sc_output + "SELL?version=6.2&network=" + Nama_Chain + "" + NameToken + "-to-usdt target=_blank>" + priceDEX + "</a></br>" + PNL + "");
+                            var currentRow = $("#dex_" + action + "_" + posisi).toggleClass(warna);
+                            currentRow.append();
+                        }
+                    }, 0);
+                },
+                error: function (xhr, status, error) {
+                    var warna = "merah";
+                    if (status === "timeout") {
+                        var warna = "merah";
+                        var alert = " DI SKIP ";
+                    } else if (xhr.status == 400) {
+                        var errorResponse = JSON.parse(xhr.responseText);
+                        var alert = errorResponse;
+                    } else if (xhr.status == 429) {
+                        var alert = "LIMITED";
+                    } else if (xhr.status == 200) {
+                        var warna = "merah";
+                        var alert = " NO RESPONSE";
+                    } else if (xhr.status == 0) {
+                        var alert = " CORS";
+                    } else {
+                        var alert = xhr.status;
+                    }
+
+                    if (action === "buy") {
+                        $("#cex_sell_" + posisi).addClass(warna);
+                    }
+
+                    if (action === "sell") {
+                        $("#cex_buy_" + posisi).addClass(warna);
+                    }
+
+                    var currentRow = $("#dex_" + action + "_" + posisi).html("  <a href=https://app.paraswap.io/#/" + NameToken + "-to-usdt title='" + alert + "' target=_blank>ERROR</a>").toggleClass(warna);
+                    currentRow.append();
+                },
+                complete: function () {
+                    selesaiProsesAnggota();
+                },
+            });
+        }
+    
+        function cekHargaSWOOP(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, cex,PriceRate, ServerCORS) {
+            var amount_in = Math.pow(10, des_input) * amount;
+            var amount_in = BigInt(Math.round(Number(amount_in)));
+
+            var NameToken=GantiSymbol(symbol,"USDT","");
+            var NameToken=GantiSymbol(symbol,"USDT","");
+
+            var adjustedServerCORS = (action === "sell") ? (parseInt(ServerCORS) + parseInt(groupSize)) : ServerCORS;
+            var ISERVERCORS = parseInt(localStorage.getItem('BBTX_SERVERCORS'));
+
+            var payload = {
+                "chainId": Kode_Chain,
+                "aggregatorSlug": cex,
+                "sender": BBTX_savedSettingData.walletMETA,
+                "inToken": {
+                    "chainId": Kode_Chain,
+                    "type": "TOKEN",
+                    "address": sc_input,
+                    "decimals": parseFloat(des_input)
+                },
+                "outToken": {
+                    "chainId": Kode_Chain,
+                    "type": "TOKEN",
+                    "address": sc_output,
+                    "decimals": parseFloat(des_output)
+                },
+                "amountInWei": String(amount_in),
+                "slippageBps": "100",
+                 "gasPriceGwei": Number(localStorage.getItem('BBTX_gasGWEI')),
+            };
+
+            $.ajax({
+                url: 'https://swoop-backend.up.railway.app/swap',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(payload),
+                timeout: parseInt(BBTX_savedSettingData.waktuTunggu) * 1000,
+                beforeSend: function () {
+                    $("#dex_" + action + "_" + posisi).html('Load...');
+                },
+                success: function (response, textStatus, xhr) {
+                    setTimeout(function () {
+                        if (xhr.status === 200 && !response || xhr.status === 0) {
+                            $("#dex_" + action + "_" + posisi).html("<a href='#' title='NO RESPONSE'>ERROR</a>").toggleClass("error");
+                        } else {
+                            var amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
+                            var FeeSwap, PNL, priceDEX, totalFee, selisihPersen;
+
+                            // Inisialisasi priceDEX
+                            priceDEX = '';
+                            
+//                                var FeeSwap = ((response.gas / Math.pow(10, 9) *parseFloat( localStorage.getItem('BBTX_gasGWEI'))))  *parseFloat( localStorage.getItem('BBTX_PriceGAS'));
+
+                            if (action === "sell") {
+                                FeeSwap = ((response.feeWei / Math.pow(10, des_output)* localStorage.getItem('BBTX_gasGWEI')))  *parseFloat( localStorage.getItem('BBTX_PriceGAS')) ;
+                                PNL = parseFloat((amount_out*PriceRate) - modal);
+                                priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(8);
+                                totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                                selisihPersen = ((priceDEX - price) / price) * 100;
+
+                                EntryTable(action, "mk_bin_" + cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi(cex.toUpperCase(), "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen);
+                                
+                            }
+
+                            if (action === "buy") {
+                                FeeSwap = ((response.feeWei / Math.pow(10, des_output)) * price)*localStorage.getItem('BBTX_gasGWEI') ;
+                                priceDEX = parseFloat(modal / amount_out).toFixed(8);
+                                PNL = parseFloat(((modal / priceDEX) * price) - modal);
+                                totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+                                selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+
+                                EntryTable(action, "mk_" + cex + "_bin", symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                                LogEksekusi(cex.toUpperCase(), "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen);
+                            }
+
+                            var filterPNLValue = (BBTX_savedModal.FilterPNL == 0) ? (totalFee + 0.05) : parseFloat(BBTX_savedModal.FilterPNL);
+                           
+
+                            if (PNL > filterPNLValue) {
+
+                                if (action === "sell") {
+                                    InfoSinyal('Kiri', 'sell', "mk_bin_" + cex, cex, NameToken, PNL, totalFee);
+                                    MultisendMessage(Nama_Chain, cex.toUpperCase(), 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee);
+                                } else if (action === "buy") {
+                                    InfoSinyal('Kanan', 'buy', "mk_" + cex + "_bin", cex, NameToken, PNL, totalFee)
+                                    MultisendMessage(Nama_Chain, cex.toUpperCase(), 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee);
+                                }
+                                var warna = "ijo";
+                                var PNLText = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label uk-label-success'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                            } else {
+                                var warna = "";
+                                var PNLText = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-text-danger'>" + (PNL - totalFee).toFixed(2) + "</span>";
+                            }
+
+                            var dexURL = {
+                                'kyberswap': "https://kyberswap.com/swap/" + Nama_Chain + "/" + NameToken + "-to-usdt",
+                                'odos': "https://app.odos.xyz",
+                                'paraswap': "https://app.paraswap.io/#/" + sc_input + "-" + sc_output + "/BUY?version=6.2&network=" + Nama_Chain + ""
+                            }[cex] || "https://app.swoop.exchange";
+
+                            $("#dex_" + action + "_" + posisi).html("<a href='" + dexURL + "' target='_blank'>" + priceDEX + "</a></br>" + PNLText).toggleClass(warna);
+                        }
+                    }, 0);
+                },
+                error: function (xhr, status, error) {
+                    var warna, alert;
+                    switch (xhr.status) {
+                        case 0:
+                            warna = "merah";
+                            alert = "NOL RESPONSE - SERING SCAN";
+                            break;
+                        case 200:
+                            warna = "merah";
+                            alert = "RESPONSE KOSONG";
+                            break;
+                        case 429:
+                            warna = "merah";
+                            alert = "KENA LIMIT";
+                            break;
+                        case 403:
+                            warna = "merah";
+                            alert = "AKSES DIBLOK";
+                            break;
+                        case 404:
+                            warna = "merah";
+                            alert = "Permintaan tidak ditemukan";
+                            break;
+                        case 400:
+                            warna = "merah";
+                            alert = "KONEKSI BURUK";
+                            break;
+                        case 500:
+                            warna = "merah";
+                            alert = "" + (xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON.message : "GAGAL DAPATKAN DATA");
+                            break;
+                        case 503:
+                            warna = "merah";
+                            alert = "Layanan tidak tersedia";
+                            break;
+                        default:
+                            warna = "merah";
+                            alert = "Status: " + xhr.status;
+                            break;
+                    }
+
+                    if (action === "buy") {
+                        $("#cex_sell_" + posisi).addClass(warna);
+                    } else if (action === "sell") {
+                        $("#cex_buy_" + posisi).addClass(warna);
+                    }
+
+                    var dexURL = {
+                        'kyberswap': "https://kyberswap.com/swap/" + Nama_Chain + "/" + NameToken + "-to-usdt",
+                        'odos': "https://app.odos.xyz",
+                        'paraswap': "https://app.paraswap.io/#/" + sc_input + "-" + sc_output + "/BUY?version=6.2&network=" + Nama_Chain + ""
+                    }[cex] || "https://app.swoop.exchange";
+
+                    $("#dex_" + action + "_" + posisi).html("<a href='" + dexURL + "' title='" + alert + "' target='_blank'>" + "ERROR").toggleClass(warna);
+                },
+                complete: function () {
+                    selesaiProsesAnggota();
+                }
+            });
+        }
+
+        function Scanning(coins,index){
+                
+                var statusChecked = coins.status ? 'checked' : '';      
+                            var NameToken=GantiSymbol(coins.symbol,"USDT","");                            
+
+                             var linkStok= ' [ <a href="'+URL_Chain+'/token/'+coins.sc+'?a='+WALLETCEX+'" target="_blank"> STOK </a>]';
+  
+                            if ($('#ls').is(':checked')) {
+                                if ($('#D1INCH').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKiriKecil1INCH, index + 1, function (error, result) {
+                                        cekHarga1INCH(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_1inch_" + NameToken + "", result.feeWD, index, result.PriceRateBuy, function (error, response) {
+                                            console.warn(NameToken + "DONE KIRI KECIL 1INCH!");
+                                        });
+                                    });
+
+                                }
+                                if ($('#DODOS').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKiriKecilODOS, index + 1, function (error, result) {
+                                        if ($('#kiriSWOOP').is(':checked')) {
+                                            cekHargaSWOOP(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_odos_" + NameToken + "", result.feeWD, "odos", result.PriceRateBuy, index,function (error, response) { });
+                                        } else {
+                                            cekHargaODOS(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_odos_" + NameToken + "", result.feeWD, index, result.volsell,result.PriceRateBuy, function (error, response) { });
+                                        }
+                                    });
+                                }
+                                if ($('#DMATCHA').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKiriKecilMATCHA, index + 1, function (error, result) {
+                                        cekHargaMATCHA(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_matcha_" + NameToken + "", "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5", result.feeWD, result.PriceRateBuy,function (error, response) {
+                                            console.warn(NameToken + "DONE KIRI KECIL MATCHA!");
+                                        });
+                                    });
+                                }
+                                if ($('#DKYBERSWAP').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKiriKecilKYBERSWAP, index + 1, function (error, result) {
+                                        if (!error) {
+                                            if (result !== null) {
+                                                if ($('#kiriSWOOP').is(':checked')) {
+                                                    cekHargaSWOOP(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_kyberswap_" + NameToken + "", result.feeWD, "kyberswap", result.PriceRateBuy, index, function (error, response) { });
+                                                } else {
+                                                    cekHargaKYBER(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_kyberswap_" + NameToken + "", result.feeWD, index, result.PriceRateBuy, function (error, response) { });
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                                if ($('#DPARASWAP').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKiriKecilPARASWAP, index + 1, function (error, result) {
+                                        if ($('#kiriSWOOP').is(':checked')) {
+                                            cekHargaSWOOP(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_paraswap_" + NameToken + "", result.feeWD, "paraswap", result.PriceRateBuy, index,function (error, response) { });
+                                        } else {
+                                            cekHargaPARA(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_paraswap_" + NameToken + "", result.feeWD, index, result.PriceRateBuy, function (error, response) { });
+                                        }
+                                    });
+                                }
+                                //CEK DEXPLUS KIRI
+                                if ($('#DUNIZEN').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKiriKecilUNIZEN, index + 1, function (error, result) {
+                                        cekHargaSWOOP(result.modal, coins.sc, coins.desimal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "mk_bin_unizen_" + NameToken + "", result.feeWD,"unizen",result.PriceRateBuy,  index, function (error, response) { });
+                                    });
+                                }
+                            }
+
+                            //cek harga modal kecil dari kanan
+                            if ($('#rs').is(':checked')) {
+                                if ($('#D1INCH').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKananKecil1INCH, index + 1, function (error, result) {
+                                        if (!error) {
+                                            cekHarga1INCH(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_1inch_bin_" + NameToken + "", result.feeWD, index,result.PriceRateSell, function (error, response) {
+                                            });
+                                        } else {
+                                            console.error(error);
+                                        }
+                                    });
+                                }
+                                if ($('#DODOS').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKananKecilODOS, index + 1, function (error, result) {
+                                        if (!error) {
+                                            if ($('#kananSWOOP').is(':checked')) {
+                                                cekHargaSWOOP(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_odos_bin_" + NameToken + "", result.feeWD, "odos", result.PriceRateSell, index, function (error, response) { });
+                                            } else {
+                                                cekHargaODOS(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_odos_bin_" + NameToken + "", result.feeWD, index, result.PriceRateSell,function (error, response) { });
+                                            }
+                                        } else {
+                                            console.error(error);
+                                        }
+                                    });
+                                }
+                                if ($('#DMATCHA').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKananKecilMATCHA, index + 1, function (error, result) {
+                                        cekHargaMATCHA(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_matcha_bin_" + NameToken + "", "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5", result.feeWD, result.PriceRateSell, function (error, response) {
+                                        });
+                                    });
+                                }
+                                if ($('#DKYBERSWAP').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKananKecilKYBERSWAP, index + 1, function (error, result) {
+                                        if ($('#kananSWOOP').is(':checked')) {
+                                            cekHargaSWOOP(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_kyberswap_bin_" + NameToken + "", result.feeWD, "kyberswap", result.PriceRateSell, index, function (error, response) { });
+                                        } else {
+                                            cekHargaKYBER(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_kyberswap_bin_" + NameToken + "", result.feeWD, index, result.PriceRateSell, function (error, response) { });
+                                        }
+                                    });
+                                }
+                                if ($('#DPARASWAP').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKananKecilPARASWAP, index + 1, function (error, result) {
+                                        if (!error) {
+                                            if ($('#kananSWOOP').is(':checked')) {
+                                                cekHargaSWOOP(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_paraswap_bin_" + NameToken + "", result.feeWD, "paraswap", result.PriceRateSell, index, function (error, response) { });
+                                            } else {
+                                                cekHargaPARA(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_paraswap_bin_" + NameToken + "", result.feeWD,  index, result.PriceRateSell,  function (error, response) { });
+                                            }
+                                        } else {
+                                            console.error(error);
+                                        }
+                                    });
+                                }
+                                //CEK DEXPLUS KANAN
+                                if ($('#DUNIZEN').is(':checked')) {
+                                    getPriceBitget(coins, BBTX_savedModal.mKananKecilUNIZEN, index + 1, function (error, result) {
+                                        cekHargaSWOOP(result.modal, BBTX_savedSettingData.scAddressPair, BBTX_savedSettingData.desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "mk_unizen_bin_" + NameToken + "", result.feeWD, "unizen", result.PriceRateSell, index, function (error, response) {
+                                        });
+                                    });
+                                } 
+                                // else {
+                                //     toastr.error("DEXPLUS Belum DIPILIH");
+                                // }
+                            }
+               
+                                    var linkDefillama="<span style=color:orange;><a href=https://swap.defillama.com/?chain=ETHEREUM&from="+coins.sc+"&to="+BBTX_savedSettingData.scAddressPair+" target=_blank> DEFILLAMA</a></span>";
+                                    var linkUNIDEX ="<span style=color:orange;><a href=https://app.unidex.exchange/?chain=ETHEREUM&from="+coins.sc+"&to="+BBTX_savedSettingData.scAddressPair+" target=_blank> UNIDEX</a></span>";
+
+                                    $("#TabelBINANCE").append(
+                                        "<tr>" +
+                                            "<td  id=vol1_buy_mk_bin_Bitget_"+NameToken+"></td>" +
+                                            "<td  class=dx_1inch id=cex_buy_mk_bin_1inch_"+NameToken+"></td>" +
+                                            "<td  class=dx_odos id=cex_buy_mk_bin_odos_"+NameToken+"></td>" +
+                                            "<td  class=dx_kyberswap id=cex_buy_mk_bin_kyberswap_"+NameToken+"></td>" +                                          
+                                            "<td  class=dx_paraswap id=cex_buy_mk_bin_paraswap_"+NameToken+"></td>" +
+                                            "<td  class=dx_matcha id=cex_buy_mk_bin_matcha_"+NameToken+"></td>" +
+                                            "<td  class=dx_unizen id=cex_buy_mk_bin_unizen_"+NameToken+"></td>" +
+                                            "<td  rowspan=2 style=background-color:#87f6f6;> <b><span id=wallet_"+NameToken+"></span></b> </br>  <input type=checkbox class=statusKoinCheckbox data-index="+ coins.symbol +"  " + statusChecked + ">"+linkStok+" <a href="+URL_Chain+"/token/"+coins.sc+" target=_blank>[SC] </a><br/> "+linkDefillama+"<br/> "+linkUNIDEX+"</td>" +                      
+                                            "<td  class=dx_1inch id=dex_buy_mk_1inch_bin_"+NameToken+"></td>" +                                               
+                                            "<td  class=dx_odos id=dex_buy_mk_odos_bin_"+NameToken+"></td>" +    
+                                            "<td  class=dx_kyberswap id=dex_buy_mk_kyberswap_bin_"+NameToken+"></td>" +
+                                            "<td  class=dx_paraswap id=dex_buy_mk_paraswap_bin_"+NameToken+"></td>" +
+                                            "<td  class=dx_matcha id=dex_buy_mk_matcha_bin_"+NameToken+"></td>" +    
+                                            "<td  class=dx_unizen id=dex_buy_mk_unizen_bin_"+NameToken+"></td>" +
+                                            "<td  id=vol1_sell_mk_bin_Bitget_"+NameToken+"></td>" +   
+                                                                                                                    
+                                        "</tr>"+
+                                        "<tr>" +
+                                            "<td  id=vol2_buy_mk_bin_Bitget_"+NameToken+"></td>" +
+                                            "<td  class=dx_1inch id=dex_sell_mk_bin_1inch_"+NameToken+"></td>" +
+                                            "<td  class=dx_odos id=dex_sell_mk_bin_odos_"+NameToken+"></td>" +
+                                            "<td  class=dx_kyberswap id=dex_sell_mk_bin_kyberswap_"+NameToken+"></td>" +                                           
+                                            "<td  class=dx_paraswap id=dex_sell_mk_bin_paraswap_"+NameToken+"></td>" +
+                                            "<td  class=dx_matcha id=dex_sell_mk_bin_matcha_"+NameToken+"></td>" +
+                                            "<td  class=dx_unizen id=dex_sell_mk_bin_unizen_"+NameToken+"></td>" +
+                                           // "<td>xxxxxx</td>" +                    
+                                            "<td  class=dx_1inch id=cex_sell_mk_1inch_bin_"+NameToken+"></td>" +   
+                                            "<td  class=dx_odos id=cex_sell_mk_odos_bin_"+NameToken+"></td>" +     
+                                            "<td  class=dx_kyberswap id=cex_sell_mk_kyberswap_bin_"+NameToken+"></td>" +                                            
+                                            "<td  class=dx_paraswap id=cex_sell_mk_paraswap_bin_"+NameToken+"></td>" +
+                                            "<td  class=dx_matcha id=cex_sell_mk_matcha_bin_"+NameToken+"></td>" +    
+                                            "<td  class=dx_unizen id=cex_sell_mk_unizen_bin_"+NameToken+"></td>" +   
+                                            "<td  id=vol2_sell_mk_bin_Bitget_"+NameToken+"></td>" +                                                                    
+                                        "</tr>"
+                                    );            
+                                    updateTableVisibility();
+                                    checkStatusKoin(NameToken);
+    
+        }
+
+        function updateProgress(totalscanned,token){            
+            var countTrueStatus = localStorage.getItem("BBTX_TotalCoins");
+
+            var mulai = parseInt(localStorage.getItem('BBTX_startTime'));
+            var endTime = new Date().getTime(); // Waktu akhir setelah panggilan REST API berhasil
+
+            var duration = (endTime - mulai)/1000; // Durasi panggilan API dalam milidetik
+            localStorage.setItem("BBTX_duration",duration);
+
+
+            var perulangan = totalscanned / countTrueStatus;
+            $('#scanprogress').html('CHECK - '+token+' [ '+ totalscanned + ' / ' + countTrueStatus + ' coin] :: DURASI ['+parseFloat(duration/60).toFixed(2)+' Menit]').css("color", "blue");
+            $('#bar').css('width', (totalscanned / countTrueStatus * 100) + '%');
+
+            if(totalscanned >= countTrueStatus ){
+                
+                if(autorun == true){
+                    $('#scanprogress').html('Mengulangi scanning dalam 7 detik.');
+                    
+                    setTimeout(function(){ 
+                        $('tbody tr').remove();
+                        var startTime = new Date().getTime();
+                        localStorage.setItem('BBTX_startTime',startTime);
+                        
+                        setNullInfo()
+                        processTokenData(tokens, groupSize);
+                    }, 7000);
+                }else{
+                    $('#scanprogress').html('SCANNING SELESAI!! DURASI ['+parseFloat(duration/60).toFixed(2)+' Menit]');
+                    $("button#startSCAN.uk-button.uk-button-primary").show();
+                }
+            }
+        }
+
+        $("#refresh").click(function () {
+            location.reload();
+            //toastr.success('REFRESH DONE!!');
+            alert("REFRESH AKAN DILAKUKAN...!!");
+            $("button#startSCAN.uk-button.uk-button-primary").hide();
+        });
+
+        function sendStatusTELE(user, status) {
+            var users = [
+                { chat_id: BBTX_savedSettingData.ID_GRUP }
+            ];
+
+            var token = BBTX_savedSettingData.TOKEN;
+            var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
+
+            // Ambil data dari localStorage dan parse sebagai JSON object
+            var data = JSON.parse(localStorage.getItem('BBTX_ID'));
+
+            var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
+                "\n <b> MARKET : </b>" +Nama_Chain.toUpperCase()+' Bitget'+
+                "\n <b> ID UNIX : </b>" + data.id +
+                "\n <b> PROVIDER : </b> " + data.name +
+                "\n <b> IP : </b>" + data.ip+
+                "\n ----------------------------------------------";
+
+            // Loop melalui daftar pengguna
+            for (var i = 0; i < users.length; i++) {
+                var user = users[i];
+                var chatId = user.chat_id; // Ganti dengan ID chat pengguna
+
+                // Membuat permintaan POST menggunakan jQuery
+                $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function(response) {
+                    // console.log("Message sent successfully");
+                },
+                error: function(xhr, status, error) {
+                    console.log("Error sending message:", error);
+                }
+                });
+            }
+            }
+
+        function MultisendMessage(chain, dex, posisi, token, modal, PNL, priceBUY, priceSELL, FeeSwap, totalFee) {
+                var source = posisi === "KIRI" 
+                    ? "<b>#BITGET >>  " + dex.toUpperCase() + "</b>" 
+                    : posisi === "KANAN" 
+                    ? "<b>#" + dex.toUpperCase() + " >> BITGET</b>" 
+                    : "<b>Unknown Position</b>";
+
+                var opit=Number(PNL)-Number(totalFee);    
+
+                var message =
+                    "<b>#" + Nama_Chain.toUpperCase() + "</b> ~ " + localStorage.getItem('BBTX_user').toUpperCase() +
+                    " \n ----------------------------------------- \n SOURCE: " +source+
+                    " \n TOKEN: <b>#" + token + "</b> " +" | PROFIT: <b>" + opit.toFixed(2)  + "$ </b> " +
+                    " \n MODAL: <b> " + modal + "$</b> | PNL: <b>" + PNL.toFixed(2) + "$ </b> " +
+                    " \n <b>BUY: </b> " + priceBUY + "" +
+                    " \n <b>SELL: </b>" + priceSELL + " " +
+                    " \n FEETOTAL: <b>" + totalFee.toFixed(2) + "$</b> | SWAP:<b>" + FeeSwap.toFixed(2) + "$</b>" +
+                    " \n -----------------------------------------";
+
+                var users = [
+                    // { chat_id: 13706074884 },                
+                    { chat_id: BBTX_savedSettingData.ID_GRUP }
+                ];
+
+                var token = BBTX_savedSettingData.TOKEN;
+                var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
+
+                // Loop melalui daftar pengguna
+                for (var i = 0; i < users.length; i++) {
+                    var user = users[i];
+                    var chatId = user.chat_id; // Ganti dengan ID chat pengguna
+
+                    // Membuat permintaan POST menggunakan jQuery
+                    $.ajax({
+                        url: apiUrl,
+                        method: "POST",
+                        data: {
+                            chat_id: chatId,
+                            text: message,
+                            parse_mode: "HTML",
+                            disable_web_page_preview: true
+                        },
+                        success: function (response) {
+                            // console.log("Message sent successfully");
+                        },
+                        error: function (xhr, status, error) {
+                            // console.log("Error sending message:", error);
+                        }
+                    });
+                }
+            }
+
+
+
+});
+</script>
+
+</body>
+</html>
