@@ -23,7 +23,7 @@
       #scanbar {
         text-align: center;
         width:100%;
-        height:21px;
+        height:15px;
         border:1px solid #000;
         margin:5px 0px;
       }
@@ -37,7 +37,7 @@
         }
 
        img:hover {
-                transform: scale(1.5); /* You can adjust the scale factor as needed */
+                transform: scale(1.6); /* You can adjust the scale factor as needed */
             }
         a{
             color:black;
@@ -135,9 +135,8 @@
             color: black; /* Warna saat disabled */
         }
         .img-large {
-            width: 50px !important; /* Atur ukuran sesuai kebutuhan */
+            width: 60px !important; /* Atur ukuran sesuai kebutuhan */
             transition: transform 0.3s; /* Menambahkan efek animasi */
-            background-color: #f39999;
         }
         .text-large {
             font-size: 1em; /* Atur ukuran font sesuai kebutuhan */
@@ -150,6 +149,11 @@
             border-radius: 4px; /* Tambahkan border radius agar tampilan lebih halus */
             padding: 5px; /* Tambahkan padding agar lebih mencolok */
         }
+        .bagian{
+            margin: 0px 25px 0px 0px;
+            padding: 2px;
+            background-color: #d7ebc565;
+        }
 </style>
 
 </head>
@@ -157,7 +161,7 @@
    
     <div class="uk-text-center" style="margin-top: 20px;"> <!-- Mengurangi margin-top -->
         <h3 class="uk-margin-remove" style="font-size: 30px;">
-            <span class="uk-text" style="color: #f3b21b;"><label id="namachain"></label> MULTIMARKET v2.1</span>
+            <span class="uk-text" style="color: #f3b21b;"><label id="namachain"></label> MULTIMARKET v3.1</span>
             <span class="uk-margin-small-left">
                 <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
                 <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
@@ -310,12 +314,12 @@
                                         <input class="uk-input" type="number" id="inFilterPNL" value="0" name="filterpnl" >         
                                     </div>
                                     <div>
-                                        <label for="jeda-time-group" class="uk-text-danger">JEDA / GROUP {600}</label><br/>
-                                        <input class="uk-input" id="jeda-time-group" type="number" value="600" name="jeda-time-group" >
+                                        <label for="jeda-time-group" class="uk-text-danger">JEDA / GROUP {900}</label><br/>
+                                        <input class="uk-input" id="jeda-time-group" type="number" value="900" name="jeda-time-group" >
                                     </div>
                                     <div>
-                                        <label for="jeda-koin" class="uk-text-primary">JEDA / KOIN {250}</label><br/>
-                                        <input class="uk-input" type="number" id="jeda-koin" value="250" name="jeda-koin" > 
+                                        <label for="jeda-koin" class="uk-text-primary">JEDA / KOIN {400}</label><br/>
+                                        <input class="uk-input" type="number" id="jeda-koin" value="400" name="jeda-koin" > 
                                     </div>
                                 </div>
 
@@ -340,113 +344,127 @@
             </div>
         </div>
     </div>
-
     <div class="uk-container" style="margin-top: 10px;">
         <form>
-        <div class="uk-margin">
-             <div class="uk-grid uk-child-width-1-5@s " uk-grid>
-                <div class="uk-width-auto@m">
-                    <div>                    
-                        <b>
-                        <label class="uk-form-label uk-text-secondary">
-                        SETUP SCANNER : [<label class="uk-form-label uk-text-danger" id="JmlKoin"></label> PAIR ]</label>
-                           -
-                        <label class="uk-form-label uk-text-danger"><b>FILTER PNL :</b> </label> 
-                        <label class="uk-form-label uk-text-warning" id="LFilterPNL"></label> # 
-                        <label class="uk-form-label uk-text-danger"><b>GWEI :</b> </label> 
-                        <label class="uk-form-label uk-text-warning" id="LGwei"></label>                            
-                        </b>                        
-                        <br />
-                        
-                        <span id="server"><b>
-                            <label class="uk-form-label uk-text-warning">SERVER :</label>
-                            <label class="uk-form-label uk-text-warning">
-                                <input class="uk-radio" type="radio" value="0" checkbox name="urlRadio"> A
-                                <input class="uk-radio" type="radio" value="1" checkbox name="urlRadio"> B
-                                <input class="uk-radio" type="radio" value="2" checkbox name="urlRadio"> C
-                                <input class="uk-radio" type="radio" value="3" checkbox name="urlRadio"> D
-                                <input class="uk-radio" type="radio" value="4" checkbox name="urlRadio"> E
-                                -
-                                <input type="checkbox" class="uk-checkbox" checked id="ls" /> KIRI
-                                <input type="checkbox" class="uk-checkbox" checked id="rs" /> KANAN                        
+            <div class="uk-margin">
+                <!-- Informasi Setup -->
+                 <label>
+                    <b>
+                        <label class="uk-form-label uk-text-secondary"> INFO TOKEN : [ <label class="uk-form-label uk-text-primary" id="JmlKoin"></label> - PAIR TOKEN ] </label> &nbsp;   &nbsp;
+                        [
+                            <label class="uk-form-label uk-text-warning"><b>FILTER PNL :</b> </label>
+                            <label class="uk-form-label uk-text-warning" id="LFilterPNL"></label> # 
+                            <label class="uk-form-label uk-text-warning"><b>GWEI :</b> </label> 
+                            <label class="uk-form-label uk-text-warning" id="LGwei"></label>
+                        ] &nbsp;   &nbsp;
+                        <label class="uk-form-label uk-text-secondary" id="infojeda">
+                            [SPEED :
+                            <label class="uk-form-label uk-text-secondary">
+                                <label class="uk-form-label uk-text-success" id="Lwaktu-tunggu"></label> 
+                            </label>  #
+                            <label class="uk-form-label uk-text-success">
+                                <label class="uk-text uk-text-success" id="waktu">...</label>
                             </label>
-                        </b></span>
-                        <br/>
+                            ]  &nbsp;   &nbsp;
+                        </label> 
+                        <label class="uk-form-label uk-text-secondary">ACTION SCAN : 
+                            <label class="uk-form-label uk-text-danger">
+                                <input type="checkbox" class="uk-checkbox" checked id="ls" /> KIRI
+                                <input type="checkbox" class="uk-checkbox" checked id="rs" /> KANAN  
+                            </label>  
+                        </label>
+                        &nbsp; | &nbsp;
+                        <label class="uk-form-label uk-text-secondary">SORTING : 
+                            <label class="uk-form-label uk-text-primary">
+                                <input type="radio" name="toggle" checked value="option2"> A 
+                                <input type="radio" name="toggle" value="option1"> Z
+                                </label>  
+                        </label>
+                    </b>   
+                </label>
+                <br/>
+                <!-- Separator Line dengan Margin -->
+                <hr style="margin-top: 5px; margin-bottom: 5px;" />
+
+                <!-- Grid Layout yang Responsif dengan Kolom Dinamis -->
+                <div class="uk-grid uk-child-width-expand@s uk-grid-medium" uk-grid>
+    
+                    <!-- Kolom 1: Setup Scanner dan Filter -->
+                    <div class="uk-width-auto@m">
+                        <label class="uk-form-label uk-text-secondary">
+                            <span id="server"><b>
+                                <label class="uk-form-label uk-text-warning">SERVER :</label>
+                                <label class="uk-form-label uk-text-warning">
+                                    <input class="uk-radio" type="radio" value="0" name="urlRadio"> A
+                                    <input class="uk-radio" type="radio" value="1" name="urlRadio"> B
+                                    <input class="uk-radio" type="radio" value="2" name="urlRadio"> C
+                                    <input class="uk-radio" type="radio" value="3" name="urlRadio"> D
+                                    <input class="uk-radio" type="radio" value="4" name="urlRadio"> E
+                                </label>
+                            </b></span>
+                        </label>
+                    </div>
+    
+                    <!-- Kolom 2: Bagian Server dan CEX -->
+                    <div class="uk-width-auto@m">
                         <span id="cex">
-                            <!-- Bagian CEX -->
-                            <label class="uk-form-label uk-text-secondary"><b>CEX </b></label>
+                            <label class="uk-form-label uk-text-secondary"><b>CEX :</b></label>
                             <b>
                                 <label class="uk-form-label uk-text-secondary" id="cex-checkbox-container"></label>
                             </b>
-                        </span>                    
-                        <br />
-
+                        </span>    
+                    </div>
+    
+                    <!-- Kolom 3: DEX -->
+                    <div class="uk-width-auto@m">
                         <span id="dex">
                             <b>
-                            <label class="uk-form-label uk-text-primary">DEX :</label>
-                            <label class="uk-form-label uk-text-primary" > 
-                                <input type="checkbox" class="uk-checkbox cdx_1inch"  id="D1INCH" /> 1INCH    
-                                <input type="checkbox" class="uk-checkbox cdx_odos"  id="DODOS" /> ODOS
-                                <input type="checkbox" class="uk-checkbox cdx_0x"   id="D0X" /> MATCHA 
-                                <input type="checkbox" class="uk-checkbox cdx_kyberswap"   id="DKYBERSWAP" /> KYBER   
-                                <input type="checkbox" class="uk-checkbox cdx_paraswap"  id="DPARASWAP" /> PARA
-                            </label>       
+                                <label class="uk-form-label uk-text-primary">DEX :</label>
+                                <label class="uk-form-label uk-text-primary"> 
+                                    <input type="checkbox" class="uk-checkbox cdx_1inch" id="D1INCH" /> 1INCH    
+                                    <input type="checkbox" class="uk-checkbox cdx_odos" id="DODOS" /> ODOS
+                                    <input type="checkbox" class="uk-checkbox cdx_0x" id="D0X" /> MATCHA 
+                                    <input type="checkbox" class="uk-checkbox cdx_kyberswap" id="DKYBERSWAP" /> KYBER   
+                                    <input type="checkbox" class="uk-checkbox cdx_paraswap" id="DPARASWAP" /> PARA
+                                </label>       
                             </b>    
-                        </span>                   
-                        <br/>
-
-                        <!-- Bagian DEX PAIR -->
+                        </span>
+                    </div>
+    
+                    <!-- Kolom 4 DEX PAIR -->
+                    <div class="uk-width-auto@m">                       
                         <span id="dexpair">
                             <b>
-                                <label class="uk-form-label uk-text-danger">DEX PAIR(<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):</label>
+                                <label class="uk-form-label uk-text-danger">DEX PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):</label>
                                 <label class="uk-form-label uk-text-danger" id="dexpair-checkbox-container"></label>
-                            </b> # 
-                            <input type="radio" name="toggle" checked value="option2"> A 
-                            <input type="radio" name="toggle" value="option1"> Z
+                            </b> 
                             <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
                             <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START </button>
-                            
-                            <!-- <input type="checkbox" class="uk-checkbox" id="Cautorun" /> 
-                            <span class="uk-form-label uk-text-danger uk-text-small" id="autorun"> AUTO</span> -->
-                        </span>   
+                        </span>  
                     </div>
-                </div>        
-                 
-                <div class="uk-width-auto@m uk-width-expand@m">
-                    <label class="uk-form-label uk-text-warning">
-                        <b>INFO SINYAL  [SPEED :
-                        <label class="uk-form-label uk-text-secondary">
-                             <label class="uk-form-label uk-text-success" id="Lwaktu-tunggu"></label> 
-                        </label>  #
-                        <label class="uk-form-label uk-text-success">
-                            <label class="uk-text uk-text-primary" id="waktu">...</label>
-                        </label>
-                       ] :
-                        </b> 
-                    </label> 
-                    <div class="uk-text uk-text-small uk-text-secondary ">                        
-                        <b>1INCH</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> ]<br/> 
-                        <b>MATCHA</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> ]<br/> 
-                        <b>ODOS</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos">  </label> ]<br/>
-                        <b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]<br/> 
-                        <b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]<br/> 
-                    </div>
-                                           
-                    <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>      
                 </div>
-                
-            </div>  
-        </div> 
 
+                <!-- Bagian Sinyal DEX -->
+                <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container">
+                    <div class="sinyal-item" data-dex="1INCH"><b>1INCH</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="0X"><b>MATCHA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="ODOS"><b>ODOS</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="PARASWAP"><b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="KYBERSWAP"><b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]</div>
+                </div>
+                <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>
+            </div> 
         </form>
-        <label class="uk-text uk-text-success" id="hasil"></label> <div id="scanprogress" style="margin: 0px;">Wait</div> 
-
+    
+        <!-- Bagian Hasil dan Progress Bar -->
+        <label class="uk-text uk-text-success" id="hasil"></label> 
+        <div id="scanprogress" style="margin: 0px;">Wait</div> 
         <div id="scanbar">
             <div id="bar" style="text-align: center;"> </div>
         </div>
-        
     </div>
-      
+    
+
  <!-- TABEL HASIL SCANNER -->
  <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 5px;">
     <!-- Menambahkan max-width dan overflow-x untuk scroll horizontal -->
@@ -489,7 +507,7 @@
 </div>
 
     <script>
-       const _0x16cae6=_0x4a86;(function(_0x3f9961,_0xd0b61c){const _0x8559c0=_0x4a86,_0x1fba6a=_0x3f9961();while(!![]){try{const _0x123495=-parseInt(_0x8559c0(0x172))/0x1+parseInt(_0x8559c0(0x165))/0x2*(-parseInt(_0x8559c0(0x17a))/0x3)+-parseInt(_0x8559c0(0x16a))/0x4*(parseInt(_0x8559c0(0x18a))/0x5)+-parseInt(_0x8559c0(0x162))/0x6+parseInt(_0x8559c0(0x16e))/0x7+-parseInt(_0x8559c0(0x16d))/0x8+-parseInt(_0x8559c0(0x176))/0x9*(-parseInt(_0x8559c0(0x17e))/0xa);if(_0x123495===_0xd0b61c)break;else _0x1fba6a['push'](_0x1fba6a['shift']());}catch(_0x432f0c){_0x1fba6a['push'](_0x1fba6a['shift']());}}}(_0x4373,0x4c60b));function _0x4373(){const _0x16217c=['4wsnVGT','c006zQZk7RSBh7lmCn','add','1912880GaxbNR','1215606LqUSbB','uk-text-danger','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0x8894E0a0c962CB723c1976a4421c95949bE2D4E3','22410XCCNgt','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','keys','0x55d398326f99059fF775485246999027B3197955','18WkEKbN','input','USDT','appendChild','9wExDBS','BNB','BEP20','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','8944330EJncmu','createTextNode','uk-form-label','0xf89d7b9c864f589bbF53a82105107622B35EaA40','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','a184c3c1-65f2-4042-a043-c5c23c6ba258','createElement','2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','cex-checkbox-container','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','dexpair-checkbox','2569965LXhYaB','BSC\x20(BEP20)','label','BSC','innerHTML','d04cdb7f01e598b3493bda6aa913092b','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','3275322jFFkHq','classList','checkbox','218854YgsNNq','forEach','0xe2fc31F816A9b94326492132018C3aEcC4a93aE1','cex-checkbox','getElementById'];_0x4373=function(){return _0x16217c;};return _0x4373();}const Kode_Chain=0x38,Nama_Chain='bsc',URL_Chain='https://bscscan.com',DATAJSON='https://multiscan-ruby.vercel.app/bep20_multi.json',BaseFEEDEX='BNBUSDT',CEX_CONFIG={'GATE':{'wallet':_0x16cae6(0x186),'wallet2':'#','chainCEX':_0x16cae6(0x18d),'ApiKey':_0x16cae6(0x160),'ApiSecret':_0x16cae6(0x161)},'BINANCE':{'wallet':_0x16cae6(0x171),'wallet2':_0x16cae6(0x167),'chainCEX':_0x16cae6(0x18d),'ApiKey':_0x16cae6(0x173),'ApiSecret':_0x16cae6(0x188)},'KUCOIN':{'wallet':'0x58edF78281334335EfFa23101bBe3371b6a36A51','wallet2':_0x16cae6(0x182),'chainCEX':_0x16cae6(0x17c),'ApiKey':'651e1c4379c8be0001bab637','ApiSecret':_0x16cae6(0x183),'ApiPassphrase':'Arekpinter123'},'BITGET':{'wallet':_0x16cae6(0x17d),'wallet2':'0x51971c86b04516062c1e708CDC048CB04fbe959f','chainCEX':_0x16cae6(0x17c)},'BYBIT':{'wallet':_0x16cae6(0x181),'wallet2':'#','chainCEX':_0x16cae6(0x18b),'ApiKey':_0x16cae6(0x16b),'ApiSecret':_0x16cae6(0x185)}},DEX_CONFIG={'BNB':{'scAddressPair':_0x16cae6(0x170),'desPair':'18','symbolPair':_0x16cae6(0x17b)},'USDT':{'scAddressPair':_0x16cae6(0x175),'desPair':'18','symbolPair':_0x16cae6(0x178)}};function generateCheckboxes(_0x958f19,_0x386276,_0x4e964e){const _0x15d5bd=_0x16cae6,_0x5b998f=document[_0x15d5bd(0x169)](_0x386276);_0x5b998f[_0x15d5bd(0x18e)]='',Object[_0x15d5bd(0x174)](_0x958f19)[_0x15d5bd(0x166)](_0x1a6705=>{const _0x122ba0=_0x15d5bd,_0xccd4eb=document[_0x122ba0(0x184)](_0x122ba0(0x177));_0xccd4eb['type']=_0x122ba0(0x164),_0xccd4eb[_0x122ba0(0x163)][_0x122ba0(0x16c)](_0x4e964e),_0xccd4eb['value']=_0x1a6705;const _0x5dba5a=document['createElement'](_0x122ba0(0x18c));_0x5dba5a['classList']['add'](_0x122ba0(0x180),_0x386276==='cex-checkbox-container'?'uk-text-secondary':_0x122ba0(0x16f)),_0x5dba5a[_0x122ba0(0x179)](_0xccd4eb),_0x5dba5a['appendChild'](document[_0x122ba0(0x17f)]('\x20'+_0x1a6705)),_0x5b998f['appendChild'](_0x5dba5a);});}function _0x4a86(_0x4b22f5,_0x583f3c){const _0x4373f4=_0x4373();return _0x4a86=function(_0x4a869c,_0x3ce6e){_0x4a869c=_0x4a869c-0x160;let _0x13b31d=_0x4373f4[_0x4a869c];return _0x13b31d;},_0x4a86(_0x4b22f5,_0x583f3c);}generateCheckboxes(CEX_CONFIG,_0x16cae6(0x187),_0x16cae6(0x168)),generateCheckboxes(DEX_CONFIG,'dexpair-checkbox-container',_0x16cae6(0x189));
+     const _0x1fffd8=_0x350f;function _0x350f(_0x1e5bae,_0x401cc7){const _0x43b880=_0x43b8();return _0x350f=function(_0x350fe9,_0x30ecff){_0x350fe9=_0x350fe9-0x107;let _0x607b99=_0x43b880[_0x350fe9];return _0x607b99;},_0x350f(_0x1e5bae,_0x401cc7);}(function(_0x43b16d,_0x1136b6){const _0x597e11=_0x350f,_0x18b981=_0x43b16d();while(!![]){try{const _0x468ee6=parseInt(_0x597e11(0x12d))/0x1*(parseInt(_0x597e11(0x123))/0x2)+-parseInt(_0x597e11(0x120))/0x3*(parseInt(_0x597e11(0x12e))/0x4)+parseInt(_0x597e11(0x10a))/0x5+parseInt(_0x597e11(0x116))/0x6+parseInt(_0x597e11(0x108))/0x7*(parseInt(_0x597e11(0x10f))/0x8)+parseInt(_0x597e11(0x115))/0x9*(parseInt(_0x597e11(0x12a))/0xa)+-parseInt(_0x597e11(0x11f))/0xb;if(_0x468ee6===_0x1136b6)break;else _0x18b981['push'](_0x18b981['shift']());}catch(_0x58549b){_0x18b981['push'](_0x18b981['shift']());}}}(_0x43b8,0xf30dc));const Kode_Chain=0x38,Nama_Chain=_0x1fffd8(0x113),URL_Chain=_0x1fffd8(0x11a),DATAJSON=_0x1fffd8(0x133),BaseFEEDEX=_0x1fffd8(0x128),CEX_CONFIG={'GATE':{'wallet':'0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','wallet2':'#','chainCEX':'BSC','ApiKey':'d04cdb7f01e598b3493bda6aa913092b','ApiSecret':_0x1fffd8(0x122)},'BINANCE':{'wallet':'0x8894E0a0c962CB723c1976a4421c95949bE2D4E3','wallet2':'0xe2fc31F816A9b94326492132018C3aEcC4a93aE1','chainCEX':_0x1fffd8(0x118),'ApiKey':_0x1fffd8(0x126),'ApiSecret':'XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn'},'KUCOIN':{'wallet':'0x58edF78281334335EfFa23101bBe3371b6a36A51','wallet2':_0x1fffd8(0x132),'chainCEX':'BEP20','ApiKey':_0x1fffd8(0x131),'ApiSecret':_0x1fffd8(0x135),'ApiPassphrase':_0x1fffd8(0x107)},'BITGET':{'wallet':_0x1fffd8(0x130),'wallet2':_0x1fffd8(0x119),'chainCEX':_0x1fffd8(0x11d)},'BYBIT':{'wallet':_0x1fffd8(0x134),'wallet2':'#','chainCEX':'BSC\x20(BEP20)','ApiKey':_0x1fffd8(0x129),'ApiSecret':_0x1fffd8(0x12c)}},DEX_CONFIG={'BNB':{'scAddressPair':_0x1fffd8(0x10b),'desPair':'18','symbolPair':_0x1fffd8(0x127)},'USDT':{'scAddressPair':_0x1fffd8(0x114),'desPair':'18','symbolPair':_0x1fffd8(0x117)}};function _0x43b8(){const _0x2969ac=['keys','dexpair-checkbox','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','BNB','BNBUSDT','c006zQZk7RSBh7lmCn','160660pcKJnR','input','2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT','481293lSMVzg','8SMHPSo','getElementById','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','651e1c4379c8be0001bab637','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','https://multiscan-ruby.vercel.app/bep20_multi.json','0xf89d7b9c864f589bbF53a82105107622B35EaA40','a184c3c1-65f2-4042-a043-c5c23c6ba258','Arekpinter123','1757910DCDWwy','forEach','566690mVPiBb','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','label','cex-checkbox-container','dexpair-checkbox-container','8hgBVLY','add','type','appendChild','bsc','0x55d398326f99059fF775485246999027B3197955','486TqQhcS','9474972TfqqIS','USDT','BSC','0x51971c86b04516062c1e708CDC048CB04fbe959f','https://bscscan.com','createElement','createTextNode','BEP20','innerHTML','15909091bGZmdY','1275987xsaACl','cex-checkbox','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','2jNWZzD'];_0x43b8=function(){return _0x2969ac;};return _0x43b8();}function generateCheckboxes(_0x1a888e,_0x2b29c3,_0x481d9e){const _0x440376=_0x1fffd8,_0x38728b=document[_0x440376(0x12f)](_0x2b29c3);_0x38728b[_0x440376(0x11e)]='',Object[_0x440376(0x124)](_0x1a888e)[_0x440376(0x109)](_0xdf936=>{const _0x24d369=_0x440376,_0x5772d0=document[_0x24d369(0x11b)](_0x24d369(0x12b));_0x5772d0[_0x24d369(0x111)]='checkbox',_0x5772d0['classList'][_0x24d369(0x110)](_0x481d9e),_0x5772d0['value']=_0xdf936;const _0x40dd01=document[_0x24d369(0x11b)](_0x24d369(0x10c));_0x40dd01['classList'][_0x24d369(0x110)]('uk-form-label',_0x2b29c3===_0x24d369(0x10d)?'uk-text-secondary':'uk-text-danger'),_0x40dd01[_0x24d369(0x112)](_0x5772d0),_0x40dd01[_0x24d369(0x112)](document[_0x24d369(0x11c)]('\x20'+_0xdf936)),_0x38728b[_0x24d369(0x112)](_0x40dd01);});}generateCheckboxes(CEX_CONFIG,'cex-checkbox-container',_0x1fffd8(0x121)),generateCheckboxes(DEX_CONFIG,_0x1fffd8(0x10e),_0x1fffd8(0x125));
     </script>
 <script src="multimarket.js"></script>
 </body>
