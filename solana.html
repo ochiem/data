@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/solana-sol-7152167-5795323.png" type="image/x-icon">
+
+<style>
+     #scanprogress {
+        font-size: 16px;
+        color: #0b0808;
+      }
+      #scanbar {
+        text-align: center;
+        width:100%;
+        height:15px;
+        border:1px solid #000;
+        margin:5px 0px;
+      }
+      #bar {
+        width:100%;
+        background-color:#b7f1e7;
+        height:100%;
+      }
+      .uk-label {
+            font-size: 12px;
+        }
+
+       img:hover {
+                transform: scale(1.6); /* You can adjust the scale factor as needed */
+            }
+        a{
+            color:black;
+        }
+        a:hover{
+            color:rgb(0, 4, 128);
+        }
+      
+      .ijo {
+        color: black;
+        background-color:rgb(231 255 127);
+      }
+
+      .merah{
+        color: rgb(250, 249, 249) !important;
+        background-color:#f39999!important;
+      }
+      .putih{
+        color: rgb(247, 6, 6) !important;
+        background-color:#ffffff!important;
+      }
+      .error{
+        color: #353030;
+        background-color: #f39999!important;
+      }
+      .limit{
+        background-color: #d4f4f9!important;
+      }
+     
+        .uk-container {
+            width: 96%;
+            max-width: none;
+        }
+
+        .sticky-header {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+           
+        }
+
+        /* Style untuk sel dalam header */
+        .sticky-header th {    
+            background-color: #b7f1e7;
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+            font-size: 13px;
+            height: 17px;
+            vertical-align: middle;
+            margin: 5px 2px; 
+        }
+
+        /* Style untuk isi tabel */
+        .table-content {
+            overflow-y: auto;
+            max-height: 800px; /* Tentukan ketinggian maksimum tabel yang ingin Anda tampilkan */
+        }
+        .uk-table td, .uk-table th {
+            margin: 4px 0px; /* Ubah nilai margin sesuai kebutuhan */
+            padding: 6px; /* Ubah nilai padding sesuai kebutuhan */
+            font-size: 12px;
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .uk-table-striped-custom > tbody > tr:nth-child(4n-3),
+        .uk-table-striped-custom > tbody > tr:nth-child(4n-2) {
+            background-color: #f0f0f0; /* Warna striping disesuaikan sesuai keinginan Anda */
+        }
+
+        .custom-thead input[type="number"] {
+            background-color: inherit;
+            padding: 5px;
+            border: none;
+            width: 60px; /* Adjust the width as needed */
+            text-align: center; /* Center the text within the input */
+        }
+
+        /* Style $ symbol next to the input elements */
+        .custom-thead th input[type="number"]::after {
+            content: "$";
+            margin-left: 0px; /* Adjust the margin as needed */
+            color: inherit;
+        }
+
+        /* Optional: Style the $ symbol inside the input for better alignment */
+        .custom-thead th input[type="number"] {
+            padding-right: 0px; /* Adjust the padding as needed */
+            box-sizing: border-box;
+            color: red;
+        }
+        .custom-thead th input[type="number"]:disabled {
+            color: black; /* Warna saat disabled */
+        }
+        .img-large {
+            width: 60px !important; /* Atur ukuran sesuai kebutuhan */
+            transition: transform 0.3s; /* Menambahkan efek animasi */
+        }
+        .text-large {
+            font-size: 1em; /* Atur ukuran font sesuai kebutuhan */
+            font-weight: bold; /* Bisa ditambahkan agar teks lebih tebal */
+            color: red; /* Bisa juga menambahkan warna jika ingin memberikan penekanan */
+            transition: font-size 0.3s; /* Tambahkan transisi untuk efek yang lebih halus */
+        }
+        .bg-error {
+            background-color: #ffdddd; /* Warna latar belakang merah muda untuk menandai error */
+            border-radius: 4px; /* Tambahkan border radius agar tampilan lebih halus */
+            padding: 5px; /* Tambahkan padding agar lebih mencolok */
+        }
+        .bagian{
+            margin: 0px 25px 0px 0px;
+            padding: 2px;
+            background-color: #d7ebc565;
+        }
+</style>
+
+</head>
+<body data-token="base">
+   
+    <div class="uk-text-center" style="margin-top: 20px;"> <!-- Mengurangi margin-top -->
+        <h3 class="uk-margin-remove" style="font-size: 30px;">
+            <span class="uk-text" style="color: #bb3dee;"><label id="namachain"></label> MULTIMARKET v3.1</span>
+            <span class="uk-margin-small-left">
+                <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
+                <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
+                <img id="cek_wallet" title="UPDATE WALLET CEX" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" width="25px" />
+                <a href="MasterCRUDS.html" target="_blank">
+                    <img title="MASTER DATA" src="https://cdn-icons-png.flaticon.com/512/8021/8021069.png" width="25px" />
+                </a>
+                <a href="manajemen_aset.html" target="_blank">
+                    <img title="MANAJEMEN ASET" src="https://cdn-icons-png.flaticon.com/512/648/648998.png" width="25px" />
+                </a>
+            </span>
+        </h3>
+    
+        <!-- <div class="uk-flex uk-flex-center uk-flex-wrap uk-margin-small-top">  -->
+           
+            <span class="uk-button uk-button-link uk-margin-small-left"> <!-- Menggunakan span untuk menghindari kotak di sekelilingnya -->
+               
+                <!-- <a href="https://multichecker.vercel.app/ethereum.html" target="_blank"><img src="https://seeklogo.com/images/B/binance-smart-chain-bsc-logo-9C34053D61-seeklogo.com.png" width="25px" alt="BINANCE" /></a>
+                <a href="https://multiscan-ruby.vercel.app/ethereum.html" target="_blank"><img src="https://www.aimeta.club/assets/images/avt/gate.png" width="25px" alt="GATE" /></a>
+                <a href="https://multichecker.vercel.app/bitget_erc.html" target="_blank"><img src="https://img.cryptorank.io/exchanges/150x150.bitget1702996260873.png" width="25px" alt="BITGET" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_kucoin.html" target="_blank"><img src="https://www.svgrepo.com/show/331460/kucoin.svg" width="25px" alt="KUCOIN" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_bybit.html" target="_blank"><img src="https://crypto-central.io/library/uploads/bybit_logo-min.png" width="25px" alt="BYBIT" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_indodax.html" target="_blank"><img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-31087767/no_brand_saldo_indodax_10k_full04_mbbivye1.jpg" width="25px" alt="INDODAX" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_coinex.html" target="_blank"><img src="https://iconape.com/wp-content/png_logo_vector/coinex-logo.png" width="25px" alt="COINEX" /></a>
+               --> <b> [ UPDATE WALLET :  
+                <label id="lastUpdateTime" class="uk-text uk-text-danger uk-text-small" style="font-size: 15px;"></label>
+                 - <label class="uk-text uk-text-small uk-text-success" id="ip">...</label>
+                ]</b>
+            </span>
+        <!-- </div> -->
+    </div>
+    
+    <!-- Modal UIKIT -->
+    <div id="modal-setting" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">:: SETTING DEX CHECKER</h2>
+               
+            </div>
+            <div class="uk-modal-body">
+                <form> 
+                    <!-- Grid UIkit untuk 2 kolom -->
+                    <div class="uk-grid-small" uk-grid>
+                        
+                        <div class="uk-width-1-2">
+                            
+                            <!-- Kolom pertama -->
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <h3 style="text-align: center; margin: 12px 0px; color: #1317e1;">:: SETINGAN PERMODALAN</h3>
+                                <!-- Modal JUPITER -->
+                                <h5 style="margin: 12px 0px;color: #e4322c;">Modal JUPITER</h5>
+
+                                <!-- Modal Kecil -->
+                                <div class="uk-flex uk-flex-middle ">
+                                    <div >
+                                        <label for="ModalKiriJUPITER" class="uk-text-primary">Kiri</label>
+                                        <input type="number" id="ModalKiriJUPITER" class="uk-input" value="0" required>
+                                    </div>
+                                    <div >
+                                    <label for="ModalKananJUPITER" class="uk-text-success">Kanan</label>
+                                    <input type="number" id="ModalKananJUPITER" class="uk-input" value="0" required>
+                                </div>
+                                </div>
+
+                                <h5 style="margin: 12px 0px;color: #e4322c;">Modal OKEX</h5>
+                                <div class="uk-flex uk-flex-middle ">
+                                <div>
+                                    <label for="ModalKiriOKEX" class="uk-text-primary">Kiri</label>
+                                    <input type="number" id="ModalKiriOKEX" class="uk-input" value="0" required>
+                                </div>
+                                    <div>
+                                    <label for="ModalKananOKEX" class="uk-text-success">Kanan</label>
+                                    <input type="number" id="ModalKananOKEX" class="uk-input" value="0" required>
+                                </div>
+                                </div>
+
+                                <h5 style="margin: 12px 0px; color: #e4322c;">Modal OPEN</h5>                                                    
+                            <!-- Modal Kecil -->
+                            <div class="uk-flex uk-flex-middle ">
+                                <div >
+                                    <label for="ModalKiriOPEN" class="uk-text-primary">Kiri</label>
+                                    <input type="number" id="ModalKiriOPEN" class="uk-input" value="0" required>
+                                </div>
+                                <div >
+                                <label for="ModalKananOPEN" class="uk-text-success">Kanan</label>
+                                <input type="number" id="ModalKananOPEN" class="uk-input" value="0" required>
+                            </div>
+                            </div>
+                            
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <!-- Kolom kedua -->
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <h3 style="text-align: center; margin: 12px 0px; color: #1317e1;">:: SETINGAN SCANNER</h3>
+                                <label for="pnl">NICK NAME:</label>
+                                <input type="text" id="user"  class="uk-input" required>
+
+                                <div class="uk-flex uk-flex-middle uk-margin ">
+                                    <!-- <div style="display: none;"> -->
+                                       <div>
+                                           <label for="jeda-time-group" class="uk-text-danger">SCAN PERKOIN : </label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4" checked name="koin-group"> 4</label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" name="koin-group"> 5</label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="6"  name="koin-group"> 6</label> 
+                                           &nbsp; |  &nbsp;
+                                        </div>
+                                       <div>
+                                            <label for="SPEEDSCAN" class="uk-text-danger">SPEED SCAN</label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5"  name="waktu-tunggu"> NORMAL </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4" checkbox name="waktu-tunggu"> MEDIUM </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" name="waktu-tunggu"> FAST </label>
+                                        </div>
+                                   </div>
+                                <div>
+                                </div>
+                                
+
+                                <div class="uk-flex uk-flex-middle uk-margin ">
+                                 <!-- <div style="display: none;"> -->
+                                    <div>
+                                        <label for="jeda-koin" class="uk-text-warning">FILTER PNL</label><br/>
+                                        <input class="uk-input" type="number" id="inFilterPNL" value="0" name="filterpnl" >         
+                                    </div>
+                                    <div>
+                                        <label for="jeda-time-group" class="uk-text-danger">JEDA / GROUP {1300}</label><br/>
+                                        <input class="uk-input" id="jeda-time-group" type="number" value="1300" name="jeda-time-group" >
+                                    </div>
+                                    <div>
+                                        <label for="jeda-koin" class="uk-text-primary">JEDA / KOIN {600}</label><br/>
+                                        <input class="uk-input" type="number" id="jeda-koin" value="600" name="jeda-koin" > 
+                                    </div>
+                                </div>
+
+                                    <div>
+                                        <label for="walletSOL" class="uk-text-danger">WALLET SOLANA</label><br />
+                                        <input class="uk-input" type="text" id="walletSOL" name="walletSOL" >
+                                    </div>
+                                <div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol untuk menutup modal -->
+                    <p class="uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Tutup</button>
+                        <button type="button" id="save-button" class="uk-button uk-button-primary">SIMPAN</button>  
+                    </p>
+             
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="uk-container" style="margin-top: 10px;">
+        <form>
+            <div class="uk-margin">
+                <!-- Informasi Setup -->
+                 <label>
+                    <b>
+                        <label class="uk-form-label uk-text-secondary"> INFO TOKEN : [ <label class="uk-form-label uk-text-primary" id="JmlKoin"></label> - PAIR TOKEN ] </label> &nbsp;   &nbsp;
+                        [
+                            <label class="uk-form-label uk-text-warning"><b>FILTER PNL :</b> </label>
+                            <label class="uk-form-label uk-text-warning" id="LFilterPNL"></label> # 
+                            <label class="uk-form-label uk-text-warning"><b>GWEI :</b> </label> 
+                            <label class="uk-form-label uk-text-warning" id="LGwei"></label>
+                        ] &nbsp;   &nbsp;
+                        <label class="uk-form-label uk-text-secondary" id="infojeda">
+                            [SPEED :
+                            <label class="uk-form-label uk-text-secondary">
+                                <label class="uk-form-label uk-text-success" id="Lwaktu-tunggu"></label> 
+                            </label>  #
+                            <label class="uk-form-label uk-text-success">
+                                <label class="uk-text uk-text-success" id="waktu">...</label>
+                            </label>
+                            ]  &nbsp;   &nbsp;
+                        </label> 
+                        <label class="uk-form-label uk-text-secondary">ACTION SCAN : 
+                            <label class="uk-form-label uk-text-danger">
+                                <input type="checkbox" class="uk-checkbox" checked id="ls" /> KIRI
+                                <input type="checkbox" class="uk-checkbox" checked id="rs" /> KANAN  
+                            </label>  
+                        </label>
+                        &nbsp; | &nbsp;
+                        <label class="uk-form-label uk-text-secondary">SORTING : 
+                            <label class="uk-form-label uk-text-primary">
+                                <input type="radio" name="toggle" checked value="option2"> A 
+                                <input type="radio" name="toggle" value="option1"> Z
+                                </label>  
+                        </label>
+                    </b>   
+                </label>
+                <br/>
+                <!-- Separator Line dengan Margin -->
+                <hr style="margin-top: 5px; margin-bottom: 5px;" />
+
+                <!-- Grid Layout yang Responsif dengan Kolom Dinamis -->
+                <div class="uk-grid uk-child-width-expand@s uk-grid-medium" uk-grid>
+    
+                    <!-- Kolom 1: Setup Scanner dan Filter -->
+                    <div class="uk-width-auto@m">
+                        <label class="uk-form-label uk-text-secondary">
+                            <span id="server"><b>
+                                <label class="uk-form-label uk-text-secondary">SERVER :</label>
+                                <label class="uk-form-label uk-text-warning">
+                                   1 <input class="uk-radio" type="radio" value="0" name="urlRadio">
+                                   2 <input class="uk-radio" type="radio" value="1" name="urlRadio">
+                                   3 <input class="uk-radio" type="radio" value="2" name="urlRadio">
+                                   4 <input class="uk-radio" type="radio" value="3" name="urlRadio">
+                                   5 <input class="uk-radio" type="radio" value="4" name="urlRadio">
+                                </label>
+                            </b></span>
+                        </label>
+                    </div>
+    
+                    <!-- Kolom 2: Bagian Server dan CEX -->
+                    <div class="uk-width-auto@m">
+                        <span id="cex">
+                            <label class="uk-form-label uk-text-secondary"><b>CEX :</b></label>
+                            <b>
+                                <label class="uk-form-label uk-text-success" id="cex-checkbox-container"></label>
+                            </b>
+                        </span>    
+                    </div>
+    
+                    <!-- Kolom 3: DEX -->
+                    <div class="uk-width-auto@m">
+                        <span id="dex">
+                            <b>
+                                <label class="uk-form-label uk-text-secondary">DEX :</label>
+                                <label class="uk-form-label uk-text-danger"> 
+                                    JUPITER <input type="checkbox" checked disabled class="uk-checkbox cdx_jupiter" id="DJUPITER" /> 
+                                    OKEX <input type="checkbox" disabled class="uk-checkbox cdx_okex" id="DOKEX" />
+                                    RANGO <input type="checkbox" disabled class="uk-checkbox cdx_open" id="DOPEN" /> 
+                                </label>       
+                            </b>    
+                        </span>
+                    </div>
+    
+                    <!-- Kolom 4 DEX PAIR -->
+                    <div class="uk-width-auto@m">                       
+                        <span id="dexpair">
+                            <b>
+                                <label class="uk-form-label uk-text-secondary">DEX PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):</label>
+                                <label class="uk-form-label uk-text-primary" id="dexpair-checkbox-container"></label>
+                            </b> 
+                            <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
+                            <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START </button>
+                        </span>  
+                    </div>
+                </div>
+
+                <!-- Bagian Sinyal DEX -->
+                <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container" style="margin-top: 4px;">
+                    <div class="sinyal-item" data-dex="JUPITER"><b>JUPITER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyaljupiter"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="OKEX"><b>OKEX</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalokex"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="OPEN"><b>OPEN</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalopen"> </label> ]</div>
+                </div>
+                <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>
+            </div> 
+        </form>
+    
+        <!-- Bagian Hasil dan Progress Bar -->
+        <label class="uk-text uk-text-success" id="hasil"></label> 
+        <div id="scanprogress" style="margin: 0px;">Wait</div> 
+        <div id="scanbar">
+            <div id="bar" style="text-align: center;"> </div>
+        </div>
+    </div>
+    
+
+ <!-- TABEL HASIL SCANNER -->
+ <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 5px;">
+    <!-- Menambahkan max-width dan overflow-x untuk scroll horizontal -->
+    <div class="tableFixHead table-content" style="max-height: 70vh; overflow-y: auto; overflow-x: auto; max-width: 100%;">
+        <table class="uk-table uk-sticky uk-table-striped-custom">
+            <thead class="custom-thead uk-overflow-auto sticky-header">
+                <tr>  
+                    <th class="uk-text-secondary"> VOL BUY </th>                           
+                    <th class="uk-text-secondary dx_jupiter"> <span class="uk-badge" id="lKiriJUPITERSinyal"></span> JUPITER </th>
+                    <th class="uk-text-secondary dx_open"> <span class="uk-badge" id="lKiriOPENSinyal"></span> OPEN </th>
+                    <th class="uk-text-secondary dx_okex"> <span class="uk-badge" id="lKiriOKEXSinyal"></span> KYBER</th>
+                    <th rowspan="2" style="background-color: #e7bef7; color:black;">&nbsp;MODAL <br/> TOKEN&nbsp;</th>
+                    <th class="uk-text-secondary dx_jupiter"> <span class="uk-badge" id="lKananJUPITERSinyal"></span> JUPITER </th>
+                    <th class="uk-text-secondary dx_open"> <span class="uk-badge" id="lKananOPENSinyal"></span> OPEN </th>
+                    <th class="uk-text-secondary dx_okex"> <span class="uk-badge" id="lKananOKEXSinyal"></span> KYBER</th>
+                    <th class="uk-text-secondary"> VOL SELL </th>
+                </tr>
+                <tr>       
+                    <th class="uk-text-secondary"> PRICE </th>                     
+                    <th class="uk-text-danger dx_jupiter"> <input type="number" class="uk-input" required id="LModalKiriJUPITER"/> $</th>
+                    <th class="uk-text-danger dx_open"> <input type="number" class="uk-input" required id="LModalKiriOPEN"/> $</th>
+                    <th class="uk-text-danger dx_okex"> <input type="number" class="uk-input" required id="LModalKiriOKEX"/> $</th>
+                    <th class="uk-text-danger dx_jupiter"> <input type="number" class="uk-input" required id="LModalKananJUPITER"/> $</th>
+                    <th class="uk-text-danger dx_open"> <input type="number" class="uk-input" required id="LModalKananOPEN"/> $</th>
+                    <th class="uk-text-danger dx_okex"> <input type="number" class="uk-input" required id="LModalKananOKEX"/> $</th>
+                    <th class="uk-text-secondary"> PRICE </th>
+                </tr>
+            </thead>
+            <tbody id="TabelHarga" style="text-align: center;"></tbody>
+        </table>
+    </div>
+</div>
+
+    <script>
+        //SETTING GLOBAL CHAIN, 
+        const Kode_Chain = 501;
+        const Nama_Chain = "solana";
+        const URL_Chain = "https://solscan.io/";
+        const DATAJSON ='https://multichecker.vercel.app/multicex_sol.json';
+        //SETTING GLOBAL DEX
+
+        const BaseFEEDEX = "BNBUSDT";
+       
+        const CEX_CONFIG = {
+            GATE: {
+                wallet : '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+                wallet2 : '#',
+                chainCEX : 'SOL',
+                ApiKey : "d04cdb7f01e598b3493bda6aa913092b",
+                ApiSecret : "e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d",
+            },
+            BINANCE: {
+                wallet : '0x8894E0a0c962CB723c1976a4421c95949bE2D4E3',
+                wallet2 : '0xe2fc31F816A9b94326492132018C3aEcC4a93aE1',
+                chainCEX : 'SOL',
+                ApiKey : "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU",
+                ApiSecret : "XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn",
+            },
+            KUCOIN: {
+                wallet : '0x58edF78281334335EfFa23101bBe3371b6a36A51',
+                wallet2 : '0xD6216fC19DB775Df9774a6E33526131dA7D19a2c',
+                chainCEX : 'SOL',
+                ApiKey : "651e1c4379c8be0001bab637",
+                ApiSecret : "a184c3c1-65f2-4042-a043-c5c23c6ba258",
+                ApiPassphrase : "Arekpinter123",
+            }, 
+            BITGET: {
+                wallet : '0x0639556F03714A74a5fEEaF5736a4A64fF70D206',
+                wallet2 : '0x51971c86b04516062c1e708CDC048CB04fbe959f',
+                chainCEX : 'SOL',
+            }, 
+            BYBIT: {
+                wallet : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                wallet2 : '#',
+                chainCEX : 'SOL',
+                ApiKey : "c006zQZk7RSBh7lmCn",
+                ApiSecret : "2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT",
+            }, 
+            // Add more exchanges as needed
+        };
+
+        const DEX_CONFIG = {
+            SOL: {
+                scAddressPair: 'So11111111111111111111111111111111111111112',
+                desPair: '9',
+                symbolPair: 'SOL',
+            },
+            USDT: {
+                scAddressPair: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
+                desPair: '6',
+                symbolPair: 'USDT',
+            },
+            USDC: {
+                scAddressPair: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+                desPair: '6',
+                symbolPair: 'USDC',
+            }
+        };
+
+            
+        // Fungsi untuk membuat checkbox berdasarkan konfigurasi CEX dan DEX
+        function generateCheckboxes(config, containerId, checkboxClass) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = ''; // Bersihkan container
+
+            // Iterasi melalui setiap key di konfigurasi (CEX atau DEX)
+            Object.keys(config).forEach(symbol => {
+                // Buat elemen checkbox
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add(checkboxClass);
+                checkbox.value = symbol;
+
+                // Buat label untuk checkbox
+                const label = document.createElement('label');
+                label.classList.add('uk-form-label', containerId === "cex-checkbox-container" ? 'uk-text-success' : 'uk-text-primary');
+                
+                // Tambahkan teks label sebelum checkbox
+                label.appendChild(document.createTextNode(` ${symbol} `));
+                label.appendChild(checkbox);
+
+                // Tambahkan label ke container
+                container.appendChild(label);
+            });
+        }
+
+        // Panggil fungsi untuk menghasilkan checkbox untuk CEX dan DEX
+        generateCheckboxes(CEX_CONFIG, "cex-checkbox-container", "cex-checkbox");
+        generateCheckboxes(DEX_CONFIG, "dexpair-checkbox-container", "dexpair-checkbox");
+
+    </script>
+<script src="multicex_sol.js"></script>
+</body>
+</html>
