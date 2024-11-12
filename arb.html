@@ -520,6 +520,9 @@
     <script>
         
     //SETTING GLOBAL CHAIN, 
+         // Contoh pemanggilan fungsi
+        const chainName = 'arbitrum'; // ganti dengan nama chain lain seperti 'polygon', 'arbitrum', dll.
+        const DTChain = getChainData(chainName);
     function generateCheckboxes(config, containerId, checkboxClass) {
         const container = document.getElementById(containerId);
         container.innerHTML = ''; // Bersihkan container
@@ -562,9 +565,6 @@
             CEXCHAIN: chainData.WALLET_CEX,
         };
     }
-        // Contoh pemanggilan fungsi
-        const chainName = 'arbitrum'; // ganti dengan nama chain lain seperti 'polygon', 'arbitrum', dll.
-        const DTChain = getChainData(chainName);
 
         //console.log(`Data untuk chain ${chainName}:`, DTChain);                
         //console.log(`Data untuk CONFIG CEX `, CONFIG_CEX); 
