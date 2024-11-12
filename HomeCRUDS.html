@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/603/603189.png" type="image/x-icon">
+    <script src="CONFIG.js"></script>
+    <style>
+        .uk-container { width: 94%; max-width: none; }
+        .table-header { background-color: #cdcbcb; }
+        .table-header th { color: black; font-size: medium; font-weight: bolder; cursor: pointer; position: relative; }
+        .status-active { color: green; }
+        .status-inactive { color: red; }
+        .pair-dex { font-size: 12px; color: gray; }
+        .action-buttons { display: flex; justify-content: center; gap: 5px; }
+        .action-buttons button { padding: 5px 10px; }
+        .token-cell { vertical-align: top; }
+        .sort-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+        /* Memaksa warna link untuk CEX */
+        .uk-link {
+            color: inherit !important;  /* Memastikan warna link mengikuti warna induk */
+        }
+        /* Memaksa warna status aktif */
+        .status-active {
+            color: inherit !important;  /* Warna aktif mengikuti warna yang ditentukan */
+        }
+    </style>
+    
+</head>
+<body>
+<div class="uk-container uk-margin-top">
+    <h3 class="uk-heading-line" style="text-align: center;font-size: xx-large;" id="judul">
+        <span >FORM DATA TOKEN <span id="namachain"></span></span>
+    </h3>
+
+    <form id="cryptoForm" class="uk-form-stacked">
+        <fieldset class="uk-fieldset">
+
+            <div class="uk-margin" style="display: flex; align-items: center; gap: 10px;">
+                <b><span class="uk-text-primary uk-text-medium">DETAILS TOKEN : </span></b>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="text" id="tokenName" placeholder="Nama Token" required>
+                </div>
+                <div class="uk-form-controls" style="flex: 3;">
+                    <input class="uk-input" type="text" id="sc" placeholder="Smart Contract" required>
+                </div>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="number" id="desimal" placeholder="Desimal SC" required min="0">
+                </div>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="text" id="cmcID" placeholder="CMC Name Tag">
+                </div>
+            </div>
+
+            <div class="uk-margin-top dex-group uk-grid-small uk-flex uk-flex-between" uk-grid style="flex-wrap: wrap;">
+                <!-- Kolom untuk CEX -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <b><span class="uk-text-danger uk-text-medium">CEX:</span></b>
+                    <div id="cex-options" class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <!-- Radio button CEX akan di-generate di sini -->
+                    </div>
+                </div>
+            
+                <!-- Kolom untuk PAIR DEX -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <b><span class="uk-text-danger uk-text-medium">PAIR DEX:</span></b>
+                    <div id="pairDexOptions" class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <!-- Radio button Pair DEX akan di-generate di sini -->
+                    </div>
+                </div>
+            
+                <!-- Kolom untuk STATUS -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <b><span class="uk-text-danger uk-text-medium">STATUS:</span></b> 
+                    <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <label><input class="uk-checkbox uk-text-warning" type="checkbox" id="status" checked> AKTIF</label>
+                    </div>
+                </div>
+            
+                <!-- Kolom untuk Tombol -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
+                    <button type="submit" id="SaveButton" class="uk-button uk-button-primary">SIMPAN</button>
+                </div>
+            </div>
+                        
+            
+        </fieldset>
+    </form><hr/><br/>
+    <div class="uk-margin-top">
+        <div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
+             
+            <!-- Judul dan Jumlah Token -->
+            <div class="uk-width-expand">
+                <h3 class="uk-heading-line uk-margin-remove uk-text-primary">
+                    <span style="font-size:large;">DAFTAR TOKEN <span id="namachain2"></span> (<span id="tokenCount" class="token-count">0</span>)</span>
+                </h3>
+            </div>
+           
+            <!-- Pencarian -->
+            <div class="uk-width-auto uk-flex uk-flex-middle">
+                <input type="text" id="searchInput" class="uk-input uk-form-width-medium" placeholder="Cari di tabel...">
+            </div>
+
+            <!-- Bagian Kanan: Import/Export -->
+            <div class="uk-flex uk-flex-middle" style="gap: 20px;">
+                <div id="importStatus" class="uk-text-small uk-animation-fade"></div>
+                <div uk-form-custom="target: true">
+                    <input type="file" id="importFile" accept=".json">
+                    <input class="uk-input uk-form-width-small uk-button-success" placeholder="Pilih File JSON" disabled>
+
+                </div>                   
+                <button id="importButton" class="uk-button uk-button-primary ">
+                    <span uk-icon="icon: upload"></span> Import JSON
+                </button>                
+            </div>
+        </div>
+    </div>
+
+     <table class="uk-table uk-table-striped">
+        <thead class="table-header">
+            <tr>
+                <th class="uk-text-center uk-text-bold" >No <span class="sort-icon" id="sortIcon0"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(1)">CEX <span class="sort-icon" id="sortIcon1"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(2)">TOKEN <span class="sort-icon" id="sortIcon2"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(3)">Smart Contract <span class="sort-icon" id="sortIcon3"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(4)">Desimal <span class="sort-icon" id="sortIcon4"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(7)">CMC ID <span class="sort-icon" id="sortIcon7"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(5)">STATUS <span class="sort-icon" id="sortIcon5"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(6)">PAIR DEX <span class="sort-icon" id="sortIcon6"></span></th>
+                <th class="uk-text-center uk-text-bold">Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="dataTableBody">
+        </tbody>
+    </table>
+
+   
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const _0x362d3c=_0x5908;(function(_0x5926fb,_0x463270){const _0x3a5ba5=_0x5908,_0x4d0a29=_0x5926fb();while(!![]){try{const _0x3d0111=-parseInt(_0x3a5ba5(0x180))/0x1*(parseInt(_0x3a5ba5(0x1be))/0x2)+parseInt(_0x3a5ba5(0x170))/0x3+parseInt(_0x3a5ba5(0x1d5))/0x4*(-parseInt(_0x3a5ba5(0x1d2))/0x5)+-parseInt(_0x3a5ba5(0x1fd))/0x6*(parseInt(_0x3a5ba5(0x19c))/0x7)+parseInt(_0x3a5ba5(0x195))/0x8*(parseInt(_0x3a5ba5(0x1ef))/0x9)+parseInt(_0x3a5ba5(0x1f6))/0xa*(-parseInt(_0x3a5ba5(0x18e))/0xb)+parseInt(_0x3a5ba5(0x1ba))/0xc;if(_0x3d0111===_0x463270)break;else _0x4d0a29['push'](_0x4d0a29['shift']());}catch(_0x5733ea){_0x4d0a29['push'](_0x4d0a29['shift']());}}}(_0x10ce,0x412ab));const urlParams=new URLSearchParams(window[_0x362d3c(0x1c3)][_0x362d3c(0x200)]),chainParam=urlParams[_0x362d3c(0x17f)](_0x362d3c(0x1f3))||'bsc',selectedChain=CONFIG_CHAINS[chainParam]||CONFIG_CHAINS[_0x362d3c(0x163)],{Kode_Chain,Nama_Chain,URL_Chain,pairs}=selectedChain,storageKey=_0x362d3c(0x16f)+Nama_Chain['toUpperCase']()+_0x362d3c(0x1f5);let sortOrder={};function getFromLocalStorage(_0x168908){const _0x46731e=_0x362d3c,_0x66c451=JSON['parse'](localStorage[_0x46731e(0x1e1)](storageKey));return _0x66c451?_0x66c451:_0x168908;}function saveToLocalStorage(_0x16023c){const _0x1db2f2=_0x362d3c;localStorage[_0x1db2f2(0x175)](storageKey,JSON[_0x1db2f2(0x1c7)](_0x16023c));}$(_0x362d3c(0x1f7))['on'](_0x362d3c(0x183),function(){const _0x179d3e=_0x362d3c,_0x514deb=getFromLocalStorage([]),_0x30c39b=new Blob([JSON[_0x179d3e(0x1c7)](_0x514deb)],{'type':_0x179d3e(0x185)}),_0x41abe7=URL[_0x179d3e(0x1a9)](_0x30c39b),_0xfcb3ec=document[_0x179d3e(0x18f)]('a');_0xfcb3ec['href']=_0x41abe7,_0xfcb3ec[_0x179d3e(0x192)]=_0x179d3e(0x18b)+Nama_Chain['toUpperCase']()+'_LIST_TOKEN.json',_0xfcb3ec[_0x179d3e(0x183)](),URL[_0x179d3e(0x1b7)](_0x41abe7);}),$(document)[_0x362d3c(0x186)](function(){const _0x4a20a2=_0x362d3c;if(typeof CONFIG_CEX!==_0x4a20a2(0x17e)&&typeof CONFIG_CHAINS!=='undefined'){loadStoredData();const _0x355f37=CONFIG_CHAINS[Nama_Chain[_0x4a20a2(0x16a)]()];_0x355f37?(_0x2d03fa(_0x355f37['WALLET_CEX']),_0x55c2cb(_0x355f37[_0x4a20a2(0x1e4)]),$(_0x4a20a2(0x194))[_0x4a20a2(0x1c9)](_0x4a20a2(0x18a)+Nama_Chain[_0x4a20a2(0x1c8)]()),$(_0x4a20a2(0x1f9))[_0x4a20a2(0x1c9)](Nama_Chain[_0x4a20a2(0x1c8)]()),$(_0x4a20a2(0x1dd))[_0x4a20a2(0x1c9)]('CHAIN\x20'+Nama_Chain[_0x4a20a2(0x1c8)]()),$(_0x4a20a2(0x203))['css']('color',_0x355f37[_0x4a20a2(0x19f)])):console[_0x4a20a2(0x1af)](_0x4a20a2(0x202)+Nama_Chain+_0x4a20a2(0x17d));}else console['warn'](_0x4a20a2(0x1f4));function _0x2d03fa(_0x5ed29b){const _0x51ee0d=_0x4a20a2,_0x217c65=$('#cex-options');_0x217c65[_0x51ee0d(0x1d6)](),$[_0x51ee0d(0x1d1)](_0x5ed29b,function(_0x3639b5,_0x679a18){const _0x9b606d=_0x51ee0d,_0x47f8de=_0x9b606d(0x178)+_0x3639b5+_0x9b606d(0x15f)+_0x3639b5+_0x9b606d(0x1df);_0x217c65[_0x9b606d(0x1c4)](_0x47f8de);});}function _0x55c2cb(_0x213e73){const _0x4c5217=_0x4a20a2,_0x11eb3f=$(_0x4c5217(0x166));_0x11eb3f[_0x4c5217(0x1d6)](),$['each'](_0x213e73,function(_0x42c8a8,_0x3c36ff){const _0x57e60b=_0x4c5217,_0x56b13c=_0x42c8a8===Object[_0x57e60b(0x1a2)](_0x213e73)[0x0]?_0x57e60b(0x1de):'',_0x31dec7='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20class=\x22uk-radio\x22\x20type=\x22radio\x22\x20name=\x22dex\x22\x20value=\x22'+_0x3c36ff[_0x57e60b(0x1ed)]+'\x22\x20'+_0x56b13c+'\x20required>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x3c36ff[_0x57e60b(0x1ed)]+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>';_0x11eb3f['append'](_0x31dec7);});}$(_0x4a20a2(0x1c0))['on'](_0x4a20a2(0x1cc),function(_0x54a376){const _0xd997ff=_0x4a20a2;_0x54a376[_0xd997ff(0x1c1)]();const _0x432680=Array[_0xd997ff(0x198)]($(_0xd997ff(0x181)))[_0xd997ff(0x1e6)](_0x3c20a4=>_0x3c20a4[_0xd997ff(0x1cb)]),_0xd130bc=$(_0xd997ff(0x165))[_0xd997ff(0x16e)](),_0x1c80d9=$(_0xd997ff(0x168))[_0xd997ff(0x16e)](),_0x5b4876=$('#sc')['val'](),_0x2146d1=$(_0xd997ff(0x19a))[_0xd997ff(0x16e)](),_0x226336=$(_0xd997ff(0x201))['is'](_0xd997ff(0x1f1)),_0x299199=$(_0xd997ff(0x1dc))[_0xd997ff(0x16e)](),_0x59242e=getFromLocalStorage([]),_0x36d55c=$(_0xd997ff(0x1c0))[_0xd997ff(0x1b0)](_0xd997ff(0x1bb));_0x36d55c!==undefined&&delete $(_0xd997ff(0x1c0))['data'](_0xd997ff(0x1bb)),_0x432680[_0xd997ff(0x1fc)](_0x206be0=>{const _0x4a62bb=_0xd997ff,_0x1d0f44={'cex':_0x206be0,'symbol':_0xd130bc,'sc':_0x5b4876,'desimal':parseInt(_0x2146d1),'cmcID':_0x1c80d9,'status':_0x226336,'pairdex':_0x299199};_0x36d55c!==undefined?_0x59242e[_0x36d55c]=_0x1d0f44:_0x59242e[_0x4a62bb(0x1d0)](_0x1d0f44);}),saveToLocalStorage(_0x59242e),loadStoredData(),_0x5c8846(),UIkit[_0xd997ff(0x1c2)](_0xd997ff(0x16b),{'status':'success'});}),$(_0x4a20a2(0x1d8))['on'](_0x4a20a2(0x183),_0x4a20a2(0x1b2),function(){const _0x14b062=_0x4a20a2,_0x5f365e=$(this)[_0x14b062(0x1b0)](_0x14b062(0x197));UIkit[_0x14b062(0x1e9)][_0x14b062(0x1e3)](_0x14b062(0x1b3))[_0x14b062(0x1cd)](()=>{const _0x5cfe48=_0x14b062;_0x46659f(_0x5f365e),UIkit[_0x5cfe48(0x1c2)]('Data\x20berhasil\x20dihapus!',{'status':_0x5cfe48(0x1e7)});},()=>{const _0x1e680c=_0x14b062;UIkit[_0x1e680c(0x1c2)]('Penghapusan\x20data\x20dibatalkan.',{'status':_0x1e680c(0x1ea)});});}),$(_0x4a20a2(0x1d8))['on'](_0x4a20a2(0x183),_0x4a20a2(0x190),function(){const _0x5eee2c=_0x4a20a2,_0x127cb3=$(this)[_0x5eee2c(0x1b0)](_0x5eee2c(0x197));_0x4946b0(_0x127cb3),UIkit[_0x5eee2c(0x1c2)](_0x5eee2c(0x167),{'status':'success'});});function _0x46659f(_0x5862c6){const _0x233bea=getFromLocalStorage([]);_0x233bea['splice'](_0x5862c6,0x1),saveToLocalStorage(_0x233bea),loadStoredData();}function _0x4946b0(_0xe7f87c){const _0x38de54=_0x4a20a2,_0x6e6f5f=getFromLocalStorage([]),_0x4bb16f=_0x6e6f5f[_0xe7f87c];$('#tokenName')[_0x38de54(0x16e)](_0x4bb16f['symbol']),$(_0x38de54(0x168))[_0x38de54(0x16e)](_0x4bb16f[_0x38de54(0x1e0)]),$('#sc')[_0x38de54(0x16e)](_0x4bb16f['sc']),$(_0x38de54(0x19a))[_0x38de54(0x16e)](_0x4bb16f['desimal']),$(_0x38de54(0x201))[_0x38de54(0x164)](_0x38de54(0x1de),_0x4bb16f['status']),$(_0x38de54(0x19b)+_0x4bb16f[_0x38de54(0x1a6)]+'\x27]')[_0x38de54(0x164)](_0x38de54(0x1de),!![]),$('input[name=\x27cex\x27]')[_0x38de54(0x164)]('checked',![])['prop']('disabled',!![]),_0x4bb16f[_0x38de54(0x1ae)]&&$(_0x38de54(0x1b4)+_0x4bb16f['cex']+'\x27]')[_0x38de54(0x164)](_0x38de54(0x1de),!![]),$(_0x38de54(0x1c0))[_0x38de54(0x1b0)](_0x38de54(0x1bb),_0xe7f87c),$('#cancelButton')[_0x38de54(0x1ad)](),$(_0x38de54(0x19d))[_0x38de54(0x1e2)]({'scrollTop':$(_0x38de54(0x1c0))['offset']()[_0x38de54(0x174)]},0x1f4);}function _0x5c8846(){const _0x108cc2=_0x4a20a2;$(_0x108cc2(0x1c0))[0x0][_0x108cc2(0x1db)](),$(_0x108cc2(0x1c0))['removeData'](_0x108cc2(0x1bb)),$('#cancelButton')['hide'](),$(_0x108cc2(0x1a8))[_0x108cc2(0x164)]('disabled',![]);}$(_0x4a20a2(0x1a0))['on']('click',function(){const _0x30ca95=_0x4a20a2;$('#cryptoForm')[0x0][_0x30ca95(0x1db)](),$('#cryptoForm')[_0x30ca95(0x1fb)]('edit-index'),$(this)[_0x30ca95(0x1ce)](),_0x5c8846();}),$(_0x4a20a2(0x173))['on'](_0x4a20a2(0x1a1),function(){const _0x5391eb=_0x4a20a2,_0x32a6b5=$(this)[_0x5391eb(0x16e)]()[_0x5391eb(0x16a)]();$(_0x5391eb(0x1f8))[_0x5391eb(0x1ff)](function(){const _0x11f264=_0x5391eb;$(this)[_0x11f264(0x16d)]($(this)[_0x11f264(0x1c9)]()[_0x11f264(0x16a)]()['indexOf'](_0x32a6b5)>-0x1);});}),$(_0x4a20a2(0x1b6))['on'](_0x4a20a2(0x183),function(){const _0x5743c5=_0x4a20a2,_0x1ba490=$(_0x5743c5(0x193)),_0xb1106d=$(_0x5743c5(0x1bf));if(_0x1ba490[0x0][_0x5743c5(0x1b9)][_0x5743c5(0x179)]>0x0){const _0x3de1aa=_0x1ba490[0x0][_0x5743c5(0x1b9)][0x0],_0x249307=new FileReader();_0x249307[_0x5743c5(0x1ab)]=function(_0x306d4e){const _0x12b950=_0x5743c5;try{const _0x18ebbc=JSON['parse'](_0x306d4e[_0x12b950(0x177)][_0x12b950(0x1fa)]);console[_0x12b950(0x1e8)](_0x12b950(0x160),_0x18ebbc),Array[_0x12b950(0x1b8)](_0x18ebbc)?(saveToLocalStorage(_0x18ebbc),console[_0x12b950(0x1e8)](_0x12b950(0x17b)),loadStoredData(),_0xb1106d['text'](_0x12b950(0x1ee))[_0x12b950(0x1b1)](_0x12b950(0x1f2))[_0x12b950(0x17c)](_0x12b950(0x17a))):_0xb1106d[_0x12b950(0x1c9)]('Format\x20file\x20tidak\x20valid.')['removeClass'](_0x12b950(0x17a))[_0x12b950(0x17c)]('uk-text-danger');}catch(_0x50b6c0){console[_0x12b950(0x1c6)](_0x12b950(0x184),_0x50b6c0),_0xb1106d[_0x12b950(0x1c9)](_0x12b950(0x19e))[_0x12b950(0x1b1)](_0x12b950(0x17a))[_0x12b950(0x17c)](_0x12b950(0x1f2));}},_0x249307[_0x5743c5(0x1aa)](_0x3de1aa);}else _0x1ba490[_0x5743c5(0x1ca)]()[_0x5743c5(0x17c)](_0x5743c5(0x171)),_0xb1106d[_0x5743c5(0x1c9)](_0x5743c5(0x191))['removeClass']('uk-text-success')['addClass'](_0x5743c5(0x1f2)),_0x1ba490[_0x5743c5(0x1fe)]();}),$(_0x4a20a2(0x193))['on']('change',function(){const _0x456ee7=_0x4a20a2;$(this)[_0x456ee7(0x1ca)]()[_0x456ee7(0x1b1)](_0x456ee7(0x171)),$(_0x456ee7(0x1bf))['text']('');});});function _0x10ce(){const _0x15f8e9=[';\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>','bsc','prop','#tokenName','#pairDexOptions','Silakan\x20lakukan\x20perubahan\x20data!','#cmcID','BYBIT','toLowerCase','Data\x20berhasil\x20disimpan!','#17181f','toggle','val','MULTICEX_','1569015tnQxLY','uk-form-danger','status-active','#searchInput','top','setItem','KUCOIN','target','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20class=\x22uk-checkbox\x22\x20\x20type=\x22checkbox\x22\x20name=\x22cex\x22\x20value=\x22','length','uk-text-success','Data\x20disimpan\x20ke\x20localStorage','addClass','\x20tidak\x20ditemukan.','undefined','get','953DbFrvy','input[name=\x27cex\x27]:checked','html','click','Gagal\x20memuat\x20file:','application/json','ready','/token/','</a></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td><a\x20href=\x22','#sortIcon','MASTER\x20CRUDS\x20','MULTI_','status-inactive','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>','838123ppZDUL','createElement','.edit-btn','Silakan\x20pilih\x20file\x20untuk\x20diimpor.','download','#importFile','title','16XFUDoH','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20data-index=\x22','index','from','Aktif','#desimal','input[name=\x27dex\x27][value=\x27','35AwBGuf','html,\x20body','Gagal\x20memuat\x20file.','color','#cancelButton','input','keys','#D5006D','Tidak\x20Aktif','\x22>Edit</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22uk-button\x20uk-button-danger\x20delete-btn\x22\x20data-index=\x22','pairdex','\x22\x20target=\x22_blank\x22\x20class=\x22uk-link\x22>','input[name=\x27cex\x27]','createObjectURL','readAsText','onload','children','show','cex','warn','data','removeClass','.delete-btn','Apakah\x20Anda\x20yakin\x20ingin\x20menghapus\x20data\x20ini?','input[name=\x27cex\x27][value=\x27','symbol','#importButton','revokeObjectURL','isArray','files','8591112VxjKng','edit-index','\x20TOTAL\x20:\x20','sort','892lKukoY','#importStatus','#cryptoForm','preventDefault','notification','location','append','#096309','error','stringify','toUpperCase','text','next','value','submit','then','hide','black','push','each','363505bpdBsd','\x20PAIR-TOKEN\x20','BINANCE','20sGkEFW','empty','#e0a50c','#dataTableBody','\x22\x20style=\x22color:\x20','status','reset','input[name=\x27dex\x27]:checked','#namachain2','checked','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>','cmcID','getItem','animate','confirm','PAIRDEXS','BITGET','map','success','log','modal','primary','</td>\x20<!--\x20Warna\x20berdasarkan\x20CEX\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x22><a\x20href=\x22https://coinmarketcap.com/currencies/','GATE','symbolPair','Data\x20berhasil\x20diimpor.','1934037kQcVSK','first',':checked','uk-text-danger','chain','CONFIG\x20tidak\x20tersedia.','_LIST_TOKEN','70HlGXlD','#tokenCount','#dataTableBody\x20tr','#namachain','result','removeData','forEach','95880sknlSp','focus','filter','search','#status','Chain\x20dengan\x20nama\x20','h3#judul','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22action-buttons\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22uk-button\x20uk-button-secondary\x20edit-btn\x22\x20data-index=\x22','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Data\x20JSON\x20berhasil\x20dibaca:','\x22>Delete</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'];_0x10ce=function(){return _0x15f8e9;};return _0x10ce();}function getWarnaCEX(_0x4eeffe){const _0x60b11d=_0x362d3c;switch(_0x4eeffe['toUpperCase']()){case _0x60b11d(0x1d4):return _0x60b11d(0x1d7);case _0x60b11d(0x1ec):return _0x60b11d(0x1a3);case _0x60b11d(0x176):return _0x60b11d(0x1c5);case _0x60b11d(0x1e5):return'#1448ce';case _0x60b11d(0x169):return _0x60b11d(0x16c);default:return _0x60b11d(0x1cf);}}function _0x5908(_0x2d7902,_0x17a4e3){const _0x10cecc=_0x10ce();return _0x5908=function(_0x5908da,_0xf4f40a){_0x5908da=_0x5908da-0x15f;let _0x4f5de4=_0x10cecc[_0x5908da];return _0x4f5de4;},_0x5908(_0x2d7902,_0x17a4e3);}function loadStoredData(){const _0x5705d2=_0x362d3c,_0x4c5d92=getFromLocalStorage([]);$(_0x5705d2(0x1d8))[_0x5705d2(0x1d6)](),$(_0x5705d2(0x1f7))[_0x5705d2(0x1c9)](_0x5705d2(0x1bc)+_0x4c5d92[_0x5705d2(0x179)]+_0x5705d2(0x1d3)),_0x4c5d92[_0x5705d2(0x1fc)]((_0x393e67,_0x2a3130)=>{const _0x3fa6f4=_0x5705d2,_0x56512b=_0x393e67['status']?_0x3fa6f4(0x172):_0x3fa6f4(0x18c),_0x5c2cce=getWarnaCEX(_0x393e67[_0x3fa6f4(0x1ae)]),_0x53222c=_0x3fa6f4(0x196)+_0x2a3130+_0x3fa6f4(0x1d9)+_0x5c2cce+_0x3fa6f4(0x162)+(_0x2a3130+0x1)+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22\x20>'+_0x393e67[_0x3fa6f4(0x1ae)]+_0x3fa6f4(0x1eb)+_0x393e67['cmcID']+'/#Markets\x22\x20target=\x22_blank\x22\x20class=\x22uk-link\x22>'+_0x393e67[_0x3fa6f4(0x1b5)]+_0x3fa6f4(0x188)+URL_Chain+_0x3fa6f4(0x187)+_0x393e67['sc']+_0x3fa6f4(0x1a7)+_0x393e67['sc']+'</a></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>'+_0x393e67['desimal']+_0x3fa6f4(0x18d)+_0x393e67[_0x3fa6f4(0x1e0)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x20'+_0x56512b+'\x22>'+(_0x393e67[_0x3fa6f4(0x1da)]?_0x3fa6f4(0x199):_0x3fa6f4(0x1a4))+_0x3fa6f4(0x18d)+_0x393e67['pairdex']+_0x3fa6f4(0x204)+_0x2a3130+_0x3fa6f4(0x1a5)+_0x2a3130+_0x3fa6f4(0x161);$(_0x3fa6f4(0x1d8))[_0x3fa6f4(0x1c4)](_0x53222c);}),updateSortIcons();}function sortTable(_0x2a2bb8){const _0x165170=_0x362d3c,_0xedbf00=$('#dataTableBody\x20tr')['get']();_0xedbf00[_0x165170(0x1bd)](function(_0xfb70f2,_0x21a37f){const _0x467f0d=_0x165170,_0x8d1de3=$(_0xfb70f2)['children']('td')['eq'](_0x2a2bb8)[_0x467f0d(0x1c9)]()[_0x467f0d(0x1c8)](),_0x8672fd=$(_0x21a37f)['children']('td')['eq'](_0x2a2bb8)['text']()[_0x467f0d(0x1c8)]();sortOrder[_0x2a2bb8]===undefined&&(sortOrder[_0x2a2bb8]=!![]);if(_0x8d1de3<_0x8672fd)return sortOrder[_0x2a2bb8]?-0x1:0x1;if(_0x8d1de3>_0x8672fd)return sortOrder[_0x2a2bb8]?0x1:-0x1;return 0x0;}),$(_0x165170(0x1d8))[_0x165170(0x1d6)]()[_0x165170(0x1c4)](_0xedbf00),$(_0x165170(0x1f8))[_0x165170(0x1d1)]((_0x2073bb,_0x39c3e6)=>{const _0x5a0c63=_0x165170;$(_0x39c3e6)[_0x5a0c63(0x1ac)]('td')[_0x5a0c63(0x1f0)]()[_0x5a0c63(0x1c9)](_0x2073bb+0x1);}),sortOrder[_0x2a2bb8]=!sortOrder[_0x2a2bb8],updateSortIcons();}function updateSortIcons(){const _0x3da966=_0x362d3c;$('.sort-icon')[_0x3da966(0x182)]('');for(let _0x3a5bee in sortOrder){const _0xf522c6=sortOrder[_0x3a5bee]?'▲':'▼';$(_0x3da966(0x189)+_0x3a5bee)[_0x3da966(0x182)](_0xf522c6);}}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+</body>
+</html>
