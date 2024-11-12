@@ -523,49 +523,7 @@
          // Contoh pemanggilan fungsi
         const chainName = 'arbitrum'; // ganti dengan nama chain lain seperti 'polygon', 'arbitrum', dll.
         const DTChain = getChainData(chainName);
-    function generateCheckboxes(config, containerId, checkboxClass) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = ''; // Bersihkan container
-    
-        // Iterasi melalui setiap key di konfigurasi (CEX atau DEX)
-        Object.keys(config).forEach(symbol => {
-            // Buat elemen checkbox
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.classList.add(checkboxClass);
-            checkbox.value = symbol;
-    
-            // Buat label untuk checkbox
-            const label = document.createElement('label');
-            label.classList.add('uk-form-label', containerId === "cex-checkbox-container" ? 'uk-text-secondary' : 'uk-text-danger');
-            label.appendChild(checkbox);
-            label.appendChild(document.createTextNode(` ${symbol}`));
-    
-            // Tambahkan checkbox ke container
-            container.appendChild(label);
-        });
-    }
-    
-    // Fungsi untuk mendapatkan data chain berdasarkan nama chain
-    function getChainData(chainName) {
-        const chainData = CONFIG_CHAINS[chainName]; // base
-        
-        if (!chainData) {
-            console.log(`Chain dengan nama ${chainName} tidak ditemukan.`);
-            return null;
-        }
-    
-        return {
-            Kode_Chain: chainData.Kode_Chain,
-            Nama_Chain: chainData.Nama_Chain,
-            PAIRDEXS: chainData.PAIRDEXS,
-            URL_Chain: chainData.URL_Chain, 
-            DATAJSON: chainData.DATAJSON, 
-            BaseFEEDEX: chainData.BaseFEEDEX, 
-            CEXCHAIN: chainData.WALLET_CEX,
-        };
-    }
-
+   
         //console.log(`Data untuk chain ${chainName}:`, DTChain);                
         //console.log(`Data untuk CONFIG CEX `, CONFIG_CEX); 
         // Panggil fungsi untuk menghasilkan checkbox untuk CEX dan DEX
