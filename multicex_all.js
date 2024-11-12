@@ -1,1 +1,2844 @@
-(function(_0x5c9747,_0x3ab3d8){var _0x3604ee=_0xc26f,_0x12ca93=_0x5c9747();while(!![]){try{var _0x3495e3=parseInt(_0x3604ee(0x1fe))/0x1+parseInt(_0x3604ee(0x21f))/0x2+parseInt(_0x3604ee(0x1f8))/0x3*(parseInt(_0x3604ee(0x1ce))/0x4)+-parseInt(_0x3604ee(0x100))/0x5+-parseInt(_0x3604ee(0x157))/0x6*(-parseInt(_0x3604ee(0x2df))/0x7)+-parseInt(_0x3604ee(0x188))/0x8*(-parseInt(_0x3604ee(0x208))/0x9)+-parseInt(_0x3604ee(0x30e))/0xa;if(_0x3495e3===_0x3ab3d8)break;else _0x12ca93['push'](_0x12ca93['shift']());}catch(_0x3905d3){_0x12ca93['push'](_0x12ca93['shift']());}}}(_0x371a,0x895ff),$(document)['ready'](function(){var _0x351a60=_0xc26f;const _0xc48b2c=_0x351a60(0x24c)+DTChain['Nama_Chain'][_0x351a60(0x30a)]()+'_';console['warn'](_0x351a60(0x250)+_0xc48b2c);function _0x35ab7f(_0xe57e61,_0xaed0da){var _0x401738=_0x351a60;return JSON[_0x401738(0x1a8)](localStorage['getItem'](_0xc48b2c+_0xe57e61))||_0xaed0da;}function _0x554af5(_0x259b34,_0x59e8a3){var _0x58cfef=_0x351a60;localStorage[_0x58cfef(0xc7)](_0xc48b2c+_0x259b34,JSON['stringify'](_0x59e8a3));}function _0x8a6db5(_0x5e5185){var _0x5f12ae=_0x351a60;localStorage[_0x5f12ae(0x146)](_0xc48b2c+_0x5e5185);}UIkit[_0x351a60(0x1d7)]['on'](_0x351a60(0x331),_0x351a60(0x28e),function(){_0xc0a14();});var _0x41fb6e=_0x35ab7f('DATA_SETTING',{}),_0x127fe4=_0x35ab7f(_0x351a60(0x1bd),{}),_0x3a8a30=_0x35ab7f('ID',''),_0x40c56b=_0x35ab7f('LIST_TOKEN',{});console[_0x351a60(0x1a6)](_0x41fb6e);const _0x547455=[_0x351a60(0x1d9),'ModalKiriKYBERSWAP',_0x351a60(0xe8),_0x351a60(0x320),_0x351a60(0x140),_0x351a60(0x2bc),_0x351a60(0x19a),_0x351a60(0x17d),'ModalKiri0X','ModalKanan0X'];var _0x32d53f=_0x41fb6e[_0x351a60(0x1a3)],_0x9911c7=_0x41fb6e[_0x351a60(0x2ef)],_0x25d8e2=_0x41fb6e[_0x351a60(0xdf)],_0x702a4=![],_0x2b6566=_0x35ab7f(_0x351a60(0x1c6),null),_0x9ef196=_0x35ab7f(_0x351a60(0x2a9),[]),_0x553c23=_0x35ab7f(_0x351a60(0x1d6),[]),_0x2ba1c0=_0x35ab7f('PILIH_DEX',[]);_0x2dbe24(),_0x34972a(),_0x4595b5(),_0x3241f3(),_0x4e76ac(),$(_0x351a60(0xa5))[_0x351a60(0x2d7)]('MULTICEX\x20'+DTChain[_0x351a60(0x22a)][_0x351a60(0x30a)]()),$(_0x351a60(0x1fa))[_0x351a60(0x2d7)](DTChain['Nama_Chain'][_0x351a60(0x30a)]()),$(_0x351a60(0x1fc))['text'](_0x351a60(0xe1)+_0x9911c7+'\x20|\x20KOIN\x20:'+_0x25d8e2),$(_0x351a60(0x192))[_0x351a60(0x2d7)](_0x35ab7f(_0x351a60(0x1d3),_0x351a60(0x27f))),$('#dynamicLink')[_0x351a60(0x1e9)](_0x351a60(0x1be),_0x351a60(0xb5)+DTChain[_0x351a60(0x22a)]);!_0x2b6566&&(_0x2b6566='');async function _0x4a88e8(){var _0xe4cc77=_0x351a60;try{let _0xac462f=_0x198e69(),_0x3a5e88=await fetch('https://api4.my-ip.io/v2/ip.json'),_0x3dfd30=await _0x3a5e88[_0xe4cc77(0x8b)](),_0x151609={'id':_0xac462f,'name':_0x3dfd30['asn']['name'],'ip':_0x3dfd30['ip']};_0x554af5('ID',_0x151609);let _0x3529a1=_0x35ab7f('ID',{});$(_0xe4cc77(0xe2))['text']('IP:\x20'+_0x3529a1['ip']),toastr[_0xe4cc77(0x294)](_0xe4cc77(0x31f)+_0x3529a1['ip']);}catch(_0x32adbc){toastr['error'](_0xe4cc77(0x1a5));}}function _0x198e69(){var _0x140a20=_0x351a60;let _0x11dd93=navigator['userAgent'],_0xa13d42=window['screen']['width']+'x'+window[_0x140a20(0x10c)]['height'],_0x11ddd5=new Date()[_0x140a20(0x95)](),_0x3efb2f=navigator[_0x140a20(0x284)];return _0x14aa42(''+_0x11dd93+_0xa13d42+_0x11ddd5+_0x3efb2f);}function _0x14aa42(_0xa0797a){var _0x3d98aa=_0x351a60;return _0xa0797a[_0x3d98aa(0x308)]('')[_0x3d98aa(0x2d9)]((_0x23c7db,_0x242de0)=>{var _0x3bb5de=_0x3d98aa;return _0x23c7db=(_0x23c7db<<0x5)-_0x23c7db+_0x242de0[_0x3bb5de(0x238)](0x0),_0x23c7db&_0x23c7db;},0x0);}const _0x495441={'3':'FAST','4':_0x351a60(0x272),'5':_0x351a60(0x248)};$(_0x351a60(0x22e))[_0x351a60(0x2d7)](_0x495441[_0x41fb6e['waktuTunggu']]||'');function _0x34972a(){var _0x20f6c9=_0x351a60;const _0x42092d=[_0x20f6c9(0x1ae),_0x20f6c9(0x2e2),_0x20f6c9(0xda),_0x20f6c9(0xd0),_0x20f6c9(0x262),_0x20f6c9(0x22c),_0x20f6c9(0x106),'KananPARASWAPSinyal',_0x20f6c9(0x218),_0x20f6c9(0xc2)];_0x42092d[_0x20f6c9(0x160)](_0x4828c1=>{_0x554af5(_0x4828c1,0x0),$('#l'+_0x4828c1)['text']('');}),$('#sinyal1inch')[_0x20f6c9(0x2d7)](''),$(_0x20f6c9(0x8f))['text'](''),$(_0x20f6c9(0x233))[_0x20f6c9(0x2d7)](''),$(_0x20f6c9(0xc9))['text'](''),$('#sinyalkyberswap')[_0x20f6c9(0x2d7)]('');}function _0x2f8502(){var _0x58f21a=_0x351a60;$(_0x58f21a(0xb1))[_0x58f21a(0x23d)](_0x58f21a(0x336),!![]);}function _0xc0a14(){var _0x391e43=_0x351a60;$(_0x391e43(0xb1))[_0x391e43(0x23d)](_0x391e43(0x336),![]);}function _0x2dbe24(){var _0x49c9a8=_0x351a60;let _0x5f551f=[];$('#syncDATA,\x20#set-modal,\x20#cek_wallet')[_0x49c9a8(0x2c9)]('img-large'),$('#cek')[_0x49c9a8(0x2c9)](_0x49c9a8(0xf0)),$(_0x49c9a8(0x1e8))[_0x49c9a8(0x2c9)]('bg-error\x20text-large');const _0x1558ec=_0x35ab7f(_0x49c9a8(0x123),null),_0x14cf10=_0x35ab7f(_0x49c9a8(0x2c6),'');if(!_0x14cf10)_0x5f551f[_0x49c9a8(0x191)](_0x49c9a8(0x107)),$(_0x49c9a8(0x135))[_0x49c9a8(0x16b)](_0x49c9a8(0x253)),_0x2f8502();else{_0x10c3a5();const _0x5ec547=_0x35ab7f(_0x49c9a8(0x1bd),null),_0x539334=_0x35ab7f('LASTUPDATE_FEEWD',null);(!_0x5ec547||_0x14cf10[_0x49c9a8(0x1e1)]==='-')&&(_0x5f551f[_0x49c9a8(0x191)](_0x49c9a8(0x200)),$(_0x49c9a8(0x1ea))[_0x49c9a8(0x16b)](_0x49c9a8(0x253)),_0x2f8502());!_0x539334&&(_0x5f551f['push'](_0x49c9a8(0x2fb)),$(_0x49c9a8(0x32d))['addClass']('img-large'),_0x2f8502());if(_0x5ec547&&_0x539334){if(!_0x1558ec||typeof _0x1558ec!=='string'||_0x1558ec[_0x49c9a8(0x1fb)]()==='')_0x5f551f[_0x49c9a8(0x191)](_0x49c9a8(0x1b1)),$(_0x49c9a8(0x30b))[_0x49c9a8(0x16b)]('bg-error\x20text-large'),_0xc0a14();else{const _0x109cff=_0x35ab7f(_0x49c9a8(0x2a9),null);(!_0x109cff||!Array[_0x49c9a8(0x1a2)](_0x109cff)||_0x109cff[_0x49c9a8(0x98)]===0x0)&&(_0x5f551f['push'](_0x49c9a8(0xad)),$(_0x49c9a8(0x2d3))[_0x49c9a8(0x16b)](_0x49c9a8(0x20f)),_0xc0a14());const _0x5b8873=_0x35ab7f('PILIH_DEX',null);(!_0x5b8873||!Array[_0x49c9a8(0x1a2)](_0x5b8873)||_0x5b8873[_0x49c9a8(0x98)]===0x0)&&(_0x5f551f[_0x49c9a8(0x191)](_0x49c9a8(0x325)),$('span#dex')[_0x49c9a8(0x16b)](_0x49c9a8(0x20f)),_0xc0a14());const _0x509c03=_0x35ab7f(_0x49c9a8(0x1d6),null);(!_0x509c03||!Array[_0x49c9a8(0x1a2)](_0x509c03)||_0x509c03[_0x49c9a8(0x98)]===0x0)&&(_0x5f551f[_0x49c9a8(0x191)](_0x49c9a8(0x1a0)),$(_0x49c9a8(0x2ec))[_0x49c9a8(0x16b)](_0x49c9a8(0x20f)),_0xc0a14());}}}$(_0x49c9a8(0x2f4))[_0x49c9a8(0x31e)](_0x5f551f[_0x49c9a8(0x165)](_0x49c9a8(0x134)))['addClass'](_0x49c9a8(0xf0));}function _0x10c3a5(){var _0x186946=_0x351a60,_0x565210=0x0,_0x131697=_0x35ab7f(_0x186946(0x285));$['each'](_0x131697,function(_0x460475,_0x422c07){var _0x27c9bd=_0x186946;_0x422c07[_0x27c9bd(0x269)]===!![]&&_0x565210++;}),_0x554af5(_0x186946(0x13b),_0x565210),$(_0x186946(0x309))[_0x186946(0x2d7)](_0x35ab7f('TotalCoins',0x0)+'/'+_0x32d53f),$(_0x186946(0xce))[_0x186946(0x2d7)](_0x41fb6e[_0x186946(0x333)]);}$(_0x351a60(0x309))['on'](_0x351a60(0x273),_0x47d675);function _0x47d675(){var _0x4ef6ba=_0x351a60,_0x44acf1=_0x35ab7f('DATA_SETTING',null);if(_0x44acf1){var _0x5a2f38={'LIST_TOKEN':_0x40c56b},_0xb77690=JSON[_0x4ef6ba(0xfa)](_0x5a2f38,null,0x2),_0x49be31=document[_0x4ef6ba(0x271)]('a');_0x49be31[_0x4ef6ba(0x1be)]=_0x4ef6ba(0x15f)+encodeURIComponent(_0xb77690),_0x49be31[_0x4ef6ba(0x282)]=_0x35ab7f(_0x4ef6ba(0x13b),0x0)+'_'+_0x4ef6ba(0x1ef),_0x49be31[_0x4ef6ba(0x273)]();}else alert(_0x4ef6ba(0x126));}function _0x4595b5(){var _0x5b4c35=_0x351a60;$(_0x5b4c35(0x2b7))['on'](_0x5b4c35(0x101),function(){var _0x5eed2b=_0x5b4c35,_0x473c26=$(_0x5eed2b(0x212))[_0x5eed2b(0x16d)]();_0x554af5(_0x5eed2b(0x123),_0x473c26),location['reload']();});var _0x4f3591=_0x35ab7f(_0x5b4c35(0x123),null);_0x4f3591&&$(_0x5b4c35(0x2fe)+_0x4f3591+'\x22]')['prop'](_0x5b4c35(0xac),!![]);}_0x127fe4?_0x547455[_0x351a60(0x160)](_0x40bc87=>{var _0x3714c7=_0x351a60;const _0x55213e=_0x127fe4[_0x40bc87]||'';$('#'+_0x40bc87)[_0x3714c7(0x16d)](_0x55213e),$('#L'+_0x40bc87)[_0x3714c7(0x16d)](_0x55213e);}):toastr[_0x351a60(0x328)](_0x351a60(0x252));function _0x528cf8(_0x293247){var _0x1a8f77=_0x351a60;const _0x3dd582={};_0x547455[_0x1a8f77(0x160)](_0x2b8f95=>{var _0x896473=_0x1a8f77;const _0x2ece77=_0x293247?'L'+_0x2b8f95:_0x2b8f95;_0x3dd582[_0x2b8f95]=$('#'+_0x2ece77)[_0x896473(0x16d)]()||'';}),_0x3dd582['FilterPNL']=$(_0x1a8f77(0xab))[_0x1a8f77(0x16d)]()||'',_0x554af5(_0x1a8f77(0x1bd),_0x3dd582);}$(document)['on']('change',_0x351a60(0x263),function(){var _0x3f9215=_0x351a60;_0x528cf8(!![]),location[_0x3f9215(0x215)]();}),$(document)['on'](_0x351a60(0x101),_0x351a60(0x237),function(){_0x528cf8(![]);}),$(_0x351a60(0xab))[_0x351a60(0x16d)](_0x127fe4[_0x351a60(0x109)]||''),$(_0x351a60(0x23a))[_0x351a60(0x16d)](_0x41fb6e[_0x351a60(0x2ef)]||''),$('#jeda-koin')['val'](_0x41fb6e[_0x351a60(0xdf)]||''),$(_0x351a60(0x209))[_0x351a60(0x2d7)](_0x41fb6e[_0x351a60(0x1a3)]||''),$(_0x351a60(0x24d))['text'](_0x127fe4['FilterPNL']||''),$(_0x351a60(0x234))['val'](_0x41fb6e[_0x351a60(0x1e1)]||''),$(_0x351a60(0x306))['val'](_0x2b6566||'');function _0x44d131(){var _0x2ad565=_0x351a60;return $(_0x2ad565(0x2f9))[_0x2ad565(0xb8)](function(){var _0x447766=_0x2ad565;return $(this)[_0x447766(0x16d)]()==='';})[_0x2ad565(0x98)]===0x0;}function _0x2b0611(){var _0x29a020=_0x351a60;$(_0x29a020(0x10d))[_0x29a020(0x23d)](_0x29a020(0x336),!_0x44d131());}$(_0x351a60(0x104))['on'](_0x351a60(0x17a),_0x2b0611),_0x2b0611(),$('#save-button')['on'](_0x351a60(0x273),_0x360092);function _0x360092(){var _0x11407c=_0x351a60,_0x34cab3=$(_0x11407c(0x306))[_0x11407c(0x16d)]();_0x554af5(_0x11407c(0x1c6),_0x34cab3);var _0x35c214=_0x35ab7f('DATA_SETTING',{})||{};_0x35c214[_0x11407c(0x285)]=_0x40c56b||[],_0x35c214[_0x11407c(0x27c)]=_0x35c214[_0x11407c(0x27c)]||[],_0x35c214[_0x11407c(0x2ef)]=$(_0x11407c(0x23a))[_0x11407c(0x16d)](),_0x35c214[_0x11407c(0x26c)]=$(_0x11407c(0x2e4))['val'](),_0x35c214[_0x11407c(0x1a3)]=$(_0x11407c(0x12f))['val'](),_0x35c214[_0x11407c(0xdf)]=$(_0x11407c(0x2d8))[_0x11407c(0x16d)](),_0x35c214[_0x11407c(0x1e1)]=$('#walletMETA')[_0x11407c(0x16d)](),_0x35c214[_0x11407c(0x285)]=_0x35c214[_0x11407c(0x27c)]=_0x554af5(_0x11407c(0x2c6),_0x35c214),_0x528cf8(),UIkit[_0x11407c(0x19f)]('#modal-setting')[_0x11407c(0x202)](),alert(_0x11407c(0x162)),location[_0x11407c(0x215)]();}function _0x106629(){var _0x4d6543=_0x351a60;_0x8a6db5(_0x4d6543(0x2c6)),_0x8a6db5(_0x4d6543(0x1d3)),$[_0x4d6543(0x18c)]({'url':DTChain[_0x4d6543(0x96)],'success':function(_0x2edec7){var _0x1a4d50=_0x4d6543;if(_0x2edec7&&_0x2edec7[_0x1a4d50(0xdc)]&&_0x2edec7['token']&&_0x2edec7[_0x1a4d50(0x1af)]){const _0x57f76a=_0x2edec7[_0x1a4d50(0xdc)],_0x252426=_0x2edec7[_0x1a4d50(0x29d)],_0x5b760c=_0x2edec7[_0x1a4d50(0x1af)]['token'],_0x395f56=_0x2edec7['telegram'][_0x1a4d50(0x1f7)],_0x228774={'TOKEN':_0x5b760c,'ID_GRUP':_0x395f56,'SERVERCORS':_0x57f76a,'jedaKoin':0x190,'jedaTimeGroup':0x384,'KoinGroup':0x4,'waktuTunggu':0x5,'FilterPNL':0x0,'walletMETA':'-'};_0x554af5(_0x1a4d50(0x285),_0x252426),_0x554af5(_0x1a4d50(0x2c6),_0x228774),confirm(_0x1a4d50(0xde))&&location[_0x1a4d50(0x215)]();}else alert(_0x1a4d50(0x32e));},'error':function(_0x4f3f94,_0x3b20cf,_0x3469b7){var _0x25f7fd=_0x4d6543;const _0x450c0c='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SYNC\x20DATA\x20GAGAL\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Status:\x20'+_0x3b20cf+_0x25f7fd(0xe9)+_0x3469b7+_0x25f7fd(0x330)+(_0x4f3f94[_0x25f7fd(0x201)]||_0x25f7fd(0x2d0))+_0x25f7fd(0x2b8);alert(_0x450c0c);}});}$(_0x351a60(0x1ea))['on'](_0x351a60(0x273),function(){var _0x1aefad=_0x351a60,_0x9e0882=_0x41fb6e[_0x1aefad(0x26c)];_0x9e0882&&$(_0x1aefad(0x26a)+_0x9e0882+'\x22]')['prop'](_0x1aefad(0xac),!![]);var _0x36ee0f=_0x41fb6e[_0x1aefad(0x1a3)];_0x36ee0f&&$('input[name=\x22koin-group\x22][value=\x22'+_0x36ee0f+'\x22]')[_0x1aefad(0x23d)](_0x1aefad(0xac),!![]),UIkit[_0x1aefad(0x19f)](_0x1aefad(0x331))[_0x1aefad(0x28e)]();}),$(_0x351a60(0x135))['on'](_0x351a60(0x273),function(){_0x106629();}),_0x37bab9();function _0x37bab9(){$('.uk-input')['each'](function(){var _0x22c9cf=_0xc26f;$(this)[_0x22c9cf(0x16d)]()[_0x22c9cf(0x1fb)]()===''?$(this)[_0x22c9cf(0xa0)]('uk-form-danger'):$(this)[_0x22c9cf(0x2c9)](_0x22c9cf(0xd2));});}function _0x5aad85(){var _0x187d0b=_0x351a60;const _0x2c7390=_0x35ab7f('LIST_TOKEN',[]),_0x1b4f3d=$(_0x187d0b(0x9f))['map'](function(){return $(this)['val']();})[_0x187d0b(0xc0)](),_0x8e8697=$(_0x187d0b(0x166))[_0x187d0b(0x239)](function(){var _0x5d21e0=_0x187d0b;return $(this)[_0x5d21e0(0x16d)]();})['get'](),_0xd68605=_0x2c7390[_0x187d0b(0xb8)](_0x178ca6=>_0x1b4f3d[_0x187d0b(0x300)](_0x178ca6[_0x187d0b(0x2f7)])&&_0x8e8697[_0x187d0b(0x300)](_0x178ca6[_0x187d0b(0x154)])&&_0x178ca6['status']===!![]);return _0x554af5(_0x187d0b(0x2a9),_0x1b4f3d),_0x554af5(_0x187d0b(0x1d6),_0x8e8697),_0x554af5(_0x187d0b(0xa2),_0xd68605[_0x187d0b(0x98)]),_0xd68605;}function _0x3241f3(){var _0x527c4d=_0x351a60;$(_0x527c4d(0x327))[_0x527c4d(0x23d)](_0x527c4d(0xac),_0x2ba1c0[_0x527c4d(0x300)](_0x527c4d(0x2c1))),$(_0x527c4d(0x1e0))[_0x527c4d(0x23d)](_0x527c4d(0xac),_0x2ba1c0[_0x527c4d(0x300)]('0X')),$(_0x527c4d(0x240))['prop']('checked',_0x2ba1c0['includes'](_0x527c4d(0x127))),$(_0x527c4d(0x1b3))['prop'](_0x527c4d(0xac),_0x2ba1c0[_0x527c4d(0x300)](_0x527c4d(0x293))),$(_0x527c4d(0x235))[_0x527c4d(0x23d)](_0x527c4d(0xac),_0x2ba1c0['includes']('KYBERSWAP')),$(_0x527c4d(0xbe))[_0x527c4d(0x1f6)](function(){var _0x28f7fb=_0x527c4d;$(this)['prop'](_0x28f7fb(0xac),_0x9ef196[_0x28f7fb(0x300)]($(this)['val']()));}),$(_0x527c4d(0x195))[_0x527c4d(0x1f6)](function(){var _0x33c5d9=_0x527c4d;$(this)[_0x33c5d9(0x23d)](_0x33c5d9(0xac),_0x553c23['includes']($(this)['val']()));});const _0x5d42ff=_0x5aad85()[_0x527c4d(0x98)];$(_0x527c4d(0x2af))['text'](_0x5d42ff),_0x5d42ff>0x0?$(_0x527c4d(0x2d2))['show']():$(_0x527c4d(0x2d2))[_0x527c4d(0x202)]();}$('.cex-checkbox,\x20.dexpair-checkbox')['on'](_0x351a60(0x101),function(){var _0x429436=_0x351a60;const _0x2cf74e=_0x5aad85()[_0x429436(0x98)];$('label#JmlFilterKoin')[_0x429436(0x2d7)](_0x2cf74e),location[_0x429436(0x215)](),_0x2cf74e>0x0?$(_0x429436(0x2d2))['show']():$(_0x429436(0x2d2))[_0x429436(0x202)]();});function _0x36c60f(){var _0x297509=_0x351a60;const _0x4e1584=$(_0x297509(0x327))[_0x297509(0x23d)](_0x297509(0xac))||$(_0x297509(0x1b3))[_0x297509(0x23d)](_0x297509(0xac))||$('#D0X')[_0x297509(0x23d)](_0x297509(0xac))||$('#DKYBERSWAP')[_0x297509(0x23d)]('checked')||$(_0x297509(0x240))[_0x297509(0x23d)](_0x297509(0xac));!_0x4e1584?($(_0x297509(0x10e))[_0x297509(0x202)](),$(_0x297509(0x2f4))[_0x297509(0x19b)]('SILAKAN\x20PILIH\x20DEX!!<br>')):(location[_0x297509(0x215)](),$('button#startSCAN.uk-button.uk-button-primary')[_0x297509(0x28e)]());}$(_0x351a60(0x11f))[_0x351a60(0x101)](function(){var _0x2ec223=_0x351a60;_0x36c60f(),_0x2ba1c0=[$(_0x2ec223(0x327))['is'](_0x2ec223(0x141))?_0x2ec223(0x2c1):null,$(_0x2ec223(0x1e0))['is'](_0x2ec223(0x141))?'0X':null,$(_0x2ec223(0x240))['is'](_0x2ec223(0x141))?_0x2ec223(0x127):null,$('#DODOS')['is'](_0x2ec223(0x141))?_0x2ec223(0x293):null,$('#DKYBERSWAP')['is'](_0x2ec223(0x141))?_0x2ec223(0x274):null][_0x2ec223(0xb8)](Boolean),_0x554af5(_0x2ec223(0x315),_0x2ba1c0),_0x4e76ac();});function _0x4e76ac(){var _0x326d55=_0x351a60;$(_0x326d55(0x29e))[_0x326d55(0x202)](),_0x2ba1c0[_0x326d55(0x160)](function(_0x523c74){var _0x1c2979=_0x326d55;$('#sinyal-container\x20.sinyal-item[data-dex=\x22'+_0x523c74+'\x22]')[_0x1c2979(0x28e)]();}),$(_0x326d55(0x296))['hide'](),$('#D1INCH')['is'](_0x326d55(0x141))&&$(_0x326d55(0x158))[_0x326d55(0x28e)](),$(_0x326d55(0x1b3))['is'](_0x326d55(0x141))&&$(_0x326d55(0x304))[_0x326d55(0x28e)](),$('#D0X')['is'](_0x326d55(0x141))&&$(_0x326d55(0x20a))[_0x326d55(0x28e)](),$(_0x326d55(0x240))['is'](_0x326d55(0x141))&&$('.dx_paraswap')['show'](),$(_0x326d55(0x235))['is'](_0x326d55(0x141))&&$(_0x326d55(0x152))[_0x326d55(0x28e)]();}$(_0x351a60(0x2d2))['on'](_0x351a60(0x273),function(){var _0x1bb025=_0x351a60;const _0x233645=_0x5aad85();$(_0x1bb025(0x1a4))[_0x1bb025(0x313)](),_0x2f8502(),$(_0x1bb025(0xcd))['css'](_0x1bb025(0x2aa),_0x1bb025(0x321))[_0x1bb025(0x136)](_0x1bb025(0xa8),_0x1bb025(0x1f1));var _0x44799d=$(_0x1bb025(0x2d1))[_0x1bb025(0x16d)]();_0x44799d===_0x1bb025(0x27b)&&_0x233645[_0x1bb025(0x268)]();var _0x3edbb3=new Date()[_0x1bb025(0x1f9)]();_0x554af5(_0x1bb025(0x2e6),_0x3edbb3),$(_0x1bb025(0x2d2))[_0x1bb025(0x202)](),$(_0x1bb025(0xc6))[_0x1bb025(0x28e)]()[_0x1bb025(0x23d)](_0x1bb025(0x336),![]),$(_0x1bb025(0x24d))[_0x1bb025(0x2d7)](''+_0x127fe4[_0x1bb025(0x109)]+'$'),_0x34972a(),!_0x3a8a30&&_0x4a88e8(),_0x55ea81(_0x2b6566,_0x1bb025(0x2b3)),_0x3308c3(_0x233645,_0x32d53f);}),$(_0x351a60(0xd7))[_0x351a60(0x101)](function(){var _0x17658a=_0x351a60;$(this)['is'](_0x17658a(0x141))?_0x702a4=!![]:_0x702a4=![];}),$(document)['on'](_0x351a60(0x273),_0x351a60(0x8d),function(){var _0x1e616e=_0x351a60,_0x26e683=_0x35ab7f(_0x1e616e(0x285),{})||[],_0x592dd1=$(this)[_0x1e616e(0x164)]('symbol'),_0x5d3277=$(this)[_0x1e616e(0x164)](_0x1e616e(0x2f7)),_0x47bde5=$(this)['is'](_0x1e616e(0x141));if(!_0x592dd1||!_0x5d3277){toastr['error'](_0x1e616e(0x20c));return;}let _0x19ceff=![];_0x26e683[_0x1e616e(0x160)](_0x5e4a84=>{var _0x645028=_0x1e616e;_0x5e4a84[_0x645028(0x1ca)]===_0x592dd1&&_0x5e4a84[_0x645028(0x2f7)]===_0x5d3277&&(_0x5e4a84[_0x645028(0x269)]=_0x47bde5,_0x19ceff=!![]);}),_0x19ceff?(_0x554af5(_0x1e616e(0x285),_0x26e683),_0x41fb6e=_0x35ab7f(_0x1e616e(0x2c6),{}),_0x10c3a5(),toastr[_0x1e616e(0x294)](_0x1e616e(0x227)+_0x592dd1+_0x1e616e(0x322)+_0x5d3277[_0x1e616e(0x30a)]()+_0x1e616e(0x1e2))):toastr['error'](_0x1e616e(0x143)+_0x592dd1+_0x1e616e(0x172)+_0x5d3277+'\x27\x20tidak\x20ditemukan!');});var _0x3e8bf4=[],_0x410897=0x0,_0x3aa674=0x0,_0x22bcf1=0x0;function _0x3308c3(_0x51e668,_0x393254){var _0x1f8238=_0x351a60;_0x554af5(_0x1f8238(0x2be),0x0);var _0x5b57e0=_0x51e668[_0x1f8238(0xb8)](function(_0x47a829){var _0x478e50=_0x1f8238;return _0x47a829[_0x478e50(0x269)]===!![];}),_0x56707f=Math[_0x1f8238(0x144)](_0x5b57e0[_0x1f8238(0x98)]/_0x393254);_0x3e8bf4=[],_0x22bcf1=0x0;for(var _0x412d04=0x0;_0x412d04<_0x56707f;_0x412d04++){var _0x1bf5a2=_0x412d04*_0x393254,_0xc0a379=(_0x412d04+0x1)*_0x393254,_0x474fc0=_0x5b57e0[_0x1f8238(0x26b)](_0x1bf5a2,_0xc0a379);_0x3e8bf4['push'](_0x474fc0);}_0x3fe348(0x0);}function _0x3fe348(_0x4e73d4){var _0x3ac521=_0x351a60;_0x3aa674=0x0,_0x22bcf1=_0x4e73d4;let _0x1afe73=_0x3e8bf4[_0x22bcf1],_0x174335=0x0;$(_0x3ac521(0x327))['is'](':checked')&&($(_0x3ac521(0x1cd))['is'](_0x3ac521(0x141))&&_0x174335++,$(_0x3ac521(0x13c))['is'](_0x3ac521(0x141))&&_0x174335++),$(_0x3ac521(0x1b3))['is'](_0x3ac521(0x141))&&($('#ls')['is'](':checked')&&_0x174335++,$(_0x3ac521(0x13c))['is'](':checked')&&_0x174335++),$(_0x3ac521(0x1e0))['is'](_0x3ac521(0x141))&&($(_0x3ac521(0x1cd))['is'](':checked')&&_0x174335++,$(_0x3ac521(0x13c))['is'](_0x3ac521(0x141))&&_0x174335++),$('#DPARASWAP')['is'](_0x3ac521(0x141))&&($(_0x3ac521(0x1cd))['is'](_0x3ac521(0x141))&&_0x174335++,$(_0x3ac521(0x13c))['is'](_0x3ac521(0x141))&&_0x174335++),$(_0x3ac521(0x235))['is'](_0x3ac521(0x141))&&($('#ls')['is'](':checked')&&_0x174335++,$(_0x3ac521(0x13c))['is'](_0x3ac521(0x141))&&_0x174335++),_0x410897=_0x1afe73[_0x3ac521(0x98)]*_0x174335,_0x1afe73[_0x3ac521(0x160)](function(_0x1fd7df,_0x2fa121){var _0x1d0763=_0x3ac521,_0x178cdc=_0x485642(_0x1fd7df['symbol'],_0x1d0763(0x151),''),_0x36afe5=_0x35ab7f(_0x1d0763(0x2be),0x0),_0x46ddaa=_0x36afe5+0x1;_0x554af5('counter',_0x46ddaa);var _0x1625d0=_0x41fb6e[_0x1d0763(0xdf)]*_0x2fa121;setTimeout(function(){_0x1df5b9(_0x46ddaa,_0x178cdc),_0x4bb3d6(_0x1fd7df,_0x2fa121),_0x2ea2e6();},_0x1625d0);});}function _0xdf512a(){var _0x31362d=_0x351a60;_0x3aa674++,_0x3aa674==_0x410897&&(_0x22bcf1<_0x3e8bf4[_0x31362d(0x98)]&&setTimeout(function(){_0x3fe348(_0x22bcf1+0x1);},_0x41fb6e[_0x31362d(0x2ef)]));}function _0x485642(_0x75c484,_0x2f1621,_0x4aeee9){var _0x35e423=_0x351a60;if(_0x75c484[_0x35e423(0x1d1)](_0x2f1621)){var _0x40fd14=_0x75c484[_0x35e423(0xed)](_0x2f1621,_0x4aeee9);return _0x40fd14;}return _0x75c484;}$(_0x351a60(0x32d))['on']('click',function(){isGateSuccess=![],isBinanceSuccess=![],isKucoinSuccess=![],isBitgetSuccess=![],isBybitSuccess=![],_0x171cda(),_0x4c3e4f(),_0x38a9b9(),_0x14891a(),_0xc38cdd();});function _0x48dc7f(){var _0x4e91bd=_0x351a60;if(isGateSuccess&&isBinanceSuccess&&isKucoinSuccess&&isBitgetSuccess&&isBybitSuccess){const _0x1f11bb=new Date()[_0x4e91bd(0xcf)]();_0x554af5(_0x4e91bd(0x1d3),_0x1f11bb),toastr['success']('SUKSES\x20UPDATE\x20SEMUA\x20WALLET\x20CEX,\x20SILAKAN\x20REFRESH!!');}}function _0x2ea2e6(){var _0x33586c=_0x351a60;$['when']($[_0x33586c(0x18c)]({'url':_0x33586c(0x103)+DTChain[_0x33586c(0xa1)],'method':_0x33586c(0x228)}),$[_0x33586c(0x18c)]({'url':_0x33586c(0x175)+DTChain[_0x33586c(0x1cb)]+_0x33586c(0x27a),'method':_0x33586c(0x228)}))[_0x33586c(0xb9)](function(_0x2382a3,_0x256865){var _0x3847c9=_0x33586c,_0x25d4d1=_0x2382a3[0x0][_0x3847c9(0xe6)];_0x554af5(_0x3847c9(0x93),_0x25d4d1);var _0x53d604=_0x256865[0x0]['low'][_0x3847c9(0x198)];_0x554af5(_0x3847c9(0xa7),_0x53d604),$('#LGwei')[_0x3847c9(0x2d7)](''+parseFloat(_0x35ab7f(_0x3847c9(0xa7),0x0))['toFixed'](0x2)),console[_0x3847c9(0x1a6)](_0x3847c9(0x247)+DTChain[_0x3847c9(0x22a)][_0x3847c9(0x30a)]()),console[_0x3847c9(0x1a6)](_0x3847c9(0x28b)+_0x35ab7f('PriceGAS',0x0)),console[_0x3847c9(0x1a6)](_0x3847c9(0x9b)+parseFloat(_0x35ab7f(_0x3847c9(0xa7),0x0)));})[_0x33586c(0x173)](function(_0x1b9db8,_0x551794,_0xdf5b01){var _0x5819a3=_0x33586c;console[_0x5819a3(0x328)]('Failed\x20to\x20fetch\x20data:',_0xdf5b01);});}function _0x5e9b13(_0x2376ce){return new Promise((_0x224552,_0x17d026)=>{var _0x14fee6=_0xc26f;const _0x1eaad5=_0x35ab7f('FEEWD_BINANCE');if(_0x1eaad5){const _0x3a0408=_0x1eaad5[_0x14fee6(0x290)](_0x5adf2a=>_0x5adf2a['coin']===_0x2376ce);if(_0x3a0408){const _0x33127f=_0x3a0408[_0x14fee6(0x133)],_0x2ca86f=_0x3a0408[_0x14fee6(0x260)];_0x224552({'depositActive':_0x33127f,'withdrawActive':_0x2ca86f});}else toastr[_0x14fee6(0x328)](_0x14fee6(0x14e)+_0x2376ce+_0x14fee6(0x2f8)),_0x224552({'depositActive':![],'withdrawActive':![]});}else toastr[_0x14fee6(0x328)](_0x14fee6(0x2ad)),_0x224552({'depositActive':![],'withdrawActive':![]});});}function _0x274cd8(_0xa09d12,_0x13fa98){var _0x30b848=_0x351a60;const _0x1ba1ff=_0x13fa98,_0x21b0ba=CryptoJS[_0x30b848(0xf8)](_0xa09d12,_0x1ba1ff)['toString'](CryptoJS[_0x30b848(0x2fc)]['Hex']);return _0x21b0ba;}function _0x4c3e4f(){var _0x2584d6=_0x351a60;const _0x10f9cb=CONFIG_CEX[_0x2584d6(0xe7)][_0x2584d6(0xe4)],_0x1723a0=CONFIG_CEX[_0x2584d6(0xe7)]['ApiSecret'],_0x39a692=Date[_0x2584d6(0x288)]()['toString'](),_0x38d0a8=_0x2584d6(0x18f)+_0x39a692,_0x1114ec=_0x274cd8(_0x38d0a8,_0x1723a0),_0x20df74=_0x2584d6(0x15b);$[_0x2584d6(0x18c)]({'url':_0x20df74+_0x2584d6(0x241)+_0x39a692+_0x2584d6(0x1cf)+_0x1114ec,'method':'GET','headers':{'X-MBX-ApiKey':_0x10f9cb},'success':function(_0x4678db){var _0x4b9d36=_0x2584d6;const _0x49ec96=_0x4678db[_0x4b9d36(0xb8)](function(_0x2b5a84){var _0x41af51=_0x4b9d36;return _0x2b5a84[_0x41af51(0x319)][_0x41af51(0x310)](function(_0x4c9313){var _0x3a3972=_0x41af51;return _0x4c9313[_0x3a3972(0x182)]===DTChain['CEXCHAIN'][_0x3a3972(0xe7)][_0x3a3972(0x2ab)];});}),_0x31e03d=_0x49ec96[_0x4b9d36(0x239)](function(_0x469372){var _0x45ddbb=_0x4b9d36;const _0x3fa2ea=_0x469372['networkList'][_0x45ddbb(0x290)](function(_0x1fa5a7){var _0x57ea31=_0x45ddbb;return _0x1fa5a7[_0x57ea31(0x182)]===DTChain[_0x57ea31(0x186)][_0x57ea31(0xe7)][_0x57ea31(0x2ab)];});return{'coin':_0x469372[_0x45ddbb(0xe0)],'feeWDs':_0x3fa2ea?_0x3fa2ea[_0x45ddbb(0x9c)]:0x0,'depositEnable':_0x3fa2ea?_0x3fa2ea[_0x45ddbb(0x133)]:![],'withdrawEnable':_0x3fa2ea?_0x3fa2ea[_0x45ddbb(0x260)]:![]};});_0x554af5(_0x4b9d36(0x167),_0x31e03d),toastr['info'](_0x4b9d36(0x255)),isBinanceSuccess=!![],_0x48dc7f();},'error':function(){var _0x565d9f=_0x2584d6;toastr[_0x565d9f(0x328)](_0x565d9f(0x9a));}});}function _0x4c16d9(_0x56ed9c){return new Promise((_0x401867,_0x1fb46e)=>{$['get']('https://proxykiri.awokawok.workers.dev/?https://api.gateio.ws/api/v4/wallet/currency_chains?currency='+_0x56ed9c,function(_0x5d6178){var _0x1780f4=_0xc26f,_0x15347f=_0x5d6178[_0x1780f4(0x290)](function(_0x1cf2df){var _0x2117b4=_0x1780f4;return _0x1cf2df[_0x2117b4(0x10f)]===DTChain[_0x2117b4(0x186)][_0x2117b4(0x32c)][_0x2117b4(0x2ab)];});if(_0x15347f){var _0x743623=!_0x15347f[_0x1780f4(0x1fd)],_0x1b0c41=!_0x15347f[_0x1780f4(0x124)];_0x401867({'depositActive':_0x743623,'withdrawActive':_0x1b0c41});}else toastr['error']('GAGAL\x20CEK\x20WALLET\x20GATE!!\x20TOKEN:'+_0x56ed9c),_0x401867({'depositActive':![],'withdrawActive':![]});})['fail'](function(_0x411e5f,_0x59d08f,_0x5029ee){var _0x267d2b=_0xc26f;console[_0x267d2b(0x328)](_0x59d08f,_0x5029ee),_0x1fb46e(_0x5029ee);});});}function _0x171cda(){var _0x33e4ce=_0x351a60,_0x5dae47=CONFIG_CEX[_0x33e4ce(0x32c)][_0x33e4ce(0xe4)],_0x373a25=CONFIG_CEX['GATE'][_0x33e4ce(0x24f)],_0x361e70='https://proxykanan.awokawok.workers.dev/?https://api.gateio.ws',_0x535a8b=_0x33e4ce(0x203),_0x623cce=_0x33e4ce(0x228),_0x5c2bb9=_0x33e4ce(0xb6),_0x41b58c='',_0x3fe234='',_0xc7bc90=Math['floor'](Date[_0x33e4ce(0x288)]()/0x3e8),_0x4fd421=CryptoJS[_0x33e4ce(0x210)](_0x3fe234)[_0x33e4ce(0xc1)](CryptoJS[_0x33e4ce(0x2fc)][_0x33e4ce(0x2cc)]),_0x4d0b1f=_0x623cce+'\x0a'+_0x535a8b+_0x5c2bb9+'\x0a'+_0x41b58c+'\x0a'+_0x4fd421+'\x0a'+_0xc7bc90,_0x532719=CryptoJS[_0x33e4ce(0x298)](_0x4d0b1f,_0x373a25),_0x14288a=_0x532719[_0x33e4ce(0xc1)](CryptoJS[_0x33e4ce(0x2fc)][_0x33e4ce(0x2cc)]),_0x28e553=_0x361e70+_0x535a8b+_0x5c2bb9;$[_0x33e4ce(0x18c)]({'url':_0x28e553,'method':_0x623cce,'headers':{'Timestamp':_0xc7bc90,'KEY':_0x5dae47,'SIGN':_0x14288a},'success':function(_0x354727){var _0x363daf=_0x33e4ce,_0x26df78=_0x354727[_0x363daf(0x239)](function(_0x2f76b2){var _0x31381d=_0x363daf;return{'currency':_0x2f76b2['currency'],'feeWD':_0x2f76b2['withdraw_fix_on_chains']&&_0x2f76b2[_0x31381d(0x1d2)][DTChain[_0x31381d(0x186)]['GATE']['chainCEX']]?_0x2f76b2['withdraw_fix_on_chains'][DTChain[_0x31381d(0x186)]['GATE'][_0x31381d(0x2ab)]]:null};})[_0x363daf(0xb8)](function(_0x47660b){var _0x114705=_0x363daf;return _0x47660b[_0x114705(0xae)]&&_0x47660b[_0x114705(0x256)];});_0x554af5(_0x363daf(0x2a7),_0x26df78),isGateSuccess=!![],toastr[_0x363daf(0x142)](_0x363daf(0x1e4)),_0x48dc7f();},'error':function(){toastr['error']('UPDATE\x20FEE\x20WD\x20GATE\x20GAGAL,\x20SILAKAN\x20REFRESH!!');}});}function _0x38a9b9(){var _0x332bd1=_0x351a60;const _0x801b77=CONFIG_CEX[_0x332bd1(0x108)][_0x332bd1(0xe4)],_0x100851=CONFIG_CEX['KUCOIN'][_0x332bd1(0x24f)],_0x41894c=CONFIG_CEX[_0x332bd1(0x108)][_0x332bd1(0xcc)],_0x4cabb3=Date[_0x332bd1(0x288)]()[_0x332bd1(0xc1)](),_0x9982eb=_0x332bd1(0x18f)+_0x4cabb3,_0x1c85a4=_0x274cd8(_0x9982eb,_0x100851),_0x443377=_0x332bd1(0x1db);$[_0x332bd1(0x18c)]({'url':_0x443377+'?'+_0x9982eb+_0x332bd1(0x1cf)+_0x1c85a4,'method':_0x332bd1(0x228),'headers':{'KC-API-KEY':_0x801b77,'KC-API-TIMESTAMP':_0x4cabb3,'KC-API-SIGN':_0x1c85a4,'KC-API-PASSPHRASE':CryptoJS[_0x332bd1(0x2fc)][_0x332bd1(0x156)]['stringify'](CryptoJS[_0x332bd1(0xf8)](_0x41894c,_0x100851)),'KC-API-KEY-VERSION':'2'},'success':function(_0x46b03c){var _0x2815f1=_0x332bd1;if(_0x46b03c[_0x2815f1(0x2c0)]===_0x2815f1(0x14a)){const _0x2f2c5b=_0x46b03c[_0x2815f1(0x164)]['filter'](function(_0x36c171){var _0x3ce4ad=_0x2815f1;return _0x36c171[_0x3ce4ad(0x29c)]&&_0x36c171[_0x3ce4ad(0x29c)][_0x3ce4ad(0x310)](function(_0x5be55c){var _0x322b8b=_0x3ce4ad;return _0x5be55c[_0x322b8b(0x251)]===DTChain['CEXCHAIN']['KUCOIN'][_0x322b8b(0x2ab)];});}),_0x223c21=_0x2f2c5b[_0x2815f1(0x239)](function(_0x381c26){var _0x2d9845=_0x2815f1;const _0x2fe809=_0x381c26[_0x2d9845(0x29c)][_0x2d9845(0x290)](function(_0x428cba){var _0xdfed3a=_0x2d9845;return _0x428cba['chainName']===DTChain[_0xdfed3a(0x186)][_0xdfed3a(0x108)][_0xdfed3a(0x2ab)];});return{'coin':_0x381c26[_0x2d9845(0xae)],'feeWDs':_0x2fe809?_0x2fe809['withdrawalMinFee']:0x0,'depositEnable':_0x2fe809?_0x2fe809[_0x2d9845(0x231)]:![],'withdrawEnable':_0x2fe809?_0x2fe809[_0x2d9845(0x14d)]:![],'contractAddress':_0x2fe809?_0x2fe809[_0x2d9845(0x1f0)]:null};});_0x554af5(_0x2815f1(0x23e),_0x223c21),toastr[_0x2815f1(0x142)]('SUKSES,\x20CEK\x20UPDATE\x20WALLET\x20KUCOIN'),isKucoinSuccess=!![],_0x48dc7f();}else toastr[_0x2815f1(0x328)](_0x2815f1(0x283)+_0x46b03c[_0x2815f1(0x2c0)]);},'error':function(_0x5a1079,_0x178bed,_0x1d677c){var _0x42c94d=_0x332bd1;toastr['error'](_0x42c94d(0x1ed));}});}function _0x2185a4(_0x28a445){return new Promise((_0x4edd38,_0x14c3ec)=>{var _0x383e17=_0xc26f;const _0x20830a=_0x35ab7f(_0x383e17(0x23e));if(_0x20830a){const _0x9e8ffb=_0x20830a[_0x383e17(0x290)](_0xcbb4a9=>_0xcbb4a9['coin']===_0x28a445);if(_0x9e8ffb){const _0x570a81=_0x9e8ffb['depositEnable'],_0x28aa10=_0x9e8ffb[_0x383e17(0x260)];_0x4edd38({'depositActive':_0x570a81,'withdrawActive':_0x28aa10});}else toastr[_0x383e17(0x328)](_0x383e17(0x14e)+_0x28a445+_0x383e17(0x2f8)),_0x4edd38({'depositActive':![],'withdrawActive':![]});}else toastr[_0x383e17(0x328)](_0x383e17(0x12a)),_0x4edd38({'depositActive':![],'withdrawActive':![]});});}function _0x14891a(){var _0x510297=_0x351a60;$['ajax']({'url':'https://api.bitget.com/api/v2/spot/public/coins','method':_0x510297(0x228),'success':function(_0x2e2f2c){var _0x155b18=_0x510297;const _0x32317a=_0x2e2f2c[_0x155b18(0x164)]['filter'](function(_0x3e5d54){var _0x1cd3bd=_0x155b18;return _0x3e5d54['chains'][_0x1cd3bd(0x310)](function(_0x479384){var _0x41314a=_0x1cd3bd;return _0x479384['chain']===DTChain[_0x41314a(0x186)][_0x41314a(0x2c2)]['chainCEX'];});}),_0x59c14c=_0x32317a['map'](function(_0x1fd2e7){var _0x859f4b=_0x155b18;const _0x34d426=_0x1fd2e7['chains'][_0x859f4b(0x290)](function(_0x3ae1cd){var _0x40d1e4=_0x859f4b;return _0x3ae1cd['chain']===DTChain[_0x40d1e4(0x186)][_0x40d1e4(0x2c2)][_0x40d1e4(0x2ab)];});return{'coin':_0x1fd2e7[_0x859f4b(0xe0)],'feeWDs':_0x34d426?_0x34d426[_0x859f4b(0x9c)]:0x0,'depositEnable':_0x34d426?_0x34d426[_0x859f4b(0x1f5)]===_0x859f4b(0x21c):![],'withdrawEnable':_0x34d426?_0x34d426[_0x859f4b(0x258)]==='true':![]};});_0x554af5('FEEWD_BITGET',_0x59c14c),isBitgetSuccess=!![],toastr[_0x155b18(0x142)](_0x155b18(0xec)),_0x48dc7f();},'error':function(_0x55fb09,_0x3dff49,_0x446d57){var _0x275143=_0x510297;toastr[_0x275143(0x328)]('UPDATE\x20FEE\x20WD\x20BITGET\x20GAGAL,\x20SILAKAN\x20REFRESH!!');}});}function _0x223e99(_0x281ce3){return new Promise((_0x3ff02a,_0x1db8d4)=>{var _0x412503=_0xc26f;const _0x144b8d=_0x35ab7f('FEEWD_BITGET');if(_0x144b8d){const _0x62621d=_0x144b8d[_0x412503(0x290)](_0x3b10ad=>_0x3b10ad['coin']===_0x281ce3);if(_0x62621d){const _0x59928f=_0x62621d[_0x412503(0x133)],_0x44d4b6=_0x62621d[_0x412503(0x260)];_0x3ff02a({'depositActive':_0x59928f,'withdrawActive':_0x44d4b6});}else toastr[_0x412503(0x328)](_0x412503(0x14e)+_0x281ce3+_0x412503(0x2f8)),_0x3ff02a({'depositActive':![],'withdrawActive':![]});}else toastr[_0x412503(0x328)](_0x412503(0x29a)),_0x3ff02a({'depositActive':![],'withdrawActive':![]});});}function _0x59ea51(_0x572fea,_0x5cb636,_0x264219){var _0x3af0fc=_0x351a60;const _0x51ee23=CONFIG_CEX[_0x3af0fc(0x116)][_0x3af0fc(0x24f)],_0x5725f1=_0x5cb636+_0x572fea+_0x264219,_0x1263ab=CryptoJS[_0x3af0fc(0xf8)](_0x5725f1,_0x51ee23)['toString'](CryptoJS[_0x3af0fc(0x2fc)][_0x3af0fc(0x2cc)]);return _0x1263ab;}function _0xc38cdd(){var _0x302a4c=_0x351a60;const _0x124134=CONFIG_CEX[_0x302a4c(0x116)][_0x302a4c(0xe4)],_0x1abfe3=DTChain['CEXCHAIN'][_0x302a4c(0x116)]['chainCEX'],_0x102baf=Date['now']()[_0x302a4c(0xc1)](),_0xc55a94='5000',_0x4bc1ab=_0x59ea51(_0x124134,_0x102baf,_0xc55a94),_0xb0fde8=_0x302a4c(0x278);$[_0x302a4c(0x18c)]({'url':_0xb0fde8,'method':_0x302a4c(0x228),'headers':{'X-BAPI-SIGN':_0x4bc1ab,'X-BAPI-API-KEY':_0x124134,'X-BAPI-TIMESTAMP':_0x102baf,'X-BAPI-RECV-WINDOW':_0xc55a94},'success':function(_0x2cb265){var _0x2c07ce=_0x302a4c;dataCoins=_0x2cb265[_0x2c07ce(0x28a)][_0x2c07ce(0x292)];const _0x2ab28c=dataCoins[_0x2c07ce(0xb8)](function(_0x49fae6){var _0x16e93b=_0x2c07ce;return _0x49fae6[_0x16e93b(0x29c)][_0x16e93b(0x310)](function(_0x5f6c06){var _0x35d6f0=_0x16e93b;return _0x5f6c06[_0x35d6f0(0x122)]===_0x1abfe3;});}),_0x3fb0fd=_0x2ab28c[_0x2c07ce(0x239)](function(_0x5273af){var _0x5cb459=_0x2c07ce;const _0x264e3d=_0x5273af[_0x5cb459(0x29c)]['find'](function(_0x2cf99b){var _0x16890a=_0x5cb459;return _0x2cf99b[_0x16890a(0x122)]===_0x1abfe3;});return{'coin':_0x5273af['coin'],'feeWDs':_0x264e3d?_0x264e3d[_0x5cb459(0x9c)]:0x0,'depositEnable':_0x264e3d?_0x264e3d['chainDeposit']==='1':![],'withdrawEnable':_0x264e3d?_0x264e3d[_0x5cb459(0x2e3)]==='1':![]};});isBybitSuccess=!![],toastr['info']('SUKSES,\x20CEK\x20UPDATE\x20WALLET\x20BYBIT'),_0x48dc7f(),_0x554af5(_0x2c07ce(0x2ff),_0x3fb0fd);},'error':function(_0x22140c,_0x4e70fa,_0x1f9d53){var _0x5f1c30=_0x302a4c;toastr[_0x5f1c30(0x328)](_0x5f1c30(0xc4));}});}function _0x4da67d(_0x32ad97){return new Promise((_0x47ddc8,_0x5538fc)=>{var _0x55b04b=_0xc26f;const _0x50682c=_0x35ab7f(_0x55b04b(0x2ff));if(_0x50682c){const _0x2d8eb3=_0x50682c['find'](_0x30adf5=>_0x30adf5[_0x55b04b(0xe0)]===_0x32ad97);if(_0x2d8eb3){const _0x54593f=_0x2d8eb3[_0x55b04b(0x133)],_0x263755=_0x2d8eb3['withdrawEnable'];_0x47ddc8({'depositActive':_0x54593f,'withdrawActive':_0x263755});}else toastr[_0x55b04b(0x328)]('Koin\x20'+_0x32ad97+'\x20tidak\x20ditemukan.'),_0x47ddc8({'depositActive':![],'withdrawActive':![]});}else toastr[_0x55b04b(0x328)](_0x55b04b(0x1ac)),_0x47ddc8({'depositActive':![],'withdrawActive':![]});});}function _0x55be9f(_0x2de13d,_0x10aafd,_0x5cf413,_0x2951e0){var _0x39c632=_0x351a60;return _0x2de13d===_0x39c632(0x29f)?$(_0x39c632(0x8e)+_0x2951e0+'_'+_0x10aafd+'_'+_0x5cf413):_0x2de13d==='buy'?$('#'+_0x10aafd+_0x39c632(0xc5)+_0x2951e0+'_'+_0x5cf413):null;}function _0x2eec17(_0x35794b,_0xd8372f,_0x511763,_0x518dae){var _0x2c6a5e=_0x351a60;return _0x35794b===_0x2c6a5e(0x29f)?$('#'+_0xd8372f+_0x2c6a5e(0x2a8)+_0x518dae+'_'+_0x511763):_0x35794b===_0x2c6a5e(0x2bf)?$(_0x2c6a5e(0x1b0)+_0x518dae+'_'+_0xd8372f+'_'+_0x511763):null;}function _0xd25eef(_0x5e8651,_0xe2b1d0,_0x40291e,_0x432e5e,_0x514fe5,_0xf6a177,_0x2784f8,_0x16066b,_0x56e3d2,_0x3f83e5,_0x51005a,_0x1eb82e,_0x19d1af,_0x1bb8d0,_0x43ba4d,_0x187085){var _0x2d5307=_0x351a60;console['log'](_0x2d5307(0x334)+_0x40291e[_0x2d5307(0x30a)]()+_0x2d5307(0x171)+_0xe2b1d0[_0x2d5307(0x30a)]()+_0x2d5307(0x163)),console[_0x2d5307(0x1a6)](_0x2d5307(0x20e)+_0x1eb82e[_0x2d5307(0x30a)]()+_0x2d5307(0x105)+_0x5e8651[_0x2d5307(0x30a)]()+_0x2d5307(0x1aa)),console[_0x2d5307(0x1a6)](_0x2d5307(0xd9)+_0x432e5e),console['log']('\x20PRICE\x20BUY\x20:\x20'+_0xf6a177),console[_0x2d5307(0x1a6)](_0x2d5307(0x1dd)+_0x19d1af),console[_0x2d5307(0x1a6)]('\x20DES\x20IN\x20:\x20'+_0x1bb8d0),console[_0x2d5307(0x1a6)](_0x2d5307(0x30f)+_0x2784f8),console['log']('\x20SC\x20OUT\x20:\x20'+_0x43ba4d),console['log'](_0x2d5307(0x2a5)+_0x187085),console[_0x2d5307(0x1a6)]('\x20PNL\x20:\x20'+_0x514fe5),console[_0x2d5307(0x1a6)](_0x2d5307(0xd6)+_0x127fe4[_0x2d5307(0x109)]),console[_0x2d5307(0x1a6)](_0x2d5307(0x16a)+_0x56e3d2),console[_0x2d5307(0x1a6)](_0x2d5307(0x314)+_0x3f83e5),console[_0x2d5307(0x1a6)]('\x20GAS\x20:\x20'+_0x35ab7f(_0x2d5307(0xa7),0x0)),console[_0x2d5307(0x1a6)](_0x2d5307(0x329)+DTChain['BaseFEEDEX']+'\x20:\x20'+_0x35ab7f('PriceGAS',0x0)),console[_0x2d5307(0x1a6)](_0x2d5307(0x2e7)+_0x16066b),console[_0x2d5307(0x1a6)](_0x2d5307(0x2fa)+(Number(_0x514fe5)-Number(_0x56e3d2))),console[_0x2d5307(0x1a6)](_0x2d5307(0x1c7)+_0x51005a),console[_0x2d5307(0x1a6)](_0x2d5307(0x2f0));}function _0x4ed679(_0x3902f4,_0x2b90f5,_0xe60582,_0xcec794,_0x2f8750,_0xdf3ef6,_0x11ca46,_0x2ead0f,_0x1c580e){var _0xdf70dd=_0x351a60;let _0x256daf,_0x120179,_0x23a4a1;if(_0xe60582===_0xdf70dd(0x32c))_0x256daf=_0xdf70dd(0x302)+_0xcec794+'_USDT',_0x120179=_0xdf70dd(0x301)+_0x2f8750,_0x23a4a1='https://www.gate.io/myaccount/deposit/'+_0x2f8750;else{if(_0xe60582==='BINANCE')_0x256daf=_0xdf70dd(0x23c)+_0xcec794+_0xdf70dd(0x151),_0x120179=_0xdf70dd(0x1b4)+_0x2f8750,_0x23a4a1=_0xdf70dd(0x279)+_0x2f8750;else{if(_0xe60582===_0xdf70dd(0x108))_0x256daf=_0xdf70dd(0x31c)+_0xcec794+_0xdf70dd(0x280),_0x120179=_0xdf70dd(0x2de)+_0x2f8750,_0x23a4a1=_0xdf70dd(0xd1)+_0x2f8750;else{if(_0xe60582===_0xdf70dd(0x2c2))_0x256daf=_0xdf70dd(0x25f)+_0xcec794+_0xdf70dd(0x307),_0x120179=_0xdf70dd(0xbd),_0x23a4a1=_0xdf70dd(0x2e0);else{if(_0xe60582==='BYBIT')_0x256daf=_0xdf70dd(0x22f)+_0xcec794+'/USDT',_0x120179='https://www.bybit.com/user/assets/withdraw',_0x23a4a1='https://www.bybit.com/user/assets/deposit';else{console['error']('Unsupported\x20exchange:',_0xe60582);return;}}}}}_0x3902f4==='sell'&&$(_0xdf70dd(0x8e)+_0xe60582+'_'+_0x2b90f5+'_'+_0x2f8750)[_0xdf70dd(0x31e)](_0xdf70dd(0x185)+_0x256daf+'\x22\x20target=\x22_blank\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22uk-text-primary\x22>'+_0xdf3ef6+'</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0x120179+_0xdf70dd(0x243)+_0x11ca46['toFixed'](0x2)+'#SW:'+_0x2ead0f[_0xdf70dd(0x2c8)](0x3)+_0xdf70dd(0x99)),_0x3902f4===_0xdf70dd(0x2bf)&&$('#'+_0x2b90f5+_0xdf70dd(0xc5)+_0xe60582+'_'+_0x2f8750)['html'](_0xdf70dd(0x185)+_0x256daf+_0xdf70dd(0x153)+_0xdf3ef6+'</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0x23a4a1+'\x22\x20target=\x22_blank\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br/>\x20<label\x20class=\x22uk-text-primary\x22>DP:\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22uk-text-danger\x22>'+_0x1c580e['toFixed'](0x2)+_0xdf70dd(0x1e7)+parseFloat(_0x2ead0f)[_0xdf70dd(0x2c8)](0x3)+_0xdf70dd(0x99));}function _0x542cbb(_0x494b7d){var _0x45094f=_0x351a60;switch(_0x494b7d[_0x45094f(0x30a)]()){case'BINANCE':return _0x45094f(0x179);case _0x45094f(0x32c):return _0x45094f(0x32b);case _0x45094f(0x108):return _0x45094f(0x1d4);case _0x45094f(0x2c2):return'#1448ce';case'BYBIT':return'#17181f';default:return _0x45094f(0xdb);}}function _0x265b1f(_0x2c8cba,_0x581c82,_0x4b65cb,_0x2641f9,_0x3dbe38,_0x271b9a,_0x147a3e,_0x754641){var _0x549407=_0x351a60,_0x5e3f77=_0x2c8cba+_0x2641f9+'Sinyal',_0x801b3e='#l'+_0x2c8cba+_0x2641f9+_0x549407(0x13a),_0x1204f5=parseInt(localStorage[_0x549407(0x24e)](_0xc48b2c+_0x5e3f77)||'0',0xa),_0x47a1bc=_0x1204f5+0x1;_0x554af5(_0x5e3f77,_0x47a1bc),$(_0x801b3e)[_0x549407(0x2d7)](localStorage[_0x549407(0x24e)](_0xc48b2c+_0x5e3f77));var _0x32187b=_0x542cbb(_0x754641),_0x4271d9=_0x581c82==='sell'?_0x549407(0x194)+_0x754641+'_'+_0x4b65cb+'_'+_0x3dbe38+'\x27\x20class=\x27sell-link\x27\x20>'+_0x3dbe38+_0x549407(0x25d)+_0x32187b+';\x20font-weight:bolder;\x27>'+_0x754641['toUpperCase']()+_0x549407(0x131)+(_0x271b9a-_0x147a3e)['toFixed'](0x1)+_0x549407(0x177):_0x549407(0x1f3)+_0x4b65cb+_0x549407(0xc5)+_0x754641+'_'+_0x3dbe38+'\x27\x20class=\x27buy-link\x27\x20>'+_0x3dbe38+_0x549407(0x25d)+_0x32187b+_0x549407(0x2ed)+_0x754641[_0x549407(0x30a)]()+_0x549407(0x131)+(_0x271b9a-_0x147a3e)[_0x549407(0x2c8)](0x1)+_0x549407(0x259);$(_0x549407(0x2e8)+_0x2641f9[_0x549407(0x32f)]())[_0x549407(0x19b)]('\x20'+_0x4271d9+'\x20|'),$('a.'+(_0x581c82===_0x549407(0x29f)?_0x549407(0x1c1):'buy-link'))[_0x549407(0x136)](_0x549407(0x2ac),_0x581c82===_0x549407(0x29f)?'green':_0x549407(0x245));if(_0x581c82==='sell')$('#'+_0x4b65cb+'_buy_'+_0x754641+'_'+_0x3dbe38)[_0x549407(0x16b)]('ijo'),$(_0x549407(0x8e)+_0x754641+'_'+_0x4b65cb+'_'+_0x3dbe38)['addClass']('ijo');else _0x581c82===_0x549407(0x2bf)&&($(_0x549407(0x1b0)+_0x754641+'_'+_0x4b65cb+'_'+_0x3dbe38)['addClass'](_0x549407(0x214)),$('#'+_0x4b65cb+_0x549407(0xc5)+_0x754641+'_'+_0x3dbe38)['addClass'](_0x549407(0x214)));}function _0x1ce3d4(_0xcffede,_0x238814){var _0x4b987a=_0x351a60;let _0xa323e5={'PriceRateSell':0x0,'PriceRateBuy':0x0};if(_0xcffede===_0x4b987a(0x307)||_0xcffede===_0x4b987a(0x19d)){_0x238814({'PriceRateBuy':0x1,'PriceRateSell':0x1});return;}$[_0x4b987a(0x18c)]({'url':'https://data-api.binance.vision/api/v3/ticker/24hr','data':{'symbol':_0xcffede+'USDT'},'success':function(_0x3ccfe4){var _0x20eda6=_0x4b987a;_0xa323e5[_0x20eda6(0x2d4)]=parseFloat(_0x3ccfe4[_0x20eda6(0x1d0)])['toFixed'](0x8),_0xa323e5[_0x20eda6(0x180)]=parseFloat(_0x3ccfe4['bidPrice'])[_0x20eda6(0x2c8)](0x8),_0x238814(_0xa323e5);},'error':function(_0x8da36b,_0x2424f9,_0x4a04a0){var _0x48e46d=_0x4b987a;toastr[_0x48e46d(0x328)]('CEK\x20KONEKSI\x20ANDA,\x20GAGAL\x20DAPATKAN\x20HARGA\x20PAIRDEX!!'),_0x238814(_0xa323e5);}});}function _0x864f5a(_0x5a71a8,_0xa450b6,_0x195efc,_0x8a0ee6,_0x2a3446){var _0x28ee4c=_0x351a60,_0x1fb83a=_0x35ab7f(_0x28ee4c(0x2a7),[]);if(!Array[_0x28ee4c(0x1a2)](_0x1fb83a)||_0x1fb83a[_0x28ee4c(0x98)]===0x0){toastr[_0x28ee4c(0x328)](_0x28ee4c(0xef));return;}var _0x247a40=parseInt(_0x35ab7f(_0x28ee4c(0x123),0x0)),_0xf0930e=Math[_0x28ee4c(0x1ec)](Math[_0x28ee4c(0x220)]()*_0x41fb6e[_0x28ee4c(0x27c)][_0x247a40][_0x28ee4c(0x98)]),_0x150270=_0x41fb6e[_0x28ee4c(0x27c)][_0x247a40][_0xf0930e];_0x1ce3d4(_0x5a71a8[_0x28ee4c(0x154)],function(_0x24255f){var _0x2d8a9a=_0x28ee4c;$[_0x2d8a9a(0x18c)]({'url':_0x150270+_0x2d8a9a(0x120)+_0x5a71a8[_0x2d8a9a(0x1ca)]+_0x2d8a9a(0x151),'method':_0x2d8a9a(0x228),'timeout':parseInt(_0x41fb6e['waktuTunggu'])*0x3e8,'success':function(_0x551569){var _0x3c46db=_0x2d8a9a;if(_0x551569[_0x3c46db(0x119)][_0x3c46db(0x98)]===0x0||_0x551569[_0x3c46db(0x2eb)][_0x3c46db(0x98)]===0x0)_0x2a3446(null,null),_0xdf512a();else{var _0x183e3c={};_0x183e3c[_0x3c46db(0x18d)]=_0x551569[_0x3c46db(0x119)][0x0][0x0],_0x183e3c[_0x3c46db(0x169)]=_0x551569[_0x3c46db(0x119)][0x1][0x0],_0x183e3c[_0x3c46db(0xb4)]=_0x551569['asks'][0x2][0x0],_0x183e3c['price_buy3']=_0x551569[_0x3c46db(0x119)][0x3][0x0],_0x183e3c[_0x3c46db(0x15e)]=(parseFloat(_0x551569[_0x3c46db(0x119)][0x0][0x1])*_0x183e3c[_0x3c46db(0x18d)])[_0x3c46db(0x2c8)](0x2),_0x183e3c['vol_buy1']=(parseFloat(_0x551569[_0x3c46db(0x119)][0x1][0x1])*_0x183e3c['price_buy1'])[_0x3c46db(0x2c8)](0x2),_0x183e3c[_0x3c46db(0x15d)]=(parseFloat(_0x551569[_0x3c46db(0x119)][0x2][0x1])*_0x183e3c[_0x3c46db(0xb4)])[_0x3c46db(0x2c8)](0x2),_0x183e3c[_0x3c46db(0x170)]=(parseFloat(_0x551569[_0x3c46db(0x119)][0x3][0x1])*_0x183e3c[_0x3c46db(0x149)])[_0x3c46db(0x2c8)](0x2),_0x183e3c[_0x3c46db(0xba)]=_0x551569[_0x3c46db(0x2eb)][0x0][0x0],_0x183e3c[_0x3c46db(0x1b6)]=_0x551569[_0x3c46db(0x2eb)][0x1][0x0],_0x183e3c['price_sell2']=_0x551569['bids'][0x2][0x0],_0x183e3c[_0x3c46db(0x1bf)]=_0x551569[_0x3c46db(0x2eb)][0x3][0x0],_0x183e3c[_0x3c46db(0x30c)]=(parseFloat(_0x551569[_0x3c46db(0x2eb)][0x0][0x1])*_0x183e3c[_0x3c46db(0xba)])[_0x3c46db(0x2c8)](0x2),_0x183e3c['vol_sell1']=(parseFloat(_0x551569[_0x3c46db(0x2eb)][0x1][0x1])*_0x183e3c[_0x3c46db(0x1b6)])[_0x3c46db(0x2c8)](0x2),_0x183e3c['vol_sell2']=(parseFloat(_0x551569['bids'][0x2][0x1])*_0x183e3c[_0x3c46db(0x2ee)])[_0x3c46db(0x2c8)](0x2),_0x183e3c['vol_sell3']=(parseFloat(_0x551569[_0x3c46db(0x2eb)][0x3][0x1])*_0x183e3c[_0x3c46db(0x1bf)])[_0x3c46db(0x2c8)](0x2),_0x183e3c[_0x3c46db(0x1ca)]=_0x5a71a8['symbol'],_0x183e3c[_0x3c46db(0x19f)]=_0xa450b6,_0x183e3c['amount_in_sell']=_0xa450b6/_0x551569['asks'][0x0][0x0],_0x183e3c[_0x3c46db(0x9d)]=_0xa450b6/parseFloat(_0x24255f[_0x3c46db(0x180)]),_0x183e3c['PriceRateBuy']=parseFloat(_0x24255f[_0x3c46db(0x2d4)]),_0x183e3c['PriceRateSell']=parseFloat(_0x24255f[_0x3c46db(0x180)]);var _0x2c0df7=![];for(var _0x4a1cf4=0x0;_0x4a1cf4<_0x1fb83a[_0x3c46db(0x98)];_0x4a1cf4++){var _0x2771c9=_0x1fb83a[_0x4a1cf4]['currency'][_0x3c46db(0x1fb)]()[_0x3c46db(0x30a)](),_0xdb32fe=_0x183e3c[_0x3c46db(0x1ca)][_0x3c46db(0x1fb)]()[_0x3c46db(0x30a)]();if(_0x2771c9===_0xdb32fe){_0x183e3c[_0x3c46db(0x256)]=parseFloat(_0x1fb83a[_0x4a1cf4]['feeWD']*_0x551569[_0x3c46db(0x119)][0x0][0x0]),_0x2c0df7=!![];break;}}$(_0x3c46db(0x1c8)+_0x8a0ee6+'_'+_0x183e3c[_0x3c46db(0x1ca)])[_0x3c46db(0x31e)](_0x3c46db(0x2da)+_0x183e3c[_0x3c46db(0x18d)]+_0x3c46db(0x17e)+_0x183e3c['vol_buy']+_0x3c46db(0xff)+_0x183e3c[_0x3c46db(0x169)]+_0x3c46db(0x17e)+_0x183e3c[_0x3c46db(0x1df)]+'$</label>'),$(_0x3c46db(0xa4)+_0x8a0ee6+'_'+_0x183e3c['symbol'])[_0x3c46db(0x31e)](_0x3c46db(0x2da)+_0x183e3c[_0x3c46db(0xb4)]+_0x3c46db(0x17e)+_0x183e3c['vol_buy2']+_0x3c46db(0xff)+_0x183e3c[_0x3c46db(0x149)]+_0x3c46db(0x17e)+_0x183e3c[_0x3c46db(0x170)]+_0x3c46db(0x2dd)),$('#vol1_sell_'+_0x8a0ee6+'_'+_0x183e3c[_0x3c46db(0x1ca)])[_0x3c46db(0x31e)](_0x3c46db(0xaf)+_0x183e3c[_0x3c46db(0xba)]+'\x20:\x20'+_0x183e3c[_0x3c46db(0x30c)]+_0x3c46db(0xff)+_0x183e3c['price_sell1']+_0x3c46db(0x17e)+_0x183e3c['vol_sell1']+_0x3c46db(0x2dd)),$(_0x3c46db(0x305)+_0x8a0ee6+'_'+_0x183e3c[_0x3c46db(0x1ca)])[_0x3c46db(0x31e)]('<label\x20class=\x27uk-text-danger\x27>~'+_0x183e3c['price_sell2']+_0x3c46db(0x17e)+_0x183e3c[_0x3c46db(0x12e)]+'$\x20\x20<br/>\x20~'+_0x183e3c[_0x3c46db(0x1bf)]+_0x3c46db(0x17e)+_0x183e3c[_0x3c46db(0x102)]+_0x3c46db(0x2dd)),_0x2a3446(null,_0x183e3c);}},'error':function(_0x1b9bfe){var _0x20615b=_0x2d8a9a;_0x2a3446(null,null),toastr['error'](_0x20615b(0x244)+_0x5a71a8[_0x20615b(0x1ca)]+_0x20615b(0x90)),_0xdf512a();}});});}function _0x179227(_0x133432,_0x3b1dc6,_0x1a76c2,_0x1483f2,_0x187d83){var _0x132b2b=_0x351a60,_0x34cf4a=parseInt(_0x35ab7f(_0x132b2b(0x27c)));const _0x23d1cb=_0x35ab7f(_0x132b2b(0x167));_0x23d1cb===null&&toastr[_0x132b2b(0x328)]('UPDATE\x20FEE\x20WD\x20BINANCE\x20DAHULU!<br/>');var _0x339c78=_0x485642(_0x133432[_0x132b2b(0x1ca)],_0x132b2b(0x307),'');const _0x5bead2=_0x23d1cb[_0x132b2b(0x290)](function(_0x271a5a){var _0x116f57=_0x132b2b;return _0x271a5a[_0x116f57(0xe0)]===_0x339c78;});var _0x1bed79=0x0;_0x5bead2&&(_0x1bed79=_0x5bead2[_0x132b2b(0xea)]),_0x1ce3d4(_0x133432['pairdex'],function(_0x51b6c7){var _0x51d0d1=_0x132b2b;$[_0x51d0d1(0x18c)]({'url':_0x51d0d1(0xfd)+_0x133432[_0x51d0d1(0x1ca)]+_0x51d0d1(0x307),'method':_0x51d0d1(0x228),'success':function(_0x164a8b){var _0x42dcb6=_0x51d0d1;if(_0x164a8b['asks'][_0x42dcb6(0x98)]===0x0||_0x164a8b[_0x42dcb6(0x2eb)][_0x42dcb6(0x98)]===0x0)_0x187d83(null,null),_0xdf512a(),toastr[_0x42dcb6(0x328)]('GAGAL\x20DAPATKAN\x20HARGA\x20TOKEN\x20'+_0x133432['symbol']+'\x20!!');else{var _0x3eb12d={};_0x3eb12d['price_sell']=_0x164a8b[_0x42dcb6(0x2eb)][0x0][0x0],_0x3eb12d[_0x42dcb6(0x1b6)]=_0x164a8b[_0x42dcb6(0x2eb)][0x1]?_0x164a8b[_0x42dcb6(0x2eb)][0x1][0x0]:null,_0x3eb12d['price_sell2']=_0x164a8b[_0x42dcb6(0x2eb)][0x2]?_0x164a8b[_0x42dcb6(0x2eb)][0x2][0x0]:null,_0x3eb12d[_0x42dcb6(0x1bf)]=_0x164a8b[_0x42dcb6(0x2eb)][0x3]?_0x164a8b[_0x42dcb6(0x2eb)][0x3][0x0]:null,_0x3eb12d['vol_sell']=(parseFloat(_0x164a8b[_0x42dcb6(0x2eb)][0x0][0x1])*_0x3eb12d[_0x42dcb6(0xba)])[_0x42dcb6(0x2c8)](0x2),_0x3eb12d['vol_sell1']=_0x164a8b[_0x42dcb6(0x2eb)][0x1]?(parseFloat(_0x164a8b[_0x42dcb6(0x2eb)][0x1][0x1])*_0x3eb12d[_0x42dcb6(0x1b6)])[_0x42dcb6(0x2c8)](0x2):null,_0x3eb12d[_0x42dcb6(0x12e)]=_0x164a8b[_0x42dcb6(0x2eb)][0x2]?(parseFloat(_0x164a8b[_0x42dcb6(0x2eb)][0x2][0x1])*_0x3eb12d[_0x42dcb6(0x2ee)])[_0x42dcb6(0x2c8)](0x2):null,_0x3eb12d['vol_sell3']=_0x164a8b[_0x42dcb6(0x2eb)][0x3]?(parseFloat(_0x164a8b[_0x42dcb6(0x2eb)][0x3][0x1])*_0x3eb12d['price_sell3'])[_0x42dcb6(0x2c8)](0x2):null,_0x3eb12d[_0x42dcb6(0x18d)]=_0x164a8b[_0x42dcb6(0x119)][0x0][0x0],_0x3eb12d[_0x42dcb6(0x169)]=_0x164a8b['asks'][0x1]?_0x164a8b['asks'][0x1][0x0]:null,_0x3eb12d[_0x42dcb6(0xb4)]=_0x164a8b[_0x42dcb6(0x119)][0x2]?_0x164a8b[_0x42dcb6(0x119)][0x2][0x0]:null,_0x3eb12d[_0x42dcb6(0x149)]=_0x164a8b[_0x42dcb6(0x119)][0x3]?_0x164a8b['asks'][0x3][0x0]:null,_0x3eb12d['vol_buy']=(parseFloat(_0x164a8b[_0x42dcb6(0x119)][0x0][0x1])*_0x3eb12d[_0x42dcb6(0x18d)])[_0x42dcb6(0x2c8)](0x2),_0x3eb12d[_0x42dcb6(0x1df)]=_0x164a8b[_0x42dcb6(0x119)][0x1]?(parseFloat(_0x164a8b[_0x42dcb6(0x119)][0x1][0x1])*_0x3eb12d[_0x42dcb6(0x169)])[_0x42dcb6(0x2c8)](0x2):null,_0x3eb12d['vol_buy2']=_0x164a8b[_0x42dcb6(0x119)][0x2]?(parseFloat(_0x164a8b[_0x42dcb6(0x119)][0x2][0x1])*_0x3eb12d[_0x42dcb6(0xb4)])[_0x42dcb6(0x2c8)](0x2):null,_0x3eb12d['vol_buy3']=_0x164a8b[_0x42dcb6(0x119)][0x3]?(parseFloat(_0x164a8b[_0x42dcb6(0x119)][0x3][0x1])*_0x3eb12d[_0x42dcb6(0x149)])[_0x42dcb6(0x2c8)](0x2):null,_0x3eb12d[_0x42dcb6(0x1ca)]=_0x133432[_0x42dcb6(0x1ca)],_0x3eb12d[_0x42dcb6(0x19f)]=_0x3b1dc6,_0x3eb12d[_0x42dcb6(0xf7)]=_0x3b1dc6/_0x164a8b[_0x42dcb6(0x2eb)][0x0][0x0],_0x3eb12d[_0x42dcb6(0x9d)]=_0x3b1dc6/parseFloat(_0x51b6c7[_0x42dcb6(0x180)]),_0x3eb12d['PriceRateBuy']=parseFloat(_0x51b6c7[_0x42dcb6(0x2d4)]),_0x3eb12d[_0x42dcb6(0x180)]=parseFloat(_0x51b6c7[_0x42dcb6(0x180)]),_0x3eb12d[_0x42dcb6(0x256)]=_0x1bed79*_0x164a8b[_0x42dcb6(0x2eb)][0x0][0x0],$(_0x42dcb6(0x1c8)+_0x1483f2+'_'+_0x3eb12d[_0x42dcb6(0x1ca)])[_0x42dcb6(0x31e)](_0x42dcb6(0x2da)+_0x3eb12d[_0x42dcb6(0x18d)]+_0x42dcb6(0x17e)+_0x3eb12d[_0x42dcb6(0x15e)]+_0x42dcb6(0xff)+_0x3eb12d[_0x42dcb6(0x169)]+_0x42dcb6(0x17e)+_0x3eb12d['vol_buy1']+_0x42dcb6(0x2cd)),$(_0x42dcb6(0xa4)+_0x1483f2+'_'+_0x3eb12d[_0x42dcb6(0x1ca)])[_0x42dcb6(0x31e)](_0x42dcb6(0x2da)+_0x3eb12d[_0x42dcb6(0xb4)]+_0x42dcb6(0x17e)+_0x3eb12d[_0x42dcb6(0x15d)]+_0x42dcb6(0xff)+_0x3eb12d[_0x42dcb6(0x149)]+_0x42dcb6(0x17e)+_0x3eb12d[_0x42dcb6(0x170)]+_0x42dcb6(0x2dd)),$(_0x42dcb6(0x2ba)+_0x1483f2+'_'+_0x3eb12d[_0x42dcb6(0x1ca)])[_0x42dcb6(0x31e)](_0x42dcb6(0xaf)+_0x3eb12d['price_sell']+_0x42dcb6(0x17e)+_0x3eb12d[_0x42dcb6(0x30c)]+_0x42dcb6(0xff)+_0x3eb12d[_0x42dcb6(0x1b6)]+_0x42dcb6(0x17e)+_0x3eb12d['vol_sell1']+_0x42dcb6(0x2dd)),$(_0x42dcb6(0x305)+_0x1483f2+'_'+_0x3eb12d[_0x42dcb6(0x1ca)])[_0x42dcb6(0x31e)]('<label\x20class=\x27uk-text-danger\x27>~'+_0x3eb12d[_0x42dcb6(0x2ee)]+_0x42dcb6(0x17e)+_0x3eb12d['vol_sell2']+_0x42dcb6(0x91)+_0x3eb12d[_0x42dcb6(0x1bf)]+_0x42dcb6(0x17e)+_0x3eb12d[_0x42dcb6(0x102)]+'$\x20</label>'),_0x187d83(null,_0x3eb12d);}},'error':function(_0xb08673){var _0x356be0=_0x51d0d1;_0x187d83(null,null),toastr['error'](_0x356be0(0xee)+_0x133432[_0x356be0(0x1ca)]+'\x20!!'),_0xdf512a();}});});}function _0x5832a1(_0x91ada8,_0x2f2774,_0x3cca85,_0x432c95,_0x5ac627){var _0x3995f8=_0x351a60,_0x4119a7=parseInt(_0x35ab7f('SERVERCORS'));const _0x3139d6=_0x35ab7f('FEEWD_KUCOIN');_0x3139d6===null&&toastr[_0x3995f8(0x328)](_0x3995f8(0x13e));const _0x393804=_0x3139d6[_0x3995f8(0x290)](function(_0x39a809){var _0x3351b8=_0x3995f8;return _0x39a809[_0x3351b8(0xe0)]===_0x91ada8[_0x3351b8(0x1ca)];});var _0x1d6b0e=0x0;_0x393804&&(_0x1d6b0e=_0x393804[_0x3995f8(0xea)]),_0x1ce3d4(_0x91ada8[_0x3995f8(0x154)],function(_0x151f79){var _0x34f065=_0x3995f8;$[_0x34f065(0x18c)]({'url':'https://proxykiri.awokawok.workers.dev/?https://api.kucoin.com/api/v1/market/orderbook/level2_20?symbol='+_0x91ada8[_0x34f065(0x1ca)]+'-USDT','method':'GET','success':function(_0x24eb9e){var _0x15c4d6=_0x34f065;if(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][_0x15c4d6(0x98)]===0x0||_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][_0x15c4d6(0x98)]===0x0)_0x5ac627(null,null),_0xdf512a(),toastr['error'](_0x15c4d6(0x217)+_0x91ada8[_0x15c4d6(0x1ca)]+'\x20!!');else{var _0xc55e55={};_0xc55e55[_0x15c4d6(0xba)]=_0x24eb9e['data']['bids'][0x0][0x0],_0xc55e55[_0x15c4d6(0x1b6)]=_0x24eb9e['data'][_0x15c4d6(0x2eb)][0x1]?_0x24eb9e['data']['bids'][0x1][0x0]:null,_0xc55e55[_0x15c4d6(0x2ee)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x2]?_0x24eb9e['data'][_0x15c4d6(0x2eb)][0x2][0x0]:null,_0xc55e55[_0x15c4d6(0x1bf)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x3]?_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x3][0x0]:null,_0xc55e55[_0x15c4d6(0x30c)]=(parseFloat(_0x24eb9e['data'][_0x15c4d6(0x2eb)][0x0][0x1])*_0xc55e55[_0x15c4d6(0xba)])['toFixed'](0x2),_0xc55e55[_0x15c4d6(0x257)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x1]?(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x1][0x1])*_0xc55e55['price_sell1'])['toFixed'](0x2):null,_0xc55e55[_0x15c4d6(0x12e)]=_0x24eb9e[_0x15c4d6(0x164)]['bids'][0x2]?(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x2][0x1])*_0xc55e55['price_sell2'])[_0x15c4d6(0x2c8)](0x2):null,_0xc55e55[_0x15c4d6(0x102)]=_0x24eb9e[_0x15c4d6(0x164)]['bids'][0x3]?(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x3][0x1])*_0xc55e55[_0x15c4d6(0x1bf)])[_0x15c4d6(0x2c8)](0x2):null,_0xc55e55[_0x15c4d6(0x18d)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x0][0x0],_0xc55e55[_0x15c4d6(0x169)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x1]?_0x24eb9e[_0x15c4d6(0x164)]['asks'][0x1][0x0]:null,_0xc55e55[_0x15c4d6(0xb4)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x2]?_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x2][0x0]:null,_0xc55e55[_0x15c4d6(0x149)]=_0x24eb9e['data'][_0x15c4d6(0x119)][0x3]?_0x24eb9e[_0x15c4d6(0x164)]['asks'][0x3][0x0]:null,_0xc55e55['vol_buy']=(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x0][0x1])*_0xc55e55[_0x15c4d6(0x18d)])[_0x15c4d6(0x2c8)](0x2),_0xc55e55[_0x15c4d6(0x1df)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x1]?(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x1][0x1])*_0xc55e55['price_buy1'])['toFixed'](0x2):null,_0xc55e55['vol_buy2']=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x2]?(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x2][0x1])*_0xc55e55['price_buy2'])['toFixed'](0x2):null,_0xc55e55[_0x15c4d6(0x170)]=_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x3]?(parseFloat(_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x119)][0x3][0x1])*_0xc55e55[_0x15c4d6(0x149)])[_0x15c4d6(0x2c8)](0x2):null,_0xc55e55[_0x15c4d6(0x1ca)]=_0x91ada8[_0x15c4d6(0x1ca)],_0xc55e55['modal']=_0x2f2774,_0xc55e55[_0x15c4d6(0xf7)]=_0x2f2774/_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x0][0x0],_0xc55e55['amount_in_buy']=_0x2f2774/parseFloat(_0x151f79[_0x15c4d6(0x180)]),_0xc55e55[_0x15c4d6(0x2d4)]=parseFloat(_0x151f79['PriceRateBuy']),_0xc55e55[_0x15c4d6(0x180)]=parseFloat(_0x151f79[_0x15c4d6(0x180)]),_0xc55e55['feeWD']=_0x1d6b0e*_0x24eb9e[_0x15c4d6(0x164)][_0x15c4d6(0x2eb)][0x0][0x0],$(_0x15c4d6(0x1c8)+_0x432c95+'_'+_0xc55e55[_0x15c4d6(0x1ca)])['html'](_0x15c4d6(0x2da)+_0xc55e55[_0x15c4d6(0x18d)]+'\x20:\x20'+_0xc55e55[_0x15c4d6(0x15e)]+_0x15c4d6(0xff)+_0xc55e55[_0x15c4d6(0x169)]+_0x15c4d6(0x17e)+_0xc55e55[_0x15c4d6(0x1df)]+'$</label>'),$(_0x15c4d6(0xa4)+_0x432c95+'_'+_0xc55e55[_0x15c4d6(0x1ca)])[_0x15c4d6(0x31e)](_0x15c4d6(0x2da)+_0xc55e55[_0x15c4d6(0xb4)]+_0x15c4d6(0x17e)+_0xc55e55['vol_buy2']+_0x15c4d6(0xff)+_0xc55e55['price_buy3']+_0x15c4d6(0x17e)+_0xc55e55[_0x15c4d6(0x170)]+'$\x20</label>'),$(_0x15c4d6(0x2ba)+_0x432c95+'_'+_0xc55e55[_0x15c4d6(0x1ca)])[_0x15c4d6(0x31e)](_0x15c4d6(0xaf)+_0xc55e55[_0x15c4d6(0xba)]+'\x20:\x20'+_0xc55e55[_0x15c4d6(0x30c)]+_0x15c4d6(0xff)+_0xc55e55['price_sell1']+_0x15c4d6(0x17e)+_0xc55e55[_0x15c4d6(0x257)]+'$\x20</label>'),$(_0x15c4d6(0x305)+_0x432c95+'_'+_0xc55e55[_0x15c4d6(0x1ca)])[_0x15c4d6(0x31e)](_0x15c4d6(0xaf)+_0xc55e55[_0x15c4d6(0x2ee)]+_0x15c4d6(0x17e)+_0xc55e55[_0x15c4d6(0x12e)]+_0x15c4d6(0x91)+_0xc55e55['price_sell3']+_0x15c4d6(0x17e)+_0xc55e55[_0x15c4d6(0x102)]+_0x15c4d6(0x2dd)),_0x5ac627(null,_0xc55e55);}},'error':function(_0x52ac52){var _0x359f72=_0x34f065;_0x5ac627(null,null),toastr['error'](_0x359f72(0x148)+_0x91ada8[_0x359f72(0x1ca)]+'\x20!!'),_0xdf512a();}});});}function _0x434b33(_0x20509d,_0x500f13,_0x2b7f8c,_0x3fda30,_0x3388bc){var _0x9eeaf9=_0x351a60,_0x5c70cd=parseInt(_0x35ab7f(_0x9eeaf9(0x27c)));const _0x2702fa=_0x35ab7f(_0x9eeaf9(0x161));_0x2702fa===null&&toastr[_0x9eeaf9(0x328)](_0x9eeaf9(0x2a2));const _0x14824a=_0x2702fa[_0x9eeaf9(0x290)](function(_0xa49e54){var _0x24a1cc=_0x9eeaf9;return _0xa49e54['coin']===_0x20509d[_0x24a1cc(0x1ca)];});var _0xda7d6b=0x0;_0x14824a&&(_0xda7d6b=_0x14824a[_0x9eeaf9(0xea)]),_0x1ce3d4(_0x20509d[_0x9eeaf9(0x154)],function(_0x40a62d){var _0x403b6d=_0x9eeaf9;$[_0x403b6d(0x18c)]({'url':'https://api.bitget.com/api/v2/spot/market/orderbook?symbol='+_0x20509d[_0x403b6d(0x1ca)]+_0x403b6d(0x307),'method':_0x403b6d(0x228),'success':function(_0x116931){var _0x190040=_0x403b6d;if(_0x116931['data']['asks'][_0x190040(0x98)]===0x0||_0x116931[_0x190040(0x164)]['bids'][_0x190040(0x98)]===0x0)_0x3388bc(null,null),_0xdf512a(),toastr[_0x190040(0x328)](_0x190040(0x332)+_0x20509d['symbol']+_0x190040(0x90));else{var _0xe77d9e={};_0xe77d9e[_0x190040(0x18d)]=_0x116931[_0x190040(0x164)]['asks'][0x0][0x0],_0xe77d9e[_0x190040(0x169)]=_0x116931['data'][_0x190040(0x119)][0x1][0x0],_0xe77d9e[_0x190040(0xb4)]=_0x116931[_0x190040(0x164)]['asks'][0x2][0x0],_0xe77d9e[_0x190040(0x149)]=_0x116931['data'][_0x190040(0x119)][0x3][0x0],_0xe77d9e[_0x190040(0x15e)]=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x119)][0x0][0x1])*_0xe77d9e[_0x190040(0x18d)])[_0x190040(0x2c8)](0x2),_0xe77d9e[_0x190040(0x1df)]=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x119)][0x1][0x1])*_0xe77d9e[_0x190040(0x169)])[_0x190040(0x2c8)](0x2),_0xe77d9e['vol_buy2']=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x119)][0x2][0x1])*_0xe77d9e[_0x190040(0xb4)])['toFixed'](0x2),_0xe77d9e['vol_buy3']=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x119)][0x3][0x1])*_0xe77d9e[_0x190040(0x149)])[_0x190040(0x2c8)](0x2),_0xe77d9e[_0x190040(0xba)]=_0x116931[_0x190040(0x164)]['bids'][0x0][0x0],_0xe77d9e['price_sell1']=_0x116931[_0x190040(0x164)][_0x190040(0x2eb)][0x1][0x0],_0xe77d9e[_0x190040(0x2ee)]=_0x116931['data'][_0x190040(0x2eb)][0x2][0x0],_0xe77d9e['price_sell3']=_0x116931[_0x190040(0x164)]['bids'][0x3][0x0],_0xe77d9e['vol_sell']=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x2eb)][0x0][0x1])*_0xe77d9e[_0x190040(0xba)])[_0x190040(0x2c8)](0x2),_0xe77d9e[_0x190040(0x257)]=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x2eb)][0x1][0x1])*_0xe77d9e[_0x190040(0x1b6)])[_0x190040(0x2c8)](0x2),_0xe77d9e[_0x190040(0x12e)]=(parseFloat(_0x116931['data']['bids'][0x2][0x1])*_0xe77d9e['price_sell2'])[_0x190040(0x2c8)](0x2),_0xe77d9e[_0x190040(0x102)]=(parseFloat(_0x116931[_0x190040(0x164)][_0x190040(0x2eb)][0x3][0x1])*_0xe77d9e['price_sell3'])[_0x190040(0x2c8)](0x2),_0xe77d9e[_0x190040(0x1ca)]=_0x20509d[_0x190040(0x1ca)],_0xe77d9e[_0x190040(0x19f)]=_0x500f13,_0xe77d9e[_0x190040(0xf7)]=_0x500f13/_0x116931[_0x190040(0x164)][_0x190040(0x119)][0x0][0x0],_0xe77d9e['amount_in_buy']=_0x500f13/parseFloat(_0x40a62d[_0x190040(0x180)]),_0xe77d9e[_0x190040(0x2d4)]=parseFloat(_0x40a62d[_0x190040(0x2d4)]),_0xe77d9e['PriceRateSell']=parseFloat(_0x40a62d[_0x190040(0x180)]),_0xe77d9e[_0x190040(0x256)]=_0xda7d6b*_0x116931['data'][_0x190040(0x119)][0x0][0x0],$(_0x190040(0x1c8)+_0x3fda30+'_'+_0xe77d9e[_0x190040(0x1ca)])[_0x190040(0x31e)](_0x190040(0x2da)+_0xe77d9e['price_buy']+_0x190040(0x17e)+_0xe77d9e['vol_buy']+_0x190040(0xff)+_0xe77d9e[_0x190040(0x169)]+_0x190040(0x17e)+_0xe77d9e[_0x190040(0x1df)]+'$</label>'),$('#vol2_buy_'+_0x3fda30+'_'+_0xe77d9e[_0x190040(0x1ca)])['html'](_0x190040(0x2da)+_0xe77d9e['price_buy2']+_0x190040(0x17e)+_0xe77d9e[_0x190040(0x15d)]+'$\x20<br/>\x20~'+_0xe77d9e['price_buy3']+_0x190040(0x17e)+_0xe77d9e[_0x190040(0x170)]+_0x190040(0x2dd)),$(_0x190040(0x2ba)+_0x3fda30+'_'+_0xe77d9e[_0x190040(0x1ca)])['html'](_0x190040(0xaf)+_0xe77d9e[_0x190040(0xba)]+_0x190040(0x17e)+_0xe77d9e[_0x190040(0x30c)]+'$\x20<br/>\x20~'+_0xe77d9e['price_sell1']+_0x190040(0x17e)+_0xe77d9e[_0x190040(0x257)]+'$\x20</label>'),$(_0x190040(0x305)+_0x3fda30+'_'+_0xe77d9e[_0x190040(0x1ca)])[_0x190040(0x31e)](_0x190040(0xaf)+_0xe77d9e[_0x190040(0x2ee)]+_0x190040(0x17e)+_0xe77d9e['vol_sell2']+_0x190040(0x91)+_0xe77d9e[_0x190040(0x1bf)]+_0x190040(0x17e)+_0xe77d9e[_0x190040(0x102)]+'$\x20</label>'),_0x3388bc(null,_0xe77d9e);}},'error':function(_0x2475fa){var _0x51e4f6=_0x403b6d;_0x3388bc(null,null),toastr[_0x51e4f6(0x328)]('KONEKSI\x20BITGET\x20GAGAL\x20TOKEN\x20'+_0x20509d[_0x51e4f6(0x1ca)]+_0x51e4f6(0x90)),_0xdf512a();}});});}function _0x2b6f03(_0x123d40,_0x3561e7,_0x35cd8b,_0x302900,_0x41b39c){var _0x203df6=_0x351a60,_0x30aae3=parseInt(_0x35ab7f('SERVERCORS'));const _0x370d72=_0x35ab7f(_0x203df6(0x2ff));_0x370d72===null&&toastr[_0x203df6(0x328)](_0x203df6(0x205));const _0x4aa8f8=_0x370d72[_0x203df6(0x290)](function(_0x1d2352){var _0x16b88f=_0x203df6;return _0x1d2352[_0x16b88f(0xe0)]===_0x123d40[_0x16b88f(0x1ca)];});var _0x1794ba=0x0;_0x4aa8f8&&(_0x1794ba=_0x4aa8f8[_0x203df6(0xea)]),_0x1ce3d4(_0x123d40[_0x203df6(0x154)],function(_0x4f43f3){var _0x14a60d=_0x203df6;$[_0x14a60d(0x18c)]({'url':_0x14a60d(0x2a6)+_0x123d40[_0x14a60d(0x1ca)]+_0x14a60d(0x307),'method':_0x14a60d(0x228),'success':function(_0x4c90c1){var _0x2a9396=_0x14a60d;if(_0x4c90c1[_0x2a9396(0x28a)]['a'][_0x2a9396(0x98)]===0x0||_0x4c90c1[_0x2a9396(0x28a)]['b']['length']===0x0)_0x41b39c(null,null),_0xdf512a(),toastr[_0x2a9396(0x328)](_0x2a9396(0x332)+_0x123d40[_0x2a9396(0x1ca)]+_0x2a9396(0x90));else{var _0x436c7f={};_0x436c7f['price_sell']=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x0][0x0],_0x436c7f[_0x2a9396(0x1b6)]=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x1]?_0x4c90c1['result']['b'][0x1][0x0]:null,_0x436c7f[_0x2a9396(0x2ee)]=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x2]?_0x4c90c1[_0x2a9396(0x28a)]['b'][0x2][0x0]:null,_0x436c7f[_0x2a9396(0x1bf)]=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x3]?_0x4c90c1[_0x2a9396(0x28a)]['b'][0x3][0x0]:null,_0x436c7f[_0x2a9396(0x30c)]=(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['b'][0x0][0x1])*_0x436c7f['price_sell'])[_0x2a9396(0x2c8)](0x2),_0x436c7f[_0x2a9396(0x257)]=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x1]?(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['b'][0x1][0x1])*_0x436c7f[_0x2a9396(0x1b6)])[_0x2a9396(0x2c8)](0x2):null,_0x436c7f[_0x2a9396(0x12e)]=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x2]?(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['b'][0x2][0x1])*_0x436c7f[_0x2a9396(0x2ee)])[_0x2a9396(0x2c8)](0x2):null,_0x436c7f[_0x2a9396(0x102)]=_0x4c90c1[_0x2a9396(0x28a)]['b'][0x3]?(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['b'][0x3][0x1])*_0x436c7f[_0x2a9396(0x1bf)])['toFixed'](0x2):null,_0x436c7f[_0x2a9396(0x18d)]=_0x4c90c1[_0x2a9396(0x28a)]['a'][0x0][0x0],_0x436c7f[_0x2a9396(0x169)]=_0x4c90c1[_0x2a9396(0x28a)]['a'][0x1]?_0x4c90c1[_0x2a9396(0x28a)]['a'][0x1][0x0]:null,_0x436c7f[_0x2a9396(0xb4)]=_0x4c90c1['result']['a'][0x2]?_0x4c90c1['result']['a'][0x2][0x0]:null,_0x436c7f[_0x2a9396(0x149)]=_0x4c90c1[_0x2a9396(0x28a)]['a'][0x3]?_0x4c90c1[_0x2a9396(0x28a)]['a'][0x3][0x0]:null,_0x436c7f[_0x2a9396(0x15e)]=(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['a'][0x0][0x1])*_0x436c7f[_0x2a9396(0x18d)])[_0x2a9396(0x2c8)](0x2),_0x436c7f[_0x2a9396(0x1df)]=_0x4c90c1[_0x2a9396(0x28a)]['a'][0x1]?(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['a'][0x1][0x1])*_0x436c7f[_0x2a9396(0x169)])[_0x2a9396(0x2c8)](0x2):null,_0x436c7f[_0x2a9396(0x15d)]=_0x4c90c1[_0x2a9396(0x28a)]['a'][0x2]?(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['a'][0x2][0x1])*_0x436c7f['price_buy2'])[_0x2a9396(0x2c8)](0x2):null,_0x436c7f[_0x2a9396(0x170)]=_0x4c90c1[_0x2a9396(0x28a)]['a'][0x3]?(parseFloat(_0x4c90c1[_0x2a9396(0x28a)]['a'][0x3][0x1])*_0x436c7f[_0x2a9396(0x149)])[_0x2a9396(0x2c8)](0x2):null,_0x436c7f[_0x2a9396(0x1ca)]=_0x123d40[_0x2a9396(0x1ca)],_0x436c7f[_0x2a9396(0x19f)]=_0x3561e7,_0x436c7f[_0x2a9396(0xf7)]=_0x3561e7/_0x4c90c1[_0x2a9396(0x28a)]['b'][0x0][0x0],_0x436c7f[_0x2a9396(0x9d)]=_0x3561e7/parseFloat(_0x4f43f3[_0x2a9396(0x180)]),_0x436c7f[_0x2a9396(0x2d4)]=parseFloat(_0x4f43f3[_0x2a9396(0x2d4)]),_0x436c7f['PriceRateSell']=parseFloat(_0x4f43f3['PriceRateSell']),_0x436c7f[_0x2a9396(0x256)]=_0x1794ba*_0x4c90c1[_0x2a9396(0x28a)]['b'][0x0][0x0],$(_0x2a9396(0x1c8)+_0x302900+'_'+_0x436c7f[_0x2a9396(0x1ca)])[_0x2a9396(0x31e)]('<label\x20class=\x27uk-text-primary\x27>~'+_0x436c7f[_0x2a9396(0x18d)]+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x15e)]+'$\x20<br/>\x20~'+_0x436c7f[_0x2a9396(0x169)]+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x1df)]+_0x2a9396(0x2cd)),$(_0x2a9396(0xa4)+_0x302900+'_'+_0x436c7f[_0x2a9396(0x1ca)])[_0x2a9396(0x31e)]('<label\x20class=\x27uk-text-primary\x27>~'+_0x436c7f['price_buy2']+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x15d)]+'$\x20<br/>\x20~'+_0x436c7f['price_buy3']+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x170)]+_0x2a9396(0x2dd)),$(_0x2a9396(0x2ba)+_0x302900+'_'+_0x436c7f[_0x2a9396(0x1ca)])[_0x2a9396(0x31e)]('<label\x20class=\x27uk-text-danger\x27>~'+_0x436c7f['price_sell']+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x30c)]+_0x2a9396(0xff)+_0x436c7f[_0x2a9396(0x1b6)]+_0x2a9396(0x17e)+_0x436c7f['vol_sell1']+_0x2a9396(0x2dd)),$(_0x2a9396(0x305)+_0x302900+'_'+_0x436c7f[_0x2a9396(0x1ca)])['html']('<label\x20class=\x27uk-text-danger\x27>~'+_0x436c7f['price_sell2']+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x12e)]+_0x2a9396(0x91)+_0x436c7f[_0x2a9396(0x1bf)]+_0x2a9396(0x17e)+_0x436c7f[_0x2a9396(0x102)]+_0x2a9396(0x2dd)),_0x41b39c(null,_0x436c7f);}},'error':function(_0x54009b){var _0x594794=_0x14a60d;_0x41b39c(null,null),toastr[_0x594794(0x328)](_0x594794(0x31b)+NameCEX['toUpperCase']()+'\x20GAGAL\x20TOKEN\x20'+_0x123d40[_0x594794(0x1ca)]+_0x594794(0x90)),_0xdf512a();}});});}function _0x1280d8(_0x267dc6,_0x20ba5b,_0x11614c,_0x15d8f6,_0x11d834,_0x44b474,_0x558c98,_0x8099d7,_0x41da6e,_0x3dcba2,_0x4504f7,_0xbe943d,_0x2a930e,_0x47b457,_0x45567c,_0x18ad8b){var _0x59ce3d=_0x351a60,_0x4f3452=_0x35ab7f(_0x59ce3d(0x2c6),{}),_0x85c68f=_0x35ab7f(_0x59ce3d(0x1bd),{}),_0x55b81b=BigInt(Math[_0x59ce3d(0x2d5)](Math[_0x59ce3d(0x1e3)](0xa,_0x11614c)*_0x44b474)),_0x3349c=_0x41da6e,_0x4abd3f=parseInt(_0x35ab7f(_0x59ce3d(0x123),0x0)),_0xbe943d=_0x8099d7===_0x59ce3d(0x29f)?parseInt(_0xbe943d)+parseInt(_0x32d53f):_0xbe943d,_0x3b7272=_0x4f3452[_0x59ce3d(0x27c)][_0x4abd3f][Math[_0x59ce3d(0x1ec)](Math[_0x59ce3d(0x220)]()*_0x4f3452[_0x59ce3d(0x27c)][_0x4abd3f]['length'])],_0x5f19c5=_0x2eec17(_0x8099d7,_0x3dcba2,_0x3349c,_0x45567c),_0x44bbc9=_0x55be9f(_0x8099d7,_0x3dcba2,_0x3349c,_0x45567c);(!_0x5f19c5||!_0x44bbc9)&&toastr['error']('GAGAL\x20UPDATE\x20TABEL\x20HARGA');var _0x3b04a9,_0x437de8,_0x46ac37={'kyberswap':_0x59ce3d(0x2b0)+DTChain['Nama_Chain']+'/'+_0x20ba5b+_0x59ce3d(0x145)+_0x15d8f6,'paraswap':'https://app.paraswap.xyz/#/swap/'+_0x20ba5b+'-'+_0x15d8f6+_0x59ce3d(0x2c3)+DTChain[_0x59ce3d(0x22a)],'odos':_0x59ce3d(0x225),'0x':_0x59ce3d(0x226)+DTChain[_0x59ce3d(0x22a)]+'/'+_0x20ba5b[_0x59ce3d(0x32f)]()+'?buyChain='+DTChain[_0x59ce3d(0x1cb)]+_0x59ce3d(0xf4)+_0x15d8f6['toLowerCase'](),'1inch':_0x59ce3d(0xfc)+DTChain[_0x59ce3d(0x1cb)]+_0x59ce3d(0xaa)+_0x20ba5b+'/'+_0x15d8f6,'swoop':'https://app.swoop.exchange'}[_0x47b457];switch(_0x47b457){case'kyberswap':_0x3b04a9=_0x59ce3d(0x281)+DTChain[_0x59ce3d(0x22a)]+_0x59ce3d(0x21b)+_0x20ba5b+'&tokenOut='+_0x15d8f6+_0x59ce3d(0x1a1)+_0x55b81b+_0x59ce3d(0x2a3);break;case _0x59ce3d(0x295):_0x3b04a9=_0x59ce3d(0xf9)+_0x59ce3d(0x21e)+_0x20ba5b+_0x59ce3d(0x230)+_0x11614c+_0x59ce3d(0x1e6)+_0x15d8f6+_0x59ce3d(0x20b)+_0x11d834+_0x59ce3d(0xb2)+DTChain['Kode_Chain']+'&amount='+_0x55b81b+_0x59ce3d(0x1d5);break;case'odos':_0x3b04a9=_0x3b7272+_0x59ce3d(0x129),_0x437de8={'chainId':DTChain[_0x59ce3d(0x1cb)],'inputTokens':[{'amount':_0x55b81b[_0x59ce3d(0xc1)](),'tokenAddress':_0x20ba5b}],'outputTokens':[{'proportion':0x1,'tokenAddress':_0x15d8f6}],'referralCode':0x0,'slippageLimitPercent':0.3};break;case'0x':DTChain[_0x59ce3d(0x22a)][_0x59ce3d(0x32f)]()===_0x59ce3d(0x264)?_0x3b04a9='https://api.0x.org/swap/v1/quote?buyToken='+_0x15d8f6+_0x59ce3d(0x270)+_0x20ba5b+_0x59ce3d(0x28f)+_0x55b81b:_0x3b04a9=_0x59ce3d(0x242)+DTChain['Nama_Chain']+'.api.0x.org/swap/v1/quote?buyToken='+_0x15d8f6+_0x59ce3d(0x270)+_0x20ba5b+_0x59ce3d(0x28f)+_0x55b81b;break;case _0x59ce3d(0x147):_0x3b04a9=_0x59ce3d(0x297)+DTChain[_0x59ce3d(0x1cb)]+'/quote?src='+_0x20ba5b+_0x59ce3d(0x316)+_0x15d8f6+_0x59ce3d(0x286)+_0x55b81b+'&includeGas=true';break;case _0x59ce3d(0x178):_0x437de8={'chainId':DTChain[_0x59ce3d(0x1cb)],'aggregatorSlug':_0x59ce3d(0x178),'sender':_0x4f3452[_0x59ce3d(0x1e1)],'inToken':{'chainId':DTChain[_0x59ce3d(0x1cb)],'type':_0x59ce3d(0x114),'address':_0x20ba5b,'decimals':parseFloat(_0x11614c)},'outToken':{'chainId':DTChain[_0x59ce3d(0x1cb)],'type':_0x59ce3d(0x114),'address':_0x15d8f6,'decimals':parseFloat(_0x11d834)},'amountInWei':String(_0x55b81b),'slippageBps':_0x59ce3d(0x196),'gasPriceGwei':Number(_0x35ab7f(_0x59ce3d(0xa7),0x0))},_0x3b04a9='https://swoop-backend.up.railway.app/swap';break;default:console[_0x59ce3d(0x328)](_0x59ce3d(0x2cb));return;}$[_0x59ce3d(0x18c)]({'url':_0x3b04a9,'method':_0x47b457===_0x59ce3d(0x2b9)||_0x47b457===_0x59ce3d(0x178)?_0x59ce3d(0xc3):_0x59ce3d(0x228),'contentType':_0x47b457===_0x59ce3d(0x2b9)||_0x47b457==='swoop'?'application/json':undefined,'data':_0x47b457===_0x59ce3d(0x2b9)?JSON[_0x59ce3d(0xfa)](_0x437de8):_0x47b457===_0x59ce3d(0x178)?JSON[_0x59ce3d(0xfa)](_0x437de8):undefined,'timeout':parseInt(_0x35ab7f('waktuTunggu',0x0))*0x3e8,'headers':_0x47b457==='0x'?{'0x-api-key':_0x59ce3d(0x155)}:undefined,'beforeSend':function(){var _0x541748=_0x59ce3d,_0x56715d=_0x541748(0x276)+_0x47b457['toUpperCase']()+_0x541748(0xbf);_0x5f19c5['html'](_0x56715d);},'success':function(_0x2687cf,_0x1d6438,_0xccf764){setTimeout(function(){var _0x2786e0=_0xc26f;if(_0xccf764[_0x2786e0(0x269)]===0xc8){if(!_0x2687cf||typeof _0x2687cf!=='object'){var _0x197199='NO\x20RESPONSE';_0x5f19c5[_0x2786e0(0x31e)](_0x2786e0(0x326)+_0x197199+_0x2786e0(0x1cc));return;}if(_0x2687cf[_0x2786e0(0x328)]){_0x5f19c5[_0x2786e0(0x31e)]('<a\x20href=#\x20title=\x27'+_0x2687cf[_0x2786e0(0x328)]+_0x2786e0(0x1b8)+_0x2687cf[_0x2786e0(0x328)]+_0x2786e0(0xbb));return;}var _0x511012,_0x134de0;switch(_0x47b457){case _0x2786e0(0x223):_0x511012=_0x2687cf['outputAmount']/Math['pow'](0xa,_0x11d834),_0x134de0=_0x2687cf['totalGas']/Math['pow'](0xa,0x9)*parseFloat(_0x35ab7f(_0x2786e0(0xa7),0x0))*parseFloat(_0x35ab7f(_0x2786e0(0x93),0x0));break;case _0x2786e0(0x295):_0x511012=_0x2687cf[_0x2786e0(0x92)][_0x2786e0(0x2f2)]/Math[_0x2786e0(0x1e3)](0xa,_0x11d834),_0x134de0=parseFloat(_0x2687cf[_0x2786e0(0x92)][_0x2786e0(0x2c4)]);break;case'odos':if(_0x8099d7===_0x2786e0(0x29f))_0x511012=_0x2687cf[_0x2786e0(0x24a)]/_0x2a930e;else _0x8099d7===_0x2786e0(0x2bf)&&(_0x511012=parseFloat(_0x2687cf[_0x2786e0(0x115)])/Math[_0x2786e0(0x1e3)](0xa,_0x11d834));_0x134de0=_0x2687cf[_0x2786e0(0x14b)];break;case'0x':_0x511012=_0x2687cf['buyAmount']/Math[_0x2786e0(0x1e3)](0xa,_0x11d834),_0x134de0=_0x2687cf[_0x2786e0(0x20d)]/Math[_0x2786e0(0x1e3)](0xa,0x9)*parseFloat(_0x35ab7f(_0x2786e0(0xa7),0x0))*parseFloat(_0x35ab7f(_0x2786e0(0x93),0x0));break;case _0x2786e0(0x147):_0x511012=parseFloat(_0x2687cf['toAmount'])/Math['pow'](0xa,_0x11d834),_0x134de0=_0x2687cf[_0x2786e0(0xeb)]/Math['pow'](0xa,0x9)*parseFloat(_0x35ab7f(_0x2786e0(0xa7),0x0))*parseFloat(_0x35ab7f('PriceGAS',0x0));break;case _0x2786e0(0x178):_0x511012=parseFloat(_0x2687cf[_0x2786e0(0x1b9)])/Math['pow'](0xa,_0x11d834),_0x134de0=_0x2687cf[_0x2786e0(0x2f6)]/Math['pow'](0xa,_0x11d834)*parseFloat(_0x35ab7f(_0x2786e0(0xa7),0x0))*parseFloat(_0x35ab7f(_0x2786e0(0x93),0x0));break;}var _0x199a8d,_0x56775b,_0x95403f;if(_0x8099d7===_0x2786e0(0x29f)){var _0x3e02bb=parseFloat(_0x267dc6*0.001)+parseFloat(_0x4504f7)+parseFloat(_0x134de0);_0x95403f=parseFloat(_0x511012*_0x2a930e-_0x267dc6),_0x56775b=((Number(_0x267dc6)+_0x95403f)/(_0x267dc6/_0x558c98))[_0x2786e0(0x2c8)](0x8),_0x199a8d=(_0x56775b-_0x558c98)/_0x558c98*0x64,_0x4ed679(_0x8099d7,_0x2786e0(0x17c)+_0x47b457,_0x45567c,_0x41da6e,_0x3349c,_0x558c98,_0x4504f7,_0x134de0,_0x3e02bb),_0xd25eef(_0x47b457[_0x2786e0(0x30a)](),_0x2786e0(0x254),_0x3349c,_0x267dc6,_0x95403f,_0x558c98,_0x56775b,_0x134de0,_0x3e02bb,_0x4504f7,_0x199a8d,_0x45567c,_0x20ba5b,_0x11614c,_0x15d8f6,_0x11d834);}else{if(_0x8099d7===_0x2786e0(0x2bf)){var _0x3e02bb=parseFloat(_0x267dc6*0.001)+parseFloat(_0x134de0);_0x56775b=parseFloat(_0x267dc6/_0x511012)[_0x2786e0(0x2c8)](0x9),_0x95403f=parseFloat(_0x267dc6/_0x56775b*_0x558c98-_0x267dc6),_0x199a8d=(_0x558c98-_0x56775b)/_0x56775b*0x64,_0x4ed679(_0x8099d7,_0x2786e0(0x97)+_0x47b457,_0x45567c,_0x41da6e,_0x3349c,_0x558c98,_0x4504f7,_0x134de0,_0x3e02bb),_0xd25eef(_0x47b457['toUpperCase'](),_0x2786e0(0x28c),_0x3349c,_0x267dc6,_0x95403f,_0x56775b,_0x558c98,_0x134de0,_0x3e02bb,_0x4504f7,_0x199a8d,_0x45567c,_0x20ba5b,_0x11614c,_0x15d8f6,_0x11d834);}}var _0x194652=_0x85c68f[_0x2786e0(0x109)]==0x0?_0x3e02bb+_0x267dc6*0.1/0x64:parseFloat(_0x85c68f[_0x2786e0(0x109)]),_0x5515de,_0x98d92c;if(_0x95403f>_0x194652){if(_0x8099d7==='sell')_0x265b1f(_0x2786e0(0x291),_0x2786e0(0x29f),'sell_'+_0x47b457,_0x47b457[_0x2786e0(0x30a)](),_0x3349c,_0x95403f,_0x3e02bb,_0x45567c),_0x1da662(_0x45567c,_0x47b457[_0x2786e0(0x30a)](),_0x2786e0(0x254),_0x3349c,_0x267dc6,_0x95403f,_0x558c98,_0x56775b,_0x134de0,_0x3e02bb,_0x4504f7,_0x20ba5b,_0x3349c,_0x15d8f6,_0x18ad8b);else _0x8099d7==='buy'&&(_0x265b1f(_0x2786e0(0x16e),_0x2786e0(0x2bf),_0x2786e0(0x97)+_0x47b457,_0x47b457[_0x2786e0(0x30a)](),_0x3349c,_0x95403f,_0x3e02bb,_0x45567c),_0x1da662(_0x45567c,_0x47b457[_0x2786e0(0x30a)](),_0x2786e0(0x28c),_0x3349c,_0x267dc6,_0x95403f,_0x56775b,_0x558c98,_0x134de0,_0x3e02bb,_0x4504f7,_0x20ba5b,_0x3349c,_0x15d8f6,_0x18ad8b));_0x5515de=_0x2786e0(0x214);}else _0x5515de='';_0x98d92c=_0x2786e0(0x1e5)+_0x95403f[_0x2786e0(0x2c8)](0x2)+_0x2786e0(0x12b)+(_0x5515de===_0x2786e0(0x214)?_0x2786e0(0x2bd):_0x2786e0(0x1b5))+'\x27>'+(_0x95403f-_0x3e02bb)[_0x2786e0(0x2c8)](0x2)+_0x2786e0(0x1c4);if(_0x8099d7==='sell')_0x5f19c5[_0x2786e0(0x31e)]('<a\x20href=\x27'+_0x46ac37+_0x2786e0(0x11a)+_0x56775b+_0x2786e0(0x2b2)+_0x98d92c)[_0x2786e0(0x16b)](_0x5515de);else _0x8099d7===_0x2786e0(0x2bf)&&_0x5f19c5['html'](_0x2786e0(0xd5)+_0x46ac37+_0x2786e0(0xfb)+_0x56775b+_0x2786e0(0x2b2)+_0x98d92c)[_0x2786e0(0x16b)](_0x5515de);_0x44bbc9[_0x2786e0(0x16b)](_0x5515de);}},0x0);},'error':function(_0x16dd6e,_0x3a1d70,_0xe9c2a6){var _0x38c62b=_0x59ce3d,_0x2c2459=_0x38c62b(0x138),_0x3c641b=_0x38c62b(0x22b);switch(_0x16dd6e[_0x38c62b(0x269)]){case 0x0:try{var _0x33b335=JSON['parse'](_0x16dd6e[_0x38c62b(0x201)]);_0x2c2459=_0x33b335[_0x38c62b(0x1d8)]||_0x33b335[_0x38c62b(0x110)]||_0x38c62b(0x17b);}catch(_0x3e1244){_0x3c641b=_0x38c62b(0x311),_0x3d30e2(_0x267dc6,_0x20ba5b,_0x11614c,_0x15d8f6,_0x11d834,_0x44b474,_0x558c98,_0x8099d7,_0x41da6e,_0x3dcba2,_0x4504f7,_0xbe943d,_0x2a930e,_0x47b457,_0x45567c,_0x18ad8b);}break;case 0x190:try{var _0x33b335=JSON[_0x38c62b(0x1a8)](_0x16dd6e[_0x38c62b(0x201)]);_0x2c2459=_0x33b335[_0x38c62b(0x1d8)]||_0x33b335[_0x38c62b(0x110)]||'KONEKSI\x20BURUK';}catch(_0x42dd9b){_0x2c2459=_0x38c62b(0xa9);}break;case 0x193:_0x2c2459='AKSES\x20DIBLOK';break;case 0x194:_0x2c2459=_0x38c62b(0x128);break;case 0x1ad:_0x3c641b=_0x38c62b(0x311),_0x3d30e2(_0x267dc6,_0x20ba5b,_0x11614c,_0x15d8f6,_0x11d834,_0x44b474,_0x558c98,_0x8099d7,_0x41da6e,_0x3dcba2,_0x4504f7,_0xbe943d,_0x2a930e,_0x47b457,_0x45567c,_0x18ad8b);break;case 0x1f4:_0x2c2459='GAGAL\x20DAPATKAN\x20DATA';break;case 0x1f7:_0x2c2459='Layanan\x20tidak\x20tersedia';break;case 0x1f6:_0x2c2459=_0x38c62b(0x11d);break;default:_0x2c2459=_0x38c62b(0x277)+_0x16dd6e[_0x38c62b(0x269)];}_0x5f19c5[_0x38c62b(0x31e)](_0x38c62b(0x185)+_0x46ac37+'\x22\x20title=\x22'+_0x47b457[_0x38c62b(0x30a)]()+_0x38c62b(0x17e)+_0x2c2459+_0x38c62b(0x12c))[_0x38c62b(0x16b)](_0x3c641b),_0x44bbc9[_0x38c62b(0x16b)](_0x3c641b);},'complete':function(){_0xdf512a();}});}function _0x3d30e2(_0xefa2bf,_0x233538,_0x35c010,_0x52828f,_0x2677e3,_0x483eca,_0x395075,_0x254b92,_0x1bd012,_0x530eeb,_0x96e1fc,_0x26d782,_0x42a9f4,_0x48e991,_0x4a8dba,_0x2c8eef){var _0x5c8d2a=_0x351a60,_0x568f3b=Math['pow'](0xa,_0x35c010)*_0x483eca,_0x568f3b=BigInt(Math[_0x5c8d2a(0x2d5)](Number(_0x568f3b))),_0x3ec655=_0x1bd012,_0x1c0254=_0x2eec17(_0x254b92,_0x530eeb,_0x3ec655,_0x4a8dba),_0x1f5834=_0x55be9f(_0x254b92,_0x530eeb,_0x3ec655,_0x4a8dba);(!_0x1c0254||!_0x1f5834)&&toastr[_0x5c8d2a(0x328)](_0x5c8d2a(0x27d));var _0x12772f={'kyberswap':_0x5c8d2a(0x2b0)+DTChain[_0x5c8d2a(0x22a)]+'/'+_0x233538+_0x5c8d2a(0x145)+_0x52828f,'paraswap':_0x5c8d2a(0x31a)+_0x233538+'-'+_0x52828f+_0x5c8d2a(0x2c3)+DTChain[_0x5c8d2a(0x22a)],'odos':_0x5c8d2a(0x225),'0x':_0x5c8d2a(0x226)+DTChain[_0x5c8d2a(0x22a)]+'/'+_0x233538[_0x5c8d2a(0x32f)]()+_0x5c8d2a(0x2f3)+DTChain[_0x5c8d2a(0x1cb)]+_0x5c8d2a(0xf4)+_0x52828f['toLowerCase'](),'1inch':'https://app.1inch.io/#/'+DTChain['Kode_Chain']+_0x5c8d2a(0xaa)+_0x233538+'/'+_0x52828f,'swoop':_0x5c8d2a(0x2db)}[_0x48e991]||_0x5c8d2a(0x2db),_0x2a4e4d=_0x35ab7f('DATA_SETTING',{}),_0x4e4330=_0x35ab7f(_0x5c8d2a(0x1bd),{}),_0x407e7a={'chainId':DTChain[_0x5c8d2a(0x1cb)],'aggregatorSlug':_0x48e991,'sender':_0x2a4e4d[_0x5c8d2a(0x1e1)],'inToken':{'chainId':DTChain[_0x5c8d2a(0x1cb)],'type':'TOKEN','address':_0x233538,'decimals':parseFloat(_0x35c010)},'outToken':{'chainId':DTChain[_0x5c8d2a(0x1cb)],'type':_0x5c8d2a(0x114),'address':_0x52828f,'decimals':parseFloat(_0x2677e3)},'amountInWei':String(_0x568f3b),'slippageBps':_0x5c8d2a(0x196),'gasPriceGwei':Number(_0x35ab7f(_0x5c8d2a(0xa7),0x0))};$['ajax']({'url':'https://swoop-backend.up.railway.app/swap','type':_0x5c8d2a(0xc3),'contentType':_0x5c8d2a(0x14c),'data':JSON[_0x5c8d2a(0xfa)](_0x407e7a),'timeout':parseInt(_0x2a4e4d[_0x5c8d2a(0x26c)]||0x1e)*0x3e8,'beforeSend':function(){var _0x3afca1=_0x5c8d2a,_0x4fe6c6='<i\x20class=\x22bi\x20bi-arrow-clockwise\x22></i>&nbsp;\x20SERVER2</div>';if(_0x254b92==='sell')$('#'+_0x530eeb+_0x3afca1(0x2a8)+_0x4a8dba+'_'+_0x3ec655)[_0x3afca1(0x31d)]()['html'](_0x4fe6c6);else _0x254b92===_0x3afca1(0x2bf)&&$(_0x3afca1(0x1b0)+_0x4a8dba+'_'+_0x530eeb+'_'+_0x3ec655)[_0x3afca1(0x31d)]()[_0x3afca1(0x31e)](_0x4fe6c6);},'success':function(_0x5e1d01,_0x1a7aee,_0x63632b){setTimeout(function(){var _0x45a300=_0xc26f;if(_0x63632b[_0x45a300(0x269)]===0xc8&&!_0x5e1d01||_0x63632b[_0x45a300(0x269)]===0x0){var _0x5c0a9f=_0x45a300(0x183)+dexType['toUpperCase']()+_0x45a300(0xbf);_0x1c0254[_0x45a300(0x31e)](_0x5c0a9f);}else{var _0x267810=parseFloat(_0x5e1d01[_0x45a300(0x1b9)])/Math[_0x45a300(0x1e3)](0xa,_0x2677e3),_0x1ffb2f,_0x5b3c6d,_0x5cadf6,_0x3fe8dc,_0x53d988;_0x5cadf6='';var _0x1ffb2f=parseFloat(_0x35ab7f('gasGWEI'))*0x3d090/Math['pow'](0xa,0x9)*parseFloat(_0x35ab7f('PriceGAS'));_0x254b92===_0x45a300(0x29f)&&(_0x5b3c6d=parseFloat(_0x267810*_0x42a9f4-_0xefa2bf),_0x5cadf6=((Number(_0xefa2bf)+_0x5b3c6d)/(_0xefa2bf/_0x395075))['toFixed'](0x9),_0x3fe8dc=parseFloat(_0xefa2bf*0.001)+parseFloat(_0x96e1fc)+parseFloat(_0x1ffb2f),_0x53d988=(_0x5cadf6-_0x395075)/_0x395075*0x64,_0x4ed679(_0x254b92,_0x45a300(0x17c)+_0x48e991,_0x4a8dba,_0x1bd012,_0x3ec655,_0x395075,_0x96e1fc,_0x1ffb2f,_0x3fe8dc),console[_0x45a300(0x211)](_0x45a300(0xa6)+_0x48e991[_0x45a300(0x30a)]()+_0x45a300(0xca)+_0x1bd012+_0x45a300(0x299)+_0x4a8dba[_0x45a300(0x30a)]()),_0xd25eef(_0x48e991['toUpperCase'](),'KIRI-SWOOP',_0x3ec655,_0xefa2bf,_0x5b3c6d,_0x395075,_0x5cadf6,_0x1ffb2f,_0x3fe8dc,_0x96e1fc,_0x53d988,_0x4a8dba,_0x233538,_0x35c010,_0x52828f,_0x2677e3));_0x254b92===_0x45a300(0x2bf)&&(_0x5cadf6=parseFloat(_0xefa2bf/_0x267810)[_0x45a300(0x2c8)](0x9),_0x5b3c6d=parseFloat(_0xefa2bf/_0x5cadf6*_0x395075-_0xefa2bf),_0x3fe8dc=parseFloat(_0xefa2bf*0.001)+parseFloat(_0x1ffb2f),_0x53d988=(_0x395075-_0x5cadf6)/_0x5cadf6*0x64,_0x4ed679(_0x254b92,_0x45a300(0x97)+_0x48e991,_0x4a8dba,_0x1bd012,_0x3ec655,_0x395075,_0x96e1fc,_0x1ffb2f,_0x3fe8dc),console[_0x45a300(0x211)](_0x45a300(0xa6)+_0x48e991[_0x45a300(0x30a)]()+_0x45a300(0xca)+_0x1bd012+'\x20CEX\x20:'+_0x4a8dba['toUpperCase']()),_0xd25eef(_0x48e991[_0x45a300(0x30a)](),_0x45a300(0x25b),_0x3ec655,_0xefa2bf,_0x5b3c6d,_0x5cadf6,_0x395075,_0x1ffb2f,_0x3fe8dc,_0x96e1fc,_0x53d988,_0x4a8dba,_0x233538,_0x35c010,_0x52828f,_0x2677e3));var _0x53ffa1=_0x4e4330['FilterPNL']==0x0?_0x3fe8dc+_0xefa2bf*0.1/0x64:parseFloat(_0x4e4330[_0x45a300(0x109)]);if(_0x5b3c6d>_0x53ffa1){if(_0x254b92===_0x45a300(0x29f))_0x265b1f(_0x45a300(0x291),_0x45a300(0x29f),'sell_'+_0x4a8dba,_0x4a8dba[_0x45a300(0x30a)](),_0x3ec655,_0x5b3c6d,_0x3fe8dc,_0x4a8dba),_0x1da662(_0x4a8dba,_0x48e991[_0x45a300(0x30a)](),_0x45a300(0x254),_0x3ec655,_0xefa2bf,_0x5b3c6d,_0x395075,_0x5cadf6,_0x1ffb2f,_0x3fe8dc,_0x96e1fc,_0x233538,_0x3ec655,_0x52828f,_0x2c8eef);else _0x254b92==='buy'&&(_0x265b1f(_0x45a300(0x16e),_0x45a300(0x2bf),_0x45a300(0x97)+_0x4a8dba,_0x4a8dba[_0x45a300(0x30a)](),_0x3ec655,_0x5b3c6d,_0x3fe8dc,_0x4a8dba),_0x1da662(_0x4a8dba,_0x48e991['toUpperCase'](),_0x45a300(0x28c),_0x3ec655,_0xefa2bf,_0x5b3c6d,_0x5cadf6,_0x395075,_0x1ffb2f,_0x3fe8dc,_0x96e1fc,_0x233538,_0x3ec655,_0x52828f,_0x2c8eef));var _0x19fd18='ijo';}else var _0x19fd18='';PNLDisplay=_0x45a300(0x1e5)+_0x5b3c6d[_0x45a300(0x2c8)](0x2)+_0x45a300(0x12b)+(_0x19fd18===_0x45a300(0x214)?'uk-label-success':_0x45a300(0x1b5))+'\x27>'+(_0x5b3c6d-_0x3fe8dc)[_0x45a300(0x2c8)](0x2)+_0x45a300(0x1c4),_0x1c0254[_0x45a300(0x31e)](_0x45a300(0xd5)+_0x12772f+_0x45a300(0x1dc)+_0x5cadf6+_0x45a300(0x2bb)+PNLDisplay)['addClass'](_0x45a300(0x311)),_0x1f5834[_0x45a300(0x16b)](_0x45a300(0x311));}},0x0);},'error':function(_0x4fd97b,_0x1c573d,_0x3bd64a){var _0x111fb0=_0x5c8d2a,_0x1397e4=_0x111fb0(0x22b),_0x38cb77;switch(_0x4fd97b['status']){case 0x0:try{var _0x50616a=JSON[_0x111fb0(0x1a8)](_0x4fd97b[_0x111fb0(0x201)]);_0x38cb77=_0x50616a[_0x111fb0(0x1d8)]||_0x50616a[_0x111fb0(0x110)]||_0x111fb0(0x132);}catch(_0x4e778b){_0x1397e4=_0x111fb0(0x26e),_0x38cb77=_0x111fb0(0x17b),_0x3054dc(_0xefa2bf,_0x233538,_0x35c010,_0x52828f,_0x2677e3,_0x483eca,_0x395075,_0x254b92,_0x1bd012,_0x530eeb,_0x96e1fc,_0x26d782,_0x42a9f4,_0x48e991,_0x4a8dba,_0x2c8eef);}break;case 0x190:try{var _0x50616a=JSON[_0x111fb0(0x1a8)](_0x4fd97b[_0x111fb0(0x201)]);_0x38cb77=_0x50616a[_0x111fb0(0x1d8)]||_0x50616a['description']||_0x111fb0(0xa9);}catch(_0x119318){_0x38cb77=_0x111fb0(0x287);}break;case 0x193:_0x38cb77=_0x111fb0(0x16c);break;case 0x194:_0x38cb77=_0x111fb0(0x128);break;case 0x1ad:_0x1397e4='limit2',_0x38cb77='KENA\x20LIMIT',_0x3054dc(_0xefa2bf,_0x233538,_0x35c010,_0x52828f,_0x2677e3,_0x483eca,_0x395075,_0x254b92,_0x1bd012,_0x530eeb,_0x96e1fc,_0x26d782,_0x42a9f4,_0x48e991,_0x4a8dba,_0x2c8eef);break;case 0x1f4:_0x1397e4='merah',_0x38cb77=_0x4fd97b[_0x111fb0(0x216)]?.['message']||_0x111fb0(0xd4);break;case 0x1f7:_0x38cb77=_0x111fb0(0x2b6);break;default:_0x38cb77=_0x111fb0(0x277)+_0x4fd97b['status'];}_0x1c0254[_0x111fb0(0x31e)](_0x111fb0(0x185)+_0x12772f+'\x22\x20title=\x22SERVER2\x20:\x20'+_0x38cb77+_0x111fb0(0x2cf))['removeClass'](_0x111fb0(0x9e))[_0x111fb0(0x16b)](_0x1397e4),_0x1f5834['removeClass'](_0x111fb0(0x9e))[_0x111fb0(0x16b)](_0x1397e4);}});}function _0x3054dc(_0x28207a,_0x3a040e,_0x5f33cc,_0x56ab86,_0x342107,_0x29e428,_0x9da90e,_0x434664,_0x547c74,_0x5bc939,_0x1761a3,_0xe793ec,_0x12c534,_0x546d54,_0x54395e,_0x4801b9){var _0x559ebc=_0x351a60,_0x2b0691=Math[_0x559ebc(0x1e3)](0xa,_0x5f33cc)*_0x29e428,_0x2b0691=BigInt(Math[_0x559ebc(0x2d5)](Number(_0x2b0691))),_0x125463=_0x547c74,_0x34a14b=_0x2eec17(_0x434664,_0x5bc939,_0x125463,_0x54395e),_0x50f9cc=_0x55be9f(_0x434664,_0x5bc939,_0x125463,_0x54395e);(!_0x34a14b||!_0x50f9cc)&&toastr[_0x559ebc(0x328)](_0x559ebc(0x27d));let _0x19e409=DTChain[_0x559ebc(0x22a)]['toUpperCase']()===_0x559ebc(0x15a)?'ETH':DTChain['Nama_Chain'][_0x559ebc(0x30a)]();var _0x42ef19={'kyberswap':_0x559ebc(0x2b0)+DTChain['Nama_Chain']+'/'+_0x3a040e+_0x559ebc(0x145)+_0x56ab86,'paraswap':'https://app.paraswap.xyz/#/swap/'+_0x3a040e+'-'+_0x56ab86+_0x559ebc(0x2c3)+DTChain[_0x559ebc(0x22a)],'odos':_0x559ebc(0x225),'0x':_0x559ebc(0x226)+DTChain[_0x559ebc(0x22a)]+'/'+_0x3a040e[_0x559ebc(0x32f)]()+_0x559ebc(0x2f3)+DTChain[_0x559ebc(0x1cb)]+_0x559ebc(0xf4)+_0x56ab86[_0x559ebc(0x32f)](),'1inch':'https://app.1inch.io/#/'+DTChain[_0x559ebc(0x1cb)]+_0x559ebc(0xaa)+_0x3a040e+'/'+_0x56ab86,'swoop':_0x559ebc(0x2db)}[_0x546d54]||_0x559ebc(0x2db),_0x48d38d=_0x35ab7f(_0x559ebc(0x2c6),{}),_0x194fd5=_0x35ab7f(_0x559ebc(0x1bd),{});$[_0x559ebc(0x18c)]({'url':'https://api.rango.exchange/basic/quote?from='+_0x19e409[_0x559ebc(0x30a)]()+'--'+_0x3a040e+_0x559ebc(0x265)+_0x19e409['toUpperCase']()+'--'+_0x56ab86+_0x559ebc(0x249)+_0x2b0691+'&apiKey=c6381a79-2817-4602-83bf-6a641a409e32','type':_0x559ebc(0x228),'contentType':_0x559ebc(0x14c),'timeout':parseInt(_0x48d38d['waktuTunggu']||0x1e)*0x3e8,'beforeSend':function(){var _0x49e698=_0x559ebc,_0x348268='<i\x20class=\x22bi\x20bi-arrow-clockwise\x22></i>&nbsp;SERVER3</div>';if(_0x434664==='sell')$('#'+_0x5bc939+_0x49e698(0x2a8)+_0x54395e+'_'+_0x125463)[_0x49e698(0x31d)]()[_0x49e698(0x31e)](_0x348268);else _0x434664==='buy'&&$(_0x49e698(0x1b0)+_0x54395e+'_'+_0x5bc939+'_'+_0x125463)[_0x49e698(0x31d)]()['html'](_0x348268);},'success':function(_0x55ab7f,_0x3aa115,_0x79368f){setTimeout(function(){var _0x5f2b08=_0xc26f;if(_0x79368f[_0x5f2b08(0x269)]===0xc8&&!_0x55ab7f||_0x79368f[_0x5f2b08(0x269)]===0x0){var _0x1f6e1f=_0x5f2b08(0x183)+dexType[_0x5f2b08(0x30a)]()+'</div>';_0x34a14b[_0x5f2b08(0x31e)](_0x1f6e1f);}else{var _0x3a35e9=parseFloat(_0x55ab7f[_0x5f2b08(0x317)][_0x5f2b08(0x1b7)]/Math[_0x5f2b08(0x1e3)](0xa,_0x342107)),_0x104f02,_0x10f286,_0x365021,_0x162ba6,_0x1a6134;_0x365021='';var _0x104f02=parseFloat(_0x35ab7f(_0x5f2b08(0xa7)))*0x3d090/Math[_0x5f2b08(0x1e3)](0xa,0x9)*parseFloat(_0x35ab7f(_0x5f2b08(0x93)));_0x434664==='sell'&&(_0x10f286=parseFloat(_0x3a35e9*_0x12c534-_0x28207a),_0x365021=((Number(_0x28207a)+_0x10f286)/(_0x28207a/_0x9da90e))[_0x5f2b08(0x2c8)](0x9),_0x162ba6=parseFloat(_0x28207a*0.001)+parseFloat(_0x1761a3)+parseFloat(_0x104f02),_0x1a6134=(_0x365021-_0x9da90e)/_0x9da90e*0x64,_0x4ed679(_0x434664,_0x5f2b08(0x17c)+_0x546d54,_0x54395e,_0x547c74,_0x125463,_0x9da90e,_0x1761a3,_0x104f02,_0x162ba6),console['warn'](_0x5f2b08(0x8c)+_0x546d54['toUpperCase']()+_0x5f2b08(0x2a0)+_0x547c74+_0x5f2b08(0x299)+_0x54395e['toUpperCase']()),_0xd25eef(_0x546d54[_0x5f2b08(0x30a)](),_0x5f2b08(0x199),_0x125463,_0x28207a,_0x10f286,_0x9da90e,_0x365021,_0x104f02,_0x162ba6,_0x1761a3,_0x1a6134,_0x54395e,_0x3a040e,_0x5f33cc,_0x56ab86,_0x342107));_0x434664===_0x5f2b08(0x2bf)&&(_0x365021=parseFloat(_0x28207a/_0x3a35e9)[_0x5f2b08(0x2c8)](0x9),_0x10f286=parseFloat(_0x28207a/_0x365021*_0x9da90e-_0x28207a),_0x162ba6=parseFloat(_0x28207a*0.001)+parseFloat(_0x104f02),_0x1a6134=(_0x9da90e-_0x365021)/_0x365021*0x64,_0x4ed679(_0x434664,'buy_'+_0x546d54,_0x54395e,_0x547c74,_0x125463,_0x9da90e,_0x1761a3,_0x104f02,_0x162ba6),console[_0x5f2b08(0x211)](_0x5f2b08(0x8c)+_0x546d54[_0x5f2b08(0x30a)]()+_0x5f2b08(0x2a0)+_0x547c74+'\x20CEX\x20:'+_0x54395e[_0x5f2b08(0x30a)]()),_0xd25eef(_0x546d54['toUpperCase'](),'KANAN-RANGO',_0x125463,_0x28207a,_0x10f286,_0x365021,_0x9da90e,_0x104f02,_0x162ba6,_0x1761a3,_0x1a6134,_0x54395e,_0x3a040e,_0x5f33cc,_0x56ab86,_0x342107));var _0x81592c=_0x194fd5[_0x5f2b08(0x109)]==0x0?_0x162ba6+_0x28207a*0.1/0x64:parseFloat(_0x194fd5[_0x5f2b08(0x109)]);if(_0x10f286>_0x81592c){if(_0x434664===_0x5f2b08(0x29f))_0x265b1f(_0x5f2b08(0x291),'sell',_0x5f2b08(0x17c)+_0x54395e,_0x54395e['toUpperCase'](),_0x125463,_0x10f286,_0x162ba6,_0x54395e),_0x1da662(_0x54395e,_0x546d54[_0x5f2b08(0x30a)](),_0x5f2b08(0x254),_0x125463,_0x28207a,_0x10f286,_0x9da90e,_0x365021,_0x104f02,_0x162ba6,_0x1761a3,_0x3a040e,_0x125463,_0x56ab86,_0x4801b9);else _0x434664==='buy'&&(_0x265b1f(_0x5f2b08(0x16e),'buy',_0x5f2b08(0x97)+_0x54395e,_0x54395e[_0x5f2b08(0x30a)](),_0x125463,_0x10f286,_0x162ba6,_0x54395e),_0x1da662(_0x54395e,_0x546d54['toUpperCase'](),_0x5f2b08(0x28c),_0x125463,_0x28207a,_0x10f286,_0x365021,_0x9da90e,_0x104f02,_0x162ba6,_0x1761a3,_0x3a040e,_0x125463,_0x56ab86,_0x4801b9));var _0x5dedc1=_0x5f2b08(0x214);}else var _0x5dedc1='';PNLDisplay=_0x5f2b08(0x1e5)+_0x10f286['toFixed'](0x2)+_0x5f2b08(0x12b)+(_0x5dedc1==='ijo'?'uk-label-success':_0x5f2b08(0x1b5))+'\x27>'+(_0x10f286-_0x162ba6)[_0x5f2b08(0x2c8)](0x2)+_0x5f2b08(0x1c4),_0x34a14b[_0x5f2b08(0x31e)](_0x5f2b08(0xd5)+_0x42ef19+'\x27\x20target=\x27_blank\x27>'+_0x365021+'</a><br/>'+PNLDisplay)[_0x5f2b08(0x16b)](_0x5f2b08(0x26e)),_0x50f9cc[_0x5f2b08(0x16b)](_0x5f2b08(0x26e));}},0x0);},'error':function(_0x39af46,_0x4b9005,_0x31d04c){var _0x1c8f93=_0x559ebc,_0x1c9fba=_0x1c8f93(0x22b),_0x1740ba;if(_0x39af46[_0x1c8f93(0x269)]===0xc8)try{var _0xd1ca3d=JSON[_0x1c8f93(0x1a8)](_0x39af46[_0x1c8f93(0x201)]);if(_0xd1ca3d[_0x1c8f93(0xe5)]===_0x1c8f93(0x2a4))_0x1740ba=_0x1c8f93(0x1b2),_0x1c9fba=_0x1c8f93(0x1ab);else _0xd1ca3d['error']||_0xd1ca3d['errorCode']?_0x1740ba=_0xd1ca3d[_0x1c8f93(0x328)]||_0x1c8f93(0x232):_0x1740ba=_0x1c8f93(0x1bb);}catch(_0x5986cf){_0x1740ba=_0x1c8f93(0x213);}else switch(_0x39af46[_0x1c8f93(0x269)]){case 0x0:try{var _0x1a05d7=JSON[_0x1c8f93(0x1a8)](_0x39af46[_0x1c8f93(0x201)]);_0x1740ba=_0x1a05d7[_0x1c8f93(0x1d8)]||_0x1a05d7[_0x1c8f93(0x110)]||_0x1c8f93(0x132);}catch(_0x2bfb6c){_0x1740ba=_0x1c8f93(0x17b);}break;case 0x190:try{var _0x1a05d7=JSON[_0x1c8f93(0x1a8)](_0x39af46[_0x1c8f93(0x201)]);_0x1740ba=_0x1a05d7['detail']||_0x1a05d7[_0x1c8f93(0x110)]||'KONEKSI\x20LAMBAT';}catch(_0x42cde8){_0x1740ba='KONEKSI\x20BURUK';}break;case 0x193:_0x1740ba='AKSES\x20DIBLOK';break;case 0x194:_0x1740ba=_0x1c8f93(0x128);break;case 0x1ad:_0x1c9fba=_0x1c8f93(0x311),_0x1740ba=_0x1c8f93(0x2ca);break;case 0x1f4:_0x1740ba=_0x39af46['responseJSON']?.[_0x1c8f93(0x21a)]||_0x1c8f93(0xd4);break;case 0x1f7:_0x1740ba=_0x1c8f93(0x2b6);break;default:_0x1740ba=_0x1c8f93(0x277)+_0x39af46[_0x1c8f93(0x269)];}_0x34a14b[_0x1c8f93(0x31e)](_0x1c8f93(0x185)+_0x42ef19+_0x1c8f93(0xb7)+_0x1740ba+_0x1c8f93(0x221))['removeClass'](_0x1c8f93(0x267))[_0x1c8f93(0x16b)](_0x1c9fba),_0x50f9cc['removeClass']('limit2\x20merah')[_0x1c8f93(0x16b)](_0x1c9fba);}});}function _0x383927(){var _0x24f2bc=_0x351a60;let _0xef79a6=0x0;const _0x43c6e4=['#D1INCH',_0x24f2bc(0x1b3),_0x24f2bc(0x1e0),_0x24f2bc(0x235),_0x24f2bc(0x240)];return _0x43c6e4['forEach'](_0x3b70e7=>{var _0x2dfeb=_0x24f2bc;$(_0x3b70e7)['is'](_0x2dfeb(0x141))&&_0xef79a6++;}),_0xef79a6;}function _0x4bb3d6(_0x2ddd30,_0xf2efca){var _0x53f93e=_0x351a60,_0x24c3dc=_0x35ab7f(_0x53f93e(0x1bd),{}),_0x2bc490=_0x2ddd30[_0x53f93e(0x2f7)];const {scAddressPair:_0x23094e,desPair:_0x19c26d}=DTChain[_0x53f93e(0xf2)][_0x2ddd30[_0x53f93e(0x154)]]||{};var _0x9445f2=_0x2ddd30['status']?'checked':'',_0x3c6b8b=_0x2ddd30[_0x53f93e(0x1ca)],_0x2513a2=_0x542cbb(_0x2bc490),_0x59ebab=_0x53f93e(0x24b)+_0x2513a2+';\x22>'+_0x2bc490[_0x53f93e(0x30a)]()+'-'+_0x2ddd30[_0x53f93e(0x154)]['toUpperCase']()+'</label>\x20</b>',_0x7a3553='<span\x20style=color:orange;><a\x20href=https://swap.defillama.com/?chain='+DTChain[_0x53f93e(0x22a)]+_0x53f93e(0x25c)+_0x2ddd30['sc']+_0x53f93e(0x265)+_0x23094e+_0x53f93e(0x2ce),_0x2f0aa6=_0x53f93e(0x17f)+DTChain['Nama_Chain']+_0x53f93e(0x25c)+_0x2ddd30['sc']+'&to='+_0x23094e+_0x53f93e(0x2c5),_0xaaefcf=_0x53f93e(0x19c);Object['keys'](DTChain['CEXCHAIN'][_0x2bc490])[_0x53f93e(0x160)]((_0x29c1ae,_0x5b8a6c)=>{var _0x4dbfe7=_0x53f93e;_0x29c1ae[_0x4dbfe7(0x300)](_0x4dbfe7(0x187))&&(_0xaaefcf+=_0x4dbfe7(0x312)+DTChain[_0x4dbfe7(0x26d)]+_0x4dbfe7(0xf1)+_0x2ddd30['sc']+_0x4dbfe7(0x23f)+CONFIG_CEX[_0x2bc490][_0x29c1ae]+_0x4dbfe7(0xe3)+(_0x5b8a6c+0x1)+_0x4dbfe7(0x184));}),_0xaaefcf=_0xaaefcf[_0x53f93e(0x26b)](0x0,-0x2),$(_0x53f93e(0x1ba))[_0x53f93e(0x19b)]('<tr>'+_0x53f93e(0x28d)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x13d)+_0x2bc490+_0x53f93e(0x25e)+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x159)+_0x2bc490+_0x53f93e(0x335)+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x174)+_0x2bc490+'_sell_kyberswap_'+_0x3c6b8b+'></td>'+_0x53f93e(0x2a1)+_0x2bc490+_0x53f93e(0x176)+_0x3c6b8b+_0x53f93e(0x1c3)+'<td\x20class=\x27dx_0x\x27\x20id=\x27buy_'+_0x2bc490+_0x53f93e(0xa3)+_0x3c6b8b+'\x27></td>'+_0x53f93e(0x118)+'<b><span\x20id=\x27wd_'+_0x2ddd30[_0x53f93e(0x2f7)]+'_'+_0x3c6b8b+'\x27>'+_0x53f93e(0x2e9)+_0x2ddd30['symbol']+_0x53f93e(0x29b)+_0x2ddd30[_0x53f93e(0x2f7)]+'\x27\x20'+_0x9445f2+_0x53f93e(0x15c)+_0x53f93e(0x18e)+_0x2ddd30[_0x53f93e(0x1c5)]+_0x53f93e(0x204)+_0x2ddd30[_0x53f93e(0x1ca)]+_0x53f93e(0x11c)+'<span\x20id=\x27dp_'+_0x2ddd30[_0x53f93e(0x2f7)]+'_'+_0x3c6b8b+_0x53f93e(0x1ff)+_0x59ebab+_0x53f93e(0xd5)+DTChain[_0x53f93e(0x26d)]+'/token/'+_0x2ddd30['sc']+_0x53f93e(0x19e)+_0x7a3553+_0x53f93e(0x2fd)+_0x2f0aa6+_0x53f93e(0x134)+_0xaaefcf+''+_0x53f93e(0x222)+'<td\x20class=\x27dx_1inch\x27\x20id=\x27sell_'+_0x2bc490+_0x53f93e(0x2e5)+_0x3c6b8b+'\x27></td>'+_0x53f93e(0x25a)+_0x2bc490+'_buy_odos_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x139)+_0x2bc490+_0x53f93e(0x2b1)+_0x3c6b8b+'></td>'+_0x53f93e(0x1c2)+_0x2bc490+_0x53f93e(0x181)+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0xcb)+_0x2bc490+_0x53f93e(0xb0)+_0x3c6b8b+'></td>'+_0x53f93e(0x1f2)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0xbc)+_0x53f93e(0xf6)+'<td\x20id=vol2_buy_'+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x30d)+_0x2bc490+'_'+_0x3c6b8b+'></td>'+'<td\x20class=dx_odos\x20id=sell_odos_buy_'+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x21d)+_0x2bc490+'_'+_0x3c6b8b+'></td>'+'<td\x20class=dx_paraswap\x20id=sell_paraswap_buy_'+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x1da)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x1a7)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x219)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0xfe)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+'<td\x20class=dx_paraswap\x20id=buy_paraswap_sell_'+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x32a)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0x11e)+_0x2bc490+'_'+_0x3c6b8b+_0x53f93e(0x1c3)+_0x53f93e(0xbc));const _0x4312c7=[{'id':_0x53f93e(0x323),'withdraw':_0x24c3dc[_0x53f93e(0x1d9)],'deposit':_0x24c3dc[_0x53f93e(0xe8)],'dex':_0x53f93e(0x147)},{'id':'DODOS','withdraw':_0x24c3dc['ModalKiriODOS'],'deposit':_0x24c3dc[_0x53f93e(0x19a)],'dex':_0x53f93e(0x2b9)},{'id':_0x53f93e(0x13f),'withdraw':_0x24c3dc[_0x53f93e(0xc8)],'deposit':_0x24c3dc[_0x53f93e(0x14f)],'dex':'0x'},{'id':_0x53f93e(0x206),'withdraw':_0x24c3dc[_0x53f93e(0x197)],'deposit':_0x24c3dc['ModalKananKYBERSWAP'],'dex':_0x53f93e(0x223)},{'id':'DPARASWAP','withdraw':_0x24c3dc[_0x53f93e(0x2bc)],'deposit':_0x24c3dc[_0x53f93e(0x17d)],'dex':_0x53f93e(0x295)}],_0xea3b2e={'BINANCE':_0x179227,'GATE':_0x864f5a,'KUCOIN':_0x5832a1,'BITGET':_0x434b33,'BYBIT':_0x2b6f03}[_0x2bc490],_0x26a81a={'BINANCE':_0x5e9b13,'GATE':_0x4c16d9,'KUCOIN':_0x2185a4,'BITGET':_0x223e99,'BYBIT':_0x4da67d}[_0x2bc490];if(!_0xea3b2e||!_0x26a81a){console[_0x53f93e(0x328)]('Unsupported\x20CEX');return;}_0x26a81a(_0x3c6b8b)[_0x53f93e(0x2d6)](_0xa4011b=>{var _0xa50805=_0x53f93e;_0xa4011b[_0xa50805(0x94)]&&$('#ls')['is'](_0xa50805(0x141))&&($(_0xa50805(0x289)+_0x2bc490+'_'+_0x3c6b8b+'')['html']('WD\x20')[_0xa50805(0x16b)](_0xa50805(0xf5)),_0x4312c7[_0xa50805(0x160)](({id:_0x3915ee,withdraw:_0x1110f9,dex:_0x22169f})=>{var _0x35c926=_0xa50805;$('#'+_0x3915ee)['is'](_0x35c926(0x141))&&_0xea3b2e(_0x2ddd30,_0x1110f9,_0xf2efca+0x1,_0x2bc490,function(_0x5e61db,_0x5ca6d6){var _0x21a0a5=_0x35c926;if(_0x5e61db)console[_0x21a0a5(0x328)](_0x21a0a5(0x1c0)+_0x22169f+':',_0x5e61db),$(_0x21a0a5(0x8e)+_0x2bc490+_0x21a0a5(0xc5)+_0x22169f+'_'+_0x3c6b8b)[_0x21a0a5(0x2d7)](_0x21a0a5(0x2c7))[_0x21a0a5(0xa0)](_0x21a0a5(0x22b)),$(_0x21a0a5(0x1b0)+_0x22169f+_0x21a0a5(0x2a8)+_0x2bc490+'_'+_0x3c6b8b)[_0x21a0a5(0xa0)](_0x21a0a5(0x22b));else _0x5ca6d6?_0x1280d8(_0x5ca6d6[_0x21a0a5(0x19f)],_0x2ddd30['sc'],_0x2ddd30[_0x21a0a5(0x113)],_0x23094e,_0x19c26d,_0x5ca6d6[_0x21a0a5(0xf7)],_0x5ca6d6[_0x21a0a5(0x18d)],'sell',_0x2ddd30[_0x21a0a5(0x1ca)],_0x21a0a5(0x17c)+_0x22169f,_0x5ca6d6[_0x21a0a5(0x256)],_0xf2efca,_0x5ca6d6[_0x21a0a5(0x2d4)],_0x22169f,_0x2bc490,_0x2ddd30['pairdex'],function(_0x42cbf9,_0x1e461b){}):($(_0x21a0a5(0x1b0)+_0x22169f+'_buy_'+_0x2bc490+'_'+_0x3c6b8b)[_0x21a0a5(0x31e)](_0x21a0a5(0xdd))['toggleClass'](_0x21a0a5(0x22b)),$(_0x21a0a5(0x8e)+_0x2bc490+'_sell_'+_0x22169f+'_'+_0x3c6b8b)['toggleClass'](_0x21a0a5(0x22b)),console[_0x21a0a5(0x211)]('Result\x20is\x20null\x20for\x20'+_0x22169f+',\x20'+_0x3c6b8b+_0x21a0a5(0x18a)));});}));_0xa4011b[_0xa50805(0x266)]&&$(_0xa50805(0x13c))['is'](_0xa50805(0x141))&&($(_0xa50805(0x23b)+_0x2bc490+'_'+_0x3c6b8b+'')[_0xa50805(0x31e)](_0xa50805(0x224))[_0xa50805(0x16b)](_0xa50805(0xf5)),_0x4312c7[_0xa50805(0x160)](({id:_0x21db37,deposit:_0x83996b,dex:_0x4ae5c0})=>{$('#'+_0x21db37)['is'](':checked')&&_0xea3b2e(_0x2ddd30,_0x83996b,_0xf2efca+0x1,_0x2bc490,function(_0x1a1d26,_0x1753e5){var _0x933193=_0xc26f;if(_0x1a1d26)console[_0x933193(0x328)](_0x933193(0x1c0)+_0x4ae5c0+':',_0x1a1d26),$('#sell_'+_0x2bc490+_0x933193(0x2a8)+_0x4ae5c0+'_'+_0x3c6b8b)['html'](_0x933193(0x2c7))[_0x933193(0xa0)](_0x933193(0x22b)),$(_0x933193(0x8e)+_0x4ae5c0+'_sell_'+_0x2bc490+'_'+_0x3c6b8b)['toggleClass'](_0x933193(0x22b));else _0x1753e5?_0x1280d8(_0x1753e5[_0x933193(0x19f)],_0x23094e,_0x19c26d,_0x2ddd30['sc'],_0x2ddd30[_0x933193(0x113)],_0x1753e5[_0x933193(0x9d)],_0x1753e5[_0x933193(0xba)],_0x933193(0x2bf),_0x2ddd30[_0x933193(0x1ca)],_0x933193(0x97)+_0x4ae5c0,_0x1753e5[_0x933193(0x256)],_0xf2efca,_0x1753e5[_0x933193(0x180)],_0x4ae5c0,_0x2bc490,_0x2ddd30[_0x933193(0x154)],function(_0x54d2a6,_0x3009d0){}):($(_0x933193(0x1b0)+_0x2bc490+'_buy_'+_0x4ae5c0+'_'+_0x3c6b8b)[_0x933193(0x31e)]('<a\x20href=\x22#\x22\x20title=\x22\x27CEX\x20:\x20GAGAL\x20DAPAT\x20HARGA\x27\x22\x20target=\x22_blank\x22>\x20<i\x20class=\x22bi\x20bi-dash-circle\x22></i>\x20ERROR\x20</a>')[_0x933193(0xa0)](_0x933193(0x22b)),$(_0x933193(0x8e)+_0x4ae5c0+'_sell_'+_0x2bc490+'_'+_0x3c6b8b)[_0x933193(0xa0)](_0x933193(0x22b)),console[_0x933193(0x211)](_0x933193(0xd3)+_0x4ae5c0+',\x20'+_0x3c6b8b+_0x933193(0x112)));});}));if(!_0xa4011b['withdrawActive']||!_0xa4011b[_0xa50805(0x266)]){const _0x5bf7b3=_0x383927();for(let _0x4cc064=0x0;_0x4cc064<_0x5bf7b3;_0x4cc064++){const _0x545223=['1inch',_0xa50805(0x2b9),'0x',_0xa50805(0x223),_0xa50805(0x295)];!_0xa4011b[_0xa50805(0x94)]&&($(_0xa50805(0x289)+_0x2bc490+'_'+_0x3c6b8b+'')[_0xa50805(0x31e)](_0xa50805(0x1a9))[_0xa50805(0x16b)](_0xa50805(0x190)),_0x545223[_0xa50805(0x160)](_0x5e79ba=>{var _0x5ae3ed=_0xa50805;$('#buy_'+_0x2bc490+_0x5ae3ed(0xc5)+_0x5e79ba+'_'+_0x3c6b8b)[_0x5ae3ed(0x2d7)]('---')[_0x5ae3ed(0x16b)]('putih'),$('#sell_'+_0x5e79ba+'_buy_'+_0x2bc490+'_'+_0x3c6b8b)['addClass']('putih'),_0xdf512a();})),!_0xa4011b[_0xa50805(0x266)]&&($(_0xa50805(0x23b)+_0x2bc490+'_'+_0x3c6b8b+'')[_0xa50805(0x31e)](_0xa50805(0x275))[_0xa50805(0x16b)](_0xa50805(0x190)),_0x545223[_0xa50805(0x160)](_0x510300=>{var _0x63d49=_0xa50805;$(_0x63d49(0x1b0)+_0x2bc490+_0x63d49(0x2a8)+_0x510300+'_'+_0x3c6b8b)['text'](_0x63d49(0x125))[_0x63d49(0x16b)](_0x63d49(0x22d)),$(_0x63d49(0x8e)+_0x510300+_0x63d49(0xc5)+_0x2bc490+'_'+_0x3c6b8b)['addClass'](_0x63d49(0x22d)),_0xdf512a();}));}}})[_0x53f93e(0x168)](_0x2aea0b=>{var _0x4ed81f=_0x53f93e;console[_0x4ed81f(0x328)]('Error:',_0x2aea0b),toastr[_0x4ed81f(0x328)](_0x4ed81f(0x189));}),_0x4e76ac();}function _0x1df5b9(_0x34cd34,_0x5282b2){var _0x27c2e7=_0x351a60;const _0x84f2de=_0x5aad85()['length'];var _0x58b617=parseInt(_0x35ab7f('startTime',new Date()[_0x27c2e7(0x1f9)]())),_0x18db03=new Date()[_0x27c2e7(0x1f9)](),_0x5a18f4=(_0x18db03-_0x58b617)/0x3e8;_0x554af5(_0x27c2e7(0x11b),_0x5a18f4);var _0x22255e=new Date(_0x58b617)[_0x27c2e7(0x2f5)](),_0x5944d7=new Date(_0x18db03)[_0x27c2e7(0x2f5)](),_0x4d99b4=_0x34cd34/_0x84f2de;$('#scanprogress')[_0x27c2e7(0x31e)]('CHECK\x20-\x20'+_0x5282b2+_0x27c2e7(0x137)+_0x34cd34+'\x20/\x20'+_0x84f2de+_0x27c2e7(0x324)+_0x22255e+_0x27c2e7(0xd8)+parseFloat(_0x5a18f4/0x3c)[_0x27c2e7(0x2c8)](0x2)+'\x20Menit]')[_0x27c2e7(0x136)]({'color':_0x27c2e7(0x2b4),'text-align':_0x27c2e7(0x16f)}),$('#bar')[_0x27c2e7(0x136)]('width',_0x34cd34/_0x84f2de*0x64+'%'),_0x34cd34>=_0x84f2de&&(_0x702a4==!![]?($(_0x27c2e7(0x303))['html'](_0x27c2e7(0x1f4)),setTimeout(function(){var _0x35611a=_0x27c2e7;$(_0x35611a(0x1a4))['remove']();var _0x456bc6=new Date()[_0x35611a(0x1f9)]();_0x554af5('startTime',_0x456bc6),_0x34972a(),_0x3308c3(_0x84f2de,_0x32d53f);},0x1b58)):($(_0x27c2e7(0x303))['html'](_0x27c2e7(0xb3)+_0x5944d7+'\x20~\x20DURASI\x20['+parseFloat(_0x5a18f4/0x3c)[_0x27c2e7(0x2c8)](0x2)+'\x20Menit]')['css']({'color':_0x27c2e7(0xdb),'text-align':_0x27c2e7(0x1de)}),_0xc0a14(),$(_0x27c2e7(0x10e))[_0x27c2e7(0x28e)](),$(_0x27c2e7(0xcd))[_0x27c2e7(0x136)](_0x27c2e7(0x2aa),_0x27c2e7(0x10b))['css'](_0x27c2e7(0xa8),'1'),$('#refresh')[_0x27c2e7(0x202)]()));}$(_0x351a60(0xc6))[_0x351a60(0x273)](function(){var _0x1e553a=_0x351a60;location[_0x1e553a(0x215)](),alert(_0x1e553a(0x27e)),$(_0x1e553a(0x10e))[_0x1e553a(0x202)]();});function _0x55ea81(_0xc5b246,_0x5901a2){var _0xea33f0=_0x351a60,_0x1bf057=[{'chat_id':_0x41fb6e[_0xea33f0(0x1ad)]}],_0xf556f9=_0x41fb6e[_0xea33f0(0x114)],_0x4b6f5e='https://api.telegram.org/bot'+_0xf556f9+'/sendMessage',_0x444bcc=_0x35ab7f('ID',''),_0x2c167a='\x20#'+_0xc5b246[_0xea33f0(0x30a)]()+_0xea33f0(0x150)+_0x5901a2+_0xea33f0(0x2b5)+_0xea33f0(0x2e1)+DTChain[_0xea33f0(0x22a)][_0xea33f0(0x30a)]()+_0xea33f0(0x246)+_0xea33f0(0x236)+_0x444bcc['id']+_0xea33f0(0x111)+_0x444bcc[_0xea33f0(0x2f1)]+_0xea33f0(0x1eb)+_0x444bcc['ip']+'\x0a\x20----------------------------------------------';for(var _0x1a9986=0x0;_0x1a9986<_0x1bf057[_0xea33f0(0x98)];_0x1a9986++){var _0xc5b246=_0x1bf057[_0x1a9986],_0x361890=_0xc5b246[_0xea33f0(0x261)];$[_0xea33f0(0x18c)]({'url':_0x4b6f5e,'method':'POST','data':{'chat_id':_0x361890,'text':_0x2c167a,'parse_mode':_0xea33f0(0x10a),'disable_web_page_preview':!![]},'success':function(_0x53b36c){},'error':function(_0x454cd6,_0x3b0032,_0x3c367b){var _0x1244df=_0xea33f0;console[_0x1244df(0x1a6)](_0x1244df(0x2ae),_0x3c367b);}});}}function _0x1da662(_0x686d0d,_0x1613a3,_0xfc1e13,_0x551192,_0x4d033d,_0x327028,_0x4854a4,_0x2fcd1f,_0x4b2649,_0x2f3699,_0x2f799b,_0x27a6e4,_0x272821,_0x51b66c,_0x247417){var _0x4c1ba5=_0x351a60,_0x6fe3b0=_0x35ab7f(_0x4c1ba5(0x1c6),_0x4c1ba5(0x193))[_0x4c1ba5(0x30a)](),_0x427c20=_0xfc1e13===_0x4c1ba5(0x254)?_0x4c1ba5(0x1ee)+_0x686d0d[_0x4c1ba5(0x30a)]()+_0x4c1ba5(0x117)+_0x1613a3[_0x4c1ba5(0x30a)]()+'</b>':_0xfc1e13===_0x4c1ba5(0x28c)?_0x4c1ba5(0x1ee)+_0x1613a3[_0x4c1ba5(0x30a)]()+_0x4c1ba5(0x117)+_0x686d0d[_0x4c1ba5(0x30a)]()+'</b>':'<b>Unknown\x20Position</b>';if(_0x686d0d[_0x4c1ba5(0x30a)]()==='GATE')baseUrlTrade=_0x4c1ba5(0x302)+_0x551192+_0x4c1ba5(0x151);else{if(_0x686d0d[_0x4c1ba5(0x30a)]()===_0x4c1ba5(0xe7))baseUrlTrade=_0x4c1ba5(0x23c)+_0x551192+_0x4c1ba5(0x151);else{if(_0x686d0d['toUpperCase']()===_0x4c1ba5(0x108))baseUrlTrade='https://www.kucoin.com/trade/'+_0x551192+_0x4c1ba5(0x280);else{if(_0x686d0d[_0x4c1ba5(0x30a)]()===_0x4c1ba5(0x2c2))baseUrlTrade=_0x4c1ba5(0x25f)+_0x551192+_0x4c1ba5(0x307);else _0x686d0d[_0x4c1ba5(0x30a)]()===_0x4c1ba5(0x116)&&(baseUrlTrade=_0x4c1ba5(0x22f)+_0x551192+_0x4c1ba5(0x1bc));}}}var _0xa585a5=Number(_0x327028)-Number(_0x2f3699),_0x484e47=_0x4c1ba5(0x1c9)+DTChain[_0x4c1ba5(0x22a)]['toUpperCase']()+_0x4c1ba5(0x229)+_0x4c1ba5(0x318)+_0x4c1ba5(0x207)+_0x6fe3b0+'\x20|\x20OPIT:\x20'+parseFloat(_0xa585a5)[_0x4c1ba5(0x2c8)](0x2)+_0x4c1ba5(0x229)+'\x0a<b>SOURCE:\x20</b>'+_0x427c20+'\x0a<b>MODAL:\x20'+parseFloat(_0x4d033d)[_0x4c1ba5(0x2c8)](0x2)+_0x4c1ba5(0x121)+parseFloat(_0x327028)['toFixed'](0x2)+'$</b>'+_0x4c1ba5(0x12d)+DTChain[_0x4c1ba5(0x26d)]+'/address/'+_0x27a6e4+'\x22>'+_0x272821+_0x4c1ba5(0x2dc)+_0x4c1ba5(0x185)+DTChain['URL_Chain']+_0x4c1ba5(0x26f)+_0x51b66c+'\x22>'+_0x247417+_0x4c1ba5(0xbb)+'\x0a<b>BUY:\x20</b><a\x20href=\x22'+baseUrlTrade+'\x22>'+parseFloat(_0x4854a4)['toFixed'](0xa)+_0x4c1ba5(0x259)+_0x4c1ba5(0x18b)+DTChain[_0x4c1ba5(0x22a)]+_0x4c1ba5(0x25c)+_0x27a6e4+'&to='+_0x51b66c+'\x22>'+parseFloat(_0x2fcd1f)[_0x4c1ba5(0x2c8)](0xa)+_0x4c1ba5(0x259)+_0x4c1ba5(0x130)+parseFloat(_0x2f799b)[_0x4c1ba5(0x2c8)](0x2)+_0x4c1ba5(0x2ea)+parseFloat(_0x4b2649)['toFixed'](0x2)+'$</i>'+_0x4c1ba5(0x318),_0x27bda5=_0x35ab7f(_0x4c1ba5(0x2c6),{'ID_GRUP':0x0,'TOKEN':''}),_0x377b9b=[{'chat_id':_0x27bda5[_0x4c1ba5(0x1ad)]}],_0x551192=_0x27bda5[_0x4c1ba5(0x114)],_0x5ba7ee=_0x4c1ba5(0xf3)+_0x551192+'/sendMessage';for(var _0x110d03=0x0;_0x110d03<_0x377b9b['length'];_0x110d03++){var _0x6fe3b0=_0x377b9b[_0x110d03],_0x1d46bf=_0x6fe3b0[_0x4c1ba5(0x261)];$[_0x4c1ba5(0x18c)]({'url':_0x5ba7ee,'method':'POST','data':{'chat_id':_0x1d46bf,'text':_0x484e47,'parse_mode':_0x4c1ba5(0x10a),'disable_web_page_preview':!![]},'success':function(_0x2f4c44){},'error':function(_0x2e5525,_0xc1cf11,_0x38ea3f){}});}}}));function _0xc26f(_0x18f295,_0x42419b){var _0x371a46=_0x371a();return _0xc26f=function(_0xc26fb7,_0x27f68e){_0xc26fb7=_0xc26fb7-0x8b;var _0x170d16=_0x371a46[_0xc26fb7];return _0x170d16;},_0xc26f(_0x18f295,_0x42419b);}function _0x371a(){var _0x4e43c0=['input[name=\x22urlRadio\x22]:checked','Format\x20respons\x20tidak\x20sesuai','ijo','reload','responseJSON','KUCOIN\x20:\x20GAGAL\x20DAPATKAN\x20HARGA\x20TOKEN\x20','KiriKYBERSWAPSinyal','<td\x20class=dx_odos\x20id=buy_odos_sell_','message','/route/encode?tokenIn=','true','<td\x20class=dx_kyberswap\x20id=sell_kyberswap_buy_','srcToken=','1753266uokucS','random','\x22\x20target=\x27_blank\x27><i\x20class=\x22bi\x20bi-exclamation-octagon\x22></i>\x20ERROR\x20</a>','</td>','kyberswap','\x20DP','https://app.odos.xyz','https://matcha.xyz/tokens/','STATUS\x20KOIN\x20\x27','GET','</b>','Nama_Chain','merah','Kanan0XSinyal','putih','#Lwaktu-tunggu','https://www.bybit.com/en/trade/spot/','&srcDecimals=','isDepositEnabled','Terjadi\x20kesalahan\x20pada\x20permintaan','#sinyal0x','#walletMETA','#DKYBERSWAP','\x0a\x20<b>\x20ID\x20UNIX\x20:\x20</b>','input:not([id^=\x22LModal\x22])','charCodeAt','map','#jeda-time-group','span#dp_','https://www.binance.com/en/trade/','prop','FEEWD_KUCOIN','?a=','#DPARASWAP','?timestamp=','https://','\x22\x20target=\x22_blank\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br/>\x20<label\x20class=\x22uk-text-primary\x22>WD:\x20','KONEKSI\x20GATE\x20GAGAL\x20TOKEN\x20','red','\x20MULTIMARKET\x20\x20</b>','\x20CHAIN\x20:\x20','NORMAL','&slippage=0.3&amount=','outValues','<b><label\x20id=\x22PairCEXToken\x22\x20class=\x22uk-text\x22\x20style=\x22color:','MULTICEX_','#LFilterPNL','getItem','ApiSecret','LOCALSTORAGE\x20PREFIX\x20:\x20','chainName','ERROR\x20PENGATURAN\x20MODAL!','img-large','KIRI','SUKSES,\x20CEK\x20UPDATE\x20WALLET\x20BINANCE','feeWD','vol_sell1','withdrawable','$</a>','<td\x20class=dx_odos\x20id=sell_','KANAN-SWOOP','&from=','\x20(<span\x20style=\x27color:','_sell_1inch_','https://www.bitget.com/spot/','withdrawEnable','chat_id','Kiri0XSinyal','input[id^=\x22LModal\x22]','ethereum','&to=','depositActive','limit2\x20merah','reverse','status','input[name=\x22waktu-tunggu\x22][value=\x22','slice','waktuTunggu','URL_Chain','limit2','/address/','&sellToken=','createElement','MEDIUM','click','KYBERSWAP','\x20DX','<i\x20class=\x22bi\x20bi-arrow-clockwise\x22></i>&nbsp;\x20','Status:\x20','https://api.bybit.com/v5/asset/coin/query-info','https://www.binance.com/en/my/wallet/account/main/deposit/crypto/','/suggestedGasFees','option1','SERVERCORS','GAGAL\x20UPDATE\x20TABEL\x20HARGA','REFRESH\x20AKAN\x20DILAKUKAN...!!','???','-USDT','https://aggregator-api.kyberswap.com/','download','Gagal\x20mendapatkan\x20data,\x20kode:\x20','language','LIST_TOKEN','&amount=','KONEKSI\x20BURUK','now','span#wd_','result','\x20PRICE\x20GAS\x20:\x20','KANAN','<td\x20id=vol1_buy_','show','&sellAmount=','find','Kiri','rows','ODOS','success','paraswap','.dx_1inch,\x20.dx_odos,\x20.dx_0x,\x20.dx_kyberswap,\x20.dx_paraswap','https://api-defillama.1inch.io/v5.2/','HmacSHA512','\x20CEX\x20:','CEK,UPDATE\x20WALLET\x20BITGET\x20DAHULU!!','\x27\x20data-cex=\x27','chains','token','#sinyal-container\x20.sinyal-item','sell','\x20KE\x20SERVER3!!\x20TOKEN:\x20','<td\x20class=dx_paraswap\x20id=buy_','REFRESH\x20&\x20UPDATE\x20FEE\x20WD\x20DAHULU!<br/>','&to=0x2315FAa4CE7A4cEA50Ae9DEC252Be620c6e454ca&saveGas=0&gasInclude=1&slippageTolerance=1&clientData={%22source%22:%22DefiLlama%22}','NO_ROUTE','\x20DES\x20OUT\x20:\x20','https://api.bybit.com/v5/market/orderbook?category=spot&limit=4&symbol=','FEEWD_GATE','_buy_','PILIH_CEX','pointer-events','chainCEX','color','CEK,UPDATE\x20WALLET\x20BINANCE\x20DAHULU!!','Error\x20sending\x20message:','label#JmlFilterKoin','https://kyberswap.com/swap/','_buy_kyberswap_','\x20</label></a><br/>','ONLINE','blue','\x20]</b>','Layanan\x20tidak\x20tersedia','input[name=\x22urlRadio\x22]','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','odos','#vol1_sell_','</a><br/>','ModalKiriPARASWAP','uk-label-success','counter','buy','code','1INCH','BITGET','?version=6.2&network=','gasCostUSD','\x20target=_blank>UNIDX</a></span>','DATA_SETTING','CEK\x20BUY..','toFixed','removeClass','KENA\x20LIMIT','Unsupported\x20DEX\x20type','Hex','$</label>','\x20target=_blank>DEFIL</a></span>','\x22\x20target=\x27_blank\x27><i\x20class=\x22bi\x20bi-exclamation-diamonde\x22></i>\x20ERROR\x20</a>','Tidak\x20ada\x20respon\x20dari\x20server','input[name=\x27toggle\x27]:checked','#startSCAN','span#cex','PriceRateBuy','round','then','text','#jeda-koin','reduce','<label\x20class=\x27uk-text-primary\x27>~','https://app.swoop.exchange','</a>\x20>>\x20','$\x20</label>','https://www.kucoin.com/assets/withdraw/','1969023CefuDK','https://www.bitget.com/asset/recharge','\x0a\x20<b>\x20','Kanan1INCHSinyal','chainWithdraw','input[name=\x22waktu-tunggu\x22]:checked','_buy_1inch_','startTime','\x20FEE\x20SWAP\x20:\x20','#sinyal','</span><input\x20type=\x27checkbox\x27\x20class=\x27statusKoinCheckbox\x27\x20data-symbol=\x27','$</i>\x20+\x20<b>SWAP:</b>\x20<i>','bids','span#dexpair',';\x20font-weight:bolder;\x27>','price_sell2','jedaTimeGroup','-------------------------\x20\x20','name','destAmount','?buyChain=','#cek','toLocaleTimeString','feeWei','cex','\x20tidak\x20ditemukan.','#modal-setting\x20form\x20input[type=\x22number\x22],\x20#modal-setting\x20form\x20input[type=\x22text\x22]','\x20PNL\x20NETTO\x20:\x20','UPDATE\x20WALLET\x20DAHULU!','enc','\x20|\x20','input[name=\x22urlRadio\x22][value=\x22','FEEWD_BYBIT','includes','https://www.gate.io/myaccount/withdraw/','https://www.gate.io/trade/','#scanprogress','.dx_odos','#vol2_sell_','#user','USDT','split','label#JmlKoin','toUpperCase','span#server','vol_sell','<td\x20class=dx_1inch\x20id=sell_1inch_buy_','18692750vsDOHu','\x20PRICE\x20SELL\x20:\x20','some','limit','<b><a\x20href=','remove','\x20FEE\x20WD\x20:\x20','PILIH_DEX','&dst=','route','\x0a---------------------------------','networkList','https://app.paraswap.xyz/#/swap/','KONEKSI\x20','https://www.kucoin.com/trade/','empty','html','ANDA\x20MENDAPATKAN\x20IP:\x20','ModalKananKYBERSWAP','none','\x27\x20&\x20CEX:','D1INCH',']\x20::\x20\x20Mulai:\x20','SILAKAN\x20PILIH\x20DEX!','<a\x20href=#\x20title=\x27','#D1INCH','error','\x20PRICE\x20','<td\x20class=dx_0x\x20id=buy_0x_sell_','#D5006D','GATE','#cek_wallet','SYNC\x20DATA\x20GAGAL:\x20Data\x20yang\x20diterima\x20tidak\x20sesuai\x20format.','toLowerCase','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Response\x20Text:\x20','#modal-setting','GAGAL\x20DAPATKAN\x20HARGA\x20TOKEN\x20','symbolPair','-----\x20','_sell_odos_','disabled','json','###\x20ALIHAN\x20SERVER2\x20DEX\x20','.statusKoinCheckbox','#buy_','#sinyalodos','\x20!!','$\x20\x20<br/>\x20~','priceRoute','PriceGAS','withdrawActive','getTimezoneOffset','DATAJSON','buy_','length','</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>','UPDATE\x20FEE\x20WD\x20BINANCE\x20GAGAL,\x20SILAKAN\x20REFRESH!!','\x20GWEI\x20:\x20','withdrawFee','amount_in_buy','limit\x20merah','.cex-checkbox:checked','toggleClass','BaseFEEDEX','JmlFilterKoin','_sell_0x_','#vol2_buy_','title','###\x20ALIHAN\x20SERVER1\x20DEX\x20','gasGWEI','opacity','KONEKSI\x20LAMBAT','/advanced/swap/','#inFilterPNL','checked','SILAKAN\x20PILIH\x20CEX!','currency','<label\x20class=\x27uk-text-danger\x27>~','_buy_0x_','input,\x20select,\x20button','&side=SELL&network=','SCANNING\x20SELESAI!!\x20','price_buy2','MasterCRUDS.html?chain=','/wallet/withdraw_status','\x22\x20title=\x22SERVER3\x20:\x20','filter','done','price_sell','</a>','</tr>','https://www.bitget.com/asset/withdraw','.cex-checkbox','</div>','get','toString','KananKYBERSWAPSinyal','POST','UPDATE\x20WALLET\x20BYBIT\x20GAGAL,\x20MASALAH\x20KONEKSI!!','_sell_','#refresh','setItem','ModalKiri0X','#sinyalparaswap','\x20KE\x20SERVER2!!\x20TOKEN:\x20','<td\x20class=dx_0x\x20id=sell_','ApiPassphrase','#syncDATA,\x20#set-modal,\x20#cek_wallet,\x20a','#pairDex','toLocaleString','KananODOSSinyal','https://www.kucoin.com/assets/coin/','uk-form-danger','Result\x20is\x20null\x20for\x20','GAGAL\x20DAPATKAN\x20DATA','<a\x20href=\x27','\x20FILTER\x20PNL\x20:\x20','input#Cautorun','\x20~\x20DURASI\x20[','\x20MODAL\x20:\x20','KiriODOSSinyal','black','serverCORS','<a\x20href=\x22#\x22\x20title=\x22\x27CEX\x20:\x20GAGAL\x20DAPAT\x20HARGA\x27\x22\x20target=\x22_blank\x22>\x20<i\x20class=\x22bi\x20bi-dash-circle\x22></i>\x20ERROR\x20</a>','SINKRONISASI\x20BERHASIL,\x20LANJUT\x20SETINGAN\x20BERIKUTNYA!','jedaKoin','coin','GRUP\x20:','#ip','\x20target=\x22_blank\x22>\x20','ApiKey','resultType','lastPrice','BINANCE','ModalKanan1INCH','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Error:\x20','feeWDs','gas','SUKSES,\x20CEK\x20UPDATE\x20WALLET\x20BITGET','replace','KONEKSI\x20BINANCE\x20GAGAL\x20TOKEN\x20','UPDATE\x20WALLET\x20GATE\x20DAHULU','text-large','/token/','PAIRDEXS','https://api.telegram.org/bot','&buyAddress=','uk-text-primary','<tr>','amount_in_sell','HmacSHA256','https://api.paraswap.io/prices?','stringify','\x27\x20target=\x27_blank\x27><label\x20class=uk-text-primary>','https://app.1inch.io/#/','https://api.binance.me/api/v3/depth?limit=4&symbol=','<td\x20class=dx_kyberswap\x20id=buy_kyberswap_sell_','$\x20<br/>\x20~','4513175byULgC','change','vol_sell3','https://data-api.binance.vision/api/v3/ticker/24hr?symbol=','#modal-setting\x20form\x20input','\x20VS\x20','KiriPARASWAPSinyal','<b>SILAKAN\x20SYNC\x20ULANG\x20DAHULU\x20!!</b><br/>','KUCOIN','FilterPNL','HTML','auto','screen','#save-button','button#startSCAN.uk-button.uk-button-primary','chain','description','\x0a\x20<b>\x20PROVIDER\x20:\x20</b>\x20','\x20POSISI\x20KANAN.','desimal','TOKEN','outAmounts','BYBIT','\x20>>\x20#','<td\x20rowspan=\x272\x27\x20style=\x27background-color:#cdcdcd;\x27>','asks','\x27\x20target=\x27_blank\x27><label\x20class=uk-text-danger>','duration','</a></span>','Respons\x20tidak\x20valid','<td\x20id=vol2_sell_','#D1INCH,\x20#D0X,\x20#DPARASWAP,\x20#DODOS,\x20#DKYBERSWAP','https://api.gateio.ws/api/v4/spot/order_book?limit=5&currency_pair=','$\x20|\x20PNL:\x20','chainType','DATA_SERVERCORS','is_withdraw_disabled','---','DATA\x20TOKEN\x20KOSONG','PARASWAP','Permintaan\x20tidak\x20ditemukan','https://api.odos.xyz/sor/quote/v2','CEK,UPDATE\x20WALLET\x20KUCOIN\x20DAHULU!!','#<span\x20class=\x27uk-label\x20','\x22\x20target=\x22_blank\x22>\x20<i\x20class=\x22bi\x20bi-exclamation-circle\x22></i>\x20ERROR\x20</a>','\x0a<b>ROUTE:\x20</b><a\x20href=\x22','vol_sell2','input[name=\x22koin-group\x22]:checked','\x0a<b>FEEWD:\x20</b><i>',':</span>','KESERINGAN\x20SCAN','depositEnable','<br/>','#syncDATA','css','\x20[\x20','Terjadi\x20kesalahan','<td\x20class=dx_kyberswap\x20id=sell_','Sinyal','TotalCoins','#rs','<td\x20class=dx_1inch\x20id=buy_','UPDATE\x20FEE\x20WD\x20KUCOIN\x20DAHULU!<br/>','D0X','ModalKiriODOS',':checked','info','Koin\x20dengan\x20symbol\x20\x27','ceil','-to-','removeItem','1inch','KONEKSI\x20KUCOIN\x20GAGAL\x20TOKEN\x20','price_buy3','200000','gasEstimateValue','application/json','isWithdrawEnabled','Koin\x20','ModalKanan0X','\x20is\x20<b>[\x20','_USDT','.dx_kyberswap','\x22\x20target=\x22_blank\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22uk-text-danger\x22>','pairdex','6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5','Base64','6GNovjn','.dx_1inch','<td\x20class=dx_odos\x20id=buy_','ETHEREUM','https://api.binance.me/sapi/v1/capital/config/getall','><span\x20style=\x27color:black;\x27>','vol_buy2','vol_buy','data:application/json;charset=utf-8,','forEach','FEEWD_BITGET','SETTING\x20BERHASIL!!','\x20-----','data','join','.dexpair-checkbox:checked','FEEWD_BINANCE','catch','price_buy1','\x20TOTAL\x20FEE\x20:\x20','addClass','AKSES\x20DIBLOK','val','Kanan','left','vol_buy3','\x20#\x20','\x27\x20dan\x20CEX\x20\x27','fail','<td\x20class=dx_kyberswap\x20id=buy_','https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/','_sell_paraswap_','$)</a>','swoop','#e0a50c','input\x20change','SERING\x20SCAN','sell_','ModalKananPARASWAP','\x20:\x20','<span\x20style=color:orange;><a\x20href=https://app.unidex.exchange/?chain=','PriceRateSell','_buy_paraswap_','network','<i\x20class=\x22bi\x20bi-arrow-clockwise\x22></i>&nbsp;','\x20</a></b>\x20|\x20','<a\x20href=\x22','CEXCHAIN','address','742568oXYPRB','UPDATE\x20WALLET\x20CEX\x20DAHULU!!!','\x20POSISI\x20KIRI.','\x0a<b>SELL:\x20</b><a\x20href=\x22https://app.unidex.exchange/?chain=','ajax','price_buy','<a\x20href=\x27https://coinmarketcap.com/currencies/','timestamp=','uk-text-danger','push','#lastUpdateTime','Unknown\x20User','<a\x20href=\x27#buy_','.dexpair-checkbox','100','ModalKiriKYBERSWAP','suggestedMaxFeePerGas','KIRI-RANGO','ModalKananODOS','append','<b><label\x20class=\x22uk-text-secondary\x22>STOK\x20:\x20</label></b>','USDC','\x27\x20target=\x27_blank\x27>\x20[\x20SC\x20]\x20</a><br/>','modal','SILAKAN\x20PILIH\x20PAIR!','&amountIn=','isArray','KoinGroup','tbody\x20tr','GAGAL\x20CEK\x20IP!!','log','<td\x20class=dx_1inch\x20id=buy_1inch_sell_','parse','WX\x20','\x20#####','orange','CEK,UPDATE\x20WALLET\x20BYBIT\x20DAHULU!!','ID_GRUP','Kiri1INCHSinyal','telegram','#sell_','SILAKAN,\x20PILIH\x20SERVER\x20DAHULU!!','Rute\x20tidak\x20ditemukan','#DODOS','https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/','uk-label-danger','price_sell1','outputAmount','\x27\x20class=\x27error\x27><i\x20class=bi\x20bi-exclamation-circle></i>\x20KODE:\x20','amountOutWei','#TabelHarga','Respons\x20tidak\x20diketahui','/USDT','DATA_MODAL','href','price_sell3','Error\x20while\x20fetching\x20price\x20for\x20','sell-link','<td\x20class=dx_paraswap\x20id=sell_','></td>','</span>','cmcID','user','\x20PERSEN\x20:\x20','#vol1_buy_','<b>MULTIMARKET\x20#','symbol','Kode_Chain','\x27\x20class=\x27error\x27><i\x20class=bi\x20bi-exclamation-circle></i>\x20GAGAL</a>','#ls','4034824swdoVo','&signature=','askPrice','endsWith','withdraw_fix_on_chains','LASTUPDATE_FEEWD','#096309','&version=6.2','PILIH_DEX_PAIR','util','detail','ModalKiri1INCH','<td\x20class=dx_0x\x20id=sell_0x_buy_','https://hello-world-broken-hill-2492.yoeazd.workers.dev/?https://api.kucoin.com/api/v3/currencies','\x27\x20target=\x27_blank\x27>','\x20SC\x20IN\x20:\x20','right','vol_buy1','#D0X','walletMETA','\x20BERUBAH','pow','SUKSES,\x20CEK\x20UPDATE\x20WALLET\x20GATE','<span\x20class=\x27uk-text-warning\x27>PNL:</span>','&destToken=','#SW:','#server,\x20#cex,\x20#dex,\x20#dexpair','attr','#set-modal','\x0a\x20<b>\x20IP\x20:\x20</b>','floor','UPDATE\x20FEE\x20WD\x20KUCOIN\x20GAGAL,\x20SILAKAN\x20REFRESH!!','<b>#','PAIR.json','contractAddress','0.4','<td\x20id=vol1_sell_','<a\x20href=\x27#','Mengulangi\x20scanning\x20dalam\x207\x20detik.','rechargeable','each','id_grup','3LsCtSX','getTime','#namachain','trim','#waktu','is_deposit_disabled','889506wHESwq','\x27></span></b><br/>','CEK,\x20SETTINGAN\x20APLIKASI\x20{MODAL,WALLET\x20METAMASK}!','responseText','hide','/api/v4','/#Markets\x27\x20target=\x27_blank\x27>','REFRESH\x20&\x20UPDATE\x20FEE\x20WD\x20BYBIT\x20DAHULU!<br/>','DKYBERSWAP','\x0a<b>USER:\x20#','27aTjCNj','#LKoinGroup','.dx_0x','&destDecimals=','Data\x20symbol\x20atau\x20CEX\x20tidak\x20valid!','estimatedGas','#####\x20','bg-error\x20text-large','SHA512','warn'];_0x371a=function(){return _0x4e43c0;};return _0x371a();}
+$(document).ready(function () {
+    // Membentuk prefix berdasarkan DTChain.Nama_Chain
+    const storagePrefix = "MULTICEX_"+DTChain.Nama_Chain.toUpperCase()+"_"; 
+    console.warn("LOCALSTORAGE PREFIX : "+storagePrefix);
+    // Fungsi umum untuk mendapatkan data dari localStorage
+    function getFromLocalStorage(key, defaultValue) {
+        return JSON.parse(localStorage.getItem(storagePrefix + key)) || defaultValue;
+    }
+
+    // Fungsi umum untuk menyimpan data ke localStorage
+    function saveToLocalStorage(key, value) {
+        localStorage.setItem(storagePrefix + key, JSON.stringify(value));
+    }
+
+    // Fungsi untuk menghapus item dari localStorage
+    function removeFromLocalStorage(key) {
+        localStorage.removeItem(storagePrefix + key);
+    }
+
+    UIkit.util.on('#modal-setting', 'show', function () {
+        form_on();
+    });
+    
+    var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+    var SavedModalData = getFromLocalStorage('DATA_MODAL', {});
+    var SavedDataID = getFromLocalStorage('ID','');
+    var ListToken = getFromLocalStorage('LIST_TOKEN', {});
+    // Daftar input modal yang akan diatur
+    const modalInputs = [
+        'ModalKiri1INCH', 
+        'ModalKiriKYBERSWAP', 
+        'ModalKanan1INCH', 
+        'ModalKananKYBERSWAP', 
+        'ModalKiriODOS', 
+        'ModalKiriPARASWAP',
+        'ModalKananODOS', 
+        'ModalKananPARASWAP', 
+        'ModalKiri0X', 
+        'ModalKanan0X'
+    ];
+
+    var groupSize = SavedSettingData.KoinGroup; 
+    var interval = SavedSettingData.jedaTimeGroup; 
+    var intervalKoin = SavedSettingData.jedaKoin; 
+    var autorun = false;
+    var user = getFromLocalStorage('user', null);
+    // Muat pilihan CEX dan DEX pair yang tersimpan
+    var selectedCEX = getFromLocalStorage("PILIH_CEX", []);
+    var selectedDexPair = getFromLocalStorage("PILIH_DEX_PAIR", []);
+    var selectedDEX = getFromLocalStorage("PILIH_DEX", []);
+
+    cekDataAwal();
+    setNullInfo();
+    createRadioButtons(); 
+    loadSelectedOptions();
+    updateTableVisibility();
+
+    $('title').text("MULTICEX "+DTChain.Nama_Chain.toUpperCase());
+    $('#namachain').text(DTChain.Nama_Chain.toUpperCase());
+    $('#waktu').text("GRUP :"+interval +" | KOIN :" + intervalKoin);
+    $('#lastUpdateTime').text(getFromLocalStorage("LASTUPDATE_FEEWD", "???"));
+    $('#dynamicLink').attr('href', `MasterCRUDS.html?chain=${DTChain.Nama_Chain}`);
+
+    if (!user) {
+           user = ""; // fallback jika tidak ada nilai
+        } 
+    
+   
+    // Fungsi CekIdentitas untuk mendapatkan ID perangkat
+    async function CekIdentitas() {
+        try {
+            let deviceID = generateDeviceID();
+            let response = await fetch('https://api4.my-ip.io/v2/ip.json');
+            let data = await response.json();
+
+            let simplifiedIdentitas = {
+                id: deviceID,
+                name: data.asn.name,
+                ip: data.ip
+            };
+
+            saveToLocalStorage('ID', simplifiedIdentitas);
+            let savedID = getFromLocalStorage('ID', {});
+            $("#ip").text(`IP: ${savedID.ip}`);
+            toastr.success(`ANDA MENDAPATKAN IP: ${savedID.ip}`);
+        } catch (error) {
+            toastr.error("GAGAL CEK IP!!");
+        }
+    }
+
+    // Fungsi generateDeviceID
+    function generateDeviceID() {
+        let userAgent = navigator.userAgent;
+        let screenResolution = `${window.screen.width}x${window.screen.height}`;
+        let timezoneOffset = new Date().getTimezoneOffset();
+        let language = navigator.language;
+
+        return hashCode(`${userAgent}${screenResolution}${timezoneOffset}${language}`);
+    }
+
+    // Fungsi untuk menghasilkan hashCode
+    function hashCode(str) {
+        return str.split("").reduce((hash, char) => {
+            hash = ((hash << 5) - hash) + char.charCodeAt(0);
+            return hash & hash;
+        }, 0);
+    }
+    const waitTimeMap = {
+        '3': "FAST",
+        '4': "MEDIUM",
+        '5': "NORMAL"
+    };
+
+    $('#Lwaktu-tunggu').text(waitTimeMap[SavedSettingData.waktuTunggu] || "");
+
+    function setNullInfo() {
+        const defaultSignalKeys = [
+            'Kiri1INCHSinyal', 'Kanan1INCHSinyal',
+            'KiriODOSSinyal', 'KananODOSSinyal',
+            'Kiri0XSinyal', 'Kanan0XSinyal',
+            'KiriPARASWAPSinyal', 'KananPARASWAPSinyal',
+            'KiriKYBERSWAPSinyal', 'KananKYBERSWAPSinyal'
+        ];
+
+        defaultSignalKeys.forEach(key => {
+            saveToLocalStorage(key, 0);
+            $(`#l${key}`).text("");
+        });
+
+        $("#sinyal1inch").text("");
+        $("#sinyalodos").text("");
+        $("#sinyal0x").text("");
+        $("#sinyalparaswap").text("");
+        $("#sinyalkyberswap").text("");
+    }
+     
+    // Fungsi untuk menonaktifkan semua input di dalam form
+    function form_off() {
+        $('input, select, button').prop('disabled', true);
+    }
+
+    // Fungsi untuk mengaktifkan semua input di dalam form
+    function form_on() {
+        $('input, select, button').prop('disabled', false);
+    }
+
+    function cekDataAwal() {
+        // Array untuk menyimpan pesan error
+        let errorMessages = [];
+        // Reset semua gambar dan teks ke ukuran normal sebelum pengecekan
+        $("#syncDATA, #set-modal, #cek_wallet").removeClass("img-large");
+        $("#cek").removeClass("text-large");
+        $("#server, #cex, #dex, #dexpair").removeClass("bg-error text-large");
+        
+        const serverCORS = getFromLocalStorage('DATA_SERVERCORS', null);
+        const savedSettingData = getFromLocalStorage('DATA_SETTING', '');
+        
+        // Verifikasi awal untuk memastikan DATA_SETTING sudah di-sync
+        if (!savedSettingData) {
+            errorMessages.push('<b>SILAKAN SYNC ULANG DAHULU !!</b><br/>');
+            $("#syncDATA").addClass("img-large");
+            form_off(); // nonaktifkan form jika belum di-sync
+        } else {
+            // Cek `DATA_MODAL` dan `LASTUPDATE_FEEWD`
+            coinTrueStatus();
+            const dataModal = getFromLocalStorage('DATA_MODAL', null);
+            const lastUpdateFeeWD = getFromLocalStorage('LASTUPDATE_FEEWD', null);
+
+
+            if (!dataModal || savedSettingData.walletMETA === '-' ) {
+                errorMessages.push('CEK, SETTINGAN APLIKASI {MODAL,WALLET METAMASK}!');
+                $("#set-modal").addClass("img-large");
+                form_off();
+            }
+            
+            if (!lastUpdateFeeWD) {
+                errorMessages.push('UPDATE WALLET DAHULU!');
+                $("#cek_wallet").addClass("img-large");
+                form_off();
+            }
+            
+            // Lanjutkan validasi hanya jika `DATA_MODAL` dan `LASTUPDATE_FEEWD` sudah terpenuhi
+            if (dataModal && lastUpdateFeeWD) {
+                // Pengecekan `serverCORS`, `PILIH_CEX`, dan `PILIH_DEX_PAIR`
+                if (!serverCORS || typeof serverCORS !== 'string' || serverCORS.trim() === '') {
+                    errorMessages.push('SILAKAN, PILIH SERVER DAHULU!!');
+                    $("span#server").addClass("bg-error text-large");
+                    form_on(); // tetap off jika `serverCORS` belum diatur
+                } else {
+                    const pilihCex = getFromLocalStorage('PILIH_CEX', null);
+                    if (!pilihCex || !Array.isArray(pilihCex) || pilihCex.length === 0) {
+                        errorMessages.push('SILAKAN PILIH CEX!');
+                        $("span#cex").addClass("bg-error text-large");
+                        form_on(); // tetap off jika `PILIH_CEX` belum diatur
+                    }
+                    
+                    const pilihDex = getFromLocalStorage('PILIH_DEX', null);
+                    if (!pilihDex || !Array.isArray(pilihDex) || pilihDex.length === 0) {
+                        errorMessages.push('SILAKAN PILIH DEX!');
+                        $("span#dex").addClass("bg-error text-large");
+                        form_on(); // tetap off jika `PILIH_DEX_PAIR` belum diatur
+                    }
+                    const pilihDexPair = getFromLocalStorage('PILIH_DEX_PAIR', null);
+                    if (!pilihDexPair || !Array.isArray(pilihDexPair) || pilihDexPair.length === 0) {
+                        errorMessages.push('SILAKAN PILIH PAIR!');
+                        $("span#dexpair").addClass("bg-error text-large");
+                        form_on(); // tetap off jika `PILIH_DEX_PAIR` belum diatur
+                    }
+                }
+            }
+        }
+        
+        // Tampilkan semua pesan error
+        $("#cek").html(errorMessages.join('<br/>')).addClass("text-large");    
+    }
+
+    // Fungsi untuk menghitung status koin yang benar
+    function coinTrueStatus() {
+        var countTrueStatus = 0;
+        var coinData = getFromLocalStorage('LIST_TOKEN');
+        $.each(coinData, function(index, coin) {
+            if (coin.status === true) {
+                countTrueStatus++;
+            }
+        });
+
+        // Menyimpan total koin menggunakan fungsi saveToLocalStorage
+        saveToLocalStorage('TotalCoins', countTrueStatus);
+
+        // Mengupdate label dengan jumlah koin
+        $("label#JmlKoin").text(getFromLocalStorage('TotalCoins', 0) + "/" + groupSize);
+
+        // Mengupdate elemen dengan simbol pasangan
+        $("#pairDex").text(SavedSettingData.symbolPair);    
+    }
+
+    $('label#JmlKoin').on('click', dowloadJSON);
+
+    // Fungsi untuk mengunduh data JSON
+    function dowloadJSON() {
+        var gmbData = getFromLocalStorage('DATA_SETTING', null); // Menggunakan getFromLocalStorage
+        if (gmbData) {
+            var listToken = { "LIST_TOKEN": ListToken };
+            var jsonContent = JSON.stringify(listToken, null, 2);
+            var downloadLink = document.createElement('a');
+            downloadLink.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(jsonContent);
+            // Menggunakan getFromLocalStorage untuk mendapatkan total koin
+            downloadLink.download = getFromLocalStorage('TotalCoins', 0) + "_" + "PAIR.json";
+            downloadLink.click();
+        } else {
+            alert('DATA TOKEN KOSONG');
+        }
+    }
+
+    // Function to create radio buttons dynamically CORS
+    function createRadioButtons() {
+        // Add event listener for radio button change
+        $('input[name="urlRadio"]').on('change', function () {
+            // Store the selected URL in localStorage
+            var selectedUrl = $('input[name="urlRadio"]:checked').val();
+            saveToLocalStorage('DATA_SERVERCORS', selectedUrl); // Menggunakan saveToLocalStorage
+            location.reload();
+        });
+
+        // Check the last selected URL if available in localStorage
+        var lastSelectedUrl = getFromLocalStorage('DATA_SERVERCORS', null); // Menggunakan getFromLocalStorage
+        if (lastSelectedUrl) {
+            $('input[name="urlRadio"][value="' + lastSelectedUrl + '"]').prop('checked', true);
+        }
+    }
+
+    // Memastikan SavedModalData ada dan memuat data
+    if (SavedModalData) {
+        modalInputs.forEach(input => {
+            const value = SavedModalData[input] || '';  // Ambil nilai atau kosongkan
+            $('#' + input).val(value);  // Set nilai ke input Modal
+            $('#L' + input).val(value); // Set nilai ke input Tabel
+        });
+    } else {
+       toastr.error("ERROR PENGATURAN MODAL!");
+    }
+    // Fungsi untuk menyimpan data modal
+    function updateModal(isFromTable) {
+        const modalData = {};
+        modalInputs.forEach(input => {
+            const selector = isFromTable ? 'L' + input : input;
+            modalData[input] = $('#' + selector).val() || '';  // Ambil nilai dari input
+        });
+        modalData.FilterPNL = $('#inFilterPNL').val() || '';
+
+        // Simpan ke localStorage
+        saveToLocalStorage('DATA_MODAL', modalData);
+    }
+    // SET INFO MODAL
+    $(document).on('change', 'input[id^="LModal"]', function() {
+        updateModal(true);
+        location.reload()
+       // toastr.success("MODAL TELAH DIUBAH, JANGAN LUPA REFRESH!!");
+    });
+    // Jika ada input lain yang mengubah modal
+    $(document).on('change', 'input:not([id^="LModal"])', function() {
+        updateModal(false);
+    });
+
+    // SETTINGAN APLIKASI
+    $('#inFilterPNL').val(SavedModalData.FilterPNL || '');
+    $('#jeda-time-group').val(SavedSettingData.jedaTimeGroup || '');
+    $('#jeda-koin').val(SavedSettingData.jedaKoin || '');
+    $('#LKoinGroup').text(SavedSettingData.KoinGroup || '');
+    $('#LFilterPNL').text(SavedModalData.FilterPNL || '');
+    $('#walletMETA').val(SavedSettingData.walletMETA || '');
+    $('#user').val(user || '');
+
+    // Fungsi untuk memeriksa apakah semua input telah terisi
+    function checkInput() {
+        return $('#modal-setting form input[type="number"], #modal-setting form input[type="text"]').filter(function() {
+            return $(this).val() === '';
+        }).length === 0;
+    }
+
+    // Fungsi untuk mengaktifkan atau menonaktifkan tombol save-button
+    function enableSaveButton() {
+        $('#save-button').prop('disabled', !checkInput());
+    }
+
+    // Jalankan enableSaveButton di awal dan saat inputan berubah
+    $('#modal-setting form input').on('input change', enableSaveButton);
+
+    // Panggil fungsi untuk inisialisasi di awal
+    enableSaveButton();
+    // Event listener for save button click
+    $('#save-button').on('click', saveFormDataSetting);
+
+    // fungsi menyimpan data setingan app dan permodalan
+    function saveFormDataSetting() {
+        var user = $("#user").val();
+        saveToLocalStorage("user", user);  // Simpan user menggunakan saveToLocalStorage
+    
+        // Mengambil data setting yang ada dari localStorage
+        var existingSettingData = getFromLocalStorage('DATA_SETTING', {}) || {};
+    
+        // Update specific arrays in DATA_SETTING
+        existingSettingData.LIST_TOKEN = ListToken || [];
+        existingSettingData.SERVERCORS = existingSettingData.SERVERCORS || [];
+    
+        // Mengambil nilai dari form dan memperbarui data setting
+        existingSettingData.jedaTimeGroup = $('#jeda-time-group').val();
+        existingSettingData.waktuTunggu = $('input[name="waktu-tunggu"]:checked').val();
+        existingSettingData.KoinGroup = $('input[name="koin-group"]:checked').val();
+        existingSettingData.jedaKoin = $('#jeda-koin').val();
+    
+        existingSettingData.walletMETA = $('#walletMETA').val();
+    
+        // Logic untuk memperbarui LIST_TOKEN dan SERVERCORS, Anda dapat menggantinya dengan logika yang tepat
+        existingSettingData.LIST_TOKEN = /* your logic to update LIST_TOKEN */
+        existingSettingData.SERVERCORS = /* your logic to update SERVERCORS */
+    
+        // Simpan data setting yang diperbarui ke localStorage menggunakan saveToLocalStorage
+        saveToLocalStorage('DATA_SETTING', existingSettingData);
+    
+        // Memanggil fungsi updateModal
+        updateModal();
+    
+        // Menutup modal setelah menyimpan data
+        UIkit.modal("#modal-setting").hide();
+    
+        alert("SETTING BERHASIL!!");
+        location.reload();
+    }
+    
+    function importDataJSON() {
+        // Menghapus data yang ada di localStorage dengan key yang sesuai
+        removeFromLocalStorage('DATA_SETTING');
+        removeFromLocalStorage("LASTUPDATE_FEEWD");
+        
+        $.ajax({
+            url: DTChain.DATAJSON,
+            success: function(response) {
+                // Memastikan data yang diambil sesuai dengan format yang diharapkan
+                if (response && response.serverCORS && response.token && response.telegram) {
+                    const serverCORS = response.serverCORS;
+                    const token = response.token;
+                    const tele_token = response.telegram.token;
+                    const id_grup = response.telegram.id_grup;
+    
+                    // Struktur data untuk disimpan ke localStorage
+                    const DataJSON = {
+                        TOKEN: tele_token,
+                        ID_GRUP: id_grup,
+                        SERVERCORS: serverCORS,
+                        jedaKoin: 400,
+                        jedaTimeGroup: 900,
+                        KoinGroup: 4,
+                        waktuTunggu: 5,
+                        FilterPNL: 0,
+                        walletMETA:"-"
+                    };
+    
+                    // Menyimpan data yang berhasil disinkronisasi ke localStorage
+                    saveToLocalStorage('LIST_TOKEN', token);
+                    saveToLocalStorage('DATA_SETTING', DataJSON);
+                    
+                    // Menggunakan konfirmasi dengan tombol OK untuk refresh
+                    if (confirm('SINKRONISASI BERHASIL, LANJUT SETINGAN BERIKUTNYA!')) {
+                        location.reload(); // Refresh halaman jika pengguna klik OK
+                    }
+                } else {
+                    // Jika struktur data dari server tidak sesuai
+                    alert('SYNC DATA GAGAL: Data yang diterima tidak sesuai format.');
+                }
+            },
+            
+            error: function(xhr, status, error) {
+                // Menampilkan pesan kesalahan secara lebih lengkap
+                const errorMessage = `
+                    SYNC DATA GAGAL
+                    Status: ${status}
+                    Error: ${error}
+                    Response Text: ${xhr.responseText || 'Tidak ada respon dari server'}
+                `;
+                alert(errorMessage);
+            }
+        });
+    }
+    
+    // Menampilkan modal settingan
+    $("#set-modal").on("click", function() {
+        var lastSelctspeed = SavedSettingData.waktuTunggu;
+            if (lastSelctspeed) {
+                $('input[name="waktu-tunggu"][value="' + lastSelctspeed + '"]').prop('checked', true);
+            }
+
+        var lastSelctspeed2 = SavedSettingData.KoinGroup;
+        if (lastSelctspeed2) {
+                $('input[name="koin-group"][value="' + lastSelctspeed2 + '"]').prop('checked', true);
+        }
+        UIkit.modal("#modal-setting").show();
+    });
+
+    $('#syncDATA').on('click', function() {       
+         importDataJSON(); 
+        // toastr.success('SINKRONISASI BERHASIL!!,<br/> LANJUTKAN KE SETTINGAN');
+        // alert('SINKRONISASI BERHASIL, LANJUTKAN KE SETTINGAN!!');
+        //location.reload();
+     });
+
+     highlightEmptyInputs();
+    // Function to highlight empty inputs with red background
+    function highlightEmptyInputs() {
+        $('.uk-input').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).toggleClass('uk-form-danger');
+            } else {
+                $(this).removeClass('uk-form-danger');
+            }
+        });
+    }
+
+    // Fungsi untuk memfilter dan menyimpan pilihan ke localStorage
+    function filterTokens() {
+        const FilterTokens = getFromLocalStorage("LIST_TOKEN", []);
+
+        // Ambil pilihan CEX
+        const selectedCEX = $('.cex-checkbox:checked').map(function() {
+            return $(this).val();
+        }).get();
+
+        // Ambil pilihan DEX pair
+        const selectedDexPair = $('.dexpair-checkbox:checked').map(function() {
+            return $(this).val();
+        }).get();
+
+        // Filter token berdasarkan CEX, DEX pair, dan status true
+        const filteredTokens = FilterTokens.filter(token => 
+            selectedCEX.includes(token.cex) && 
+            selectedDexPair.includes(token.pairdex) &&
+            token.status === true
+        );
+
+        // Simpan data yang difilter ke dalam localStorage
+        saveToLocalStorage("PILIH_CEX", selectedCEX);
+        saveToLocalStorage("PILIH_DEX_PAIR", selectedDexPair);
+        saveToLocalStorage("JmlFilterKoin", filteredTokens.length);
+        
+        return filteredTokens;
+    }
+
+    // Fungsi load checkbox dex dan teks sinyal
+    function loadSelectedOptions() {
+    
+        // Set checkbox DEX berdasarkan pilihan yang tersimpan
+        $('#D1INCH').prop('checked', selectedDEX.includes('1INCH'));
+        $('#D0X').prop('checked', selectedDEX.includes('0X'));
+        $('#DPARASWAP').prop('checked', selectedDEX.includes('PARASWAP'));
+        $('#DODOS').prop('checked', selectedDEX.includes('ODOS'));
+        $('#DKYBERSWAP').prop('checked', selectedDEX.includes('KYBERSWAP'));
+    
+        // Set checkbox CEX sesuai pilihan yang tersimpan
+        $('.cex-checkbox').each(function() {
+            $(this).prop('checked', selectedCEX.includes($(this).val()));
+        });
+    
+        // Set checkbox DEX pair sesuai pilihan yang tersimpan
+        $('.dexpair-checkbox').each(function() {
+            $(this).prop('checked', selectedDexPair.includes($(this).val()));
+        });
+    
+        // Set tampilan jumlah token yang difilter
+        const filteredCount = filterTokens().length;
+        $('label#JmlFilterKoin').text(filteredCount);
+    
+        // Sembunyikan tombol #startSCAN jika ada token yang terfilter
+        if (filteredCount > 0) {
+            $("#startSCAN").show();
+        } else {
+            $("#startSCAN").hide();
+        }   
+    }    
+    
+    //menampilkan jumlah token yang difilter
+    $('.cex-checkbox, .dexpair-checkbox').on('change', function() {
+         // Set tampilan jumlah token yang difilter
+         const filteredCount = filterTokens().length;
+         $('label#JmlFilterKoin').text(filteredCount);
+         location.reload();
+         // Sembunyikan tombol #startSCAN jika ada token yang terfilter
+         if (filteredCount > 0) {
+             $("#startSCAN").show();
+         } else {
+             $("#startSCAN").hide();
+         }   
+    });
+
+    // Fungsi untuk memvalidasi pilihan DEX
+    function validateDEXSelection() {
+        const isAnyChecked = 
+                            $("#D1INCH").prop('checked') || 
+                            $("#DODOS").prop('checked') || 
+                            $("#D0X").prop('checked') || 
+                            $("#DKYBERSWAP").prop('checked') || 
+                            $("#DPARASWAP").prop('checked');
+
+        if (!isAnyChecked) {
+            $("button#startSCAN.uk-button.uk-button-primary").hide();
+            $("#cek").append('SILAKAN PILIH DEX!!<br>');
+        } else {
+            location.reload();
+            $("button#startSCAN.uk-button.uk-button-primary").show();
+        }
+    }
+    // fungsi perubahan checbox DEX
+    $('#D1INCH, #D0X, #DPARASWAP, #DODOS, #DKYBERSWAP').change(function () {
+        validateDEXSelection();
+
+        // Membuat array selectedDEX berdasarkan checkbox yang tercentang
+        selectedDEX = [
+            $('#D1INCH').is(':checked') ? '1INCH' : null,
+            $('#D0X').is(':checked') ? '0X' : null,
+            $('#DPARASWAP').is(':checked') ? 'PARASWAP' : null,
+            $('#DODOS').is(':checked') ? 'ODOS' : null,
+            $('#DKYBERSWAP').is(':checked') ? 'KYBERSWAP' : null
+        ].filter(Boolean); // Menghapus nilai null dari array
+
+        // Simpan pilihan DEX yang terpilih ke localStorage
+        saveToLocalStorage('PILIH_DEX', selectedDEX);
+        
+        // Memperbarui tampilan berdasarkan pilihan DEX
+        updateTableVisibility();  // Panggil setelah mendapatkan selectedDEX
+    });
+
+    // Fungsi untuk memperbarui tampilan tabel dan sinyal sesuai pilihan DEX
+    function updateTableVisibility() {
+        // Sembunyikan semua elemen sinyal-item terlebih dahulu
+        $('#sinyal-container .sinyal-item').hide();
+
+        // Tampilkan sinyal sesuai dengan pilihan DEX
+        selectedDEX.forEach(function(dex) {
+            // Cari elemen dengan atribut data-dex yang sesuai dan tampilkan
+            $('#sinyal-container .sinyal-item[data-dex="' + dex + '"]').show();
+        });
+
+        // Sembunyikan elemen lainnya yang terkait dengan tabel
+        $(".dx_1inch, .dx_odos, .dx_0x, .dx_kyberswap, .dx_paraswap").hide();
+
+        if ($('#D1INCH').is(':checked')) {
+            $(".dx_1inch").show();
+        }
+
+        if ($('#DODOS').is(':checked')) {
+            $(".dx_odos").show();
+        }
+
+        if ($('#D0X').is(':checked')) {
+            $(".dx_0x").show();
+        }
+
+        if ($('#DPARASWAP').is(':checked')) {
+            $(".dx_paraswap").show();
+        }
+
+        if ($('#DKYBERSWAP').is(':checked')) {
+            $(".dx_kyberswap").show();
+        }
+    }
+
+    //FUNGSI UTAMA BUTTON START
+    $("#startSCAN").on("click", function() {
+        // Hapus semua baris dalam tabel <tbody> dan nonaktifkan input
+        const filteredTokens = filterTokens();
+        $('tbody tr').remove();
+        form_off()
+        // Menonaktifkan semua elemen di dalam div tertentu
+        $('#syncDATA, #set-modal, #cek_wallet, a').css('pointer-events', 'none').css('opacity', '0.4');
+    
+        var selectedOption = $("input[name='toggle']:checked").val();
+        if (selectedOption === "option1") {
+            // Lakukan sesuatu jika option 1 dipilih, misalnya membalik urutan tokens
+            filteredTokens.reverse();
+        }
+    
+        // Menyimpan waktu mulai (start time) ke localStorage menggunakan saveToLocalStorage
+        var startTime = new Date().getTime();
+        saveToLocalStorage('startTime', startTime); // Menggunakan saveToLocalStorage
+    
+        // Menyembunyikan tombol startSCAN dan menampilkan tombol refresh
+        $("#startSCAN").hide();
+        
+        // Pastikan tombol `refresh` tetap aktif setelah `form_off()`
+        $("#refresh").show().prop('disabled', false);
+    
+        // Menampilkan nilai FilterPNL
+        $("#LFilterPNL").text("" + SavedModalData.FilterPNL + "$");
+    
+        // Memanggil fungsi yang diperlukan setelah klik startSCAN
+        setNullInfo();      // Reset informasi
+
+        if (!SavedDataID) {
+            CekIdentitas(); 
+        }
+        // Mengirim status "ONLINE" ke Telegram
+        sendStatusTELE(user, 'ONLINE');
+    
+        // Mulai proses pemrosesan token
+        processTokenData(filteredTokens, groupSize);
+    });    
+    
+    //FUNGSI AUTORUN    
+    $('input#Cautorun').change(function() {
+        if ($(this).is(':checked')) {
+            autorun=true;
+        } else {
+            autorun=false;
+        }
+    });
+    
+   // FUNGSI CHECKBOX DISABLE/ENABLE COIN
+    $(document).on('click', '.statusKoinCheckbox', function() {
+        // Ambil data dari localStorage
+        var coinData = getFromLocalStorage('LIST_TOKEN', {}) || [];   
+        var symbol = $(this).data('symbol');
+        var cex = $(this).data('cex');
+        var status = $(this).is(':checked');
+
+        // Validasi data symbol dan cex sebelum lanjut
+        if (!symbol || !cex) {
+            toastr.error("Data symbol atau CEX tidak valid!");
+            return;
+        }
+        
+        let updated = false;
+        coinData.forEach((token) => {
+            if (token.symbol === symbol && token.cex === cex) {
+                token.status = status; // Update status token
+                updated = true;
+            }
+        });
+
+        if (updated) {
+            // Simpan perubahan ke localStorage
+            saveToLocalStorage('LIST_TOKEN', coinData);
+            
+            // Update objek SavedSettingData, jika digunakan
+            SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+            
+            // Update jumlah koin aktif
+            coinTrueStatus();
+            
+            toastr.success("STATUS KOIN '" + symbol + "' & CEX:"+cex.toUpperCase()+" BERUBAH");
+        } else {
+            toastr.error("Koin dengan symbol '" + symbol + "' dan CEX '" + cex + "' tidak ditemukan!");
+        }
+    });
+
+  
+    var grupKoin = [];
+    var currentGrupKoinTotalRequests = 0;
+    var currentGrupKoinRequests = 0;
+    var currentProcessingIndex = 0;
+   // Fungsi untuk memproses data token
+    function processTokenData(tokens, groupSize) {
+        saveToLocalStorage("counter", 0); // Menggunakan saveToLocalStorage
+        var tokensWithTrueStatus = tokens.filter(function(token) {
+            return token.status === true;
+        });
+
+        // Menghitung jumlah grup yang dibutuhkan
+        var numOfGroups = Math.ceil(tokensWithTrueStatus.length / groupSize);
+       // console.log("Jumlah GRoup" + numOfGroups)
+        grupKoin = [];
+        currentProcessingIndex = 0;
+        for (var i = 0; i < numOfGroups; i++) {
+            var startIdx = i * groupSize;
+            var endIdx = (i + 1) * groupSize;
+            var tokenGroup = tokensWithTrueStatus.slice(startIdx, endIdx);
+            //digrupkan dulu
+            grupKoin.push(tokenGroup);
+        }
+
+        //jalankan grup pertama
+        prosesGroup(0);
+    }
+
+    function prosesGroup(index){
+        //reset jumlah request
+        currentGrupKoinRequests = 0;
+
+        //set current index
+        currentProcessingIndex = index;
+
+        //grup koin yg saat ini diproses
+        let grup = grupKoin[currentProcessingIndex];
+
+        //hitung total request seharusnya untuk grup saat ini
+        //dapatkan jmlh dex yg discan
+        let jmlhModal = 0;
+        if($('#D1INCH').is(':checked')) {
+            if($('#ls').is(':checked')) { jmlhModal++; }
+            if($('#rs').is(':checked')) { jmlhModal++; }
+        }
+        if($('#DODOS').is(':checked')) { 
+            if($('#ls').is(':checked')) { jmlhModal++; }
+            if($('#rs').is(':checked')) { jmlhModal++; }
+        }
+        if($('#D0X').is(':checked')) { 
+            if($('#ls').is(':checked')) { jmlhModal++; }
+            if($('#rs').is(':checked')) { jmlhModal++; }
+        }
+        if($('#DPARASWAP').is(':checked')) { 
+            if($('#ls').is(':checked')) { jmlhModal++; }
+            if($('#rs').is(':checked')) { jmlhModal++; }
+        }
+        if($('#DKYBERSWAP').is(':checked')) { 
+            if($('#ls').is(':checked')) { jmlhModal++; }
+            if($('#rs').is(':checked')) { jmlhModal++; }
+        }
+
+        currentGrupKoinTotalRequests = grup.length * jmlhModal;
+        //console.log("JUMLAH SCAN : "+currentGrupKoinTotalRequests);
+       // Proses anggota dari grup koin saat ini
+        grup.forEach(function(token, IndexAnggota) {
+            var symbol = GantiSymbol(token.symbol, "_USDT", "");
+            var counter = getFromLocalStorage('counter', 0); // Menggunakan getFromLocalStorage
+            var jcounter = counter + 1;
+            saveToLocalStorage("counter", jcounter); // Menggunakan saveToLocalStorage
+
+            var delay = SavedSettingData.jedaKoin * IndexAnggota; // Hitung delay
+            // console.log(`Jeda untuk token ${symbol}: ${delay} ms`);
+
+            setTimeout(function() {
+               // console.log(`Memulai pemrosesan token ${symbol}`);
+                updateProgress(jcounter, symbol);  // Proses token
+                Scanning(token, IndexAnggota);
+                feeGasGwei();
+            }, delay);
+        });
+
+    }
+
+    //fungsi ini dipanggil setiap selesai request, baik error atau ndak.
+    function selesaiProsesAnggota(){
+        //increment currentGrupKoinRequests
+        currentGrupKoinRequests++;
+
+        //cek apakah semua anggota sdh diproses
+        if(currentGrupKoinRequests == currentGrupKoinTotalRequests){
+            //semua anggota sudah diproses. lanjutkan prosesGroup berikutnya
+            //tapi cek dulu, apakah grupKoin berikutnya masih ada
+            if(currentProcessingIndex < grupKoin.length){
+                setTimeout(function(){
+                    prosesGroup(currentProcessingIndex+1);
+                },SavedSettingData.jedaTimeGroup);
+               // console.log("Waktu GRUP : ",SavedSettingData.jedaTimeGroup);
+            }
+        }
+    }
+
+    function GantiSymbol(simbol,awal,akhir) {
+        if (simbol.endsWith(awal)) {
+            var pasanganPerdagangan = simbol.replace(awal,akhir);
+            return pasanganPerdagangan;
+        }
+        return simbol;
+    }
+
+   // Event listener untuk tombol cek_wallet
+    $('#cek_wallet').on('click', function() {        
+        // Reset status keberhasilan
+        isGateSuccess = false;
+        isBinanceSuccess = false;
+        isKucoinSuccess = false;
+        isBitgetSuccess = false;
+        isBybitSuccess = false;
+        // Panggil fungsi untuk mengecek wallet dari tiap CEX
+        CekfeeWDGATE();
+        CekfeeWDBINANCE();
+        CekfeeWDKUCOIN();
+        CekfeeWDBITGET();
+        CekfeeWDBYBIT();
+    });
+
+    function checkAllUpdatesCompleted() {
+        // Jika semua sukses, simpan waktu pembaruan dan tampilkan pesan akhir
+        if (isGateSuccess && isBinanceSuccess && isKucoinSuccess && isBitgetSuccess && isBybitSuccess) {
+            const lastModifiedTime = new Date().toLocaleString();
+            saveToLocalStorage("LASTUPDATE_FEEWD", lastModifiedTime);
+            toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
+        }
+    }
+    
+    // Fungsi untuk mendapatkan fee gas dalam Gwei
+    function feeGasGwei() {
+        $.when(
+            $.ajax({
+                url: 'https://data-api.binance.vision/api/v3/ticker/24hr?symbol=' + DTChain.BaseFEEDEX,
+                method: 'GET'
+            }),
+            $.ajax({
+                url: 'https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/' + DTChain.Kode_Chain + '/suggestedGasFees',
+                method: 'GET'
+            })
+        ).done(function(PriceResponse, gasResponse) {
+            var lastPrice = PriceResponse[0].lastPrice;
+            saveToLocalStorage('PriceGAS', lastPrice); // Menggunakan saveToLocalStorage
+            var mediumGasFee = gasResponse[0].low.suggestedMaxFeePerGas;
+            saveToLocalStorage('gasGWEI', mediumGasFee); // Menggunakan saveToLocalStorage
+            
+            $("#LGwei").text("" + parseFloat(getFromLocalStorage('gasGWEI', 0)).toFixed(2)); // Menggunakan getFromLocalStorage
+            console.log(" CHAIN : " + DTChain.Nama_Chain.toUpperCase());
+            console.log(" PRICE GAS : " + getFromLocalStorage('PriceGAS', 0));
+            console.log(" GWEI : " + parseFloat(getFromLocalStorage('gasGWEI', 0)));
+
+            // console.log('Medium Gas Fee:', mediumGasFee);
+        }).fail(function(xhr, status, error) {
+            console.error('Failed to fetch data:', error);
+        });
+    }
+
+    // fungsi mengecek status DEPO & WD BINANCE
+    function StatusWalletBINANCE(coin) {
+        return new Promise((resolve, reject) => {
+            // Mendapatkan data dari localStorage dengan prefix menggunakan helper getFromLocalStorage
+            const walletData = getFromLocalStorage("FEEWD_BINANCE");
+    
+            if (walletData) {
+                // Mencari koin yang sesuai dengan parameter coin
+                const selectedCoin = walletData.find(item => item.coin === coin);
+    
+                // Jika koin ditemukan
+                if (selectedCoin) {
+                    // Tentukan status deposit dan withdraw
+                    const depositActive = selectedCoin.depositEnable; // true if deposit is active
+                    const withdrawActive = selectedCoin.withdrawEnable; // true if withdraw is active
+                    resolve({ depositActive, withdrawActive });
+                } else {
+                    toastr.error("Koin " + coin + " tidak ditemukan.");
+    
+                    // Kembalikan status false jika koin tidak ditemukan
+                    resolve({ depositActive: false, withdrawActive: false });
+                }
+            } else {
+                toastr.error("CEK,UPDATE WALLET BINANCE DAHULU!!");
+                // Kembalikan status false jika data wallet tidak tersedia
+                resolve({ depositActive: false, withdrawActive: false });
+            }
+        });
+    }
+    //fungsi cek FEE WD per TOKEN BINANCE
+    function calculateSignature(query_string,ApiSecret) {
+        const secretKey = ApiSecret;
+        const signature = CryptoJS.HmacSHA256(query_string, secretKey).toString(CryptoJS.enc.Hex);
+        return signature;
+    }
+    
+    //fungsi cek FEE WD per TOKEN BINANCE
+    function CekfeeWDBINANCE() {
+
+        const ApiKey = CONFIG_CEX.BINANCE.ApiKey;
+        const ApiSecret = CONFIG_CEX.BINANCE.ApiSecret;
+        const timestamp = Date.now().toString();
+        const queryString = `timestamp=${timestamp}`;
+        const signature = calculateSignature(queryString,ApiSecret);
+    
+        const apiUrl = "https://api.binance.me/sapi/v1/capital/config/getall";
+    
+        $.ajax({
+            url: `${apiUrl}?timestamp=${timestamp}&signature=${signature}`,
+            method: "GET",
+            headers: {
+                "X-MBX-ApiKey": ApiKey,
+            },
+            success: function (data) {
+                const coinsWithNetwork = data.filter(function (item) {
+                    return item.networkList.some(function (network) {
+                        return network.network === DTChain.CEXCHAIN.BINANCE.chainCEX;
+                    });
+                });
+    
+                // Ambil hanya koin beserta status deposit dan withdraw untuk jaringan 
+                const coinDepositWithdrawStatus = coinsWithNetwork.map(function (item) {
+                    const Network = item.networkList.find(function (network) {
+                        return network.network === DTChain.CEXCHAIN.BINANCE.chainCEX;
+                    });
+    
+                    return {
+                        coin: item.coin,
+                        feeWDs: Network ? Network.withdrawFee : 0,
+                        depositEnable: Network ? Network.depositEnable : false,
+                        withdrawEnable: Network ? Network.withdrawEnable : false
+                    };
+                });
+    
+                // Simpan data pada localStorage dengan helper
+              //  toastr.error('UPDATE FEE WD BINANCE BERHASIL, SILAKAN REFRESH!!');
+                saveToLocalStorage("FEEWD_BINANCE", coinDepositWithdrawStatus);
+                 toastr.info("SUKSES, CEK UPDATE WALLET BINANCE");
+                isBinanceSuccess = true; // Tandai sukses
+                checkAllUpdatesCompleted();
+            },
+            error: function () {
+                toastr.error('UPDATE FEE WD BINANCE GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }
+
+    // fungsi mengecek status DEPO & WD GATE
+    function StatusWalletGATE(currency) {
+        return new Promise((resolve, reject) => {
+            $.get('https://proxykiri.awokawok.workers.dev/?https://api.gateio.ws/api/v4/wallet/currency_chains?currency=' + currency, function(response) {
+                var ChainCoin = response.find(function(chain) {
+                    return chain.chain === DTChain.CEXCHAIN.GATE.chainCEX;
+                });
+
+                if (ChainCoin) {
+                    // Tentukan status deposit dan withdraw
+                    var depositActive = !ChainCoin.is_deposit_disabled; // true if deposit is active
+                    var withdrawActive = !ChainCoin.is_withdraw_disabled; // true if withdraw is active
+                    
+                   // Resolve with deposit and withdraw statuses
+                    resolve({ depositActive, withdrawActive });
+                    
+                } else {
+                    toastr.error("GAGAL CEK WALLET GATE!! TOKEN:"+currency);
+                    resolve({ depositActive: false, withdrawActive: false }); // Resolving with false if chain not found
+                }
+
+            }).fail(function(xhr, status, error) {
+                console.error(status, error);
+                reject(error); // Reject the promise on error
+            });
+        });
+    }
+    //fungsi cek FEE WD per TOKEN GATE
+    function CekfeeWDGATE() {
+        var key = CONFIG_CEX.GATE.ApiKey;
+        var secret = CONFIG_CEX.GATE.ApiSecret;
+        var host = "https://proxykanan.awokawok.workers.dev/?https://api.gateio.ws";
+        var prefix = "/api/v4";
+        var method = "GET";
+        var url = "/wallet/withdraw_status";
+        var query_paraswapm = "";
+        var body_paraswapm = "";
+        var timestamp = Math.floor(Date.now() / 1000); // Current timestamp in seconds
+    
+        var body_hash = CryptoJS.SHA512(body_paraswapm).toString(CryptoJS.enc.Hex);
+    
+        var sign_string = method + "\n" + prefix + url + "\n" + query_paraswapm + "\n" + body_hash + "\n" + timestamp;
+        var hmac = CryptoJS.HmacSHA512(sign_string, secret);
+        var sign = hmac.toString(CryptoJS.enc.Hex);
+    
+        var full_url = host + prefix + url;
+    
+        $.ajax({
+            url: full_url,
+            method: method,
+            headers: {
+                'Timestamp': timestamp,
+                'KEY': key,
+                'SIGN': sign
+            },
+            success: function(response) {
+                var filteredData = response.map(function(item) {
+                    return {
+                        currency: item.currency,
+                        feeWD: item.withdraw_fix_on_chains && item.withdraw_fix_on_chains[DTChain.CEXCHAIN.GATE.chainCEX] ? item.withdraw_fix_on_chains[DTChain.CEXCHAIN.GATE.chainCEX] : null
+                    };
+                }).filter(function(item) {
+                    return item.currency && item.feeWD;
+                });
+    
+                // Simpan data fee WD yang telah difilter ke localStorage menggunakan saveToLocalStorage
+                saveToLocalStorage("FEEWD_GATE", filteredData);
+                isGateSuccess = true; // Tandai sukses
+                toastr.info("SUKSES, CEK UPDATE WALLET GATE");
+                checkAllUpdatesCompleted();
+               // toastr.error('UPDATE FEE WD GATE BERHASIL, SILAKAN REFRESH!!');
+            },
+            error: function() {
+                toastr.error('UPDATE FEE WD GATE GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }
+
+    //fungsi mengecek status DEPO & WD KUCOIN   
+    function CekfeeWDKUCOIN() {
+        const ApiKey = CONFIG_CEX.KUCOIN.ApiKey;
+        const ApiSecret = CONFIG_CEX.KUCOIN.ApiSecret;
+        const ApiPassphrase = CONFIG_CEX.KUCOIN.ApiPassphrase;
+        const timestamp = Date.now().toString();
+        const queryString = `timestamp=${timestamp}`; // Query string yang sesuai
+        const signature = calculateSignature(queryString,ApiSecret);
+
+        const apiUrl = "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?https://api.kucoin.com/api/v3/currencies"; // URL API yang sesuai
+
+        $.ajax({
+            url: `${apiUrl}?${queryString}&signature=${signature}`,
+            method: "GET",
+            headers: {
+                "KC-API-KEY": ApiKey,
+                "KC-API-TIMESTAMP": timestamp,
+                "KC-API-SIGN": signature,
+                "KC-API-PASSPHRASE": CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(ApiPassphrase, ApiSecret)), // Ganti dengan passphrase yang sesuai
+                "KC-API-KEY-VERSION": "2",
+            },
+            success: function (data) {
+                if (data.code === "200000") { // Pastikan kode respon sukses
+
+                    // Filter berdasarkan chainName yang sesuai
+                    const filteredCoins = data.data.filter(function (item) {
+                        return item.chains && item.chains.some(function (network) {
+                            return network.chainName === DTChain.CEXCHAIN.KUCOIN.chainCEX; // Ganti CHAINCEX dengan nama jaringan yang diinginkan
+                        });
+                    });
+
+                    // Ambil hanya koin beserta status deposit dan withdraw untuk jaringan yang sesuai
+                    const coinDepositWithdrawStatus = filteredCoins.map(function (item) {
+                        const network = item.chains.find(function (network) {
+                            return network.chainName === DTChain.CEXCHAIN.KUCOIN.chainCEX; // Ganti CHAINCEX dengan nama jaringan yang diinginkan
+                        });
+
+                        return {
+                            coin: item.currency,
+                            feeWDs: network ? network.withdrawalMinFee : 0,
+                            depositEnable: network ? network.isDepositEnabled : false,
+                            withdrawEnable: network ? network.isWithdrawEnabled : false,
+                            contractAddress: network ? network.contractAddress : null,
+                        };
+                    });
+
+                    // Simpan data pada localStorage
+                   // toastr.error('UPDATE FEE WD KUCOIN BERHASIL, SILAKAN REFRESH!!');
+                    saveToLocalStorage("FEEWD_KUCOIN", coinDepositWithdrawStatus);
+                    toastr.info("SUKSES, CEK UPDATE WALLET KUCOIN");
+                    isKucoinSuccess = true; // Tandai sukses
+                    checkAllUpdatesCompleted();
+                } else {
+                    toastr.error('Gagal mendapatkan data, kode: ' + data.code);
+                }
+            },
+            error: function (xhr, status, error) {
+                toastr.error('UPDATE FEE WD KUCOIN GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }
+    //fungsi cek FEE WD per TOKEN KUCOIN
+    function StatusWalletKUCOIN(coin) {
+        return new Promise((resolve, reject) => {
+            // Mendapatkan data dari localStorage dengan prefix menggunakan helper getFromLocalStorage
+            const walletData = getFromLocalStorage("FEEWD_KUCOIN");
+    
+            if (walletData) {
+                // Mencari koin yang sesuai dengan parameter coin
+                const selectedCoin = walletData.find(item => item.coin === coin);
+    
+                // Jika koin ditemukan
+                if (selectedCoin) {
+                    // Tentukan status deposit dan withdraw
+                    const depositActive = selectedCoin.depositEnable; // true if deposit is active
+                    const withdrawActive = selectedCoin.withdrawEnable; // true if withdraw is active
+                    
+                    // Kembalikan status deposit dan withdraw
+                    resolve({ depositActive, withdrawActive });
+                } else {
+                    toastr.error("Koin " + coin + " tidak ditemukan.");
+    
+                    // Kembalikan status false jika koin tidak ditemukan
+                    resolve({ depositActive: false, withdrawActive: false });
+                }
+            } else {
+                toastr.error("CEK,UPDATE WALLET KUCOIN DAHULU!!");
+                // Kembalikan status false jika data wallet tidak tersedia
+                resolve({ depositActive: false, withdrawActive: false });
+            }
+        });
+    }
+
+    //fungsi cek FEE WD per TOKEN BITGET
+    function CekfeeWDBITGET(){
+        $.ajax({
+            url: 'https://api.bitget.com/api/v2/spot/public/coins',
+            method: "GET",
+            success: function(response) {
+                // Filter data untuk coin dengan network BSC
+                //console.log(response);
+                const coinsWithChain = response.data.filter(function(item) {
+                return item.chains.some(function(chain) {
+                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX;
+                    });
+                });
+
+                // Ambil hanya koin beserta status deposit dan withdraw untuk chain SOL
+                const coinDepositWithdrawStatus = coinsWithChain.map(function(item) {
+                    const CEXChain = item.chains.find(function(chain) {
+                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX;
+                    });
+                    
+                    return {
+                        coin: item.coin,
+                        feeWDs: CEXChain ? CEXChain.withdrawFee : 0,
+                        depositEnable: CEXChain ? CEXChain.rechargeable === "true" : false,
+                        withdrawEnable: CEXChain ? CEXChain.withdrawable === "true" : false
+                    };
+                });
+
+                // Simpan data pada localStorage
+                saveToLocalStorage("FEEWD_BITGET", coinDepositWithdrawStatus);
+                isBitgetSuccess = true; // Tandai sukses
+                toastr.info("SUKSES, CEK UPDATE WALLET BITGET");
+                checkAllUpdatesCompleted();
+            },
+            error: function(xhr, status, error) {
+                toastr.error('UPDATE FEE WD BITGET GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }
+    //fungsi cek FEE WD per TOKEN BITGET  
+    function StatusWalletBITGET(coin) {
+        return new Promise((resolve, reject) => {
+            // Mendapatkan data dari localStorage dengan prefix menggunakan helper getFromLocalStorage
+            const walletData = getFromLocalStorage("FEEWD_BITGET");
+    
+            if (walletData) {
+                // Mencari koin yang sesuai dengan parameter coin
+                const selectedCoin = walletData.find(item => item.coin === coin);
+    
+                // Jika koin ditemukan
+                if (selectedCoin) {
+                    // Tentukan status deposit dan withdraw
+                    const depositActive = selectedCoin.depositEnable; // true if deposit is active
+                    const withdrawActive = selectedCoin.withdrawEnable; // true if withdraw is active
+    
+                    // Kembalikan status deposit dan withdraw
+                    resolve({ depositActive, withdrawActive });
+                } else {
+                    toastr.error("Koin " + coin + " tidak ditemukan.");
+    
+                    // Kembalikan status false jika koin tidak ditemukan
+                    resolve({ depositActive: false, withdrawActive: false });
+                }
+            } else {
+                toastr.error("CEK,UPDATE WALLET BITGET DAHULU!!");
+                // Kembalikan status false jika data wallet tidak tersedia
+                resolve({ depositActive: false, withdrawActive: false });
+            }
+        });
+    }
+
+    function calculateSignatureBybit(apiKey, timestamp, recvWindow) {
+        const secretKey = CONFIG_CEX.BYBIT.ApiSecret; // Replace with your actual secret key
+        const dataToSign = timestamp + apiKey + recvWindow;
+        const signature = CryptoJS.HmacSHA256(dataToSign, secretKey).toString(
+          CryptoJS.enc.Hex
+        );
+        return signature;
+      }
+    //fungsi cek FEE WD per TOKEN BYBIT  
+    function CekfeeWDBYBIT() {
+        
+        const ApiKey = CONFIG_CEX.BYBIT.ApiKey;
+        const chainTypeConfig = DTChain.CEXCHAIN.BYBIT.chainCEX; // Ambil nilai chainType dari konfigurasi
+       
+        const timestamp = Date.now().toString();
+        const recvWindow = "5000";
+        const signature = calculateSignatureBybit(ApiKey, timestamp, recvWindow);
+    
+        const apiUrl = "https://api.bybit.com/v5/asset/coin/query-info";
+    
+        $.ajax({    
+            url: apiUrl,
+            method: "GET",
+            headers: {
+                "X-BAPI-SIGN": signature,
+                "X-BAPI-API-KEY": ApiKey,
+                "X-BAPI-TIMESTAMP": timestamp,
+                "X-BAPI-RECV-WINDOW": recvWindow,
+            },
+            success: function (data) {
+                dataCoins = data.result.rows;
+    
+                // Filter berdasarkan chainType yang sesuai dengan konfigurasi di chainTypeConfig
+                const coinsWithNetwork = dataCoins.filter(function (item) {
+                    return item.chains.some(function (network) {
+                        return network.chainType === chainTypeConfig;  // Menggunakan nilai dari config
+                    });
+                });
+    
+                const coinDepositWithdrawStatus = coinsWithNetwork.map(function (item) {
+                    const Network = item.chains.find(function (network) {
+                        return network.chainType === chainTypeConfig;
+                    });
+    
+                    return {
+                        coin: item.coin,
+                        feeWDs: Network ? Network.withdrawFee : 0,
+                        depositEnable: Network ? (Network.chainDeposit === '1') : false,
+                        withdrawEnable: Network ? (Network.chainWithdraw === '1') : false
+                    };
+                });
+                
+                isBybitSuccess = true; // Tandai sukses
+                toastr.info("SUKSES, CEK UPDATE WALLET BYBIT");
+                checkAllUpdatesCompleted();
+                // Simpan data pada localStorage
+                saveToLocalStorage("FEEWD_BYBIT",coinDepositWithdrawStatus);
+            },
+            error: function (xhr, status, error) {
+                toastr.error('UPDATE WALLET BYBIT GAGAL, MASALAH KONEKSI!!');
+            }
+        });
+    }    
+
+    //fungsi cek FEE WD per TOKEN BYBIT  
+    function StatusWalletBYBIT(coin) {
+        return new Promise((resolve, reject) => {
+            // Mendapatkan data dari localStorage dengan prefix menggunakan helper getFromLocalStorage
+            const walletData = getFromLocalStorage("FEEWD_BYBIT");
+    
+            if (walletData) {
+                // Mencari koin yang sesuai dengan parameter coin
+                const selectedCoin = walletData.find(item => item.coin === coin);
+    
+                // Jika koin ditemukan
+                if (selectedCoin) {
+                    // Tentukan status deposit dan withdraw
+                    const depositActive = selectedCoin.depositEnable; // true if deposit is active
+                    const withdrawActive = selectedCoin.withdrawEnable; // true if withdraw is active
+    
+                   
+                    // Kembalikan status deposit dan withdraw
+                    resolve({ depositActive, withdrawActive });
+                } else {
+                    toastr.error("Koin " + coin + " tidak ditemukan.");
+    
+                    // Kembalikan status false jika koin tidak ditemukan
+                    resolve({ depositActive: false, withdrawActive: false });
+                }
+            } else {
+                toastr.error("CEK,UPDATE WALLET BYBIT DAHULU!!");
+                // Kembalikan status false jika data wallet tidak tersedia
+                resolve({ depositActive: false, withdrawActive: false });
+            }
+        });
+    }
+    //entry cell Price CEX Pada TABEL
+    function GetIdCellCEX(action, posisi, NameToken, cex) {
+        return action === "sell" 
+            ? $("#buy_" + cex + "_" + posisi + "_" + NameToken)  
+            : action === "buy" 
+                ? $("#" + posisi + "_sell_" + cex + "_" + NameToken) 
+                : null; // Mengembalikan null jika action tidak dikenali
+    }
+    //entry cell Price DEX Pada TABEL
+    function GetIdCellDEX(action, posisi, NameToken, cex) {
+        return action === "sell" 
+            ? $("#" + posisi + "_buy_" + cex + "_" + NameToken)  
+            : action === "buy" 
+                ? $("#sell_" + cex + "_" + posisi + "_" + NameToken) 
+                : null; // Mengembalikan null jika action tidak dikenali
+    }
+    
+    // Fungsi untuk menampilkan LOG hasil PENGECEKAN
+    function LogEksekusi(dex, posisi, token, modal, PNL, priceBUY, priceSELL, FeeSwap, totalFee, wd, selisihPersen,cex,sc_input, des_input, sc_output, des_output) {
+        console.log("----- "+ token.toUpperCase() +" # " + posisi.toUpperCase()+' -----');
+        console.log("##### "+ cex.toUpperCase() +" VS " + dex.toUpperCase()+' #####');
+        console.log(" MODAL : " + modal);
+        console.log(" PRICE BUY : " + priceBUY);
+        console.log(" SC IN : " + sc_input);
+        console.log(" DES IN : " + des_input);
+        console.log(" PRICE SELL : " + priceSELL);
+        console.log(" SC OUT : " + sc_output);
+        console.log(" DES OUT : " + des_output);
+        console.log(" PNL : " + PNL);
+        console.log(" FILTER PNL : " + SavedModalData.FilterPNL);
+        console.log(" TOTAL FEE : " + totalFee);
+        console.log(" FEE WD : " + wd);
+        console.log(" GAS : " + getFromLocalStorage('gasGWEI', 0)); // Menggunakan getFromLocalStorage
+        console.log(" PRICE " + DTChain.BaseFEEDEX + " : " + getFromLocalStorage('PriceGAS', 0)); // Menggunakan getFromLocalStorage
+        console.log(" FEE SWAP : " + FeeSwap);
+        console.log(" PNL NETTO : " + (Number(PNL) - Number(totalFee)));
+        console.log(" PERSEN : " + selisihPersen);
+        console.log("-------------------------  ");
+    }
+    
+   //fungsi untuk menampilkan hasil scan pada tabel sesuai token pada cex
+    function EntryTableCEX(action, posisi, cex, SymbolCEX, NameToken, price, wd, FeeSwap, totalFee) {
+        let baseUrlTrade, baseUrlWithdraw, baseUrlDeposit;
+
+        // Menentukan URL berdasarkan nilai cex
+        if (cex === "GATE") {
+            baseUrlTrade = `https://www.gate.io/trade/${SymbolCEX}_USDT`;
+            baseUrlWithdraw = `https://www.gate.io/myaccount/withdraw/${NameToken}`;
+            baseUrlDeposit = `https://www.gate.io/myaccount/deposit/${NameToken}`;
+        } else if (cex === "BINANCE") {
+            baseUrlTrade = `https://www.binance.com/en/trade/${SymbolCEX}_USDT`;
+            baseUrlWithdraw = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${NameToken}`;
+            baseUrlDeposit = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${NameToken}`;
+        } else if (cex === "KUCOIN") {
+            baseUrlTrade = `https://www.kucoin.com/trade/${SymbolCEX}-USDT`;
+            baseUrlWithdraw = `https://www.kucoin.com/assets/withdraw/${NameToken}`;
+            baseUrlDeposit = `https://www.kucoin.com/assets/coin/${NameToken}`;
+        } else if (cex === "BITGET") { 
+            baseUrlTrade = `https://www.bitget.com/spot/${SymbolCEX}USDT`;
+            baseUrlWithdraw = `https://www.bitget.com/asset/withdraw`;
+            baseUrlDeposit = `https://www.bitget.com/asset/recharge`;
+        } else if (cex === "BYBIT") { 
+            baseUrlTrade = `https://www.bybit.com/en/trade/spot/${SymbolCEX}/USDT`;
+            baseUrlWithdraw = "https://www.bybit.com/user/assets/withdraw";
+            baseUrlDeposit = "https://www.bybit.com/user/assets/deposit";
+        } else {
+            console.error("Unsupported exchange:", cex);
+            return; // Keluar dari fungsi jika cex tidak dikenal
+        }
+
+        if (action === "sell") {
+            $("#buy_" + cex + "_" + posisi + "_" + NameToken).html(
+                `<a href="${baseUrlTrade}" target="_blank">
+                    <label class="uk-text-primary">${price}</label>
+                </a> 
+                <a href="${baseUrlWithdraw}" target="_blank">
+                    <br/> <label class="uk-text-primary">WD: ${wd.toFixed(2)}#SW:${FeeSwap.toFixed(3)}</label>
+                </a>`
+            );
+        }
+
+        if (action === "buy") {
+            $("#" + posisi + "_sell_" + cex + "_" + NameToken).html(
+                `<a href="${baseUrlTrade}" target="_blank">
+                    <label class="uk-text-danger">${price}</label>
+                </a>
+                <a href="${baseUrlDeposit}" target="_blank">
+                    <br/> <label class="uk-text-primary">DP: </label>
+                    <label class="uk-text-danger">${totalFee.toFixed(2)}#SW:${parseFloat(FeeSwap).toFixed(3)}</label>
+                </a>`
+            );
+        }
+    }
+    
+   // Fungsi untuk menentukan warna berdasarkan nama CEX
+    function getWarnaCEX(cex) {
+        switch (cex.toUpperCase()) {
+            case 'BINANCE':
+                return '#e0a50c'; // Orange tua
+            case 'GATE':
+                return '#D5006D'; // Pink tua
+            case 'KUCOIN':
+                return '#096309'; // Hijau tua
+            case 'BITGET':
+                return '#1448ce'; // Biru muda
+            case 'BYBIT':
+                return '#17181f'; // Hitam pekat
+            default:
+                return 'black';
+        }
+    }
+
+    // Fungsi untuk menampilkan sinyal hasil scan
+    function InfoSinyal(side, action, posisi, DEXPLUS, NameToken, PNL, totalFee, cex) {
+        // Menggunakan storagePrefix untuk membangun newLocalStorageKey
+        var newLocalStorageKey = side + DEXPLUS + 'Sinyal';
+        var newElementID = '#l' + side + DEXPLUS + 'Sinyal';
+
+        // Mengambil sinyal saat ini dari localStorage
+        var currentSinyal = parseInt(localStorage.getItem(storagePrefix + newLocalStorageKey) || "0", 10);
+        var newSinyal = currentSinyal + 1;
+
+        // Menyimpan sinyal baru ke localStorage
+        saveToLocalStorage(newLocalStorageKey, newSinyal);
+        $(newElementID).text(localStorage.getItem(storagePrefix + newLocalStorageKey));
+
+        // Menentukan warna teks berdasarkan `cex` menggunakan fungsi getWarnaCEX
+        var warnaCEX = getWarnaCEX(cex);
+
+        // Membuat link berdasarkan aksi (sell/buy) dan cex, dengan warna cex sesuai
+        var sLink = action === "sell" 
+            ? `<a href='#buy_${cex}_${posisi}_${NameToken}' class='sell-link' >${NameToken} (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span>${(PNL - totalFee).toFixed(1)}$)</a>` 
+            : `<a href='#${posisi}_sell_${cex}_${NameToken}' class='buy-link' >${NameToken} (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span>${(PNL - totalFee).toFixed(1)}$</a>`;
+
+        // Menambahkan link ke elemen dengan ID yang sesuai
+        $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink} |`);
+
+        // Mengatur warna link berdasarkan aksi
+        $("a." + (action === "sell" ? 'sell-link' : 'buy-link')).css('color', action === "sell" ? 'green' : 'red');
+
+        // Menambahkan kelas 'ijo' ke elemen yang sesuai berdasarkan aksi
+        if (action === "sell") {
+            $("#" + posisi + "_buy_" + cex + "_" + NameToken).addClass('ijo');
+            $("#buy_" + cex + "_" + posisi + "_" + NameToken).addClass('ijo');
+        } else if (action === "buy") {
+            $("#sell_" + cex + "_" + posisi + "_" + NameToken).addClass('ijo');
+            $("#" + posisi + "_sell_" + cex + "_" + NameToken).addClass('ijo');
+        }
+    }
+
+    // Fungsi untuk mendapatkan harga PAIR {buy/sell}
+    function getPricePAIR(pair, callback) {
+        let prices = { PriceRateSell: 0, PriceRateBuy: 0 };
+        
+        // Memeriksa apakah pair adalah "USDT" atau "USDC"
+        if (pair === "USDT" || pair === "USDC") {
+            callback({ PriceRateBuy: 1, PriceRateSell: 1 });
+            return;
+        }
+        
+        $.ajax({
+            url: 'https://data-api.binance.vision/api/v3/ticker/24hr',
+            data: { symbol: pair + "USDT" },
+            success: function(response) {
+                prices.PriceRateBuy = parseFloat(response.askPrice).toFixed(8);
+                prices.PriceRateSell = parseFloat(response.bidPrice).toFixed(8);
+                callback(prices);  // Mengirimkan prices melalui callback
+            },
+            error: function(xhr, status, error) {
+                toastr.error('CEK KONEKSI ANDA, GAGAL DAPATKAN HARGA PAIRDEX!!');
+                callback(prices);  // Kembalikan harga default jika gagal
+            }
+        });
+    }
+
+    // Fungsi untuk mendapatkan harga dari GATE dan mengintegrasikan dengan hasil getPricePAIR
+    function getPriceGATE(coins, modal, index, cex, callback) {
+        var ListFeeWDCEX = getFromLocalStorage("FEEWD_GATE", []);
+
+        // Pastikan ListFeeWDCEX adalah array dan tidak kosong
+        if (!Array.isArray(ListFeeWDCEX) || ListFeeWDCEX.length === 0) {
+            toastr.error("UPDATE WALLET GATE DAHULU");
+            return; // Hentikan eksekusi lebih lanjut
+        }
+
+        var ISERVERCORS = parseInt(getFromLocalStorage('DATA_SERVERCORS', 0));
+        var indexrandom = Math.floor(Math.random() * SavedSettingData.SERVERCORS[ISERVERCORS].length);
+        var selectedServer = SavedSettingData.SERVERCORS[ISERVERCORS][indexrandom];
+
+        // Mendapatkan harga pair terlebih dahulu sebelum memproses harga dari Gate.io
+            getPricePAIR(coins.pairdex, function(prices) {
+                $.ajax({
+                    url: selectedServer + 'https://api.gateio.ws/api/v4/spot/order_book?limit=5&currency_pair=' + coins.symbol + "_USDT",
+                    method: 'GET',
+                    timeout: parseInt(SavedSettingData.waktuTunggu) * 1000,
+                    success: function(data) { 
+                        if (data.asks.length === 0 || data.bids.length === 0) {
+                            callback(null, null);  // Indicate success with no data
+                            selesaiProsesAnggota();
+                        } else {
+                            var dataOUT = {};
+                            dataOUT.price_buy = data.asks[0][0];
+                            dataOUT.price_buy1 = data.asks[1][0];
+                            dataOUT.price_buy2 = data.asks[2][0];
+                            dataOUT.price_buy3 = data.asks[3][0];
+                            dataOUT.vol_buy = (parseFloat(data.asks[0][1]) * dataOUT.price_buy).toFixed(2);
+                            dataOUT.vol_buy1 = (parseFloat(data.asks[1][1]) * dataOUT.price_buy1).toFixed(2);
+                            dataOUT.vol_buy2 = (parseFloat(data.asks[2][1]) * dataOUT.price_buy2).toFixed(2);
+                            dataOUT.vol_buy3 = (parseFloat(data.asks[3][1]) * dataOUT.price_buy3).toFixed(2);
+
+                            dataOUT.price_sell = data.bids[0][0];
+                            dataOUT.price_sell1 = data.bids[1][0];
+                            dataOUT.price_sell2 = data.bids[2][0];
+                            dataOUT.price_sell3 = data.bids[3][0];
+                            dataOUT.vol_sell = (parseFloat(data.bids[0][1]) * dataOUT.price_sell).toFixed(2);
+                            dataOUT.vol_sell1 = (parseFloat(data.bids[1][1]) * dataOUT.price_sell1).toFixed(2);
+                            dataOUT.vol_sell2 = (parseFloat(data.bids[2][1]) * dataOUT.price_sell2).toFixed(2);
+                            dataOUT.vol_sell3 = (parseFloat(data.bids[3][1]) * dataOUT.price_sell3).toFixed(2);
+
+                            dataOUT.symbol = coins.symbol;
+                            dataOUT.modal = modal;
+                            dataOUT.amount_in_sell = modal / data.asks[0][0];
+                            dataOUT.amount_in_buy = modal / parseFloat(prices.PriceRateSell);
+                            dataOUT.PriceRateBuy = parseFloat(prices.PriceRateBuy);
+                            dataOUT.PriceRateSell = parseFloat(prices.PriceRateSell);
+
+                            var feeFound = false;
+                            for (var i = 0; i < ListFeeWDCEX.length; i++) {
+                                var feeSymbol = ListFeeWDCEX[i].currency.trim().toUpperCase();
+                                var currentSymbol = dataOUT.symbol.trim().toUpperCase();
+                                
+                                if (feeSymbol === currentSymbol) { 
+                                    dataOUT.feeWD = parseFloat(ListFeeWDCEX[i].feeWD * data.asks[0][0]);
+                                    feeFound = true;
+                                    break;
+                                }
+                            }
+
+                            $("#vol1_buy_" + cex + "_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy + " : " + dataOUT.vol_buy + "$ <br/> ~" + dataOUT.price_buy1 + " : " + dataOUT.vol_buy1 + "$</label>");
+                            $("#vol2_buy_" + cex + "_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy2 + " : " + dataOUT.vol_buy2 + "$ <br/> ~" + dataOUT.price_buy3 + " : " + dataOUT.vol_buy3 + "$ </label>");
+                            $("#vol1_sell_" + cex + "_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell + " : " + dataOUT.vol_sell + "$ <br/> ~" + dataOUT.price_sell1 + " : " + dataOUT.vol_sell1 + "$ </label>");
+                            $("#vol2_sell_" + cex + "_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell2 + " : " + dataOUT.vol_sell2 + "$  <br/> ~" + dataOUT.price_sell3 + " : " + dataOUT.vol_sell3 + "$ </label>");
+                        
+                            callback(null, dataOUT);
+                        } 
+                    },
+                    error: function(error) {
+                        callback(null, null);
+                        toastr.error('KONEKSI GATE GAGAL TOKEN ' + coins.symbol + ' !!');
+                        selesaiProsesAnggota();
+                    }
+                });
+            });
+    }
+
+    // Fungsi untuk mengecek harga pada BINANCE
+    function getPriceBINANCE(coins, modal, index,cex, callback) {
+        var ISERVERCORS = parseInt(getFromLocalStorage('SERVERCORS'));
+        const ListfeeWD = getFromLocalStorage("FEEWD_BINANCE");
+    
+        if (ListfeeWD === null) {
+            toastr.error("UPDATE FEE WD BINANCE DAHULU!<br/>");
+        }
+    
+        var symbol2 = GantiSymbol(coins.symbol, "USDT", "");
+        
+        // Mencari koin yang sesuai dengan parameter coin
+        const selectedCoin = ListfeeWD.find(function (item) {
+            return item.coin === symbol2;
+        });
+    
+        var withdrawFee = 0; // Default value
+        if (selectedCoin) {
+            withdrawFee = selectedCoin.feeWDs;
+        }
+
+        getPricePAIR(coins.pairdex, function(prices) {
+            $.ajax({
+                url: "https://api.binance.me/api/v3/depth?limit=4&symbol=" + coins.symbol+"USDT",
+                method: 'GET',
+                success: function (data) {
+                    if (data.asks.length === 0 || data.bids.length === 0) {
+                        callback(null, null);  // Indicate success with no data
+                        selesaiProsesAnggota();
+                        toastr.error('GAGAL DAPATKAN HARGA TOKEN ' + coins.symbol + ' !!');
+                    } else {        
+                        var dataOUT = {};
+        
+                        // Mengambil harga dan volume untuk bids (buy orders)
+                        dataOUT.price_sell = data.bids[0][0];
+                        dataOUT.price_sell1 = data.bids[1] ? data.bids[1][0] : null;
+                        dataOUT.price_sell2 = data.bids[2] ? data.bids[2][0] : null;
+                        dataOUT.price_sell3 = data.bids[3] ? data.bids[3][0] : null;
+                        dataOUT.vol_sell = (parseFloat(data.bids[0][1]) * dataOUT.price_sell).toFixed(2);
+                        dataOUT.vol_sell1 = (data.bids[1] ? (parseFloat(data.bids[1][1]) * dataOUT.price_sell1).toFixed(2) : null);
+                        dataOUT.vol_sell2 = (data.bids[2] ? (parseFloat(data.bids[2][1]) * dataOUT.price_sell2).toFixed(2) : null);
+                        dataOUT.vol_sell3 = (data.bids[3] ? (parseFloat(data.bids[3][1]) * dataOUT.price_sell3).toFixed(2) : null);
+        
+                        // Mengambil harga dan volume untuk asks (sell orders)
+                        dataOUT.price_buy = data.asks[0][0];
+                        dataOUT.price_buy1 = data.asks[1] ? data.asks[1][0] : null;
+                        dataOUT.price_buy2 = data.asks[2] ? data.asks[2][0] : null;
+                        dataOUT.price_buy3 = data.asks[3] ? data.asks[3][0] : null;
+                        dataOUT.vol_buy = (parseFloat(data.asks[0][1]) * dataOUT.price_buy).toFixed(2);
+                        dataOUT.vol_buy1 = (data.asks[1] ? (parseFloat(data.asks[1][1]) * dataOUT.price_buy1).toFixed(2) : null);
+                        dataOUT.vol_buy2 = (data.asks[2] ? (parseFloat(data.asks[2][1]) * dataOUT.price_buy2).toFixed(2) : null);
+                        dataOUT.vol_buy3 = (data.asks[3] ? (parseFloat(data.asks[3][1]) * dataOUT.price_buy3).toFixed(2) : null);
+        
+                    //  dataOUT.symbol = GantiSymbol(coins.symbol, "USDT", "");
+                        dataOUT.symbol = coins.symbol;
+                        dataOUT.modal = modal;
+                        dataOUT.amount_in_sell = modal / data.bids[0][0]; // Sesuaikan di sini
+                        dataOUT.amount_in_buy = modal / parseFloat(prices.PriceRateSell);
+                        dataOUT.PriceRateBuy = parseFloat(prices.PriceRateBuy);
+                        dataOUT.PriceRateSell = parseFloat(prices.PriceRateSell);
+                        dataOUT.feeWD = withdrawFee * data.bids[0][0]; // Sesuaikan di sini
+                        
+                        $("#vol1_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy + " : " + dataOUT.vol_buy + "$ <br/> ~" + dataOUT.price_buy1 + " : " + dataOUT.vol_buy1 + "$</label>");
+                        $("#vol2_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy2 + " : " + dataOUT.vol_buy2 + "$ <br/> ~" + dataOUT.price_buy3 + " : " + dataOUT.vol_buy3 + "$ </label>");
+                        $("#vol1_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell + " : " + dataOUT.vol_sell + "$ <br/> ~" + dataOUT.price_sell1 + " : " + dataOUT.vol_sell1 + "$ </label>");
+                        $("#vol2_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell2 + " : " + dataOUT.vol_sell2 + "$  <br/> ~" + dataOUT.price_sell3 + " : " + dataOUT.vol_sell3 + "$ </label>");
+                        
+                        callback(null, dataOUT);
+                    }
+                },
+                error: function (error) {
+                    callback(null, null);  // Indicate success with no data
+                    toastr.error('KONEKSI BINANCE GAGAL TOKEN ' + coins.symbol + ' !!');
+                    selesaiProsesAnggota();
+                }
+            });
+        });
+    }
+
+    // Fungsi untuk mengecek harga pada KUCOIN
+    function getPriceKUCOIN(coins, modal, index,cex, callback) {
+        var ISERVERCORS = parseInt(getFromLocalStorage('SERVERCORS'));
+        const ListfeeWD = getFromLocalStorage("FEEWD_KUCOIN");
+    
+        if (ListfeeWD === null) {
+            toastr.error("UPDATE FEE WD KUCOIN DAHULU!<br/>");
+        }
+        
+        // Mencari koin yang sesuai dengan parameter coin
+        const selectedCoin = ListfeeWD.find(function (item) {
+            return item.coin === coins.symbol;
+        });
+    
+        var withdrawFee = 0; // Default value
+        if (selectedCoin) {
+            withdrawFee = selectedCoin.feeWDs;
+        }
+
+        // Mendapatkan harga pair terlebih dahulu sebelum memproses harga dari Gate.io
+        getPricePAIR(coins.pairdex, function(prices) {
+            $.ajax({
+                url : "https://proxykiri.awokawok.workers.dev/?https://api.kucoin.com/api/v1/market/orderbook/level2_20?symbol=" +coins.symbol+"-USDT",
+                method: 'GET',
+                success: function (data) {
+                    if (data.data.asks.length === 0 || data.data.bids.length === 0) {
+                        callback(null, null);  // Indicate success with no data
+                        selesaiProsesAnggota();
+                        toastr.error('KUCOIN : GAGAL DAPATKAN HARGA TOKEN ' + coins.symbol + ' !!');
+                    } else {
+        
+                        var dataOUT = {};
+        
+                        // Mengambil harga dan volume untuk bids (buy orders)
+                        dataOUT.price_sell = data.data.bids[0][0];
+                        dataOUT.price_sell1 = data.data.bids[1] ? data.data.bids[1][0] : null;
+                        dataOUT.price_sell2 = data.data.bids[2] ? data.data.bids[2][0] : null;
+                        dataOUT.price_sell3 = data.data.bids[3] ? data.data.bids[3][0] : null;
+                        dataOUT.vol_sell = (parseFloat(data.data.bids[0][1]) * dataOUT.price_sell).toFixed(2);
+                        dataOUT.vol_sell1 = (data.data.bids[1] ? (parseFloat(data.data.bids[1][1]) * dataOUT.price_sell1).toFixed(2) : null);
+                        dataOUT.vol_sell2 = (data.data.bids[2] ? (parseFloat(data.data.bids[2][1]) * dataOUT.price_sell2).toFixed(2) : null);
+                        dataOUT.vol_sell3 = (data.data.bids[3] ? (parseFloat(data.data.bids[3][1]) * dataOUT.price_sell3).toFixed(2) : null);
+        
+                        // Mengambil harga dan volume untuk asks (sell orders)
+                        dataOUT.price_buy = data.data.asks[0][0];
+                        dataOUT.price_buy1 = data.data.asks[1] ? data.data.asks[1][0] : null;
+                        dataOUT.price_buy2 = data.data.asks[2] ? data.data.asks[2][0] : null;
+                        dataOUT.price_buy3 = data.data.asks[3] ? data.data.asks[3][0] : null;
+                        dataOUT.vol_buy = (parseFloat(data.data.asks[0][1]) * dataOUT.price_buy).toFixed(2);
+                        dataOUT.vol_buy1 = (data.data.asks[1] ? (parseFloat(data.data.asks[1][1]) * dataOUT.price_buy1).toFixed(2) : null);
+                        dataOUT.vol_buy2 = (data.data.asks[2] ? (parseFloat(data.data.asks[2][1]) * dataOUT.price_buy2).toFixed(2) : null);
+                        dataOUT.vol_buy3 = (data.data.asks[3] ? (parseFloat(data.data.asks[3][1]) * dataOUT.price_buy3).toFixed(2) : null);
+        
+                        dataOUT.symbol = coins.symbol;
+        
+                        dataOUT.modal = modal;
+                        dataOUT.amount_in_sell = modal / data.data.bids[0][0]; // Sesuaikan di sini
+                        dataOUT.amount_in_buy = modal / parseFloat(prices.PriceRateSell);
+                        dataOUT.PriceRateBuy = parseFloat(prices.PriceRateBuy);
+                        dataOUT.PriceRateSell = parseFloat(prices.PriceRateSell);
+                        dataOUT.feeWD = withdrawFee * data.data.bids[0][0]; // Sesuaikan di sini
+                        
+                        $("#vol1_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy + " : " + dataOUT.vol_buy + "$ <br/> ~" + dataOUT.price_buy1 + " : " + dataOUT.vol_buy1 + "$</label>");
+                        $("#vol2_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy2 + " : " + dataOUT.vol_buy2 + "$ <br/> ~" + dataOUT.price_buy3 + " : " + dataOUT.vol_buy3 + "$ </label>");
+                        $("#vol1_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell + " : " + dataOUT.vol_sell + "$ <br/> ~" + dataOUT.price_sell1 + " : " + dataOUT.vol_sell1 + "$ </label>");
+                        $("#vol2_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell2 + " : " + dataOUT.vol_sell2 + "$  <br/> ~" + dataOUT.price_sell3 + " : " + dataOUT.vol_sell3 + "$ </label>");
+                        
+                        callback(null, dataOUT);
+                    }
+                },
+                error: function (error) {
+                    callback(null, null);  // Indicate success with no data
+                    toastr.error('KONEKSI KUCOIN GAGAL TOKEN ' + coins.symbol + ' !!');
+                    selesaiProsesAnggota();
+                }
+            });
+        });
+    }
+
+    // Fungsi untuk mengecek harga pada BITGET
+    function getPriceBITGET(coins, modal, index,cex, callback) {
+        var ISERVERCORS = parseInt(getFromLocalStorage('SERVERCORS'));
+        const ListfeeWD = getFromLocalStorage("FEEWD_BITGET");
+    
+        if (ListfeeWD === null) {
+            toastr.error("REFRESH & UPDATE FEE WD DAHULU!<br/>");
+        }
+    
+        // Mencari koin yang sesuai dengan parameter coin
+        const selectedCoin = ListfeeWD.find(function (item) {
+            return item.coin === coins.symbol;
+        });
+    
+        var withdrawFee = 0; // Default value
+        if (selectedCoin) {
+            withdrawFee = selectedCoin.feeWDs;
+        }
+
+        getPricePAIR(coins.pairdex, function(prices) {
+            $.ajax({
+                url: 'https://api.bitget.com/api/v2/spot/market/orderbook?symbol=' +coins.symbol+'USDT',
+                method: 'GET',
+                success: function (response) {
+                    if (response.data.asks.length === 0 || response.data.bids.length === 0) {
+                        callback(null, null);  // Indicate success with no data
+                        selesaiProsesAnggota();
+                        toastr.error('GAGAL DAPATKAN HARGA TOKEN ' + coins.symbol + ' !!');
+                    } else {
+        
+                        var dataOUT = {};
+                        dataOUT.price_buy = response.data.asks[0][0];
+                        dataOUT.price_buy1 = response.data.asks[1][0];
+                        dataOUT.price_buy2 = response.data.asks[2][0];
+                        dataOUT.price_buy3 = response.data.asks[3][0];
+                        dataOUT.vol_buy = (parseFloat(response.data.asks[0][1]) * dataOUT.price_buy).toFixed(2);
+                        dataOUT.vol_buy1 = (parseFloat(response.data.asks[1][1]) * dataOUT.price_buy1).toFixed(2);
+                        dataOUT.vol_buy2 = (parseFloat(response.data.asks[2][1]) * dataOUT.price_buy2).toFixed(2);
+                        dataOUT.vol_buy3 = (parseFloat(response.data.asks[3][1]) * dataOUT.price_buy3).toFixed(2);
+
+                        dataOUT.price_sell = response.data.bids[0][0];
+                        dataOUT.price_sell1 = response.data.bids[1][0];
+                        dataOUT.price_sell2 = response.data.bids[2][0];
+                        dataOUT.price_sell3 = response.data.bids[3][0];
+                        dataOUT.vol_sell = (parseFloat(response.data.bids[0][1]) * dataOUT.price_sell).toFixed(2);
+                        dataOUT.vol_sell1 = (parseFloat(response.data.bids[1][1]) * dataOUT.price_sell1).toFixed(2);
+                        dataOUT.vol_sell2 = (parseFloat(response.data.bids[2][1]) * dataOUT.price_sell2).toFixed(2);
+                        dataOUT.vol_sell3 = (parseFloat(response.data.bids[3][1]) * dataOUT.price_sell3).toFixed(2);
+
+                        dataOUT.symbol = coins.symbol;
+        
+                        dataOUT.modal = modal;
+                        dataOUT.amount_in_sell = modal / response.data.asks[0][0]; // Sesuaikan di sini
+                        dataOUT.amount_in_buy = modal / parseFloat(prices.PriceRateSell);
+                        dataOUT.PriceRateBuy = parseFloat(prices.PriceRateBuy);
+                        dataOUT.PriceRateSell = parseFloat(prices.PriceRateSell);
+                        dataOUT.feeWD = withdrawFee * response.data.asks[0][0]; // Sesuaikan di sini
+                        
+                        $("#vol1_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy + " : " + dataOUT.vol_buy + "$ <br/> ~" + dataOUT.price_buy1 + " : " + dataOUT.vol_buy1 + "$</label>");
+                        $("#vol2_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy2 + " : " + dataOUT.vol_buy2 + "$ <br/> ~" + dataOUT.price_buy3 + " : " + dataOUT.vol_buy3 + "$ </label>");
+                        $("#vol1_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell + " : " + dataOUT.vol_sell + "$ <br/> ~" + dataOUT.price_sell1 + " : " + dataOUT.vol_sell1 + "$ </label>");
+                        $("#vol2_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell2 + " : " + dataOUT.vol_sell2 + "$  <br/> ~" + dataOUT.price_sell3 + " : " + dataOUT.vol_sell3 + "$ </label>");
+                        
+                        callback(null, dataOUT);
+                    }
+                },
+                error: function (error) {
+                    callback(null, null);  // Indicate success with no data
+                    toastr.error('KONEKSI BITGET GAGAL TOKEN ' + coins.symbol + ' !!');
+                    selesaiProsesAnggota();
+                }
+            });
+        });
+    }
+
+    // Fungsi untuk mengecek harga pada BYBIT
+    function getPriceBYBIT(coins, modal, index,cex, callback) {
+        var ISERVERCORS = parseInt(getFromLocalStorage('SERVERCORS'));
+        const ListfeeWD = getFromLocalStorage("FEEWD_BYBIT");
+    
+        if (ListfeeWD === null) {
+            toastr.error("REFRESH & UPDATE FEE WD BYBIT DAHULU!<br/>");
+        }
+        
+        // Mencari koin yang sesuai dengan parameter coin
+        const selectedCoin = ListfeeWD.find(function (item) {
+            return item.coin === coins.symbol;
+        });
+    
+        var withdrawFee = 0; // Default value
+        if (selectedCoin) {
+            withdrawFee = selectedCoin.feeWDs;
+        }
+    
+        getPricePAIR(coins.pairdex, function(prices) {
+        $.ajax({
+            url : "https://api.bybit.com/v5/market/orderbook?category=spot&limit=4&symbol=" +coins.symbol+"USDT",
+            method: 'GET',
+            success: function (data) {
+                if (data.result.a.length === 0 || data.result.b.length === 0) {
+                    callback(null, null);  // Indicate success with no data
+                    selesaiProsesAnggota();
+                    toastr.error('GAGAL DAPATKAN HARGA TOKEN ' + coins.symbol + ' !!');
+                } else {    
+                    var dataOUT = {};
+    
+                    // Mengambil harga dan volume untuk bids (buy orders)
+                    dataOUT.price_sell = data.result.b[0][0];
+                    dataOUT.price_sell1 = data.result.b[1] ? data.result.b[1][0] : null;
+                    dataOUT.price_sell2 = data.result.b[2] ? data.result.b[2][0] : null;
+                    dataOUT.price_sell3 = data.result.b[3] ? data.result.b[3][0] : null;
+                    dataOUT.vol_sell = (parseFloat(data.result.b[0][1]) * dataOUT.price_sell).toFixed(2);
+                    dataOUT.vol_sell1 = (data.result.b[1] ? (parseFloat(data.result.b[1][1]) * dataOUT.price_sell1).toFixed(2) : null);
+                    dataOUT.vol_sell2 = (data.result.b[2] ? (parseFloat(data.result.b[2][1]) * dataOUT.price_sell2).toFixed(2) : null);
+                    dataOUT.vol_sell3 = (data.result.b[3] ? (parseFloat(data.result.b[3][1]) * dataOUT.price_sell3).toFixed(2) : null);
+    
+                    // Mengambil harga dan volume untuk asks (sell orders)
+                    dataOUT.price_buy = data.result.a[0][0];
+                    dataOUT.price_buy1 = data.result.a[1] ? data.result.a[1][0] : null;
+                    dataOUT.price_buy2 = data.result.a[2] ? data.result.a[2][0] : null;
+                    dataOUT.price_buy3 = data.result.a[3] ? data.result.a[3][0] : null;
+                    dataOUT.vol_buy = (parseFloat(data.result.a[0][1]) * dataOUT.price_buy).toFixed(2);
+                    dataOUT.vol_buy1 = (data.result.a[1] ? (parseFloat(data.result.a[1][1]) * dataOUT.price_buy1).toFixed(2) : null);
+                    dataOUT.vol_buy2 = (data.result.a[2] ? (parseFloat(data.result.a[2][1]) * dataOUT.price_buy2).toFixed(2) : null);
+                    dataOUT.vol_buy3 = (data.result.a[3] ? (parseFloat(data.result.a[3][1]) * dataOUT.price_buy3).toFixed(2) : null);
+    
+                    dataOUT.symbol = coins.symbol;
+    
+                    dataOUT.modal = modal;
+                    dataOUT.amount_in_sell = modal / data.result.b[0][0]; // Sesuaikan di sini
+                    dataOUT.amount_in_buy = modal / parseFloat(prices.PriceRateSell);
+                    dataOUT.PriceRateBuy = parseFloat(prices.PriceRateBuy);
+                    dataOUT.PriceRateSell = parseFloat(prices.PriceRateSell);
+                    dataOUT.feeWD = withdrawFee * data.result.b[0][0]; // Sesuaikan di sini
+                    
+                    $("#vol1_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy + " : " + dataOUT.vol_buy + "$ <br/> ~" + dataOUT.price_buy1 + " : " + dataOUT.vol_buy1 + "$</label>");
+                    $("#vol2_buy_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-primary'>~" + dataOUT.price_buy2 + " : " + dataOUT.vol_buy2 + "$ <br/> ~" + dataOUT.price_buy3 + " : " + dataOUT.vol_buy3 + "$ </label>");
+                    $("#vol1_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell + " : " + dataOUT.vol_sell + "$ <br/> ~" + dataOUT.price_sell1 + " : " + dataOUT.vol_sell1 + "$ </label>");
+                    $("#vol2_sell_"+cex+"_" + dataOUT.symbol).html("<label class='uk-text-danger'>~" + dataOUT.price_sell2 + " : " + dataOUT.vol_sell2 + "$  <br/> ~" + dataOUT.price_sell3 + " : " + dataOUT.vol_sell3 + "$ </label>");
+                    
+                    callback(null, dataOUT);
+                }
+            },
+            error: function (error) {
+                callback(null, null);  // Indicate success with no data
+                toastr.error('KONEKSI ' + NameCEX.toUpperCase() + ' GAGAL TOKEN ' + coins.symbol + ' !!');
+                selesaiProsesAnggota();
+            }
+        });
+        });
+    }
+
+    // Fungsi untuk mengecek harga pada DEX
+    function getPriceDEX(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS, PriceRate, dexType,cex,pairdex) {
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var SavedModalData = getFromLocalStorage('DATA_MODAL', {});
+        var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount));
+        var NameToken = symbol;
+        var ISERVERCORS = parseInt(getFromLocalStorage('DATA_SERVERCORS', 0)); // Menggunakan getFromLocalStorage
+        var ServerCORS = (action === "sell") ? (parseInt(ServerCORS) + parseInt(groupSize)) : ServerCORS;
+        var selectedServer = SavedSettingData.SERVERCORS[ISERVERCORS][Math.floor(Math.random() * SavedSettingData.SERVERCORS[ISERVERCORS].length)];
+        
+        var IdCellTableDEX = GetIdCellDEX(action, posisi, NameToken,cex);
+        var IdCellTableCEX = GetIdCellCEX(action, posisi, NameToken,cex);
+    
+        if (!IdCellTableDEX || !IdCellTableCEX) {
+            toastr.error("GAGAL UPDATE TABEL HARGA");
+        }
+    
+        var apiUrl, requestData;
+        var link = {
+            'kyberswap': "https://kyberswap.com/swap/" + DTChain.Nama_Chain + "/" + sc_input + "-to-" + sc_output,
+            'paraswap': "https://app.paraswap.xyz/#/swap/" + sc_input + "-" + sc_output + "?version=6.2&network=" + DTChain.Nama_Chain,
+            'odos': "https://app.odos.xyz",
+            '0x': "https://matcha.xyz/tokens/" + DTChain.Nama_Chain + "/" + sc_input.toLowerCase() + "?buyChain=" + DTChain.Kode_Chain + "&buyAddress=" + sc_output.toLowerCase(),
+            '1inch': "https://app.1inch.io/#/" + DTChain.Kode_Chain + "/advanced/swap/" + sc_input + "/" + sc_output,
+            'swoop': "https://app.swoop.exchange"
+        }[dexType];
+        
+        switch (dexType) {
+            case 'kyberswap':
+                apiUrl = "https://aggregator-api.kyberswap.com/" + DTChain.Nama_Chain + "/route/encode?tokenIn=" + sc_input + "&tokenOut=" + sc_output + "&amountIn=" + amount_in + "&to=0x2315FAa4CE7A4cEA50Ae9DEC252Be620c6e454ca&saveGas=0&gasInclude=1&slippageTolerance=1&clientData={%22source%22:%22DefiLlama%22}";
+                break;
+            case 'paraswap':
+                apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                break;
+            case 'odos':
+                apiUrl = selectedServer+"https://api.odos.xyz/sor/quote/v2";
+                requestData = {
+                    chainId: DTChain.Kode_Chain,
+                    inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                    outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                    referralCode: 0,
+                    slippageLimitPercent: 0.3,
+                };
+                break;
+            case '0x':
+                    if (DTChain.Nama_Chain.toLowerCase() === 'ethereum') {
+                        // Endpoint untuk 0x tanpa DTChain.Nama_Chain
+                        apiUrl = "https://api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
+                    } else {
+                        // Endpoint untuk 0x dengan DTChain.Nama_Chain
+                        apiUrl = "https://" + DTChain.Nama_Chain + ".api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
+                    }
+                    break;
+            case '1inch':
+                apiUrl = "https://api-defillama.1inch.io/v5.2/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
+                break;
+            case 'swoop':
+                requestData = {
+                    "chainId": DTChain.Kode_Chain,
+                    "aggregatorSlug": "swoop",
+                    "sender": SavedSettingData.walletMETA,
+                    "inToken": {
+                        "chainId": DTChain.Kode_Chain,
+                        "type": "TOKEN",
+                        "address": sc_input,
+                        "decimals": parseFloat(des_input)
+                    },
+                    "outToken": {
+                        "chainId": DTChain.Kode_Chain,
+                        "type": "TOKEN",
+                        "address": sc_output,
+                        "decimals": parseFloat(des_output)
+                    },
+                    "amountInWei": String(amount_in),
+                    "slippageBps": "100",
+                    "gasPriceGwei": Number(getFromLocalStorage('gasGWEI', 0)), // Menggunakan getFromLocalStorage
+                };
+                apiUrl = 'https://swoop-backend.up.railway.app/swap';
+                break;
+            default:
+                console.error("Unsupported DEX type");
+                return;
+        }
+    
+        $.ajax({
+            url: apiUrl,
+            method: dexType === 'odos' || dexType === 'swoop' ? 'POST' : 'GET',
+            contentType: dexType === 'odos' || dexType === 'swoop' ? 'application/json' : undefined,
+            data: dexType === 'odos' ? JSON.stringify(requestData) : (dexType === 'swoop' ? JSON.stringify(requestData) : undefined),
+            timeout: parseInt(getFromLocalStorage('waktuTunggu', 0)) * 1000, // Menggunakan getFromLocalStorage
+            headers: dexType === '0x' ? {
+                '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5",
+            } : undefined,
+            beforeSend: function () {
+                var loadingSpinner = '<i class="bi bi-arrow-clockwise"></i>&nbsp; ' + dexType.toUpperCase() + '</div>';
+                IdCellTableDEX.html(loadingSpinner);
+            },
+    
+            success: function (response, textStatus, xhr) {
+                setTimeout(function () {
+                    if (xhr.status === 200) {
+                        if (!response || (typeof response !== 'object')) {
+                            var errorMsg = "NO RESPONSE";
+                            IdCellTableDEX.html("<a href=# title='" + errorMsg + "' class='error'><i class=bi bi-exclamation-circle></i> GAGAL</a>");
+                            return;
+                        }
+    
+                        if (response.error) {                                
+                            IdCellTableDEX.html("<a href=# title='" + response.error + "' class='error'><i class=bi bi-exclamation-circle></i> KODE: " + response.error + "</a>");
+                            return;
+                        }
+    
+                        var amount_out, FeeSwap;
+    
+                        switch (dexType) {
+                            case 'kyberswap':
+                                amount_out = response.outputAmount / Math.pow(10, des_output);
+                                FeeSwap = ((response.totalGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PriceGAS', 0)); // Menggunakan getFromLocalStorage
+                                break;
+                            case 'paraswap':
+                                amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
+                                FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
+                                break;
+                            case 'odos':
+                                if (action === "sell") {
+                                    amount_out = response.outValues / PriceRate; 
+                                } else if (action === "buy") {
+                                    amount_out = parseFloat(response.outAmounts) / Math.pow(10, des_output);
+                                }                               
+                                FeeSwap = response.gasEstimateValue;
+                                break;
+                            case '0x':
+                                amount_out = response.buyAmount / Math.pow(10, des_output);
+                                FeeSwap = ((response.estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PriceGAS', 0)); // Menggunakan getFromLocalStorage
+                                break;
+                            case '1inch':
+                                amount_out = parseFloat(response.toAmount) / Math.pow(10, des_output);
+                                FeeSwap = ((response.gas / Math.pow(10, 9) * parseFloat(getFromLocalStorage('gasGWEI', 0)))) * parseFloat(getFromLocalStorage('PriceGAS', 0)); // Menggunakan getFromLocalStorage
+                                break;
+                            case 'swoop':
+                                amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
+                                FeeSwap = ((response.feeWei / Math.pow(10, des_output)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PriceGAS', 0)); // Menggunakan getFromLocalStorage
+                                break;
+                        }
+    
+                        var selisihPersen, priceDEX, PNL;
+    
+                        if (action === "sell") {
+                            var totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+    
+                            PNL = parseFloat(amount_out * PriceRate - modal);
+                            priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(8);
+                            selisihPersen = ((priceDEX - price) / price) * 100;
+    
+                            EntryTableCEX(action, "sell_" + dexType, cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+
+                            LogEksekusi(dexType.toUpperCase(), "KIRI", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen,cex,sc_input, des_input, sc_output, des_output);
+                        } else if (action === "buy") {
+                            var totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+    
+                            priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                            PNL = parseFloat(((modal / priceDEX) * price) - modal);
+                            selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+    
+                            EntryTableCEX(action, "buy_" + dexType,cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+                            LogEksekusi(dexType.toUpperCase(), "KANAN", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen,cex,sc_input, des_input, sc_output, des_output);
+                        }
+    
+                        var filterPNLValue = SavedModalData.FilterPNL == 0 ? totalFee + (modal * 0.1 / 100) : parseFloat(SavedModalData.FilterPNL);
+                        var warna, PNLDisplay;
+    
+                        if (PNL > (filterPNLValue)) {
+                            if (action === "sell") {
+                                InfoSinyal('Kiri', 'sell', "sell_" + dexType, dexType.toUpperCase(), NameToken, PNL, totalFee, cex);
+                                MultisendMessage(cex, dexType.toUpperCase(), 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee,wd, sc_input, NameToken, sc_output, pairdex);
+                            } else if (action === "buy") {
+                                InfoSinyal('Kanan', 'buy', "buy_" + dexType, dexType.toUpperCase(), NameToken, PNL, totalFee, cex);
+                                MultisendMessage(cex, dexType.toUpperCase(), 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee,wd, sc_input, NameToken, sc_output, pairdex);                                   
+                            }    
+                            warna = "ijo"; 
+                        } else {
+                            warna = ""; 
+                        }
+    
+                        PNLDisplay = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label " + (warna === "ijo" ? "uk-label-success" : "uk-label-danger") + "'>" + (PNL - totalFee).toFixed(2) + "</span>";
+    
+                        if (action === "sell") {
+                            IdCellTableDEX.html("<a href='" + link + "' target='_blank'><label class=uk-text-danger>" + priceDEX + " </label></a><br/>" + PNLDisplay).addClass(warna);
+                        } else if (action === "buy") {
+                            IdCellTableDEX.html("<a href='" + link + "' target='_blank'><label class=uk-text-primary>" + priceDEX + " </label></a><br/>" + PNLDisplay).addClass(warna);
+                        }
+                        IdCellTableCEX.addClass(warna);
+                    }
+                }, 0);
+            },
+            
+            error: function (xhr, status, error) {
+                var alertMessage = "Terjadi kesalahan";
+                var warna = "merah";
+    
+                switch (xhr.status) {
+                    case 0:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            alertMessage = errorResponse.detail || errorResponse.description || "SERING SCAN";
+                        } catch (e) {
+                            warna = "limit";                           
+                           // console.warn("SWOOP ERROR!! "+dexType.toUpperCase()+" PINDAH KE SERVER2!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());                        
+                            getPriceSWOOP(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS , PriceRate, dexType, cex, pairdex);
+                        }
+                        break;
+                    case 400:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            alertMessage = errorResponse.detail || errorResponse.description || "KONEKSI BURUK";
+                        } catch (e) {
+                            alertMessage = "KONEKSI LAMBAT"; // Jika parsing gagal
+                        }
+                        break;
+                    case 403:
+                        alertMessage = "AKSES DIBLOK";
+                        break;
+                    case 404:
+                        alertMessage = "Permintaan tidak ditemukan";
+                        break ;
+                    case 429:
+                        warna = "limit";
+                       // console.warn("KENA LIMIT "+dexType.toUpperCase()+" PINDAH KE SERVER2!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+                        getPriceSWOOP(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS , PriceRate, dexType, cex, pairdex);
+                        break;
+                    case 500:
+                        alertMessage = "GAGAL DAPATKAN DATA";
+                        break;
+                    case 503:
+                        alertMessage = "Layanan tidak tersedia";
+                        break;
+                    case 502:
+                        alertMessage = "Respons tidak valid";
+                        break;
+                    default:
+                        alertMessage = "Status: " + xhr.status;
+                }
+    
+                // Update the UI with the error message
+                IdCellTableDEX.html(`<a href="${link}" title="${dexType.toUpperCase()} : ${alertMessage}" target="_blank"> <i class="bi bi-exclamation-circle"></i> ERROR </a>`).addClass(warna);
+                IdCellTableCEX.addClass(warna);
+            }, 
+           
+            complete: function () {
+                selesaiProsesAnggota();
+            }
+        });
+    }
+    // Fungsi untuk mengecek harga pada SERVER2
+    function getPriceSWOOP(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS, PriceRate, dex,cex,pairdex) {
+        var amount_in = Math.pow(10, des_input) * amount;
+        var amount_in = BigInt(Math.round(Number(amount_in)));
+    
+        var NameToken = symbol;
+    
+        var IdCellTableDEX = GetIdCellDEX(action, posisi, NameToken,cex);
+        var IdCellTableCEX = GetIdCellCEX(action, posisi, NameToken,cex);
+    
+        if (!IdCellTableDEX || !IdCellTableCEX) {
+            toastr.error("GAGAL UPDATE TABEL HARGA");
+        }
+    
+        var dexURL = {
+            'kyberswap': "https://kyberswap.com/swap/" + DTChain.Nama_Chain + "/" + sc_input + "-to-" + sc_output,
+            'paraswap': "https://app.paraswap.xyz/#/swap/" + sc_input + "-" + sc_output + "?version=6.2&network=" + DTChain.Nama_Chain,
+            'odos': "https://app.odos.xyz",
+            '0x': "https://matcha.xyz/tokens/" + DTChain.Nama_Chain + "/" + sc_input.toLowerCase() + "?buyChain=" + DTChain.Kode_Chain + "&buyAddress=" + sc_output.toLowerCase(),
+            '1inch': "https://app.1inch.io/#/" + DTChain.Kode_Chain + "/advanced/swap/" + sc_input + "/" + sc_output,
+            'swoop': "https://app.swoop.exchange"
+        }[dex] || "https://app.swoop.exchange";
+    
+        // Mengambil data setting dari localStorage
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var SavedModalData = getFromLocalStorage('DATA_MODAL', {});
+    
+        var payload = {
+            "chainId": DTChain.Kode_Chain,
+            "aggregatorSlug": dex,
+            "sender": SavedSettingData.walletMETA,
+            "inToken": {
+                "chainId": DTChain.Kode_Chain,
+                "type": "TOKEN",
+                "address": sc_input,
+                "decimals": parseFloat(des_input)
+            },
+            "outToken": {
+                "chainId": DTChain.Kode_Chain,
+                "type": "TOKEN",
+                "address": sc_output,
+                "decimals": parseFloat(des_output)
+            },
+            "amountInWei": String(amount_in),
+            "slippageBps": "100",
+            // Mengambil gasGWEI dari localStorage
+            "gasPriceGwei": Number(getFromLocalStorage('gasGWEI', 0)),
+        };
+    
+        $.ajax({
+            url: 'https://swoop-backend.up.railway.app/swap',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(payload),
+            // Mengambil waktuTunggu dari localStorage dan mengonversinya ke milidetik
+            timeout: parseInt(SavedSettingData.waktuTunggu || 30) * 1000,
+            beforeSend: function () {
+                var loadingSpinner = '<i class="bi bi-arrow-clockwise"></i>&nbsp; SERVER2</div>';
+                if (action === "sell") {
+                    $("#" + posisi + "_buy_"+cex+"_" + NameToken).empty().html(loadingSpinner);
+                } else if (action === "buy") {
+                    $("#sell_"+cex+"_" + posisi + "_" + NameToken).empty().html(loadingSpinner);
+                }
+            },
+            success: function (response, textStatus, xhr) {
+                setTimeout(function () {
+                    if (xhr.status === 200 && !response || xhr.status === 0) {
+                        var loadingSpinner = '<i class="bi bi-arrow-clockwise"></i>&nbsp;' + dexType.toUpperCase() + '</div>';
+                        IdCellTableDEX.html(loadingSpinner);
+                    } else {
+                        var amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
+                        var FeeSwap, PNL, priceDEX, totalFee, selisihPersen;
+    
+                        // Inisialisasi priceDEX
+                        //  const gasFeeInToken = (parseFloat(getFromLocalStorage('gasGWEI')) * 40000) / Math.pow(10, 9);
+                        //  const gasFeeInUSDT = gasFeeInToken * tokenPriceInUSDT; 
+                        priceDEX = '';
+                        var FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PriceGAS'));
+                       
+                        if (action === "sell") {
+                            PNL = parseFloat((amount_out * PriceRate) - modal);
+                            priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(9);
+                            totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                            selisihPersen = ((priceDEX - price) / price) * 100;
+                            // console.warn("KIRI TOKEN "+NameToken+" FEESWAP : "+response.feeWei);
+                            // console.warn("PRICE RATE "+PriceRate+" FEESWAP : "+FeeSwap);
+                            // console.warn("GAS : "+getFromLocalStorage('gasGWEI'));
+                            // console.warn("PRICE GAS : "+parseFloat(getFromLocalStorage('PriceGAS')));
+                            // console.warn("FEE GAS ($) : "+FeeSwap2);
+                            EntryTableCEX(action, "sell_" + dex, cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+                            console.warn("### ALIHAN SERVER1 DEX "+dex.toUpperCase()+" KE SERVER2!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+                            LogEksekusi(dex.toUpperCase(), "KIRI-SWOOP", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen, cex, sc_input, des_input, sc_output, des_output);
+                        }
+
+                        if (action === "buy") {
+                            priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                            PNL = parseFloat(((modal / priceDEX) * price) - modal);
+                            totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+                            selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+                            //  console.warn("KANAN TOKEN "+NameToken+" FEESWAP : "+response.feeWei);
+                            // // console.warn("PRICE RATE "+PriceRate+" FEESWAP : "+FeeSwap);
+                            // // console.warn("GAS : "+getFromLocalStorage('gasGWEI'));
+                            // // console.warn("PRICE GAS : "+parseFloat(getFromLocalStorage('PriceGAS')));
+                            //  console.warn("FEE GAS ($) : "+FeeSwap2);
+                            //  console.warn("#PRICE ($) : "+price);
+                            //  console.warn("DES : "+des_input);
+
+                            EntryTableCEX(action, "buy_" + dex, cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+                            console.warn("### ALIHAN SERVER1 DEX "+dex.toUpperCase()+" KE SERVER2!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+                            LogEksekusi(dex.toUpperCase(), "KANAN-SWOOP", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen, cex, sc_input, des_input, sc_output, des_output);
+                        }
+
+                        var filterPNLValue = SavedModalData.FilterPNL == 0 ? totalFee + (modal * 0.1 / 100) : parseFloat(SavedModalData.FilterPNL);
+
+                        if (PNL > (filterPNLValue)) {
+    
+                            if (action === "sell") {
+                                InfoSinyal('Kiri', 'sell', "sell_" + cex, cex.toUpperCase(), NameToken, PNL, totalFee, cex);
+                                MultisendMessage(cex, dex.toUpperCase(), 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee,wd, sc_input, NameToken, sc_output, pairdex);
+                            } else if (action === "buy") {
+                                InfoSinyal('Kanan', 'buy', "buy_" + cex, cex.toUpperCase(), NameToken, PNL, totalFee, cex);
+                                MultisendMessage(cex, dex.toUpperCase(), 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee,wd, sc_input, NameToken, sc_output, pairdex);
+                            }
+                            var warna = "ijo";
+                        } else {
+                            var warna = "";
+                        }
+    
+                        PNLDisplay = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label " + (warna === "ijo" ? "uk-label-success" : "uk-label-danger") + "'>" + (PNL - totalFee).toFixed(2) + "</span>";
+    
+                        IdCellTableDEX.html("<a href='" + dexURL + "' target='_blank'>" + priceDEX + "</a><br/>" + PNLDisplay).addClass("limit");
+                        IdCellTableCEX.addClass("limit");
+                    }
+                }, 0);
+            },
+            error: function (xhr, status, error) {
+                var warna = "merah";
+                var alert;
+    
+                // Menetapkan pesan alert berdasarkan status
+                switch (xhr.status) {
+                    case 0:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            alert = errorResponse.detail || errorResponse.description || "KESERINGAN SCAN";
+                        } catch (e) {
+                            warna="limit2";
+                            alert = "SERING SCAN";
+                            
+                           // console.warn("SWOOP ERROR!! SERVER2 DEX "+dex.toUpperCase()+" PINDAH KE SERVER3!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+                            getPriceRANGO(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS , PriceRate, dex, cex, pairdex);
+                        }
+                        break;
+                    case 400:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            alert = errorResponse.detail || errorResponse.description || "KONEKSI LAMBAT";
+                        } catch (e) {
+                            alert = "KONEKSI BURUK";
+                        }
+                        break;
+                    case 403:
+                        alert = "AKSES DIBLOK";
+                        break;
+                    case 404:
+                        alert = "Permintaan tidak ditemukan";
+                        break;
+                    case 429:
+                        warna="limit2";
+                        alert = "KENA LIMIT";
+                       // console.warn("SWOOP LIMIT!! SERVER2 DEX "+dex.toUpperCase()+" PINDAH KE SERVER3!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+                        getPriceRANGO(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS , PriceRate, dex, cex, pairdex);
+                        break;
+                    case 500:
+                        warna="merah";
+                        alert = xhr.responseJSON?.message || "GAGAL DAPATKAN DATA";
+                        break;
+                    case 503:
+                        alert = "Layanan tidak tersedia";
+                        break;
+                    default:
+                        alert = "Status: " + xhr.status;
+
+                }
+                
+                    // Update konten HTML dan atur class dengan logika penggantian eksplisit
+                    IdCellTableDEX
+                        .html(`<a href="${dexURL}" title="SERVER2 : ${alert}" target='_blank'><i class="bi bi-exclamation-diamonde"></i> ERROR </a>`)
+                        .removeClass("limit merah")  // Pastikan hanya ada satu class yang aktif
+                        .addClass(warna);             // Tambahkan class yang sesuai, entah "limit" atau "merah"
+
+                    IdCellTableCEX
+                        .removeClass("limit merah")
+                        .addClass(warna);
+            },
+        });
+    }
+    // Fungsi untuk mengecek harga pada SERVER3
+    function getPriceRANGO(modal, sc_input, des_input, sc_output, des_output, amount, price, action, symbol, posisi, wd, ServerCORS, PriceRate, dex,cex,pairdex) {
+        var amount_in = Math.pow(10, des_input) * amount;
+        var amount_in = BigInt(Math.round(Number(amount_in)));
+    
+        var NameToken = symbol;
+    
+        var IdCellTableDEX = GetIdCellDEX(action, posisi, NameToken,cex);
+        var IdCellTableCEX = GetIdCellCEX(action, posisi, NameToken,cex);
+    
+        if (!IdCellTableDEX || !IdCellTableCEX) {
+            toastr.error("GAGAL UPDATE TABEL HARGA");
+        }
+            // Membuat variabel baru untuk menyimpan hasil transformasi DTChain.Nama_Chain
+        let transformedChain = DTChain.Nama_Chain.toUpperCase() === "ETHEREUM" ? "ETH" : DTChain.Nama_Chain.toUpperCase();
+
+        var dexURL = {
+            'kyberswap': "https://kyberswap.com/swap/" + DTChain.Nama_Chain + "/" + sc_input + "-to-" + sc_output,
+            'paraswap': "https://app.paraswap.xyz/#/swap/" + sc_input + "-" + sc_output + "?version=6.2&network=" + DTChain.Nama_Chain,
+            'odos': "https://app.odos.xyz",
+            '0x': "https://matcha.xyz/tokens/" + DTChain.Nama_Chain + "/" + sc_input.toLowerCase() + "?buyChain=" + DTChain.Kode_Chain + "&buyAddress=" + sc_output.toLowerCase(),
+            '1inch': "https://app.1inch.io/#/" + DTChain.Kode_Chain + "/advanced/swap/" + sc_input + "/" + sc_output,
+            'swoop': "https://app.swoop.exchange"
+        }[dex] || "https://app.swoop.exchange";
+    
+        // Mengambil data setting dari localStorage
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var SavedModalData = getFromLocalStorage('DATA_MODAL', {});
+    
+        $.ajax({
+            url :"https://api.rango.exchange/basic/quote?from="+transformedChain.toUpperCase()+"--"+sc_input+"&to="+transformedChain.toUpperCase()+"--"+sc_output+"&slippage=0.3&amount="+amount_in+"&apiKey=c6381a79-2817-4602-83bf-6a641a409e32",
+            type: 'GET',
+            contentType: 'application/json',
+            // Mengambil waktuTunggu dari localStorage dan mengonversinya ke milidetik
+            timeout: parseInt(SavedSettingData.waktuTunggu || 30) * 1000,
+            beforeSend: function () {
+                var loadingSpinner = '<i class="bi bi-arrow-clockwise"></i>&nbsp;SERVER3</div>';
+                if (action === "sell") {
+                    $("#" + posisi + "_buy_"+cex+"_" + NameToken).empty().html(loadingSpinner);
+                } else if (action === "buy") {
+                    $("#sell_"+cex+"_" + posisi + "_" + NameToken).empty().html(loadingSpinner);
+                }
+            },
+            success: function (response, textStatus, xhr) {
+                setTimeout(function () {
+                    if (xhr.status === 200 && !response || xhr.status === 0) {
+                        var loadingSpinner = '<i class="bi bi-arrow-clockwise"></i>&nbsp;' + dexType.toUpperCase() + '</div>';
+                        IdCellTableDEX.html(loadingSpinner);
+                    } else {
+                        var amount_out = parseFloat(response.route.outputAmount/Math.pow(10, des_output));
+                        var FeeSwap, PNL, priceDEX, totalFee, selisihPersen;
+    
+                        priceDEX = '';
+                        var FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PriceGAS'));
+                        
+                        if (action === "sell") {
+                            PNL = parseFloat((amount_out * PriceRate) - modal);
+                            priceDEX = ((Number(modal) + PNL) / (modal / price)).toFixed(9);
+                            totalFee = parseFloat(modal * 0.001) + parseFloat(wd) + parseFloat(FeeSwap);
+                            selisihPersen = ((priceDEX - price) / price) * 100;
+ 
+                            EntryTableCEX(action, "sell_" + dex, cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+                            console.warn("### ALIHAN SERVER2 DEX "+dex.toUpperCase()+" KE SERVER3!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+
+                            LogEksekusi(dex.toUpperCase(), "KIRI-RANGO", NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee, wd, selisihPersen, cex, sc_input, des_input, sc_output, des_output);
+                        }
+
+                        if (action === "buy") {
+                            priceDEX = parseFloat(modal / amount_out).toFixed(9);
+                            PNL = parseFloat(((modal / priceDEX) * price) - modal);
+                            totalFee = parseFloat(modal * 0.001) + parseFloat(FeeSwap);
+                            selisihPersen = ((price - priceDEX) / priceDEX) * 100;
+
+                            EntryTableCEX(action, "buy_" + dex, cex, symbol, NameToken, price, wd, FeeSwap, totalFee);
+                            console.warn("### ALIHAN SERVER2 DEX "+dex.toUpperCase()+" KE SERVER3!! TOKEN: "+symbol+" CEX :"+cex.toUpperCase());
+
+                            LogEksekusi(dex.toUpperCase(), "KANAN-RANGO", NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee, wd, selisihPersen, cex, sc_input, des_input, sc_output, des_output);
+                        }
+
+                        var filterPNLValue = SavedModalData.FilterPNL == 0 ? totalFee + (modal * 0.1 / 100) : parseFloat(SavedModalData.FilterPNL);
+
+                        if (PNL > (filterPNLValue)) {
+    
+                            if (action === "sell") {
+                                InfoSinyal('Kiri', 'sell', "sell_" + cex, cex.toUpperCase(), NameToken, PNL, totalFee, cex);
+                                MultisendMessage(cex, dex.toUpperCase(), 'KIRI', NameToken, modal, PNL, price, priceDEX, FeeSwap, totalFee,wd, sc_input, NameToken, sc_output, pairdex);
+                            } else if (action === "buy") {
+                                InfoSinyal('Kanan', 'buy', "buy_" + cex, cex.toUpperCase(), NameToken, PNL, totalFee, cex);
+                                MultisendMessage(cex, dex.toUpperCase(), 'KANAN', NameToken, modal, PNL, priceDEX, price, FeeSwap, totalFee,wd, sc_input, NameToken, sc_output, pairdex);
+                            }
+                            var warna = "ijo";
+                        } else {
+                            var warna = "";
+                        }
+    
+                        PNLDisplay = "<span class='uk-text-warning'>PNL:</span>" + PNL.toFixed(2) + "#<span class='uk-label " + (warna === "ijo" ? "uk-label-success" : "uk-label-danger") + "'>" + (PNL - totalFee).toFixed(2) + "</span>";
+    
+                        IdCellTableDEX.html("<a href='" + dexURL + "' target='_blank'>" + priceDEX + "</a><br/>" + PNLDisplay).addClass("limit2");
+                        IdCellTableCEX.addClass("limit2");
+                    }
+                }, 0);
+            },
+            error: function (xhr, status, error) {
+                var warna = "merah";
+                var alert;
+            
+                // Periksa apakah respons berupa JSON dan memiliki `resultType`
+                if (xhr.status === 200) {
+                    try {
+                        var response = JSON.parse(xhr.responseText);
+            
+                        if (response.resultType === "NO_ROUTE") {
+                            alert = "Rute tidak ditemukan";
+                            warna = "orange"; // Bisa atur warna sesuai kondisi NO_ROUTE
+                        } else if (response.error || response.errorCode) {
+                            alert = response.error || "Terjadi kesalahan pada permintaan";
+                        } else {
+                            alert = "Respons tidak diketahui";
+                        }
+                    } catch (e) {
+                        alert = "Format respons tidak sesuai";
+                    }
+                } else {
+                    // Menetapkan pesan alert berdasarkan status HTTP
+                    switch (xhr.status) {
+                        case 0:
+                            try {
+                                var errorResponse = JSON.parse(xhr.responseText);
+                                alert = errorResponse.detail || errorResponse.description || "KESERINGAN SCAN";
+                            } catch (e) {
+                                alert = "SERING SCAN";
+                            }
+                            break;
+                        case 400:
+                            try {
+                                var errorResponse = JSON.parse(xhr.responseText);
+                                alert = errorResponse.detail || errorResponse.description || "KONEKSI LAMBAT";
+                            } catch (e) {
+                                alert = "KONEKSI BURUK";
+                            }
+                            break;
+                        case 403:
+                            alert = "AKSES DIBLOK";
+                            break;
+                        case 404:
+                            alert = "Permintaan tidak ditemukan";
+                            break;
+                        case 429:
+                            warna = "limit";
+                            alert = "KENA LIMIT";
+                            break;
+                        case 500:
+                            alert = xhr.responseJSON?.message || "GAGAL DAPATKAN DATA";
+                            break;
+                        case 503:
+                            alert = "Layanan tidak tersedia";
+                            break;
+                        default:
+                            alert = "Status: " + xhr.status;
+                    }
+                }
+                
+                    // Update konten HTML dan atur class dengan logika penggantian eksplisit
+                    IdCellTableDEX
+                        .html(`<a href="${dexURL}" title="SERVER3 : ${alert}" target='_blank'><i class="bi bi-exclamation-octagon"></i> ERROR </a>`)
+                        .removeClass("limit2 merah")  
+                        .addClass(warna);             
+
+                    IdCellTableCEX
+                        .removeClass("limit2 merah")
+                        .addClass(warna);
+            },
+        });
+    }
+    
+    function countCheckedCEX() {
+        let count = 0;
+        const checkboxes = ['#D1INCH', '#DODOS', '#D0X', '#DKYBERSWAP', '#DPARASWAP'];
+        checkboxes.forEach(checkbox => {
+            if ($(checkbox).is(':checked')) {
+                count++;
+            }
+        });
+        return count;
+    }
+
+    // fungsi UTAMA melakukan simulasi CEX & DEX
+    function Scanning(coins, index) {
+       // var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var SavedModalData = getFromLocalStorage('DATA_MODAL', {});
+        var cex = coins.cex; // Ambil nilai cex dari coins
+        //console.warn("TOKEN : "+coins.symbol+" CEX: "+coins.cex);
+        // Dapatkan scAddressPair dan desPair dari DTChain.PAIRDEXS berdasarkan coins.pairdex
+        const { scAddressPair, desPair } = DTChain.PAIRDEXS[coins.pairdex] || {};        
+        var statusChecked = coins.status ? 'checked' : '';
+        var NameToken = coins.symbol
+        
+        var warnaCEX = getWarnaCEX(cex);
+        // Menyusun `linkTokenPair` dengan warna yang sesuai
+        var linkTokenPair = '<b><label id="PairCEXToken" class="uk-text" style="color:' + warnaCEX + ';">' + cex.toUpperCase() + '-' + coins.pairdex.toUpperCase() + '</label> </b>';
+        
+        //var linkTokenPair = '<b><label id="PairCEXToken" class="uk-text-primary">' + cex.toUpperCase() + '-' + coins.pairdex.toUpperCase() + '</label> </b>';       
+        var linkDefillama = "<span style=color:orange;><a href=https://swap.defillama.com/?chain=" + DTChain.Nama_Chain + "&from=" + coins.sc + "&to=" + scAddressPair+ " target=_blank>DEFIL</a></span>";
+        var linkUNIDEX = "<span style=color:orange;><a href=https://app.unidex.exchange/?chain=" + DTChain.Nama_Chain + "&from=" + coins.sc + "&to=" + scAddressPair + " target=_blank>UNIDX</a></span>";
+
+        // Memulai linkStok dengan teks awal
+        var linkStok = '<b><label class="uk-text-secondary">STOK : </label></b>';
+        // CONFIG_CEX.[cex].chainCEX;
+        // Mendapatkan semua wallet dari konfigurasi CONFIG_CEX berdasarkan variabel `cex`
+        Object.keys(DTChain.CEXCHAIN[cex]).forEach((key, index) => {
+            // Cek jika key tersebut adalah "wallet" atau mengandung "wallet" sebagai bagian dari namanya
+            if (key.includes('address')) {
+                // Menambahkan link untuk setiap wallet ke dalam linkStok
+                linkStok += '<b><a href='+DTChain.URL_Chain+'/token/' + coins.sc + '?a=' + CONFIG_CEX[cex][key] + ' target="_blank"> ' + (index + 1) + ' </a></b> | ';
+            }
+        });
+
+        // Menghapus karakter "|" terakhir dari linkStok untuk membuat tampilannya lebih rapi
+        linkStok = linkStok.slice(0, -2);        
+          //https://coinmarketcap.com/currencies/bitcoin/#Markets
+        $("#TabelHarga").append(
+            "<tr>" +
+                "<td id=vol1_buy_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_1inch id=buy_" + cex + "_sell_1inch_" + NameToken + "></td>" +
+                "<td class=dx_odos id=buy_" + cex + "_sell_odos_" + NameToken + "></td>" +
+                "<td class=dx_kyberswap id=buy_" + cex + "_sell_kyberswap_" + NameToken + "></td>" +
+                "<td class=dx_paraswap id=buy_" + cex + "_sell_paraswap_" + NameToken + "></td>" +
+                "<td class='dx_0x' id='buy_" + cex + "_sell_0x_" + NameToken + "'></td>" +
+                "<td rowspan='2' style='background-color:#cdcdcd;'>" +                   
+                    "<b><span id='wd_"+coins.cex+"_" + NameToken + "'>"+
+                    "</span><input type='checkbox' class='statusKoinCheckbox' data-symbol='" + coins.symbol + "' data-cex='" + coins.cex + "' " + statusChecked + "><span style='color:black;'>" + 
+                    "<a href='https://coinmarketcap.com/currencies/" + coins.cmcID + "/#Markets' target='_blank'>" + coins.symbol + "</a></span>"+
+                    "<span id='dp_"+coins.cex+"_" + NameToken + "'></span></b><br/>"+
+                    linkTokenPair+ "<a href='" + DTChain.URL_Chain + "/token/" + coins.sc + "' target='_blank'> [ SC ] </a><br/>"+
+                    linkDefillama + " | " + linkUNIDEX +"<br/>"+
+                    linkStok + ""+                   
+                "</td>" +
+
+                "<td class='dx_1inch' id='sell_" + cex + "_buy_1inch_" + NameToken + "'></td>"+
+                "<td class=dx_odos id=sell_" + cex + "_buy_odos_" + NameToken + "></td>" +
+                "<td class=dx_kyberswap id=sell_" + cex + "_buy_kyberswap_" + NameToken + "></td>" +
+                "<td class=dx_paraswap id=sell_" + cex + "_buy_paraswap_" + NameToken + "></td>" +
+                "<td class=dx_0x id=sell_" + cex + "_buy_0x_" + NameToken + "></td>" +
+                "<td id=vol1_sell_" + cex + "_" + NameToken + "></td>" +
+            "</tr>" +
+            "<tr>" +
+                "<td id=vol2_buy_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_1inch id=sell_1inch_buy_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_odos id=sell_odos_buy_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_kyberswap id=sell_kyberswap_buy_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_paraswap id=sell_paraswap_buy_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_0x id=sell_0x_buy_" + cex + "_" + NameToken + "></td>" +
+
+                "<td class=dx_1inch id=buy_1inch_sell_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_odos id=buy_odos_sell_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_kyberswap id=buy_kyberswap_sell_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_paraswap id=buy_paraswap_sell_" + cex + "_" + NameToken + "></td>" +
+                "<td class=dx_0x id=buy_0x_sell_" + cex + "_" + NameToken + "></td>" +
+                "<td id=vol2_sell_" + cex + "_" + NameToken + "></td>" +
+            "</tr>"
+        );    
+
+        const dexList = [
+            { id: 'D1INCH', withdraw: SavedModalData.ModalKiri1INCH, deposit: SavedModalData.ModalKanan1INCH, dex: '1inch' },
+            { id: 'DODOS', withdraw: SavedModalData.ModalKiriODOS, deposit: SavedModalData.ModalKananODOS, dex: 'odos' },
+            { id: 'D0X', withdraw: SavedModalData.ModalKiri0X, deposit: SavedModalData.ModalKanan0X, dex: '0x' },
+            { id: 'DKYBERSWAP', withdraw: SavedModalData.ModalKiriKYBERSWAP, deposit: SavedModalData.ModalKananKYBERSWAP, dex: 'kyberswap' },
+            { id: 'DPARASWAP', withdraw: SavedModalData.ModalKiriPARASWAP, deposit: SavedModalData.ModalKananPARASWAP, dex: 'paraswap' }
+        ];
+
+        // Define a mapping for CEXs to their respective functions
+        const getPriceCEX = {
+            "BINANCE": getPriceBINANCE,
+            "GATE": getPriceGATE,
+            "KUCOIN": getPriceKUCOIN,
+            "BITGET": getPriceBITGET,
+            "BYBIT": getPriceBYBIT,
+            // "INDODAX": getPriceIndodax
+        }[cex];
+
+        const getStatusWalletCEX = {
+            "BINANCE": StatusWalletBINANCE,
+            "GATE": StatusWalletGATE,
+            "KUCOIN": StatusWalletKUCOIN,
+            "BITGET": StatusWalletBITGET,
+            "BYBIT": StatusWalletBYBIT,
+            // "INDODAX": StatusWalletIndodax
+        }[cex];
+
+        if (!getPriceCEX || !getStatusWalletCEX) {
+            console.error('Unsupported CEX');
+            return;
+        }
+
+        getStatusWalletCEX(NameToken).then(result => {
+            if (result.withdrawActive && $('#ls').is(':checked')) {
+                $("span#wd_"+cex+"_" + NameToken + "").html('WD ').addClass("uk-text-primary");
+                dexList.forEach(({ id, withdraw, dex }) => {
+                    if ($('#' + id).is(':checked')) {
+                        // Dapatkan scAddressPair dan desPair berdasarkan coins.pairdex
+                     //   const { scAddressPair, desPair } = DTChain.PAIRDEXS[coins.pairdex] || {};
+                        //console.warn("KIRI TOKEN : "+coins.symbol+" CEX: "+coins.cex +" PAIR: "+coins.pairdex);
+                        // console.warn("SC OUT : "+scAddressPair+" DES OUT: "+desPair);
+                        getPriceCEX(coins, withdraw, index + 1,cex, function (error, result) {                             
+                            if (error) {
+                                console.error(`Error while fetching price for ${dex}:`, error);
+                                $("#buy_"+cex+"_sell_" + dex + "_" + NameToken).text("CEK BUY..").toggleClass('merah');
+                                $("#sell_" + dex + "_buy_"+cex+"_" + NameToken).toggleClass('merah');
+                            } else if (result) {
+                                getPriceDEX(result.modal, coins.sc, coins.desimal, scAddressPair, desPair, result.amount_in_sell, result.price_buy, "sell", coins.symbol, "sell_" + dex, result.feeWD, index, result.PriceRateBuy, dex,cex,coins.pairdex, function (error, response) {});
+                            } else {
+                                $("#sell_" + dex + "_buy_"+cex+"_" + NameToken).html(`<a href="#" title="'CEX : GAGAL DAPAT HARGA'" target="_blank"> <i class="bi bi-dash-circle"></i> ERROR </a>`).toggleClass("merah");
+                                $("#buy_"+cex+"_sell_" + dex + "_" + NameToken).toggleClass('merah');
+                                console.warn(`Result is null for ${dex}, ${NameToken} POSISI KIRI.`);
+                            }
+                        });
+                    }
+                });
+            }
+
+            if (result.depositActive && $('#rs').is(':checked')) {
+                $("span#dp_"+cex+"_" + NameToken + "").html(' DP').addClass("uk-text-primary");
+                dexList.forEach(({ id, deposit, dex }) => {
+                    if ($('#' + id).is(':checked')) {
+                        // Dapatkan scAddressPair dan desPair berdasarkan coins.pairdex
+                      //  const { scAddressPair, desPair } = DTChain.PAIRDEXS[coins.pairdex] || {};
+                       // console.warn("KANAN TOKEN : "+coins.symbol+" CEX: "+coins.cex +" PAIR: "+coins.pairdex);
+                       // console.warn("SC OUT : "+scAddressPair+" DES OUT: "+desPair);
+                        getPriceCEX(coins, deposit, index + 1,cex, function (error, result) {
+                            if (error) {
+                                console.error(`Error while fetching price for ${dex}:`, error);
+                                $("#sell_"+cex+"_buy_" + dex + "_" + NameToken).html("CEK BUY..").toggleClass('merah');
+                                $("#buy_" + dex + "_sell_"+cex+"_" + NameToken).toggleClass('merah');
+                            } else if (result) {
+                                getPriceDEX(result.modal, scAddressPair, desPair, coins.sc, coins.desimal, result.amount_in_buy, result.price_sell, "buy", coins.symbol, "buy_" + dex, result.feeWD, index, result.PriceRateSell, dex,cex,coins.pairdex, function (error, response) {});
+                            } else {
+                                $("#sell_"+cex+"_buy_" + dex + "_" + NameToken).html(`<a href="#" title="'CEX : GAGAL DAPAT HARGA'" target="_blank"> <i class="bi bi-dash-circle"></i> ERROR </a>`).toggleClass("merah");
+                                $("#buy_" + dex + "_sell_"+cex+"_" + NameToken).toggleClass('merah');
+                                console.warn(`Result is null for ${dex}, ${NameToken} POSISI KANAN.`);
+                            }
+                        });
+                    }
+                });
+            }
+
+            if (!result.withdrawActive || !result.depositActive) {
+                const checkedCountCEX = countCheckedCEX();
+                for (let i = 0; i < checkedCountCEX; i++) {
+                    const dexes = ['1inch', 'odos', '0x', 'kyberswap', 'paraswap'];
+                   // dexes.forEach(dex => {
+                        if (!result.withdrawActive) {
+                            $("span#wd_"+cex+"_" + NameToken + "").html('WX ').addClass("uk-text-danger");
+                            dexes.forEach(dex => {    
+                                $("#buy_"+cex+"_sell_" + dex + "_" + NameToken).text("---").addClass('putih');
+                                $("#sell_" + dex + "_buy_"+cex+"_" + NameToken).addClass('putih');
+                                selesaiProsesAnggota();
+                            });
+                        }
+                        if (!result.depositActive) {
+                            $("span#dp_"+cex+"_" + NameToken + "").html(' DX').addClass("uk-text-danger");
+                            dexes.forEach(dex => {
+                                $("#sell_"+cex+"_buy_" + dex + "_" + NameToken).text("---").addClass('putih');
+                                $("#buy_" + dex + "_sell_"+cex+"_" + NameToken).addClass('putih');
+                                selesaiProsesAnggota();
+                            });
+                        }
+                   //});
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            toastr.error("UPDATE WALLET CEX DAHULU!!!");
+        });
+
+        updateTableVisibility();
+    }
+    // fungsi untuk mengelolah tampilan progress bar
+    function updateProgress(totalscanned, token) {
+        // Hitung jumlah token yang sudah difilter
+        const filteredTokenList = filterTokens().length; // Ambil token yang sudah difilter
+        var mulai = parseInt(getFromLocalStorage('startTime', new Date().getTime())); // Default ke waktu sekarang jika tidak ditemukan
+        var endTime = new Date().getTime(); // Waktu akhir setelah panggilan REST API berhasil
+    
+        var duration = (endTime - mulai) / 1000; // Durasi panggilan API dalam detik
+        saveToLocalStorage("duration", duration); // Simpan durasi ke localStorage
+    
+        // Hitung waktu mulai dan berakhir
+        var startTimeFormatted = new Date(mulai).toLocaleTimeString(); // Format waktu mulai
+        var endTimeFormatted = new Date(endTime).toLocaleTimeString(); // Format waktu akhir
+    
+        // Menghitung persentase progres
+        var perulangan = totalscanned / filteredTokenList;
+        $('#scanprogress').html('CHECK - ' + token + ' [ ' + totalscanned + ' / ' + filteredTokenList + '] ::  Mulai: ' + startTimeFormatted + ' ~ DURASI [' + parseFloat(duration / 60).toFixed(2) + ' Menit]').css({
+            "color": "blue",
+            "text-align": "left"
+        });
+        $('#bar').css('width', (totalscanned / filteredTokenList * 100) + '%');
+    
+        // Jika proses scanning selesai
+        if (totalscanned >= filteredTokenList) {
+            if (autorun == true) {
+                $('#scanprogress').html('Mengulangi scanning dalam 7 detik.');
+    
+                setTimeout(function () {
+                    $('tbody tr').remove();
+                    var startTime = new Date().getTime();
+                    saveToLocalStorage('startTime', startTime); // Simpan waktu mulai baru ke localStorage
+    
+                    setNullInfo(); // Reset informasi
+                    processTokenData(filteredTokenList, groupSize); // Proses data token
+                }, 7000);
+            } else {
+                $('#scanprogress').html('SCANNING SELESAI!! ' + endTimeFormatted + ' ~ DURASI [' + parseFloat(duration / 60).toFixed(2) + ' Menit]').css({
+                    "color": "black",
+                    "text-align": "right"
+                });
+                form_on();
+                $("button#startSCAN.uk-button.uk-button-primary").show();
+                $('#syncDATA, #set-modal, #cek_wallet, a').css('pointer-events', 'auto').css('opacity', '1');
+                $("#refresh").hide();
+            }
+        }
+    }
+    
+    $("#refresh").click(function () {
+        location.reload();
+        //toastr.success('REFRESH DONE!!');
+        alert("REFRESH AKAN DILAKUKAN...!!");
+        $("button#startSCAN.uk-button.uk-button-primary").hide();
+    });
+
+    function sendStatusTELE(user, status) {
+        var users = [
+            { chat_id: SavedSettingData.ID_GRUP }
+        ];
+
+        var token = SavedSettingData.TOKEN;
+        var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
+
+        // Ambil data dari localStorage dan parse sebagai JSON object
+        var data = getFromLocalStorage('ID','');
+
+        var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
+            "\n <b> "+DTChain.Nama_Chain.toUpperCase()+" MULTIMARKET  </b>"+
+            "\n <b> ID UNIX : </b>" + data.id +
+            "\n <b> PROVIDER : </b> " + data.name +
+            "\n <b> IP : </b>" + data.ip+
+            "\n ----------------------------------------------";
+
+        // Loop melalui daftar pengguna
+        for (var i = 0; i < users.length; i++) {
+            var user = users[i];
+            var chatId = user.chat_id; // Ganti dengan ID chat pengguna
+
+            // Membuat permintaan POST menggunakan jQuery
+            $.ajax({
+            url: apiUrl,
+            method: "POST",
+            data: {
+                chat_id: chatId,
+                text: message,
+                parse_mode: "HTML",
+                disable_web_page_preview: true
+            },
+            success: function(response) {
+                // console.log("Message sent successfully");
+            },
+            error: function(xhr, status, error) {
+                console.log("Error sending message:", error);
+            }
+            });
+        }
+        }
+
+    // fungsi untuk mengirim info ke grup telegram
+    function MultisendMessage(cex, dex, posisi, token, modal, PNL, priceBUY, priceSELL, FeeSwap, totalFee,feeWD, sc_input, pair_input, sc_output, pair_output) {
+        // Mengambil user dari localStorage menggunakan getFromLocalStorage
+        var user = getFromLocalStorage('user', 'Unknown User').toUpperCase(); // Gunakan default 'Unknown User' jika tidak ada data
+    
+        var source = posisi === "KIRI" 
+            ? "<b>#" + cex.toUpperCase() + " >> #" + dex.toUpperCase() + "</b>" 
+            : posisi === "KANAN" 
+            ? "<b>#" + dex.toUpperCase() + " >> #" + cex.toUpperCase() + "</b>" 
+            : "<b>Unknown Position</b>";
+    
+            if (cex.toUpperCase() === "GATE") {
+                baseUrlTrade = `https://www.gate.io/trade/${token}_USDT`;
+            } else if (cex.toUpperCase() === "BINANCE") {
+                baseUrlTrade = `https://www.binance.com/en/trade/${token}_USDT`;
+            } else if (cex.toUpperCase() === "KUCOIN") {
+                baseUrlTrade = `https://www.kucoin.com/trade/${token}-USDT`;
+            } else if (cex.toUpperCase() === "BITGET") { 
+                baseUrlTrade = `https://www.bitget.com/spot/${token}USDT`;
+            } else if (cex.toUpperCase() === "BYBIT") { 
+                baseUrlTrade = `https://www.bybit.com/en/trade/spot/${token}/USDT`;
+            }
+            
+            var opit = Number(PNL) - Number(totalFee);
+            var message = 
+                "<b>MULTIMARKET #" + DTChain.Nama_Chain.toUpperCase() + "</b>" +
+                "\n---------------------------------" + 
+                "\n<b>USER: #" + user + " | OPIT: " + parseFloat(opit).toFixed(2) + "</b>" +
+                "\n<b>SOURCE: </b>" + source + 
+                "\n<b>MODAL: " + parseFloat(modal).toFixed(2) + "$ | PNL: " + parseFloat(PNL).toFixed(2) + "$</b>" + 
+                "\n<b>ROUTE: </b><a href=\"" + DTChain.URL_Chain + "/address/" + sc_input + "\">" + pair_input + "</a> >> " + 
+                "<a href=\"" + DTChain.URL_Chain + "/address/" + sc_output + "\">" + pair_output + "</a>" + 
+                "\n<b>BUY: </b><a href=\"" + baseUrlTrade + "\">" + parseFloat(priceBUY).toFixed(10) + "$</a>" +
+                "\n<b>SELL: </b><a href=\"https://app.unidex.exchange/?chain=" + DTChain.Nama_Chain + "&from=" + sc_input + "&to=" + sc_output + "\">" + parseFloat(priceSELL).toFixed(10) + "$</a>" +               
+                "\n<b>FEEWD: </b><i>" + parseFloat(feeWD).toFixed(2) + "$</i> + <b>SWAP:</b> <i>" + parseFloat(FeeSwap).toFixed(2) + "$</i>" +
+                "\n---------------------------------";
+            
+        // Mengambil setting dari localStorage
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', { ID_GRUP: 0, TOKEN: '' });
+        var users = [
+            { chat_id: SavedSettingData.ID_GRUP } // Menggunakan ID grup yang disimpan di localStorage
+        ];
+    
+        var token = SavedSettingData.TOKEN; // Menggunakan token yang disimpan di localStorage
+        var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
+    
+        // Loop melalui daftar pengguna dan mengirim pesan
+        for (var i = 0; i < users.length; i++) {
+            var user = users[i];
+            var chatId = user.chat_id; // ID chat pengguna
+    
+            // Membuat permintaan POST menggunakan jQuery
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function (response) {
+                    // console.log("Message sent successfully");
+                },
+                error: function (xhr, status, error) {
+                    // console.log("Error sending message:", error);
+                }
+            });
+        }
+    }
+        
+});
