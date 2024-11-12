@@ -1,1 +1,396 @@
-const _0x4d6a91=_0x39d2;function _0x39d2(_0x1cdd67,_0x188d1d){const _0x5534ea=_0x5534();return _0x39d2=function(_0x39d24b,_0x4f4574){_0x39d24b=_0x39d24b-0x105;let _0x1ed3a3=_0x5534ea[_0x39d24b];return _0x1ed3a3;},_0x39d2(_0x1cdd67,_0x188d1d);}(function(_0x42db5c,_0x20cae7){const _0x5f3df6=_0x39d2,_0x536ac8=_0x42db5c();while(!![]){try{const _0x15e3c1=-parseInt(_0x5f3df6(0x109))/0x1+parseInt(_0x5f3df6(0x11c))/0x2*(-parseInt(_0x5f3df6(0x159))/0x3)+parseInt(_0x5f3df6(0x17a))/0x4*(-parseInt(_0x5f3df6(0x16a))/0x5)+-parseInt(_0x5f3df6(0x123))/0x6*(parseInt(_0x5f3df6(0x121))/0x7)+parseInt(_0x5f3df6(0x16f))/0x8*(-parseInt(_0x5f3df6(0x138))/0x9)+-parseInt(_0x5f3df6(0x126))/0xa+parseInt(_0x5f3df6(0x17d))/0xb;if(_0x15e3c1===_0x20cae7)break;else _0x536ac8['push'](_0x536ac8['shift']());}catch(_0x498911){_0x536ac8['push'](_0x536ac8['shift']());}}}(_0x5534,0x9dd35));const CONFIG_CEX={'GATE':{'ApiKey':'d04cdb7f01e598b3493bda6aa913092b','ApiSecret':_0x4d6a91(0x14c),'color':_0x4d6a91(0x163),'logoUrl':_0x4d6a91(0x16d)},'BINANCE':{'ApiKey':'2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','ApiSecret':_0x4d6a91(0x11a),'color':'#e0a50c','logoUrl':_0x4d6a91(0x13e)},'KUCOIN':{'ApiKey':_0x4d6a91(0x133),'ApiSecret':_0x4d6a91(0x13a),'ApiPassphrase':'Arekpinter123','color':'#096309','logoUrl':_0x4d6a91(0x147)},'BYBIT':{'ApiKey':_0x4d6a91(0x13c),'ApiSecret':_0x4d6a91(0x118),'color':_0x4d6a91(0x167),'logoUrl':_0x4d6a91(0x156)},'BITGET':{'ApiKey':_0x4d6a91(0x11b),'ApiSecret':'xxx','color':'#1448ce','logoUrl':'https://cryptologos.cc/logos/bitget-logo.png'}},CONFIG_CHAINS={'base':{'Kode_Chain':0x2105,'Nama_Chain':_0x4d6a91(0x144),'URL_Chain':_0x4d6a91(0x160),'color':_0x4d6a91(0x157),'DATAJSON':'https://multiscan-ruby.vercel.app/base_multi.json','BaseFEEDEX':_0x4d6a91(0x151),'WALLET_CEX':{'GATE':{'address':'0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','chainCEX':_0x4d6a91(0x10d)},'BINANCE':{'address':_0x4d6a91(0x106),'address2':'0x28C6c06298d514Db089934071355E5743bf21d60','chainCEX':_0x4d6a91(0x15c)},'KUCOIN':{'address':_0x4d6a91(0x129),'address2':_0x4d6a91(0x11d),'chainCEX':_0x4d6a91(0x120)},'BYBIT':{'address':'0xf89d7b9c864f589bbF53a82105107622B35EaA40','address2':_0x4d6a91(0x172),'chainCEX':_0x4d6a91(0x15c)},'BITGET':{'address':_0x4d6a91(0x175),'address2':'0x51971c86b04516062c1e708CDC048CB04fbe959f','chainCEX':_0x4d6a91(0x15c)}},'PAIRDEXS':{'USDT':{'symbolPair':_0x4d6a91(0x168),'scAddressPair':_0x4d6a91(0x165),'desPair':'6'},'ETH':{'symbolPair':_0x4d6a91(0x162),'scAddressPair':'0x4200000000000000000000000000000000000006','desPair':'18'},'USDC':{'symbolPair':_0x4d6a91(0x117),'scAddressPair':_0x4d6a91(0x15f),'desPair':'6'}}},'polygon':{'Kode_Chain':0x89,'Nama_Chain':'polygon','URL_Chain':'https://polygonscan.com','color':'#289eed','DATAJSON':_0x4d6a91(0x166),'BaseFEEDEX':'POLUSDT','WALLET_CEX':{'GATE':{'address':'0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','address2':'#','chainCEX':_0x4d6a91(0x16b)},'BINANCE':{'address':_0x4d6a91(0x173),'address2':'0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','chainCEX':_0x4d6a91(0x16b)},'KUCOIN':{'address':'0x9AC5637d295FEA4f51E086C329d791cC157B1C84','address2':_0x4d6a91(0x11d),'chainCEX':_0x4d6a91(0x179)},'BITGET':{'address':'0x0639556F03714A74a5fEEaF5736a4A64fF70D206','address2':_0x4d6a91(0x12f),'chainCEX':_0x4d6a91(0x14a)},'BYBIT':{'address':_0x4d6a91(0x172),'address2':'#','chainCEX':_0x4d6a91(0x132)}},'PAIRDEXS':{'USDT':{'symbolPair':_0x4d6a91(0x168),'scAddressPair':'0xc2132D05D31c914a87C6611C10748AEb04B58e8F','desPair':'6'},'POL':{'symbolPair':_0x4d6a91(0x131),'scAddressPair':_0x4d6a91(0x15a),'desPair':'18'},'USDC':{'symbolPair':'USDC','scAddressPair':'0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174','desPair':'6'}}},'arbitrum':{'Kode_Chain':0xa4b1,'Nama_Chain':'arbitrum','URL_Chain':_0x4d6a91(0x10e),'color':_0x4d6a91(0x14b),'DATAJSON':_0x4d6a91(0x16c),'BaseFEEDEX':'ETHUSDT','WALLET_CEX':{'GATE':{'address':_0x4d6a91(0x158),'address2':'#','chainCEX':_0x4d6a91(0x137)},'BINANCE':{'address':_0x4d6a91(0x173),'address2':_0x4d6a91(0x128),'chainCEX':_0x4d6a91(0x11f)},'KUCOIN':{'address':_0x4d6a91(0x13d),'address2':'#','chainCEX':_0x4d6a91(0x11f)},'BITGET':{'address':_0x4d6a91(0x119),'address2':'#','chainCEX':_0x4d6a91(0x170)},'BYBIT':{'address':_0x4d6a91(0x172),'address2':'#','chainCEX':_0x4d6a91(0x111)}},'PAIRDEXS':{'ARB':{'symbolPair':_0x4d6a91(0x16e),'scAddressPair':_0x4d6a91(0x113),'desPair':'18'},'USDT':{'symbolPair':_0x4d6a91(0x168),'scAddressPair':_0x4d6a91(0x105),'desPair':'6'},'USDC':{'symbolPair':_0x4d6a91(0x117),'scAddressPair':_0x4d6a91(0x12e),'desPair':'6'}}},'ethereum':{'Kode_Chain':0x1,'Nama_Chain':_0x4d6a91(0x15e),'URL_Chain':'https://etherscan.io','color':_0x4d6a91(0x180),'DATAJSON':_0x4d6a91(0x13f),'BaseFEEDEX':_0x4d6a91(0x151),'WALLET_CEX':{'GATE':{'address':_0x4d6a91(0x158),'address2':'#','chainCEX':'ETH'},'BINANCE':{'address':_0x4d6a91(0x106),'address2':_0x4d6a91(0x14f),'chainCEX':_0x4d6a91(0x162)},'KUCOIN':{'address':_0x4d6a91(0x129),'address2':_0x4d6a91(0x11d),'chainCEX':'ERC20'},'BITGET':{'address':_0x4d6a91(0x175),'address2':_0x4d6a91(0x12f),'chainCEX':_0x4d6a91(0x177)},'BYBIT':{'address':'0xf89d7b9c864f589bbF53a82105107622B35EaA40','address2':'0xf89d7b9c864f589bbF53a82105107622B35EaA40','chainCEX':_0x4d6a91(0x162)}},'PAIRDEXS':{'ETH':{'symbolPair':'ETH','scAddressPair':'0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','desPair':'18'},'USDT':{'symbolPair':'USDT','scAddressPair':_0x4d6a91(0x115),'desPair':'6'},'BNT':{'symbolPair':_0x4d6a91(0x10f),'scAddressPair':_0x4d6a91(0x181),'desPair':'18'},'USDC':{'symbolPair':'USDC','scAddressPair':_0x4d6a91(0x12a),'desPair':'6'}}},'bsc':{'Kode_Chain':0x38,'Nama_Chain':_0x4d6a91(0x14e),'URL_Chain':_0x4d6a91(0x12c),'color':_0x4d6a91(0x155),'DATAJSON':_0x4d6a91(0x122),'BaseFEEDEX':'BNBUSDT','WALLET_CEX':{'GATE':{'address':_0x4d6a91(0x158),'address2':'#','chainCEX':_0x4d6a91(0x17f)},'BINANCE':{'address':_0x4d6a91(0x127),'address2':_0x4d6a91(0x149),'chainCEX':'BSC'},'KUCOIN':{'address':_0x4d6a91(0x129),'address2':_0x4d6a91(0x11d),'chainCEX':_0x4d6a91(0x12b)},'BITGET':{'address':'0x0639556F03714A74a5fEEaF5736a4A64fF70D206','address2':_0x4d6a91(0x12f),'chainCEX':'BEP20'},'BYBIT':{'address':_0x4d6a91(0x172),'address2':'#','chainCEX':_0x4d6a91(0x17f)}},'PAIRDEXS':{'USDT':{'symbolPair':_0x4d6a91(0x168),'scAddressPair':_0x4d6a91(0x10c),'desPair':'18'},'BNB':{'symbolPair':_0x4d6a91(0x146),'scAddressPair':_0x4d6a91(0x150),'desPair':'18'}}},'solana':{'Kode_Chain':0x1f5,'Nama_Chain':'solana','URL_Chain':_0x4d6a91(0x110),'color':_0x4d6a91(0x145),'DATAJSON':_0x4d6a91(0x134),'BaseFEEDEX':'SOLUSDT','PAIRDEXS':[{'symbolPair':_0x4d6a91(0x168),'scAddressPair':_0x4d6a91(0x14d),'desPair':'6'},{'symbolPair':_0x4d6a91(0x124),'scAddressPair':_0x4d6a91(0x152),'desPair':'9'},{'symbolPair':'USDC','scAddressPair':_0x4d6a91(0x11e),'desPair':'6'}],'WALLET_CEX':{'GATE':{'address':_0x4d6a91(0x130),'address2':_0x4d6a91(0x141),'chainCEX':_0x4d6a91(0x124)},'BINANCE':{'address':_0x4d6a91(0x171),'address2':'2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S','chainCEX':'SOL'},'KUCOIN':{'address':_0x4d6a91(0x13b),'address2':_0x4d6a91(0x108),'chainCEX':_0x4d6a91(0x124)},'BITGET':{'address':_0x4d6a91(0x10b),'address2':'#','chainCEX':_0x4d6a91(0x124)},'BYBIT':{'address':_0x4d6a91(0x161),'address2':_0x4d6a91(0x114),'chainCEX':_0x4d6a91(0x124)}}}};function generateCheckboxes(_0x743dc3,_0x2b16a6,_0x26ccde){const _0x5caa4c=_0x4d6a91,_0x4313ed=document[_0x5caa4c(0x125)](_0x2b16a6);_0x4313ed[_0x5caa4c(0x154)]='',Object[_0x5caa4c(0x178)](_0x743dc3)[_0x5caa4c(0x176)](_0x161d6b=>{const _0x35d351=_0x5caa4c,_0x131a29=document['createElement'](_0x35d351(0x17c));_0x131a29[_0x35d351(0x15b)]=_0x35d351(0x112),_0x131a29[_0x35d351(0x10a)][_0x35d351(0x148)](_0x26ccde),_0x131a29['value']=_0x161d6b;const _0x4c847f=document[_0x35d351(0x116)]('label');_0x4c847f[_0x35d351(0x10a)][_0x35d351(0x148)](_0x35d351(0x15d),_0x2b16a6===_0x35d351(0x143)?_0x35d351(0x142):_0x35d351(0x17e)),_0x4c847f[_0x35d351(0x164)](_0x131a29),_0x4c847f[_0x35d351(0x164)](document[_0x35d351(0x17b)]('\x20'+_0x161d6b)),_0x4313ed['appendChild'](_0x4c847f);});}function _0x5534(){const _0x13c686=['0x03E6FA590CAdcf15A38e86158E9b3D06FF3399Ba','https://cryptologos.cc/logos/binance-logo.png','https://multiscan-ruby.vercel.app/erc20_multi.json','Chain\x20dengan\x20nama\x20','u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w','uk-text-secondary','cex-checkbox-container','base','#bb3dee','BNB','https://cryptologos.cc/logos/kucoin-logo.png','add','0xe2fc31F816A9b94326492132018C3aEcC4a93aE1','Polygon','#a05df6','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB','bsc','0x28C6c06298d514Db089934071355E5743bf21d60','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','ETHUSDT','So11111111111111111111111111111111111111112','PAIRDEXS','innerHTML','#f3b21b','https://cryptologos.cc/logos/bybit-logo.png','#1239e7','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','11343leZQFA','0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270','type','BASE','uk-form-label','ethereum','0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913','https://basescan.org/','AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2','ETH','#D5006D','appendChild','0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2','https://multiscan-ruby.vercel.app/pol_multi.json','#17181f','USDT','WALLET_CEX','245135iqKHYw','MATIC','https://multiscan-ruby.vercel.app/arb_multi.json','https://cryptologos.cc/logos/gateio-logo.png','ARB','3896wbQBlp','ArbitrumOne','28nYGHJyUVcVdxZtzKByBXEj127XnrUkrE3VaGuWj1ZU','0xf89d7b9c864f589bbF53a82105107622B35EaA40','0x290275e3db66394C52272398959845170E4DCb88','\x20tidak\x20ditemukan.','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','forEach','ERC20','keys','Polygon\x20POS','56hKCQfB','createTextNode','input','63982226IGNxRM','uk-text-danger','BSC','#536bd7','0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C','0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9','0xDFd5293D8e347dFe59E90eFd55b2956a1343963d','DATAJSON','EkUy8BB574iEVAQE9dywEiMhp9f2mFBuFu6TBKAkQxFY','414286FxLVmN','classList','A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR','0x55d398326f99059fF775485246999027B3197955','BASEEVM','https://arbiscan.io','BNT','https://solscan.io/','Arbitrum\x20One','checkbox','0x912ce59144191c1204e64559fe8253a0e49e6548','42brAgAVNzMBP7aaktPvAmBSPEkehnFQejiZc53EpJFd','0xdAC17F958D2ee523a2206206994597C13D831ec7','createElement','USDC','2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT','0x5bdf85216ec1e38d6458c870992a69e38e03f7ef','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','xxx','272ctSjLH','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v','ARBITRUM','Base','7140301JuSDRu','https://multiscan-ruby.vercel.app/bsc_multi.json','6UiaDPX','SOL','getElementById','12840870yCyAlH','0x8894E0a0c962CB723c1976a4421c95949bE2D4E3','0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','0x58edF78281334335EfFa23101bBe3371b6a36A51','0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48','BEP20','https://bscscan.com','log','0xaf88d065e77c8cC2239327C5EDb3A432268e5831','0x51971c86b04516062c1e708CDC048CB04fbe959f','HiRpdAZifEsZGdzQ5Xo5wcnaH3D2Jj9SoNsUzcYNK78J','POL','Polygon\x20PoS','651e1c4379c8be0001bab637','https://multiscan-ruby.vercel.app/sol_multi.json','Nama_Chain','BaseFEEDEX','ARBEVM','23121IoyDzu','URL_Chain','a184c3c1-65f2-4042-a043-c5c23c6ba258','BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6','c006zQZk7RSBh7lmCn'];_0x5534=function(){return _0x13c686;};return _0x5534();}function getChainData(_0x2c35ae){const _0x22818d=_0x4d6a91,_0x3b8efe=CONFIG_CHAINS[_0x2c35ae];if(!_0x3b8efe)return console[_0x22818d(0x12d)](_0x22818d(0x140)+_0x2c35ae+_0x22818d(0x174)),null;return{'Kode_Chain':_0x3b8efe['Kode_Chain'],'Nama_Chain':_0x3b8efe[_0x22818d(0x135)],'PAIRDEXS':_0x3b8efe[_0x22818d(0x153)],'URL_Chain':_0x3b8efe[_0x22818d(0x139)],'DATAJSON':_0x3b8efe[_0x22818d(0x107)],'BaseFEEDEX':_0x3b8efe[_0x22818d(0x136)],'CEXCHAIN':_0x3b8efe[_0x22818d(0x169)]};}
+
+const CONFIG_CEX = {
+    GATE: {
+        ApiKey: "d04cdb7f01e598b3493bda6aa913092b",
+        ApiSecret: "e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d",
+        color: "#D5006D",  // Pink tua
+        logoUrl: "https://cryptologos.cc/logos/gateio-logo.png"  // URL logo GATE
+    },
+    BINANCE: {
+        ApiKey: "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU",
+        ApiSecret: "XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn",
+        color: "#e0a50c",  // Orange tua
+        logoUrl: "https://cryptologos.cc/logos/binance-logo.png"  // URL logo BINANCE
+    },
+    KUCOIN: {
+        ApiKey: "651e1c4379c8be0001bab637",
+        ApiSecret: "a184c3c1-65f2-4042-a043-c5c23c6ba258",
+        ApiPassphrase: "Arekpinter123",
+        color: "#096309",  // Hijau tua
+        logoUrl: "https://cryptologos.cc/logos/kucoin-logo.png"  // URL logo KUCOIN
+    },
+    BYBIT: {
+        ApiKey: "c006zQZk7RSBh7lmCn",
+        ApiSecret: "2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT",
+        color: "#17181f",  // Hitam pekat
+        logoUrl: "https://cryptologos.cc/logos/bybit-logo.png"  // URL logo BYBIT
+    },
+    BITGET: {
+        ApiKey: "xxx", // Ganti dengan ApiKey asli
+        ApiSecret: "xxx", // Ganti dengan ApiSecret asli
+        color: "#1448ce",  // Biru muda
+        logoUrl: "https://cryptologos.cc/logos/bitget-logo.png"  // URL logo BITGET
+    }
+};
+
+
+const CONFIG_CHAINS = {
+    base: { 
+        Kode_Chain: 8453, 
+        Nama_Chain: "base", 
+        URL_Chain: "https://basescan.org/", 
+        color:"#1239e7",
+        DATAJSON: 'https://multiscan-ruby.vercel.app/base_multi.json',
+        BaseFEEDEX : "ETHUSDT",
+        WALLET_CEX: {
+            GATE: {
+                address: '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+                chainCEX: 'BASEEVM',
+            },
+            BINANCE: {
+                address: '0xDFd5293D8e347dFe59E90eFd55b2956a1343963d',
+                address2: '0x28C6c06298d514Db089934071355E5743bf21d60',
+                chainCEX: 'BASE',
+            },
+            KUCOIN: {
+                address: '0x58edF78281334335EfFa23101bBe3371b6a36A51',
+                address2: '0xD6216fC19DB775Df9774a6E33526131dA7D19a2c',
+                chainCEX: 'Base',
+            },
+            BYBIT: {
+                address: '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                address2: '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                chainCEX: 'BASE',
+            },
+            BITGET: {
+                address: '0x0639556F03714A74a5fEEaF5736a4A64fF70D206',
+                address2: '0x51971c86b04516062c1e708CDC048CB04fbe959f',
+                chainCEX: 'BASE',
+            }
+        },
+        PAIRDEXS: {
+           "USDT": {
+                symbolPair: 'USDT',
+                scAddressPair: '0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2',
+                desPair: '6',
+            },
+           "ETH": {
+                symbolPair: 'ETH',
+                scAddressPair: '0x4200000000000000000000000000000000000006',
+                desPair: '18',
+            },
+            "USDC":{
+                symbolPair: 'USDC',
+                scAddressPair: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+                desPair: '6',
+            }
+        }        
+    },   
+    polygon: { 
+        Kode_Chain: 137, 
+        Nama_Chain: "polygon", 
+        URL_Chain: "https://polygonscan.com", 
+        color:"#289eed",
+        DATAJSON: 'https://multiscan-ruby.vercel.app/pol_multi.json',
+        BaseFEEDEX : "POLUSDT",
+        WALLET_CEX: {
+           GATE: {
+               address : '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+               address2 : '#',
+               chainCEX : 'MATIC',
+           },
+           BINANCE: {
+               address : '0x290275e3db66394C52272398959845170E4DCb88',
+               address2 : '0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245',
+               chainCEX : 'MATIC',
+           },
+           KUCOIN: {
+               address : '0x9AC5637d295FEA4f51E086C329d791cC157B1C84',
+               address2 : '0xD6216fC19DB775Df9774a6E33526131dA7D19a2c',
+               chainCEX : 'Polygon POS',
+           }, 
+           BITGET: {
+               address : '0x0639556F03714A74a5fEEaF5736a4A64fF70D206',
+               address2 : '0x51971c86b04516062c1e708CDC048CB04fbe959f',
+               chainCEX : 'Polygon',
+           }, 
+           BYBIT: {
+               address : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+               address2 : '#',
+               chainCEX : 'Polygon PoS',
+           }, 
+        },
+        PAIRDEXS: {
+           "USDT": {
+                symbolPair: 'USDT',
+                scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
+                desPair: '6',
+            },
+           "POL": {
+                symbolPair: 'POL',
+                scAddressPair: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+                desPair: '18',
+            },
+            "USDC":{
+                symbolPair: 'USDC',
+                scAddressPair: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+                desPair: '6',
+            }
+        }
+    },
+    arbitrum: { 
+        Kode_Chain: 42161, 
+        Nama_Chain: "arbitrum", 
+        URL_Chain: "https://arbiscan.io" ,
+        color:"#a05df6",
+        DATAJSON: 'https://multiscan-ruby.vercel.app/arb_multi.json',
+        BaseFEEDEX : "ETHUSDT",
+        WALLET_CEX: {
+            GATE: {
+                address : '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+                address2 : '#',
+                chainCEX : 'ARBEVM',
+            },
+            BINANCE: {
+                address : '0x290275e3db66394C52272398959845170E4DCb88',
+                address2 : '0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245',
+                chainCEX : 'ARBITRUM',
+            },
+            KUCOIN: {
+                address : '0x03E6FA590CAdcf15A38e86158E9b3D06FF3399Ba',
+                address2 : '#',
+                chainCEX : 'ARBITRUM',
+            }, 
+            BITGET: {
+                address : '0x5bdf85216ec1e38d6458c870992a69e38e03f7ef',
+                address2 : '#',
+                chainCEX : 'ArbitrumOne',
+            }, 
+            BYBIT: {
+                address : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                address2 : '#',
+                chainCEX : 'Arbitrum One',
+            }, 
+        },
+        PAIRDEXS: {  
+                "ARB":{
+                    symbolPair: 'ARB',
+                    scAddressPair: '0x912ce59144191c1204e64559fe8253a0e49e6548',
+                    desPair: '18',
+                },
+                "USDT":{
+                    symbolPair: 'USDT',
+                    scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+                    desPair: '6',
+                },
+                "USDC":{
+                    symbolPair: 'USDC',
+                    scAddressPair: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
+                    desPair: '6',
+                }
+            },           
+    },
+    ethereum: { 
+        Kode_Chain: 1, 
+        Nama_Chain: "ethereum", 
+        URL_Chain: "https://etherscan.io" ,
+        color:"#536bd7",
+        DATAJSON: 'https://multiscan-ruby.vercel.app/erc20_multi.json',
+        BaseFEEDEX : "ETHUSDT",
+          WALLET_CEX: {
+            GATE: {
+                address : '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+                address2 : '#',
+                chainCEX : 'ETH',
+            },
+            BINANCE: {
+                address : '0xDFd5293D8e347dFe59E90eFd55b2956a1343963d',
+                address2 : '0x28C6c06298d514Db089934071355E5743bf21d60',
+                chainCEX : 'ETH',
+            },
+            KUCOIN: {
+                address : '0x58edF78281334335EfFa23101bBe3371b6a36A51',
+                address2 : '0xD6216fC19DB775Df9774a6E33526131dA7D19a2c',
+                chainCEX : 'ERC20',
+            }, 
+            BITGET: {
+                address : '0x0639556F03714A74a5fEEaF5736a4A64fF70D206',
+                address2 : '0x51971c86b04516062c1e708CDC048CB04fbe959f',
+                chainCEX : 'ERC20',
+            }, 
+            BYBIT: {
+                address : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                address2 : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                chainCEX : 'ETH',
+            }, 
+          },
+        PAIRDEXS: {  
+            "ETH":{
+                symbolPair: 'ETH',
+                scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+                desPair: '18',
+            },
+            "USDT":{
+                symbolPair: 'USDT',
+                scAddressPair: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+                desPair: '6',
+            },
+            "BNT":{
+                symbolPair: 'BNT',
+                scAddressPair: '0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C',
+                desPair: '18',
+            },
+            "USDC":{
+                symbolPair: 'USDC',
+                scAddressPair: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+                desPair: '6',
+            }
+        } 
+    },
+    bsc: { 
+        Kode_Chain: 56, 
+        Nama_Chain: "bsc", 
+        URL_Chain: "https://bscscan.com" , 
+        color:"#f3b21b",
+        DATAJSON: 'https://multiscan-ruby.vercel.app/bsc_multi.json',
+        BaseFEEDEX : "BNBUSDT",
+        WALLET_CEX: {
+          GATE: {
+             address : '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+             address2 : '#',
+             chainCEX : 'BSC',
+         },
+         BINANCE: {
+             address : '0x8894E0a0c962CB723c1976a4421c95949bE2D4E3',
+             address2 : '0xe2fc31F816A9b94326492132018C3aEcC4a93aE1',
+             chainCEX : 'BSC',
+         },
+         KUCOIN: {
+             address : '0x58edF78281334335EfFa23101bBe3371b6a36A51',
+             address2 : '0xD6216fC19DB775Df9774a6E33526131dA7D19a2c',
+             chainCEX : 'BEP20',
+         }, 
+         BITGET: {
+             address : '0x0639556F03714A74a5fEEaF5736a4A64fF70D206',
+             address2 : '0x51971c86b04516062c1e708CDC048CB04fbe959f',
+             chainCEX : 'BEP20',
+         }, 
+         BYBIT: {
+             address : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+             address2 : '#',
+             chainCEX : 'BSC',
+         }, 
+     },
+        PAIRDEXS: {
+            "USDT":{
+                symbolPair: 'USDT',
+                scAddressPair: '0x55d398326f99059fF775485246999027B3197955',
+                desPair: '18',
+            },
+            "BNB":{
+                symbolPair: 'BNB',
+                scAddressPair: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+                desPair: '18',
+            }
+        }
+    },
+    solana: { 
+        Kode_Chain: 501, 
+        Nama_Chain: "solana", 
+        URL_Chain: "https://solscan.io/" , 
+        color:"#bb3dee",
+        DATAJSON: 'https://multiscan-ruby.vercel.app/sol_multi.json',
+        BaseFEEDEX : "SOLUSDT",
+        PAIRDEXS: [  
+           
+            {
+                symbolPair: 'USDT',
+                scAddressPair: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
+                desPair: '6',
+            },
+            {
+                symbolPair: 'SOL',
+                scAddressPair: 'So11111111111111111111111111111111111111112',
+                desPair: '9',
+            },
+            {
+                symbolPair: 'USDC',
+                scAddressPair: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+                desPair: '6',
+            }
+        ],
+          WALLET_CEX: { 
+            GATE: {
+                address : 'HiRpdAZifEsZGdzQ5Xo5wcnaH3D2Jj9SoNsUzcYNK78J',
+                address2 : 'u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w',
+                chainCEX : 'SOL',
+            },
+            BINANCE: {
+                address : '28nYGHJyUVcVdxZtzKByBXEj127XnrUkrE3VaGuWj1ZU',
+                address2 : '2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S',
+                chainCEX : 'SOL',
+            },
+            KUCOIN: {
+                address : 'BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6',
+                address2 : 'EkUy8BB574iEVAQE9dywEiMhp9f2mFBuFu6TBKAkQxFY',
+                chainCEX : 'SOL',
+            }, 
+            BITGET: {
+                address : 'A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR',
+                address2 : '#',
+                chainCEX : 'SOL',
+            }, 
+            BYBIT: {
+                address : 'AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2',
+                address2 : '42brAgAVNzMBP7aaktPvAmBSPEkehnFQejiZc53EpJFd',
+                chainCEX : 'SOL',
+            }, 
+        }
+    },
+    
+};
+
+
+//SETTING GLOBAL CHAIN, 
+function generateCheckboxes(config, containerId, checkboxClass) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; // Bersihkan container
+
+    // Iterasi melalui setiap key di konfigurasi (CEX atau DEX)
+    Object.keys(config).forEach(symbol => {
+        // Buat elemen checkbox
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.classList.add(checkboxClass);
+        checkbox.value = symbol;
+
+        // Buat label untuk checkbox
+        const label = document.createElement('label');
+        label.classList.add('uk-form-label', containerId === "cex-checkbox-container" ? 'uk-text-secondary' : 'uk-text-danger');
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(` ${symbol}`));
+
+        // Tambahkan checkbox ke container
+        container.appendChild(label);
+    });
+}
+
+// Fungsi untuk mendapatkan data chain berdasarkan nama chain
+function getChainData(chainName) {
+    const chainData = CONFIG_CHAINS[chainName]; // base
+    
+    if (!chainData) {
+        console.log(`Chain dengan nama ${chainName} tidak ditemukan.`);
+        return null;
+    }
+
+    return {
+        Kode_Chain: chainData.Kode_Chain,
+        Nama_Chain: chainData.Nama_Chain,
+        PAIRDEXS: chainData.PAIRDEXS,
+        URL_Chain: chainData.URL_Chain, 
+        DATAJSON: chainData.DATAJSON, 
+        BaseFEEDEX: chainData.BaseFEEDEX, 
+        CEXCHAIN: chainData.WALLET_CEX,
+    };
+}
