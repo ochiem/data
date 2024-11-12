@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <link rel="icon" href="https://strapi.mewapi.io/uploads/large_Base_Symbol_Blue_ee3f3fb0a5.png" type="image/x-icon">
-    <script src="CONFIG.js"></script>
+    <script src="config.js"></script>
     <style>
         #scanprogress {
            font-size: 16px;
@@ -521,8 +521,8 @@
         const chainName = 'base'; // ganti dengan nama chain lain seperti 'polygon', 'arbitrum', dll.
         const DTChain = getChainData(chainName);
 
-        console.log(`Data untuk chain ${chainName}:`, DTChain);                
-        console.log(`Data untuk CONFIG CEX `, CONFIG_CEX); 
+        //console.log(`Data untuk chain ${chainName}:`, DTChain);                
+        //console.log(`Data untuk CONFIG CEX `, CONFIG_CEX); 
         // Panggil fungsi untuk menghasilkan checkbox untuk CEX dan DEX
         generateCheckboxes(CONFIG_CEX, "cex-checkbox-container", "cex-checkbox");
         generateCheckboxes(DTChain.PAIRDEXS, "dexpair-checkbox-container", "dexpair-checkbox");
