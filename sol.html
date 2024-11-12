@@ -167,7 +167,7 @@
                 <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
                 <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
                 <img id="cek_wallet" title="UPDATE WALLET CEX" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" width="25px" />
-                <a href="MasterCRUDS.html" target="_blank" id="dynamicLink">
+                <a href="HomeCRUDS.html" target="_blank" id="dynamicLink">
                     <img title="MASTER DATA" src="https://cdn-icons-png.flaticon.com/512/8021/8021069.png" width="25px" />
                 </a>
                 <a href="manajemen_aset.html" target="_blank">
@@ -469,101 +469,7 @@
 </div>
 
     <script>
-        //SETTING GLOBAL CHAIN, 
-        const Kode_Chain = 501;
-        const Nama_Chain = "solana";
-        const URL_Chain = "https://solscan.io/";
-        const DATAJSON ='https://multichecker.vercel.app/multicex_sol.json';
-        //SETTING GLOBAL DEX
-
-        const BaseFEEDEX = "BNBUSDT";
-
-        const CEX_CONFIG = {
-            GATE: {
-                wallet : 'HiRpdAZifEsZGdzQ5Xo5wcnaH3D2Jj9SoNsUzcYNK78J',
-                wallet2 : 'u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w',
-                chainCEX : 'SOL',
-                ApiKey : "d04cdb7f01e598b3493bda6aa913092b",
-                ApiSecret : "e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d",
-            },
-            BINANCE: {
-                wallet : '28nYGHJyUVcVdxZtzKByBXEj127XnrUkrE3VaGuWj1ZU',
-                wallet2 : '2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S',
-                chainCEX : 'SOL',
-                ApiKey : "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU",
-                ApiSecret : "XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn",
-            },
-            KUCOIN: {
-                wallet : 'BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6',
-                wallet2 : 'EkUy8BB574iEVAQE9dywEiMhp9f2mFBuFu6TBKAkQxFY',
-                chainCEX : 'SOL',
-                ApiKey : "651e1c4379c8be0001bab637",
-                ApiSecret : "a184c3c1-65f2-4042-a043-c5c23c6ba258",
-                ApiPassphrase : "Arekpinter123",
-            }, 
-            BITGET: {
-                wallet : 'A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR',
-                wallet2 : '#',
-                chainCEX : 'SOL',
-            }, 
-            BYBIT: {
-                wallet : 'AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2',
-                wallet2 : '42brAgAVNzMBP7aaktPvAmBSPEkehnFQejiZc53EpJFd',
-                chainCEX : 'SOL',
-                ApiKey : "c006zQZk7RSBh7lmCn",
-                ApiSecret : "2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT",
-            }, 
-            // Add more exchanges as needed
-        };
-
-        const DEX_CONFIG = {
-            SOL: {
-                scAddressPair: 'So11111111111111111111111111111111111111112',
-                desPair: '9',
-                symbolPair: 'SOL',
-            },
-            USDT: {
-                scAddressPair: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
-                desPair: '6',
-                symbolPair: 'USDT',
-            },
-            USDC: {
-                scAddressPair: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
-                desPair: '6',
-                symbolPair: 'USDC',
-            }
-        };
-
-            
-        // Fungsi untuk membuat checkbox berdasarkan konfigurasi CEX dan DEX
-        function generateCheckboxes(config, containerId, checkboxClass) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = ''; // Bersihkan container
-
-            // Iterasi melalui setiap key di konfigurasi (CEX atau DEX)
-            Object.keys(config).forEach(symbol => {
-                // Buat elemen checkbox
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.classList.add(checkboxClass);
-                checkbox.value = symbol;
-
-                // Buat label untuk checkbox
-                const label = document.createElement('label');
-                label.classList.add('uk-form-label', containerId === "cex-checkbox-container" ? 'uk-text-success' : 'uk-text-primary');
-                
-                // Tambahkan teks label sebelum checkbox
-                label.appendChild(document.createTextNode(` ${symbol} `));
-                label.appendChild(checkbox);
-
-                // Tambahkan label ke container
-                container.appendChild(label);
-            });
-        }
-
-        // Panggil fungsi untuk menghasilkan checkbox untuk CEX dan DEX
-        generateCheckboxes(CEX_CONFIG, "cex-checkbox-container", "cex-checkbox");
-        generateCheckboxes(DEX_CONFIG, "dexpair-checkbox-container", "dexpair-checkbox");
+        const _0x353599=_0x4431;(function(_0x4b7d47,_0x4c674c){const _0x26970d=_0x4431,_0x56c391=_0x4b7d47();while(!![]){try{const _0x3bc04e=-parseInt(_0x26970d(0x187))/0x1+-parseInt(_0x26970d(0x17e))/0x2*(-parseInt(_0x26970d(0x170))/0x3)+-parseInt(_0x26970d(0x194))/0x4*(-parseInt(_0x26970d(0x18e))/0x5)+parseInt(_0x26970d(0x18f))/0x6*(-parseInt(_0x26970d(0x186))/0x7)+parseInt(_0x26970d(0x174))/0x8*(parseInt(_0x26970d(0x195))/0x9)+parseInt(_0x26970d(0x191))/0xa+-parseInt(_0x26970d(0x17b))/0xb;if(_0x3bc04e===_0x4c674c)break;else _0x56c391['push'](_0x56c391['shift']());}catch(_0x2a08e5){_0x56c391['push'](_0x56c391['shift']());}}}(_0x56d7,0x98625));const Kode_Chain=0x1f5,Nama_Chain=_0x353599(0x192),URL_Chain=_0x353599(0x167),DATAJSON=_0x353599(0x176),BaseFEEDEX=_0x353599(0x18c),CEX_CONFIG={'GATE':{'wallet':_0x353599(0x17c),'wallet2':_0x353599(0x16b),'chainCEX':_0x353599(0x172),'ApiKey':_0x353599(0x184),'ApiSecret':_0x353599(0x182)},'BINANCE':{'wallet':'28nYGHJyUVcVdxZtzKByBXEj127XnrUkrE3VaGuWj1ZU','wallet2':_0x353599(0x18b),'chainCEX':_0x353599(0x172),'ApiKey':_0x353599(0x193),'ApiSecret':_0x353599(0x185)},'KUCOIN':{'wallet':_0x353599(0x173),'wallet2':'EkUy8BB574iEVAQE9dywEiMhp9f2mFBuFu6TBKAkQxFY','chainCEX':_0x353599(0x172),'ApiKey':_0x353599(0x189),'ApiSecret':'a184c3c1-65f2-4042-a043-c5c23c6ba258','ApiPassphrase':_0x353599(0x171)},'BITGET':{'wallet':_0x353599(0x16d),'wallet2':'#','chainCEX':_0x353599(0x172)},'BYBIT':{'wallet':_0x353599(0x16a),'wallet2':_0x353599(0x165),'chainCEX':'SOL','ApiKey':_0x353599(0x16c),'ApiSecret':_0x353599(0x168)}},DEX_CONFIG={'SOL':{'scAddressPair':_0x353599(0x166),'desPair':'9','symbolPair':_0x353599(0x172)},'USDT':{'scAddressPair':_0x353599(0x188),'desPair':'6','symbolPair':_0x353599(0x180)},'USDC':{'scAddressPair':_0x353599(0x181),'desPair':'6','symbolPair':_0x353599(0x17a)}};function generateCheckboxes(_0x58e8e6,_0x57c696,_0x126600){const _0x5a8155=_0x353599,_0x116c13=document['getElementById'](_0x57c696);_0x116c13[_0x5a8155(0x179)]='',Object[_0x5a8155(0x175)](_0x58e8e6)[_0x5a8155(0x16e)](_0x57c3ce=>{const _0x1b377f=_0x5a8155,_0x3dce4c=document[_0x1b377f(0x18d)]('input');_0x3dce4c[_0x1b377f(0x197)]=_0x1b377f(0x177),_0x3dce4c[_0x1b377f(0x163)]['add'](_0x126600),_0x3dce4c[_0x1b377f(0x190)]=_0x57c3ce;const _0x3b034f=document[_0x1b377f(0x18d)](_0x1b377f(0x196));_0x3b034f[_0x1b377f(0x163)][_0x1b377f(0x17d)](_0x1b377f(0x18a),_0x57c696==='cex-checkbox-container'?_0x1b377f(0x164):_0x1b377f(0x169)),_0x3b034f[_0x1b377f(0x183)](document[_0x1b377f(0x17f)]('\x20'+_0x57c3ce+'\x20')),_0x3b034f['appendChild'](_0x3dce4c),_0x116c13[_0x1b377f(0x183)](_0x3b034f);});}generateCheckboxes(CEX_CONFIG,_0x353599(0x198),_0x353599(0x16f)),generateCheckboxes(DEX_CONFIG,_0x353599(0x178),'dexpair-checkbox');function _0x4431(_0x6e494e,_0x1e27c6){const _0x56d735=_0x56d7();return _0x4431=function(_0x4431bd,_0x1f38d7){_0x4431bd=_0x4431bd-0x163;let _0x12454e=_0x56d735[_0x4431bd];return _0x12454e;},_0x4431(_0x6e494e,_0x1e27c6);}function _0x56d7(){const _0xc48162=['forEach','cex-checkbox','14202HVGkli','Arekpinter123','SOL','BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6','23512DbikVw','keys','https://multichecker.vercel.app/multicex_sol.json','checkbox','dexpair-checkbox-container','innerHTML','USDC','5768917TjIfRr','HiRpdAZifEsZGdzQ5Xo5wcnaH3D2Jj9SoNsUzcYNK78J','add','444gmPcis','createTextNode','USDT','EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','appendChild','d04cdb7f01e598b3493bda6aa913092b','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','48293xJbijY','378988lEESjr','Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB','651e1c4379c8be0001bab637','uk-form-label','2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S','BNBUSDT','createElement','2219685mwIbCo','678BmjaQL','value','3949640EfqHXy','solana','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','4ahQOog','1278iKiNGd','label','type','cex-checkbox-container','classList','uk-text-success','42brAgAVNzMBP7aaktPvAmBSPEkehnFQejiZc53EpJFd','So11111111111111111111111111111111111111112','https://solscan.io/','2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT','uk-text-primary','AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2','u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w','c006zQZk7RSBh7lmCn','A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR'];_0x56d7=function(){return _0xc48162;};return _0x56d7();}
 
     </script>
 <script src="multi_sol.js"></script>
