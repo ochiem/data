@@ -973,7 +973,6 @@ $(document).ready(function () {
     function CekfeeWDGATE() {
         var key = CONFIG_CEX.GATE.ApiKey;
         var secret = CONFIG_CEX.GATE.ApiSecret;
-    console.warn("key : "+key+" secret : "+secret)
         var host = "https://proxykanan.awokawok.workers.dev/?https://api.gateio.ws";
         var prefix = "/api/v4";
         var method = "GET";
@@ -1002,7 +1001,7 @@ $(document).ready(function () {
                 var filteredData = response.map(function(item) {
                     return {
                         currency: item.currency,
-                        feeWD: item.withdraw_fix_on_chains && item.withdraw_fix_on_chains[CEXCHAIN.GATE.chainCEX] ? item.withdraw_fix_on_chains[CEXCHAIN.GATE.chainCEX] : null
+                        feeWD: item.withdraw_fix_on_chains && item.withdraw_fix_on_chains[DTChain.CEXCHAIN.GATE.chainCEX] ? item.withdraw_fix_on_chains[DTChain.CEXCHAIN.GATE.chainCEX] : null
                     };
                 }).filter(function(item) {
                     return item.currency && item.feeWD;
