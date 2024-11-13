@@ -11,68 +11,128 @@
     <link rel="icon" href="https://icons-for-free.com/iff/png/512/bitcoin-1324760528788003758.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 </head>
+<style>
+     .uk-container {
+            width: 86%;
+            max-width: none;
+        }
+        .uk-table th {
+            vertical-align: middle;
+            background-color: #54da55;
+            color: black;
+            font-weight: bolder;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+</style>
+
 <body>
     <div class="uk-container uk-margin-top">
-        <h2 class="uk-heading-line"><span>Check Assets Wallet</span></h2>
+        <h2 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 20px;"><span>MANAJEMEN ASET</span></h2>
         
-        <div class="uk-grid uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-margin">
-            <div>
-                <input type="checkbox" id="ethCheck">
-                <label for="ethWallet">Ethereum</label>
-                <input class="uk-input" type="text" id="ethWallet" placeholder="Enter Ethereum Wallet Address">
+        <!-- Grid Layout for Left and Right Sections -->
+        <div class="uk-grid uk-grid-small" uk-grid>
+            <!-- Left Section for Wallet Input -->
+            <div class="uk-width-1-2@s uk-width-4-12@m">
+                <h4 class="uk-heading-line"><span>Setting Wallet & Saldo All Chains</span></h4>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox"  id="ethCheck" />&nbsp;
+                            <label class="form-check-label" for="ethWallet">ETHEREUM</label>
+                        </div>
+                    </div>
+                    <input class="form-control" type="text" id="ethWallet" placeholder="Enter Ethereum Wallet Address">
+                </div>
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox"  id="bscCheck" />&nbsp;
+                            <label class="form-check-label" for="bscWallet">BSC</label>
+                        </div>
+                    </div>
+                    <input class="form-control" type="text" id="bscWallet" placeholder="Enter BSC Wallet Address">
+                </div>
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox"  id="polygonCheck" />&nbsp;
+                            <label class="form-check-label" for="polygonWallet">POLYGON</label>
+                        </div>
+                    </div>
+                    <input class="form-control" type="text" id="polygonWallet" placeholder="Enter Polygon Wallet Address">
+                </div>
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox"  id="baseCheck" />&nbsp;
+                            <label class="form-check-label" for="baseWallet">BASE</label>
+                        </div>
+                    </div>
+                    <input class="form-control" type="text" id="baseWallet" placeholder="Enter Base Wallet Address">
+                </div>
+
+                <div class="input-group mb-2" >
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox"  id="arbitrumCheck" />&nbsp;
+                            <label class="form-check-label" for="arbitrumWallet">ARBITRUM</label>
+                        </div>
+                    </div>
+                    <input class="form-control" type="text" id="arbitrumWallet" placeholder="Enter Arbitrum Wallet Address">
+                </div>
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox"  id="solanaCheck" />&nbsp;
+                            <label class="form-check-label" for="solanaWallet">SOLANA</label>
+                        </div>
+                    </div>
+                    <input class="form-control" type="text" id="solanaWallet" placeholder="Enter Solana Wallet Address">
+                </div>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                    </div>
+                    <button class="uk-button uk-button-primary uk-margin-top" id="checkAssetsWallet">Check Wallets</button>
+                </div>
+
             </div>
-            <div>
-                <input type="checkbox" id="bscCheck">
-                <label for="bscWallet">BSC (Binance Smart Chain)</label>
-                <input class="uk-input" type="text" id="bscWallet" placeholder="Enter BSC Wallet Address">
+
+            <!-- Right Section for CEX Input -->
+            <div class="uk-width-1-2@s uk-width-8-12@m">
+                <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTableWallet" style="display:none;">
+                    <thead >
+                        <tr >
+                            <th>Chain</th>
+                            <th>ASSET</th>
+                            <th>GAS {USDT}</th>
+                            <th>TOTAL</th>
+                        </tr>                       
+                    </thead>
+                    <tbody id="output_chain"></tbody>
+                    <tr >
+                        <th colspan="3" >Total USDT</th>
+                        <th  ><span id="TotalBalanceWallets"></span>$</th>
+                    </tr>
+                </table>                             
             </div>
-            <div>
-                <input type="checkbox" id="polygonCheck">
-                <label for="polygonWallet">Polygon</label>
-                <input class="uk-input" type="text" id="polygonWallet" placeholder="Enter Polygon Wallet Address">
-            </div>
-            <div>
-                <input type="checkbox" id="baseCheck">
-                <label for="baseWallet">Base</label>
-                <input class="uk-input" type="text" id="baseWallet" placeholder="Enter Base Wallet Address">
-            </div>
-            <div>
-                <input type="checkbox" id="arbitrumCheck">
-                <label for="arbitrumWallet">Arbitrum</label>
-                <input class="uk-input" type="text" id="arbitrumWallet" placeholder="Enter Arbitrum Wallet Address">
-            </div>
-            <div>
-                <input type="checkbox" id="solanaCheck">
-                <label for="solanaWallet">Solana</label>
-                <input class="uk-input" type="text" id="solanaWallet" placeholder="Enter Solana Wallet Address">
-            </div>
-            
+
         </div>
-        <a href="https://cors-anywhere.herokuapp.com/corsdemo" title="klik disini untuk buka akses bitget" target="_blank">
-            <i class="bi bi-file-lock"></i> 
-        </a>
+       <hr/>
 
-        <button class="uk-button uk-button-primary uk-margin-top" id="checkAssets">Check & Reload</button>
-
-        <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTable" style="display:none;">
-            <thead>
-                <tr>
-                    <th>Chain</th>
-                    <th>Wallet</th>
-                    <th>ASSET</th>
-                    <th>GAS CHAIN</th>
-                    <th>USDT-GAS</th>
-                    <th>TOTAL</th>
-                </tr>
-            </thead>
-            <tbody id="output"></tbody>
-        </table>
     </div>
 
     <script>  
-        $(document).ready(function() {
+        $(document).ready(function () {
             const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631'; // Ganti dengan API Key Infura Anda
           
             const chains = {
@@ -92,34 +152,106 @@
                 arbitrum: '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9', // USDT Arbitrum
                 solana: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB' // USDT SPL Token Solana
             };
-    
-            // Load saved settings from localStorage
-            function loadSettings() {
-                ['eth', 'bsc', 'polygon', 'base', 'arbitrum','solana'].forEach(chain => {
-                    if (localStorage.getItem(`mw_${chain}Check`) === 'true') {
-                        $(`#${chain}Check`).prop('checked', true);
-                    }
-                    const savedAddress = localStorage.getItem(`mw_${chain}Wallet`);
-                    if (savedAddress) {
-                        $(`#${chain}Wallet`).val(savedAddress);
-                    }
+            // Daftar jaringan dengan checkbox dan input terkait
+            const networks = [
+                    { checkboxId: 'ethCheck', inputId: 'ethWallet' },
+                    { checkboxId: 'bscCheck', inputId: 'bscWallet' },
+                    { checkboxId: 'polygonCheck', inputId: 'polygonWallet' },
+                    { checkboxId: 'baseCheck', inputId: 'baseWallet' },
+                    { checkboxId: 'arbitrumCheck', inputId: 'arbitrumWallet' },
+                    { checkboxId: 'solanaCheck', inputId: 'solanaWallet' }
+                ];
+
+            // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
+            function loadData() {
+                // Mengatur status checkbox dan nilai input berdasarkan data di localStorage
+                $('input[type="checkbox"]').each(function() {
+                    const checkbox = $(this);
+                    const id = checkbox.attr('id');
+
+                    // Ambil status checkbox dari localStorage, default unchecked jika tidak ada data
+                    const isChecked = localStorage.getItem(`am_${id}`) === 'true';
+                    checkbox.prop('checked', isChecked);
+
+                    // Aktifkan atau nonaktifkan input sesuai dengan status checkbox
+                    const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
+                    relatedInputs.prop('disabled', !isChecked);
+
+                    // Set nilai input dari localStorage jika ada
+                    relatedInputs.each(function() {
+                        const input = $(this);
+                        const inputId = input.attr('id');
+                        const savedValue = localStorage.getItem(`am_${inputId}`);
+                        if (savedValue !== null) {
+                            input.val(savedValue);
+                        }
+                    });
                 });
+
+                // Memuat data hasil pengecekan aset dari localStorage dan menampilkannya di tabel
+                const assetData = JSON.parse(localStorage.getItem('am_assetData'));
+                if (assetData && assetData.length > 0) {
+                    // Render data tabel
+                    $('#output_chain').html(
+                        assetData.map(row => `
+                            <tr>
+                                <td>${row.chain}</td>                                      
+                                <td>${row.asset} USDT</td>
+                                <td>${row.usdtGas} USDT</td>
+                                <td>${row.total} USDT</td>
+                            </tr>
+                        `).join('')
+                    );
+
+                    // Tampilkan tabel jika ada data
+                    $('#assetTableWallet').show();
+
+                    // Hitung total saldo USDT dari semua chain
+                    const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
+                    $('#TotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan total saldo di elemen ini
+                }
             }
-    
-            // Save settings to localStorage
-            function saveSettings() {
-                ['eth', 'bsc', 'polygon', 'base', 'arbitrum','solana'].forEach(chain => {
-                    localStorage.setItem(`mw_${chain}Check`, $(`#${chain}Check`).is(':checked'));
-                    localStorage.setItem(`mw_${chain}Wallet`, $(`#${chain}Wallet`).val());
+
+            // Memanggil loadData saat halaman pertama kali di-load
+            loadData();
+
+
+            // Simpan status checkbox dan nilai input saat terjadi perubahan
+            $('input[type="checkbox"]').on('change', function () {
+                const checkbox = $(this);
+                const id = checkbox.attr('id');
+                const isChecked = checkbox.prop('checked');
+
+                // Simpan status checkbox ke localStorage
+                localStorage.setItem(`am_${id}`, isChecked);
+
+                // Temukan input terkait dan aktifkan atau nonaktifkan
+                const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
+                relatedInputs.prop('disabled', !isChecked);
+
+                // Simpan nilai input ke localStorage jika checkbox dicentang
+                relatedInputs.each(function() {
+                    const input = $(this);
+                    const inputId = input.attr('id');
+                    if (isChecked) {
+                        localStorage.setItem(`am_${inputId}`, input.val());
+                    } 
+                    toastr.success("Ganti Status Berhasil");
                 });
-            }
-    
-            // Initial load settings
-            loadSettings();
-    
-            $('#checkAssets').on('click', async function() {
-                saveSettings(); // Save settings on button click
-    
+            });
+
+            // Simpan nilai input ketika ada perubahan
+            $('input[type="text"], input[type="number"]').on('input', function () {
+                const input = $(this);
+                const inputId = input.attr('id');
+                const value = input.val();
+
+                // Simpan nilai input ke localStorage
+                localStorage.setItem(`am_${inputId}`, value);
+               // toastr.info("Perubahan Data Telah Simpan!");
+            });
+            
+            $('#checkAssetsWallet').on('click', async function() {
                 const selectedChains = {
                     ethereum: $('#ethCheck').is(':checked') ? $('#ethWallet').val() : null,
                     bsc: $('#bscCheck').is(':checked') ? $('#bscWallet').val() : null,
@@ -128,123 +260,153 @@
                     arbitrum: $('#arbitrumCheck').is(':checked') ? $('#arbitrumWallet').val() : null,
                     solana: $('#solanaCheck').is(':checked') ? $('#solanaWallet').val() : null
                 };
-    
+
                 const validChains = Object.keys(selectedChains).filter(chain => selectedChains[chain]);
-    
+
                 if (validChains.length === 0) {
-                    $('#output').html('<tr><td colspan="4">Please select at least one chain.</td></tr>');
-                    $('#assetTable').show();
+                    $('#output_chain').html('<tr><td colspan="4">Please select at least one chain.</td></tr>');
+                    $('#assetTableWallet').show();
                     return;
                 }
-    
-                $('#output').html('<tr><td colspan="4">Loading...</td></tr>');
-                $('#assetTable').show();
-    
+
+                $('#output_chain').html('<tr><td colspan="4">Loading...</td></tr>');
+                $('#assetTableWallet').show();
+
                 try {
                     const tokenRates = await fetchTokenRates();
-    
+
                     const results = await Promise.all(validChains.map(chain => 
                         chain === 'solana' 
                             ? getSolanaBalance(selectedChains[chain], tokenRates)
                             : getAssetBalances(chains[chain], erc20Contracts[chain], selectedChains[chain], chain, tokenRates)
                     ));
-    
-                    $('#output').html(results.join(''));
+
+                    $('#output_chain').html(results.join(''));
+
+                    // Menyimpan data per chain di localStorage
+                    const assetData = results.map(result => {
+                        // Ambil data dari hasil response
+                        const [chain, asset, gas, usdtGas, total] = result.match(/<td>(.*?)<\/td>/g).map(td => td.replace(/<\/?td>/g, ''));
+
+                        // Konversi nilai menjadi angka
+                        const parsedAsset = parseFloat(asset);
+                        const parsedGas = parseFloat(gas);
+                        const parsedUsdtGas = parseFloat(usdtGas) || 0;
+                        const parsedTotal = parseFloat(total) || 0;
+
+                        // Hitung total (total_usdt + total_gas) jika perlu
+                        const total_usdt = parsedTotal + parsedUsdtGas;
+
+                        // Simpan data ke dalam objek yang lebih mudah digunakan untuk perhitungan
+                        return { 
+                            chain,
+                            asset: parsedAsset,
+                            gas: parsedGas,
+                            usdtGas: parsedUsdtGas,
+                            total: total_usdt // Total dihitung sebagai penjumlahan
+                        };
+                    });
+
+                    // Menyimpan data asset chain di localStorage
+                    localStorage.setItem('am_assetData', JSON.stringify(assetData));
+
+                    // Hitung dan tampilkan total saldo USDT (hasil penjumlahan total dari semua chain)
+                    const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
+                    $('#TotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan hasil pada elemen
+
                 } catch (error) {
-                    $('#output').html(`<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`);
+                    $('#output_chain').html(`<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`);
                 }
             });
-    
+
+            // Fungsi getAssetBalances
             async function getAssetBalances(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
-            try {
-                const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-                const erc20Abi = ["function balanceOf(address owner) view returns (uint256)"];
-                const contract = new ethers.Contract(contractAddress, erc20Abi, provider);
+                try {
+                    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+                    const erc20Abi = ["function balanceOf(address owner) view returns (uint256)"];
+                    const contract = new ethers.Contract(contractAddress, erc20Abi, provider);
 
-                const balance = await contract.balanceOf(walletAddress);
+                    const balance = await contract.balanceOf(walletAddress);
 
-                // Menentukan jumlah desimal berdasarkan jaringan
-                let decimals;
-                let tokenSymbol;
-                if (networkName === 'bsc') {
-                    decimals = 18;  
-                    tokenSymbol = 'USDT'; // BSC menggunakan USDT dengan desimal 18
-                } else if (networkName === 'base') {
-                    decimals = 6;   
-                    tokenSymbol = 'USDC'; // Base menggunakan USDC dengan desimal 6
-                } else {
-                    decimals = 6;   // Polygon, Arbitrum, Ethereum menggunakan 6 desimal
-                    tokenSymbol = 'USDT'; // Default menggunakan USDT
+                    // Menentukan jumlah desimal berdasarkan jaringan
+                    let decimals;
+                    let tokenSymbol;
+                    if (networkName === 'bsc') {
+                        decimals = 18;  
+                        tokenSymbol = 'USDT'; // BSC menggunakan USDT dengan desimal 18
+                    } else if (networkName === 'base') {
+                        decimals = 6;   
+                        tokenSymbol = 'USDC'; // Base menggunakan USDC dengan desimal 6
+                    } else {
+                        decimals = 6;   // Polygon, Arbitrum, Ethereum menggunakan 6 desimal
+                        tokenSymbol = 'USDT'; // Default menggunakan USDT
+                    }
+
+                    // Format saldo sesuai dengan desimal yang benar dan pastikan menggunakan token yang sesuai
+                    const formattedBalance = parseFloat(ethers.utils.formatUnits(balance, decimals)).toFixed(2);
+
+                    // Mendapatkan saldo gas (ETH, BNB, MATIC, dll.)
+                    const gasBalance = await provider.getBalance(walletAddress);
+                    let gasToken;
+                    let formattedGasBalance;
+
+                    // Menentukan token gas sesuai dengan jaringan
+                    if (networkName === 'bsc') {
+                        gasToken = 'BNB';
+                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` BNB`;
+                    } else if (networkName === 'polygon') {
+                        gasToken = 'MATIC';
+                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` POLY`;
+                    } else if (networkName === 'arbitrum') {
+                        gasToken = 'ETH';
+                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` ETH`;
+                    } else {
+                        gasToken = 'ETH';
+                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` ETH`;
+                    }
+
+                    // Menghitung nilai USD untuk saldo gas
+                    const gasBalanceInUSD = (parseFloat(ethers.utils.formatEther(gasBalance)) * tokenRates[gasToken]).toFixed(2);
+
+                    // Membuat link sesuai dengan jaringan
+                    let walletLink;
+                    switch (networkName) {
+                        case 'ethereum':
+                            walletLink = `https://etherscan.io/address/${walletAddress}`;
+                            break;
+                        case 'bsc':
+                            walletLink = `https://bscscan.com/address/${walletAddress}`;
+                            break;
+                        case 'polygon':
+                            walletLink = `https://polygonscan.com/address/${walletAddress}`;
+                            break;
+                        case 'base':
+                            walletLink = `https://basescan.org/address/${walletAddress}`;
+                            break;
+                        case 'arbitrum':
+                            walletLink = `https://arbiscan.io/address/${walletAddress}`;
+                            break;
+                        default:
+                            walletLink = `https://explorer.${networkName}.com/address/${walletAddress}`;
+                            break;
+                    }
+
+                    // Menjumlahkan nilai saldo dalam USD (formattedBalance dan gasBalanceInUSD)
+                    const totalBalanceInUSD = (parseFloat(formattedBalance) + parseFloat(gasBalanceInUSD)).toFixed(2);
+
+                    return `
+                        <tr>
+                            <td><a href="${walletLink}" target="_blank">${networkName.charAt(0).toUpperCase() + networkName.slice(1).toUpperCase()}</a></td>
+                            <td>${formattedBalance} ${tokenSymbol}</td>
+                            <td>${formattedGasBalance}&nbsp;[${gasBalanceInUSD}]</td>
+                            <td>${totalBalanceInUSD} USDT</td>
+                        </tr>
+                    `;
+                } catch (error) {
+                    return `<tr><td>${networkName}</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
                 }
-
-                // Format saldo sesuai dengan desimal yang benar dan pastikan menggunakan token yang sesuai
-                const formattedBalance = parseFloat(ethers.utils.formatUnits(balance, decimals)).toFixed(2);
-
-                // Mendapatkan saldo gas (ETH, BNB, MATIC, dll.)
-                const gasBalance = await provider.getBalance(walletAddress);
-                let gasToken;
-                let formattedGasBalance;
-
-                // Menentukan token gas sesuai dengan jaringan
-                if (networkName === 'bsc') {
-                    gasToken = 'BNB';
-                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` BNB`;
-                } else if (networkName === 'polygon') {
-                    gasToken = 'MATIC';
-                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` POLY`;
-                } else if (networkName === 'arbitrum') {
-                    gasToken = 'ETH';
-                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` ETH`;
-                } else {
-                    gasToken = 'ETH';
-                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` ETH`;
-                }
-
-                // Menghitung nilai USD untuk saldo gas
-                const gasBalanceInUSD = (parseFloat(ethers.utils.formatEther(gasBalance)) * tokenRates[gasToken]).toFixed(2);
-
-                // Membuat link sesuai dengan jaringan
-                let walletLink;
-                switch (networkName) {
-                    case 'ethereum':
-                        walletLink = `https://etherscan.io/address/${walletAddress}`;
-                        break;
-                    case 'bsc':
-                        walletLink = `https://bscscan.com/address/${walletAddress}`;
-                        break;
-                    case 'polygon':
-                        walletLink = `https://polygonscan.com/address/${walletAddress}`;
-                        break;
-                    case 'base':
-                        walletLink = `https://basescan.org/address/${walletAddress}`;
-                        break;
-                    case 'arbitrum':
-                        walletLink = `https://arbiscan.io/address/${walletAddress}`;
-                        break;
-                    default:
-                        walletLink = `https://explorer.${networkName}.com/address/${walletAddress}`;
-                        break;
-                }
-
-                // Menjumlahkan nilai saldo dalam USD (formattedBalance dan gasBalanceInUSD)
-                const totalBalanceInUSD = (parseFloat(formattedBalance) + parseFloat(gasBalanceInUSD)).toFixed(2);
-
-                return `
-                    <tr>
-                        <td>${networkName.charAt(0).toUpperCase() + networkName.slice(1).toUpperCase()}</td>
-                        <td><a href="${walletLink}" target="_blank">${walletAddress}</a></td>
-                        <td>${formattedBalance} ${tokenSymbol}</td>
-                        <td>${formattedGasBalance}</td>
-                        <td>${gasBalanceInUSD} USDT</td>
-                        <td>${totalBalanceInUSD} USDT</td>
-                    </tr>
-                `;
-            } catch (error) {
-                return `<tr><td>${networkName}</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
             }
-        }
-
-    
+            //get asset chain solana
             async function getSolanaBalance(walletAddress, tokenRates) {
                 try {
                     const connection = new solanaWeb3.Connection("https://cors-anywhere.herokuapp.com/https://api.mainnet-beta.solana.com");  
@@ -281,20 +443,17 @@
     
                     return `
                         <tr>
-                            <td>SOLANA</td>
-                            <td><a href="https://solscan.io/account/${walletAddress}" target="_blank">${walletAddress}</a></td>
+                            <td><a href="https://solscan.io/account/${walletAddress}" target="_blank">SOLANA</a></td>
                             <td>${formattedUSDT}</td>
-                            <td>${formattedSOL} </td>
-                            <td>${solBalanceInUSD}</td>
+                            <td>${formattedSOL}&nbsp;[${solBalanceInUSD}] </td>                           
                             <td>${totalBalanceInUSD}</td>
-                        </tr>
-                    `;
+                        </tr>`
+                    ;
                 } catch (error) {
                     console.log("Error:", error); // Log error untuk debugging
                     return `<tr><td>Solana</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
                 }
             }
-    
             // Fetch token rates from Binance API
             async function fetchTokenRates() {
                 try {
@@ -315,7 +474,9 @@
                     return {}; // Default empty rates in case of error
                 }
             }
+       
         });
+        
     </script>
     
 
