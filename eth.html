@@ -163,7 +163,7 @@
 </style>
 
 </head>
-<body data-token="eth">
+<body data-token="ethereum">
    
     <div class="uk-text-center" style="margin-top: 20px;"> <!-- Mengurangi margin-top -->
         <h3 class="uk-margin-remove" style="font-size: 30px;">
@@ -172,7 +172,7 @@
                 <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
                 <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
                 <img id="cek_wallet" title="UPDATE WALLET CEX" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" width="25px" />
-                <a href="HomeCRUDS.html" target="_blank" id="dynamicLink">
+                <a href="MasterCRUDS.html" target="_blank" id="dynamicLink">
                     <img title="MASTER DATA" src="https://cdn-icons-png.flaticon.com/512/8021/8021069.png" width="25px" />
                 </a>
                 <a href="manajemen_aset.html" target="_blank">
@@ -199,7 +199,6 @@
             </span>-->
         <!-- </div> -->
     </div>
-    
     <!-- Modal UIKIT -->
     <div id="modal-setting" class="uk-modal-full" uk-modal>
         <div class="uk-modal-dialog">
@@ -410,11 +409,11 @@
                             <span id="server"><b>
                                 <label class="uk-form-label uk-text-warning">SERVER :</label>
                                 <label class="uk-form-label uk-text-warning">
-                                    <input class="uk-radio" type="radio" value="0" name="urlRadio"> A
-                                    <input class="uk-radio" type="radio" value="1" name="urlRadio"> B
-                                    <input class="uk-radio" type="radio" value="2" name="urlRadio"> C
-                                    <input class="uk-radio" type="radio" value="3" name="urlRadio"> D
-                                    <input class="uk-radio" type="radio" value="4" name="urlRadio"> E
+                                    <input  type="radio" value="0" name="urlRadio"> A
+                                    <input  type="radio" value="1" name="urlRadio"> B
+                                    <input  type="radio" value="2" name="urlRadio"> C
+                                    <input  type="radio" value="3" name="urlRadio"> D
+                                    <input  type="radio" value="4" name="urlRadio"> E
                                 </label>
                             </b></span>
                         </label>
@@ -436,11 +435,11 @@
                             <b>
                                 <label class="uk-form-label uk-text-primary">DEX :</label>
                                 <label class="uk-form-label uk-text-primary"> 
-                                    <input type="checkbox" class="uk-checkbox cdx_1inch" id="D1INCH" /> 1INCH    
-                                    <input type="checkbox" class="uk-checkbox cdx_odos" id="DODOS" /> ODOS
-                                    <input type="checkbox" class="uk-checkbox cdx_0x" id="D0X" /> MATCHA 
-                                    <input type="checkbox" class="uk-checkbox cdx_kyberswap" id="DKYBERSWAP" /> KYBER   
-                                    <input type="checkbox" class="uk-checkbox cdx_paraswap" id="DPARASWAP" /> PARA
+                                    <input type="checkbox" class="cdx_1inch" id="D1INCH" /> 1INCH    
+                                    <input type="checkbox" class="cdx_odos" id="DODOS" /> ODOS
+                                    <input type="checkbox" class="cdx_0x" id="D0X" /> MATCHA 
+                                    <input type="checkbox" class="cdx_kyberswap" id="DKYBERSWAP" /> KYBER   
+                                    <input type="checkbox" class="cdx_paraswap" id="DPARASWAP" /> PARA
                                 </label>       
                             </b>    
                         </span>
@@ -453,8 +452,8 @@
                                 <label class="uk-form-label uk-text-danger">DEX PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):</label>
                                 <label class="uk-form-label uk-text-danger" id="dexpair-checkbox-container"></label>
                             </b> 
-                             <b>
-                                <input type="checkbox" class="uk-checkbox" id="Cautorun" /> 
+                            <b>
+                                <input type="checkbox" id="Cautorun" /> 
                                 <span class="uk-form-label uk-text-warning uk-text-small" id="autorun"> AUTO</span>
                             </b>
                             <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
@@ -465,12 +464,13 @@
 
                 <!-- Bagian Sinyal DEX -->
                 <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container" style="margin-top: 4px;">
-                    <div class="sinyal-item" data-dex="1INCH"><b>1INCH</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> ]</div>
-                    <div class="sinyal-item" data-dex="0X"><b>MATCHA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> ]</div>
-                    <div class="sinyal-item" data-dex="ODOS"><b>ODOS</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos"> </label> ]</div>
-                    <div class="sinyal-item" data-dex="PARASWAP"><b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]</div>
-                    <div class="sinyal-item" data-dex="KYBERSWAP"><b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]</div>
+                    <div class="sinyal-item" data-dex="1INCH"><b>1INCH</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> </div>
+                    <div class="sinyal-item" data-dex="0X"><b>MATCHA</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> </div>
+                    <div class="sinyal-item" data-dex="ODOS"><b>ODOS</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos"> </label> </div>
+                    <div class="sinyal-item" data-dex="PARASWAP"><b>PARA</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> </div>
+                    <div class="sinyal-item" data-dex="KYBERSWAP"><b>KYBER</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> </div>
                 </div>
+
                 <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>
             </div> 
         </form>
@@ -497,7 +497,7 @@
                     <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
                     <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
                     <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKiri0XSinyal"></span> MATCHA</th>
-                    <th rowspan="2" style="background-color: #cdcdcd; color: rgb(10, 11, 12);">&nbsp;MODAL <br/> TOKEN&nbsp;</th>
+                    <th rowspan="2" style="background-color: #cdcdcd; color: rgb(10, 11, 12);">&nbsp;DETAILS <br/> TOKEN&nbsp;</th>
                     <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
                     <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
                     <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
