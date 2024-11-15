@@ -13,121 +13,347 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <style>
      .uk-container {
-            width: 86%;
+            width: 92%;
             max-width: none;
         }
-        .uk-table th {
-            vertical-align: middle;
-            background-color: #54da55;
-            color: black;
-            font-weight: bolder;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+       
+    table#assetTableWallet thead.chain-header th {
+        background-color: rgb(162, 162, 162);
+        color: rgb(255, 255, 255) !important;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    table#assetTableCexs thead.cex-header th {
+        background-color: rgb(195, 230, 253);
+        color: black !important;
+        font-weight: bolder;
+        text-align: center;
+    }
+    table#assetTablePNL thead.pnl-header th {
+        background-color:#f49ead;
+        color: black !important;
+        font-weight: bolder;
+        text-align: center;
+    }
+    img:hover {
+                transform: scale(1.6); /* You can adjust the scale factor as needed */
+            }
 </style>
 
 <body>
     <div class="uk-container uk-margin-top">
-        <h2 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 20px;"><span>MANAJEMEN ASET</span></h2>
-        
-        <!-- Grid Layout for Left and Right Sections -->
-        <div class="uk-grid uk-grid-small" uk-grid>
-            <!-- Left Section for Wallet Input -->
-            <div class="uk-width-1-2@s uk-width-4-12@m">
-                <h4 class="uk-heading-line"><span>Setting Wallet & Saldo All Chains</span></h4>
+       <h2 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 20px;"> <span>MANAJEMEN ASET</span>
+            
+        </h2>
+       <div class="uk-grid">
+            <div class="uk-width-1-2">
+                <h4 class="uk-heading-line uk-text-primary "><span>Setting & Saldo All Exchanges</span> </h4>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox"  id="ethCheck" />&nbsp;
-                            <label class="form-check-label" for="ethWallet">ETHEREUM</label>
+                            <input type="checkbox" class="uk-checkbox"  checked id="BINANCE" />&nbsp;
+                            <label class="form-check-label" for="BINANCE">BINANCE</label>
                         </div>
                     </div>
-                    <input class="form-control" type="text" id="ethWallet" placeholder="Enter Ethereum Wallet Address">
+                    <input type="text" class="form-control" id="apikeyBINANCE" placeholder="API KEY BINANCE" value="" required />
+                    <input type="text" class="form-control" id="secretkeyBINANCE" placeholder="SECRET KEY BINANCE" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox"  id="bscCheck" />&nbsp;
-                            <label class="form-check-label" for="bscWallet">BSC</label>
+                            <input type="checkbox" class="uk-checkbox" id="GATE" />&nbsp;
+                            <label class="form-check-label" for="GATE">GATE</label>
                         </div>
                     </div>
-                    <input class="form-control" type="text" id="bscWallet" placeholder="Enter BSC Wallet Address">
+                    <input type="text" class="form-control" id="apikeyGATE" placeholder="API KEY GATE" value="" required />
+                    <input type="text" class="form-control" id="secretkeyGATE" placeholder="SECRET KEY GATE" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox"  id="polygonCheck" />&nbsp;
-                            <label class="form-check-label" for="polygonWallet">POLYGON</label>
+                            <input type="checkbox" class="uk-checkbox"  id="BITGET" />&nbsp;
+                            <label class="form-check-label" for="BITGET">BITGET</label>
                         </div>
                     </div>
-                    <input class="form-control" type="text" id="polygonWallet" placeholder="Enter Polygon Wallet Address">
+                    <input type="text" class="form-control" id="apikeyBITGET" placeholder="API KEY BITGET" value="" required />
+                    <input type="text" class="form-control" id="secretkeyBITGET" placeholder="SECRET KEY BITGET" value="" required />
+                    <input type="text" class="form-control" id="passphraseBITGET" placeholder="PASSPHRASE KEY BITGET" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox"  id="baseCheck" />&nbsp;
-                            <label class="form-check-label" for="baseWallet">BASE</label>
+                            <input type="checkbox" class="uk-checkbox"  id="KUCOIN" />&nbsp;
+                            <label class="form-check-label" for="KUCOIN">KUCOIN</label>
                         </div>
                     </div>
-                    <input class="form-control" type="text" id="baseWallet" placeholder="Enter Base Wallet Address">
-                </div>
-
-                <div class="input-group mb-2" >
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox"  id="arbitrumCheck" />&nbsp;
-                            <label class="form-check-label" for="arbitrumWallet">ARBITRUM</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="arbitrumWallet" placeholder="Enter Arbitrum Wallet Address">
+                    <input type="text" class="form-control" id="apikeyKUCOIN" placeholder="API KEY KUCOIN" value="" required />
+                    <input type="text" class="form-control" id="secretkeyKUCOIN" placeholder="SECRET KEY KUCOIN" value="" required />
+                    <input type="text" class="form-control" id="passphraseKUCOIN" placeholder="PASSPHRASE KEY KUCOIN" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox"  id="solanaCheck" />&nbsp;
-                            <label class="form-check-label" for="solanaWallet">SOLANA</label>
+                            <input type="checkbox" class="uk-checkbox" id="BYBIT" />&nbsp;
+                            <label class="form-check-label" for="BYBIT">BYBIT</label>
                         </div>
                     </div>
-                    <input class="form-control" type="text" id="solanaWallet" placeholder="Enter Solana Wallet Address">
-                </div>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                    </div>
-                    <button class="uk-button uk-button-primary uk-margin-top" id="checkAssetsWallet">Check Wallets</button>
+                    <input type="text" class="form-control" id="apikeyBYBIT" placeholder="API KEY BYBIT" value="" required />
+                    <input type="text" class="form-control" id="secretkeyBYBIT" placeholder="SECRET KEY BYBIT" value="" required />
                 </div>
 
+                <!-- Modal Awal -->
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <label class="form-check-label" for="MODALAWAL">MODAL AWAL</label>
+                        </span>
+                    </div>
+                    <input type="number" class="form-control w-50" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="RPMODAL"></span>
+                        &nbsp;&nbsp;<i class="bi bi-arrow-clockwise" id="reload"></i>
+                    </div>
+                </div>
+
+                <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">                                        
+                    <span class="uk-text-middle uk-text-primary"><b>Last Check: <span  class="uk-text-warning" id="updatecex">...</span></b></span>
+                    <button class="uk-button uk-button-small uk-button-primary" id="checkAssetCEX">Check Exchanges</button>
+                </div>
+                <hr/>
+                
+                <div class="uk-width-auto@m">
+                    <h5 class="uk-heading-line"><span>Assets ON Chain</span></h5>
+                    <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTableWallet" style="display:none;">
+                        <thead class="chain-header">
+                            <tr>
+                                <th>Chain</th>
+                                <th>ASSET</th>
+                                <th>GAS {USDT}</th>
+                                <th>TOTAL</th>
+                            </tr>                       
+                        </thead>
+                        <tbody id="output_chain"></tbody>
+                        <tr>
+                            <th colspan="3" style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">Total USDT</th>
+                            <th style="text-align: center; font-size: large; font-weight: bolder; color: #527aff;" id="TotalBalanceWallets">...</th>
+                        </tr>
+                    </table>                    
+                </div>
+             </div>
+
+            <div class="uk-width-1-2">
+                <div class="uk-grid">
+                    <!-- Bagian Chains -->
+                    <div class="uk-width-1-2">
+                        <h4 class="uk-heading-line uk-text-right"><span>Setting Chains & Wallet</span></h4>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox"  id="ETHEREUM" />&nbsp;
+                                        <label class="form-check-label" for="ethWallet">ETHEREUM</label>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" id="ethWallet" placeholder="Enter Ethereum Wallet Address">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox"  id="BSC" />&nbsp;
+                                        <label class="form-check-label" for="bscWallet">BSC</label>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" id="bscWallet" placeholder="Enter BSC Wallet Address">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox"  id="POLYGON" />&nbsp;
+                                        <label class="form-check-label" for="polygonWallet">POLYGON</label>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" id="polygonWallet" placeholder="Enter Polygon Wallet Address">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox"  id="BASE" />&nbsp;
+                                        <label class="form-check-label" for="baseWallet">BASE</label>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" id="baseWallet" placeholder="Enter Base Wallet Address">
+                            </div>
+
+                            <div class="input-group mb-2" >
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox"  id="ARBITRUM" />&nbsp;
+                                        <label class="form-check-label" for="arbitrumWallet">ARBITRUM</label>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" id="arbitrumWallet" placeholder="Enter Arbitrum Wallet Address">
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox"  id="SOLANA" />&nbsp;
+                                        <label class="form-check-label" for="solanaWallet">SOLANA</label>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" id="solanaWallet" placeholder="Enter Solana Wallet Address">
+                            </div>
+                            
+                            <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">                                        
+                                <span class="uk-text-middle uk-text-secondary"><b>Last Check: <span  class="uk-text-warning" id="updatechain">...</span></b></span>
+                                <button class="uk-button uk-button-small uk-button-secondary" id="checkAssetsWallet">Check Wallet</button>
+                            </div>
+                            <hr/>
+
+                            <h5 class="uk-heading-line uk-text-primary uk-text-right"><span>Saldo Exchanges</span></h5>
+                            <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTableCexs" >
+                                <thead class="cex-header">
+                                    <tr>
+                                        <th>EXCHANGER</th>
+                                        <th>SALDO{USDT}</th>
+                                    </tr>                                
+                                </thead>
+                                <tr>
+                                    <th>BINANCE</th>
+                                    <th id="BINANCESaldo" class="uk-text-center"> xxx {USDT}</th>
+                                </tr>
+                                <tr>
+                                    <th>GATE</th>
+                                    <th id="GATESaldo" class="uk-text-center"> xxx {USDT}</th>
+                                </tr>
+                                <tr>
+                                    <th>BITGET</th>
+                                    <th id="BITGETSaldo" class="uk-text-center"> xxx {USDT}</th>
+                                </tr>
+                                <tr>
+                                    <th>KUCOIN</th>
+                                    <th id="KUCOINSaldo" class="uk-text-center"> xxx {USDT}</th>
+                                </tr>
+                                <tr>
+                                    <th>BYBIT</th>
+                                    <th id="BYBITSaldo" class="uk-text-center"> xxx {USDT}</th>
+                                </tr>
+                                <tbody id="output_cex"></tbody>
+                                <tr>
+                                    <th style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">TOTAL</th>
+                                    <th style="text-align: center; font-size: large; font-weight: bolder; color: #527aff;" id="TotalSaldoCEX">...</th>
+                                </tr>
+                            </table>       
+                    </div>
+                      <!-- Bagian History PNL -->
+                    <div class="uk-width-1-2">
+                        <h4 class="uk-heading-line uk-text-danger uk-text-right"><span>History PNL</span></h4> 
+                        <a href="Kalkulator.html" target="_blank" id="dynamicLink">
+                            <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
+                        </a>
+                       
+                        <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
+                            <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
+                        </a>
+                            <table class="uk-table uk-table-hover uk-margin-top" id="assetTablePNL">
+                                <thead class="pnl-header">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Awal</th>
+                                        <th>Akhir</th>
+                                        <th>PNL</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr>
+                                <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr> <tr>
+                                    <th>xxxx-xx-xx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx</th>
+                                    <th>xxxxx</th>
+                                    <th>xxxx xxxx</th>
+                                </tr>
+                                <tbody id="output_history"></tbody>
+                            </table>   
+                            <button class="uk-button uk-button-danger uk-margin-top" id="UpdateHistoryExchanger">Update PNL</button>                        
+                    </div>
+                </div>
             </div>
-
-            <!-- Right Section for CEX Input -->
-            <div class="uk-width-1-2@s uk-width-8-12@m">
-                <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTableWallet" style="display:none;">
-                    <thead >
-                        <tr >
-                            <th>Chain</th>
-                            <th>ASSET</th>
-                            <th>GAS {USDT}</th>
-                            <th>TOTAL</th>
-                        </tr>                       
-                    </thead>
-                    <tbody id="output_chain"></tbody>
-                    <tr >
-                        <th colspan="3" >Total USDT</th>
-                        <th  ><span id="TotalBalanceWallets"></span>$</th>
-                    </tr>
-                </table>                             
-            </div>
-
         </div>
-       <hr/>
+
 
     </div>
 
@@ -154,67 +380,16 @@
             };
             // Daftar jaringan dengan checkbox dan input terkait
             const networks = [
-                    { checkboxId: 'ethCheck', inputId: 'ethWallet' },
-                    { checkboxId: 'bscCheck', inputId: 'bscWallet' },
-                    { checkboxId: 'polygonCheck', inputId: 'polygonWallet' },
-                    { checkboxId: 'baseCheck', inputId: 'baseWallet' },
-                    { checkboxId: 'arbitrumCheck', inputId: 'arbitrumWallet' },
-                    { checkboxId: 'solanaCheck', inputId: 'solanaWallet' }
+                    { checkboxId: 'ETHEREUM', inputId: 'ethWallet' },
+                    { checkboxId: 'BSC', inputId: 'bscWallet' },
+                    { checkboxId: 'POLYGON', inputId: 'polygonWallet' },
+                    { checkboxId: 'BASE', inputId: 'baseWallet' },
+                    { checkboxId: 'ARBITRUM', inputId: 'arbitrumWallet' },
+                    { checkboxId: 'SOLANA', inputId: 'solanaWallet' }
                 ];
-
-            // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
-            function loadData() {
-                // Mengatur status checkbox dan nilai input berdasarkan data di localStorage
-                $('input[type="checkbox"]').each(function() {
-                    const checkbox = $(this);
-                    const id = checkbox.attr('id');
-
-                    // Ambil status checkbox dari localStorage, default unchecked jika tidak ada data
-                    const isChecked = localStorage.getItem(`am_${id}`) === 'true';
-                    checkbox.prop('checked', isChecked);
-
-                    // Aktifkan atau nonaktifkan input sesuai dengan status checkbox
-                    const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
-                    relatedInputs.prop('disabled', !isChecked);
-
-                    // Set nilai input dari localStorage jika ada
-                    relatedInputs.each(function() {
-                        const input = $(this);
-                        const inputId = input.attr('id');
-                        const savedValue = localStorage.getItem(`am_${inputId}`);
-                        if (savedValue !== null) {
-                            input.val(savedValue);
-                        }
-                    });
-                });
-
-                // Memuat data hasil pengecekan aset dari localStorage dan menampilkannya di tabel
-                const assetData = JSON.parse(localStorage.getItem('am_assetData'));
-                if (assetData && assetData.length > 0) {
-                    // Render data tabel
-                    $('#output_chain').html(
-                        assetData.map(row => `
-                            <tr>
-                                <td>${row.chain}</td>                                      
-                                <td>${row.asset} USDT</td>
-                                <td>${row.usdtGas} USDT</td>
-                                <td>${row.total} USDT</td>
-                            </tr>
-                        `).join('')
-                    );
-
-                    // Tampilkan tabel jika ada data
-                    $('#assetTableWallet').show();
-
-                    // Hitung total saldo USDT dari semua chain
-                    const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
-                    $('#TotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan total saldo di elemen ini
-                }
-            }
 
             // Memanggil loadData saat halaman pertama kali di-load
             loadData();
-
 
             // Simpan status checkbox dan nilai input saat terjadi perubahan
             $('input[type="checkbox"]').on('change', function () {
@@ -229,6 +404,9 @@
                 const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
                 relatedInputs.prop('disabled', !isChecked);
 
+                // Ganti pesan toastr dengan nama inputan checkbox
+                const inputName = checkbox.attr('name') || id; // Menggunakan atribut 'name' jika ada, jika tidak gunakan 'id'
+                toastr.success("Status "+inputName+" Berhasil Diubah!!");
                 // Simpan nilai input ke localStorage jika checkbox dicentang
                 relatedInputs.each(function() {
                     const input = $(this);
@@ -236,8 +414,11 @@
                     if (isChecked) {
                         localStorage.setItem(`am_${inputId}`, input.val());
                     } 
-                    toastr.success("Ganti Status Berhasil");
+                   
                 });
+
+               // Menampilkan atau menyembunyikan baris tabel berdasarkan status checkbox
+                updateTableRows();
             });
 
             // Simpan nilai input ketika ada perubahan
@@ -253,12 +434,12 @@
             
             $('#checkAssetsWallet').on('click', async function() {
                 const selectedChains = {
-                    ethereum: $('#ethCheck').is(':checked') ? $('#ethWallet').val() : null,
-                    bsc: $('#bscCheck').is(':checked') ? $('#bscWallet').val() : null,
-                    polygon: $('#polygonCheck').is(':checked') ? $('#polygonWallet').val() : null,
-                    base: $('#baseCheck').is(':checked') ? $('#baseWallet').val() : null,
-                    arbitrum: $('#arbitrumCheck').is(':checked') ? $('#arbitrumWallet').val() : null,
-                    solana: $('#solanaCheck').is(':checked') ? $('#solanaWallet').val() : null
+                    ethereum: $('#ETHEREUM').is(':checked') ? $('#ethWallet').val() : null,
+                    bsc: $('#BSC').is(':checked') ? $('#bscWallet').val() : null,
+                    polygon: $('#POLYGON').is(':checked') ? $('#polygonWallet').val() : null,
+                    base: $('#BASE').is(':checked') ? $('#baseWallet').val() : null,
+                    arbitrum: $('#ARBITRUM').is(':checked') ? $('#arbitrumWallet').val() : null,
+                    solana: $('#SOLANA').is(':checked') ? $('#solanaWallet').val() : null
                 };
 
                 const validChains = Object.keys(selectedChains).filter(chain => selectedChains[chain]);
@@ -309,6 +490,22 @@
 
                     // Menyimpan data asset chain di localStorage
                     localStorage.setItem('am_assetData', JSON.stringify(assetData));
+                    // Menyimpan waktu saat data diperbarui
+                    const now = new Date();
+                    const formattedTime = `${now.toLocaleTimeString('id-ID', { 
+                        hour: '2-digit', 
+                        minute: '2-digit', 
+                        hour12: false 
+                    })} | ${now.toLocaleDateString('id-ID', { 
+                        day: '2-digit', 
+                        month: 'short', 
+                        year: '2-digit' 
+                    })}`;
+
+                    localStorage.setItem('am_lastUpdateChain', formattedTime);
+
+                    // Tampilkan waktu terakhir diperbarui
+                    $('#updatechain').text(formattedTime);
 
                     // Hitung dan tampilkan total saldo USDT (hasil penjumlahan total dari semua chain)
                     const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
@@ -318,7 +515,444 @@
                     $('#output_chain').html(`<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`);
                 }
             });
+             // Fungsi untuk mengecek aset berdasarkan checkbox yang dicentang
+            $('#checkAssetCEX').on('click', function () {
+                // Ambil semua checkbox yang dicentang
+                const checkedExchanges = [];
 
+                // Periksa checkbox dan tambahkan ke array jika dicentang
+                $('input[type="checkbox"]:checked').each(function () {
+                    const id = $(this).attr('id');
+                    checkedExchanges.push(id);
+                });
+
+                // Jalankan fungsi pengecekan untuk setiap exchange yang dicentang
+                checkedExchanges.forEach(function(exchange) {
+                    switch (exchange) {
+                        case 'BINANCE':
+                            cekAssetBinance();
+                            break;
+                        case 'GATE':
+                            cekAssetGate();
+                            break;
+                        case 'BITGET':
+                            cekAssetBitget();
+                            break;
+                        case 'KUCOIN':
+                            cekAssetKucoin();
+                            break;
+                        case 'BYBIT':
+                            cekAssetBybit();
+                            break;
+                    }
+                });
+            });
+           
+            // Fungsi pengecekan untuk masing-masing exchange
+            function cekAssetBinance() {
+                    console.log("Cek Asset Binance");
+                // Fungsi untuk mendapatkan saldo Binance
+                    var apiKey = $("#apikeyBINANCE").val();
+                    var apiSecret = $("#secretkeyBINANCE").val();
+
+                    // URL API Binance untuk mendapatkan informasi akun
+                    var apiUrl = "https://api.binance.me/api/v3/account"; // API yang benar untuk Binance
+
+                    // Timestamp untuk permintaan
+                    var timestamp = new Date().getTime();
+
+                    // Membuat signature menggunakan HMAC SHA256
+                    var signature = CryptoJS.HmacSHA256(
+                        "timestamp=" + timestamp,
+                        apiSecret
+                    ).toString(CryptoJS.enc.Hex);
+
+                    // Header request
+                    var headers = {
+                        "X-MBX-APIKEY": apiKey,
+                    };
+
+                    // Melakukan panggilan AJAX ke API Binance
+                    $.ajax({
+                        url: apiUrl + "?timestamp=" + timestamp + "&signature=" + signature,
+                        method: "GET",
+                        headers: headers,
+                        dataType: "json",
+                        beforeSend: function () {
+                            $("#BINANCESaldo").text("Load.." + " {USDT}");
+                        },
+                        success: function (response) {
+                            // console.warn("SALDO BINANCE : ",data)
+                            var usdtInfo = response.balances.find(function (currency) {
+                                return currency.asset === "USDT";
+                            });
+                            console.warn("BINANCE USDT : "+usdtInfo.free)
+                            // Memperbarui saldo Binance pada tabel
+                            $("#BINANCESaldo").text(parseFloat(usdtInfo.free).toFixed(2) + " {USDT}");
+
+                            // Menyimpan saldo ke localStorage
+                            localStorage.setItem("am_BINANCESaldo", usdtInfo.free);
+                            getTotalSaldoCEXS();
+                        },
+                        error: function (xhr, status, error) {
+                            toastr.error("Error fetching Binance data:", error);
+                        }
+                    });
+                }
+
+            function cekAssetGate() {
+                console.log("Cek Asset Gate");
+                var key = $("#apikeyGATE").val();
+                var secret = $("#secretkeyGATE").val();
+                var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
+                var prefix = "/api/v4";
+                var method = "GET";
+                var url = "/spot/accounts";
+
+                var query_param = "";
+                var body_param = '';
+                var timestamp = Math.floor(new Date().getTime() / 1000);
+                var body_hash = CryptoJS.SHA512(body_param).toString();
+                var sign_string = method + '\n' + prefix + url + '\n' + query_param + '\n' + body_hash + '\n' + timestamp;
+                var sign = CryptoJS.HmacSHA512(sign_string, secret).toString();
+                var full_url = host + prefix + url;
+
+                $.ajax({
+                    url: full_url,
+                    method: method,
+                    beforeSend: function () {
+                        $("#GATESaldo").text("Load.." + " {USDT}");
+                    },
+            
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Timestamp': timestamp,
+                        'KEY': key,
+                        'SIGN': sign
+                    },
+                    success: function (response) {
+                    // console.warn("SALDO GATE : "+response)
+                        var usdtInfo = response.find(function (currency) {               
+                            return currency.currency === "USDT";
+                        });
+                        
+                        console.warn("GATE USDT : "+usdtInfo.available)
+                            
+                            // Menyimpan saldo ke localStorage
+                            localStorage.setItem("am_GATESaldo", usdtInfo.available);
+                            // Memperbarui saldo Binance pada tabel
+                            $("#GATESaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
+                            getTotalSaldoCEXS();
+
+                    },
+                    error: function (error) {
+                        toastr.error("Error fetching GATE data:", error);
+                    }
+                });
+            }
+
+            function cekAssetBitget() {
+                console.log("Cek Asset Bitget");
+                var apiKey = $("#apikeyBITGET").val();
+                var apiSecret = $("#secretkeyBITGET").val();
+                var passphrase = $("#passphraseBITGET").val();
+
+                // URL API Bitget untuk mendapatkan saldo akun
+                var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.bitget.com/api/v2/spot/account/assets";
+
+                // Timestamp untuk permintaan
+                var timestamp = Date.now().toString();
+
+                // Membuat signature menggunakan HMAC SHA256
+                var preSignature = timestamp + "GET" + "/api/v2/spot/account/assets" + "";
+                var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
+
+                // Header request
+                var headers = {
+                    "ACCESS-KEY": apiKey,
+                    "ACCESS-SIGN": signature,
+                    "ACCESS-TIMESTAMP": timestamp,
+                    "ACCESS-PASSPHRASE": passphrase,
+                };
+
+                // Melakukan panggilan AJAX ke API Bitget
+                $.ajax({
+                    url: apiUrl,
+                    method: "GET",
+                    headers: headers,
+                    dataType: "json",
+                    beforeSend: function () {
+                        $("#BITGETSaldo").text("Load.." + " {USDT}");
+                    },
+                    success: function (response) {
+                        var usdtInfo = response.data.find(function (currency) {
+                            return currency.coin === "USDT";
+                        });
+                        console.warn("BITGET USDT : "+usdtInfo.available)
+                        // Memperbarui saldo Bitget pada tabel
+                        $("#BITGETSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
+
+                        // Menyimpan saldo ke localStorage
+                        localStorage.setItem("am_BITGETSaldo", usdtInfo.available);
+                        getTotalSaldoCEXS();
+                    },
+                    error: function (xhr, status, error) {
+                        toastr.error("Error fetching Bitget data:", error);
+                    }
+                });
+            }
+
+            function cekAssetKucoin() {
+                console.log("Cek Asset Kucoin");
+                var apiKey = $("#apikeyKUCOIN").val();
+                var apiSecret = $("#secretkeyKUCOIN").val();
+                var passphrase = $("#passphraseKUCOIN").val();
+
+                // URL API KuCoin untuk mendapatkan saldo akun
+                var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.kucoin.com/api/v1/accounts";
+
+                // Timestamp untuk permintaan
+                var timestamp = Date.now().toString();
+
+                // Membuat signature menggunakan HMAC SHA256
+                var preSignature = timestamp + "GET" + "/api/v1/accounts" + "";
+                var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
+                var passphraseENC = CryptoJS.HmacSHA256(passphrase, apiSecret).toString(CryptoJS.enc.Base64);
+
+                var headers={
+                        "KC-API-KEY": apiKey,
+                        "KC-API-SIGN": signature,
+                        "KC-API-TIMESTAMP": timestamp,
+                        "KC-API-PASSPHRASE": passphraseENC,
+                        "KC-API-KEY-VERSION": "3",
+                        "Content-Type": "application/json"
+                    };
+                // Melakukan panggilan AJAX ke API KuCoin
+                $.ajax({
+                    url: apiUrl,
+                    method: "GET",
+                    headers: headers,
+                    dataType: "json",
+                    beforeSend: function () {
+                        $("#KUCOINSaldo").text("Load.." + " {USDT}");
+                    },
+                    success: function (response) {
+                        var usdtInfo = response.data.find(function (currency) {
+                            return currency.currency === "USDT";
+                            
+                        });
+                        console.warn("KUCOIN USDT : "+usdtInfo.available)
+                        // Memperbarui saldo KuCoin pada tabel
+                        $("#KUCOINSaldo").text(parseFloat( usdtInfo.available).toFixed(2)+ " {USDT}");
+
+                        // Menyimpan saldo ke localStorage
+                        localStorage.setItem("am_KUCOINSaldo", usdtInfo.available);
+                        getTotalSaldoCEXS();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error fetching KuCoin data:", error);
+                    }
+                });
+            }
+
+            function cekAssetBybit() {
+                console.log("Cek Asset Bybit");
+                var key = $("#apikeyBYBIT").val();
+                var secret = $("#secretkeyBYBIT").val();
+                var recvWindow = 5000;
+                var timestamp = Date.now().toString();
+                var host = "https://api.bybit.com";
+                var method = "GET";
+                var url = "/v5/account/wallet-balance";
+                var queryString = "accountType=UNIFIED";
+
+                // Menghitung signature
+                function calculateSignature(secret, timestamp, recvWindow, queryString) {
+                    const dataToSign = `${timestamp}${key}${recvWindow}${queryString}`;
+                    const signature = CryptoJS.HmacSHA256(dataToSign, secret).toString(CryptoJS.enc.Hex);
+                    return signature;
+                }
+
+                const sign = calculateSignature(secret, timestamp, recvWindow, queryString);
+                var full_url = `${host}${url}?${queryString}`;
+
+                $.ajax({
+                    url: full_url,
+                    method: method,
+                    beforeSend: function () {
+                        $("#BYBITSaldo").text("Load.." + " {USDT}");
+                    },
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                        "X-BAPI-API-KEY": key,
+                        "X-BAPI-TIMESTAMP": timestamp,
+                        "X-BAPI-RECV-WINDOW": recvWindow.toString(),
+                        "X-BAPI-SIGN": sign,
+                    },
+                    success: function (response) {
+                        var usdtInfo = response.result.list[0].coin.find(function (coin) {
+                            return coin.coin === "USDT";
+                        });
+                        console.warn("BYBIT USDT : "+usdtInfo.equity)
+                                    
+                                    // Menyimpan saldo ke localStorage
+                                    localStorage.setItem("am_BYBITSaldo", usdtInfo.equity);
+                                    // Memperbarui saldo Binance pada tabel
+                                    $("#BYBITSaldo").text(parseFloat(usdtInfo.equity).toFixed(2) + " {USDT}");
+                                    getTotalSaldoCEXS();
+
+                    },
+                    error: function (error) {
+                        toastr.error("Error fetching BYBIT data:", error);
+                    },
+                });
+            }
+            
+            // Fungsi untuk memperbarui baris tabel sesuai dengan status checkbox dan saldonya
+            function updateTableRows() {
+                let totalSaldo = 0;
+
+                $('input[type="checkbox"]').each(function () {
+                    const checkbox = $(this);
+                    const id = checkbox.attr('id');
+                    const isChecked = checkbox.prop('checked');
+                    const saldoKey = `am_${id}Saldo`;
+                    const tableRow = $(`#assetTableCexs tr:contains(${id})`);
+
+                    if (isChecked) {
+                        tableRow.show(); // Tampilkan baris jika checkbox diaktifkan
+
+                        // Memanggil fungsi pengecekan aset berdasarkan nama exchange
+                        switch (id) {
+                            case 'BINANCE':
+                                cekAssetBinance();                               
+                                break;
+                            case 'GATE':
+                                cekAssetGate();
+                                break;
+                            case 'BITGET':
+                                cekAssetBitget();
+                                break;
+                            case 'KUCOIN':
+                                cekAssetKucoin();
+                                break;
+                            case 'BYBIT':
+                                cekAssetBybit();
+                                break;
+                            console.log("Cek Ulang Saldo "+id);
+                        }
+
+                        // Ambil saldo dari localStorage setelah pengecekan
+                        const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
+                        // Memperbarui saldo di tabel
+                        $(`#${id}Saldo`).text(`${saldo.toFixed(2)} {USDT}`);
+                        // Mengupdate total saldo CEX
+                       // getTotalSaldoCEXS();
+                       // location.reload();
+                    } else {
+                        tableRow.hide(); // Sembunyikan baris jika checkbox dinonaktifkan
+
+                        // Set saldo menjadi 0 di localStorage dan di tabel
+                        localStorage.setItem(saldoKey, "0");
+                        $(`#${id}Saldo`).text("0 {USDT}");
+                        getTotalSaldoCEXS();
+                    }
+                   
+                });
+            }
+            // Fungsi untuk menghitung total saldo semua CEX
+            function getTotalSaldoCEXS() {
+                let totalSaldo = 0;
+                // Menjumlahkan saldo dari setiap exchange yang diaktifkan
+                $('input[type="checkbox"]:checked').each(function () {
+                    const id = $(this).attr('id');
+                    const saldoKey = `am_${id}Saldo`;
+                    const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
+                    totalSaldo += saldo;
+                });
+
+                // Tampilkan total saldo
+                $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} {USDT}`);
+            }
+            // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
+            function loadData() {
+                // Mengatur status checkbox dan nilai input berdasarkan data di localStorage
+                $('input[type="checkbox"]').each(function() {
+                    const checkbox = $(this);
+                    const id = checkbox.attr('id');
+
+                    // Ambil status checkbox dari localStorage, default unchecked jika tidak ada data
+                    const isChecked = localStorage.getItem(`am_${id}`) === 'true';
+                    checkbox.prop('checked', isChecked);
+
+                    // Aktifkan atau nonaktifkan input sesuai dengan status checkbox
+                    const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
+                    relatedInputs.prop('disabled', !isChecked);
+
+                    // Set nilai input dari localStorage jika ada
+                    relatedInputs.each(function() {
+                        const input = $(this);
+                        const inputId = input.attr('id');
+                        const savedValue = localStorage.getItem(`am_${inputId}`);
+                        if (savedValue !== null) {
+                            input.val(savedValue);
+                        }
+                    });
+
+                    // Menampilkan atau menyembunyikan baris tabel sesuai dengan status checkbox
+                    const tableRow = $(`#assetTableCexs tr:contains(${id})`);
+                    if (isChecked) {
+                        tableRow.show(); // Tampilkan baris jika checkbox dicentang
+                    } else {
+                        tableRow.hide(); // Sembunyikan baris jika checkbox tidak dicentang
+                    }
+                });
+
+                // Memuat data hasil pengecekan aset wallet dari localStorage dan menampilkannya di tabel
+                const assetData = JSON.parse(localStorage.getItem('am_assetData'));
+                if (assetData && assetData.length > 0) {
+                    // Render data tabel
+                    $('#output_chain').html(
+                        assetData.map(row => `
+                            <tr>
+                                <td>${row.chain}</td>                                      
+                                <td>${row.asset} USDT</td>
+                                <td>${row.usdtGas} USDT</td>
+                                <td>${row.total} USDT</td>
+                            </tr>
+                        `).join('')
+                    );
+
+                    // Tampilkan tabel jika ada data
+                    $('#assetTableWallet').show();
+
+                    // Hitung total saldo USDT dari semua chain
+                    const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
+                    $('#TotalBalanceWallets').text(totalUSDT.toFixed(2) + " $"); // Tampilkan total saldo di elemen ini
+
+                    // Menampilkan waktu terakhir diperbarui
+                    const lastUpdate = localStorage.getItem('am_lastUpdateChain');
+                    if (lastUpdate) {
+                        $('#updatechain').text(lastUpdate);
+                    }
+                }
+                // Memuat saldo excanger dari localStorage dan menampilkannya di tabel
+                    const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT'];
+                    let totalSaldo = 0;
+
+                    exchanges.forEach(exchange => {
+                        const saldoKey = `am_${exchange}Saldo`;
+                        const saldo = localStorage.getItem(saldoKey);
+                        if (saldo) {
+                            // Tampilkan saldo pada tabel jika ada data di localStorage
+                            $(`#${exchange}Saldo`).text(`${parseFloat(saldo).toFixed(2)} {USDT}`);
+                            getTotalSaldoCEXS();
+                        }
+                    });
+
+            }
             // Fungsi getAssetBalances
             async function getAssetBalances(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
                 try {
