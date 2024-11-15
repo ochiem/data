@@ -117,20 +117,6 @@
                     <input type="text" class="form-control" id="secretkeyBYBIT" placeholder="SECRET KEY BYBIT" value="" required />
                 </div>
 
-                <!-- Modal Awal -->
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <label class="form-check-label" for="MODALAWAL">MODAL AWAL</label>
-                        </span>
-                    </div>
-                    <input type="number" class="form-control w-50" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="RPMODAL"></span>
-                        &nbsp;&nbsp;<i class="bi bi-arrow-clockwise" id="reload"></i>
-                    </div>
-                </div>
-
                 <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">                                        
                     <span class="uk-text-middle uk-text-primary"><b>Last Check: <span  class="uk-text-warning" id="updatecex">...</span></b></span>
                     <button class="uk-button uk-button-small uk-button-primary" id="checkAssetCEX">Check Exchanges</button>
@@ -224,7 +210,7 @@
                             
                             <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">                                        
                                 <span class="uk-text-middle uk-text-secondary"><b>Last Check: <span  class="uk-text-warning" id="updatechain">...</span></b></span>
-                                <button class="uk-button uk-button-small uk-button-secondary" id="checkAssetsWallet">Check Wallet</button>
+                                <button class="uk-button uk-button-small uk-button-secondary" id="checkAssetsWallet">Check Now</button>
                             </div>
                             <hr/>
 
@@ -267,16 +253,28 @@
                       <!-- Bagian History PNL -->
                     <div class="uk-width-1-2">
                         <h4 class="uk-heading-line uk-text-danger uk-text-right"><span>History PNL</span></h4> 
-                        <a href="Kalkulator.html" target="_blank" id="dynamicLink">
-                            <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
-                        </a>
-                       
+                         <!-- Modal Awal -->
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <label class="form-check-label" for="MODALAWAL">MODAL AWAL</label>
+                                </span>
+                            </div>
+                            <input type="number" class="form-control w-50" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
+                           
+                        </div>
+                        
                         <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                             <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
                         </a>
+                        <a href="Kalkulator.html" target="_blank" id="dynamicLink">
+                            <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
+                        </a>
                         <button class="uk-button uk-button-small uk-button-danger" id="UpdateHistoryPNL">Update PNL</button>                        
-                        <button class="uk-button uk-button-small uk-button-default" id="ResetPNL">Reset PNL</button>                        
-
+                        <button class="uk-button uk-button-small uk-button-default" id="ResetModal">Reset</button> 
+                        <button class="uk-button uk-button-small uk-button-primary" id="SaveModal">Save</button>   
+                       
+                        <hr/>
                             <table class="uk-table uk-table-hover" id="assetTablePNL">
                                 <thead class="pnl-header">
                                     <tr>
@@ -541,7 +539,66 @@
                     }
                 });
             });
-           
+            //fungsi update history PNL
+            $('#UpdateHistoryPNL').on('click', function () {
+                // Ambil semua checkbox yang dicentang
+               // Menyimpan waktu saat data diperbarui
+               const now = new Date();
+                    const formattedTime = `${now.toLocaleTimeString('id-ID', { 
+                        hour: '2-digit', 
+                        minute: '2-digit', 
+                        second: '2-digit', 
+                        hour12: false 
+                    })} - ${now.toLocaleDateString('id-ID', { 
+                        day: '2-digit', 
+                        month: 'short', 
+                        year: '2-digit' 
+                    })}`;
+
+                    // Simpan waktu terakhir diperbarui ke localStorage
+                    localStorage.setItem('am_lastUpdatePNL', formattedTime);
+                    toastr.info("UPDATE HISTORY PNL BERHASIL [ "+formattedTime+" ] ");
+            });
+            //fungsi Save Modal
+            $('#SaveModal').on('click', function () {
+                // Ambil semua checkbox yang dicentang
+                const now = new Date();
+                    const formattedTime = `${now.toLocaleTimeString('id-ID', { 
+                        hour: '2-digit', 
+                        minute: '2-digit', 
+                        second: '2-digit', 
+                        hour12: false 
+                    })} - ${now.toLocaleDateString('id-ID', { 
+                        day: '2-digit', 
+                        month: 'short', 
+                        year: '2-digit' 
+                    })}`;
+
+                    // Simpan waktu terakhir diperbarui ke localStorage
+                    localStorage.setItem('am_lastUpdatePNL', formattedTime);
+                    toastr.success("SIMPAN MODAL AWAL BERHASIL [ "+formattedTime+" ] ");
+            });
+            //fungsi reset PNL untuk Modal
+            $('#ResetModal').on('click', function () {
+                // Ambil semua checkbox yang dicentang
+                const now = new Date();
+                    const formattedTime = `${now.toLocaleTimeString('id-ID', { 
+                        hour: '2-digit', 
+                        minute: '2-digit', 
+                        second: '2-digit', 
+                        hour12: false 
+                    })} - ${now.toLocaleDateString('id-ID', { 
+                        day: '2-digit', 
+                        month: 'short', 
+                        year: '2-digit' 
+                    })}`;
+
+                    // Simpan waktu terakhir diperbarui ke localStorage
+                    localStorage.setItem('am_lastUpdatePNL', formattedTime);
+                    toastr.success("RESET MODAL BERHASIL [ "+formattedTime+" ] ");
+            });
+
+ 
             // Fungsi pengecekan untuk masing-masing exchange
             function cekAssetBinance() {
                     console.log("Cek Asset Binance");
