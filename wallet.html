@@ -41,10 +41,15 @@
         color: black !important;
         font-weight: bolder;
         text-align: center;
+        font-size: small;
+    }
+    #assetTablePNL tbody tr td {
+        text-align: center;
+        color: #f49ead;
     }
     img:hover {
-                transform: scale(1.6); /* You can adjust the scale factor as needed */
-            }
+        transform: scale(1.6); /* You can adjust the scale factor as needed */
+    }
 </style>
 
 <body>
@@ -232,25 +237,26 @@
                                     </tr>                                
                                 </thead>
                                 <tr>
-                                    <th>BINANCE</th>
-                                    <th id="BINANCESaldo" class="uk-text-center"> xxx {USDT}</th>
+                                    <td>BINANCE</td>
+                                    <td id="BINANCESaldo" class="uk-text-center"> xxx {USDT}</td>
                                 </tr>
                                 <tr>
-                                    <th>GATE</th>
-                                    <th id="GATESaldo" class="uk-text-center"> xxx {USDT}</th>
+                                    <td>GATE</td>
+                                    <td id="GATESaldo" class="uk-text-center"> xxx {USDT}</td>
                                 </tr>
                                 <tr>
-                                    <th>BITGET</th>
-                                    <th id="BITGETSaldo" class="uk-text-center"> xxx {USDT}</th>
+                                    <td>BITGET</td>
+                                    <td id="BITGETSaldo" class="uk-text-center"> xxx {USDT}</td>
                                 </tr>
                                 <tr>
-                                    <th>KUCOIN</th>
-                                    <th id="KUCOINSaldo" class="uk-text-center"> xxx {USDT}</th>
+                                    <td>KUCOIN</td>
+                                    <td id="KUCOINSaldo" class="uk-text-center"> xxx {USDT}</td>
                                 </tr>
                                 <tr>
-                                    <th>BYBIT</th>
-                                    <th id="BYBITSaldo" class="uk-text-center"> xxx {USDT}</th>
+                                    <td>BYBIT</td>
+                                    <td id="BYBITSaldo" class="uk-text-center"> xxx {USDT}</td>
                                 </tr>
+                                
                                 <tbody id="output_cex"></tbody>
                                 <tr>
                                     <th style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">TOTAL</th>
@@ -268,10 +274,13 @@
                         <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                             <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
                         </a>
-                            <table class="uk-table uk-table-hover uk-margin-top" id="assetTablePNL">
+                        <button class="uk-button uk-button-small uk-button-danger" id="UpdateHistoryPNL">Update PNL</button>                        
+                        <button class="uk-button uk-button-small uk-button-default" id="ResetPNL">Reset PNL</button>                        
+
+                            <table class="uk-table uk-table-hover" id="assetTablePNL">
                                 <thead class="pnl-header">
                                     <tr>
-                                        <th>Date</th>
+                                        <th>TIME_UPDATE</th>
                                         <th>Awal</th>
                                         <th>Akhir</th>
                                         <th>PNL</th>
@@ -279,76 +288,62 @@
                                     </tr>
                                 </thead>
                                 <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
                                 </tr>
                                 <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
-                                </tr> <tr>
-                                    <th>xxxx-xx-xx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx</th>
-                                    <th>xxxxx</th>
-                                    <th>xxxx xxxx</th>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
                                 </tr>
-                                <tbody id="output_history"></tbody>
+                                <tr>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx-xx-xx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
                             </table>   
-                            <button class="uk-button uk-button-danger uk-margin-top" id="UpdateHistoryExchanger">Update PNL</button>                        
                     </div>
                 </div>
             </div>
@@ -420,7 +415,6 @@
                // Menampilkan atau menyembunyikan baris tabel berdasarkan status checkbox
                 updateTableRows();
             });
-
             // Simpan nilai input ketika ada perubahan
             $('input[type="text"], input[type="number"]').on('input', function () {
                 const input = $(this);
@@ -431,7 +425,7 @@
                 localStorage.setItem(`am_${inputId}`, value);
                // toastr.info("Perubahan Data Telah Simpan!");
             });
-            
+            // fungsi tombol cek aset all exchangers
             $('#checkAssetsWallet').on('click', async function() {
                 const selectedChains = {
                     ethereum: $('#ETHEREUM').is(':checked') ? $('#ethWallet').val() : null,
@@ -515,7 +509,7 @@
                     $('#output_chain').html(`<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`);
                 }
             });
-             // Fungsi untuk mengecek aset berdasarkan checkbox yang dicentang
+             // Fungsi untuk mengecek aset wallets all chain
             $('#checkAssetCEX').on('click', function () {
                 // Ambil semua checkbox yang dicentang
                 const checkedExchanges = [];
@@ -872,7 +866,23 @@
                     const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
                     totalSaldo += saldo;
                 });
+                    // Menyimpan waktu saat data diperbarui
+                    const now = new Date();
+                    const formattedTime = `${now.toLocaleTimeString('id-ID', { 
+                        hour: '2-digit', 
+                        minute: '2-digit', 
+                        second: '2-digit', 
+                        hour12: false 
+                    })} - ${now.toLocaleDateString('id-ID', { 
+                        day: '2-digit', 
+                        month: 'long', 
+                        year: '2-digit' 
+                    })}`;
 
+                    // Simpan waktu terakhir diperbarui ke localStorage
+                    localStorage.setItem('am_lastUpdateCEX', formattedTime);
+                     // Tampilkan waktu terakhir diperbarui
+                     $('#updatecex').text(formattedTime);
                 // Tampilkan total saldo
                 $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} {USDT}`);
             }
