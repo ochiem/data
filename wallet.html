@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,22 +14,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
-        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <style>
-    .uk-container {
-        width: 98%;
-        max-width: none;
-    }
-
+     .uk-container {
+            width: 98%;
+            max-width: none;
+        }
+       
     table#assetTableWallet thead.chain-header th {
         background-color: rgb(162, 162, 162);
         color: rgb(255, 255, 255) !important;
         font-weight: bolder;
         text-align: center;
     }
-
     #assetTableWallet td {
         padding: 8px 12px;
         vertical-align: middle;
@@ -49,64 +47,59 @@
     }
 
     table#assetTablePNL thead.pnl-header th {
-        background-color: #f49ead;
+        background-color:#f49ead;
         color: black !important;
         font-weight: bolder;
         text-align: center;
         font-size: small;
     }
-
+    
     #assetTablePNL td {
         padding: 8px 12px;
         vertical-align: middle;
         color: black !important;
     }
-
     img:hover {
-        transform: scale(1.6);
-        /* You can adjust the scale factor as needed */
+        transform: scale(1.6); /* You can adjust the scale factor as needed */
     }
-
     /* Menambahkan margin pada kartu */
     .uk-card-body {
-        margin: 10px !important;
-        /* Pastikan margin diterapkan dengan !important */
+        margin: 10px !important; /* Pastikan margin diterapkan dengan !important */
         padding: 20px;
     }
 
     /* Menambahkan margin khusus antar kartu di grid */
-    .uk-grid>div {
-        padding: 0px;
-        /* Menambahkan padding antar kolom dalam grid */
+    .uk-grid > div {
+        padding: 0px; /* Menambahkan padding antar kolom dalam grid */
     }
-
+ 
     #customTable td {
-        padding: 12px 16px;
-        /* Padding khusus untuk tabel ini */
-        vertical-align: middle;
-        /* Menjaga elemen dalam posisi vertikal tengah */
+        padding: 12px 16px;  /* Padding khusus untuk tabel ini */
+        vertical-align: middle;  /* Menjaga elemen dalam posisi vertikal tengah */
     }
+    
 </style>
-
 <body>
 
-    <div class="container">
-        <h2 class="uk-heading-line mb-3" style="text-align: center; color: green; margin-bottom: 0px;"><span>MANAJEMEN
-                ASET</span></h2>
-        <div class="row">
-            <div class="col">
+<div class="uk-container uk-margin-small-top">
+
+    <h2 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 0px;"><span>MANAJEMEN ASET</span></h2>
+        
+    <!-- Grid Container -->
+    <div class="uk-grid uk-child-width-1-3 uk-grid-small " uk-grid>
+        <!-- Kolom 1 -->
+         <div>
+            <div class="uk-card uk-card-default uk-card-body">
                 <h5 class="uk-heading-line uk-text-primary "><span>Setting All Exchanges</span> </h5>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" class="uk-checkbox" checked id="BINANCE" />&nbsp;
+                            <input type="checkbox" class="uk-checkbox"  checked id="BINANCE" />&nbsp;
                             <label class="form-check-label" for="BINANCE">BINANCE</label>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="apikeyBINANCE" placeholder="API KEY BINANCE" value=""
-                        required />
-                    <input type="text" class="form-control" id="secretkeyBINANCE" placeholder="SECRET KEY BINANCE"
-                        value="" required />
+                    <input type="text" class="form-control" id="apikeyBINANCE" placeholder="API KEY BINANCE" value="" required />
+                    <input type="text" class="form-control" id="secretkeyBINANCE" placeholder="SECRET KEY BINANCE" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
@@ -116,40 +109,32 @@
                             <label class="form-check-label" for="GATE">GATE</label>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="apikeyGATE" placeholder="API KEY GATE" value=""
-                        required />
-                    <input type="text" class="form-control" id="secretkeyGATE" placeholder="SECRET KEY GATE" value=""
-                        required />
+                    <input type="text" class="form-control" id="apikeyGATE" placeholder="API KEY GATE" value="" required />
+                    <input type="text" class="form-control" id="secretkeyGATE" placeholder="SECRET KEY GATE" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" class="uk-checkbox" id="BITGET" />&nbsp;
+                            <input type="checkbox" class="uk-checkbox"  id="BITGET" />&nbsp;
                             <label class="form-check-label" for="BITGET">BITGET</label>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="apikeyBITGET" placeholder="API KEY BITGET" value=""
-                        required />
-                    <input type="text" class="form-control" id="secretkeyBITGET" placeholder="SECRET KEY BITGET"
-                        value="" required />
-                    <input type="text" class="form-control" id="passphraseBITGET" placeholder="PASSPHRASE KEY BITGET"
-                        value="" required />
+                    <input type="text" class="form-control" id="apikeyBITGET" placeholder="API KEY BITGET" value="" required />
+                    <input type="text" class="form-control" id="secretkeyBITGET" placeholder="SECRET KEY BITGET" value="" required />
+                    <input type="text" class="form-control" id="passphraseBITGET" placeholder="PASSPHRASE KEY BITGET" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" class="uk-checkbox" id="KUCOIN" />&nbsp;
+                            <input type="checkbox" class="uk-checkbox"  id="KUCOIN" />&nbsp;
                             <label class="form-check-label" for="KUCOIN">KUCOIN</label>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="apikeyKUCOIN" placeholder="API KEY KUCOIN" value=""
-                        required />
-                    <input type="text" class="form-control" id="secretkeyKUCOIN" placeholder="SECRET KEY KUCOIN"
-                        value="" required />
-                    <input type="text" class="form-control" id="passphraseKUCOIN" placeholder="PASSPHRASE KEY KUCOIN"
-                        value="" required />
+                    <input type="text" class="form-control" id="apikeyKUCOIN" placeholder="API KEY KUCOIN" value="" required />
+                    <input type="text" class="form-control" id="secretkeyKUCOIN" placeholder="SECRET KEY KUCOIN" value="" required />
+                    <input type="text" class="form-control" id="passphraseKUCOIN" placeholder="PASSPHRASE KEY KUCOIN" value="" required />
                 </div>
 
                 <div class="input-group mb-2">
@@ -159,150 +144,24 @@
                             <label class="form-check-label" for="BYBIT">BYBIT</label>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="apikeyBYBIT" placeholder="API KEY BYBIT" value=""
-                        required />
-                    <input type="text" class="form-control" id="secretkeyBYBIT" placeholder="SECRET KEY BYBIT" value=""
-                        required />
+                    <input type="text" class="form-control" id="apikeyBYBIT" placeholder="API KEY BYBIT" value="" required />
+                    <input type="text" class="form-control" id="secretkeyBYBIT" placeholder="SECRET KEY BYBIT" value="" required />
                 </div>
 
-                <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">
-                    <span class="uk-text-middle uk-text-primary"><b>Last Check: <span class="uk-text-warning"
-                                id="updatecex">...</span></b></span>
-                    <button class="uk-button uk-button-small uk-button-primary" id="checkAssetCEX" hidden>Update
-                        Saldo</button>
+                <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">                                        
+                    <span class="uk-text-middle uk-text-primary"><b>Last Check: <span  class="uk-text-warning" id="updatecex">...</span></b></span>
+                    <button class="uk-button uk-button-small uk-button-primary" id="checkAssetCEX">Update Saldo</button>
                 </div>
-            </div>
-            <div class="col">
-                <h5 class="uk-heading-line uk-text-center"><span>Setting Chains & Wallet</span></h5>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" id="ETHEREUM" />&nbsp;
-                            <label class="form-check-label" for="ethWallet">ETHEREUM</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="ethWallet" placeholder="Enter Ethereum Wallet Address">
-                </div>
-
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" id="BSC" />&nbsp;
-                            <label class="form-check-label" for="bscWallet">BSC</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="bscWallet" placeholder="Enter BSC Wallet Address">
-                </div>
-
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" id="POLYGON" />&nbsp;
-                            <label class="form-check-label" for="polygonWallet">POLYGON</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="polygonWallet"
-                        placeholder="Enter Polygon Wallet Address">
-                </div>
-
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" id="BASE" />&nbsp;
-                            <label class="form-check-label" for="baseWallet">BASE</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="baseWallet" placeholder="Enter Base Wallet Address">
-                </div>
-
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" id="ARBITRUM" />&nbsp;
-                            <label class="form-check-label" for="arbitrumWallet">ARBITRUM</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="arbitrumWallet"
-                        placeholder="Enter Arbitrum Wallet Address">
-                </div>
-
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" id="SOLANA" />&nbsp;
-                            <label class="form-check-label" for="solanaWallet">SOLANA</label>
-                        </div>
-                    </div>
-                    <input class="form-control" type="text" id="solanaWallet" placeholder="Enter Solana Wallet Address">
-                </div>
-
-                <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">
-                    <span class="uk-text-middle uk-text-secondary"><b>Last Check: <span class="uk-text-warning"
-                                id="updatechain">...</span></b></span>
-                    <button class="uk-button uk-button-small uk-button-secondary" id="checkAssetsWallet" hidden>Check
-                        Now</button>
-                </div>
-            </div>
-            <div class="col">
-                <h5 class="uk-heading-line uk-text-right"><span>ACTION</span></h5>
-                <div class="input-group mb-2 uk-flex uk-flex-middle">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <label class="form-check-label" for="MODALAWAL">MODAL AWAL</label>
-                        </span>
-                    </div>
-                    <input type="number" class="form-control w-25" id="MODALAWAL" placeholder="MODAL AWAL" value="1"
-                        required />
-
-                </div>
-                <div class="d-flex justify-content-between align-items-center my-2">
-                    <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
-                        <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png"
-                            width="25px" />
-                    </a>
-
-                    <h6 class="d-inline" id="RPMODAL"></h6>
-                    <!-- <i class="bi bi-arrow-clockwise ms-2" id="reload"></i> -->
-                    <a href="#" target="_blank" id="openModalKalkulator">
-                        <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png"
-                            width="25px" />
-                    </a>
-                </div>
-
-
-                <div class="row">
-
-                    <button class="uk-button uk-button-small uk-text-secondary"
-                        style="background-color: rgb(152, 242, 152);" id="CheckModal">Check</button>
-                    <button class="uk-button uk-button-small uk-button-secondary" id="UpdateHistoryPNL">Update
-                        PNL</button>
-                    <button class="uk-button uk-button-small uk-button-danger" id="ResetModal">Reset</button>
-                    <button class="uk-button uk-button-small uk-button-primary" id="SaveModal">Save MODAL</button>
-                </div>
-
-                <div class="uk-text-center  uk-margin-small-top">
-                    <span class="uk-text-middle uk-text-secondary"><b>Awal : <span class="uk-text-primary"
-                                id="m_awal">...</span></b></span>
-                    | <span class="uk-text-middle uk-text-secondary"><b>Akhir: <span class="uk-text-warning"
-                                id="m_akhir">...</span></b></span>
-                    | <span class="uk-text-middle uk-text-secondary"><b>PNL: <span class="uk-text-danger"
-                                id="m_pnl">...</span></b></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="contaner">
-        <div class="row">
-            <div class="col">
-                <h5 class="uk-text-primary uk-text-left  uk-margin-small-top"><span>ALL Saldo Exchanges</span> (
-                    <span id="LTotalSaldoCEX"></span> )</h5>
-                <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top"
-                    id="assetTableCexs">
+                
+                <div class="uk-width-auto@m">
+                <hr/>
+                <h5 class="uk-text-primary uk-text-left  uk-margin-small-top"><span>ALL Saldo Exchanges</span> ( <span id="LTotalSaldoCEX"></span> )</h5>
+                <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top" id="assetTableCexs" >
                     <thead class="cex-header">
                         <tr>
                             <th>EXCHANGER</th>
                             <th>SALDO{USDT}</th>
-                        </tr>
+                        </tr>                                
                     </thead>
                     <tr>
                         <td>BINANCE</td>
@@ -324,644 +183,430 @@
                         <td>BYBIT</td>
                         <td id="BYBITSaldo" class="uk-text-center"> xxx {USDT}</td>
                     </tr>
-
+                    
                     <tbody id="output_cex"></tbody>
                     <tr>
-                        <th style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">
-                            TOTAL</th>
-                        <th style="text-align: center; font-size: large; font-weight: bolder; color: #527aff;"
-                            id="TotalSaldoCEX">...</th>
+                        <th style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">TOTAL</th>
+                        <th style="text-align: center; font-size: large; font-weight: bolder; color: #527aff;" id="TotalSaldoCEX">...</th>
                     </tr>
-                </table>
-            </div>
-            <div class="col">
-                <h5 class="uk-text-left uk-margin-small-top"><span>Assets ALL Chain</span>( <span
-                        id="LTotalBalanceWallets"></span> USDT )</h5>
-                <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top"
-                    id="assetTableWallet" style="display:none;">
-                    <thead class="chain-header">
-                        <tr>
-                            <th>Chain</th>
-                            <th>ASSET</th>
-                            <th>GAS {USDT}</th>
-                            <th>TOTAL</th>
-                        </tr>
-                    </thead>
-                    <tbody id="output_chain"></tbody>
-                    <tr>
-                        <th colspan="3"
-                            style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">Total
-                            USDT</th>
-                        <th style="text-align: center; font-size: large; font-weight: bolder; color: #527aff;"
-                            id="TotalBalanceWallets">...</th>
-                    </tr>
-                </table>
-            </div>
-            <div class="col">
-                <h5 class="uk-heading-line uk-text-danger uk-text-left uk-margin-small-top"><span>ALL History
-                        Modal</span></h5>
-                <div style="max-height: 350px; overflow-y: auto;">
-                    <table class="uk-table uk-table-striped uk-table-hover " id="assetTablePNL">
-                        <thead class="pnl-header" style="position: sticky; top: 0; z-index: 1;">
-                            <tr>
-                                <th>TIME_UPDATE</th>
-                                <th>Awal</th>
-                                <th>Akhir</th>
-                                <th>PNL</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>xxxx-xx-xx</td>
-                            <td>xxxxx</td>
-                            <td>xxxxx</td>
-                            <td>xxxxx</td>
-                            <td>xxxxx</td>
-                        </tr>
-
-                    </table>
+                </table> 
+                                        
                 </div>
             </div>
         </div>
-    </div>
-    <div id="calculatorModal" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body uk-modal-dialog-large">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <h3 class="uk-modal-title">
-                <img title="KALKULATOR" src="https://cdn-icons-png.flaticon.com/512/17184/17184898.png"
-                    width="28px" />&nbsp;
-                KALKULATOR CRYPTO
-            </h3>
-            <form class="uk-form-stacked uk-margin-small">
-                <div class="uk-margin-small-top">
-                    <label class="uk-form-label" for="form-horizontal-text">USDT</label>
-                    <div class="uk-form-controls">
-                        <input type="number" class="uk-input" id="usdtprice" placeholder="0" value=""
-                            oninput="convertCurrency('usdt')" required />
+        <!-- Kolom 2 -->
+         <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <!-- Bagian Chains -->
+                    <h5 class="uk-heading-line uk-text-right"><span>Setting Chains & Wallet</span></h5>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox"  id="ETHEREUM" />&nbsp;
+                                <label class="form-check-label" for="ethWallet">ETHEREUM</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="ethWallet" placeholder="Enter Ethereum Wallet Address">
                     </div>
-                </div>
-                <div class="uk-margin-small-top">
-                    <label class="uk-form-label" for="form-horizontal-text">IDR</label>
-                    <div class="uk-form-controls">
-                        <input type="number" class="uk-input" id="idrprice" placeholder="0" value=""
-                            oninput="convertCurrency('idr')" required />
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox"  id="BSC" />&nbsp;
+                                <label class="form-check-label" for="bscWallet">BSC</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="bscWallet" placeholder="Enter BSC Wallet Address">
                     </div>
-                </div>
-                <div class="uk-margin-small-top">
-                    <label class="uk-form-label" for="form-horizontal-text">BTC</label>
-                    <div class="uk-form-controls">
-                        <input type="number" class="uk-input" id="btcprice" placeholder="0" value=""
-                            oninput="convertCurrency('btc')" required />
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox"  id="POLYGON" />&nbsp;
+                                <label class="form-check-label" for="polygonWallet">POLYGON</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="polygonWallet" placeholder="Enter Polygon Wallet Address">
                     </div>
-                </div>
-                <div class="uk-margin-small-top">
-                    <label class="uk-form-label" for="form-horizontal-text">ETH</label>
-                    <div class="uk-form-controls">
-                        <input type="number" class="uk-input" id="ethprice" placeholder="0" value=""
-                            oninput="convertCurrency('eth')" required />
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox"  id="BASE" />&nbsp;
+                                <label class="form-check-label" for="baseWallet">BASE</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="baseWallet" placeholder="Enter Base Wallet Address">
                     </div>
-                </div>
-                <div class="uk-margin-small-top">
-                    <label class="uk-form-label" for="form-horizontal-text">BNB</label>
-                    <div class="uk-form-controls">
-                        <input type="number" class="uk-input" id="bnbprice" placeholder="0" value=""
-                            oninput="convertCurrency('bnb')" required />
+
+                    <div class="input-group mb-2" >
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox"  id="ARBITRUM" />&nbsp;
+                                <label class="form-check-label" for="arbitrumWallet">ARBITRUM</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="arbitrumWallet" placeholder="Enter Arbitrum Wallet Address">
                     </div>
-                    <div class="uk-margin-small-top">
-                        <label class="uk-form-label" for="randomprice">TOKEN</label>
-                        <div class="uk-form-controls">
-                            <input type="text" class="uk-input uk-width-1-4 text-uppercase" id="symbol"
-                                placeholder="NAMA KOIN" value="" required />
-                            <input type="number" class="uk-input uk-width-1-2" id="randomprice" placeholder="0" value=""
-                                oninput="convertCurrency('random')" required disabled />
-                            <button type="button" class="uk-button uk-button-small uk-button-primary"
-                                onclick="getRandom()" id="randget">
-                                Get
-                            </button>
-                            <button type="button" class="uk-button uk-button-small uk-button-danger"
-                                onclick="resetRandom()" id="randreset" hidden>X</button>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox"  id="SOLANA" />&nbsp;
+                                <label class="form-check-label" for="solanaWallet">SOLANA</label>
+                            </div>
+                        </div>
+                        <input class="form-control" type="text" id="solanaWallet" placeholder="Enter Solana Wallet Address">
+                    </div>
+                    
+                    <div class="input-group mb-2 uk-flex uk-flex-between uk-flex-middle">                                        
+                        <span class="uk-text-middle uk-text-secondary"><b>Last Check: <span  class="uk-text-warning" id="updatechain">...</span></b></span>
+                        <button class="uk-button uk-button-small uk-button-secondary" id="checkAssetsWallet">Check Now</button>
+                    </div>
+                    <hr/>
+                    <h5 class="uk-text-left uk-margin-small-top"><span>Assets ALL Chain</span>( <span id="LTotalBalanceWallets"></span> USDT )</h5>
+                    <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top" id="assetTableWallet" style="display:none;">
+                        <thead class="chain-header">
+                            <tr>
+                                <th>Chain</th>
+                                <th>ASSET</th>
+                                <th>GAS {USDT}</th>
+                                <th>TOTAL</th>
+                            </tr>                       
+                        </thead>
+                        <tbody id="output_chain"></tbody>
+                        <tr>
+                            <th colspan="3" style="text-align: right; font-size: large; font-weight: bolder; color: #527aff;">Total USDT</th>
+                            <th style="text-align: center; font-size: large; font-weight: bolder; color: #527aff;" id="TotalBalanceWallets">...</th>
+                        </tr>
+                    </table>
+            </div>
+        </div>
+        <!-- Kolom 3 -->
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                      <!-- Bagian History PNL -->
+                        
+                        <!-- Inputan Modal Awal -->
+                        <div class="input-group mb-2 uk-flex uk-flex-middle">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <label class="form-check-label" for="MODALAWAL">MODAL AWAL</label>
+                                </span>
+                            </div>
+                            <input type="number" class="form-control w-25" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
+                            <span class="input-group-text" id="RPMODAL"></span>
+                            <i class="bi bi-arrow-clockwise" id="reload"></i>
                         </div>
 
-                    </div>
+                       <div class="uk-text-right">
+                            <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
+                                <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
+                            </a>
+                            <a href="#" target="_blank" id="openModalKalkulator">
+                                <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
+                            </a>
+                            <button class="uk-button uk-button-small uk-text-secondary" style="background-color: rgb(152, 242, 152);" id="CheckModal">Check</button>  
+                            <button class="uk-button uk-button-small uk-button-secondary" id="UpdateHistoryPNL">Update PNL</button>                        
+                            <button class="uk-button uk-button-small uk-button-danger" id="ResetModal">Reset</button> 
+                            <button class="uk-button uk-button-small uk-button-primary" id="SaveModal">Save MODAL</button>   
+                        </div>
 
-                </div>
+                        <div class="uk-text-center  uk-margin-small-top">
+                            <span class="uk-text-middle uk-text-secondary"><b>Awal : <span  class="uk-text-primary" id="m_awal">...</span></b></span>
+                            | <span class="uk-text-middle uk-text-secondary"><b>Akhir: <span  class="uk-text-warning" id="m_akhir">...</span></b></span>
+                            | <span class="uk-text-middle uk-text-secondary"><b>PNL: <span  class="uk-text-danger" id="m_pnl">...</span></b></span>
+                        </div>
+                        
+                       <hr/> 
+                       <h5 class="uk-heading-line uk-text-danger uk-text-left uk-margin-small-top"><span>ALL History Modal</span></h5>
+                       
+                       <!-- Modal Kalkulator -->
+                       <div id="calculatorModal" uk-modal>
+                           <div class="uk-modal-dialog uk-modal-body uk-modal-dialog-large">
+                               <button class="uk-modal-close-default" type="button" uk-close></button>
+                               <h3 class="uk-modal-title">
+                                   <img title="KALKULATOR" src="https://cdn-icons-png.flaticon.com/512/17184/17184898.png" width="28px" />&nbsp;
+                                   KALKULATOR CRYPTO
+                               </h3>
+                               <form class="uk-form-horizontal uk-margin-small">
+                                   <div class="uk-margin-small-top">
+                                       <label class="uk-form-label" for="form-horizontal-text">USDT</label>
+                                       <div class="uk-form-controls">
+                                           <input type="number" class="uk-input" id="usdtprice" placeholder="0" value="" oninput="convertCurrency('usdt')" required />
+                                       </div>
+                                   </div>
+                                   <div class="uk-margin-small-top">
+                                       <label class="uk-form-label" for="form-horizontal-text">IDR</label>
+                                       <div class="uk-form-controls">
+                                           <input type="number" class="uk-input" id="idrprice" placeholder="0" value="" oninput="convertCurrency('idr')" required />
+                                       </div>
+                                   </div>
+                                   <div class="uk-margin-small-top">
+                                       <label class="uk-form-label" for="form-horizontal-text">BTC</label>
+                                       <div class="uk-form-controls">
+                                           <input type="number" class="uk-input" id="btcprice" placeholder="0" value="" oninput="convertCurrency('btc')" required />
+                                       </div>
+                                   </div>
+                                   <div class="uk-margin-small-top">
+                                       <label class="uk-form-label" for="form-horizontal-text">ETH</label>
+                                       <div class="uk-form-controls">
+                                           <input type="number" class="uk-input" id="ethprice" placeholder="0" value="" oninput="convertCurrency('eth')" required />
+                                       </div>
+                                   </div>
+                                   <div class="uk-margin-small-top">
+                                    <label class="uk-form-label" for="form-horizontal-text">BNB</label>
+                                    <div class="uk-form-controls">
+                                        <input type="number" class="uk-input" id="bnbprice" placeholder="0" value="" oninput="convertCurrency('bnb')" required />
+                                    </div>
+                                </div>
+                                
+                                <!-- Baris untuk TOKEN, tombol, dan input -->
+                                <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                    <div class="uk-flex uk-flex-between uk-width-1-1">
+                                        <!-- Label dan inputan TOKEN -->
+                                        <div class="uk-flex uk-flex-middle">
+                                            <label class="uk-form-label" for="randomprice">TOKEN</label>
+                                            <input type="number" class="uk-input uk-width-1-4" id="randomprice" placeholder="0" value="" oninput="convertCurrency('random')" required />
+                                        </div>
+                                
+                                        <!-- Tombol 'Get' dan 'Reset' -->
+                                        <div class="uk-flex uk-flex-middle">
+                                            <button type="button" class="uk-button uk-button-small uk-button-primary" onclick="getRandom()" id="randget">Get</button>
+                                            <button type="button" class="uk-button uk-button-small uk-button-danger" onclick="resetRandom()" id="randreset" hidden>X</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
 
-
-            </form>
-            <div class="uk-modal-footer uk-text-center">
-                <button class="uk-button uk-button-primary" onclick="rateKalkulator()">Update
-                    Price</button>
+                               </form>
+                               <div class="uk-modal-footer uk-text-center">
+                                   <button class="uk-button uk-button-primary" onclick="rateKalkulator()">Update Price</button>
+                               </div>
+                           </div>
+                       </div>
+                       
+                           <table class="uk-table uk-table-striped uk-table-hover" id="assetTablePNL">
+                               <thead class="pnl-header">
+                                   <tr>
+                                       <th>TIME_UPDATE</th>
+                                       <th>Awal</th>
+                                       <th>Akhir</th>
+                                       <th>PNL</th>
+                                       <th>Action</th>
+                                   </tr>
+                               </thead>
+                               <tr>
+                                   <td>xxxx-xx-xx</td>
+                                   <td>xxxxx</td>
+                                   <td>xxxxx</td>
+                                   <td>xxxxx</td>
+                                   <td>xxxxx</td>
+                               </tr>
+                              
+                           </table>   
+                   
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        var ratePrice = {
-            usdt: 1,
-            idr: 0,
-            btc: 0,
-            eth: 0,
-            bnb: 0,
-            random: 0,
+<script>  
+    $(document).ready(function () {
+        const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631'; // Ganti dengan API Key Infura Anda
+      
+        const chains = {
+            ethereum: `https://mainnet.infura.io/v3/${infuraApiKey}`,
+            bsc: 'https://bsc-dataseed.binance.org/',
+            polygon: 'https://polygon-rpc.com',
+            base: 'https://mainnet.base.org',
+            arbitrum: `https://arbitrum-mainnet.infura.io/v3/${infuraApiKey}`,
+            solana: 'https://api.mainnet-beta.solana.com' 
         };
 
-        var last = "";
-
-
-        function rateKalkulator() {
-            $.getJSON(
-                    "https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
-                )
-                .done(function (response) {
-                    response.forEach((res) => {
-                        switch (res.symbol) {
-                            case "BTCUSDT":
-                                ratePrice["btc"] = res.price;
-                                break;
-                            case "ETHUSDT":
-                                ratePrice["eth"] = res.price;
-                                break;
-                            case "BNBUSDT":
-                                ratePrice["bnb"] = res.price;
-                                break;
-                        }
-                    });
-                })
-                .fail(function (error) {
-                    console.log(error);
-                });
-
-            $.getJSON(
-                    "https://indodax.com/api/ticker/USDTIDR"
-                )
-                .done(function (response) {
-                    ratePrice["idr"] = response.ticker.last;
-                })
-                .fail(function (error) {
-                    console.log(error);
-                });
-            last ? convertCurrency(last) : null;
-        }
-
-        rateKalkulator();
-
-        function getRandom() {
-            var symbolRandom = $("#symbol").val();
-            //      console.log(symbolRandom.toUpperCase());
-            if (symbolRandom) {
-                $.getJSON(
-                        "https://www.binance.me/api/v3/ticker/price?symbol=" +
-                        symbolRandom.toUpperCase() +
-                        "USDT"
-                    )
-                    .done(function (response) {
-                        //          console.log(response);
-
-                        ratePrice["random"] = response.price;
-
-                        var usdt = 1 * ratePrice["random"];
-                        var idr = usdt * ratePrice["idr"];
-                        var btc = usdt / ratePrice["btc"];
-                        var eth = usdt / ratePrice["eth"];
-                        var bnb = usdt / ratePrice["bnb"];
-                        idr = Math.round(idr, 0);
-
-                        document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-                        document.getElementById("idr" + "price").value =
-                            idr.toLocaleString("id-ID", {
-                                currency: "IDR",
-                            });
-                        document.getElementById("btc" + "price").value = btc.toFixed(10);
-                        document.getElementById("eth" + "price").value = eth.toFixed(9);
-                        document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-
-                        document.getElementById("random" + "price").value = 1;
-
-                        $("#randget").text("Update");
-                        $("#symbol").prop("disabled", true);
-                        $("#randreset").prop("hidden", false);
-
-                        $("#randomprice").prop("disabled", false);
-                    })
-                    .fail(function (error) {
-                        //   console.log(error);
-                        $("#randomprice").prop("disabled", true);
-                        document.getElementById("random" + "price").value = 0;
-                        const Toast = Swal.mixin({
-                            toast: true,
-                            position: "top-end",
-                            showConfirmButton: false,
-                            timer: 2500,
-                            didOpen: (toast) => {
-                                toast.addEventListener("mouseenter", Swal.stopTimer);
-                                toast.addEventListener("mouseleave", Swal.resumeTimer);
-                            },
-                        });
-
-                        Toast.fire({
-                            icon: "error",
-                            title: "Periksa Symbol!!",
-                        });
-                    });
-            } else {
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: "top-end",
-                    showConfirmButton: false,
-                    timer: 2500,
-                    didOpen: (toast) => {
-                        toast.addEventListener("mouseenter", Swal.stopTimer);
-                        toast.addEventListener("mouseleave", Swal.resumeTimer);
-                    },
-                });
-
-                Toast.fire({
-                    icon: "error",
-                    title: "Symbol tidak boleh kosong",
-                });
-            }
-        }
-
-        function resetRandom() {
-            $("#randget").text("Get");
-            $("#symbol").prop("disabled", false);
-            $("#randreset").prop("hidden", true);
-            $("#randomprice").prop("disabled", true);
-
-            ratePrice["random"] = 0;
-
-            document.getElementById("usdt" + "price").value = 0;
-            document.getElementById("idr" + "price").value = 0;
-            document.getElementById("btc" + "price").value = 0;
-            document.getElementById("eth" + "price").value = 0;
-            document.getElementById("bnb" + "price").value = 0;
-            document.getElementById("random" + "price").value = 0;
-            document.getElementById("symbol").value = "";
-        }
-
-        function convertCurrency(base) {
-            const baseValue = parseFloat(
-                document.getElementById(base + "price").value
-            );
-
-            if (!isNaN(baseValue)) {
-                switch (base) {
-                    case "usdt":
-                        last = base;
-                        var idr = (baseValue / ratePrice[base]) * ratePrice["idr"];
-                        var btc = baseValue / ratePrice["btc"];
-                        var eth = baseValue / ratePrice["eth"];
-                        var bnb = baseValue / ratePrice["bnb"];
-                        var random = baseValue / ratePrice["random"];
-                        idr = Math.round(idr, 0);
-
-                        document.getElementById("idr" + "price").value =
-                            idr.toLocaleString("id-ID", {
-                                currency: "IDR",
-                            });
-                        document.getElementById("btc" + "price").value = btc.toFixed(10);
-                        document.getElementById("eth" + "price").value = eth.toFixed(9);
-                        document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-                        ratePrice["random"] ?
-                            (document.getElementById("random" + "price").value =
-                                random.toFixed(5)) :
-                            null;
-
-                        break;
-
-                    case "idr":
-                        last = base;
-
-                        var usdt = (baseValue / ratePrice[base]) * ratePrice["usdt"];
-                        var btc = usdt / ratePrice["btc"];
-                        var eth = usdt / ratePrice["eth"];
-                        var bnb = usdt / ratePrice["bnb"];
-                        var random = usdt / ratePrice["random"];
-
-                        document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-                        document.getElementById("btc" + "price").value = btc.toFixed(10);
-                        document.getElementById("eth" + "price").value = eth.toFixed(9);
-                        document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-                        ratePrice["random"] ?
-                            (document.getElementById("random" + "price").value =
-                                random.toFixed(4)) :
-                            null;
-                        break;
-
-                    case "btc":
-                        last = base;
-
-                        var usdt = baseValue * ratePrice[base];
-                        var idr = usdt * ratePrice["idr"];
-                        var eth = usdt / ratePrice["eth"];
-                        var bnb = usdt / ratePrice["bnb"];
-                        var random = usdt / ratePrice["random"];
-                        idr = Math.round(idr, 0);
-
-                        document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-                        document.getElementById("idr" + "price").value =
-                            idr.toLocaleString("id-ID", {
-                                currency: "IDR",
-                            });
-                        document.getElementById("eth" + "price").value = eth.toFixed(9);
-                        document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-                        ratePrice["random"] ?
-                            (document.getElementById("random" + "price").value =
-                                random.toFixed(4)) :
-                            null;
-
-                        break;
-
-                    case "eth":
-                        last = base;
-
-                        var usdt = baseValue * ratePrice[base];
-                        var idr = usdt * ratePrice["idr"];
-                        var btc = usdt / ratePrice["btc"];
-                        var bnb = usdt / ratePrice["bnb"];
-                        var random = usdt / ratePrice["random"];
-                        idr = Math.round(idr, 0);
-
-                        document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-                        document.getElementById("idr" + "price").value =
-                            idr.toLocaleString("id-ID", {
-                                currency: "IDR",
-                            });
-                        document.getElementById("btc" + "price").value = btc.toFixed(10);
-                        document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-                        ratePrice["random"] ?
-                            (document.getElementById("random" + "price").value =
-                                random.toFixed(4)) :
-                            null;
-
-                        break;
-
-                    case "bnb":
-                        last = base;
-
-                        var usdt = baseValue * ratePrice[base];
-                        var idr = usdt * ratePrice["idr"];
-                        var btc = usdt / ratePrice["btc"];
-                        var eth = usdt / ratePrice["eth"];
-                        var random = usdt / ratePrice["random"];
-                        idr = Math.round(idr, 0);
-
-                        document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-                        document.getElementById("idr" + "price").value =
-                            idr.toLocaleString("id-ID", {
-                                currency: "IDR",
-                            });
-                        document.getElementById("btc" + "price").value = btc.toFixed(10);
-                        document.getElementById("eth" + "price").value = eth.toFixed(9);
-                        ratePrice["random"] ?
-                            (document.getElementById("random" + "price").value =
-                                random.toFixed(4)) :
-                            null;
-
-                        break;
-
-                    default:
-                        var usdt = baseValue * ratePrice["random"];
-                        var idr = usdt * ratePrice["idr"];
-                        var btc = usdt / ratePrice["btc"];
-                        var eth = usdt / ratePrice["eth"];
-                        var bnb = usdt / ratePrice["bnb"];
-                        idr = Math.round(idr, 0);
-
-                        document.getElementById("usdt" + "price").value = usdt.toFixed(7);
-                        document.getElementById("idr" + "price").value =
-                            idr.toLocaleString("id-ID", {
-                                currency: "IDR",
-                            });
-                        document.getElementById("btc" + "price").value = btc.toFixed(10);
-                        document.getElementById("eth" + "price").value = eth.toFixed(9);
-                        document.getElementById("bnb" + "price").value = bnb.toFixed(8);
-                }
-            }
-        }
-
-        $(document).ready(function () {
-            const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631'; // Ganti dengan API Key Infura Anda
-
-            const chains = {
-                ethereum: `https://mainnet.infura.io/v3/${infuraApiKey}`,
-                bsc: 'https://bsc-dataseed.binance.org/',
-                polygon: 'https://polygon-rpc.com',
-                base: 'https://mainnet.base.org',
-                arbitrum: `https://arbitrum-mainnet.infura.io/v3/${infuraApiKey}`,
-                solana: 'https://api.mainnet-beta.solana.com'
-            };
-
-            const erc20Contracts = {
-                ethereum: '0xdAC17F958D2ee523a2206206994597C13D831ec7', // USDT Ethereum
-                bsc: '0x55d398326f99059fF775485246999027B3197955', // USDT BSC
-                polygon: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', // USDT Polygon
-                base: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // USDC Base
-                arbitrum: '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9', // USDT Arbitrum
-                solana: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB' // USDT SPL Token Solana
-            };
-            // Daftar jaringan dengan checkbox dan input terkait
-            const networks = [{
-                    checkboxId: 'ETHEREUM',
-                    inputId: 'ethWallet'
-                },
-                {
-                    checkboxId: 'BSC',
-                    inputId: 'bscWallet'
-                },
-                {
-                    checkboxId: 'POLYGON',
-                    inputId: 'polygonWallet'
-                },
-                {
-                    checkboxId: 'BASE',
-                    inputId: 'baseWallet'
-                },
-                {
-                    checkboxId: 'ARBITRUM',
-                    inputId: 'arbitrumWallet'
-                },
-                {
-                    checkboxId: 'SOLANA',
-                    inputId: 'solanaWallet'
-                }
+        const erc20Contracts = {
+            ethereum: '0xdAC17F958D2ee523a2206206994597C13D831ec7', // USDT Ethereum
+            bsc: '0x55d398326f99059fF775485246999027B3197955', // USDT BSC
+            polygon: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', // USDT Polygon
+            base: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // USDC Base
+            arbitrum: '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9', // USDT Arbitrum
+            solana: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB' // USDT SPL Token Solana
+        };
+        // Daftar jaringan dengan checkbox dan input terkait
+        const networks = [
+                { checkboxId: 'ETHEREUM', inputId: 'ethWallet' },
+                { checkboxId: 'BSC', inputId: 'bscWallet' },
+                { checkboxId: 'POLYGON', inputId: 'polygonWallet' },
+                { checkboxId: 'BASE', inputId: 'baseWallet' },
+                { checkboxId: 'ARBITRUM', inputId: 'arbitrumWallet' },
+                { checkboxId: 'SOLANA', inputId: 'solanaWallet' }
             ];
 
-            // Memanggil loadData saat halaman pertama kali di-load
-            loadData();
-            // Handle button click to show the modal
-            $('#openModalKalkulator').on('click', function (event) {
-                event.preventDefault(); // Prevent default behavior of anchor tag
-                UIkit.modal('#calculatorModal').show();
-            });
+        // Memanggil loadData saat halaman pertama kali di-load
+        loadData();
+        // Handle button click to show the modal
+        $('#openModalKalkulator').on('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor tag
+            UIkit.modal('#calculatorModal').show();
+        });
 
-            // Simpan status checkbox dan nilai input saat terjadi perubahan
-            $('input[type="checkbox"]').on('change', function () {
-                const checkbox = $(this);
-                const id = checkbox.attr('id');
-                const isChecked = checkbox.prop('checked');
+        // Simpan status checkbox dan nilai input saat terjadi perubahan
+        $('input[type="checkbox"]').on('change', function () {
+            const checkbox = $(this);
+            const id = checkbox.attr('id');
+            const isChecked = checkbox.prop('checked');
 
-                // Simpan status checkbox ke localStorage
-                localStorage.setItem(`am_${id}`, isChecked);
+            // Simpan status checkbox ke localStorage
+            localStorage.setItem(`am_${id}`, isChecked);
 
-                // Temukan input terkait dan aktifkan atau nonaktifkan
-                const relatedInputs = checkbox.closest('.input-group').find(
-                    'input[type="text"], input[type="number"]');
-                relatedInputs.prop('disabled', !isChecked);
+            // Temukan input terkait dan aktifkan atau nonaktifkan
+            const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
+            relatedInputs.prop('disabled', !isChecked);
 
-                // Ganti pesan toastr dengan nama inputan checkbox
-                const inputName = checkbox.attr('name') ||
-                    id; // Menggunakan atribut 'name' jika ada, jika tidak gunakan 'id'
-                toastr.success("Status " + inputName + " Berhasil Diubah!!");
-                // Simpan nilai input ke localStorage jika checkbox dicentang
-                relatedInputs.each(function () {
-                    const input = $(this);
-                    const inputId = input.attr('id');
-                    if (isChecked) {
-                        localStorage.setItem(`am_${inputId}`, input.val());
-                    }
-
-                });
-
-                // Menampilkan atau menyembunyikan baris tabel berdasarkan status checkbox
-                // updateTableRows();
-            });
-            // Simpan nilai input ketika ada perubahan
-            $('input[type="text"], input[type="number"]').on('input', function () {
+            // Ganti pesan toastr dengan nama inputan checkbox
+            const inputName = checkbox.attr('name') || id; // Menggunakan atribut 'name' jika ada, jika tidak gunakan 'id'
+            toastr.success("Status "+inputName+" Berhasil Diubah!!");
+            // Simpan nilai input ke localStorage jika checkbox dicentang
+            relatedInputs.each(function() {
                 const input = $(this);
                 const inputId = input.attr('id');
-                const value = input.val();
-
-                // Simpan nilai input ke localStorage
-                localStorage.setItem(`am_${inputId}`, value);
-                // toastr.info("Perubahan Data Telah Simpan!");
+                if (isChecked) {
+                    localStorage.setItem(`am_${inputId}`, input.val());
+                } 
+               
             });
-            // fungsi tombol cek aset all exchangers
-            $('#checkAssetsWallet').on('click', async function () {
-                const selectedChains = {
-                    ethereum: $('#ETHEREUM').is(':checked') ? $('#ethWallet').val() : null,
-                    bsc: $('#BSC').is(':checked') ? $('#bscWallet').val() : null,
-                    polygon: $('#POLYGON').is(':checked') ? $('#polygonWallet').val() : null,
-                    base: $('#BASE').is(':checked') ? $('#baseWallet').val() : null,
-                    arbitrum: $('#ARBITRUM').is(':checked') ? $('#arbitrumWallet').val() : null,
-                    solana: $('#SOLANA').is(':checked') ? $('#solanaWallet').val() : null
-                };
 
-                const validChains = Object.keys(selectedChains).filter(chain => selectedChains[
-                    chain]);
+           // Menampilkan atau menyembunyikan baris tabel berdasarkan status checkbox
+            updateTableRows();
+        });
+        // Simpan nilai input ketika ada perubahan
+        $('input[type="text"], input[type="number"]').on('input', function () {
+            const input = $(this);
+            const inputId = input.attr('id');
+            const value = input.val();
 
-                if (validChains.length === 0) {
-                    $('#output_chain').html(
-                        '<tr><td colspan="4">Please select at least one chain.</td></tr>');
-                    $('#assetTableWallet').show();
-                    return;
-                }
+            // Simpan nilai input ke localStorage
+            localStorage.setItem(`am_${inputId}`, value);
+           // toastr.info("Perubahan Data Telah Simpan!");
+        });
+        // fungsi tombol cek aset all exchangers
+        $('#checkAssetsWallet').on('click', async function() {
+            const selectedChains = {
+                ethereum: $('#ETHEREUM').is(':checked') ? $('#ethWallet').val() : null,
+                bsc: $('#BSC').is(':checked') ? $('#bscWallet').val() : null,
+                polygon: $('#POLYGON').is(':checked') ? $('#polygonWallet').val() : null,
+                base: $('#BASE').is(':checked') ? $('#baseWallet').val() : null,
+                arbitrum: $('#ARBITRUM').is(':checked') ? $('#arbitrumWallet').val() : null,
+                solana: $('#SOLANA').is(':checked') ? $('#solanaWallet').val() : null
+            };
 
-                $('#output_chain').html('<tr><td colspan="4">Loading...</td></tr>');
+            const validChains = Object.keys(selectedChains).filter(chain => selectedChains[chain]);
+
+            if (validChains.length === 0) {
+                $('#output_chain').html('<tr><td colspan="4">Please select at least one chain.</td></tr>');
                 $('#assetTableWallet').show();
+                return;
+            }
 
-                try {
-                    const tokenRates = await fetchTokenRates();
+            $('#output_chain').html('<tr><td colspan="4">Loading...</td></tr>');
+            $('#assetTableWallet').show();
 
-                    const results = await Promise.all(validChains.map(chain =>
-                        chain === 'solana' ?
-                        getSolanaBalance(selectedChains[chain], tokenRates) :
-                        getAssetBalances(chains[chain], erc20Contracts[chain],
-                            selectedChains[chain], chain, tokenRates)
-                    ));
+            try {
+                const tokenRates = await fetchTokenRates();
 
-                    $('#output_chain').html(results.join(''));
+                const results = await Promise.all(validChains.map(chain => 
+                    chain === 'solana' 
+                        ? getSolanaBalance(selectedChains[chain], tokenRates)
+                        : getAssetBalances(chains[chain], erc20Contracts[chain], selectedChains[chain], chain, tokenRates)
+                ));
 
-                    // Menyimpan data per chain di localStorage
-                    const assetData = results.map(result => {
-                        // Ambil data dari hasil response
-                        const [chain, asset, gas, usdtGas, total] = result.match(
-                            /<td>(.*?)<\/td>/g).map(td => td.replace(/<\/?td>/g, ''));
+                $('#output_chain').html(results.join(''));
 
-                        // Konversi nilai menjadi angka
-                        const parsedAsset = parseFloat(asset);
-                        const parsedGas = parseFloat(gas);
-                        const parsedUsdtGas = parseFloat(usdtGas) || 0;
-                        const parsedTotal = parseFloat(total) || 0;
+                // Menyimpan data per chain di localStorage
+                const assetData = results.map(result => {
+                    // Ambil data dari hasil response
+                    const [chain, asset, gas, usdtGas, total] = result.match(/<td>(.*?)<\/td>/g).map(td => td.replace(/<\/?td>/g, ''));
 
-                        // Hitung total (total_usdt + total_gas) jika perlu
-                        const total_usdt = parsedTotal + parsedUsdtGas;
+                    // Konversi nilai menjadi angka
+                    const parsedAsset = parseFloat(asset);
+                    const parsedGas = parseFloat(gas);
+                    const parsedUsdtGas = parseFloat(usdtGas) || 0;
+                    const parsedTotal = parseFloat(total) || 0;
 
-                        // Simpan data ke dalam objek yang lebih mudah digunakan untuk perhitungan
-                        return {
-                            chain,
-                            asset: parsedAsset,
-                            gas: parsedGas,
-                            usdtGas: parsedUsdtGas,
-                            total: total_usdt // Total dihitung sebagai penjumlahan
-                        };
-                    });
+                    // Hitung total (total_usdt + total_gas) jika perlu
+                    const total_usdt = parsedTotal + parsedUsdtGas;
 
-                    // Menyimpan data asset chain di localStorage
-                    localStorage.setItem('am_assetDataCEX', JSON.stringify(assetData));
-                    // Menyimpan waktu saat data diperbarui
-                    var formattedTime = getFormattedTime();
+                    // Simpan data ke dalam objek yang lebih mudah digunakan untuk perhitungan
+                    return { 
+                        chain,
+                        asset: parsedAsset,
+                        gas: parsedGas,
+                        usdtGas: parsedUsdtGas,
+                        total: total_usdt // Total dihitung sebagai penjumlahan
+                    };
+                });
 
-                    localStorage.setItem('am_lastUpdateChain', formattedTime);
+                // Menyimpan data asset chain di localStorage
+                localStorage.setItem('am_assetDataCEX', JSON.stringify(assetData));
+                // Menyimpan waktu saat data diperbarui
+                var formattedTime=getFormattedTime();
+               
+                localStorage.setItem('am_lastUpdateChain', formattedTime);
 
-                    // Tampilkan waktu terakhir diperbarui
-                    $('#updatechain').text(formattedTime);
+                // Tampilkan waktu terakhir diperbarui
+                $('#updatechain').text(formattedTime);
 
-                    // Hitung dan tampilkan total saldo USDT (hasil penjumlahan total dari semua chain)
-                    const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
-                    $('#TotalBalanceWallets').text(totalUSDT.toFixed(
-                        2)); // Tampilkan hasil pada elemen
-                    $('#LTotalBalanceWallets').text(totalUSDT.toFixed(
-                        2)); // Tampilkan hasil pada elemen
+                // Hitung dan tampilkan total saldo USDT (hasil penjumlahan total dari semua chain)
+                const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
+                $('#TotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan hasil pada elemen
+                $('#LTotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan hasil pada elemen
 
-                    localStorage.setItem('am_TotalSaldoChain', totalUSDT);
+                localStorage.setItem('am_TotalSaldoChain', totalUSDT);                
 
-                } catch (error) {
-                    $('#output_chain').html(
-                        `<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`
-                    );
+            } catch (error) {
+                $('#output_chain').html(`<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`);
+            }
+        });
+         // Fungsi untuk mengecek aset wallets all chain
+        $('#checkAssetCEX').on('click', function () {
+            // Ambil semua checkbox yang dicentang
+            const checkedExchanges = [];
+
+            // Periksa checkbox dan tambahkan ke array jika dicentang
+            $('input[type="checkbox"]:checked').each(function () {
+                const id = $(this).attr('id');
+                checkedExchanges.push(id);
+            });
+
+            // Jalankan fungsi pengecekan untuk setiap exchange yang dicentang
+            checkedExchanges.forEach(function(exchange) {
+                switch (exchange) {
+                    case 'BINANCE':
+                        cekAssetBinance();
+                        break;
+                    case 'GATE':
+                        cekAssetGate();
+                        break;
+                    case 'BITGET':
+                        cekAssetBitget();
+                        break;
+                    case 'KUCOIN':
+                        cekAssetKucoin();
+                        break;
+                    case 'BYBIT':
+                        cekAssetBybit();
+                        break;
                 }
             });
-            // Fungsi untuk mengecek aset wallets all chain
-            $('#checkAssetCEX').on('click', function () {
-                // Ambil semua checkbox yang dicentang
-                const checkedExchanges = [];
+        });
+        //fungsi update history PNL
+        $('#UpdateHistoryPNL').on('click', async function () {
+            // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
+            await $('#checkAssetsWallet').trigger('click'); 
 
-                // Periksa checkbox dan tambahkan ke array jika dicentang
-                $('input[type="checkbox"]:checked').each(function () {
-                    const id = $(this).attr('id');
-                    checkedExchanges.push(id);
-                });
-
-                // Jalankan fungsi pengecekan untuk setiap exchange yang dicentang
-                checkedExchanges.forEach(function (exchange) {
-                    switch (exchange) {
-                        case 'BINANCE':
-                            cekAssetBinance();
-                            break;
-                        case 'GATE':
-                            cekAssetGate();
-                            break;
-                        case 'BITGET':
-                            cekAssetBitget();
-                            break;
-                        case 'KUCOIN':
-                            cekAssetKucoin();
-                            break;
-                        case 'BYBIT':
-                            cekAssetBybit();
-                            break;
-                    }
-                });
-            });
-            //fungsi update history PNL
-            $('#UpdateHistoryPNL').on('click', async function () {
-                // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
-                // await $('#checkAssetsWallet').trigger('click');
-
-                // Memanggil fungsi untuk mengecek asset di CEX
-                // await $('#checkAssetCEX').trigger('click');
-                //UIkit.modal.confirm("Apakah Anda Sudah UPDATE SALDO CEX & CHAIN.?").then(function () {
+            // Memanggil fungsi untuk mengecek asset di CEX
+            $('#checkAssetCEX').trigger('click');
+            //UIkit.modal.confirm("Apakah Anda Sudah UPDATE SALDO CEX & CHAIN.?").then(function () {
                 // Menyimpan waktu saat data diperbarui
                 var formattedTime = getFormattedTime();
 
@@ -972,15 +617,7 @@
                 // Retrieve data from localStorage
                 const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
                 const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
-                const historyold = JSON.parse(localStorage.getItem('am_history')) || [];
-                var modalawal;
-                if (localStorage.getItem('am_MODALAWAL')) {
-                    if (historyold.length > 0) {
-                        modalawal = historyold[0].saldoAkhir
-                    } else {
-                        modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'))
-                    }
-                }
+                const modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
                 const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
                 console.log("Saldo Exchanger: " + saldoExchanger);
@@ -988,6 +625,9 @@
                 console.log("Saldo Awal: " + modalawal);
                 console.log("Saldo Akhir: " + saldoAkhir);
 
+                // Get the current date and time in WIB (UTC +7)
+                const date = new Date();
+                const timestampWIB = new Date(date.getTime() + (7 * 60 * 60 * 1000)).toISOString().replace('T', ' ').split('.')[0];
 
                 // Retrieve history from localStorage or initialize it as an empty array
                 const history = JSON.parse(localStorage.getItem('am_history')) || [];
@@ -996,7 +636,7 @@
 
                 // Create new history entry
                 const newHistoryEntry = {
-                    date: formattedTime, // WIB formatted timestamp
+                    date: timestampWIB,  // WIB formatted timestamp
                     saldoAwal: saldoAwal.toFixed(2),
                     saldoAkhir: saldoAkhir.toFixed(2),
                     pnl: (saldoAkhir - saldoAwal).toFixed(2),
@@ -1004,7 +644,7 @@
                 };
 
                 // Add the new history entry to the beginning of the history array
-                history.unshift(newHistoryEntry); // Use unshift() to add to the first index
+                history.unshift(newHistoryEntry);  // Use unshift() to add to the first index
 
                 // Limit the history array to 15 entries
                 const limitedHistory = history.slice(0, 14);
@@ -1017,7 +657,7 @@
                 $tableBody.empty(); // Clear existing rows in the body
 
                 // Add rows to the table body
-                $.each(limitedHistory, function (index, entry) {
+                $.each(limitedHistory, function(index, entry) {
                     const row = $('<tr></tr>'); // Create a new table row
 
                     // Create each cell and append the content
@@ -1029,121 +669,109 @@
 
                     // Append the row to the table body
                     $tableBody.append(row);
-                });
-                // }, function () {
-                //     // Tampilkan notifikasi jika pengguna membatalkan
-                //     toastr.warning("Pastikan untuk melakukan update saldo Exchanger & Chain sebelum melanjutkan!!");
-                // });
-            });
+                }); 
+            // }, function () {
+            //     // Tampilkan notifikasi jika pengguna membatalkan
+            //     toastr.warning("Pastikan untuk melakukan update saldo Exchanger & Chain sebelum melanjutkan!!");
+            // });
+        });
 
-            // Fungsi Save Modal
-            $('#SaveModal').on('click', function () {
-                var inmodal_awal = $("#MODALAWAL").val();
-                var formattedTime = getFormattedTime();
+       // Fungsi Save Modal
+        $('#SaveModal').on('click', function () {
+            var inmodal_awal = $("#MODALAWAL").val();
+            var formattedTime = getFormattedTime();
 
-                // Simpan waktu terakhir diperbarui ke localStorage
-                localStorage.setItem('am_lastUpdatePNL', formattedTime);
-                localStorage.setItem('am_MODALAWAL', inmodal_awal);
-                toastr.success("SIMPAN MODAL AWAL BERHASIL [ " + formattedTime + " ] ");
+            // Simpan waktu terakhir diperbarui ke localStorage
+            localStorage.setItem('am_lastUpdatePNL', formattedTime);
+            localStorage.setItem('am_MODALAWAL', inmodal_awal);
+            toastr.success("SIMPAN MODAL AWAL BERHASIL [ " + formattedTime + " ] ");
 
-                // Ambil data untuk pengisian history
-                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
-                const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
-                const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+            // Ambil data untuk pengisian history
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-                // Tambahkan data ke riwayat
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
-                const newHistoryEntry = {
-                    date: formattedTime,
-                    saldoAwal: Number(inmodal_awal).toFixed(2), // Modal awal diambil dari input
-                    saldoAkhir: saldoAkhir.toFixed(2),
-                    pnl: (saldoAkhir - Number(inmodal_awal)).toFixed(2),
-                    action: "start" // Set action ke "start"
-                };
-                history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
-                localStorage.setItem('am_history', JSON.stringify(history.slice(0,
-                    14))); // Simpan maksimal 15 entri
+            // Tambahkan data ke riwayat
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            const newHistoryEntry = {
+                date: formattedTime,
+                saldoAwal: Number(inmodal_awal).toFixed(2),  // Modal awal diambil dari input
+                saldoAkhir: saldoAkhir.toFixed(2),
+                pnl: (saldoAkhir - Number(inmodal_awal)).toFixed(2),
+                action: "start"  // Set action ke "start"
+            };
+            history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
+            localStorage.setItem('am_history', JSON.stringify(history.slice(0, 14))); // Simpan maksimal 15 entri
 
-                loadData();
-            });
+            loadData();
+        });
 
-            // Fungsi Reset Modal
-            $('#ResetModal').on('click', function () {
-                var formattedTime = getFormattedTime();
+        // Fungsi Reset Modal
+        $('#ResetModal').on('click', function () {
+            var formattedTime = getFormattedTime();
 
-                // Simpan waktu terakhir diperbarui ke localStorage
-                localStorage.setItem('am_lastUpdatePNL', formattedTime);
-                toastr.success("RESET MODAL BERHASIL [ " + formattedTime + " ] ");
+            // Simpan waktu terakhir diperbarui ke localStorage
+            localStorage.setItem('am_lastUpdatePNL', formattedTime);
+            toastr.success("RESET MODAL BERHASIL [ " + formattedTime + " ] ");
 
-                // Ambil data untuk pengisian history
-                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
-                const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
-                const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+            // Ambil data untuk pengisian history
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-                // Set modal awal ke saldo total saat ini (reset)
-                localStorage.setItem('am_MODALAWAL', saldoAkhir);
+            // Set modal awal ke saldo total saat ini (reset)
+            localStorage.setItem('am_MODALAWAL', saldoAkhir);
 
-                // Tambahkan data ke riwayat
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
-                const newHistoryEntry = {
-                    date: formattedTime,
-                    saldoAwal: saldoAkhir.toFixed(2), // Modal awal diset ke saldo total saat ini
-                    saldoAkhir: saldoAkhir.toFixed(2), // Modal akhir tetap sama karena reset
-                    pnl: 0, // Tidak ada perubahan PNL saat reset
-                    action: "reset" // Set action ke "reset"
-                };
-                history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
-                localStorage.setItem('am_history', JSON.stringify(history.slice(0,
-                    14))); // Simpan maksimal 15 entri
+            // Tambahkan data ke riwayat
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            const newHistoryEntry = {
+                date: formattedTime,
+                saldoAwal: saldoAkhir.toFixed(2),  // Modal awal diset ke saldo total saat ini
+                saldoAkhir: saldoAkhir.toFixed(2), // Modal akhir tetap sama karena reset
+                pnl: 0,  // Tidak ada perubahan PNL saat reset
+                action: "reset"  // Set action ke "reset"
+            };
+            history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
+            localStorage.setItem('am_history', JSON.stringify(history.slice(0, 14))); // Simpan maksimal 15 entri
 
-                location.reload();
-            });
+            location.reload();
+        });
+      
+        // Fungsi cek modal all
+        $('#CheckModal').on('click', async function () {
+             // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
+            await $('#checkAssetsWallet').trigger('click'); 
 
-            // Fungsi cek modal all
-            $('#CheckModal').on('click', async function () {
-                // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
-                await $('#checkAssetsWallet').trigger('click');
-
-                // Memanggil fungsi untuk mengecek asset di CEX
-                await $('#checkAssetCEX').trigger('click');
-                // Gunakan modal konfirmasi dari UIkit
-                //UIkit.modal.confirm("Apakah Anda Sudah UPDATE SALDO CEX & CHAIN.?").then(function () {
+            // Memanggil fungsi untuk mengecek asset di CEX
+            $('#checkAssetCEX').trigger('click');
+            // Gunakan modal konfirmasi dari UIkit
+            //UIkit.modal.confirm("Apakah Anda Sudah UPDATE SALDO CEX & CHAIN.?").then(function () {
                 // Ambil data dari localStorage
                 const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
                 const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
-                var modalAwal;
-                if (localStorage.getItem('am_MODALAWAL')) {
-                    if (history.length > 0) {
-                        modalAwal = history[0].saldoAkhir
-                    } else {
-                        modalAwal = JSON.parse(localStorage.getItem('am_MODALAWAL'))
-                    }
-                } else {
-                    modalAwal = 0
-                }
+                const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
                 const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
                 // Hitung PNL (Profit and Loss)
-                const pnl = saldoAkhir - Number(modalAwal);
+                const pnl = saldoAkhir - modalAwal;
 
                 // Tampilkan data di elemen HTML
-                $('#m_awal').text(Number(modalAwal).toFixed(2) + ' USDT');
+                $('#m_awal').text(modalAwal.toFixed(2) + ' USDT');
                 $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
                 $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
 
                 // Tampilkan notifikasi
                 toastr.info("CHECK MODAL BERHASIL");
-                // }, function () {
-                //     // Tampilkan notifikasi jika pengguna membatalkan
-                //     toastr.warning("Pastikan untuk melakukan update saldo Exchanger & Chain sebelum melanjutkan!!");
-                // });
-            });
+            // }, function () {
+            //     // Tampilkan notifikasi jika pengguna membatalkan
+            //     toastr.warning("Pastikan untuk melakukan update saldo Exchanger & Chain sebelum melanjutkan!!");
+            // });
+        });
 
-            // Fungsi pengecekan untuk masing-masing exchange
-            function cekAssetBinance() {
+        // Fungsi pengecekan untuk masing-masing exchange
+        function cekAssetBinance() {
                 console.log("Cek Asset Binance");
-                // Fungsi untuk mendapatkan saldo Binance
+            // Fungsi untuk mendapatkan saldo Binance
                 var apiKey = $("#apikeyBINANCE").val();
                 var apiSecret = $("#secretkeyBINANCE").val();
 
@@ -1178,7 +806,7 @@
                         var usdtInfo = response.balances.find(function (currency) {
                             return currency.asset === "USDT";
                         });
-                        console.warn("BINANCE USDT : " + usdtInfo.free)
+                        console.warn("BINANCE USDT : "+usdtInfo.free)
                         // Memperbarui saldo Binance pada tabel
                         $("#BINANCESaldo").text(parseFloat(usdtInfo.free).toFixed(2) + " {USDT}");
 
@@ -1192,130 +820,127 @@
                 });
             }
 
-            function cekAssetGate() {
-                console.log("Cek Asset Gate");
-                var key = $("#apikeyGATE").val();
-                var secret = $("#secretkeyGATE").val();
-                var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
-                var prefix = "/api/v4";
-                var method = "GET";
-                var url = "/spot/accounts";
+        function cekAssetGate() {
+            console.log("Cek Asset Gate");
+            var key = $("#apikeyGATE").val();
+            var secret = $("#secretkeyGATE").val();
+            var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
+            var prefix = "/api/v4";
+            var method = "GET";
+            var url = "/spot/accounts";
 
-                var query_param = "";
-                var body_param = '';
-                var timestamp = Math.floor(new Date().getTime() / 1000);
-                var body_hash = CryptoJS.SHA512(body_param).toString();
-                var sign_string = method + '\n' + prefix + url + '\n' + query_param + '\n' + body_hash + '\n' +
-                    timestamp;
-                var sign = CryptoJS.HmacSHA512(sign_string, secret).toString();
-                var full_url = host + prefix + url;
+            var query_param = "";
+            var body_param = '';
+            var timestamp = Math.floor(new Date().getTime() / 1000);
+            var body_hash = CryptoJS.SHA512(body_param).toString();
+            var sign_string = method + '\n' + prefix + url + '\n' + query_param + '\n' + body_hash + '\n' + timestamp;
+            var sign = CryptoJS.HmacSHA512(sign_string, secret).toString();
+            var full_url = host + prefix + url;
 
-                $.ajax({
-                    url: full_url,
-                    method: method,
-                    beforeSend: function () {
-                        $("#GATESaldo").text("Load.." + " {USDT}");
-                    },
-
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json',
-                        'Timestamp': timestamp,
-                        'KEY': key,
-                        'SIGN': sign
-                    },
-                    success: function (response) {
-                        // console.warn("SALDO GATE : "+response)
-                        var usdtInfo = response.find(function (currency) {
-                            return currency.currency === "USDT";
-                        });
-
-                        console.warn("GATE USDT : " + usdtInfo.available)
-
+            $.ajax({
+                url: full_url,
+                method: method,
+                beforeSend: function () {
+                    $("#GATESaldo").text("Load.." + " {USDT}");
+                },
+        
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Timestamp': timestamp,
+                    'KEY': key,
+                    'SIGN': sign
+                },
+                success: function (response) {
+                // console.warn("SALDO GATE : "+response)
+                    var usdtInfo = response.find(function (currency) {               
+                        return currency.currency === "USDT";
+                    });
+                    
+                    console.warn("GATE USDT : "+usdtInfo.available)
+                        
                         // Menyimpan saldo ke localStorage
                         localStorage.setItem("am_GATESaldo", usdtInfo.available);
                         // Memperbarui saldo Binance pada tabel
                         $("#GATESaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
                         getTotalSaldoCEXS();
 
-                    },
-                    error: function (error) {
-                        toastr.error("Error fetching GATE data:", error);
-                    }
-                });
-            }
+                },
+                error: function (error) {
+                    toastr.error("Error fetching GATE data:", error);
+                }
+            });
+        }
 
-            function cekAssetBitget() {
-                console.log("Cek Asset Bitget");
-                var apiKey = $("#apikeyBITGET").val();
-                var apiSecret = $("#secretkeyBITGET").val();
-                var passphrase = $("#passphraseBITGET").val();
+        function cekAssetBitget() {
+            console.log("Cek Asset Bitget");
+            var apiKey = $("#apikeyBITGET").val();
+            var apiSecret = $("#secretkeyBITGET").val();
+            var passphrase = $("#passphraseBITGET").val();
 
-                // URL API Bitget untuk mendapatkan saldo akun
-                var apiUrl =
-                    "https://cors-anywhere.herokuapp.com/https://api.bitget.com/api/v2/spot/account/assets";
+            // URL API Bitget untuk mendapatkan saldo akun
+            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.bitget.com/api/v2/spot/account/assets";
 
-                // Timestamp untuk permintaan
-                var timestamp = Date.now().toString();
+            // Timestamp untuk permintaan
+            var timestamp = Date.now().toString();
 
-                // Membuat signature menggunakan HMAC SHA256
-                var preSignature = timestamp + "GET" + "/api/v2/spot/account/assets" + "";
-                var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
+            // Membuat signature menggunakan HMAC SHA256
+            var preSignature = timestamp + "GET" + "/api/v2/spot/account/assets" + "";
+            var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
 
-                // Header request
-                var headers = {
-                    "ACCESS-KEY": apiKey,
-                    "ACCESS-SIGN": signature,
-                    "ACCESS-TIMESTAMP": timestamp,
-                    "ACCESS-PASSPHRASE": passphrase,
-                };
+            // Header request
+            var headers = {
+                "ACCESS-KEY": apiKey,
+                "ACCESS-SIGN": signature,
+                "ACCESS-TIMESTAMP": timestamp,
+                "ACCESS-PASSPHRASE": passphrase,
+            };
 
-                // Melakukan panggilan AJAX ke API Bitget
-                $.ajax({
-                    url: apiUrl,
-                    method: "GET",
-                    headers: headers,
-                    dataType: "json",
-                    beforeSend: function () {
-                        $("#BITGETSaldo").text("Load.." + " {USDT}");
-                    },
-                    success: function (response) {
-                        var usdtInfo = response.data.find(function (currency) {
-                            return currency.coin === "USDT";
-                        });
-                        console.warn("BITGET USDT : " + usdtInfo.available)
-                        // Memperbarui saldo Bitget pada tabel
-                        $("#BITGETSaldo").text(parseFloat(usdtInfo.available).toFixed(2) +
-                            " {USDT}");
+            // Melakukan panggilan AJAX ke API Bitget
+            $.ajax({
+                url: apiUrl,
+                method: "GET",
+                headers: headers,
+                dataType: "json",
+                beforeSend: function () {
+                    $("#BITGETSaldo").text("Load.." + " {USDT}");
+                },
+                success: function (response) {
+                    var usdtInfo = response.data.find(function (currency) {
+                        return currency.coin === "USDT";
+                    });
+                    console.warn("BITGET USDT : "+usdtInfo.available)
+                    // Memperbarui saldo Bitget pada tabel
+                    $("#BITGETSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
 
-                        // Menyimpan saldo ke localStorage
-                        localStorage.setItem("am_BITGETSaldo", usdtInfo.available);
-                        getTotalSaldoCEXS();
-                    },
-                    error: function (xhr, status, error) {
-                        toastr.error("Error fetching Bitget data:", error);
-                    }
-                });
-            }
+                    // Menyimpan saldo ke localStorage
+                    localStorage.setItem("am_BITGETSaldo", usdtInfo.available);
+                    getTotalSaldoCEXS();
+                },
+                error: function (xhr, status, error) {
+                    toastr.error("Error fetching Bitget data:", error);
+                }
+            });
+        }
 
-            function cekAssetKucoin() {
-                console.log("Cek Asset Kucoin");
-                var apiKey = $("#apikeyKUCOIN").val();
-                var apiSecret = $("#secretkeyKUCOIN").val();
-                var passphrase = $("#passphraseKUCOIN").val();
+        function cekAssetKucoin() {
+            console.log("Cek Asset Kucoin");
+            var apiKey = $("#apikeyKUCOIN").val();
+            var apiSecret = $("#secretkeyKUCOIN").val();
+            var passphrase = $("#passphraseKUCOIN").val();
 
-                // URL API KuCoin untuk mendapatkan saldo akun
-                var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.kucoin.com/api/v1/accounts";
+            // URL API KuCoin untuk mendapatkan saldo akun
+            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.kucoin.com/api/v1/accounts";
 
-                // Timestamp untuk permintaan
-                var timestamp = Date.now().toString();
+            // Timestamp untuk permintaan
+            var timestamp = Date.now().toString();
 
-                // Membuat signature menggunakan HMAC SHA256
-                var preSignature = timestamp + "GET" + "/api/v1/accounts" + "";
-                var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
-                var passphraseENC = CryptoJS.HmacSHA256(passphrase, apiSecret).toString(CryptoJS.enc.Base64);
+            // Membuat signature menggunakan HMAC SHA256
+            var preSignature = timestamp + "GET" + "/api/v1/accounts" + "";
+            var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
+            var passphraseENC = CryptoJS.HmacSHA256(passphrase, apiSecret).toString(CryptoJS.enc.Base64);
 
-                var headers = {
+            var headers={
                     "KC-API-KEY": apiKey,
                     "KC-API-SIGN": signature,
                     "KC-API-TIMESTAMP": timestamp,
@@ -1323,240 +948,225 @@
                     "KC-API-KEY-VERSION": "3",
                     "Content-Type": "application/json"
                 };
-                // Melakukan panggilan AJAX ke API KuCoin
-                $.ajax({
-                    url: apiUrl,
-                    method: "GET",
-                    headers: headers,
-                    dataType: "json",
-                    beforeSend: function () {
-                        $("#KUCOINSaldo").text("Load.." + " {USDT}");
-                    },
-                    success: function (response) {
-                        var usdtInfo = response.data.find(function (currency) {
-                            return currency.currency === "USDT";
+            // Melakukan panggilan AJAX ke API KuCoin
+            $.ajax({
+                url: apiUrl,
+                method: "GET",
+                headers: headers,
+                dataType: "json",
+                beforeSend: function () {
+                    $("#KUCOINSaldo").text("Load.." + " {USDT}");
+                },
+                success: function (response) {
+                    var usdtInfo = response.data.find(function (currency) {
+                        return currency.currency === "USDT";
+                        
+                    });
+                    console.warn("KUCOIN USDT : "+usdtInfo.available)
+                    // Memperbarui saldo KuCoin pada tabel
+                    $("#KUCOINSaldo").text(parseFloat( usdtInfo.available).toFixed(2)+ " {USDT}");
 
-                        });
-                        console.warn("KUCOIN USDT : " + usdtInfo.available)
-                        // Memperbarui saldo KuCoin pada tabel
-                        $("#KUCOINSaldo").text(parseFloat(usdtInfo.available).toFixed(2) +
-                            " {USDT}");
-
-                        // Menyimpan saldo ke localStorage
-                        localStorage.setItem("am_KUCOINSaldo", usdtInfo.available);
-                        getTotalSaldoCEXS();
-                    },
-                    error: function (xhr, status, error) {
-                        console.error("Error fetching KuCoin data:", error);
-                    }
-                });
-            }
-
-            function cekAssetBybit() {
-                console.log("Cek Asset Bybit");
-                var key = $("#apikeyBYBIT").val();
-                var secret = $("#secretkeyBYBIT").val();
-                var recvWindow = 5000;
-                var timestamp = Date.now().toString();
-                var host = "https://api.bybit.com";
-                var method = "GET";
-                var url = "/v5/account/wallet-balance";
-                var queryString = "accountType=UNIFIED";
-
-                // Menghitung signature
-                function calculateSignature(secret, timestamp, recvWindow, queryString) {
-                    const dataToSign = `${timestamp}${key}${recvWindow}${queryString}`;
-                    const signature = CryptoJS.HmacSHA256(dataToSign, secret).toString(CryptoJS.enc.Hex);
-                    return signature;
+                    // Menyimpan saldo ke localStorage
+                    localStorage.setItem("am_KUCOINSaldo", usdtInfo.available);
+                    getTotalSaldoCEXS();
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error fetching KuCoin data:", error);
                 }
+            });
+        }
 
-                const sign = calculateSignature(secret, timestamp, recvWindow, queryString);
-                var full_url = `${host}${url}?${queryString}`;
+        function cekAssetBybit() {
+            console.log("Cek Asset Bybit");
+            var key = $("#apikeyBYBIT").val();
+            var secret = $("#secretkeyBYBIT").val();
+            var recvWindow = 5000;
+            var timestamp = Date.now().toString();
+            var host = "https://api.bybit.com";
+            var method = "GET";
+            var url = "/v5/account/wallet-balance";
+            var queryString = "accountType=UNIFIED";
 
-                $.ajax({
-                    url: full_url,
-                    method: method,
-                    beforeSend: function () {
-                        $("#BYBITSaldo").text("Load.." + " {USDT}");
-                    },
-                    headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
-                        "X-BAPI-API-KEY": key,
-                        "X-BAPI-TIMESTAMP": timestamp,
-                        "X-BAPI-RECV-WINDOW": recvWindow.toString(),
-                        "X-BAPI-SIGN": sign,
-                    },
-                    success: function (response) {
-                        var usdtInfo = response.result.list[0].coin.find(function (coin) {
-                            return coin.coin === "USDT";
-                        });
-                        console.warn("BYBIT USDT : " + usdtInfo.equity)
-
-                        // Menyimpan saldo ke localStorage
-                        localStorage.setItem("am_BYBITSaldo", usdtInfo.equity);
-                        // Memperbarui saldo Binance pada tabel
-                        $("#BYBITSaldo").text(parseFloat(usdtInfo.equity).toFixed(2) + " {USDT}");
-                        getTotalSaldoCEXS();
-
-                    },
-                    error: function (error) {
-                        toastr.error("Error fetching BYBIT data:", error);
-                    },
-                });
+            // Menghitung signature
+            function calculateSignature(secret, timestamp, recvWindow, queryString) {
+                const dataToSign = `${timestamp}${key}${recvWindow}${queryString}`;
+                const signature = CryptoJS.HmacSHA256(dataToSign, secret).toString(CryptoJS.enc.Hex);
+                return signature;
             }
 
-            // Fungsi untuk memperbarui baris tabel sesuai dengan status checkbox dan saldonya
-            function updateTableRows() {
-                let totalSaldo = 0;
+            const sign = calculateSignature(secret, timestamp, recvWindow, queryString);
+            var full_url = `${host}${url}?${queryString}`;
 
-                $('input[type="checkbox"]').each(function () {
-                    const checkbox = $(this);
-                    const id = checkbox.attr('id');
-                    const isChecked = checkbox.prop('checked');
-                    const saldoKey = `am_${id}Saldo`;
-                    const tableRow = $(`#assetTableCexs tr:contains(${id})`);
+            $.ajax({
+                url: full_url,
+                method: method,
+                beforeSend: function () {
+                    $("#BYBITSaldo").text("Load.." + " {USDT}");
+                },
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    "X-BAPI-API-KEY": key,
+                    "X-BAPI-TIMESTAMP": timestamp,
+                    "X-BAPI-RECV-WINDOW": recvWindow.toString(),
+                    "X-BAPI-SIGN": sign,
+                },
+                success: function (response) {
+                    var usdtInfo = response.result.list[0].coin.find(function (coin) {
+                        return coin.coin === "USDT";
+                    });
+                    console.warn("BYBIT USDT : "+usdtInfo.equity)
+                                
+                                // Menyimpan saldo ke localStorage
+                                localStorage.setItem("am_BYBITSaldo", usdtInfo.equity);
+                                // Memperbarui saldo Binance pada tabel
+                                $("#BYBITSaldo").text(parseFloat(usdtInfo.equity).toFixed(2) + " {USDT}");
+                                getTotalSaldoCEXS();
 
-                    if (isChecked) {
-                        tableRow.show(); // Tampilkan baris jika checkbox diaktifkan
+                },
+                error: function (error) {
+                    toastr.error("Error fetching BYBIT data:", error);
+                },
+            });
+        }
+        
+        // Fungsi untuk memperbarui baris tabel sesuai dengan status checkbox dan saldonya
+        function updateTableRows() {
+            let totalSaldo = 0;
 
-                        // Memanggil fungsi pengecekan aset berdasarkan nama exchange
-                        switch (id) {
-                            case 'BINANCE':
-                                cekAssetBinance();
-                                break;
-                            case 'GATE':
-                                cekAssetGate();
-                                break;
-                            case 'BITGET':
-                                cekAssetBitget();
-                                break;
-                            case 'KUCOIN':
-                                cekAssetKucoin();
-                                break;
-                            case 'BYBIT':
-                                cekAssetBybit();
-                                break;
-                                console.log("Cek Ulang Saldo " + id);
-                        }
+            $('input[type="checkbox"]').each(function () {
+                const checkbox = $(this);
+                const id = checkbox.attr('id');
+                const isChecked = checkbox.prop('checked');
+                const saldoKey = `am_${id}Saldo`;
+                const tableRow = $(`#assetTableCexs tr:contains(${id})`);
 
-                        // Ambil saldo dari localStorage setelah pengecekan
-                        const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
-                        // Memperbarui saldo di tabel
-                        $(`#${id}Saldo`).text(`${saldo.toFixed(2)} {USDT}`);
-                        // Mengupdate total saldo CEX
-                        // getTotalSaldoCEXS();
-                        // location.reload();
-                    } else {
-                        tableRow.hide(); // Sembunyikan baris jika checkbox dinonaktifkan
+                if (isChecked) {
+                    tableRow.show(); // Tampilkan baris jika checkbox diaktifkan
 
-                        // Set saldo menjadi 0 di localStorage dan di tabel
-                        localStorage.setItem(saldoKey, "0");
-                        $(`#${id}Saldo`).text("0 {USDT}");
-                        getTotalSaldoCEXS();
+                    // Memanggil fungsi pengecekan aset berdasarkan nama exchange
+                    switch (id) {
+                        case 'BINANCE':
+                            cekAssetBinance();                               
+                            break;
+                        case 'GATE':
+                            cekAssetGate();
+                            break;
+                        case 'BITGET':
+                            cekAssetBitget();
+                            break;
+                        case 'KUCOIN':
+                            cekAssetKucoin();
+                            break;
+                        case 'BYBIT':
+                            cekAssetBybit();
+                            break;
+                        console.log("Cek Ulang Saldo "+id);
                     }
 
-                });
-            }
-            // Fungsi untuk menghitung total saldo semua CEX
-            function getTotalSaldoCEXS() {
-                let totalSaldo = 0;
-                // Menjumlahkan saldo dari setiap exchange yang diaktifkan
-                $('input[type="checkbox"]:checked').each(function () {
-                    const id = $(this).attr('id');
-                    const saldoKey = `am_${id}Saldo`;
+                    // Ambil saldo dari localStorage setelah pengecekan
                     const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
-                    totalSaldo += saldo;
-                });
+                    // Memperbarui saldo di tabel
+                    $(`#${id}Saldo`).text(`${saldo.toFixed(2)} {USDT}`);
+                    // Mengupdate total saldo CEX
+                   // getTotalSaldoCEXS();
+                   // location.reload();
+                } else {
+                    tableRow.hide(); // Sembunyikan baris jika checkbox dinonaktifkan
 
+                    // Set saldo menjadi 0 di localStorage dan di tabel
+                    localStorage.setItem(saldoKey, "0");
+                    $(`#${id}Saldo`).text("0 {USDT}");
+                    getTotalSaldoCEXS();
+                }
+               
+            });
+        }
+        // Fungsi untuk menghitung total saldo semua CEX
+        function getTotalSaldoCEXS() {
+            let totalSaldo = 0;
+            // Menjumlahkan saldo dari setiap exchange yang diaktifkan
+            $('input[type="checkbox"]:checked').each(function () {
+                const id = $(this).attr('id');
+                const saldoKey = `am_${id}Saldo`;
+                const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
+                totalSaldo += saldo;
+            });
+                
                 var formattedTime = getFormattedTime();
                 // Simpan waktu terakhir diperbarui ke localStorage
                 localStorage.setItem('am_lastUpdateCEX', formattedTime);
                 localStorage.setItem('am_TotalSaldoCEX', totalSaldo);
-                // Tampilkan waktu terakhir diperbarui
-                $('#updatecex').text(formattedTime);
+                 // Tampilkan waktu terakhir diperbarui
+                 $('#updatecex').text(formattedTime);
                 // Tampilkan total saldo
                 $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} {USDT}`);
-                $('#LTotalSaldoCEX').text(`${totalSaldo.toFixed(2)} USDT`);
-            }
-            // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
-            function loadData() {
-                // Memuat modal awal dari localStorage
-                // const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
-                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
-                const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
-                const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
-                const historyPNL = JSON.parse(localStorage.getItem('am_history')) || [];
-                var modalAwal;
-                if (localStorage.getItem('am_MODALAWAL')) {
-                    if (historyPNL.length > 0) {
-                        modalAwal = historyPNL[0].saldoAkhir
-                    } else {
+                $('#LTotalSaldoCEX').text(`${totalSaldo.toFixed(2)} USDT`);            
+        }
+        // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
+        function loadData() {
+            // Memuat modal awal dari localStorage
+            const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+            
+            // Hitung PNL (Profit and Loss)
+            const pnl = saldoAkhir - modalAwal;
 
-                        modalAwal = JSON.parse(localStorage.getItem('am_MODALAWAL'))
+            // Tampilkan data di elemen HTML
+            $('#m_awal').text(modalAwal.toFixed(2) + ' USDT');
+            $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
+            $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
+            $("#MODALAWAL").val(modalAwal);
+
+            // Mengonversi nilai USDT ke IDR dan menampilkannya
+            USDTIDR(modalAwal).then((idrusdt) => {
+                $("#RPMODAL").text("RP. " + parseFloat(idrusdt).toLocaleString("id-ID")); // Format ke format IDR
+                console.log("Modal Awal USDT: " + modalAwal);
+                console.log("Modal Awal USDT ke IDR: " + idrusdt);
+            }).catch((error) => {
+                console.log("Terjadi kesalahan saat konversi Modal Awal :", error);
+            });
+
+            // Mengatur status checkbox dan nilai input berdasarkan data di localStorage
+            $('input[type="checkbox"]').each(function() {
+                const checkbox = $(this);
+                const id = checkbox.attr('id');
+
+                // Ambil status checkbox dari localStorage, default unchecked jika tidak ada data
+                const isChecked = localStorage.getItem(`am_${id}`) === 'true';
+                checkbox.prop('checked', isChecked);
+
+                // Aktifkan atau nonaktifkan input sesuai dengan status checkbox
+                const relatedInputs = checkbox.closest('.input-group').find('input[type="text"], input[type="number"]');
+                relatedInputs.prop('disabled', !isChecked);
+
+                // Set nilai input dari localStorage jika ada
+                relatedInputs.each(function() {
+                    const input = $(this);
+                    const inputId = input.attr('id');
+                    const savedValue = localStorage.getItem(`am_${inputId}`);
+                    if (savedValue !== null) {
+                        input.val(savedValue);
                     }
+                });
+
+                // Menampilkan atau menyembunyikan baris tabel sesuai dengan status checkbox
+                const tableRow = $(`#assetTableCexs tr:contains(${id})`);
+                if (isChecked) {
+                    tableRow.show(); // Tampilkan baris jika checkbox dicentang
                 } else {
-                    modalAwal = 0
+                    tableRow.hide(); // Sembunyikan baris jika checkbox tidak dicentang
                 }
+            });
 
-                // Hitung PNL (Profit and Loss)
-                const pnl = saldoAkhir - modalAwal;
-
-                // Tampilkan data di elemen HTML
-                $('#m_awal').text(Number(modalAwal).toFixed(2) + ' USDT');
-                $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
-                $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
-                $("#MODALAWAL").val(JSON.parse(localStorage.getItem('am_MODALAWAL')));
-
-                // Mengonversi nilai USDT ke IDR dan menampilkannya
-                USDTIDR(modalAwal).then((idrusdt) => {
-                    $("#RPMODAL").text("RP. " + parseFloat(idrusdt).toLocaleString(
-                        "id-ID")); // Format ke format IDR
-                    console.log("Modal Awal USDT: " + modalAwal);
-                    console.log("Modal Awal USDT ke IDR: " + idrusdt);
-                }).catch((error) => {
-                    console.log("Terjadi kesalahan saat konversi Modal Awal :", error);
-                });
-
-                // Mengatur status checkbox dan nilai input berdasarkan data di localStorage
-                $('input[type="checkbox"]').each(function () {
-                    const checkbox = $(this);
-                    const id = checkbox.attr('id');
-
-                    // Ambil status checkbox dari localStorage, default unchecked jika tidak ada data
-                    const isChecked = localStorage.getItem(`am_${id}`) === 'true';
-                    checkbox.prop('checked', isChecked);
-
-                    // Aktifkan atau nonaktifkan input sesuai dengan status checkbox
-                    const relatedInputs = checkbox.closest('.input-group').find(
-                        'input[type="text"], input[type="number"]');
-                    relatedInputs.prop('disabled', !isChecked);
-
-                    // Set nilai input dari localStorage jika ada
-                    relatedInputs.each(function () {
-                        const input = $(this);
-                        const inputId = input.attr('id');
-                        const savedValue = localStorage.getItem(`am_${inputId}`);
-                        if (savedValue !== null) {
-                            input.val(savedValue);
-                        }
-                    });
-
-                    // Menampilkan atau menyembunyikan baris tabel sesuai dengan status checkbox
-                    const tableRow = $(`#assetTableCexs tr:contains(${id})`);
-                    if (isChecked) {
-                        tableRow.show(); // Tampilkan baris jika checkbox dicentang
-                    } else {
-                        tableRow.hide(); // Sembunyikan baris jika checkbox tidak dicentang
-                    }
-                });
-
-                // Memuat data hasil pengecekan aset wallet dari localStorage dan menampilkannya di tabel
-                const assetData = JSON.parse(localStorage.getItem('am_assetDataCEX')) || [];
-                if (assetData.length > 0) {
-                    // Render data tabel
-                    $('#output_chain').html(
-                        assetData.map(row => `
+            // Memuat data hasil pengecekan aset wallet dari localStorage dan menampilkannya di tabel
+            const assetData = JSON.parse(localStorage.getItem('am_assetDataCEX')) || [];
+            if (assetData.length > 0) {
+                // Render data tabel
+                $('#output_chain').html(
+                    assetData.map(row => `
                         <tr>
                             <td>${row.chain}</td>                                      
                             <td>${row.asset} USDT</td>
@@ -1564,24 +1174,24 @@
                             <td>${row.total} USDT</td>
                         </tr>
                     `).join('')
-                    );
+                );
 
-                    // Tampilkan tabel jika ada data
-                    $('#assetTableWallet').show();
+                // Tampilkan tabel jika ada data
+                $('#assetTableWallet').show();
 
-                    // Hitung total saldo USDT dari semua chain
-                    const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
-                    $('#TotalBalanceWallets').text(totalUSDT.toFixed(2) + " $");
-                    $('#LTotalBalanceWallets').text(totalUSDT.toFixed(2));
+                // Hitung total saldo USDT dari semua chain
+                const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
+                $('#TotalBalanceWallets').text(totalUSDT.toFixed(2) + " $");
+                $('#LTotalBalanceWallets').text(totalUSDT.toFixed(2));
 
-                    // Menampilkan waktu terakhir diperbarui
-                    const lastUpdate = localStorage.getItem('am_lastUpdateChain');
-                    if (lastUpdate) {
-                        $('#updatechain').text(lastUpdate);
-                    }
+                // Menampilkan waktu terakhir diperbarui
+                const lastUpdate = localStorage.getItem('am_lastUpdateChain');
+                if (lastUpdate) {
+                    $('#updatechain').text(lastUpdate);
                 }
-                // Memuat saldo excanger dari localStorage dan menampilkannya di tabel
-                const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT'];
+            }
+            // Memuat saldo excanger dari localStorage dan menampilkannya di tabel
+            const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT'];
                 let totalSaldo = 0;
 
                 exchanges.forEach(exchange => {
@@ -1593,18 +1203,18 @@
                         getTotalSaldoCEXS();
                     }
                 });
-                // Memuat data riwayat PNL dari localStorage
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
-                if (history.length > 0) {
-                    // Kosongkan tabel PNL sebelum menambahkan data baru
-                    $('#assetTablePNL tbody').empty();
+            // Memuat data riwayat PNL dari localStorage
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            if (history.length > 0) {
+                // Kosongkan tabel PNL sebelum menambahkan data baru
+                $('#assetTablePNL tbody').empty();
 
-                    // Batasi data yang ditampilkan hingga 15 entri terbaru
-                    const limitedHistory = history.slice(0, 14);
+                // Batasi data yang ditampilkan hingga 15 entri terbaru
+                const limitedHistory = history.slice(0, 14);
 
-                    // Render data riwayat ke tabel PNL
-                    limitedHistory.forEach(entry => {
-                        const row = `
+                // Render data riwayat ke tabel PNL
+                limitedHistory.forEach(entry => {
+                    const row = `
                         <tr>
                             <td>${entry.date}</td>
                             <td>${entry.saldoAwal}</td>
@@ -1613,96 +1223,89 @@
                             <td>${entry.action}</td>
                         </tr>
                     `;
-                        $('#assetTablePNL tbody').append(row);
-                    });
-                }
-
-
+                    $('#assetTablePNL tbody').append(row);
+                });
             }
 
-            // Fungsi getAssetBalances
-            async function getAssetBalances(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
-                try {
-                    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-                    const erc20Abi = ["function balanceOf(address owner) view returns (uint256)"];
-                    const contract = new ethers.Contract(contractAddress, erc20Abi, provider);
 
-                    const balance = await contract.balanceOf(walletAddress);
+        }
 
-                    // Menentukan jumlah desimal berdasarkan jaringan
-                    let decimals;
-                    let tokenSymbol;
-                    if (networkName === 'bsc') {
-                        decimals = 18;
-                        tokenSymbol = 'USDT'; // BSC menggunakan USDT dengan desimal 18
-                    } else if (networkName === 'base') {
-                        decimals = 6;
-                        tokenSymbol = 'USDC'; // Base menggunakan USDC dengan desimal 6
-                    } else {
-                        decimals = 6; // Polygon, Arbitrum, Ethereum menggunakan 6 desimal
-                        tokenSymbol = 'USDT'; // Default menggunakan USDT
-                    }
+        // Fungsi getAssetBalances
+        async function getAssetBalances(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
+            try {
+                const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+                const erc20Abi = ["function balanceOf(address owner) view returns (uint256)"];
+                const contract = new ethers.Contract(contractAddress, erc20Abi, provider);
 
-                    // Format saldo sesuai dengan desimal yang benar dan pastikan menggunakan token yang sesuai
-                    const formattedBalance = parseFloat(ethers.utils.formatUnits(balance, decimals))
-                        .toFixed(2);
+                const balance = await contract.balanceOf(walletAddress);
 
-                    // Mendapatkan saldo gas (ETH, BNB, MATIC, dll.)
-                    const gasBalance = await provider.getBalance(walletAddress);
-                    let gasToken;
-                    let formattedGasBalance;
+                // Menentukan jumlah desimal berdasarkan jaringan
+                let decimals;
+                let tokenSymbol;
+                if (networkName === 'bsc') {
+                    decimals = 18;  
+                    tokenSymbol = 'USDT'; // BSC menggunakan USDT dengan desimal 18
+                } else if (networkName === 'base') {
+                    decimals = 6;   
+                    tokenSymbol = 'USDC'; // Base menggunakan USDC dengan desimal 6
+                } else {
+                    decimals = 6;   // Polygon, Arbitrum, Ethereum menggunakan 6 desimal
+                    tokenSymbol = 'USDT'; // Default menggunakan USDT
+                }
 
-                    // Menentukan token gas sesuai dengan jaringan
-                    if (networkName === 'bsc') {
-                        gasToken = 'BNB';
-                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) +
-                            ` BNB`;
-                    } else if (networkName === 'polygon') {
-                        gasToken = 'MATIC';
-                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) +
-                            ` POLY`;
-                    } else if (networkName === 'arbitrum') {
-                        gasToken = 'ETH';
-                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) +
-                            ` ETH`;
-                    } else {
-                        gasToken = 'ETH';
-                        formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) +
-                            ` ETH`;
-                    }
+                // Format saldo sesuai dengan desimal yang benar dan pastikan menggunakan token yang sesuai
+                const formattedBalance = parseFloat(ethers.utils.formatUnits(balance, decimals)).toFixed(2);
 
-                    // Menghitung nilai USD untuk saldo gas
-                    const gasBalanceInUSD = (parseFloat(ethers.utils.formatEther(gasBalance)) * tokenRates[
-                        gasToken]).toFixed(2);
+                // Mendapatkan saldo gas (ETH, BNB, MATIC, dll.)
+                const gasBalance = await provider.getBalance(walletAddress);
+                let gasToken;
+                let formattedGasBalance;
 
-                    // Membuat link sesuai dengan jaringan
-                    let walletLink;
-                    switch (networkName) {
-                        case 'ethereum':
-                            walletLink = `https://etherscan.io/address/${walletAddress}`;
-                            break;
-                        case 'bsc':
-                            walletLink = `https://bscscan.com/address/${walletAddress}`;
-                            break;
-                        case 'polygon':
-                            walletLink = `https://polygonscan.com/address/${walletAddress}`;
-                            break;
-                        case 'base':
-                            walletLink = `https://basescan.org/address/${walletAddress}`;
-                            break;
-                        case 'arbitrum':
-                            walletLink = `https://arbiscan.io/address/${walletAddress}`;
-                            break;
-                        default:
-                            walletLink = `https://explorer.${networkName}.com/address/${walletAddress}`;
-                            break;
-                    }
+                // Menentukan token gas sesuai dengan jaringan
+                if (networkName === 'bsc') {
+                    gasToken = 'BNB';
+                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` BNB`;
+                } else if (networkName === 'polygon') {
+                    gasToken = 'MATIC';
+                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` POLY`;
+                } else if (networkName === 'arbitrum') {
+                    gasToken = 'ETH';
+                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` ETH`;
+                } else {
+                    gasToken = 'ETH';
+                    formattedGasBalance = parseFloat(ethers.utils.formatEther(gasBalance)).toFixed(2) + ` ETH`;
+                }
 
-                    // Menjumlahkan nilai saldo dalam USD (formattedBalance dan gasBalanceInUSD)
-                    const totalBalanceInUSD = (parseFloat(formattedBalance) + parseFloat(gasBalanceInUSD))
-                        .toFixed(2);
+                // Menghitung nilai USD untuk saldo gas
+                const gasBalanceInUSD = (parseFloat(ethers.utils.formatEther(gasBalance)) * tokenRates[gasToken]).toFixed(2);
 
-                    return `
+                // Membuat link sesuai dengan jaringan
+                let walletLink;
+                switch (networkName) {
+                    case 'ethereum':
+                        walletLink = `https://etherscan.io/address/${walletAddress}`;
+                        break;
+                    case 'bsc':
+                        walletLink = `https://bscscan.com/address/${walletAddress}`;
+                        break;
+                    case 'polygon':
+                        walletLink = `https://polygonscan.com/address/${walletAddress}`;
+                        break;
+                    case 'base':
+                        walletLink = `https://basescan.org/address/${walletAddress}`;
+                        break;
+                    case 'arbitrum':
+                        walletLink = `https://arbiscan.io/address/${walletAddress}`;
+                        break;
+                    default:
+                        walletLink = `https://explorer.${networkName}.com/address/${walletAddress}`;
+                        break;
+                }
+
+                // Menjumlahkan nilai saldo dalam USD (formattedBalance dan gasBalanceInUSD)
+                const totalBalanceInUSD = (parseFloat(formattedBalance) + parseFloat(gasBalanceInUSD)).toFixed(2);
+
+                return `
                     <tr>
                         <td><a href="${walletLink}" target="_blank">${networkName.charAt(0).toUpperCase() + networkName.slice(1).toUpperCase()}</a></td>
                         <td>${formattedBalance} ${tokenSymbol}</td>
@@ -1710,146 +1313,136 @@
                         <td>${totalBalanceInUSD} USDT</td>
                     </tr>
                 `;
-                } catch (error) {
-                    return `<tr><td>${networkName}</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
-                }
+            } catch (error) {
+                return `<tr><td>${networkName}</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
             }
-            //get asset chain solana
-            async function getSolanaBalance(walletAddress, tokenRates) {
-                try {
-                    const connection = new solanaWeb3.Connection(
-                        "https://cors-anywhere.herokuapp.com/https://api.mainnet-beta.solana.com");
-                    const publicKey = new solanaWeb3.PublicKey(walletAddress);
+        }
+        //get asset chain solana
+        async function getSolanaBalance(walletAddress, tokenRates) {
+            try {
+                const connection = new solanaWeb3.Connection("https://cors-anywhere.herokuapp.com/https://api.mainnet-beta.solana.com");  
+                const publicKey = new solanaWeb3.PublicKey(walletAddress);
 
-                    // Mendapatkan saldo SOL
-                    const solBalance = await connection.getBalance(publicKey);
-                    const formattedSOL = (solBalance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(2) + ' SOL';
-                    const solBalanceInUSD = ((solBalance / solanaWeb3.LAMPORTS_PER_SOL) * tokenRates.SOL)
-                        .toFixed(2) + ' USDT';
+                // Mendapatkan saldo SOL
+                const solBalance = await connection.getBalance(publicKey);
+                const formattedSOL = (solBalance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(2) + ' SOL';
+                const solBalanceInUSD = ((solBalance / solanaWeb3.LAMPORTS_PER_SOL) * tokenRates.SOL).toFixed(2) + ' USDT';
 
-                    //console.log("Saldo SOL:", formattedSOL, "(", solBalanceInUSD, ")");
+                //console.log("Saldo SOL:", formattedSOL, "(", solBalanceInUSD, ")");
 
-                    // Mendapatkan akun token USDT dengan alamat mint yang benar
-                    const usdtMintPublicKey = new solanaWeb3.PublicKey(
-                        'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB'); // Alamat mint yang benar
-                    const tokenAccounts = await connection.getParsedTokenAccountsByOwner(publicKey, {
-                        mint: usdtMintPublicKey
-                    });
+                // Mendapatkan akun token USDT dengan alamat mint yang benar
+                const usdtMintPublicKey = new solanaWeb3.PublicKey('Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB');  // Alamat mint yang benar
+                const tokenAccounts = await connection.getParsedTokenAccountsByOwner(publicKey, { mint: usdtMintPublicKey });
 
-                    let formattedUSDT = '0 USDT';
-                    if (tokenAccounts.value.length > 0) {
-                        const usdtAccountData = tokenAccounts.value[0] ?.account ?.data ?.parsed;
-                        // console.log("Data Akun USDT:", usdtAccountData); // Log untuk melihat struktur data token
+                let formattedUSDT = '0 USDT';
+                if (tokenAccounts.value.length > 0) {
+                    const usdtAccountData = tokenAccounts.value[0]?.account?.data?.parsed;
+                   // console.log("Data Akun USDT:", usdtAccountData); // Log untuk melihat struktur data token
 
-                        if (usdtAccountData ?.info ?.tokenAmount ?.uiAmount) {
-                            const usdtBalance = usdtAccountData.info.tokenAmount.uiAmount;
-                            formattedUSDT = usdtBalance.toFixed(2) + ' USDT';
-                        }
-                    } else {
-                        console.log("Tidak ada akun token USDT ditemukan.");
+                    if (usdtAccountData?.info?.tokenAmount?.uiAmount) {
+                        const usdtBalance = usdtAccountData.info.tokenAmount.uiAmount;
+                        formattedUSDT = usdtBalance.toFixed(2) + ' USDT'; 
                     }
-                    // Menjumlahkan nilai saldo dalam USD (gasBalanceInUSD dan formattedUSDT)
-                    const totalBalanceInUSD = (parseFloat(formattedUSDT) + parseFloat(solBalanceInUSD))
-                        .toFixed(2);
+                } else {
+                    console.log("Tidak ada akun token USDT ditemukan.");
+                }
+                // Menjumlahkan nilai saldo dalam USD (gasBalanceInUSD dan formattedUSDT)
+                const totalBalanceInUSD = (parseFloat(formattedUSDT) + parseFloat(solBalanceInUSD)).toFixed(2);
 
-                    // Menampilkan hasil akhir
-                    // console.log("Formatted USDT:", formattedUSDT);
+                // Menampilkan hasil akhir
+               // console.log("Formatted USDT:", formattedUSDT);
 
-                    return `
+                return `
                     <tr>
                         <td><a href="https://solscan.io/account/${walletAddress}" target="_blank">SOLANA</a></td>
                         <td>${formattedUSDT}</td>
                         <td>${formattedSOL}&nbsp;[${solBalanceInUSD}] </td>                           
                         <td>${totalBalanceInUSD}</td>
-                    </tr>`;
-                } catch (error) {
-                    console.log("Error:", error); // Log error untuk debugging
-                    return `<tr><td>Solana</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
-                }
+                    </tr>`
+                ;
+            } catch (error) {
+                console.log("Error:", error); // Log error untuk debugging
+                return `<tr><td>Solana</td><td>${walletAddress}</td><td colspan="2">Error: ${error.message}</td></tr>`;
             }
-            // Fetch token rates from Binance API
-            async function fetchTokenRates() {
-                try {
-                    const response = await fetch(
-                        "https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22MATICUSDT%22,%22SOLUSDT%22]"
-                    );
-                    const data = await response.json();
+        }
+        // Fetch token rates from Binance API
+        async function fetchTokenRates() {
+            try {
+                const response = await fetch("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22MATICUSDT%22,%22SOLUSDT%22]");
+                const data = await response.json();
 
-                    const rates = {
-                        BTC: parseFloat(data.find(item => item.symbol === 'BTCUSDT') ?.price),
-                        ETH: parseFloat(data.find(item => item.symbol === 'ETHUSDT') ?.price),
-                        BNB: parseFloat(data.find(item => item.symbol === 'BNBUSDT') ?.price),
-                        MATIC: parseFloat(data.find(item => item.symbol === 'MATICUSDT') ?.price),
-                        SOL: parseFloat(data.find(item => item.symbol === 'SOLUSDT') ?.price)
-                    };
+                const rates = {
+                    BTC: parseFloat(data.find(item => item.symbol === 'BTCUSDT')?.price),
+                    ETH: parseFloat(data.find(item => item.symbol === 'ETHUSDT')?.price),
+                    BNB: parseFloat(data.find(item => item.symbol === 'BNBUSDT')?.price),
+                    MATIC: parseFloat(data.find(item => item.symbol === 'MATICUSDT')?.price),
+                    SOL: parseFloat(data.find(item => item.symbol === 'SOLUSDT')?.price)
+                };
 
-                    return rates;
-                } catch (error) {
-                    console.error('Error fetching token rates:', error);
-                    return {}; // Default empty rates in case of error
-                }
+                return rates;
+            } catch (error) {
+                console.error('Error fetching token rates:', error);
+                return {}; // Default empty rates in case of error
             }
+        }
+   
+        // Fungsi konversi USDT ke IDR
+        async function USDTIDR(usdt) {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    url: "https://api.binance.com/api/v3/ticker/price?symbol=USDTIDRT",  // URL yang benar untuk mendapatkan harga USDT ke IDR
+                    success: function (response) {
+                        var USDTRate = parseFloat(response.price); // Mendapatkan harga terkini dari API
+                        localStorage.setItem("am_USDTRate", USDTRate); // Menyimpan harga terkini ke localStorage
+                        console.log("Latest Rate Price USDTRate:", USDTRate);
 
-            // Fungsi konversi USDT ke IDR
-            async function USDTIDR(usdt) {
-                return new Promise((resolve, reject) => {
-                    $.ajax({
-                        url: "https://api.binance.com/api/v3/ticker/price?symbol=USDTIDRT", // URL yang benar untuk mendapatkan harga USDT ke IDR
-                        success: function (response) {
-                            var USDTRate = parseFloat(response
-                                .price); // Mendapatkan harga terkini dari API
-                            localStorage.setItem("am_USDTRate",
-                                USDTRate); // Menyimpan harga terkini ke localStorage
-                            console.log("Latest Rate Price USDTRate:", USDTRate);
+                        // Konversi dari USDT ke IDR
+                        var idrusdt = usdt * USDTRate;
+                        console.log("USDT TO IDR : " + idrusdt);
 
-                            // Konversi dari USDT ke IDR
-                            var idrusdt = usdt * USDTRate;
-                            console.log("USDT TO IDR : " + idrusdt);
-
-                            resolve(idrusdt); // Mengembalikan nilai IDR
-                        },
-                        error: function (xhr, status, error) {
-                            console.log("Error get Price Rate USDTRate:", error);
-                            reject(error); // Menangani error jika API gagal
-                        }
-                    });
+                        resolve(idrusdt); // Mengembalikan nilai IDR
+                    },
+                    error: function (xhr, status, error) {
+                        console.log("Error get Price Rate USDTRate:", error);
+                        reject(error); // Menangani error jika API gagal
+                    }
                 });
-            }
-            //fungsi refresh
-            $("#reload").on("click", function () {
-                // Panggil fungsi reloadPage saat tombol ditekan
-                location.reload();
             });
-            //get time update
-            function getFormattedTime() {
-                const now = new Date();
-
-                // Mendapatkan waktu dalam format HH:mm:ss
-                const time = now.toLocaleTimeString('id-ID', {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                    hour12: false
-                });
-
-                // Mendapatkan tanggal dalam format dd-MMM-yy
-                const date = now.toLocaleDateString('id-ID', {
-                    day: '2-digit',
-                    month: 'short',
-                    year: '2-digit'
-                });
-
-                // Menggabungkan waktu dan tanggal
-                const formattedTime = `${time} - ${date}`;
-
-                return formattedTime;
-            }
+        }
+        //fungsi refresh
+        $("#reload").on("click", function () {
+            // Panggil fungsi reloadPage saat tombol ditekan
+            location.reload();
         });
-    </script>
+        //get time update
+        function getFormattedTime() {
+            const now = new Date();
+            
+            // Mendapatkan waktu dalam format HH:mm:ss
+            const time = now.toLocaleTimeString('id-ID', { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                hour12: false 
+            });
+            
+            // Mendapatkan tanggal dalam format dd-MMM-yy
+            const date = now.toLocaleDateString('id-ID', { 
+                day: '2-digit', 
+                month: 'short', 
+                year: '2-digit' 
+            });
 
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+            // Menggabungkan waktu dan tanggal
+            const formattedTime = `${time} - ${date}`;
+            
+            return formattedTime;
+        }
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
 
 </body>
-
 </html>
