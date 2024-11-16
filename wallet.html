@@ -35,16 +35,17 @@
     }
 
     table#assetTableCexs thead.cex-header th {
-        background-color: rgb(195, 230, 253);
+        background-color: rgb(95, 180, 237);
         color: black !important;
         font-weight: bolder;
         text-align: center;
     }
+
     #assetTableCexs td {
         padding: 8px 12px;
         vertical-align: middle;
     }
-    
+
     table#assetTablePNL thead.pnl-header th {
         background-color:#f49ead;
         color: black !important;
@@ -52,12 +53,11 @@
         text-align: center;
         font-size: small;
     }
-    #assetTablePNL tbody tr td {
-        text-align: center;
-        color: #f49ead;
-        padding-top: 3px;
-        padding-bottom: 1px;
-        font-size: larger
+    
+    #assetTablePNL td {
+        padding: 8px 12px;
+        vertical-align: middle;
+        color: black !important;
     }
     img:hover {
         transform: scale(1.6); /* You can adjust the scale factor as needed */
@@ -156,7 +156,7 @@
                 <div class="uk-width-auto@m">
                 <hr/>
                 <h5 class="uk-text-primary uk-text-left  uk-margin-small-top"><span>ALL Saldo Exchanges</span> ( <span id="LTotalSaldoCEX"></span> )</h5>
-                <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTableCexs" >
+                <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top" id="assetTableCexs" >
                     <thead class="cex-header">
                         <tr>
                             <th>EXCHANGER</th>
@@ -265,7 +265,7 @@
                     </div>
                     <hr/>
                     <h5 class="uk-text-left uk-margin-small-top"><span>Assets ALL Chain</span>( <span id="LTotalBalanceWallets"></span> USDT )</h5>
-                    <table class="uk-table uk-table-divider uk-table-hover uk-margin-top" id="assetTableWallet" style="display:none;">
+                    <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top" id="assetTableWallet" style="display:none;">
                         <thead class="chain-header">
                             <tr>
                                 <th>Chain</th>
@@ -299,8 +299,6 @@
                             <i class="bi bi-arrow-clockwise" id="reload"></i>
                         </div>
 
-
-
                        <div class="uk-text-right">
                             <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                                 <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
@@ -308,12 +306,20 @@
                             <a href="#" target="_blank" id="openModalKalkulator">
                                 <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
                             </a>
-                            <button class="uk-button uk-button-small uk-button-danger" id="UpdateHistoryPNL">Update PNL</button>                        
-                            <button class="uk-button uk-button-small uk-button-default" id="ResetModal">Reset MODAL</button> 
+                            <button class="uk-button uk-button-small uk-text-secondary" style="background-color: rgb(152, 242, 152);" id="CheckModal">Check</button>  
+                            <button class="uk-button uk-button-small uk-button-secondary" id="UpdateHistoryPNL">Update PNL</button>                        
+                            <button class="uk-button uk-button-small uk-button-danger" id="ResetModal">Reset</button> 
                             <button class="uk-button uk-button-small uk-button-primary" id="SaveModal">Save MODAL</button>   
                         </div>
+
+                        <div class="uk-text-center  uk-margin-small-top">
+                            <span class="uk-text-middle uk-text-secondary"><b>Awal : <span  class="uk-text-primary" id="m_awal">...</span></b></span>
+                            | <span class="uk-text-middle uk-text-secondary"><b>Akhir: <span  class="uk-text-warning" id="m_akhir">...</span></b></span>
+                            | <span class="uk-text-middle uk-text-secondary"><b>PNL: <span  class="uk-text-danger" id="m_pnl">...</span></b></span>
+                        </div>
+                        
                        <hr/> 
-                       <h5 class="uk-heading-line uk-text-danger uk-text-left uk-margin-small-top"><span>ALL History PNL</span></h5>
+                       <h5 class="uk-heading-line uk-text-danger uk-text-left uk-margin-small-top"><span>ALL History Modal</span></h5>
                        
                        <!-- Modal Kalkulator -->
                        <div id="calculatorModal" uk-modal>
@@ -349,25 +355,30 @@
                                        </div>
                                    </div>
                                    <div class="uk-margin-small-top">
-                                       <label class="uk-form-label" for="form-horizontal-text">BNB</label>
-                                       <div class="uk-form-controls">
-                                           <input type="number" class="uk-input" id="bnbprice" placeholder="0" value="" oninput="convertCurrency('bnb')" required />
-                                       </div>
-                                   </div>
-                                   <div class="uk-margin-small-top">
-                                       <label class="uk-form-label" for="form-horizontal-text">TOKEN</label>
-                                       <div class="uk-form-controls">
-                                           <input type="number" class="uk-input" id="randomprice" placeholder="0" value="" oninput="convertCurrency('random')" required />
-                                       </div>
-                                   </div>
-                                   <div class="uk-margin-small-top">
-                                       <div class="uk-form-controls">
-                                           <button type="button" class="uk-button uk-button-small uk-button-primary" onclick="getRandom()" id="randget">Get</button>
-                                       </div>
-                                       <div class="uk-form-controls">
-                                           <button type="button" class="uk-button uk-button-small uk-button-danger" onclick="resetRandom()" id="randreset" hidden>X</button>
-                                       </div>
-                                   </div>
+                                    <label class="uk-form-label" for="form-horizontal-text">BNB</label>
+                                    <div class="uk-form-controls">
+                                        <input type="number" class="uk-input" id="bnbprice" placeholder="0" value="" oninput="convertCurrency('bnb')" required />
+                                    </div>
+                                </div>
+                                
+                                <!-- Baris untuk TOKEN, tombol, dan input -->
+                                <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                    <div class="uk-flex uk-flex-between uk-width-1-1">
+                                        <!-- Label dan inputan TOKEN -->
+                                        <div class="uk-flex uk-flex-middle">
+                                            <label class="uk-form-label" for="randomprice">TOKEN</label>
+                                            <input type="number" class="uk-input uk-width-1-4" id="randomprice" placeholder="0" value="" oninput="convertCurrency('random')" required />
+                                        </div>
+                                
+                                        <!-- Tombol 'Get' dan 'Reset' -->
+                                        <div class="uk-flex uk-flex-middle">
+                                            <button type="button" class="uk-button uk-button-small uk-button-primary" onclick="getRandom()" id="randget">Get</button>
+                                            <button type="button" class="uk-button uk-button-small uk-button-danger" onclick="resetRandom()" id="randreset" hidden>X</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
                                </form>
                                <div class="uk-modal-footer uk-text-center">
                                    <button class="uk-button uk-button-primary" onclick="rateKalkulator()">Update Price</button>
@@ -375,7 +386,7 @@
                            </div>
                        </div>
                        
-                           <table class="uk-table uk-table-hover" id="assetTablePNL">
+                           <table class="uk-table uk-table-striped uk-table-hover" id="assetTablePNL">
                                <thead class="pnl-header">
                                    <tr>
                                        <th>TIME_UPDATE</th>
@@ -392,55 +403,7 @@
                                    <td>xxxxx</td>
                                    <td>xxxxx</td>
                                </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>
+                              
                            </table>   
                    
             </div>
@@ -586,17 +549,8 @@
                 // Menyimpan data asset chain di localStorage
                 localStorage.setItem('am_assetDataCEX', JSON.stringify(assetData));
                 // Menyimpan waktu saat data diperbarui
-                const now = new Date();
-                const formattedTime = `${now.toLocaleTimeString('id-ID', { 
-                    hour: '2-digit', 
-                    minute: '2-digit', 
-                    hour12: false 
-                })} | ${now.toLocaleDateString('id-ID', { 
-                    day: '2-digit', 
-                    month: 'short', 
-                    year: '2-digit' 
-                })}`;
-
+                var formattedTime=getFormattedTime();
+               
                 localStorage.setItem('am_lastUpdateChain', formattedTime);
 
                 // Tampilkan waktu terakhir diperbarui
@@ -648,115 +602,150 @@
         });
         //fungsi update history PNL
         $('#UpdateHistoryPNL').on('click', function () {
-            // Ambil semua checkbox yang dicentang
-           // Menyimpan waktu saat data diperbarui
-           const now = new Date();
-                const formattedTime = `${now.toLocaleTimeString('id-ID', { 
-                    hour: '2-digit', 
-                    minute: '2-digit', 
-                    second: '2-digit', 
-                    hour12: false 
-                })} - ${now.toLocaleDateString('id-ID', { 
-                    day: '2-digit', 
-                    month: 'short', 
-                    year: '2-digit' 
-                })}`;
+            // Menyimpan waktu saat data diperbarui
+            var formattedTime = getFormattedTime();
 
-                // Simpan waktu terakhir diperbarui ke localStorage
-                localStorage.setItem('am_lastUpdatePNL', formattedTime);
-                toastr.info("UPDATE HISTORY PNL BERHASIL [ "+formattedTime+" ] ");
-                 // Retrieve data from localStorage
-                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
-                const totalUSDTCex = saldoExchanger.reduce((sum, data) => sum + parseFloat(data.saldo || 0), 0);
+            // Simpan waktu terakhir diperbarui ke localStorage
+            localStorage.setItem('am_lastUpdatePNL', formattedTime);
+            toastr.info("UPDATE HISTORY PNL BERHASIL [ " + formattedTime + " ] ");
 
-                const assetData = JSON.parse(localStorage.getItem('am_assetDataCEX'));
-                const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
+            // Retrieve data from localStorage
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+            const modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-                const modal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
-                const saldoAkhir = Number(totalUSDTCex) + Number(totalUSDT);
+            console.log("Saldo Exchanger: " + saldoExchanger);
+            console.log("Saldo Chain: " + assetDataChain);
+            console.log("Saldo Awal: " + modalawal);
+            console.log("Saldo Akhir: " + saldoAkhir);
 
-                // Get the current date and time in WIB (UTC +7)
-                const date = new Date();
-                const timestampWIB = new Date(date.getTime() + (7 * 60 * 60 * 1000)).toISOString().replace('T', ' ').split('.')[0];
+            // Get the current date and time in WIB (UTC +7)
+            const date = new Date();
+            const timestampWIB = new Date(date.getTime() + (7 * 60 * 60 * 1000)).toISOString().replace('T', ' ').split('.')[0];
 
-                // Retrieve history from localStorage or initialize it as an empty array
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            // Retrieve history from localStorage or initialize it as an empty array
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
 
-                let saldoAwal;
-                if (history.length === 0) {
-                    saldoAwal = Number(modal);  // Use initial saldoAwal
-                } else {
-                    // If history exists, use saldoAkhir from the most recent entry as saldoAwal
-                    saldoAwal = Number(history[0].saldoAkhir);  // Most recent saldoAkhir
-                }
+            let saldoAwal = Number(modalawal);
 
-                // Create new history entry
-                const newHistoryEntry = {
-                    date: timestampWIB,  // WIB formatted timestamp
-                    saldoAwal: Number(saldoAwal),
-                    saldoAkhir: saldoAkhir.toFixed(2),
-                    pnl: Number(saldoAkhir) - Number(saldoAwal),
-                    action: "update"
-                };
+            // Create new history entry
+            const newHistoryEntry = {
+                date: timestampWIB,  // WIB formatted timestamp
+                saldoAwal: saldoAwal.toFixed(2),
+                saldoAkhir: saldoAkhir.toFixed(2),
+                pnl: (saldoAkhir - saldoAwal).toFixed(2),
+                action: "update"
+            };
 
-                // Add the new history entry to the beginning of the history array
-                history.unshift(newHistoryEntry);  // Use unshift() to add to the first index
+            // Add the new history entry to the beginning of the history array
+            history.unshift(newHistoryEntry);  // Use unshift() to add to the first index
 
-                // Save the updated history back to localStorage
-                localStorage.setItem('history', JSON.stringify(history));
-                loadData()
+            // Limit the history array to 15 entries
+            const limitedHistory = history.slice(0, 14);
+
+            // Save the updated limited history back to localStorage
+            localStorage.setItem('am_history', JSON.stringify(limitedHistory));
+
+            // Update the table with the new data without removing the header
+            const $tableBody = $('#assetTablePNL tbody'); // Select the tbody element
+            $tableBody.empty(); // Clear existing rows in the body
+
+            // Add rows to the table body
+            $.each(limitedHistory, function(index, entry) {
+                const row = $('<tr></tr>'); // Create a new table row
+
+                // Create each cell and append the content
+                row.append($('<td></td>').text(entry.date));
+                row.append($('<td></td>').text(entry.saldoAwal));
+                row.append($('<td></td>').text(entry.saldoAkhir));
+                row.append($('<td></td>').text(entry.pnl));
+                row.append($('<td></td>').text(entry.action));
+
+                // Append the row to the table body
+                $tableBody.append(row);
+            });
         });
-        //fungsi Save Modal
+
+       // Fungsi Save Modal
         $('#SaveModal').on('click', function () {
-            var inmodal_awal=$("#MODALAWAL").val();
-            
-            // Ambil semua checkbox yang dicentang
-            const now = new Date();
-                const formattedTime = `${now.toLocaleTimeString('id-ID', { 
-                    hour: '2-digit', 
-                    minute: '2-digit', 
-                    second: '2-digit', 
-                    hour12: false 
-                })} - ${now.toLocaleDateString('id-ID', { 
-                    day: '2-digit', 
-                    month: 'short', 
-                    year: '2-digit' 
-                })}`;
+            var inmodal_awal = $("#MODALAWAL").val();
+            var formattedTime = getFormattedTime();
 
-                // Simpan waktu terakhir diperbarui ke localStorage
-                localStorage.setItem('am_lastUpdatePNL', formattedTime);
-                localStorage.setItem('am_MODALAWAL',inmodal_awal);
-                toastr.success("SIMPAN MODAL AWAL BERHASIL [ "+formattedTime+" ] ");
-                loadData();
+            // Simpan waktu terakhir diperbarui ke localStorage
+            localStorage.setItem('am_lastUpdatePNL', formattedTime);
+            localStorage.setItem('am_MODALAWAL', inmodal_awal);
+            toastr.success("SIMPAN MODAL AWAL BERHASIL [ " + formattedTime + " ] ");
+
+            // Ambil data untuk pengisian history
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+
+            // Tambahkan data ke riwayat
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            const newHistoryEntry = {
+                date: formattedTime,
+                saldoAwal: Number(inmodal_awal).toFixed(2),  // Modal awal diambil dari input
+                saldoAkhir: saldoAkhir.toFixed(2),
+                pnl: (saldoAkhir - Number(inmodal_awal)).toFixed(2),
+                action: "start"  // Set action ke "start"
+            };
+            history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
+            localStorage.setItem('am_history', JSON.stringify(history.slice(0, 14))); // Simpan maksimal 15 entri
+
+            loadData();
         });
-        //fungsi reset PNL untuk Modal
+
+        // Fungsi Reset Modal
         $('#ResetModal').on('click', function () {
-            // Ambil semua checkbox yang dicentang
-            const now = new Date();
-                const formattedTime = `${now.toLocaleTimeString('id-ID', { 
-                    hour: '2-digit', 
-                    minute: '2-digit', 
-                    second: '2-digit', 
-                    hour12: false 
-                })} - ${now.toLocaleDateString('id-ID', { 
-                    day: '2-digit', 
-                    month: 'short', 
-                    year: '2-digit' 
-                })}`;
+            var formattedTime = getFormattedTime();
 
-                // Simpan waktu terakhir diperbarui ke localStorage
-                localStorage.setItem('am_lastUpdatePNL', formattedTime);
-                toastr.success("RESET MODAL BERHASIL [ "+formattedTime+" ] ");
+            // Simpan waktu terakhir diperbarui ke localStorage
+            localStorage.setItem('am_lastUpdatePNL', formattedTime);
+            toastr.success("RESET MODAL BERHASIL [ " + formattedTime + " ] ");
 
-                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
-                const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+            // Ambil data untuk pengisian history
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-                const modal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
-                const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+            // Set modal awal ke saldo total saat ini (reset)
+            localStorage.setItem('am_MODALAWAL', saldoAkhir);
 
-                localStorage.setItem('am_MODALAWAL',saldoAkhir);
-                location.reload();
+            // Tambahkan data ke riwayat
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            const newHistoryEntry = {
+                date: formattedTime,
+                saldoAwal: saldoAkhir.toFixed(2),  // Modal awal diset ke saldo total saat ini
+                saldoAkhir: saldoAkhir.toFixed(2), // Modal akhir tetap sama karena reset
+                pnl: 0,  // Tidak ada perubahan PNL saat reset
+                action: "reset"  // Set action ke "reset"
+            };
+            history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
+            localStorage.setItem('am_history', JSON.stringify(history.slice(0, 14))); // Simpan maksimal 15 entri
 
+            location.reload();
+        });
+
+        // Fungsi ketika tombol "Check" ditekan
+        $('#CheckModal').on('click', function () {
+            // Ambil data dari localStorage
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
+            const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+
+            // Hitung PNL (Profit and Loss)
+            const pnl = saldoAkhir - modalAwal;
+
+            // Tampilkan data di elemen HTML
+            $('#m_awal').text(modalAwal.toFixed(2) + ' USDT');
+            $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
+            $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
+
+            // Tampilkan notifikasi
+            toastr.info("CHECK MODAL BERHASIL");
         });
 
         // Fungsi pengecekan untuk masing-masing exchange
@@ -1083,40 +1072,43 @@
                 const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
                 totalSaldo += saldo;
             });
-                // Menyimpan waktu saat data diperbarui
-                const now = new Date();
-                const formattedTime = `${now.toLocaleTimeString('id-ID', { 
-                    hour: '2-digit', 
-                    minute: '2-digit', 
-                    second: '2-digit', 
-                    hour12: false 
-                })} - ${now.toLocaleDateString('id-ID', { 
-                    day: '2-digit', 
-                    month: 'short', 
-                    year: '2-digit' 
-                })}`;
-
+                
+                var formattedTime = getFormattedTime();
                 // Simpan waktu terakhir diperbarui ke localStorage
                 localStorage.setItem('am_lastUpdateCEX', formattedTime);
                 localStorage.setItem('am_TotalSaldoCEX', totalSaldo);
                  // Tampilkan waktu terakhir diperbarui
                  $('#updatecex').text(formattedTime);
-            // Tampilkan total saldo
-            $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} {USDT}`);
-            $('#LTotalSaldoCEX').text(`${totalSaldo.toFixed(2)} USDT`);            
+                // Tampilkan total saldo
+                $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} {USDT}`);
+                $('#LTotalSaldoCEX').text(`${totalSaldo.toFixed(2)} USDT`);            
         }
         // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
         function loadData() {
-            $("#MODALAWAL").val(localStorage.getItem(`am_MODALAWAL`)||0)
-            var usdtAmount = parseFloat(localStorage.getItem(`am_MODALAWAL`)); 
-                USDTIDR(usdtAmount).then((idrusdt) => {
-                   // Menampilkan hasil konversi di elemen dengan ID #RPMODAL
-                    $("#RPMODAL").text("RP. " + idrusdt.toLocaleString("id-ID"));  // Format angka ke format IDR
-                    console.log("Modal Awal USDT ke IDR: " + idrusdt);
-                }).catch((error) => {
-                    console.log("Terjadi kesalahan saat konversi Modal Awal :", error);
-                });
-           
+            // Memuat modal awal dari localStorage
+            const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
+            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
+            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+            
+            // Hitung PNL (Profit and Loss)
+            const pnl = saldoAkhir - modalAwal;
+
+            // Tampilkan data di elemen HTML
+            $('#m_awal').text(modalAwal.toFixed(2) + ' USDT');
+            $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
+            $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
+            $("#MODALAWAL").val(modalAwal);
+
+            // Mengonversi nilai USDT ke IDR dan menampilkannya
+            USDTIDR(modalAwal).then((idrusdt) => {
+                $("#RPMODAL").text("RP. " + parseFloat(idrusdt).toLocaleString("id-ID")); // Format ke format IDR
+                console.log("Modal Awal USDT: " + modalAwal);
+                console.log("Modal Awal USDT ke IDR: " + idrusdt);
+            }).catch((error) => {
+                console.log("Terjadi kesalahan saat konversi Modal Awal :", error);
+            });
+
             // Mengatur status checkbox dan nilai input berdasarkan data di localStorage
             $('input[type="checkbox"]').each(function() {
                 const checkbox = $(this);
@@ -1150,8 +1142,8 @@
             });
 
             // Memuat data hasil pengecekan aset wallet dari localStorage dan menampilkannya di tabel
-            const assetData = JSON.parse(localStorage.getItem('am_assetDataCEX'));
-            if (assetData && assetData.length > 0) {
+            const assetData = JSON.parse(localStorage.getItem('am_assetDataCEX')) || [];
+            if (assetData.length > 0) {
                 // Render data tabel
                 $('#output_chain').html(
                     assetData.map(row => `
@@ -1169,8 +1161,9 @@
 
                 // Hitung total saldo USDT dari semua chain
                 const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
-                $('#TotalBalanceWallets').text(totalUSDT.toFixed(2) + " $"); // Tampilkan total saldo di elemen ini
-                $('#LTotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan hasil pada elemen
+                $('#TotalBalanceWallets').text(totalUSDT.toFixed(2) + " $");
+                $('#LTotalBalanceWallets').text(totalUSDT.toFixed(2));
+
                 // Menampilkan waktu terakhir diperbarui
                 const lastUpdate = localStorage.getItem('am_lastUpdateChain');
                 if (lastUpdate) {
@@ -1178,7 +1171,7 @@
                 }
             }
             // Memuat saldo excanger dari localStorage dan menampilkannya di tabel
-                const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT'];
+            const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT'];
                 let totalSaldo = 0;
 
                 exchanges.forEach(exchange => {
@@ -1190,8 +1183,33 @@
                         getTotalSaldoCEXS();
                     }
                 });
+            // Memuat data riwayat PNL dari localStorage
+            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+            if (history.length > 0) {
+                // Kosongkan tabel PNL sebelum menambahkan data baru
+                $('#assetTablePNL tbody').empty();
+
+                // Batasi data yang ditampilkan hingga 15 entri terbaru
+                const limitedHistory = history.slice(0, 14);
+
+                // Render data riwayat ke tabel PNL
+                limitedHistory.forEach(entry => {
+                    const row = `
+                        <tr>
+                            <td>${entry.date}</td>
+                            <td>${entry.saldoAwal}</td>
+                            <td>${entry.saldoAkhir}</td>
+                            <td>${entry.pnl}</td>
+                            <td>${entry.action}</td>
+                        </tr>
+                    `;
+                    $('#assetTablePNL tbody').append(row);
+                });
+            }
+
 
         }
+
         // Fungsi getAssetBalances
         async function getAssetBalances(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
             try {
@@ -1376,7 +1394,31 @@
             // Panggil fungsi reloadPage saat tombol ditekan
             location.reload();
         });
-        });
+        //get time update
+        function getFormattedTime() {
+            const now = new Date();
+            
+            // Mendapatkan waktu dalam format HH:mm:ss
+            const time = now.toLocaleTimeString('id-ID', { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                hour12: false 
+            });
+            
+            // Mendapatkan tanggal dalam format dd-MMM-yy
+            const date = now.toLocaleDateString('id-ID', { 
+                day: '2-digit', 
+                month: 'short', 
+                year: '2-digit' 
+            });
+
+            // Menggabungkan waktu dan tanggal
+            const formattedTime = `${time} - ${date}`;
+            
+            return formattedTime;
+        }
+    });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
