@@ -561,8 +561,7 @@
                 $('#TotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan hasil pada elemen
                 $('#LTotalBalanceWallets').text(totalUSDT.toFixed(2)); // Tampilkan hasil pada elemen
 
-                localStorage.setItem('am_TotalSaldoChain', totalUSDT);
-                
+                localStorage.setItem('am_TotalSaldoChain', totalUSDT);                
 
             } catch (error) {
                 $('#output_chain').html(`<tr><td colspan="4">Error fetching balances: ${error.message}</td></tr>`);
@@ -601,70 +600,80 @@
             });
         });
         //fungsi update history PNL
-        $('#UpdateHistoryPNL').on('click', function () {
-            // Menyimpan waktu saat data diperbarui
-            var formattedTime = getFormattedTime();
+        $('#UpdateHistoryPNL').on('click', async function () {
+            // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
+            await $('#checkAssetsWallet').trigger('click'); 
 
-            // Simpan waktu terakhir diperbarui ke localStorage
-            localStorage.setItem('am_lastUpdatePNL', formattedTime);
-            toastr.info("UPDATE HISTORY PNL BERHASIL [ " + formattedTime + " ] ");
+            // Memanggil fungsi untuk mengecek asset di CEX
+            $('#checkAssetCEX').trigger('click');
+            //UIkit.modal.confirm("Apakah Anda Sudah UPDATE SALDO CEX & CHAIN.?").then(function () {
+                // Menyimpan waktu saat data diperbarui
+                var formattedTime = getFormattedTime();
 
-            // Retrieve data from localStorage
-            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
-            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
-            const modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
-            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+                // Simpan waktu terakhir diperbarui ke localStorage
+                localStorage.setItem('am_lastUpdatePNL', formattedTime);
+                toastr.info("UPDATE HISTORY PNL BERHASIL [ " + formattedTime + " ] ");
 
-            console.log("Saldo Exchanger: " + saldoExchanger);
-            console.log("Saldo Chain: " + assetDataChain);
-            console.log("Saldo Awal: " + modalawal);
-            console.log("Saldo Akhir: " + saldoAkhir);
+                // Retrieve data from localStorage
+                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
+                const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
+                const modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
+                const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-            // Get the current date and time in WIB (UTC +7)
-            const date = new Date();
-            const timestampWIB = new Date(date.getTime() + (7 * 60 * 60 * 1000)).toISOString().replace('T', ' ').split('.')[0];
+                console.log("Saldo Exchanger: " + saldoExchanger);
+                console.log("Saldo Chain: " + assetDataChain);
+                console.log("Saldo Awal: " + modalawal);
+                console.log("Saldo Akhir: " + saldoAkhir);
 
-            // Retrieve history from localStorage or initialize it as an empty array
-            const history = JSON.parse(localStorage.getItem('am_history')) || [];
+                // Get the current date and time in WIB (UTC +7)
+                const date = new Date();
+                const timestampWIB = new Date(date.getTime() + (7 * 60 * 60 * 1000)).toISOString().replace('T', ' ').split('.')[0];
 
-            let saldoAwal = Number(modalawal);
+                // Retrieve history from localStorage or initialize it as an empty array
+                const history = JSON.parse(localStorage.getItem('am_history')) || [];
 
-            // Create new history entry
-            const newHistoryEntry = {
-                date: timestampWIB,  // WIB formatted timestamp
-                saldoAwal: saldoAwal.toFixed(2),
-                saldoAkhir: saldoAkhir.toFixed(2),
-                pnl: (saldoAkhir - saldoAwal).toFixed(2),
-                action: "update"
-            };
+                let saldoAwal = Number(modalawal);
 
-            // Add the new history entry to the beginning of the history array
-            history.unshift(newHistoryEntry);  // Use unshift() to add to the first index
+                // Create new history entry
+                const newHistoryEntry = {
+                    date: timestampWIB,  // WIB formatted timestamp
+                    saldoAwal: saldoAwal.toFixed(2),
+                    saldoAkhir: saldoAkhir.toFixed(2),
+                    pnl: (saldoAkhir - saldoAwal).toFixed(2),
+                    action: "update"
+                };
 
-            // Limit the history array to 15 entries
-            const limitedHistory = history.slice(0, 14);
+                // Add the new history entry to the beginning of the history array
+                history.unshift(newHistoryEntry);  // Use unshift() to add to the first index
 
-            // Save the updated limited history back to localStorage
-            localStorage.setItem('am_history', JSON.stringify(limitedHistory));
+                // Limit the history array to 15 entries
+                const limitedHistory = history.slice(0, 14);
 
-            // Update the table with the new data without removing the header
-            const $tableBody = $('#assetTablePNL tbody'); // Select the tbody element
-            $tableBody.empty(); // Clear existing rows in the body
+                // Save the updated limited history back to localStorage
+                localStorage.setItem('am_history', JSON.stringify(limitedHistory));
 
-            // Add rows to the table body
-            $.each(limitedHistory, function(index, entry) {
-                const row = $('<tr></tr>'); // Create a new table row
+                // Update the table with the new data without removing the header
+                const $tableBody = $('#assetTablePNL tbody'); // Select the tbody element
+                $tableBody.empty(); // Clear existing rows in the body
 
-                // Create each cell and append the content
-                row.append($('<td></td>').text(entry.date));
-                row.append($('<td></td>').text(entry.saldoAwal));
-                row.append($('<td></td>').text(entry.saldoAkhir));
-                row.append($('<td></td>').text(entry.pnl));
-                row.append($('<td></td>').text(entry.action));
+                // Add rows to the table body
+                $.each(limitedHistory, function(index, entry) {
+                    const row = $('<tr></tr>'); // Create a new table row
 
-                // Append the row to the table body
-                $tableBody.append(row);
-            });
+                    // Create each cell and append the content
+                    row.append($('<td></td>').text(entry.date));
+                    row.append($('<td></td>').text(entry.saldoAwal));
+                    row.append($('<td></td>').text(entry.saldoAkhir));
+                    row.append($('<td></td>').text(entry.pnl));
+                    row.append($('<td></td>').text(entry.action));
+
+                    // Append the row to the table body
+                    $tableBody.append(row);
+                }); 
+            // }, function () {
+            //     // Tampilkan notifikasi jika pengguna membatalkan
+            //     toastr.warning("Pastikan untuk melakukan update saldo Exchanger & Chain sebelum melanjutkan!!");
+            // });
         });
 
        // Fungsi Save Modal
@@ -727,25 +736,36 @@
 
             location.reload();
         });
+      
+        // Fungsi cek modal all
+        $('#CheckModal').on('click', async function () {
+             // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
+            await $('#checkAssetsWallet').trigger('click'); 
 
-        // Fungsi ketika tombol "Check" ditekan
-        $('#CheckModal').on('click', function () {
-            // Ambil data dari localStorage
-            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
-            const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
-            const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
-            const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+            // Memanggil fungsi untuk mengecek asset di CEX
+            $('#checkAssetCEX').trigger('click');
+            // Gunakan modal konfirmasi dari UIkit
+            //UIkit.modal.confirm("Apakah Anda Sudah UPDATE SALDO CEX & CHAIN.?").then(function () {
+                // Ambil data dari localStorage
+                const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
+                const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
+                const modalAwal = parseFloat(localStorage.getItem('am_MODALAWAL')) || 0;
+                const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-            // Hitung PNL (Profit and Loss)
-            const pnl = saldoAkhir - modalAwal;
+                // Hitung PNL (Profit and Loss)
+                const pnl = saldoAkhir - modalAwal;
 
-            // Tampilkan data di elemen HTML
-            $('#m_awal').text(modalAwal.toFixed(2) + ' USDT');
-            $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
-            $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
+                // Tampilkan data di elemen HTML
+                $('#m_awal').text(modalAwal.toFixed(2) + ' USDT');
+                $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
+                $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
 
-            // Tampilkan notifikasi
-            toastr.info("CHECK MODAL BERHASIL");
+                // Tampilkan notifikasi
+                toastr.info("CHECK MODAL BERHASIL");
+            // }, function () {
+            //     // Tampilkan notifikasi jika pengguna membatalkan
+            //     toastr.warning("Pastikan untuk melakukan update saldo Exchanger & Chain sebelum melanjutkan!!");
+            // });
         });
 
         // Fungsi pengecekan untuk masing-masing exchange
