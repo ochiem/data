@@ -342,61 +342,70 @@
                         </h5>
                        
                        <!-- Modal Kalkulator -->
-                       <div id="calculatorModal" uk-modal>
-                           <div class="uk-modal-dialog uk-modal-body uk-modal-dialog-large">
-                               <button class="uk-modal-close-default" type="button" uk-close></button>
-                               <h3 class="uk-modal-title">
-                                   <img title="KALKULATOR" src="https://cdn-icons-png.flaticon.com/512/17184/17184898.png" width="28px" />&nbsp;
-                                   KALKULATOR CRYPTO
-                               </h3>
-                               <form class="uk-form-horizontal uk-margin-small">
-                                   <div class="uk-margin-small-top">
-                                       <label class="uk-form-label" for="form-horizontal-text">USDT</label>
-                                       <div class="uk-form-controls">
-                                           <input type="number" class="uk-input" id="usdtprice" placeholder="0" value="" oninput="convertCurrency('usdt')" required />
-                                       </div>
-                                   </div>
-                                   <div class="uk-margin-small-top">
-                                       <label class="uk-form-label" for="form-horizontal-text">IDR</label>
-                                       <div class="uk-form-controls">
-                                           <input type="number" class="uk-input" id="idrprice" placeholder="0" value="" oninput="convertCurrency('idr')" required />
-                                       </div>
-                                   </div>
-                                   <div class="uk-margin-small-top">
-                                       <label class="uk-form-label" for="form-horizontal-text">BTC</label>
-                                       <div class="uk-form-controls">
-                                           <input type="number" class="uk-input" id="btcprice" placeholder="0" value="" oninput="convertCurrency('btc')" required />
-                                       </div>
-                                   </div>
-                                   <div class="uk-margin-small-top">
-                                       <label class="uk-form-label" for="form-horizontal-text">ETH</label>
-                                       <div class="uk-form-controls">
-                                           <input type="number" class="uk-input" id="ethprice" placeholder="0" value="" oninput="convertCurrency('eth')" required />
-                                       </div>
-                                   </div>
-                                   <div class="uk-margin-small-top">
-                                        <label class="uk-form-label" for="form-horizontal-text">BNB</label>
-                                        <div class="uk-form-controls">
-                                            <input type="number" class="uk-input" id="bnbprice" placeholder="0" value="" oninput="convertCurrency('bnb')" required />
+                        <!-- Modal -->
+                        <div id="calculator-modal" uk-modal >
+                            <div class="uk-modal-dialog uk-modal-body uk-width-large" style="padding-bottom: 1px;">
+                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                                
+                                <h3 class="uk-heading-divider uk-align-center" style="margin-bottom: 8px;">
+                                    <img title="KALKULATOR" src="https://cdn-icons-png.flaticon.com/512/17184/17184898.png" width="28px" />&nbsp;
+                                    KALKULATOR CRYPTO
+                                </h3>
+                                    <!-- Input Fields for Cryptocurrency Values -->
+                                    <div class="uk-grid-small uk-child-width-1-1 uk-align-center" uk-grid style="margin: 0px;padding: 0px;">
+                                        <div class="uk-margin-small-top">
+                                            <div class="uk-form-controls">
+                                                <label for="usdtprice" class="uk-form-label uk-margin-large-right"><b>USDT </b></label>
+                                                <input id="usdtprice" class="uk-input dynamic-input uk-form-width-large" type="text" placeholder="Masukkan nilai USDT" oninput="convertFromInput('usdt')">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-small-top">
+                                            <div class="uk-form-controls">
+                                                <label for="idrprice" class="uk-form-label uk-margin-large-right"><b>IDR&nbsp;&nbsp;</b></label>
+                                                <input id="idrprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai IDR" oninput="convertFromInput('idr')">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-small-top">
+                                            <div class="uk-form-controls">
+                                                <label for="btcprice" class="uk-form-label uk-margin-large-right"><b>BTC&nbsp;&nbsp;</b></label>
+                                                <input id="btcprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai BTC" oninput="convertFromInput('btc')">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-small-top">
+                                            <div class="uk-form-controls">
+                                                <label for="ethprice" class="uk-form-label uk-margin-large-right"><b>ETH&nbsp;&nbsp;</b></label>
+                                                <input id="ethprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai ETH" oninput="convertFromInput('eth')">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-small-top">
+                                            <div class="uk-form-controls">
+                                                <label for="bnbprice" class="uk-form-label uk-margin-large-right"><b>BNB&nbsp;&nbsp;</b></label>
+                                                <input id="bnbprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai BNB" oninput="convertFromInput('bnb')">
+                                            </div>
+                                        </div>
+                                            <!-- Input untuk Token 1 -->
+                                            <div class="uk-margin-small-top">                    
+                                                <div class="uk-form-controls">
+                                                    <label for="random1symbol" class="uk-form-label uk-text-danger"><b>CUSTOM TOKEN :</b></label>
+                                                    <div class="uk-button-group ">
+                                                        <input type="text" class="uk-input dynamic-input uk-form-width-medium" id="random1symbol" placeholder="Symbol TOKEN">
+                                                        <input type="number" class="uk-input dynamic-input" id="random1price" placeholder="Harga TOKEN" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="uk-form-controls  uk-align-center">
+                                                <div class="uk-button-group  uk-form-width-large">
+                                                    <button class="uk-button uk-button-small uk-button-danger uk-margin-large-left" id="cekTokensBtn">CEK Tokens</button>
+                                                    <button class="uk-button uk-button-small uk-button-primary" id="updatePriceBtn">Update Price</button>
+                                                </div>
+                                            </div>
+                                        <div>
+
                                         </div>
                                     </div>
-                                    <div class="uk-margin-small-top">
-                                        <label class="uk-form-label" for="form-horizontal-text">NAMA TOKEN</label>
-                                        <div class="uk-form-controls">
-                                        <div class="uk-button-group">
-                                            <input type="text" class="uk-input uk-width-1-4 text-uppercase" id="symbol" placeholder="NAMA KOIN" value="" required />
-                                            <input type="number" class="uk-input uk-width-1-2" id="randomprice" placeholder="0" value="" oninput="convertCurrency('random')" required disabled />
-                                            <button type="button" class="uk-button uk-button-small uk-button-primary" onclick="getRandom()" id="randget">Get</button>
-                                            <button type="button" class="uk-button uk-button-small uk-button-danger" onclick="resetRandom()" id="randreset">X</button>
-                                        </div>
-                                    </div>
-                                    </div>
-                               </form>
-                               <div class="uk-modal-footer uk-text-center">
-                                   <button class="uk-button uk-button-primary" onclick="rateKalkulator()">Update Price</button>
-                               </div>
-                           </div>
-                       </div>
+                            </div>
+                        </div>
                        
                            <table class="uk-table uk-table-striped uk-table-hover" id="assetTablePNL">
                                <thead class="pnl-header">
@@ -423,6 +432,118 @@
 
 <script>  
     $(document).ready(function () {
+        // KALKULATOR 
+            var ratePrice = {
+                usdt: 1,
+                idr: 0,
+                btc: 0,
+                eth: 0,
+                bnb: 0,
+                random1: 0 // Custom token rate
+            };
+
+            // Fetch initial rates
+            function fetchRates() {
+                $.when(
+                    $.getJSON("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"),
+                    $.getJSON("https://indodax.com/api/ticker/USDTIDR")
+                ).done(function (binanceResponse, indodaxResponse) {
+                    binanceResponse[0].forEach((res) => {
+                        switch (res.symbol) {
+                            case "BTCUSDT": ratePrice.btc = parseFloat(res.price); break;
+                            case "ETHUSDT": ratePrice.eth = parseFloat(res.price); break;
+                            case "BNBUSDT": ratePrice.bnb = parseFloat(res.price); break;
+                        }
+                    });
+                    ratePrice.idr = parseFloat(indodaxResponse[0].ticker.last);
+                }).fail(function (error) {
+                    console.log(error);
+                });
+            }
+
+            // Check custom token price
+            $("#cekTokensBtn").on("click", function () {
+                var symbol1 = $("#random1symbol").val().toUpperCase().trim();
+                if (!symbol1) {
+                    alert("Masukkan simbol untuk custom token.");
+                    return;
+                }
+
+                $.getJSON("https://www.binance.me/api/v3/ticker/price?symbol=" + symbol1 + "USDT")
+                    .done(function (response) {
+                        ratePrice.random1 = parseFloat(response.price);
+                        $("#random1price").prop("disabled", false).val(ratePrice.random1.toFixed(8));
+                        alert("Custom token ditemukan: " + symbol1 + " dengan harga " + ratePrice.random1 + " USDT");
+
+                        // Tambahkan event listener untuk mengubah nilai custom token
+                        $("#random1price").on("input", function () {
+                            convertFromInput('random1');
+                        });
+                    })
+                    .fail(function () {
+                        alert("Token tidak ditemukan.");
+                        ratePrice.random1 = 0;
+                        $("#random1price").prop("disabled", true).val('');
+                    });
+            });
+
+            // Convert input dynamically
+            window.convertFromInput = function(base) {
+                const baseValue = parseFloat($("#" + base + "price").val());
+                if (isNaN(baseValue) || baseValue <= 0) return;
+
+                var updatedPrices = {};
+                switch (base) {
+                    case "usdt":
+                        updatedPrices = {
+                            usdt: baseValue,
+                            idr: baseValue * ratePrice.idr,
+                            btc: baseValue / ratePrice.btc,
+                            eth: baseValue / ratePrice.eth,
+                            bnb: baseValue / ratePrice.bnb,
+                            random1: baseValue / ratePrice.random1
+                        };
+                        break;
+                    case "idr":
+                        updatedPrices = {
+                            usdt: baseValue / ratePrice.idr,
+                            idr: baseValue,
+                            btc: (baseValue / ratePrice.idr) / ratePrice.btc,
+                            eth: (baseValue / ratePrice.idr) / ratePrice.eth,
+                            bnb: (baseValue / ratePrice.idr) / ratePrice.bnb,
+                            random1: (baseValue / ratePrice.idr) / ratePrice.random1
+                        };
+                        break;
+                    // Handle other cases (btc, eth, bnb)
+                    case "random1":
+                        if (ratePrice.random1 === 0) return;
+                        updatedPrices = {
+                            usdt: baseValue * ratePrice.random1,
+                            idr: baseValue * ratePrice.random1 * ratePrice.idr,
+                            btc: (baseValue * ratePrice.random1) / ratePrice.btc,
+                            eth: (baseValue * ratePrice.random1) / ratePrice.eth,
+                            bnb: (baseValue * ratePrice.random1) / ratePrice.bnb,
+                            random1: baseValue
+                        };
+                        break;
+                }
+
+                // Update input fields
+                updatePrices(updatedPrices, base);
+            };
+
+            // Update input fields
+            function updatePrices(prices, excludeBase) {
+                $.each(prices, function (key, value) {
+                    if (key !== excludeBase) {
+                        $("#" + key + "price").val(value ? value.toFixed(8) : '');
+                    }
+                });
+            }
+
+            fetchRates();
+
+        // END KALKULATOR
         const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631'; // Ganti dengan API Key Infura Anda
       
         const chains = {
@@ -458,7 +579,7 @@
         // Handle button click to show the modal
         $('#openModalKalkulator').on('click', function(event) {
             event.preventDefault(); // Prevent default behavior of anchor tag
-            UIkit.modal('#calculatorModal').show();
+            UIkit.modal('#calculator-modal').show();
         });
 
         // Simpan status checkbox dan nilai input saat terjadi perubahan
