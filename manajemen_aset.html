@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASSETS MULTI</title>
+    <title>MANAJEMEN ASSET</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
-    <link rel="icon" href="https://icons-for-free.com/iff/png/512/bitcoin-1324760528788003758.png" type="image/x-icon">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20230811/original/pngtree-money-bag-icon-color-flat-picture-image_7866484.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -237,6 +237,29 @@
         <!-- Kolom 2 -->
          <div>
             <div class="uk-card uk-card-default uk-card-body">
+              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <!-- Gambar kiri -->
+                <div>
+                    <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
+                        <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
+                    </a>
+                    <a href="#" target="_blank" id="openModalKalkulator">
+                        <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
+                    </a>
+                </div>
+            
+                <!-- Tombol kanan -->
+                <div class="uk-text-right">
+                    <button class="uk-button uk-button-small uk-text-secondary" style="background-color: rgb(152, 242, 152);" id="CheckModal">Check</button>
+                    <button class="uk-button uk-button-small uk-button-danger" id="ResetModal">Reset</button>
+                </div>
+            </div>
+            <hr class="uk-divider-icon uk-margin-small-top uk-margin-small-bottom">
+              <div class="uk-text-center uk-text-default  uk-margin-small-top">
+                <span class="uk-text-default uk-text-secondary "><b>Awal : <span  class="uk-text-primary" id="m_awal">...</span></b></span>
+                | <span class="uk-text-default uk-text-secondary"><b>Akhir: <span  class="uk-text-warning" id="m_akhir">...</span></b></span>
+                | <span class="uk-text-default uk-text-secondary"><b>PNL: <span  class="uk-text-danger" id="m_pnl">...</span></b></span>
+            </div>
                 <!-- Bagian Saldo -->
                 <table class="uk-table uk-table-striped uk-table-divider uk-table-hover uk-margin-top" id="assetTableCexs" >
                     <thead class="cex-header">
@@ -268,8 +291,8 @@
                     
                     <tbody id="output_cex"></tbody>
                     <tr>
-                        <th style="text-align: center; font-size: larger; font-weight: bolder; color: #527aff;" id="LTotalSaldoCEX">TOTAL</th>
-                        <th style="text-align: center; font-size: larger; font-weight: bolder; color: #527aff;" id="TotalSaldoCEX">...</th>
+                        <th style="padding:10px 0px; text-align: center; font-size: larger; font-weight: bolder; color: #f30876" id="LTotalSaldoCEX">TOTAL</th>
+                        <th style="padding:10px 0px; text-align: center; font-size: larger; font-weight: bolder; color: #f30876" id="TotalSaldoCEX">...</th>
                     </tr>
                 </table> 
                 <hr/>
@@ -284,8 +307,8 @@
                     </thead>
                     <tbody id="output_chain"></tbody>
                     <tr>
-                        <th colspan="2" style="text-align: center; font-size: larger; font-weight: bolder; color: #527aff;" id="LTotalSaldoWallets">Total USDT</th>
-                        <th colspan="2" style="text-align: center; font-size: larger; font-weight: bolder; color: #527aff;" id="TotalSaldoWallets">...</th>
+                        <th colspan="2" style="padding:10px 0px; text-align: center; font-size: larger; font-weight: bolder; color: #063ffc;" id="LTotalSaldoWallets">Total</th>
+                        <th colspan="2" style="padding:10px 0px; text-align: center; font-size: larger; font-weight: bolder; color: #063ffc;" id="TotalSaldoWallets">...</th>
                     </tr>
                 </table>
             </div>
@@ -296,48 +319,21 @@
                       <!-- Bagian History PNL -->
                         
                         <!-- Inputan Modal Awal -->
-                        <div class="input-group mb-2 uk-flex uk-flex-middle">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <label class="form-check-label" for="MODALAWAL">MODAL AWAL</label>
+                        <div class="uk-flex uk-flex-middle uk-flex-wrap uk-margin-small uk-grid-small">
+                            <div class="uk-margin-small-right">
+                                <span class="uk-form-label">
+                                    <b><label class="form-check-label uk-text-default" for="MODALAWAL">MODAL AWAL</label></b>
                                 </span>
                             </div>
-                            <input type="number" class="form-control w-25" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
-                            <span class="input-group-text" id="RPMODAL"></span>
-                            <i class="bi bi-arrow-clockwise" id="reload"></i>
+                            <input type="number" class="uk-input uk-form-width-small uk-margin-small-right" id="MODALAWAL" placeholder="MODAL AWAL" value="1" required />
+                            <span class="uk-text uk-margin-small-right" id="RPMODAL"></span>
+                            <i class="bi bi-arrow-clockwise uk-margin-small-right" id="reload"></i>
+                            <button class="uk-button uk-button-small uk-button-primary" id="SaveModal">SAVE</button>
                         </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-
-                            <!-- Gambar kiri -->
-                            <div>
-                                <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
-                                    <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
-                                </a>
-                                <a href="#" target="_blank" id="openModalKalkulator">
-                                    <img title="KALKULATOR" src="https://cdn.icon-icons.com/icons2/70/PNG/512/calculator_14103.png" width="25px" />
-                                </a>
-                            </div>
-                        
-                            <!-- Tombol kanan -->
-                            <div class="uk-text-right">
-                                <button class="uk-button uk-button-small uk-text-secondary" style="background-color: rgb(152, 242, 152);" id="CheckModal">Check</button>
-                                <button class="uk-button uk-button-small uk-button-danger" id="ResetModal">Reset</button>
-                                <button class="uk-button uk-button-small uk-button-primary" id="SaveModal">Save MODAL</button>
-                            </div>
-                        
-                        </div>
-                        
-
-                        <div class="uk-text-center  uk-margin-small-top">
-                            <span class="uk-text-default uk-text-secondary"><b>Awal : <span  class="uk-text-primary" id="m_awal">...</span></b></span>
-                            | <span class="uk-text-default uk-text-secondary"><b>Akhir: <span  class="uk-text-warning" id="m_akhir">...</span></b></span>
-                            | <span class="uk-text-default uk-text-secondary"><b>PNL: <span  class="uk-text-danger" id="m_pnl">...</span></b></span>
-                        </div>
-                        
-                       <hr/> 
+                        <hr/>
                         <h5 class="uk-heading uk-text-danger uk-text-left uk-margin-small-top"> 
                             <span>ALL History Modal</span>
-                            <button class="uk-button uk-button-small uk-align-right uk-button-secondary" id="UpdateHistoryPNL" sytle="margin:0px">Update</button>   
+                            <button class="uk-button uk-button-small uk-align-right uk-button-secondary  uk-margin-remove" id="UpdateHistoryPNL">Update</button>   
                            
                         </h5>
                        
@@ -407,24 +403,29 @@
                             </div>
                         </div>
                        
-                           <table class="uk-table uk-table-striped uk-table-hover" id="assetTablePNL">
-                               <thead class="pnl-header">
-                                   <tr>
-                                       <th>TIME_UPDATE</th>
-                                       <th>Awal</th>
-                                       <th>Akhir</th>
-                                       <th>PNL</th>
-                                       <th>Action</th>
-                                   </tr>
-                               </thead>
-                               <tr>
-                                   <td>xxxx-xx-xx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                                   <td>xxxxx</td>
-                               </tr>                              
-                           </table>                     
+                        <div class="uk-overflow-auto uk-margin-small-top">
+                          <table class="uk-table uk-table-striped uk-table-hover" id="assetTablePNL">
+                              <thead class="pnl-header">
+                                  <tr>
+                                      <th>TIME_UPDATE</th>
+                                      <th>Awal</th>
+                                      <th>Akhir</th>
+                                      <th>PNL</th>
+                                      <th>Action</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>xxxx-xx-xx</td>
+                                      <td>xxxxx</td>
+                                      <td>xxxxx</td>
+                                      <td>xxxxx</td>
+                                      <td>xxxxx</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                                       
             </div>
         </div>
     </div>
@@ -716,7 +717,7 @@
                     // Total saldo USD
                     const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
                     $('#LTotalSaldoWallets').text("Total");
-                    $('#TotalSaldoWallets').text(totalUSDT.toFixed(2) + " USDT");
+                    $('#TotalSaldoWallets').text(totalUSDT.toFixed(2) + " $");
                     localStorage.setItem('am_TotalSaldoChain', totalUSDT.toFixed(2));
                 } else {
                     throw new Error('Tidak ada data valid untuk disimpan.');
@@ -1090,60 +1091,23 @@
                 var formattedTime = getFormattedTime();
 
                 // Simpan waktu terakhir diperbarui ke localStorage
-                localStorage.setItem('am_lastUpdatePNL', formattedTime);
-                toastr.info("UPDATE HISTORY PNL BERHASIL [ " + formattedTime + " ] ");
+                localStorage.setItem('am_lastUpdatePNL', formattedTime);               
 
                 // Retrieve data from localStorage
                 const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX'));
                 const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
                 const modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
                 const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
+                const pnl = Number(saldoAkhir) - Number(modalawal);
 
                 console.log("Saldo Exchanger: " + saldoExchanger);
                 console.log("Saldo Chain: " + assetDataChain);
                 console.log("Saldo Awal: " + modalawal);
                 console.log("Saldo Akhir: " + saldoAkhir);
-                // Retrieve history from localStorage or initialize it as an empty array
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
 
-                let saldoAwal = Number(modalawal);
-
-                // Create new history entry
-                const newHistoryEntry = {
-                    date: formattedTime,  // WIB formatted timestamp
-                    saldoAwal: saldoAwal.toFixed(2),
-                    saldoAkhir: saldoAkhir.toFixed(2),
-                    pnl: (saldoAkhir - saldoAwal).toFixed(2),
-                    action: "update"
-                };
-
-                // Add the new history entry to the beginning of the history array
-                history.unshift(newHistoryEntry);  // Use unshift() to add to the first index
-
-                // Limit the history array to 15 entries
-                const limitedHistory = history.slice(0,10);
-
-                // Save the updated limited history back to localStorage
-                localStorage.setItem('am_history', JSON.stringify(limitedHistory));
-
-                // Update the table with the new data without removing the header
-                const $tableBody = $('#assetTablePNL tbody'); // Select the tbody element
-                $tableBody.empty(); // Clear existing rows in the body
-
-                // Add rows to the table body
-                $.each(limitedHistory, function(index, entry) {
-                    const row = $('<tr></tr>'); // Create a new table row
-
-                    // Create each cell and append the content
-                    row.append($('<td></td>').text(entry.date));
-                    row.append($('<td></td>').text(entry.saldoAwal));
-                    row.append($('<td></td>').text(entry.saldoAkhir));
-                    row.append($('<td></td>').text(entry.pnl));
-                    row.append($('<td></td>').text(entry.action));
-
-                    // Append the row to the table body
-                    $tableBody.append(row);
-                }); 
+                addTableHistory(formattedTime,Number(modalawal) ,Number(saldoAkhir) ,pnl,"update")
+                
+                LoadTableHistory()
         });
 
        // Fungsi Save Modal
@@ -1161,18 +1125,10 @@
             const assetDataChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain'));
             const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
 
-            // Tambahkan data ke riwayat
-            const history = JSON.parse(localStorage.getItem('am_history')) || [];
-            const newHistoryEntry = {
-                date: formattedTime,
-                saldoAwal: Number(inmodal_awal).toFixed(2),  // Modal awal diambil dari input
-                saldoAkhir: saldoAkhir.toFixed(2),
-                pnl: (saldoAkhir - Number(inmodal_awal)).toFixed(2),
-                action: "start"  // Set action ke "start"
-            };
-            history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
-            localStorage.setItem('am_history', JSON.stringify(history.slice(0,10))); // Simpan maksimal 15 entri
-
+            addTableHistory(formattedTime,Number(inmodal_awal) ,Number(saldoAkhir),0,"start");
+            
+           // location.reload();
+            LoadTableHistory()
             loadData();
         });
 
@@ -1195,22 +1151,84 @@
             // Set modal awal ke saldo total saat ini (reset)
             localStorage.setItem('am_MODALAWAL', saldoAkhir);
 
-            // Tambahkan data ke riwayat
-            const history = JSON.parse(localStorage.getItem('am_history')) || [];
-            const newHistoryEntry = {
-                date: formattedTime,
-                saldoAwal: saldoAkhir.toFixed(2),  // Modal awal diset ke saldo total saat ini
-                saldoAkhir: saldoAkhir.toFixed(2), // Modal akhir tetap sama karena reset
-                pnl: 0,  // Tidak ada perubahan PNL saat reset
-                action: "reset"  // Set action ke "reset"
-            };
-            history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
-            localStorage.setItem('am_history', JSON.stringify(history.slice(0,10))); // Simpan maksimal 15 entri
-
-            location.reload();
+            addTableHistory(formattedTime,Number(saldoAkhir) ,Number(saldoAkhir),0,"reset");
+           // location.reload();
+            LoadTableHistory()
         });
-      
+        
+        function addTableHistory(date,awal,akhir,pnl,action){ // Tambahkan data ke riwayat
+
+              const history = JSON.parse(localStorage.getItem('am_history')) || [];
+              const newHistoryEntry = {
+                  date: date,
+                  saldoAwal: awal.toFixed(2),  // Modal awal diset ke saldo total saat ini
+                  saldoAkhir: akhir.toFixed(2), // Modal akhir tetap sama karena reset
+                  pnl: pnl.toFixed(2),  // Tidak ada perubahan PNL saat reset
+                  action: action  // Set action ke "reset"
+              };
+              history.unshift(newHistoryEntry); // Tambahkan entri ke array di posisi awal
+              localStorage.setItem('am_history', JSON.stringify(history.slice(0, 14)));
+              toastr.info("MODAL "+action.toUpperCase()+" BERHASIL.");
+              LoadTableHistory()
+        }
+
+        function LoadTableHistory(){
+          // Memuat data riwayat PNL dari localStorage
+          const history = JSON.parse(localStorage.getItem('am_history')) || [];
+                  if (history.length > 0) {
+                      // Kosongkan tabel PNL sebelum menambahkan data baru
+                      $('#assetTablePNL tbody').empty();
+
+                      // Batasi data yang ditampilkan hingga 10 entri terbaru
+                      const limitedHistory = history.slice(0, 14);
+
+                      // Render data riwayat ke tabel PNL
+                      limitedHistory.forEach(entry => {
+                          // Tentukan kelas untuk kolom action
+                          let actionClass = '';
+                          let actionText = entry.action.toUpperCase(); // memastikan huruf kapital
+
+                          // Sesuaikan dengan nilai action
+                          if (entry.action === 'update') {
+                              actionClass = 'uk-text-success'; // UIkit sukses
+                              actionText = 'Update';
+                          } else if (entry.action === 'start') {
+                              actionClass = 'uk-text-secondary'; // UIkit danger
+                              actionText = 'Start';
+                          } else if (entry.action === 'reset') {
+                              actionClass = 'uk-text-warning'; // UIkit warning
+                              actionText = 'Reset';
+                          }
+
+                          // Tentukan kelas untuk pnl (untuk warna hijau, merah, atau biru)
+                          let pnlClass = '';
+                          let pnlValue = parseFloat(entry.pnl); // Pastikan pnl adalah angka
+
+                          if (pnlValue < 0) {
+                              pnlClass = 'uk-text-danger'; // Merah jika pnl < 0
+                          } else if (pnlValue > 0) {
+                              pnlClass = 'uk-text-success'; // Hijau jika pnl > 0
+                          } else {
+                              pnlClass = 'uk-text-primary'; // Biru jika pnl = 0
+                          }
+
+                          // Render row dengan kelas yang sesuai
+                          const row = `
+                              <tr>
+                                  <td>${entry.date}</td>
+                                  <td><b>${entry.saldoAwal}</b></td>
+                                  <td><b>${entry.saldoAkhir}<b></td>
+                                  <td><b><span class="${pnlClass}">${entry.pnl}</span></b></td> <!-- Penambahan warna pada pnl -->
+                                  <td><b><span class="${actionClass}">${actionText}</span></b></td> <!-- Penambahan warna pada action -->
+                              </tr>
+                          `;
+                          $('#assetTablePNL tbody').append(row);
+                      });
+                  }
+        }
+
         $('#CheckModal').on('click', async function () {
+            LoadTableHistory()
             await $('#SaveWalletChains').trigger('click'); 
 
             // Memanggil fungsi untuk mengecek asset di CEX
@@ -1340,7 +1358,7 @@
 
                 // Hitung total saldo USDT dari semua chain
                 const totalUSDT = assetData.reduce((sum, data) => sum + parseFloat(data.total || 0), 0);
-                $('#TotalSaldoWallets').text(totalUSDT.toFixed(2) + " USDT"); 
+                $('#TotalSaldoWallets').text(totalUSDT.toFixed(2) + " $"); 
 
                 // Menampilkan waktu terakhir diperbarui
                 const lastUpdate = localStorage.getItem('am_lastUpdateChain');
@@ -1362,78 +1380,13 @@
                         getTotalSaldoCEXS();
                     }
                 });
-                 // Memuat data riwayat PNL dari localStorage
-                const history = JSON.parse(localStorage.getItem('am_history')) || [];
-                if (history.length > 0) {
-                    // Kosongkan tabel PNL sebelum menambahkan data baru
-                    $('#assetTablePNL tbody').empty();
 
-                    // Batasi data yang ditampilkan hingga 10 entri terbaru
-                    const limitedHistory = history.slice(0, 10);
-
-                    // Render data riwayat ke tabel PNL
-                    limitedHistory.forEach(entry => {
-                        // Tentukan kelas untuk kolom action
-                        let actionClass = '';
-                        let actionText = entry.action.toUpperCase(); // memastikan huruf kapital
-
-                        // Sesuaikan dengan nilai action
-                        if (entry.action === 'update') {
-                            actionClass = 'uk-text-success'; // UIkit sukses
-                            actionText = 'Update';
-                        } else if (entry.action === 'start') {
-                            actionClass = 'uk-text-secondary'; // UIkit danger
-                            actionText = 'Start';
-                        } else if (entry.action === 'reset') {
-                            actionClass = 'uk-text-warning'; // UIkit warning
-                            actionText = 'Reset';
-                        }
-
-                        // Tentukan kelas untuk pnl (untuk warna hijau, merah, atau biru)
-                        let pnlClass = '';
-                        let pnlValue = parseFloat(entry.pnl); // Pastikan pnl adalah angka
-
-                        if (pnlValue < 0) {
-                            pnlClass = 'uk-text-danger'; // Merah jika pnl < 0
-                        } else if (pnlValue > 0) {
-                            pnlClass = 'uk-text-success'; // Hijau jika pnl > 0
-                        } else {
-                            pnlClass = 'uk-text-primary'; // Biru jika pnl = 0
-                        }
-
-                        // Render row dengan kelas yang sesuai
-                        const row = `
-                            <tr>
-                                <td>${entry.date}</td>
-                                <td><b>${entry.saldoAwal}</b></td>
-                                <td><b>${entry.saldoAkhir}<b></td>
-                                <td><b><span class="${pnlClass}">${entry.pnl}</span></b></td> <!-- Penambahan warna pada pnl -->
-                                <td><b><span class="${actionClass}">${actionText}</span></b></td> <!-- Penambahan warna pada action -->
-                            </tr>
-                        `;
-                        $('#assetTablePNL tbody').append(row);
-                    });
-                }
-
+                LoadTableHistory()
         }
         //fungsi get balances chain EVM 
 
         async function getAssetBalancesEVM(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
             try {
-                // if (!erc20Contracts[networkName]) {
-                //     throw new Error('Nama jaringan tidak valid: ' + networkName);
-                // }
-
-                // console.log("Network Name:", networkName);
-                
-                // // Menentukan kontrak token sesuai jaringan
-                // const contractAddress = erc20Contracts[networkName];
-
-                // console.log("Contract Address:", contractAddress);
-
-                // if (!contractAddress) {
-                //     throw new Error('Kontrak token tidak ditemukan untuk jaringan ini');
-                // }
 
                 const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
                 const erc20Abi = ["function balanceOf(address owner) view returns (uint256)"];
