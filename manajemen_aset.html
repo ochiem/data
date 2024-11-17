@@ -433,15 +433,16 @@
             arbitrum: `https://arbitrum-mainnet.infura.io/v3/${infuraApiKey}`,
             solana: 'https://api.mainnet-beta.solana.com' 
         };
-
+        // Fungsi untuk mendapatkan saldo aset ERC20 dan gas
         const erc20Contracts = {
             ethereum: '0xdAC17F958D2ee523a2206206994597C13D831ec7', // USDT Ethereum
             bsc: '0x55d398326f99059fF775485246999027B3197955', // USDT BSC
             polygon: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', // USDT Polygon
             base: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // USDC Base
             arbitrum: '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9', // USDT Arbitrum
-            solana: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB' // USDT SPL Token Solana
+            solana: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB' // USDT SPL Token Solana (Note: Solana tidak mendukung ERC20, hanya untuk referensi)
         };
+
         // Daftar jaringan dengan checkbox dan input terkait
         const networks = [
                 { checkboxId: 'ETHEREUM', inputId: 'ethWallet' },
@@ -577,6 +578,7 @@
                         gasSymbol: result.gasSymbol,
                         usdtGas: parseFloat(result.gasBalanceInUSD),
                         total: parseFloat(result.totalBalanceInUSD),
+                        walletLink: result.walletLink,
                     };
                 }).filter(item => item !== null);
 
@@ -1294,8 +1296,24 @@
 
         }
         //fungsi get balances chain EVM 
+
         async function getAssetBalancesEVM(rpcUrl, contractAddress, walletAddress, networkName, tokenRates) {
             try {
+                // if (!erc20Contracts[networkName]) {
+                //     throw new Error('Nama jaringan tidak valid: ' + networkName);
+                // }
+
+                // console.log("Network Name:", networkName);
+                
+                // // Menentukan kontrak token sesuai jaringan
+                // const contractAddress = erc20Contracts[networkName];
+
+                // console.log("Contract Address:", contractAddress);
+
+                // if (!contractAddress) {
+                //     throw new Error('Kontrak token tidak ditemukan untuk jaringan ini');
+                // }
+
                 const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
                 const erc20Abi = ["function balanceOf(address owner) view returns (uint256)"];
                 const contract = new ethers.Contract(contractAddress, erc20Abi, provider);
@@ -1304,14 +1322,16 @@
             
                 let decimals;
                 let assetSymbol;
-                if (networkName === 'base') {
-                    decimals = 6;
-                    assetSymbol = 'USDC'; // Base menggunakan USDC
+                if (networkName === 'bsc') {
+                    decimals = 18;  
+                    assetSymbol = 'USDT'; // BSC menggunakan USDT dengan desimal 18
+                } else if (networkName === 'base') {
+                    decimals = 6;   
+                    assetSymbol = 'USDC'; // Base menggunakan USDC dengan desimal 6
                 } else {
-                    decimals = 18;
-                    assetSymbol = 'USDT'; // Jaringan lain menggunakan USDT
+                    decimals = 6;   // Polygon, Arbitrum, Ethereum menggunakan 6 desimal
+                    assetSymbol = 'USDT'; // Default menggunakan USDT
                 }
-
                 const formattedBalance = parseFloat(ethers.utils.formatUnits(balance, decimals)).toFixed(2);
 
                 // Mendapatkan saldo gas
