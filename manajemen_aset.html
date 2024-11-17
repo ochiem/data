@@ -672,7 +672,7 @@
                 getTotalSaldoCEXS();
             });
 
-            toastr.info("CHECKING API BERHASIL, SILAKAN REFRESH UNTUK UPDATE TOTAL SALDO!!");
+            //toastr.info("CHECKING API BERHASIL, SILAKAN REFRESH UNTUK UPDATE TOTAL SALDO!!");
             $('#LTotalSaldoCEX').text('');
             $('#TotalSaldoCEX').text('');
            
@@ -732,228 +732,228 @@
         }
         //fungsi get saldo all CEX
         function cekAssetBinance(callback) {
-        console.log("Cek Asset Binance");
-        var apiKey = $("#apikeyBINANCE").val();
-        var apiSecret = $("#secretkeyBINANCE").val();
+            console.log("Cek Asset Binance");
+            var apiKey = $("#apikeyBINANCE").val();
+            var apiSecret = $("#secretkeyBINANCE").val();
 
-        var apiUrl = "https://api.binance.me/api/v3/account";
-        var timestamp = new Date().getTime();
+            var apiUrl = "https://api.binance.me/api/v3/account";
+            var timestamp = new Date().getTime();
 
-        var signature = CryptoJS.HmacSHA256("timestamp=" + timestamp, apiSecret).toString(CryptoJS.enc.Hex);
+            var signature = CryptoJS.HmacSHA256("timestamp=" + timestamp, apiSecret).toString(CryptoJS.enc.Hex);
 
-        var headers = { "X-MBX-APIKEY": apiKey };
+            var headers = { "X-MBX-APIKEY": apiKey };
 
-        $.ajax({
-            url: apiUrl + "?timestamp=" + timestamp + "&signature=" + signature,
-            method: "GET",
-            headers: headers,
-            dataType: "json",
-            beforeSend: function () {
-                $("#BINANCESaldo").text("Loading..."); // Menampilkan status loading
-            },
-            success: function (response) {
-                var usdtInfo = response.balances.find(function (currency) {
-                    return currency.asset === "USDT";
-                });
-                $("#BINANCESaldo").text(parseFloat(usdtInfo.free).toFixed(2) + " {USDT}");
+            $.ajax({
+                url: apiUrl + "?timestamp=" + timestamp + "&signature=" + signature,
+                method: "GET",
+                headers: headers,
+                dataType: "json",
+                beforeSend: function () {
+                    $("#BINANCESaldo").text("Loading..."); // Menampilkan status loading
+                },
+                success: function (response) {
+                    var usdtInfo = response.balances.find(function (currency) {
+                        return currency.asset === "USDT";
+                    });
+                    $("#BINANCESaldo").text(parseFloat(usdtInfo.free).toFixed(2) + " {USDT}");
 
-                localStorage.setItem("am_BINANCESaldo", usdtInfo.free);
-                if (callback) callback();
-            },
-            error: function (xhr, status, error) {
-                $("#BINANCESaldo").text("ERROR").addClass("error");
-                localStorage.setItem("am_BINANCESaldo", "XXX");
-                toastr.error("Error BINANCE : " + error);
-                if (callback) callback();
-            }
-        });
+                    localStorage.setItem("am_BINANCESaldo", usdtInfo.free);
+                    if (callback) callback();
+                },
+                error: function (xhr, status, error) {
+                    $("#BINANCESaldo").text("ERROR").addClass("error");
+                    localStorage.setItem("am_BINANCESaldo", "XXX");
+                    toastr.error("Error BINANCE : " + error);
+                    if (callback) callback();
+                }
+            });
         }
         function cekAssetGate(callback) {
-        console.log("Cek Asset Gate");
-        var key = $("#apikeyGATE").val();
-        var secret = $("#secretkeyGATE").val();
-        var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
-        var prefix = "/api/v4";
-        var method = "GET";
-        var url = "/spot/accounts";
+            console.log("Cek Asset Gate");
+            var key = $("#apikeyGATE").val();
+            var secret = $("#secretkeyGATE").val();
+            var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
+            var prefix = "/api/v4";
+            var method = "GET";
+            var url = "/spot/accounts";
 
-        var query_param = "";
-        var body_param = '';
-        var timestamp = Math.floor(new Date().getTime() / 1000);
-        var body_hash = CryptoJS.SHA512(body_param).toString();
-        var sign_string = method + '\n' + prefix + url + '\n' + query_param + '\n' + body_hash + '\n' + timestamp;
-        var sign = CryptoJS.HmacSHA512(sign_string, secret).toString();
-        var full_url = host + prefix + url;
+            var query_param = "";
+            var body_param = '';
+            var timestamp = Math.floor(new Date().getTime() / 1000);
+            var body_hash = CryptoJS.SHA512(body_param).toString();
+            var sign_string = method + '\n' + prefix + url + '\n' + query_param + '\n' + body_hash + '\n' + timestamp;
+            var sign = CryptoJS.HmacSHA512(sign_string, secret).toString();
+            var full_url = host + prefix + url;
 
-        $.ajax({
-            url: full_url,
-            method: method,
-            beforeSend: function () {
-                $("#GATESaldo").text("Loading...");
-            },
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Timestamp': timestamp,
-                'KEY': key,
-                'SIGN': sign
-            },
-            success: function (response) {
-                var usdtInfo = response.find(function (currency) {
-                    return currency.currency === "USDT";
-                });
+            $.ajax({
+                url: full_url,
+                method: method,
+                beforeSend: function () {
+                    $("#GATESaldo").text("Loading...");
+                },
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Timestamp': timestamp,
+                    'KEY': key,
+                    'SIGN': sign
+                },
+                success: function (response) {
+                    var usdtInfo = response.find(function (currency) {
+                        return currency.currency === "USDT";
+                    });
 
-                $("#GATESaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
-                localStorage.setItem("am_GATESaldo", usdtInfo.available);
-                if (callback) callback();
-            },
-            error: function (error) {
-                $("#GATESaldo").text("ERROR").addClass("error");
-                localStorage.setItem("am_GATESaldo", "XXX");
-                toastr.error("Error GATE : " + error);
-                if (callback) callback();
-            }
-        });
+                    $("#GATESaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
+                    localStorage.setItem("am_GATESaldo", usdtInfo.available);
+                    if (callback) callback();
+                },
+                error: function (error) {
+                    $("#GATESaldo").text("ERROR").addClass("error");
+                    localStorage.setItem("am_GATESaldo", "XXX");
+                    toastr.error("Error GATE : " + error);
+                    if (callback) callback();
+                }
+            });
         }
         function cekAssetBitget(callback) {
-        console.log("Cek Asset Bitget");
-        var apiKey = $("#apikeyBITGET").val();
-        var apiSecret = $("#secretkeyBITGET").val();
-        var passphrase = $("#passphraseBITGET").val();
+            console.log("Cek Asset Bitget");
+            var apiKey = $("#apikeyBITGET").val();
+            var apiSecret = $("#secretkeyBITGET").val();
+            var passphrase = $("#passphraseBITGET").val();
 
-        var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.bitget.com/api/v2/spot/account/assets";
-        var timestamp = Date.now().toString();
-        var preSignature = timestamp + "GET" + "/api/v2/spot/account/assets";
-        var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
+            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.bitget.com/api/v2/spot/account/assets";
+            var timestamp = Date.now().toString();
+            var preSignature = timestamp + "GET" + "/api/v2/spot/account/assets";
+            var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
 
-        var headers = {
-            "ACCESS-KEY": apiKey,
-            "ACCESS-SIGN": signature,
-            "ACCESS-TIMESTAMP": timestamp,
-            "ACCESS-PASSPHRASE": passphrase,
-        };
+            var headers = {
+                "ACCESS-KEY": apiKey,
+                "ACCESS-SIGN": signature,
+                "ACCESS-TIMESTAMP": timestamp,
+                "ACCESS-PASSPHRASE": passphrase,
+            };
 
-        $.ajax({
-            url: apiUrl,
-            method: "GET",
-            headers: headers,
-            dataType: "json",
-            beforeSend: function () {
-                $("#BITGETSaldo").text("Loading...");
-            },
-            success: function (response) {
-                var usdtInfo = response.data.find(function (currency) {
-                    return currency.coin === "USDT";
-                });
+            $.ajax({
+                url: apiUrl,
+                method: "GET",
+                headers: headers,
+                dataType: "json",
+                beforeSend: function () {
+                    $("#BITGETSaldo").text("Loading...");
+                },
+                success: function (response) {
+                    var usdtInfo = response.data.find(function (currency) {
+                        return currency.coin === "USDT";
+                    });
 
-                $("#BITGETSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
-                localStorage.setItem("am_BITGETSaldo", usdtInfo.available);
-                if (callback) callback();
-            },
-            error: function (xhr, status, error) {
-                $("#BITGETSaldo").text("ERROR").addClass("error");
-                localStorage.setItem("am_BITGETSaldo", "XXX");
-                toastr.error("Error BITGET : " + error);
-                if (callback) callback();
-            }
+                    $("#BITGETSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
+                    localStorage.setItem("am_BITGETSaldo", usdtInfo.available);
+                    if (callback) callback();
+                },
+                error: function (xhr, status, error) {
+                    $("#BITGETSaldo").text("ERROR").addClass("error");
+                    localStorage.setItem("am_BITGETSaldo", "XXX");
+                    toastr.error("Error BITGET : " + error);
+                    if (callback) callback();
+                }
         });
         }
         function cekAssetKucoin(callback) {
-        console.log("Cek Asset Kucoin");
-        var apiKey = $("#apikeyKUCOIN").val();
-        var apiSecret = $("#secretkeyKUCOIN").val();
-        var passphrase = $("#passphraseKUCOIN").val();
+            console.log("Cek Asset Kucoin");
+            var apiKey = $("#apikeyKUCOIN").val();
+            var apiSecret = $("#secretkeyKUCOIN").val();
+            var passphrase = $("#passphraseKUCOIN").val();
 
-        var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.kucoin.com/api/v1/accounts";
-        var timestamp = Date.now().toString();
-        var preSignature = timestamp + "GET" + "/api/v1/accounts";
-        var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
-        var passphraseENC = CryptoJS.HmacSHA256(passphrase, apiSecret).toString(CryptoJS.enc.Base64);
+            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.kucoin.com/api/v1/accounts";
+            var timestamp = Date.now().toString();
+            var preSignature = timestamp + "GET" + "/api/v1/accounts";
+            var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
+            var passphraseENC = CryptoJS.HmacSHA256(passphrase, apiSecret).toString(CryptoJS.enc.Base64);
 
-        var headers = {
-            "KC-API-KEY": apiKey,
-            "KC-API-SIGN": signature,
-            "KC-API-TIMESTAMP": timestamp,
-            "KC-API-PASSPHRASE": passphraseENC,
-            "KC-API-KEY-VERSION": "3",
-            "Content-Type": "application/json"
-        };
+            var headers = {
+                "KC-API-KEY": apiKey,
+                "KC-API-SIGN": signature,
+                "KC-API-TIMESTAMP": timestamp,
+                "KC-API-PASSPHRASE": passphraseENC,
+                "KC-API-KEY-VERSION": "3",
+                "Content-Type": "application/json"
+            };
 
-        $.ajax({
-            url: apiUrl,
-            method: "GET",
-            headers: headers,
-            dataType: "json",
-            beforeSend: function () {
-                $("#KUCOINSaldo").text("Loading...");
-            },
-            success: function (response) {
-                var usdtInfo = response.data.find(function (currency) {
-                    return currency.currency === "USDT";
-                });
+            $.ajax({
+                url: apiUrl,
+                method: "GET",
+                headers: headers,
+                dataType: "json",
+                beforeSend: function () {
+                    $("#KUCOINSaldo").text("Loading...");
+                },
+                success: function (response) {
+                    var usdtInfo = response.data.find(function (currency) {
+                        return currency.currency === "USDT";
+                    });
 
-                $("#KUCOINSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
-                localStorage.setItem("am_KUCOINSaldo", usdtInfo.available);
-                if (callback) callback();
-            },
-            error: function (xhr, status, error) {
-                $("#KUCOINSaldo").text("ERROR").addClass("error");
-                localStorage.setItem("am_KUCOINSaldo", "XXX");
-                toastr.error("Error KUCOIN : " + error);
-                if (callback) callback();
-            }
-        });
+                    $("#KUCOINSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
+                    localStorage.setItem("am_KUCOINSaldo", usdtInfo.available);
+                    if (callback) callback();
+                },
+                error: function (xhr, status, error) {
+                    $("#KUCOINSaldo").text("ERROR").addClass("error");
+                    localStorage.setItem("am_KUCOINSaldo", "XXX");
+                    toastr.error("Error KUCOIN : " + error);
+                    if (callback) callback();
+                }
+            });
         }
         function cekAssetBybit(callback) {
-        console.log("Cek Asset Bybit");
-        var key = $("#apikeyBYBIT").val();
-        var secret = $("#secretkeyBYBIT").val();
-        var recvWindow = 5000;
-        var timestamp = Date.now().toString();
-        var host = "https://api.bybit.com";
-        var method = "GET";
-        var url = "/v5/account/wallet-balance";
-        var queryString = "accountType=UNIFIED";
+            console.log("Cek Asset Bybit");
+            var key = $("#apikeyBYBIT").val();
+            var secret = $("#secretkeyBYBIT").val();
+            var recvWindow = 5000;
+            var timestamp = Date.now().toString();
+            var host = "https://api.bybit.com";
+            var method = "GET";
+            var url = "/v5/account/wallet-balance";
+            var queryString = "accountType=UNIFIED";
 
-        function calculateSignature(secret, timestamp, recvWindow, queryString) {
-            const dataToSign = `${timestamp}${key}${recvWindow}${queryString}`;
-            const signature = CryptoJS.HmacSHA256(dataToSign, secret).toString(CryptoJS.enc.Hex);
-            return signature;
-        }
-
-        const sign = calculateSignature(secret, timestamp, recvWindow, queryString);
-        var full_url = `${host}${url}?${queryString}`;
-
-        $.ajax({
-            url: full_url,
-            method: method,
-            beforeSend: function () {
-                $("#BYBITSaldo").text("Loading...");
-            },
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                "X-BAPI-API-KEY": key,
-                "X-BAPI-TIMESTAMP": timestamp,
-                "X-BAPI-RECV-WINDOW": recvWindow.toString(),
-                "X-BAPI-SIGN": sign,
-            },
-            success: function (response) {
-                var usdtInfo = response.result.list[0].coin.find(function (coin) {
-                    return coin.coin === "USDT";
-                });
-
-                $("#BYBITSaldo").text(parseFloat(usdtInfo.equity).toFixed(2) + " {USDT}");
-                localStorage.setItem("am_BYBITSaldo", usdtInfo.equity);
-                if (callback) callback();
-            },
-            error: function (error) {
-                $("#BYBITSaldo").text("ERROR").addClass("error");
-                localStorage.setItem("am_BYBITSaldo", "XXX");
-                toastr.error("Error BYBIT : " + error);
-                if (callback) callback();
+            function calculateSignature(secret, timestamp, recvWindow, queryString) {
+                const dataToSign = `${timestamp}${key}${recvWindow}${queryString}`;
+                const signature = CryptoJS.HmacSHA256(dataToSign, secret).toString(CryptoJS.enc.Hex);
+                return signature;
             }
-        });
+
+            const sign = calculateSignature(secret, timestamp, recvWindow, queryString);
+            var full_url = `${host}${url}?${queryString}`;
+
+            $.ajax({
+                url: full_url,
+                method: method,
+                beforeSend: function () {
+                    $("#BYBITSaldo").text("Loading...");
+                },
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    "X-BAPI-API-KEY": key,
+                    "X-BAPI-TIMESTAMP": timestamp,
+                    "X-BAPI-RECV-WINDOW": recvWindow.toString(),
+                    "X-BAPI-SIGN": sign,
+                },
+                success: function (response) {
+                    var usdtInfo = response.result.list[0].coin.find(function (coin) {
+                        return coin.coin === "USDT";
+                    });
+
+                    $("#BYBITSaldo").text(parseFloat(usdtInfo.equity).toFixed(2) + " {USDT}");
+                    localStorage.setItem("am_BYBITSaldo", usdtInfo.equity);
+                    if (callback) callback();
+                },
+                error: function (error) {
+                    $("#BYBITSaldo").text("ERROR").addClass("error");
+                    localStorage.setItem("am_BYBITSaldo", "XXX");
+                    toastr.error("Error BYBIT : " + error);
+                    if (callback) callback();
+                }
+            });
         }
                 
         //fungsi update history PNL
