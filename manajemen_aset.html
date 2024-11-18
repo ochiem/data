@@ -1259,8 +1259,7 @@ $('#SaveWalletChains').on('click', async function () {
     if (method === 'check') {
         // Jika method adalah 'check'
         saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir adalah saldo exchanger + saldo chain
-        pnl = modalAwal-
-        saldoAkhir;  // PNL adalah modal awal dikurangi saldo akhir
+        pnl = modalAwal-saldoAkhir;  // PNL adalah modal awal dikurangi saldo akhir
     }else if (method==="load") {
         // Jika method adalah 'check'
         saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir adalah saldo exchanger + saldo chain
@@ -1319,6 +1318,7 @@ $('#SaveWalletChains').on('click', async function () {
     const pnl = saldoAkhir - Number(modalAwal);
 
     ShowLabelModal("check");    
+    loadData();
 });
 
         // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
