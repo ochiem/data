@@ -360,25 +360,25 @@
                                         <div class="uk-margin-small-top">
                                             <div class="uk-form-controls">
                                                 <label for="idrprice" class="uk-form-label uk-margin-large-right"><b>IDR&nbsp;&nbsp;</b></label>
-                                                <input id="idrprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai IDR" oninput="convertFromInput('idr')">
+                                                <input id="idrprice" class="uk-input dynamic-input uk-form-width-large" type="text" placeholder="Masukkan nilai IDR" oninput="convertFromInput('idr')">
                                             </div>
                                         </div>
                                         <div class="uk-margin-small-top">
                                             <div class="uk-form-controls">
                                                 <label for="btcprice" class="uk-form-label uk-margin-large-right"><b>BTC&nbsp;&nbsp;</b></label>
-                                                <input id="btcprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai BTC" oninput="convertFromInput('btc')">
+                                                <input id="btcprice" class="uk-input dynamic-input uk-form-width-large" type="text" placeholder="Masukkan nilai BTC" oninput="convertFromInput('btc')">
                                             </div>
                                         </div>
                                         <div class="uk-margin-small-top">
                                             <div class="uk-form-controls">
                                                 <label for="ethprice" class="uk-form-label uk-margin-large-right"><b>ETH&nbsp;&nbsp;</b></label>
-                                                <input id="ethprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai ETH" oninput="convertFromInput('eth')">
+                                                <input id="ethprice" class="uk-input dynamic-input uk-form-width-large" type="text" placeholder="Masukkan nilai ETH" oninput="convertFromInput('eth')">
                                             </div>
                                         </div>
                                         <div class="uk-margin-small-top">
                                             <div class="uk-form-controls">
                                                 <label for="bnbprice" class="uk-form-label uk-margin-large-right"><b>BNB&nbsp;&nbsp;</b></label>
-                                                <input id="bnbprice" class="uk-input dynamic-input uk-form-width-large" type="number" placeholder="Masukkan nilai BNB" oninput="convertFromInput('bnb')">
+                                                <input id="bnbprice" class="uk-input dynamic-input uk-form-width-large" type="text" placeholder="Masukkan nilai BNB" oninput="convertFromInput('bnb')">
                                             </div>
                                         </div>
                                             <!-- Input untuk Token 1 -->
@@ -387,7 +387,7 @@
                                                     <label for="random1symbol" class="uk-form-label uk-text-danger"><b>CUSTOM TOKEN :</b></label>
                                                     <div class="uk-button-group ">
                                                         <input type="text" class="uk-input dynamic-input uk-form-width-medium" id="random1symbol" placeholder="Symbol TOKEN">
-                                                        <input type="number" class="uk-input dynamic-input" id="random1price" placeholder="Harga TOKEN" disabled>
+                                                        <input type="text" class="uk-input dynamic-input" id="random1price" placeholder="Harga TOKEN" disabled>
                                                     </div>
                                                 </div>
                                             </div>
@@ -444,6 +444,36 @@
                 bnb: 0,
                 random1: 0 // Custom token rate
             };
+            // Fungsi untuk memformat IDR dengan pemisah ribuan
+            function formatIDR(value) {
+                return new Intl.NumberFormat('id-ID').format(value); // 'id-ID' untuk format Indonesia
+            }
+   
+            // Fungsi untuk memperbarui harga semua token, termasuk custom token
+            $("#updatePriceBtn").on("click", function() {
+                // Memperbarui harga untuk token yang sudah didefinisikan (seperti BTC, ETH, dll.)
+                fetchRates();
+
+                // Ambil simbol token custom dari input
+                var symbol1 = $("#random1symbol").val().toUpperCase().trim();
+                if (symbol1) {
+                    // Jika simbol token custom ada, coba untuk mengambil harga terbaru
+                    $.getJSON("https://www.binance.me/api/v3/ticker/price?symbol=" + symbol1 + "USDT")
+                        .done(function(response) {
+                            // Memperbarui harga custom token
+                            ratePrice.random1 = parseFloat(response.price);
+                            $("#random1price").prop("disabled", false).val(ratePrice.random1.toFixed(8));
+                            toastr.info("Custom token " + symbol1 + " ditemukan dengan harga " + ratePrice.random1 + " USDT.");
+                        })
+                        .fail(function() {
+                            toastr.errorr("Custom token tidak ditemukan.");
+                            ratePrice.random1 = 0;
+                            $("#random1price").prop("disabled", true).val('');
+                        });
+                }
+
+                toastr.info("Harga token telah diperbarui!");
+            });
 
             // Fetch initial rates
             function fetchRates() {
@@ -469,7 +499,7 @@
             $("#cekTokensBtn").on("click", function () {
                 var symbol1 = $("#random1symbol").val().toUpperCase().trim();
                 if (!symbol1) {
-                    alert("Masukkan simbol untuk custom token.");
+                    toastr.errorr("Masukkan simbol untuk custom token.");
                     return;
                 }
 
@@ -477,7 +507,7 @@
                     .done(function (response) {
                         ratePrice.random1 = parseFloat(response.price);
                         $("#random1price").prop("disabled", false).val(ratePrice.random1.toFixed(8));
-                        alert("Custom token ditemukan: " + symbol1 + " dengan harga " + ratePrice.random1 + " USDT");
+                        toastr.info("Custom token ditemukan: " + symbol1 + " dengan harga " + ratePrice.random1 + " USDT");
 
                         // Tambahkan event listener untuk mengubah nilai custom token
                         $("#random1price").on("input", function () {
@@ -485,7 +515,7 @@
                         });
                     })
                     .fail(function () {
-                        alert("Token tidak ditemukan.");
+                        toastr.errorr("Token tidak ditemukan.");
                         ratePrice.random1 = 0;
                         $("#random1price").prop("disabled", true).val('');
                     });
@@ -518,6 +548,36 @@
                             random1: (baseValue / ratePrice.idr) / ratePrice.random1
                         };
                         break;
+                    case "btc":
+                        updatedPrices = {
+                            usdt: baseValue * ratePrice.btc,
+                            idr: baseValue * ratePrice.btc * ratePrice.idr,
+                            btc: baseValue,
+                            eth: baseValue * ratePrice.btc / ratePrice.eth,
+                            bnb: baseValue * ratePrice.btc / ratePrice.bnb,
+                            random1: baseValue * ratePrice.btc / ratePrice.random1
+                        };
+                        break;
+                    case "eth":
+                        updatedPrices = {
+                            usdt: baseValue * ratePrice.eth,
+                            idr: baseValue * ratePrice.eth * ratePrice.idr,
+                            btc: baseValue * ratePrice.eth / ratePrice.btc,
+                            eth: baseValue,
+                            bnb: baseValue * ratePrice.eth / ratePrice.bnb,
+                            random1: baseValue * ratePrice.eth / ratePrice.random1
+                        };
+                        break;
+                    case "bnb":
+                        updatedPrices = {
+                            usdt: baseValue * ratePrice.bnb,
+                            idr: baseValue * ratePrice.bnb * ratePrice.idr,
+                            btc: baseValue * ratePrice.bnb / ratePrice.btc,
+                            eth: baseValue * ratePrice.bnb / ratePrice.eth,
+                            bnb: baseValue,
+                            random1: baseValue * ratePrice.bnb / ratePrice.random1
+                        };
+                        break;
                     // Handle other cases (btc, eth, bnb)
                     case "random1":
                         if (ratePrice.random1 === 0) return;
@@ -544,7 +604,19 @@
                     }
                 });
             }
-
+            // Fungsi untuk memperbarui harga di input
+            function updatePrices(prices, excludeBase) {
+                $.each(prices, function (key, value) {
+                    if (key !== excludeBase) {
+                        // Jika IDR, formatkan dengan pemisah ribuan
+                        if (key === "idr") {
+                            $("#" + key + "price").val(value ? formatIDR(value) : '');
+                        } else {
+                            $("#" + key + "price").val(value ? value.toFixed(8) : '');
+                        }
+                    }
+                });
+            }
             fetchRates();
 
         // END KALKULATOR
