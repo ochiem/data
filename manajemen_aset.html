@@ -460,6 +460,7 @@
                     });
                     ratePrice.idr = parseFloat(indodaxResponse[0].ticker.last);
                 }).fail(function (error) {
+                    console.log("-----------------------");
                     console.log(error);
                 });
             }
@@ -622,7 +623,7 @@
            // toastr.info("Perubahan Data Telah Simpan!");
         });
 
-$('#SaveConfigCEXS').on('click', async function () {
+        $('#SaveConfigCEXS').on('click', async function () {
     let inputKosong = false;
 
     // Hapus class 'input-error' sebelumnya
@@ -664,142 +665,178 @@ $('#SaveConfigCEXS').on('click', async function () {
         checkedExchanges.push(id);
     });
 
-    // Bersihkan nilai tampilan saldo sementara
-    $('#TotalSaldoCEX').text('Loading...');
+    let allChecksPassed = true; // Flag untuk memastikan semua pengecekan berhasil
 
     // Jalankan fungsi pengecekan untuk setiap exchange yang dicentang
     // Tunggu sampai semua pengecekan selesai dengan async/await
     await Promise.all(checkedExchanges.map(async function (exchange) {
-        switch (exchange) {
-            case 'BINANCE':
-                await cekAssetBinance(); // Tunggu hingga selesai
-                break;
-            case 'GATE':
-                await cekAssetGate(); // Tunggu hingga selesai
-                break;
-            case 'BITGET':
-                await cekAssetBitget(); // Tunggu hingga selesai
-                break;
-            case 'KUCOIN':
-                await cekAssetKucoin(); // Tunggu hingga selesai
-                break;
-            case 'BYBIT':
-                await cekAssetBybit(); // Tunggu hingga selesai
-                break;
+        try {
+            switch (exchange) {
+                case 'BINANCE':
+                    await cekAssetBinance(); // Tunggu hingga selesai
+                    break;
+                case 'GATE':
+                    await cekAssetGate(); // Tunggu hingga selesai
+                    break;
+                case 'BITGET':
+                    await cekAssetBitget(); // Tunggu hingga selesai
+                    break;
+                case 'KUCOIN':
+                    await cekAssetKucoin(); // Tunggu hingga selesai
+                    break;
+                case 'BYBIT':
+                    await cekAssetBybit(); // Tunggu hingga selesai
+                    break;
+                default:
+                    break;
+            }
+        } catch (error) {
+            // Jika pengecekan gagal, tampilkan pesan error
+            //toastr.error(`Gagal memeriksa ${exchange}: ${error.message}`);
+            allChecksPassed = false; // Tandai bahwa ada pengecekan yang gagal
+            $('#TotalSaldoCEX').text(`???`);
         }
     }));
 
-    // Setelah semua pengecekan selesai, hitung total saldo
+    // Jika ada pengecekan yang gagal, beri tahu pengguna dan berhenti
+    if (!allChecksPassed) {
+//        toastr.error("Beberapa pengecekan CEX gagal. Periksa kembali koneksi dan API Key.");
+        // Jika pengecekan gagal, tampilkan pesan error
+        return; // Keluar dari fungsi jika ada pengecekan yang gagal
+    }
+
+    // Setelah semua pengecekan selesai dan berhasil, hitung total saldo
     await getTotalSaldoCEXS(); // Panggil setelah semua pengecekan selesai
-
-
+    ShowLabelModal("load");
 });
 
-$('#SaveWalletChains').on('click', async function () {
-    $(this).prop('disabled', true);  // Menonaktifkan tombol selama proses
 
-    $('#LTotalSaldoWallets').text('');
-    $('#TotalSaldoWallets').text('');
+         // Fungsi untuk menghitung total saldo semua CEX
+         function getTotalSaldoCEXS() {
+            let totalSaldo = 0;
 
-    const selectedChains = {
-        ethereum: $('#ETHEREUM').is(':checked') ? $('#ethWallet').val() : null,
-        bsc: $('#BSC').is(':checked') ? $('#bscWallet').val() : null,
-        polygon: $('#POLYGON').is(':checked') ? $('#polygonWallet').val() : null,
-        base: $('#BASE').is(':checked') ? $('#baseWallet').val() : null,
-        arbitrum: $('#ARBITRUM').is(':checked') ? $('#arbitrumWallet').val() : null,
-        solana: $('#SOLANA').is(':checked') ? $('#solanaWallet').val() : null
-    };
+            // Menjumlahkan saldo dari setiap exchange yang diaktifkan
+            $('input[type="checkbox"]:checked').each(function () {
+                const id = $(this).attr('id');
+                const saldoKey = `am_${id}Saldo`;
+                const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
+                totalSaldo += saldo;
+            });
 
-    const invalidChains = Object.keys(selectedChains).filter(chain => 
-        $(`#${chain.toUpperCase()}`).is(':checked') && 
-        (selectedChains[chain] === null || selectedChains[chain].trim() === '')
-    );
-
-    if (invalidChains.length > 0) {
-        $('#output_chain').html(
-            `<tr><td colspan="4" class="uk-text-danger">Wallet Chain ${invalidChains.join(', ')} harus diisi!</td></tr>`
-        );
-        $('#assetTableWallet').show();
-        $(this).prop('disabled', false);  // Mengaktifkan kembali tombol jika ada error
-        return;
-    }
-
-    const validChains = Object.keys(selectedChains).filter(chain => selectedChains[chain]);
-
-    if (validChains.length === 0) {
-        $('#output_chain').html('<tr><td colspan="4">Pilih Min 1 Chain!!</td></tr>');
-        $('#assetTableWallet').show();
-        $(this).prop('disabled', false);
-        return;
-    }
-
-    $('#output_chain').html('<tr><td colspan="4">Loading...</td></tr>');
-    $('#assetTableWallet').show();
-
-    try {
-        const tokenRates = await fetchTokenRates();
-
-        if (!tokenRates || Object.keys(tokenRates).length === 0) {
-            throw new Error('Tidak dapat mengambil data rate token.');
+            // Simpan waktu terakhir diperbarui ke localStorage
+            var formattedTime = getFormattedTime();
+            localStorage.setItem('am_lastUpdateCEX', formattedTime);
+            localStorage.setItem('am_TotalSaldoCEX', totalSaldo);
+            // Tampilkan total saldo
+            $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} $`);
         }
 
-        const results = await Promise.all(validChains.map(chain =>
-            chain === 'solana' ? 
-            getSolanaBalance(selectedChains[chain], tokenRates) :
-            getAssetBalancesEVM(chains[chain], erc20Contracts[chain], selectedChains[chain], chain, tokenRates)
-        ));
+        $('#SaveWalletChains').on('click', async function () {
+            $(this).prop('disabled', true);  // Menonaktifkan tombol selama proses
 
-        $('#output_chain').html(results.map(result => {
-            if (result.error) {
-                return `<tr><td colspan="4">ERROR : ${result.error}</td></tr>`;
-            } else {
-                return `
-                    <tr>
-                        <td><a href="${result.walletLink}" target="_blank">${result.chain.toUpperCase()}</a></td>
-                        <td>${result.assetBalance} ${result.assetSymbol}</td>
-                        <td>${result.gasBalance} ${result.gasSymbol} [${result.gasBalanceInUSD}]</td>
-                        <td>${result.totalBalanceInUSD} USDT</td>
-                    </tr>
-                `;
-            }
-        }).join(''));
+            $('#LTotalSaldoWallets').text('');
+            $('#TotalSaldoWallets').text('');
 
-        // Simpan data ke localStorage setelah semua selesai
-        const assetData = results.filter(result => !result.error).map(result => {
-            return {
-                chain: result.chain,
-                assetBalance: parseFloat(result.assetBalance),
-                assetSymbol: result.assetSymbol,
-                gasBalance: parseFloat(result.gasBalance),
-                gasSymbol: result.gasSymbol,
-                usdtGas: parseFloat(result.gasBalanceInUSD),
-                total: parseFloat(result.totalBalanceInUSD),
-                walletLink: result.walletLink,
+            const selectedChains = {
+                ethereum: $('#ETHEREUM').is(':checked') ? $('#ethWallet').val() : null,
+                bsc: $('#BSC').is(':checked') ? $('#bscWallet').val() : null,
+                polygon: $('#POLYGON').is(':checked') ? $('#polygonWallet').val() : null,
+                base: $('#BASE').is(':checked') ? $('#baseWallet').val() : null,
+                arbitrum: $('#ARBITRUM').is(':checked') ? $('#arbitrumWallet').val() : null,
+                solana: $('#SOLANA').is(':checked') ? $('#solanaWallet').val() : null
             };
-        }).filter(item => item !== null);
 
-        if (assetData.length > 0) {
-            localStorage.setItem('am_assetDataCEX', JSON.stringify(assetData));
+            const invalidChains = Object.keys(selectedChains).filter(chain => 
+                $(`#${chain.toUpperCase()}`).is(':checked') && 
+                (selectedChains[chain] === null || selectedChains[chain].trim() === '')
+            );
 
-            const formattedTime = getFormattedTime();
-            localStorage.setItem('am_lastUpdateChain', formattedTime);
+            if (invalidChains.length > 0) {
+                $('#output_chain').html(
+                    `<tr><td colspan="4" class="uk-text-danger">Wallet Chain ${invalidChains.join(', ')} harus diisi!</td></tr>`
+                );
+                $('#assetTableWallet').show();
+                $(this).prop('disabled', false);  // Mengaktifkan kembali tombol jika ada error
+                return;
+            }
 
-            const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
-            $('#LTotalSaldoWallets').text("Total");
-            $('#TotalSaldoWallets').text(totalUSDT.toFixed(2) + " $");
-            localStorage.setItem('am_TotalSaldoChain', totalUSDT.toFixed(2));
-        } else {
-            throw new Error('Tidak ada data valid untuk disimpan.');
-        }
-    } catch (error) {
-        localStorage.setItem('am_TotalSaldoChain', '0');
-        $('#output_chain').html(
-            `<tr><td colspan="4">ERROR : ${error.message}</td></tr>`
-        );
-    }
+            const validChains = Object.keys(selectedChains).filter(chain => selectedChains[chain]);
 
-    $(this).prop('disabled', false);  // Mengaktifkan kembali tombol setelah selesai
-});
+            if (validChains.length === 0) {
+                $('#output_chain').html('<tr><td colspan="4">Pilih Min 1 Chain!!</td></tr>');
+                $('#assetTableWallet').show();
+                $(this).prop('disabled', false);
+                return;
+            }
+
+            $('#output_chain').html('<tr><td colspan="4">Loading...</td></tr>');
+            $('#assetTableWallet').show();
+
+            try {
+                const tokenRates = await fetchTokenRates();
+
+                if (!tokenRates || Object.keys(tokenRates).length === 0) {
+                    throw new Error('Tidak dapat mengambil data rate token.');
+                }
+
+                const results = await Promise.all(validChains.map(chain =>
+                    chain === 'solana' ? 
+                    getSolanaBalance(selectedChains[chain], tokenRates) :
+                    getAssetBalancesEVM(chains[chain], erc20Contracts[chain], selectedChains[chain], chain, tokenRates)
+                ));
+
+                $('#output_chain').html(results.map(result => {
+                    if (result.error) {
+                        return `<tr><td colspan="4">ERROR : ${result.error}</td></tr>`;
+                    } else {
+                        return `
+                            <tr>
+                                <td><a href="${result.walletLink}" target="_blank">${result.chain.toUpperCase()}</a></td>
+                                <td>${result.assetBalance} ${result.assetSymbol}</td>
+                                <td>${result.gasBalance} ${result.gasSymbol} [${result.gasBalanceInUSD}]</td>
+                                <td>${result.totalBalanceInUSD} USDT</td>
+                            </tr>
+                        `;
+                    }
+                }).join(''));
+
+                // Simpan data ke localStorage setelah semua selesai
+                const assetData = results.filter(result => !result.error).map(result => {
+                    return {
+                        chain: result.chain,
+                        assetBalance: parseFloat(result.assetBalance),
+                        assetSymbol: result.assetSymbol,
+                        gasBalance: parseFloat(result.gasBalance),
+                        gasSymbol: result.gasSymbol,
+                        usdtGas: parseFloat(result.gasBalanceInUSD),
+                        total: parseFloat(result.totalBalanceInUSD),
+                        walletLink: result.walletLink,
+                    };
+                }).filter(item => item !== null);
+
+                if (assetData.length > 0) {
+                    localStorage.setItem('am_assetDataCEX', JSON.stringify(assetData));
+
+                    const formattedTime = getFormattedTime();
+                    localStorage.setItem('am_lastUpdateChain', formattedTime);
+
+                    const totalUSDT = assetData.reduce((sum, data) => sum + data.total, 0);
+                    $('#LTotalSaldoWallets').text("Total");
+                    $('#TotalSaldoWallets').text(totalUSDT.toFixed(2) + " $");
+                    localStorage.setItem('am_TotalSaldoChain', totalUSDT.toFixed(2));
+                } else {
+                    throw new Error('Tidak ada data valid untuk disimpan.');
+                }
+            } catch (error) {
+                localStorage.setItem('am_TotalSaldoChain', '0');
+                $('#output_chain').html(
+                    `<tr><td colspan="4">ERROR : ${error.message}</td></tr>`
+                );
+            }
+            ShowLabelModal("load");
+
+            $(this).prop('disabled', false);  // Mengaktifkan kembali tombol setelah selesai
+        });
 
         // update tabel cex
         function updateTableRowsCEXS() {
@@ -832,27 +869,6 @@ $('#SaveWalletChains').on('click', async function () {
             });
 
             // Memperbarui total saldo di tabel
-            $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} $`);
-        }
-
-        // Fungsi untuk menghitung total saldo semua CEX
-        function getTotalSaldoCEXS() {
-            let totalSaldo = 0;
-
-            // Menjumlahkan saldo dari setiap exchange yang diaktifkan
-            $('input[type="checkbox"]:checked').each(function () {
-                const id = $(this).attr('id');
-                const saldoKey = `am_${id}Saldo`;
-                const saldo = parseFloat(localStorage.getItem(saldoKey)) || 0;
-                totalSaldo += saldo;
-            });
-
-            // Simpan waktu terakhir diperbarui ke localStorage
-            var formattedTime = getFormattedTime();
-            localStorage.setItem('am_lastUpdateCEX', formattedTime);
-            localStorage.setItem('am_TotalSaldoCEX', totalSaldo);
-
-            // Tampilkan total saldo
             $('#TotalSaldoCEX').text(`${totalSaldo.toFixed(2)} $`);
         }
 
@@ -889,6 +905,7 @@ $('#SaveWalletChains').on('click', async function () {
                     var saldo = parseFloat(usdtInfo.free).toFixed(2);
                     $("#BINANCESaldo").text(saldo + " {USDT}");
                     localStorage.setItem('am_BINANCESaldo', saldo);
+                    console.log("-----------------------");
                     console.log("Cek Asset Binance");
                     console.log("SALDO BINANCE: ",saldo);
                     return saldo; // Resolusi dengan saldo yang ditemukan
@@ -941,6 +958,7 @@ $('#SaveWalletChains').on('click', async function () {
                 if (usdtInfo) {
                     $("#GATESaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
                     localStorage.setItem('am_GATESaldo', usdtInfo.available);
+                    console.log("-----------------------");
                     console.log("Cek Asset Gate");
                     console.log("SALDO Gate : ",usdtInfo.available);
                 } else {
@@ -985,6 +1003,7 @@ $('#SaveWalletChains').on('click', async function () {
                 if (usdtInfo) {
                     $("#BITGETSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
                     localStorage.setItem('am_BITGETSaldo', usdtInfo.available);
+                    console.log("-----------------------");
                     console.log("Cek Asset Bitget");
                     console.log("SALDO BITGET: ",usdtInfo.available);
                 } else {
@@ -1032,6 +1051,7 @@ $('#SaveWalletChains').on('click', async function () {
                 if (usdtInfo) {
                     $("#KUCOINSaldo").text(parseFloat(usdtInfo.available).toFixed(2) + " {USDT}");
                     localStorage.setItem('am_KUCOINSaldo', usdtInfo.available);
+                    console.log("-----------------------");
                     console.log("Cek Asset Kucoin");
                     console.log("SALDO KUCOIN",usdtInfo.available);
                 } else {
@@ -1085,6 +1105,7 @@ $('#SaveWalletChains').on('click', async function () {
                 if (usdtInfo) {
                     $("#BYBITSaldo").text(parseFloat(usdtInfo.equity).toFixed(2) + " {USDT}");
                     localStorage.setItem('am_BYBITSaldo', usdtInfo.equity);
+                    console.log("-----------------------");
                     console.log("Cek Asset Bybit");
                     console.log("SALDO BYBIT: ", usdtInfo.equity);
                 } else {
@@ -1098,7 +1119,7 @@ $('#SaveWalletChains').on('click', async function () {
             }
         }
 
-                //fungsi update history PNL
+        //fungsi update history PNL
         $('#UpdateHistoryPNL').on('click', async function () {
             // Memanggil fungsi untuk mengecek saldo assets di wallets (all chain)
             await $('#SaveWalletChains').trigger('click'); 
@@ -1117,7 +1138,7 @@ $('#SaveWalletChains').on('click', async function () {
                 const modalawal = JSON.parse(localStorage.getItem('am_MODALAWAL'));
                 const saldoAkhir = Number(saldoExchanger) + Number(assetDataChain);
                 const pnl = Number(saldoAkhir) - Number(modalawal);
-
+                console.log("-----------------------");
                 console.log("Saldo Exchanger: " + saldoExchanger);
                 console.log("Saldo Chain: " + assetDataChain);
                 console.log("Saldo Awal: " + modalawal);
@@ -1247,79 +1268,62 @@ $('#SaveWalletChains').on('click', async function () {
         }
 
         function ShowLabelModal(method) {
-    // Ambil data dari localStorage
-    const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
-    const saldoAllChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
-    const modalAwal = JSON.parse(localStorage.getItem('am_MODALAWAL')) || 0;
+            // Ambil data dari localStorage
+            const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
+            const saldoAllChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
+            const modalAwal = JSON.parse(localStorage.getItem('am_MODALAWAL')) || 0;
 
-    let saldoAkhir = 0;
-    let pnl = 0;
+            let saldoAkhir = 0;
+            let pnl = 0;
 
-    // Logika berdasarkan method
-    if (method === 'check') {
-        // Jika method adalah 'check'
-        saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir adalah saldo exchanger + saldo chain
-        pnl = modalAwal-saldoAkhir;  // PNL adalah modal awal dikurangi saldo akhir
-    }else if (method==="load") {
-        // Jika method adalah 'check'
-        saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir adalah saldo exchanger + saldo chain
-        pnl = saldoAkhir - modalAwal;  // PNL adalah modal awal dikurangi saldo akhir
-    }else if (method === 'reset' || method === 'start') {
-        // Jika method adalah 'reset' atau 'start'
-        saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir diset 0
-        pnl = 0;  // PNL diset 0
-    }
-    
-    // Tampilkan hasil modal awal, akhir, dan pnl setelah selesai
-    $('#m_awal').text(Number(modalAwal).toFixed(2) + ' USDT');
-    $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
-    $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
+            // Logika berdasarkan method
+            if (method === 'check') {
+                // Jika method adalah 'check'
+                saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir adalah saldo exchanger + saldo chain
+                pnl = modalAwal-saldoAkhir;  // PNL adalah modal awal dikurangi saldo akhir
+            }else if (method==="load") {
+                // Jika method adalah 'check'
+                saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir adalah saldo exchanger + saldo chain
+                pnl = saldoAkhir - modalAwal;  // PNL adalah modal awal dikurangi saldo akhir
+            }else if (method === 'reset' || method === 'start') {
+                // Jika method adalah 'reset' atau 'start'
+                saldoAkhir = saldoExchanger + saldoAllChain;  // Saldo akhir diset 0
+                pnl = 0;  // PNL diset 0
+            }
+            
+            // Tampilkan hasil modal awal, akhir, dan pnl setelah selesai
+            $('#m_awal').text(Number(modalAwal).toFixed(2) + ' USDT');
+            $('#m_akhir').text(saldoAkhir.toFixed(2) + ' USDT');
+            $('#m_pnl').text(pnl.toFixed(2) + ' USDT');
 
-    // Debugging: Log data untuk memastikan semuanya benar
-    console.log("-----------------------");
-    console.log("Method: " + method);
-    console.log("-----------------------");
-    console.log("Saldo Exchanger: " + saldoExchanger);
-    console.log("Saldo Chain: " + saldoAllChain);
-    console.log("Saldo Awal: " + modalAwal);
-    console.log("Saldo Akhir: " + saldoAkhir);
-    console.log("PNL: " + pnl);
-    console.log("-----------------------");
-}
+            // Debugging: Log data untuk memastikan semuanya benar
+            console.log("-----------------------");
+            console.log("Method: " + method);
+            console.log("-----------------------");
+            console.log("Saldo Exchanger: " + saldoExchanger);
+            console.log("Saldo Chain: " + saldoAllChain);
+            console.log("Saldo Awal: " + modalAwal);
+            console.log("Saldo Akhir: " + saldoAkhir);
+            console.log("PNL: " + pnl);
+            console.log("-----------------------");
+        }
 
         $('#CheckModal').on('click', async function () {
-    // Menampilkan loading state pada modal sebelum proses dimulai
-    $('#m_awal').text('...');
-    $('#m_akhir').text('...');
-    $('#m_pnl').text('...');
-    
-    // Memanggil fungsi untuk memuat history (dapat berjalan bersamaan dengan pengecekan saldo)
-    LoadTableHistory(); 
+            LoadTableHistory(); 
 
-    // Menunggu hingga kedua proses pengecekan selesai
-    await Promise.all([
-        new Promise((resolve) => {
-            $('#SaveWalletChains').one('click', resolve);  // Menunggu hingga #SaveWalletChains selesai
-            $('#SaveWalletChains').trigger('click'); // Proses pengecekan wallet chains
-        }),
-        new Promise((resolve) => {
-            $('#SaveConfigCEXS').one('click', resolve);  // Menunggu hingga #SaveConfigCEXS selesai
-            $('#SaveConfigCEXS').trigger('click'); // Proses pengecekan CEX
-        })
-    ]);
-
-    // Setelah selesai, ambil data dari localStorage
-    const saldoExchanger = JSON.parse(localStorage.getItem('am_TotalSaldoCEX')) || 0;
-    const saldoAllChain = JSON.parse(localStorage.getItem('am_TotalSaldoChain')) || 0;
-    const modalAwal = JSON.parse(localStorage.getItem('am_MODALAWAL')) || 0;
-
-    // Hitung saldo akhir dan PNL (Profit and Loss)
-    const saldoAkhir = Number(saldoExchanger) + Number(saldoAllChain);
-    const pnl = saldoAkhir - Number(modalAwal);
-
-    ShowLabelModal("check");    
-    loadData();
-});
+            // Menunggu hingga kedua proses pengecekan selesai
+            await Promise.all([
+                new Promise((resolve) => {
+                    $('#SaveWalletChains').one('click', resolve);  // Menunggu hingga #SaveWalletChains selesai
+                    $('#SaveWalletChains').trigger('click'); // Proses pengecekan wallet chains
+                }),
+                new Promise((resolve) => {
+                    $('#SaveConfigCEXS').one('click', resolve);  // Menunggu hingga #SaveConfigCEXS selesai
+                    $('#SaveConfigCEXS').trigger('click'); // Proses pengecekan CEX
+                })
+            ]);
+            ShowLabelModal("check");    
+        });
 
         // Fungsi untuk memuat data dari localStorage saat halaman di-refresh
         function 
@@ -1348,9 +1352,11 @@ $('#SaveWalletChains').on('click', async function () {
             // Mengonversi nilai USDT ke IDR dan menampilkannya
             USDTIDR(modalAwal).then((idrusdt) => {
                 $("#RPMODAL").text("RP. " + parseFloat(idrusdt).toLocaleString("id-ID")); // Format ke format IDR
+                console.log("-----------------------");
                 console.log("Modal Awal USDT: " + modalAwal);
                 console.log("Modal Awal USDT ke IDR: " + idrusdt);
             }).catch((error) => {
+                console.log("-----------------------");
                 console.log("Terjadi kesalahan saat konversi Modal Awal :", error);
             });
 
@@ -1561,17 +1567,9 @@ $('#SaveWalletChains').on('click', async function () {
                     totalBalanceInUSD,
                     walletLink: `https://solscan.io/account/${walletAddress}`,
                 };
-                /* 
-                    chain: bsc,
-                    assetBalance: 100,
-                    assetSymbol: usdt 
-                    gasBalance: 0.1,
-                    gasSymbol: bnb,  
-                    usdtGas: parseFloat(result.gasBalanceInUSD),  // Rate gas USD (USDT)
-                    total: parseFloat(result.totalBalanceInUSD),
-                    
-                */
+                
             } catch (error) {
+                console.log("-----------------------");
                 console.log("Error:", error);  // Log error untuk debugging
                 return { error: error.message };  // Mengembalikan objek dengan pesan error
             }
@@ -1601,6 +1599,7 @@ $('#SaveWalletChains').on('click', async function () {
 
                 return rates;
             } catch (error) {
+                console.log("-----------------------");
                 console.error('Error fetching token rates:', error);
                 return {
                     BTC: 0,
@@ -1619,6 +1618,7 @@ $('#SaveWalletChains').on('click', async function () {
                     success: function (response) {
                         var USDTRate = parseFloat(response.price); // Mendapatkan harga terkini dari API
                         localStorage.setItem('am_USDTRate', USDTRate); // Menyimpan harga terkini ke localStorage
+                        console.log("-----------------------");
                         console.log("Latest Rate Price USDTRate:", USDTRate);
 
                         // Konversi dari USDT ke IDR
@@ -1628,6 +1628,7 @@ $('#SaveWalletChains').on('click', async function () {
                         resolve(idrusdt); // Mengembalikan nilai IDR
                     },
                     error: function (xhr, status, error) {
+                        console.log("-----------------------");
                         console.log("Error get Price Rate USDTRate:", error);
                         reject(error); // Menangani error jika API gagal
                     }
