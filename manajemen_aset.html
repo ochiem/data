@@ -21,7 +21,7 @@
      .uk-container {
             width: 96%;
             max-width: none;
-            font-size: small;
+            font-size: smaller;
         }
        
     table#assetTableWallet thead.chain-header th {
@@ -161,6 +161,17 @@
                     <input type="text" class="form-control" id="secretkeyBYBIT" placeholder="SECRET KEY BYBIT" value="" required />
                 </div>
 
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" class="uk-checkbox" id="MEXC" />&nbsp;
+                            <label class="form-check-label" for="MEXC">MEXC</label>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" id="apikeyMEXC" placeholder="API KEY MEXC" value="" required />
+                    <input type="text" class="form-control" id="secretkeyMEXC" placeholder="SECRET KEY MEXC" value="" required />
+                </div>
+
                 <div class="uk-flex uk-flex-right">
                      <button class="uk-button uk-button-small uk-button-primary" id="SaveConfigCEXS">CHECK EXCHANGER</button>
                 </div>
@@ -291,7 +302,10 @@
                         <td class="uk-text-secondary">BYBIT</td>
                         <td id="BYBITSaldo" class="uk-text-center"> xxx {USDT}</td>
                     </tr>
-                    
+                    <tr>
+                        <td class="uk-text-secondary">MEXC</td>
+                        <td id="MEXCSaldo" class="uk-text-center"> xxx {USDT}</td>
+                    </tr>
                     <tbody id="output_cex"></tbody>
                     <tr>
                         <th style="padding:10px 0px; text-align: center; font-size: larger; font-weight: bolder; color: #063ffc" id="LTotalSaldoCEX">TOTAL</th>
@@ -756,6 +770,9 @@
                 case 'KUCOIN':
                     await cekAssetKucoin(); // Tunggu hingga selesai
                     break;
+                case 'MEXC':
+                    await cekAssetMexc(); // Tunggu hingga selesai
+                    break;
                 case 'BYBIT':
                     await cekAssetBybit(); // Tunggu hingga selesai
                     break;
@@ -1190,6 +1207,54 @@
             toastr.error("Error Pengecekan Market Bybit: ", error);
             }
         }
+        
+        async function cekAssetMexc() {
+    var apiKey = $("#apikeyMEXC").val();
+    var apiSecret = $("#secretkeyMEXC").val();
+    var recvWindow = 5000;
+    var timestamp = Date.now().toString();
+    var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.mexc.com/api/v3/account";
+    var queryString = `recvWindow=${recvWindow}&timestamp=${timestamp}`;
+    var signature = CryptoJS.HmacSHA256(queryString, apiSecret).toString(CryptoJS.enc.Hex);
+
+    var headers = {
+        "X-MEXC-APIKEY": apiKey,
+        "Content-Type": "application/json"
+    };
+
+    var fullUrl = `${apiUrl}?${queryString}&signature=${signature}`;
+
+    try {
+        $("#MEXCSaldo").text("Loading...");
+        const response = await fetch(fullUrl, {
+            method: "GET",
+            headers: headers
+        });
+
+        const data = await response.json();
+        if (data && data.balances) {
+            const usdtInfo = data.balances.find(balance => balance.asset === "USDT");
+
+            if (usdtInfo) {
+                $("#MEXCSaldo").text(parseFloat(usdtInfo.free).toFixed(2) + " USDT");
+                localStorage.setItem('am_MEXCSaldo', usdtInfo.free);
+                console.log("-----------------------");
+                console.log("Cek Asset MEXC");
+                console.log("SALDO MEXC:", usdtInfo.free);
+            } else {
+                $("#MEXCSaldo").text("USDT Tidak Ditemukan").addClass("error");
+                localStorage.setItem('am_MEXCSaldo', 0);
+            }
+        } else {
+            $("#MEXCSaldo").text("Tidak Ada Data").addClass("error");
+            localStorage.setItem('am_MEXCSaldo', 0);
+        }
+    } catch (error) {
+        $("#MEXCSaldo").text("ERROR").addClass("error");
+        localStorage.setItem('am_MEXCSaldo', 0);
+        toastr.error("Error Pengecekan Market MEXC: ", error.message);
+    }
+}
 
         //fungsi update history PNL
         $('#UpdateHistoryPNL').on('click', async function () {
@@ -1499,7 +1564,7 @@
             }
         
             // Memuat saldo excanger dari localStorage dan menampilkannya di tabel
-            const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT'];
+            const exchanges = ['BINANCE', 'GATE', 'BITGET', 'KUCOIN', 'BYBIT','MEXC'];
                 let totalSaldo = 0;
 
                 exchanges.forEach(exchange => {
