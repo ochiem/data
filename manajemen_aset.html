@@ -970,7 +970,7 @@
                 return Promise.reject("API Key or Secret is missing.");
             }
 
-            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.binance.com/api/v3/account";
+            var apiUrl = "https://api.binance.com/api/v3/account";
             var timestamp = new Date().getTime();
             var signature = CryptoJS.HmacSHA256("timestamp=" + timestamp, apiSecret).toString(CryptoJS.enc.Hex);
             var headers = { "X-MBX-APIKEY": apiKey };
