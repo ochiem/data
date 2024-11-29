@@ -1,0 +1,946 @@
+{
+  "serverCORS": [
+    "https://server1.ciwayeh967.workers.dev/?",
+    "https://yazid3.yazidcrypto7.workers.dev/?",
+    "https://yazid5.bustomi.workers.dev/?",
+    "https://yazid4.yazidcrypto3.workers.dev/?",
+    "https://yoeazd2.yoeaz2324.workers.dev/?",
+    "https://server6.hejij49077.workers.dev/?",
+    "https://server7.gejac16482.workers.dev/?",
+    "https://server8.xotolo5853.workers.dev/?",
+    "https://server9.dopacer193.workers.dev/?",
+    "https://server10.samoker104.workers.dev/?",
+    "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+    "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
+    "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+    "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+    "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+    "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+    "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+    "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+    "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+    "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+    "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+    "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+    "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+    "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+    "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
+    "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+    "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+    "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
+    "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
+    "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
+    "https://server4.dajom23364.workers.dev/?",
+    "https://server3.hopevap663.workers.dev/?",
+    "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+    "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+    "https://myserver4.lamowa2709.workers.dev/?",
+    "https://myserver5.mohafe9330.workers.dev/?",
+    "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+    "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+    "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+    "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+    "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+    "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+    "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+    "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+    "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+    "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+    "https://server2.holabaj699.workers.dev/?",
+    "https://myserver3.ceteg74201.workers.dev/?",
+    "https://1.iiknrbtxoz.workers.dev/?",
+    "https://2.5iz3h20guj.workers.dev/?",
+    "https://3.g5l3krmasa-bda.workers.dev/?",
+    "https://4.7gggrv7tyo.workers.dev/?",
+    "https://5.1mynz671ti.workers.dev/?",
+    "https://6.6dn6rtqjng.workers.dev/?",
+    "https://7.zk3dvkv4pp.workers.dev/?",
+    "https://8.c58qvb11ew.workers.dev/?",
+    "https://9.n9zkqpbdpb.workers.dev/?",
+    "https://10.tximoyq5se.workers.dev/?",
+    "https://server11.jiser33752.workers.dev/?",
+    "https://server12.yitijex843.workers.dev/?",
+    "https://server13.lovah68689.workers.dev/?",
+    "https://server14.setopit195.workers.dev/?",
+    "https://server15.povaf41444.workers.dev/?",
+    "https://server16.niromaf426.workers.dev/?",
+    "https://server17.kasoda9624.workers.dev/?",
+    "https://server18.befim19137.workers.dev/?",
+    "https://server19.gafigaf751.workers.dev/?",
+    "https://server20.gayomep515.workers.dev/?",
+    "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+    "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+    "https://myserver3.ceteg74201.workers.dev/?"    ,
+    "https://server21.becibov328.workers.dev/?",
+    "https://server22.togid93865.workers.dev/?",
+    "https://server24.yaleve6056.workers.dev/?",
+    "https://server23.bagotof270.workers.dev/?",
+    "https://new1.gisot33558.workers.dev/?",
+    "https://new2.sober27867.workers.dev/?",
+    "https://new3.micipiy438.workers.dev/?",
+    "https://new3.rayepar467.workers.dev/?",
+    "https://new4.xebidi4752.workers.dev/?",
+    "https://new5.cibiyec145.workers.dev/?",
+    "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+    "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+    "https://new5.nafeyis928.workers.dev/?",
+    "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+    "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+    "https://cors.gemul-putra.workers.dev/?",
+    "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+    "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+    "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+    "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+    "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+    "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+    "https://myserver6.bafayi9378.workers.dev/?",
+    "https://myserver7.yiwaj21571.workers.dev/?",
+    "https://myserver7.yiwaj21571.workers.dev/?",
+    "https://myserver5.mohafe9330.workers.dev/?",
+    "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?"
+  ],
+  "telegram": {
+    "token": "7857099769:AAH6_LuLj7wU8n1WSvD81Z0tIWy3_9K4Q60",
+    "id_grup": "-1002079288809"
+  },
+"token":
+[
+  {
+    "cex": "BITGET",
+    "symbol": "3ULL",
+    "sc": "0xa77e70d0af1ac7ff86726740db1bd065c3566937",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AKITAX",
+    "sc": "0xe06fba763c2104db5027f57f6a5be0a0d86308af",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ARROW",
+    "sc": "0x5c5e384Bd4e36724B2562cCAA582aFd125277C9B",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "AVALOX",
+    "sc": "0x1209810df5370f68b28e6832dc4ac80072e2d0b8",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AVALOX",
+    "sc": "0x1209810df5370F68B28E6832dC4aC80072E2d0B8",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AVXT",
+    "sc": "0x397bBd6A0E41bdF4C3F971731E180Db8Ad06eBc1",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "AXL",
+    "sc": "0x44c784266cf024a60e8acf2427b9857ace194c5d",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "BENQI",
+    "sc": "0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BLS",
+    "sc": "0x46B9144771Cb3195D66e4EDA643a7493fADCAF9D",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "BLS",
+    "sc": "0x46b9144771cb3195d66e4eda643a7493fadcaf9d",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "BLS",
+    "sc": "0x46B9144771Cb3195D66e4EDA643a7493fADCAF9D",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "BSGG",
+    "sc": "0x63682bdc5f875e9bf69e201550658492c9763f89",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "BUSD",
+    "sc": "0x9c9e5fd8bbc25984b178fdce6117defa39d2db39",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "CHRO",
+    "sc": "0xbf1230bb63bfD7F5D628AB7B543Bcefa8a24B81B",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "CLY",
+    "sc": "0xec3492a2508ddf4fdc0cd76f31f340b30d1793e6",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "COQ",
+    "sc": "0x420fca0121dc28039145009570975747295f2329",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "COQ",
+    "sc": "0x420fca0121dc28039145009570975747295f2329",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "COQ",
+    "sc": "0x420fca0121dc28039145009570975747295f2329",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "COQ",
+    "sc": "0x420FcA0121DC28039145009570975747295f2329",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "CRA",
+    "sc": "0xA32608e873F9DdEF944B24798db69d80Bbb4d1ed",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "CRAFT",
+    "sc": "0x8ae8be25c23833e0a01aa200403e826f611f9cd2",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "CRAFT",
+    "sc": "0x8ae8be25c23833e0a01aa200403e826f611f9cd2",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "DBY",
+    "sc": "0x5085434227aB73151fAd2DE546210Cbc8663dF96",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "DEG",
+    "sc": "0x9f285507Ea5B4F33822CA7aBb5EC8953ce37A645",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ELK",
+    "sc": "0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FITFI",
+    "sc": "0x714f020c54cc9d104b6f4f6998c63ce2a31d1888",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "FITFI",
+    "sc": "0x714f020c54cc9d104b6f4f6998c63ce2a31d1888",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "FITFI",
+    "sc": "0x714f020c54cc9d104b6f4f6998c63ce2a31d1888",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "FITFI",
+    "sc": "0x714f020C54cc9D104B6F4f6998C63ce2a31D1888",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "FLUUS",
+    "sc": "0xDBabd6c54D43361E457A06D677341049AC23EFac",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GAU",
+    "sc": "0xCa8EBfB8e1460Aaac7c272CB9053B3D42412AAc2",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "GEC",
+    "sc": "0xE8385CECb013561b69bEb63FF59f4d10734881f3",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "GEC",
+    "sc": "0xe8385cecb013561b69beb63ff59f4d10734881f3",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GECKOAVAX",
+    "sc": "0xE8385CECb013561b69bEb63FF59f4d10734881f3",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "GMX",
+    "sc": "0x62edc0692bd897d2295872a9ffcac5425011c661",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "GMX",
+    "sc": "0x62edc0692bd897d2295872a9ffcac5425011c661",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "HCT",
+    "sc": "0x45C13620B55C35A5f539d26E88247011Eb10fDbd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "HCT",
+    "sc": "0x45C13620B55C35A5f539d26E88247011Eb10fDbd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ICPX",
+    "sc": "0xd78d3D08053130A3b4466e15D8fc2a61a3DeE47d",
+    "desimal": 3,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "IME",
+    "sc": "0xf891214fdcf9cdaa5fdc42369ee4f27f226adad6",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ISA",
+    "sc": "0x3EeFb18003D033661f84e48360eBeCD181A84709",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "JNS",
+    "sc": "0x7A023A408F51c23760Eb31190fc731bc12B52954",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "JOE",
+    "sc": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "JOE",
+    "sc": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "OKX",
+    "symbol": "JOE",
+    "sc": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "JOE",
+    "sc": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "JOE",
+    "sc": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "JUC",
+    "sc": "0xd5d053d5b769383e860d1520da7a908e00919f36",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "KIDEN",
+    "sc": "0xCc5c80B4ecEF7E6561Bb4721d8AC3E80B4503a96",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "KLO",
+    "sc": "0xb27c8941a7Df8958A1778c0259f76D1F8B711C35",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "KOAVA",
+    "sc": "0x2905106e44B72C1a0d29735fCaAA19280e59436d",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "LOST",
+    "sc": "0x449674B82F05d498E126Dd6615a1057A9c088f2C",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "NAI",
+    "sc": "0x5Ac34C53A04B9aaA0BF047e7291fb4e8A48f2A18",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "NHCT",
+    "sc": "0x3ce2fcec09879af073b53bef5f4d04327a1bc032",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "NHCT",
+    "sc": "0x3CE2fceC09879af073B53beF5f4D04327a1bC032",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "OBX",
+    "sc": "0xcCf719c44e2C36E919335692E89d22Cf13D6aaEB",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ORNG",
+    "sc": "0x6c14c1898C843FF66cA51e87244690bBc28DF215",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PERA",
+    "sc": "0xfDA866CFEcE71F4C17b4a5e5f9A00ac08C72Eadc",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PNG",
+    "sc": "0x60781c2586d68229fde47564546784ab3faca982",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PNG",
+    "sc": "0x60781c2586d68229fde47564546784ab3faca982",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PNIC",
+    "sc": "0x4f3c5C53279536fFcfe8bCafb78E612E933D53c6",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PTP",
+    "sc": "0x22d4002028f537599be9f666d1c4fa138522f9c8",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PXP",
+    "sc": "0x15FA5d3DBD11a831b72B92C1705BC9F801E233CB",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "QI",
+    "sc": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "QI",
+    "sc": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "QUILL",
+    "sc": "0xf3e5914ca1f678e0a3a38031b5514682e3450919",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ROCO",
+    "sc": "0xb2a85C5ECea99187A977aC34303b80AcbDdFa208",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ROCO",
+    "sc": "0xb2a85C5ECea99187A977aC34303b80AcbDdFa208",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "RUX",
+    "sc": "0xA1AfCC973d44cE1C65a21D9e644CB82489d26503",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SECOND",
+    "sc": "0x7979871595b80433183950Ab6c6457752B585805",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "SHRAP",
+    "sc": "0xd402298a793948698b9a63311404fbbee944eafd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "SHRAP",
+    "sc": "0xd402298a793948698b9a63311404fbbee944eafd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "STG",
+    "sc": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "STL",
+    "sc": "0x66B071A55b7c258c2086527e35EE355771aA05B8",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "SYN",
+    "sc": "0x1f1e7c893855525b303f99bdf5c3c05be09ca251",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SYN",
+    "sc": "0x1f1E7c893855525b303f99bDF5c3c05Be09ca251",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "TD",
+    "sc": "0x87bbFc9DCB66Caa8ce7582A3F17B60a25cd8A248",
+    "desimal": 9,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "TECH",
+    "sc": "0x5Ac04b69bDE6f67C0bd5D6bA6fD5D816548b066a",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VEE",
+    "sc": "0x3709E8615E02C15B096f8a9B460ccb8cA8194e86",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "VEE",
+    "sc": "0x3709e8615e02c15b096f8a9b460ccb8ca8194e86",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "VRYNT",
+    "sc": "0xE457c5Fe85d0563B2CA389354Da307516a8EDD87",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VSO",
+    "sc": "0x846D50248BAf8b7ceAA9d9B53BFd12d7D7FBB25a",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "WOLF",
+    "sc": "0x4f94b8aef08c92fefe416af073f1df1e284438ec",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "WTR",
+    "sc": "0xd05B010eDDB2Dc65d5Bd5a1389330D475049A4d5",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "XAVA",
+    "sc": "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "XAVA",
+    "sc": "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "XAVA",
+    "sc": "0xd1c3f94DE7e5B45fa4eDBBA472491a9f4B166FC4",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "XETA",
+    "sc": "0x31c994ac062c1970c086260bc61babb708643fac",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "XETA",
+    "sc": "0x31c994ac062c1970c086260bc61babb708643fac",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "XETA",
+    "sc": "0x31c994AC062C1970C086260Bc61babB708643fAc",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "YTS",
+    "sc": "0x488F73cddDA1DE3664775fFd91623637383D6404",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "ZRO",
+    "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "ZRO",
+    "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "desimal": 18,
+    "cmcID": "#",
+    "status": true,
+    "pairdex": "USDT"
+  }
+]
+}
