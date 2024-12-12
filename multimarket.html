@@ -325,52 +325,53 @@
                     </b>   
                 </div>
 
-                <div class="uk-grid-small uk-child-width-auto uk-flex-center" uk-grid style="background-color: aliceblue; ">
-                    <!-- Kolom Kiri -->
-                    <div style="margin-right:40px;">
-                        <!-- Bagian Server dan CEX -->
-                        <div>
-                            <span id="cex">
-                                <label class="uk-form-label uk-text-secondary"><b>CEX:</b></label>
-                                <b>
-                                    <label class="uk-form-label uk-text-success" id="cex-checkbox-container"></label>
-                                </b>
-                            </span>
+                <div class="uk-container">
+                    <div class="uk-grid-small uk-child-width-auto uk-flex-center uk-width-1-1" uk-grid style="margin-top: 6px;">
+                        <!-- Kolom Kiri -->
+                        <div style="margin-right:40px;">
+                            <!-- Bagian Server dan CEX -->
+                            <div>
+                                <span id="cex">
+                                    <label class="uk-form-label uk-text-secondary"><b>CEX:</b></label>
+                                    <b>
+                                        <label class="uk-form-label uk-text-success" id="cex-checkbox-container"></label>
+                                    </b>
+                                </span>
+                            </div>
+                            <!-- Kontainer untuk checkbox DEX -->
+                            <div>
+                                <span id="dex">
+                                    <b>
+                                        <label class="uk-form-label uk-text-secondary">DEX:</label>
+                                        <label class="uk-form-label uk-text-danger" id="dex-checkbox-container"></label>
+                                    </b>
+                                </span>
+                            </div>
                         </div>
-                        <!-- Kontainer untuk checkbox DEX -->
-                        <div>
-                            <span id="dex">
-                                <b>
-                                    <label class="uk-form-label uk-text-secondary">DEX:</label>
-                                    <label class="uk-form-label uk-text-danger" id="dex-checkbox-container"></label>
-                                </b>
-                            </span>
-                        </div>
-                    </div>
                 
-                    <!-- Kolom Kanan -->
-                    <div >
-                        <!-- Bagian DEX PAIR -->
+                        <!-- Kolom Kanan -->
                         <div>
-                            <span id="dexpair">
-                                <b>
-                                    <label class="uk-form-label uk-text-secondary">
-                                        DEX PAIR 
-                                        (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):
-                                    </label>
-                                    <label class="uk-form-label uk-text-primary" id="dexpair-checkbox-container"></label>
-                                </b>
-                                <b>
-                                    <input type="checkbox" id="Cautorun" /> 
-                                    <span class="uk-form-label uk-text-danger uk-text-small" id="autorun">AUTO</span>
-                                </b>
-                                <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
-                                <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START</button>
-                            </span>
+                            <!-- Bagian DEX PAIR -->
+                            <div>
+                                <span id="dexpair">
+                                    <b>
+                                        <label class="uk-form-label uk-text-secondary">
+                                            DEX PAIR 
+                                            (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):
+                                        </label>
+                                        <label class="uk-form-label uk-text-primary" id="dexpair-checkbox-container"></label>
+                                    </b>
+                                    <b>
+                                        <input type="checkbox" id="Cautorun" /> 
+                                        <span class="uk-form-label uk-text-danger uk-text-small" id="autorun">AUTO</span>
+                                    </b>
+                                    <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
+                                    <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START</button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                             
 
                 <!-- Bagian Sinyal DEX -->
                 <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container" style="margin-top:10px; background-color: #fdfff2; padding-left: 10px;">
