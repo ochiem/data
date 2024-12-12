@@ -15,7 +15,7 @@
     <link rel="icon" id="favicon" href="https://static.thenounproject.com/png/207492-512.png">
     <script src="config.js"></script>
 <style>
-        .sinyal-item {
+    .sinyal-item {
         padding: 3px 0; /* Tambahkan padding atas dan bawah */
         border-bottom: 1px solid #ddd; /* Menambahkan garis bawah */
     }
@@ -64,14 +64,16 @@
         background-color:#ffffff!important;
       }
       .error{
-        color: #353030;
+        color: #fafafa!important;
         background-color: #f39999!important;
       }
       .swoop{
-        background-color: #dfd2f7!important;
+        color:  rgb(247, 6, 6) !important;;
+        background-color: #e0d1fd!important;
       }
       .rango{
-        background-color: #fbf8c5!important;
+        color:  rgb(247, 6, 6) !important;;
+        background-color: #d1e0f5!important;
       }
         .uk-container {
             width: 96%;
@@ -89,7 +91,6 @@
         .sticky-header th {  
             background-color: #bfcdf6;
             font-weight: bold;
-            font-size: large;
             text-align: center;
             font-size: 14px;
             height: 17px;
@@ -168,11 +169,7 @@
             border-radius: 4px; /* Tambahkan border radius agar tampilan lebih halus */
             padding: 5px; /* Tambahkan padding agar lebih mencolok */
         }
-        .bagian{
-            margin: 0px 25px 0px 0px;
-            padding: 2px;
-            background-color: #e7f7ff;
-        }
+       
 
 </style>
 
@@ -184,7 +181,8 @@
             <span id="chain-links-container"></span> 
             &nbsp;&nbsp;
             <span class="uk-text uk-text-secondary">
-                <label id="namachain"></label> :: MULTIMARKET 
+                 MULTIMARKET ::
+                <label id="namachain"></label> 
             </span>
             
             <span class="uk-margin-small-left icon-container">
@@ -242,9 +240,9 @@
                                         </div>
                                        <div>
                                             <label for="SPEEDSCAN" class="uk-text-danger">SPEED SCAN</label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="waktu-tunggu"> MEDIUM </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" checkbox name="waktu-tunggu"> FAST </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2" name="waktu-tunggu"> VERY FAST </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="waktu-tunggu"> NORMAL </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" checkbox name="waktu-tunggu"> MEDIUM </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2" name="waktu-tunggu"> FAST </label>
                                         </div>
                                    </div>
                                 <div>
@@ -292,7 +290,7 @@
         <form>
             <div class="uk-margin">
                 <!-- Informasi Setup -->
-                 <label style="text-align: center;">
+                 <div class="uk-text-center " style="background-color: #eafff2; margin: 5px;">
                     <b>
                         <label class="uk-form-label uk-text-secondary"> INFO PAIR : [ <label class="uk-form-label uk-text-primary" id="JmlKoin"></label> ] </label> &nbsp;
                         [
@@ -302,7 +300,7 @@
                             <label class="uk-form-label uk-text-warning" id="LGwei"></label>
                         ] &nbsp;
 
-                        <label class="uk-form-label uk-text-secondary" id="infojeda">
+                        <!-- <label class="uk-form-label uk-text-secondary" id="infojeda">
                             [SPEED#JEDA :
                             <label class="uk-form-label uk-text-secondary">
                                 <label class="uk-form-label uk-text-success" id="Lwaktu-tunggu"></label> 
@@ -311,13 +309,9 @@
                                 <label class="uk-text uk-text-success" id="waktu">...</label>
                             </label>
                             ]  &nbsp;
-                        </label> 
+                        </label>  -->
 
                         <label class="uk-form-label uk-text-secondary">
-                         <!-- [ UPDATE WALLET :  
-                               <label id="lastUpdateTime" class="uk-text uk-text-primary uk-text-small" ></label>
-                               UPDATE WALLET
-                          ]  -->
                          [ UPDATE WALLET : <label id="lastUpdateContainer" class="uk-text uk-text-primary uk-text-small" >
                             <span id="lastUpdateTime"></span>
                           </label>                             
@@ -340,58 +334,63 @@
                                 </label>  
                         </label>
                     </b>   
-                </label>
-                <br/>
-                <!-- Separator Line dengan Margin -->
-                <hr style="margin-top: 10px; margin-bottom: 5px;" />
-
-                <!-- Grid Layout yang Responsif dengan Kolom Dinamis -->
-                <div class="uk-grid uk-child-width-expand@s uk-grid-medium" id="pilihan" >
-    
-                    <!-- Kolom 2: Bagian Server dan CEX -->
-                    <div class="uk-width-auto@m">
-                        <span id="cex">
-                            <label class="uk-form-label uk-text-secondary"><b>CEX :</b></label>
-                            <b>
-                                <label class="uk-form-label uk-text-secondary" id="cex-checkbox-container"></label>
-                            </b>
-                        </span>    
-                    </div>
-                    <!-- Kontainer untuk checkbox DEX -->
-                    <div class="uk-width-auto@m">
-                        <span id="dex">
-                            <b>
-                                <label class="uk-form-label uk-text-secondary">DEX :</label>
-                                <label class="uk-form-label uk-text-warning" id="dex-checkbox-container"></label>
-                            </b>
-                        </span>
-                    </div>
-
-                    <!-- Kolom 4 DEX PAIR -->
-                    <div class="uk-width-auto@m">                       
-                        <span id="dexpair">
-                            <b>
-                                <label class="uk-form-label uk-text-danger">DEX PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):</label>
-                                <label class="uk-form-label uk-text-danger" id="dexpair-checkbox-container"></label>
-                            </b> 
-                            <b>
-                                <input type="checkbox" id="Cautorun" /> 
-                                <span class="uk-form-label uk-text-warning uk-text-small" id="autorun"> AUTO</span>
-                            </b>
-                            <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
-                            <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START </button>
-                        </span>  
-                    </div>
                 </div>
 
+                <div>
+                    <div class="uk-text-center uk-grid">
+                        <!-- Kolom Kiri -->
+                        <div class="uk-width-1-2@m">
+                            <!-- Bagian Server dan CEX -->
+                            <div style=" background-color: aliceblue; align-content:center;">
+                                <span id="cex">
+                                    <label class="uk-form-label uk-text-secondary"><b>CEX :</b></label>
+                                    <b>
+                                        <label class="uk-form-label uk-text-secondary" id="cex-checkbox-container"></label>
+                                    </b>
+                                </span>
+                            </div>
+                            <!-- Kontainer untuk checkbox DEX -->
+                            <div style=" background-color: aliceblue; align-content:center;">
+                                <span id="dex">
+                                    <b>
+                                        <label class="uk-form-label uk-text-secondary">DEX :</label>
+                                        <label class="uk-form-label uk-text-warning" id="dex-checkbox-container"></label>
+                                    </b>
+                                </span>
+                            </div>
+                        </div>
+                
+                        <!-- Kolom Kanan -->
+                        <div class="uk-width-1-2@m "  style=" background-color: aliceblue; align-content:center;">
+                            <!-- Bagian DEX PAIR -->
+                            <div>
+                                <span id="dexpair">
+                                    <b>
+                                        <label class="uk-form-label uk-text-secondary">DEX PAIR 
+                                            (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):
+                                        </label>
+                                        <label class="uk-form-label uk-text-success" id="dexpair-checkbox-container"></label>
+                                    </b>
+                                    <b>
+                                        <input type="checkbox" id="Cautorun" /> 
+                                        <span class="uk-form-label uk-text-danger uk-text-small" id="autorun"> AUTO</span>
+                                    </b>
+                                    <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
+                                    <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+
                 <!-- Bagian Sinyal DEX -->
-                <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container" style="margin-top: 4px;">
+                <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container" style="margin-top:10px; background-color: #fdfff2; padding-left: 10px;">
                     <div class="sinyal-item" data-dex="1INCH"><b>1INCH</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> </div>
                     <div class="sinyal-item" data-dex="0X"><b>MATCHA</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> </div>
                     <div class="sinyal-item" data-dex="ODOS"><b>ODOS</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos"> </label> </div>
                     <div class="sinyal-item" data-dex="PARASWAP"><b>PARA</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> </div>
                     <div class="sinyal-item" data-dex="KYBERSWAP"><b>KYBER</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> </div>
-                    <div class="sinyal-item" data-dex="OKX"><b>OKX</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalokx"> </label> </div>
+                    <div class="sinyal-item" data-dex="OKX"><b>OKXDEX</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalokx"> </label> </div>
                     <div class="sinyal-item" data-dex="JUPITER"><b>JUPITER</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyaljupiter"> </label> </div>
                    </div>
 
@@ -421,6 +420,7 @@
                     <th class="uk-text-secondary dx_kyberswap"> <span  id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
                     <th class="uk-text-secondary dx_paraswap"> <span  id="lKiriPARASWAPSinyal"></span> PARA </th>
                     <th class="uk-text-secondary dx_0x"> <span  id="lKiri0XSinyal"></span> MATCHA</th>
+                    <th class="uk-text-secondary dx_okx"> <span  id="lKiriOKXSinyal"></span> OKXDEX</th>
                     <th class="uk-text-secondary dx_jupiter"> <span  id="lKiriJUPITERSinyal"></span> JUPITER</th>
 
                     <th rowspan="2" style="background-color: #bfcdf6; color: rgb(10, 11, 12);">&nbsp;DETAILS <br/> TOKEN&nbsp;</th>
@@ -430,6 +430,7 @@
                     <th class="uk-text-secondary dx_kyberswap"> <span  id="lKananKYBERSWAPSinyal"></span> KYBER</th>
                     <th class="uk-text-secondary dx_paraswap"> <span  id="lKananPARASWAPSinyal"></span> PARA </th>
                     <th class="uk-text-secondary dx_0x"> <span  id="lKanan0XSinyal"></span> MATCHA </th>
+                    <th class="uk-text-secondary dx_okx"> <span  id="lKananOKXSinyal"></span> OKDEX </th>
                     <th class="uk-text-secondary dx_jupiter"> <span  id="lKananJUPITERSinyal"></span> JUPITER </th>
                     <th class="uk-text-secondary"> VOL SELL </th>
                 </tr>
@@ -440,6 +441,7 @@
                     <th class=" dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKiriKYBERSWAP"/> $</th>
                     <th class=" dx_paraswap"> <input type="number" class="uk-input" required id="LModalKiriPARASWAP"/> $</th>
                     <th class=" dx_0x"> <input type="number" class="uk-input" required id="LModalKiri0X"/> $</th>
+                    <th class=" dx_okx"> <input type="number" class="uk-input" required id="LModalKiriOKX"/> $</th>
                     <th class=" dx_jupiter"> <input type="number" class="uk-input" required id="LModalKiriJUPITER"/> $</th>
 
                     <th class=" dx_1inch"> <input type="number" class="uk-input" required id="LModalKanan1INCH"/> $</th>
@@ -447,6 +449,7 @@
                     <th class=" dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKananKYBERSWAP"/> $</th>
                     <th class=" dx_paraswap"> <input type="number" class="uk-input" required id="LModalKananPARASWAP"/> $</th>
                     <th class=" dx_0x"> <input type="number" class="uk-input" required id="LModalKanan0X"/> $</th>
+                    <th class=" dx_okx"> <input type="number" class="uk-input" required id="LModalKananOKX"/> $</th>
                     <th class=" dx_jupiter"> <input type="number" class="uk-input" required id="LModalKananJUPITER"/> $</th>
                     <th class="uk-text-secondary"> PRICE </th>
                 </tr>
@@ -457,8 +460,8 @@
 </div>
 
     <script>
-        const _0x357938=_0x54db;(function(_0x1da7e8,_0x1487c1){const _0x23de74=_0x54db,_0x37b580=_0x1da7e8();while(!![]){try{const _0x15286f=parseInt(_0x23de74(0x195))/0x1+parseInt(_0x23de74(0x193))/0x2+-parseInt(_0x23de74(0x1af))/0x3+parseInt(_0x23de74(0x1a9))/0x4+-parseInt(_0x23de74(0x1a4))/0x5*(-parseInt(_0x23de74(0x1d8))/0x6)+parseInt(_0x23de74(0x1bb))/0x7+-parseInt(_0x23de74(0x1b3))/0x8;if(_0x15286f===_0x1487c1)break;else _0x37b580['push'](_0x37b580['shift']());}catch(_0x2cc991){_0x37b580['push'](_0x37b580['shift']());}}}(_0x1184,0x3bb59));const urlParams=new URLSearchParams(window[_0x357938(0x1d9)]['search']),chainName=urlParams['get']('chain')||'bsc',DTChain=getChainData(chainName);function _0x1184(){const _0x344fc5=['ICON_CHAIN','ModalKanan','pathname','value','<div></div>','<label></label>','val','#modal-container','textContent','dex-checkbox-container','required','div#pilihan','innerHTML','number','opacity:\x200.4;','createElement','toUpperCase','background-color','uk-input','?chain=','1218sfVQEI','location','dexpair-checkbox-container','PAIRDEXS','string','386744KauKuN','keys','259947qXWwiD','#favicon','uk-text-success','\x20icon\x22\x20width=\x22','Modal\x20','ready','checkbox','forEach','href','append','#bar','add','\x22\x20alt=\x22','attr','cex-checkbox','1415kVJZLr','css','ICON','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','text','1493532AEksOg','input','#e4322c','addClass','object','Kiri','4128joCQfy','for','appendChild','Nama_Chain','5278464PReRoj','<h5></h5>','split','dexpair-checkbox','pop','cex-checkbox-container','COLOR_CHAIN','\x22\x20style=\x22','151214clmoxX','type','setAttribute','ModalKiri','<input>','ICON_Chain','Kanan','\x22><img\x20src=\x22','classList'];_0x1184=function(){return _0x344fc5;};return _0x1184();}$(_0x357938(0x196))[_0x357938(0x1a2)](_0x357938(0x19d),DTChain[_0x357938(0x1c0)]),$(_0x357938(0x196))[_0x357938(0x1a2)](_0x357938(0x19d),DTChain[_0x357938(0x1c4)]);function generateInputCheckbox(_0x5784ce,_0x4adfc3,_0x1a2aab,_0x65f664,_0x1ff946){const _0x4c9cfb=_0x357938,_0x1368ab=document['getElementById'](_0x4adfc3);_0x1368ab[_0x4c9cfb(0x1d0)]='',typeof _0x5784ce===_0x4c9cfb(0x1ad)&&!Array['isArray'](_0x5784ce)&&(_0x5784ce=Object['keys'](_0x5784ce)),_0x5784ce[_0x4c9cfb(0x19c)](_0x2ca7d8=>{const _0xbb02bc=_0x4c9cfb,_0x39e5ff=document[_0xbb02bc(0x1d3)](_0xbb02bc(0x1aa));_0x39e5ff[_0xbb02bc(0x1bc)]=_0xbb02bc(0x19b),_0x39e5ff[_0xbb02bc(0x1c3)][_0xbb02bc(0x1a0)](''+_0x1a2aab),_0x39e5ff['id']=''+_0x65f664+_0x2ca7d8['toUpperCase'](),_0x39e5ff[_0xbb02bc(0x1c7)]=_0x2ca7d8;const _0x2c5a0a=document[_0xbb02bc(0x1d3)]('label');_0x2c5a0a[_0xbb02bc(0x1bd)]('for',_0x39e5ff['id']),_0x2c5a0a[_0xbb02bc(0x1cc)]='\x20'+_0x2ca7d8[_0xbb02bc(0x1d4)](),typeof _0x1ff946===_0xbb02bc(0x1dc)&&_0x1ff946[_0xbb02bc(0x1b5)]('\x20')['forEach'](_0xd9898e=>_0x2c5a0a['classList'][_0xbb02bc(0x1a0)](_0xd9898e)),_0x1368ab['appendChild'](_0x39e5ff),_0x1368ab[_0xbb02bc(0x1b1)](_0x2c5a0a);});}function generateInputModal(_0x32a470){const _0x1b066c=_0x357938,_0x32e1ad=$(_0x1b066c(0x1cb));_0x32e1ad['empty'](),_0x32a470[_0x1b066c(0x19c)](_0x455507=>{const _0x4d99c2=_0x1b066c,_0x47cf78=_0x455507[_0x4d99c2(0x1d4)](),_0x59bcec=$(_0x4d99c2(0x1b4))[_0x4d99c2(0x1a5)]({'margin':'12px\x200px','color':_0x4d99c2(0x1ab)})[_0x4d99c2(0x1a8)](_0x4d99c2(0x199)+_0x47cf78);_0x32e1ad[_0x4d99c2(0x19e)](_0x59bcec);const _0x4069f6=$(_0x4d99c2(0x1c8))[_0x4d99c2(0x1ac)]('uk-flex\x20uk-flex-middle'),_0x5a1a2b=$(_0x4d99c2(0x1c8)),_0x293c65=$('<label></label>')['attr'](_0x4d99c2(0x1b0),_0x4d99c2(0x1be)+_0x47cf78)[_0x4d99c2(0x1ac)]('uk-text-primary')[_0x4d99c2(0x1a8)](_0x4d99c2(0x1ae)),_0x4367ff=$('<input>')[_0x4d99c2(0x1a2)](_0x4d99c2(0x1bc),_0x4d99c2(0x1d1))[_0x4d99c2(0x1a2)]('id','ModalKiri'+_0x47cf78)[_0x4d99c2(0x1ac)](_0x4d99c2(0x1d6))[_0x4d99c2(0x1ca)]('0')['attr'](_0x4d99c2(0x1ce),!![]);_0x5a1a2b['append'](_0x293c65,_0x4367ff);const _0x20b967=$(_0x4d99c2(0x1c8)),_0x2772c8=$(_0x4d99c2(0x1c9))[_0x4d99c2(0x1a2)](_0x4d99c2(0x1b0),_0x4d99c2(0x1c5)+_0x47cf78)['addClass'](_0x4d99c2(0x197))[_0x4d99c2(0x1a8)](_0x4d99c2(0x1c1)),_0x432adb=$(_0x4d99c2(0x1bf))[_0x4d99c2(0x1a2)](_0x4d99c2(0x1bc),_0x4d99c2(0x1d1))[_0x4d99c2(0x1a2)]('id','ModalKanan'+_0x47cf78)[_0x4d99c2(0x1ac)]('uk-input')[_0x4d99c2(0x1ca)]('0')[_0x4d99c2(0x1a2)]('required',!![]);_0x20b967['append'](_0x2772c8,_0x432adb),_0x4069f6['append'](_0x5a1a2b,_0x20b967),_0x32e1ad['append'](_0x4069f6);});}function _0x54db(_0x2a0490,_0xa5b143){const _0x118492=_0x1184();return _0x54db=function(_0x54db84,_0x942550){_0x54db84=_0x54db84-0x193;let _0x133048=_0x118492[_0x54db84];return _0x133048;},_0x54db(_0x2a0490,_0xa5b143);}generateInputCheckbox(CONFIG_CEX,_0x357938(0x1b8),_0x357938(0x1a3),'','uk-form-label\x20uk-text-primary'),generateInputCheckbox(DTChain['DEXS'],_0x357938(0x1cd),'dex-checkbox','D','uk-form-label\x20uk-text-warning'),generateInputCheckbox(DTChain[_0x357938(0x1db)],_0x357938(0x1da),_0x357938(0x1b6)),$(document)[_0x357938(0x19a)](function(){const _0x150d76=_0x357938;var _0x39117b=DTChain[_0x150d76(0x1b9)];$(_0x150d76(0x19f))[_0x150d76(0x1a5)]('background-color',_0x39117b),$(_0x150d76(0x1cf))[_0x150d76(0x1a5)](_0x150d76(0x1d5),_0x39117b),$('.sticky-header\x20th')[_0x150d76(0x1a5)]('background-color',_0x39117b);const _0x178ede=window[_0x150d76(0x1d9)][_0x150d76(0x1c6)][_0x150d76(0x1b5)]('/')[_0x150d76(0x1b7)]();Object[_0x150d76(0x194)](CONFIG_CHAINS)[_0x150d76(0x19c)](_0xaff2bb=>{const _0x4e5461=_0x150d76,_0x34f8d5=CONFIG_CHAINS[_0xaff2bb],_0x2165e9=_0x34f8d5[_0x4e5461(0x1b2)]===chainName,_0x5b3eae='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22chain-link\x20'+(_0x2165e9?'active-chain':'')+_0x4e5461(0x1ba)+(!_0x2165e9?_0x4e5461(0x1d2):'')+_0x4e5461(0x1a7)+_0x178ede+_0x4e5461(0x1d7)+_0x34f8d5[_0x4e5461(0x1b2)]+_0x4e5461(0x1c2)+_0x34f8d5[_0x4e5461(0x1a6)]+_0x4e5461(0x1a1)+_0x34f8d5[_0x4e5461(0x1b2)]+_0x4e5461(0x198)+(_0x2165e9?'45':'25')+'\x22></a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>';$('#chain-links-container')[_0x4e5461(0x19e)](_0x5b3eae);}),generateInputModal(DTChain['DEXS']);});
-
+        
+     const _0x51d10c=_0x30dc;(function(_0x24e29f,_0x206772){const _0x2b4d85=_0x30dc,_0x113a8e=_0x24e29f();while(!![]){try{const _0x5ed886=-parseInt(_0x2b4d85(0x149))/0x1+-parseInt(_0x2b4d85(0x184))/0x2+parseInt(_0x2b4d85(0x18c))/0x3*(-parseInt(_0x2b4d85(0x16b))/0x4)+parseInt(_0x2b4d85(0x17a))/0x5+-parseInt(_0x2b4d85(0x16f))/0x6+-parseInt(_0x2b4d85(0x15f))/0x7+parseInt(_0x2b4d85(0x188))/0x8;if(_0x5ed886===_0x206772)break;else _0x113a8e['push'](_0x113a8e['shift']());}catch(_0x366278){_0x113a8e['push'](_0x113a8e['shift']());}}}(_0x30fa,0x679b3));function _0x30dc(_0x249711,_0x26a7f2){const _0x30fa63=_0x30fa();return _0x30dc=function(_0x30dc98,_0x2778cb){_0x30dc98=_0x30dc98-0x146;let _0x31de8a=_0x30fa63[_0x30dc98];return _0x31de8a;},_0x30dc(_0x249711,_0x26a7f2);}const urlParams=new URLSearchParams(window[_0x51d10c(0x189)][_0x51d10c(0x18d)]),chainName=urlParams[_0x51d10c(0x15d)]('chain')||_0x51d10c(0x14e),DTChain=getChainData(chainName);$(_0x51d10c(0x16a))[_0x51d10c(0x163)](_0x51d10c(0x18b),DTChain[_0x51d10c(0x162)]),$(_0x51d10c(0x16a))[_0x51d10c(0x163)](_0x51d10c(0x18b),DTChain[_0x51d10c(0x17e)]);function generateInputCheckbox(_0x5e84b8,_0x49fab4,_0x261809,_0xcab711,_0x474fc){const _0x1b9a0d=_0x51d10c,_0x21fe2d=document[_0x1b9a0d(0x147)](_0x49fab4);_0x21fe2d['innerHTML']='',typeof _0x5e84b8===_0x1b9a0d(0x14d)&&!Array['isArray'](_0x5e84b8)&&(_0x5e84b8=Object[_0x1b9a0d(0x177)](_0x5e84b8)),_0x5e84b8[_0x1b9a0d(0x16c)](_0x5bded3=>{const _0x5b7a18=_0x1b9a0d,_0x24d4dd=document['createElement'](_0x5b7a18(0x15e));_0x24d4dd[_0x5b7a18(0x174)]=_0x5b7a18(0x146),_0x24d4dd[_0x5b7a18(0x176)][_0x5b7a18(0x156)](''+_0x261809),_0x24d4dd['id']=''+_0xcab711+_0x5bded3[_0x5b7a18(0x17d)](),_0x24d4dd['value']=_0x5bded3;const _0x298038=document[_0x5b7a18(0x178)](_0x5b7a18(0x16d));_0x298038[_0x5b7a18(0x180)](_0x5b7a18(0x183),_0x24d4dd['id']),_0x298038[_0x5b7a18(0x158)]='\x20'+_0x5bded3[_0x5b7a18(0x17d)](),typeof _0x474fc==='string'&&_0x474fc['split']('\x20')[_0x5b7a18(0x16c)](_0x5d7dbe=>_0x298038['classList'][_0x5b7a18(0x156)](_0x5d7dbe)),_0x21fe2d[_0x5b7a18(0x173)](_0x24d4dd),_0x21fe2d[_0x5b7a18(0x173)](_0x298038);});}function generateInputModal(_0x4a0db3){const _0x3247f3=_0x51d10c,_0x1e931b=$(_0x3247f3(0x15b));_0x1e931b[_0x3247f3(0x16e)](),_0x4a0db3[_0x3247f3(0x16c)](_0x134c38=>{const _0x4bf712=_0x3247f3,_0xaa2a4c=_0x134c38['toUpperCase'](),_0x9c9cf3=$(_0x4bf712(0x161))['css']({'margin':_0x4bf712(0x185),'color':'#e4322c'})['text'](_0x4bf712(0x175)+_0xaa2a4c);_0x1e931b[_0x4bf712(0x153)](_0x9c9cf3);const _0x13adab=$('<div></div>')[_0x4bf712(0x171)](_0x4bf712(0x166)),_0x197e76=$('<div></div>'),_0xe067d9=$(_0x4bf712(0x151))[_0x4bf712(0x163)](_0x4bf712(0x183),'ModalKiri'+_0xaa2a4c)[_0x4bf712(0x171)](_0x4bf712(0x14a))['text']('Kiri'),_0x144f1d=$('<input>')['attr'](_0x4bf712(0x174),_0x4bf712(0x181))[_0x4bf712(0x163)]('id',_0x4bf712(0x150)+_0xaa2a4c)[_0x4bf712(0x171)]('uk-input')[_0x4bf712(0x169)]('0')[_0x4bf712(0x163)](_0x4bf712(0x15c),!![]);_0x197e76[_0x4bf712(0x153)](_0xe067d9,_0x144f1d);const _0x5a3b0e=$('<div></div>'),_0x5985f3=$(_0x4bf712(0x151))[_0x4bf712(0x163)](_0x4bf712(0x183),_0x4bf712(0x14c)+_0xaa2a4c)[_0x4bf712(0x171)]('uk-text-success')[_0x4bf712(0x155)](_0x4bf712(0x18a)),_0x5c0f8c=$(_0x4bf712(0x148))['attr'](_0x4bf712(0x174),_0x4bf712(0x181))[_0x4bf712(0x163)]('id',_0x4bf712(0x14c)+_0xaa2a4c)[_0x4bf712(0x171)](_0x4bf712(0x179))[_0x4bf712(0x169)]('0')[_0x4bf712(0x163)](_0x4bf712(0x15c),!![]);_0x5a3b0e['append'](_0x5985f3,_0x5c0f8c),_0x13adab['append'](_0x197e76,_0x5a3b0e),_0x1e931b[_0x4bf712(0x153)](_0x13adab);});}generateInputCheckbox(CONFIG_CEX,_0x51d10c(0x17c),'cex-checkbox','',_0x51d10c(0x172)),generateInputCheckbox(DTChain['DEXS'],'dex-checkbox-container',_0x51d10c(0x14f),'D',_0x51d10c(0x14b)),generateInputCheckbox(DTChain[_0x51d10c(0x170)],'dexpair-checkbox-container',_0x51d10c(0x192)),$(document)[_0x51d10c(0x164)](function(){const _0x37b876=_0x51d10c;var _0x574471=DTChain[_0x37b876(0x165)];$(_0x37b876(0x195))[_0x37b876(0x157)](_0x37b876(0x187),_0x574471),$(_0x37b876(0x168))[_0x37b876(0x157)]('background-color',_0x574471),$(_0x37b876(0x193))['css']('background-color',_0x574471);const _0x2e1962=window[_0x37b876(0x189)][_0x37b876(0x15a)][_0x37b876(0x160)]('/')[_0x37b876(0x186)]();Object[_0x37b876(0x177)](CONFIG_CHAINS)[_0x37b876(0x16c)](_0x147726=>{const _0x22ef8d=_0x37b876,_0x1b64d1=CONFIG_CHAINS[_0x147726],_0x5da602=_0x1b64d1[_0x22ef8d(0x190)]===chainName,_0x11d287=_0x22ef8d(0x154)+(_0x5da602?_0x22ef8d(0x17b):'')+_0x22ef8d(0x152)+(!_0x5da602?_0x22ef8d(0x191):'')+_0x22ef8d(0x182)+_0x2e1962+_0x22ef8d(0x17f)+_0x1b64d1[_0x22ef8d(0x190)]+'\x22><img\x20src=\x22'+_0x1b64d1[_0x22ef8d(0x18e)]+_0x22ef8d(0x18f)+_0x1b64d1['Nama_Chain']+'\x20icon\x22\x20width=\x22'+(_0x5da602?'45':'25')+_0x22ef8d(0x194);$(_0x22ef8d(0x159))['append'](_0x11d287);}),generateInputModal(DTChain[_0x37b876(0x167)]);});function _0x30fa(){const _0x95a0cb=['<input>','558311LoWEck','uk-text-primary','uk-form-label\x20uk-text-warning','ModalKanan','object','bsc','dex-checkbox','ModalKiri','<label></label>','\x22\x20style=\x22','append','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22chain-link\x20','text','add','css','textContent','#chain-links-container','pathname','#modal-container','required','get','input','2803563CHekUW','split','<h5></h5>','ICON_Chain','attr','ready','COLOR_CHAIN','uk-flex\x20uk-flex-middle','DEXS','div#pilihan','val','#favicon','1767356jJvdmr','forEach','label','empty','1231980BOyjup','PAIRDEXS','addClass','uk-form-label\x20uk-text-primary','appendChild','type','Modal\x20','classList','keys','createElement','uk-input','3320485mfzgxw','active-chain','cex-checkbox-container','toUpperCase','ICON_CHAIN','?chain=','setAttribute','number','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','for','321626JwumuO','12px\x200px','pop','background-color','12216608DddKpo','location','Kanan','href','3QXdmpl','search','ICON','\x22\x20alt=\x22','Nama_Chain','opacity:\x200.4;','dexpair-checkbox','.sticky-header\x20th','\x22></a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>','#bar','checkbox','getElementById'];_0x30fa=function(){return _0x95a0cb;};return _0x30fa();}
     </script>
 <script src="multimarket.js"></script>
 
