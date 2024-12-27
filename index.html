@@ -3,26 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Desain</title>
-    <!-- Menambahkan CSS UIkit -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.0/dist/css/uikit.min.css" />
+    <title>API Data Table</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.24/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.24/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.24/js/uikit-icons.min.js"></script>
+    <link rel="icon" id="favicon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/layer-mainnet-5382138-4495932.png">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <style>
+        .uk-container {
+            width: 86%;
+            max-width: none;
+        }
+    </style>
 </head>
-<style>
-    .uk-container {
-      margin-top: 30px;
-      max-width: 85%;
-    }
-</style>
 <body>
-
-    <!-- Judul (Atas) -->
-    <div class="uk-container uk-margin-top" style="text-align: center;">
-        <h1 class="uk-heading-line"><span>TERIMA KASIH</span></h1>
-        <img src="https://media.tenor.com/xtw8vTO3NDsAAAAM/sayonara-japanese-goodbye.gif" width="300px"/>
+    <div class="uk-container">
+        <h1 class="uk-heading-line uk-text-center uk-margin-small-top uk-text-primary"><span>Cryptocurrency Balances & Transfer</span></h1>
+        <div class="uk-margin uk-text-center">       
+            <label for="wallet-address" class="uk-form-label uk-text-primary uk-text-large">Enter Wallet Address</label> &nbsp; &nbsp;
+            <input id="wallet-address" class="uk-input uk-form-width-large" type="text" placeholder="e.g., 0x1234..." />
+            <select id="chain-select" class="uk-select uk-form-width-medium">
+                <option value="56">BSC</option>
+                <option value="43114">Avalanche</option>
+                <option value="137">Polygon</option>
+                <option value="42161">Arbitrum</option>
+                <option value="1">Ethereum</option>
+                <option value="8453">Base</option>
+            </select>
+            <button id="check-balance" class="uk-button uk-button-danger">Check Balance</button>
+        </div>
+        <div id="loading" class="uk-alert-primary" uk-alert style="display: none;">
+            Fetching data, please wait...
+        </div>
+        <div id="error" class="uk-alert-danger" uk-alert style="display: none;">
+            An error occurred while fetching data. Please try again.
+        </div>
+        <hr/>
+        <table id="data-table" class="uk-table uk-table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Symbol</th>
+                    <th>Smart Contract</th>
+                    <th>Decimals</th>
+                    <th>Balance</th>
+                    <th>Quote (USD)</th>
+                    <th>Last Transferred</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
 
-    <!-- Menambahkan JS UIkit -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.0/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.0/dist/js/uikit-icons.min.js"></script>
+    <script>
+       const _0x4c6510=_0xee11;function _0xee11(_0x5f461e,_0x3e14a3){const _0x479f77=_0x479f();return _0xee11=function(_0xee1150,_0x3b2b95){_0xee1150=_0xee1150-0x7e;let _0x113e09=_0x479f77[_0xee1150];return _0x113e09;},_0xee11(_0x5f461e,_0x3e14a3);}function _0x479f(){const _0x2d5c78=['click','9818968sewiFv','Error\x20fetching\x20data:','#data-table','#loading','contract_ticker_symbol','40FWekbC','data','row','length','Bearer\x20ckey_acb518dcab1d46b8a5f777dad45','contract_decimals','10420ekKxYS','ready','/address/','contract_address','557238hSEZMc','GET','#check-balance','DataTable','notification','#chain-select','769770EJbLzT','last_transferred_at','error','draw','warning','show','3077919taQwbs','val','#error','1603911lplBOq','pow','forEach','1283509ObxscP','https://api.covalenthq.com/v1/','hide','2rTyYbl','toFixed','pretty_quote','items','126kkCFBE','#wallet-address','balance'];_0x479f=function(){return _0x2d5c78;};return _0x479f();}(function(_0x52f8b8,_0x2ab5a0){const _0x11b5b2=_0xee11,_0x24a71e=_0x52f8b8();while(!![]){try{const _0x4a1b56=parseInt(_0x11b5b2(0x80))/0x1*(parseInt(_0x11b5b2(0x83))/0x2)+parseInt(_0x11b5b2(0xa9))/0x3+parseInt(_0x11b5b2(0x90))/0x4*(-parseInt(_0x11b5b2(0x96))/0x5)+-parseInt(_0x11b5b2(0x9a))/0x6*(parseInt(_0x11b5b2(0x87))/0x7)+parseInt(_0x11b5b2(0x8b))/0x8+-parseInt(_0x11b5b2(0xa6))/0x9+-parseInt(_0x11b5b2(0xa0))/0xa;if(_0x4a1b56===_0x2ab5a0)break;else _0x24a71e['push'](_0x24a71e['shift']());}catch(_0x27bee6){_0x24a71e['push'](_0x24a71e['shift']());}}}(_0x479f,0xe406b));const apiKey=_0x4c6510(0x94);$(document)[_0x4c6510(0x97)](function(){const _0x21223d=_0x4c6510,_0x372994=$(_0x21223d(0x8d))[_0x21223d(0x9d)]({'pageLength':0x32});$(_0x21223d(0x9c))['on'](_0x21223d(0x8a),function(){const _0x5587e8=_0x21223d,_0x388a61=$(_0x5587e8(0x88))[_0x5587e8(0xa7)]()['trim'](),_0x26cbb1=$(_0x5587e8(0x9f))[_0x5587e8(0xa7)]();if(!_0x388a61){UIkit[_0x5587e8(0x9e)]({'message':'Please\x20enter\x20a\x20valid\x20wallet\x20address.','status':_0x5587e8(0xa4)});return;}const _0x138bcf=_0x5587e8(0x81)+_0x26cbb1+_0x5587e8(0x98)+_0x388a61+'/balances_v2/?quote-currency=usd&no-nft-fetch=true&no-spam=true';$(_0x5587e8(0x8e))[_0x5587e8(0xa5)](),$(_0x5587e8(0xa8))['hide'](),_0x372994['clear']()[_0x5587e8(0xa3)](),$['ajax']({'url':_0x138bcf,'method':_0x5587e8(0x9b),'headers':{'Authorization':apiKey},'success':function(_0x3fa9cf){const _0x33c866=_0x5587e8;$(_0x33c866(0x8e))['hide']();const _0x5c6f51=_0x3fa9cf[_0x33c866(0x91)][_0x33c866(0x86)];if(_0x5c6f51[_0x33c866(0x93)]===0x0){_0x372994['row']['add'](['-','No\x20data\x20available','-','-','-','-','-'])['draw']();return;}let _0x21e89f=0x0;_0x5c6f51[_0x33c866(0x7f)](_0x3f00fd=>{const _0x5a3e3c=_0x33c866;_0x21e89f++;let _0x111aed=_0x3f00fd[_0x5a3e3c(0xa1)]?new Date(_0x3f00fd[_0x5a3e3c(0xa1)])['toLocaleString']():'N/A';_0x372994[_0x5a3e3c(0x92)]['add']([_0x21e89f,_0x3f00fd[_0x5a3e3c(0x8f)],_0x3f00fd[_0x5a3e3c(0x99)],_0x3f00fd[_0x5a3e3c(0x95)],(_0x3f00fd[_0x5a3e3c(0x89)]/Math[_0x5a3e3c(0x7e)](0xa,_0x3f00fd[_0x5a3e3c(0x95)]))[_0x5a3e3c(0x84)](0x6),_0x3f00fd[_0x5a3e3c(0x85)]||'N/A',_0x111aed])['draw']();});},'error':function(_0x45e838){const _0x24103e=_0x5587e8;$(_0x24103e(0x8e))[_0x24103e(0x82)](),$(_0x24103e(0xa8))[_0x24103e(0xa5)](),console[_0x24103e(0xa2)](_0x24103e(0x8c),_0x45e838);}});});});
+    </script>
 </body>
 </html>
