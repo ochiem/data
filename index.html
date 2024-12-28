@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.24/css/uikit.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.24/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.24/js/uikit-icons.min.js"></script>
-    <link rel="icon" id="favicon" href="https://cdn0.iconfinder.com/data/icons/casino-106/68/90-512.png">
+    <link rel="icon" id="favicon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/layer-mainnet-5382138-4495932.png">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <style>
         .uk-container {
-            width: 86%;
+            width: 92%;
             max-width: none;
         }
     </style>
 </head>
 <body>
     <div class="uk-container">
-        <h1 class="uk-heading-line uk-text-center uk-margin-small-top uk-text-primary"><span>Cryptocurrency Balances & Transfer</span></h1>
+        <h1 class="uk-heading-line uk-text-center uk-margin-small-top uk-text-primary"><span>Cek Saldo & History Wallet</span></h1>
         <div class="uk-margin uk-text-center">       
-            <label for="wallet-address" class="uk-form-label uk-text-primary uk-text-large">Enter Wallet Address</label> &nbsp; &nbsp;
+            <label for="wallet-address" class="uk-form-label uk-text-danger uk-text-large">Masukan Alamat Wallet</label> &nbsp; &nbsp;
             <input id="wallet-address" class="uk-input uk-form-width-large" type="text" placeholder="e.g., 0x1234..." />
             <select id="chain-select" class="uk-select uk-form-width-medium">
                 <option value="56">BSC</option>
@@ -31,15 +31,15 @@
                 <option value="42161">Arbitrum</option>
                 <option value="1">Ethereum</option>
                 <option value="8453">Base</option>
-                <option value="all">All Chains</option>
+                <option value="all">Semua Chains</option>
             </select>
-            <button id="check-balance" class="uk-button uk-button-danger">Check Balance</button>
+            <button id="check-balance" class="uk-button uk-button-secondary">Cek Saldo</button>
         </div>
         <div id="loading" class="uk-alert-primary" uk-alert style="display: none;">
-            Memuat data, Mohon Menunggu...
+            Sedang Memuat Data, Mohon Menunggu...
         </div>
         <div id="error" class="uk-alert-danger" uk-alert style="display: none;">
-            Gagal!!, Silakan Coba lagi...
+            GAGAL, Silakan Coba Lagi...
         </div>
         <hr/>
         <table id="data-table" class="uk-table uk-table-striped">
@@ -50,9 +50,9 @@
                     <th>Chain</th>
                     <th>Smart Contract</th>
                     <th>Decimals</th>
-                    <th>Balance</th>
-                    <th>Quote (USD)</th>
-                    <th>Last Transferred</th>
+                    <th>Saldo</th>
+                    <th>Perkiraan (USD)</th>
+                    <th>Terakhir Kirim</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,7 +61,7 @@
     </div>
 
     <script>
-       const _0xc3c2b5=_0x4d5b;function _0x5af2(){const _0x4e358a=['#check-balance','<a\x20href=\x22','4376920TNhzqx','row','val','Avax','add','20968qYIQaL','Arbitrum','items','warning','Bearer\x20ckey_acb518dcab1d46b8a5f777dad45','6rbYmGK','toFixed','Polygon','ajax','N/A','25832310MHBaff','notification','show','draw','https://www.oklink.com/','361173MySqip','Eth','DataTable','hide','195836DwuLJb','trim','7119NDSbVK','#chain-select','</a>','3694312GKlNsn','contract_decimals','forEach','last_transferred_at','1413QDpJAL','Please\x20enter\x20a\x20valid\x20wallet\x20address.','#data-table','contract_address','toLowerCase','toLocaleString','?address=','/address/','#wallet-address','data','/token/','\x22\x20target=\x22_blank\x22>','5772EBOndO','#error','all','ready','GET','/balances_v2/?quote-currency=usd&no-nft-fetch=true&no-spam=true','clear','contract_ticker_symbol'];_0x5af2=function(){return _0x4e358a;};return _0x5af2();}function _0x4d5b(_0x3e4a22,_0x2426f8){const _0x5af2fd=_0x5af2();return _0x4d5b=function(_0x4d5b65,_0x2fa907){_0x4d5b65=_0x4d5b65-0xd9;let _0x9b1b9a=_0x5af2fd[_0x4d5b65];return _0x9b1b9a;},_0x4d5b(_0x3e4a22,_0x2426f8);}(function(_0x3c8665,_0x5857d6){const _0x128c4b=_0x4d5b,_0x45ca8c=_0x3c8665();while(!![]){try{const _0x282b6d=-parseInt(_0x128c4b(0xdc))/0x1+parseInt(_0x128c4b(0x105))/0x2*(-parseInt(_0x128c4b(0x10f))/0x3)+-parseInt(_0x128c4b(0xe1))/0x4+parseInt(_0x128c4b(0xfb))/0x5+-parseInt(_0x128c4b(0xf1))/0x6*(parseInt(_0x128c4b(0xde))/0x7)+parseInt(_0x128c4b(0x100))/0x8*(-parseInt(_0x128c4b(0xe5))/0x9)+parseInt(_0x128c4b(0x10a))/0xa;if(_0x282b6d===_0x5857d6)break;else _0x45ca8c['push'](_0x45ca8c['shift']());}catch(_0xdb3e1c){_0x45ca8c['push'](_0x45ca8c['shift']());}}}(_0x5af2,0x8f991));const apiKey=_0xc3c2b5(0x104),chainNames={0x38:'BSC',0xa86a:_0xc3c2b5(0xfe),0x89:_0xc3c2b5(0x107),0xa4b1:_0xc3c2b5(0x101),0x1:_0xc3c2b5(0xd9),0x2105:'Base'};$(document)[_0xc3c2b5(0xf4)](function(){const _0x550779=_0xc3c2b5,_0x5f17ea=$(_0x550779(0xe7))[_0x550779(0xda)]({'pageLength':0x64}),_0x22a11d=async(_0x2e702a,_0x1c4bc4)=>{const _0x41b018=_0x550779,_0x568165='https://api.covalenthq.com/v1/'+_0x1c4bc4+_0x41b018(0xec)+_0x2e702a+_0x41b018(0xf6);return $[_0x41b018(0x108)]({'url':_0x568165,'method':_0x41b018(0xf5),'headers':{'Authorization':apiKey}});},_0x2df0e0=(_0x102afc,_0x460dbc,_0x4b622c,_0x5b322b)=>{const _0x2d607a=_0x550779,_0x34e8cf=_0x102afc[_0x2d607a(0xee)][_0x2d607a(0x102)];return _0x34e8cf[_0x2d607a(0xe3)](_0x331630=>{const _0x35f44d=_0x2d607a;_0x4b622c++;const _0x4c5805=_0x331630[_0x35f44d(0xe4)]?new Date(_0x331630[_0x35f44d(0xe4)])[_0x35f44d(0xea)]():_0x35f44d(0x109),_0x5085cf=_0x35f44d(0x10e)+chainNames[_0x460dbc][_0x35f44d(0xe9)]()+_0x35f44d(0xef)+_0x331630[_0x35f44d(0xe8)]+_0x35f44d(0xeb)+_0x5b322b;_0x5f17ea[_0x35f44d(0xfc)][_0x35f44d(0xff)]([_0x4b622c,_0x331630[_0x35f44d(0xf8)],chainNames[_0x460dbc]||'Unknown',_0x35f44d(0xfa)+_0x5085cf+_0x35f44d(0xf0)+_0x331630['contract_address']+_0x35f44d(0xe0),_0x331630['contract_decimals'],(_0x331630['balance']/Math['pow'](0xa,_0x331630[_0x35f44d(0xe2)]))[_0x35f44d(0x106)](0x6),_0x331630['quote']||'N/A',_0x4c5805])[_0x35f44d(0x10d)]();}),_0x4b622c;};$(_0x550779(0xf9))['on']('click',async function(){const _0x28d1b5=_0x550779,_0x3e9697=$(_0x28d1b5(0xed))[_0x28d1b5(0xfd)]()[_0x28d1b5(0xdd)](),_0x3b2914=$(_0x28d1b5(0xdf))['val']();if(!_0x3e9697){UIkit[_0x28d1b5(0x10b)]({'message':_0x28d1b5(0xe6),'status':_0x28d1b5(0x103)});return;}$('#loading')[_0x28d1b5(0x10c)](),$(_0x28d1b5(0xf2))[_0x28d1b5(0xdb)](),_0x5f17ea[_0x28d1b5(0xf7)]()['draw']();let _0xbf6756=0x0;try{if(_0x3b2914===_0x28d1b5(0xf3))for(const _0x173c7a in chainNames){const _0xcbdcf7=await _0x22a11d(_0x3e9697,_0x173c7a);_0xbf6756=_0x2df0e0(_0xcbdcf7,_0x173c7a,_0xbf6756,_0x3e9697);}else{const _0x5b52a4=await _0x22a11d(_0x3e9697,_0x3b2914);_0x2df0e0(_0x5b52a4,_0x3b2914,_0xbf6756,_0x3e9697);}}catch(_0x20f442){console['error']('Error\x20fetching\x20data:',_0x20f442),$(_0x28d1b5(0xf2))[_0x28d1b5(0x10c)]();}finally{$('#loading')[_0x28d1b5(0xdb)]();}});});
+        function _0x3159(_0x194570,_0x1c9898){const _0xf73b9a=_0xf73b();return _0x3159=function(_0x315920,_0x59c389){_0x315920=_0x315920-0x11e;let _0x285e2c=_0xf73b9a[_0x315920];return _0x285e2c;},_0x3159(_0x194570,_0x1c9898);}const _0x1b2ebf=_0x3159;function _0xf73b(){const _0x4515c1=['4467335gTQFru','forEach','val','#error','https://api.covalenthq.com/v1/','34660690kHEWaT','<a\x20href=\x22','error','5159241wQSIfz','2340RDchVO','Base','contract_decimals','trim','Polygon','row','contract_ticker_symbol','draw','N/A','---','11JyOsCb','#wallet-address','balance','last_transferred_at','</a>','quote','/balances_v2/?quote-currency=usd&no-nft-fetch=true&no-spam=true','Please\x20enter\x20a\x20valid\x20wallet\x20address.','pow','hide','https://www.oklink.com/','items','Eth','BSC','1833nOvhCy','11236832JscYPh','toFixed','2hMLibC','toUpperCase','/token/','show','Error\x20fetching\x20data:','?address=','\x22\x20target=\x22_blank\x22>','add','GET','#loading','Bearer\x20ckey_acb518dcab1d46b8a5f777dad45','1469979NauyYU','\x22\x20target=\x22_blank\x22>\x20','Avax','#chain-select','notification','contract_address','click','Unknown','DataTable','/address/','#check-balance','12JuuHVC','929523hWJvpX','ready'];_0xf73b=function(){return _0x4515c1;};return _0xf73b();}(function(_0x222f0d,_0x1343e6){const _0x17e3d3=_0x3159,_0x1ef538=_0x222f0d();while(!![]){try{const _0x307935=parseInt(_0x17e3d3(0x148))/0x1*(parseInt(_0x17e3d3(0x13d))/0x2)+-parseInt(_0x17e3d3(0x13a))/0x3*(-parseInt(_0x17e3d3(0x122))/0x4)+parseInt(_0x17e3d3(0x156))/0x5+-parseInt(_0x17e3d3(0x153))/0x6*(parseInt(_0x17e3d3(0x154))/0x7)+parseInt(_0x17e3d3(0x13b))/0x8+parseInt(_0x17e3d3(0x121))/0x9+parseInt(_0x17e3d3(0x11e))/0xa*(-parseInt(_0x17e3d3(0x12c))/0xb);if(_0x307935===_0x1343e6)break;else _0x1ef538['push'](_0x1ef538['shift']());}catch(_0x4d9015){_0x1ef538['push'](_0x1ef538['shift']());}}}(_0xf73b,0xec1af));const apiKey=_0x1b2ebf(0x147),chainNames={0x38:_0x1b2ebf(0x139),0xa86a:_0x1b2ebf(0x14a),0x89:_0x1b2ebf(0x126),0xa4b1:'Arbitrum',0x1:_0x1b2ebf(0x138),0x2105:_0x1b2ebf(0x123)};$(document)[_0x1b2ebf(0x155)](function(){const _0x14736a=_0x1b2ebf,_0x3cd07b=$('#data-table')[_0x14736a(0x150)]({'pageLength':0x64}),_0x12bb16=async(_0x545f4f,_0xb1b06f)=>{const _0x257e19=_0x14736a,_0x3315bc=_0x257e19(0x15a)+_0xb1b06f+_0x257e19(0x151)+_0x545f4f+_0x257e19(0x132);return $['ajax']({'url':_0x3315bc,'method':_0x257e19(0x145),'headers':{'Authorization':apiKey}});},_0x562840=(_0x11b08b,_0x44c559,_0x3c59e6,_0x211551)=>{const _0x27ca7d=_0x14736a,_0x39fa5b=_0x11b08b['data'][_0x27ca7d(0x137)];return _0x39fa5b[_0x27ca7d(0x157)](_0x36dd33=>{const _0x2adf16=_0x27ca7d;_0x3c59e6++;const _0x31f463=_0x36dd33[_0x2adf16(0x12f)]?new Date(_0x36dd33[_0x2adf16(0x12f)])['toLocaleString']():_0x2adf16(0x12a),_0x5a481c=_0x2adf16(0x136)+chainNames[_0x44c559]['toUpperCase']()+_0x2adf16(0x13f)+_0x36dd33[_0x2adf16(0x14d)],_0x1dcf4d=_0x2adf16(0x136)+chainNames[_0x44c559][_0x2adf16(0x13e)]()+_0x2adf16(0x13f)+_0x36dd33[_0x2adf16(0x14d)]+_0x2adf16(0x142)+_0x211551;_0x3cd07b[_0x2adf16(0x127)][_0x2adf16(0x144)]([_0x3c59e6,_0x36dd33[_0x2adf16(0x128)],chainNames[_0x44c559][_0x2adf16(0x13e)]()||_0x2adf16(0x14f),'<a\x20href=\x22'+_0x5a481c+_0x2adf16(0x143)+_0x36dd33['contract_address']+'</a>',_0x36dd33['contract_decimals'],_0x2adf16(0x11f)+_0x1dcf4d+_0x2adf16(0x149)+(_0x36dd33[_0x2adf16(0x12e)]/Math[_0x2adf16(0x134)](0xa,_0x36dd33[_0x2adf16(0x124)]))[_0x2adf16(0x13c)](0x6)+_0x2adf16(0x130),_0x36dd33[_0x2adf16(0x131)]||_0x2adf16(0x12b),_0x31f463])[_0x2adf16(0x129)]();}),_0x3c59e6;};$(_0x14736a(0x152))['on'](_0x14736a(0x14e),async function(){const _0x565129=_0x14736a,_0x331696=$(_0x565129(0x12d))[_0x565129(0x158)]()[_0x565129(0x125)](),_0x19ddb7=$(_0x565129(0x14b))['val']();if(!_0x331696){UIkit[_0x565129(0x14c)]({'message':_0x565129(0x133),'status':'warning'});return;}$(_0x565129(0x146))[_0x565129(0x140)](),$('#error')[_0x565129(0x135)](),_0x3cd07b['clear']()[_0x565129(0x129)]();let _0x2afc72=0x0;try{if(_0x19ddb7==='all')for(const _0x5e86d9 in chainNames){const _0x3fb501=await _0x12bb16(_0x331696,_0x5e86d9);_0x2afc72=_0x562840(_0x3fb501,_0x5e86d9,_0x2afc72,_0x331696);}else{const _0xcfb651=await _0x12bb16(_0x331696,_0x19ddb7);_0x562840(_0xcfb651,_0x19ddb7,_0x2afc72,_0x331696);}}catch(_0x492040){console[_0x565129(0x120)](_0x565129(0x141),_0x492040),$(_0x565129(0x159))[_0x565129(0x140)]();}finally{$(_0x565129(0x146))[_0x565129(0x135)]();}});});
     </script>
 </body>
 </html>
