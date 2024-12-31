@@ -106,7 +106,7 @@
         "Kode_Chain": 42161, 
         "Nama_Chain": "arbitrum", 
         "URL_Chain": "https://arbiscan.io",
-        "WARNA": "#a6b0c3",
+        "WARNA": "#16397c",
         "ICON": "https://wiki.dextrac.com:3443/images/1/11/Arbitrum_Logo.png",
         "BaseFEEDEX": "ETHUSDT",  
         "PAIRDEXS": {  
