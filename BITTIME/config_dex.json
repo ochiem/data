@@ -7,7 +7,7 @@
         "OX",
         "OKX"
     ],
-    "ETHEREUM": { 
+    "ETH": { 
         "Kode_Chain": 1, 
         "Nama_Chain": "ethereum", 
         "URL_Chain": "https://etherscan.io",
@@ -36,7 +36,7 @@
         "Kode_Chain": 56, 
         "Nama_Chain": "bsc", 
         "URL_Chain": "https://bscscan.com", 
-        "WARNA": "#f6cc6a",
+        "WARNA": "#f6b92d",
         "ICON": "https://cryptologos.cc/logos/bnb-bnb-logo.png",
         "BaseFEEDEX": "BNBUSDT",        
         "PAIRDEXS": {
