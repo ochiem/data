@@ -11,7 +11,7 @@
         "Kode_Chain": 1, 
         "Nama_Chain": "ethereum", 
         "URL_Chain": "https://etherscan.io",
-        "WARNA": "#8098ee",
+        "WARNA": "#5876df",
         "ICON": "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png",
         "BaseFEEDEX": "ETHUSDT",
         "PAIRDEXS": {  
