@@ -1,33 +1,51 @@
 {
-  "WALLET_CEX": {
-    "ETH": [
-      "0x4a6140ad47681021e653b29697a8604ea0259c65",
-      "0x5b7240ad47681021e653b29697a8604ea0259d66"
-    ],
-    "BSC": [
-      "0x4a6140ad47681021e653b29697a8604ea0259c65"
-    ],
-    "ARBITRUM": [
-      "0x4a6140ad47681021e653b29697a8604ea0259c65"
-    ],
-    "BASE": [
-      "0x4a6140ad47681021e653b29697a8604ea0259c65"
-    ],
-    "POLYGON": [
-      "0x4a6140ad47681021e653b29697a8604ea0259c65"
-    ],
-    "AVAX": [
-      "0x4a6140ad47681021e653b29697a8604ea0259c65"
+   "CEX_DATA" : {
+    "CHAINS": [
+      {
+       "NAMACHAIN": "ETH",
+       "CHAIN_CEX": "Ethereum",
+        "WALLETS": [
+          "0x4a6140ad47681021e653b29697a8604ea0259c65",
+          "0x5b7240ad47681021e653b29697a8604ea0259d66"
+        ]
+      },
+      {
+        "NAMACHAIN": "BSC",
+       "CHAIN_CEX": "Binance_Smart_Chain",
+        "WALLETS": [
+          "0x4a6140ad47681021e653b29697a8604ea0259c65"
+        ]
+      },
+      {
+        "NAMACHAIN": "ARBITRUM",
+       "CHAIN_CEX": "Arbitrum",
+        "WALLETS": [
+          "0x4a6140ad47681021e653b29697a8604ea0259c65"
+        ]
+      },
+      {
+        "NAMACHAIN": "BASE",
+       "CHAIN_CEX": "Base",
+        "WALLETS": [
+          "0x4a6140ad47681021e653b29697a8604ea0259c65"
+        ]
+      },
+      {
+        "NAMACHAIN": "POLYGON",
+       "CHAIN_CEX": "Polygon",
+        "WALLETS": [
+          "0x4a6140ad47681021e653b29697a8604ea0259c65"
+        ]
+      },
+      {
+        "NAMACHAIN": "AVAX",
+       "CHAIN_CEX": "Avalanche",
+        "WALLETS": [
+          "0x4a6140ad47681021e653b29697a8604ea0259c65"
+        ]
+      }
     ]
-  },
-  "CHAIN_CEX": {
-    "ETH": "Ethereum",
-    "BSC": "Binance_Smart_Chain",
-    "ARBITRUM": "Arbitrum",
-    "BASE": "BASE",
-    "POLYGON": "Polygon",
-    "AVAX": "Avalanche"
-  },
+  },  
   "API_CEX": {
     "APIKEY":"e2fa9a813ef8695d0ed19579ab64874dbf8383b02fe894a5e49bfa7ac175334d",
     "SECRETKEY":"851ed79292f0e5b1ba97240012ccb451cfc9134b48a10d8939a3a8603bb13b1a"
@@ -985,7 +1003,7 @@
       "ticker": "FIREIDR",
       "token": "FIRE",
       "pair_cex": "IDR",
-      "chain": "Polygon",
+      "chain": "POLYGON",
       "sc_in": "0x838c9634de6590b96aeadc4bc6db5c28fd17e3c2",
       "des_in": "18",
       "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
@@ -1081,7 +1099,7 @@
       "ticker": "GMXIDR",
       "token": "GMX",
       "pair_cex": "IDR",
-      "chain": "Arbitrum",
+      "chain": "ARBITRUM",
       "sc_in": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
       "des_in": "18",
       "sc_out": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -1285,7 +1303,7 @@
       "ticker": "KOMIDR",
       "token": "KOM",
       "pair_cex": "IDR",
-      "chain": "Polygon",
+      "chain": "POLYGON",
       "sc_in": "0xc004e2318722ea2b15499d6375905d75ee5390b8",
       "des_in": "8",
       "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
@@ -1405,7 +1423,7 @@
       "ticker": "MAGICIDR",
       "token": "MAGIC",
       "pair_cex": "IDR",
-      "chain": "Arbitrum",
+      "chain": "ARBITRUM",
       "sc_in": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
       "des_in": "18",
       "sc_out": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -1585,7 +1603,7 @@
       "ticker": "NAKAIDR",
       "token": "NAKA",
       "pair_cex": "IDR",
-      "chain": "Polygon",
+      "chain": "POLYGON",
       "sc_in": "0x311434160d7537be358930def317afb606c0d737",
       "des_in": "18",
       "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
@@ -1993,7 +2011,7 @@
       "ticker": "RDNTIDR",
       "token": "RDNT",
       "pair_cex": "IDR",
-      "chain": "Arbitrum",
+      "chain": "ARBITRUM",
       "sc_in": "0x3082cc23568ea640225c2467653db90e9250aaa0",
       "des_in": "18",
       "sc_out": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -2185,7 +2203,7 @@
       "ticker": "STGIDR",
       "token": "STG",
       "pair_cex": "IDR",
-      "chain": "Arbitrum",
+      "chain": "ARBITRUM",
       "sc_in": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
       "des_in": "18",
       "sc_out": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -2377,7 +2395,7 @@
       "ticker": "UXLINKIDR",
       "token": "UXLINK",
       "pair_cex": "IDR",
-      "chain": "Arbitrum",
+      "chain": "ARBITRUM",
       "sc_in": "0x1a6b3a62391eccaaa992ade44cd4afe6bec8cff1",
       "des_in": "18",
       "sc_out": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -2413,7 +2431,7 @@
       "ticker": "VOXELIDR",
       "token": "VOXEL",
       "pair_cex": "IDR",
-      "chain": "Polygon",
+      "chain": "POLYGON",
       "sc_in": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
       "des_in": "18",
       "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
@@ -2437,7 +2455,7 @@
       "ticker": "XAIIDR",
       "token": "XAI",
       "pair_cex": "IDR",
-      "chain": "Arbitrum",
+      "chain": "ARBITRUM",
       "sc_in": "0x4cb9a7ae498cedcbb5eae9f25736ae7d428c9d66",
       "des_in": "18",
       "sc_out": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
