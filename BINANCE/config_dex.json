@@ -76,7 +76,26 @@
                 "desPair": 6
             }
         }        
-    }, 
+    },  
+    "AVAX": { 
+        "Kode_Chain": 43114, 
+        "Nama_Chain": "avax", 
+        "URL_Chain": "https://snowtrace.io" , 
+        "WARNA":"#f28d8e",
+        "ICON":"https://cryptologos.cc/logos/avalanche-avax-logo.png",
+        "PAIRDEXS": {
+            "USDT":{
+                "symbolPair": "USDT",
+                "scAddressPair": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+                "desPair": "6"
+            },
+            "AVAX":{
+                "symbolPair": "AVAX",
+                "scAddressPair": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+                "desPair": "18"
+            }
+        }
+    },
     "POLYGON": { 
         "Kode_Chain": 137, 
         "Nama_Chain": "polygon", 
