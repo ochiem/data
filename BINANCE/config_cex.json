@@ -148,7 +148,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -170,7 +170,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -192,7 +192,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -214,7 +214,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -236,7 +236,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -258,7 +258,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -280,7 +280,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -302,7 +302,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -324,7 +324,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -346,7 +346,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -368,7 +368,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -390,7 +390,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -412,7 +412,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -434,7 +434,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -456,7 +456,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -478,7 +478,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -500,7 +500,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -522,7 +522,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -544,7 +544,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -566,7 +566,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -588,7 +588,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -610,7 +610,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -632,7 +632,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -654,7 +654,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -676,7 +676,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -698,7 +698,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -720,7 +720,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -742,7 +742,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -764,7 +764,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -786,7 +786,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -808,7 +808,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -830,7 +830,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -852,7 +852,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -874,7 +874,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -896,7 +896,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -918,7 +918,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -940,7 +940,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -962,7 +962,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -984,7 +984,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1006,7 +1006,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1028,7 +1028,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1050,7 +1050,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1072,7 +1072,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1094,7 +1094,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1116,7 +1116,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1138,7 +1138,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1160,7 +1160,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1182,7 +1182,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1204,7 +1204,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1226,7 +1226,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1248,7 +1248,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1270,7 +1270,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1292,7 +1292,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1314,7 +1314,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1336,7 +1336,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1358,7 +1358,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1380,7 +1380,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1402,7 +1402,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1424,7 +1424,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1446,7 +1446,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1468,7 +1468,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1490,7 +1490,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1512,7 +1512,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1534,7 +1534,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1556,7 +1556,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1578,7 +1578,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1600,7 +1600,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1622,7 +1622,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1644,7 +1644,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1666,7 +1666,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1688,7 +1688,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1710,7 +1710,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1732,7 +1732,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1754,7 +1754,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1776,7 +1776,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1798,7 +1798,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1820,7 +1820,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1842,7 +1842,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1864,7 +1864,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1886,7 +1886,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1908,7 +1908,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1930,7 +1930,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1952,7 +1952,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1974,7 +1974,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -1996,7 +1996,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2018,7 +2018,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2040,7 +2040,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2062,7 +2062,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2084,7 +2084,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2106,7 +2106,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2128,7 +2128,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2150,7 +2150,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2172,7 +2172,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2194,7 +2194,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2216,7 +2216,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2238,7 +2238,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2260,7 +2260,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2282,7 +2282,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2304,7 +2304,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2326,7 +2326,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2348,7 +2348,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2370,7 +2370,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2392,7 +2392,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2414,7 +2414,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2436,7 +2436,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2458,7 +2458,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2480,7 +2480,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2502,7 +2502,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2524,7 +2524,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2546,7 +2546,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2568,7 +2568,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2590,7 +2590,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2612,7 +2612,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2634,7 +2634,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2656,7 +2656,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2678,7 +2678,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2700,7 +2700,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2722,7 +2722,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2744,7 +2744,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2766,7 +2766,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2788,7 +2788,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2810,7 +2810,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2832,7 +2832,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2854,7 +2854,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2876,7 +2876,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2898,7 +2898,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2920,7 +2920,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2942,7 +2942,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2964,7 +2964,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -2986,7 +2986,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3008,7 +3008,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3030,7 +3030,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3052,7 +3052,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3074,7 +3074,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3096,7 +3096,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3118,7 +3118,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3140,7 +3140,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3162,7 +3162,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3184,7 +3184,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3206,7 +3206,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3228,7 +3228,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3250,7 +3250,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3272,7 +3272,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3294,7 +3294,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3316,7 +3316,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3338,7 +3338,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3360,7 +3360,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3382,7 +3382,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3404,7 +3404,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3426,7 +3426,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3448,7 +3448,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3470,7 +3470,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3492,7 +3492,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3514,7 +3514,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3536,7 +3536,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3558,7 +3558,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3580,7 +3580,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3602,7 +3602,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3624,7 +3624,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3646,7 +3646,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3668,7 +3668,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3690,7 +3690,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3712,7 +3712,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3734,7 +3734,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3756,7 +3756,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3778,7 +3778,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3800,7 +3800,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3822,7 +3822,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3844,7 +3844,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3866,7 +3866,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3888,7 +3888,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3910,7 +3910,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3932,7 +3932,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3954,7 +3954,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3976,7 +3976,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -3998,7 +3998,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4020,7 +4020,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4042,7 +4042,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4064,7 +4064,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4086,7 +4086,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4108,7 +4108,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4130,7 +4130,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4152,7 +4152,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4174,7 +4174,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4196,7 +4196,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4218,7 +4218,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4240,7 +4240,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4262,7 +4262,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4284,7 +4284,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4306,7 +4306,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4328,7 +4328,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4350,7 +4350,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4372,7 +4372,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4394,7 +4394,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4416,7 +4416,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4438,7 +4438,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4460,7 +4460,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4482,7 +4482,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4504,7 +4504,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4526,7 +4526,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4548,7 +4548,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4570,7 +4570,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4592,7 +4592,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4614,7 +4614,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4636,7 +4636,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4658,7 +4658,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4680,7 +4680,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4702,7 +4702,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4724,7 +4724,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4746,7 +4746,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4768,7 +4768,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4790,7 +4790,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4812,7 +4812,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4834,7 +4834,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4856,7 +4856,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4878,7 +4878,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4900,7 +4900,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4922,7 +4922,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4944,7 +4944,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4966,7 +4966,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -4988,7 +4988,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5010,7 +5010,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5032,7 +5032,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5054,7 +5054,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5076,7 +5076,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5098,7 +5098,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5120,7 +5120,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5142,7 +5142,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5164,7 +5164,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5186,7 +5186,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5208,7 +5208,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5230,7 +5230,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5252,7 +5252,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5274,7 +5274,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5296,7 +5296,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5318,7 +5318,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5340,7 +5340,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5362,7 +5362,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5384,7 +5384,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5406,7 +5406,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5428,7 +5428,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5450,7 +5450,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5472,7 +5472,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5494,7 +5494,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5516,7 +5516,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5538,7 +5538,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5560,7 +5560,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5582,7 +5582,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5604,7 +5604,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5626,7 +5626,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5648,7 +5648,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5670,7 +5670,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5692,7 +5692,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5714,7 +5714,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5736,7 +5736,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5758,7 +5758,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5780,7 +5780,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5802,7 +5802,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5824,7 +5824,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5846,7 +5846,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5868,7 +5868,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5890,7 +5890,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5912,7 +5912,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5934,7 +5934,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5956,7 +5956,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -5978,7 +5978,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6000,7 +6000,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6022,7 +6022,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6044,7 +6044,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6066,7 +6066,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6088,7 +6088,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6110,7 +6110,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6132,7 +6132,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6154,7 +6154,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6176,7 +6176,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6198,7 +6198,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6220,7 +6220,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6242,7 +6242,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6264,7 +6264,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6286,7 +6286,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6308,7 +6308,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6330,7 +6330,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6352,7 +6352,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6374,7 +6374,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6396,7 +6396,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6418,7 +6418,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6440,7 +6440,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6462,7 +6462,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6484,7 +6484,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6506,7 +6506,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6528,7 +6528,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6550,7 +6550,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6572,7 +6572,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6594,7 +6594,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6616,7 +6616,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6638,7 +6638,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6660,7 +6660,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6682,7 +6682,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6704,7 +6704,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6726,7 +6726,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6748,7 +6748,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6770,7 +6770,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6792,7 +6792,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6814,7 +6814,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6836,7 +6836,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6858,7 +6858,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6880,7 +6880,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6902,7 +6902,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6924,7 +6924,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6946,7 +6946,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6968,7 +6968,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -6990,7 +6990,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7012,7 +7012,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7034,7 +7034,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7056,7 +7056,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7078,7 +7078,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7100,7 +7100,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7122,7 +7122,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7144,7 +7144,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7166,7 +7166,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7188,7 +7188,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7210,7 +7210,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7232,7 +7232,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7254,7 +7254,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7276,7 +7276,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7298,7 +7298,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7320,7 +7320,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7342,7 +7342,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7364,7 +7364,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7386,7 +7386,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7408,7 +7408,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7430,7 +7430,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7452,7 +7452,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7474,7 +7474,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7496,7 +7496,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7518,7 +7518,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7540,7 +7540,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7562,7 +7562,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7584,7 +7584,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7606,7 +7606,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7628,7 +7628,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7650,7 +7650,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7672,7 +7672,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7694,7 +7694,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7716,7 +7716,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7738,7 +7738,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7760,7 +7760,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7782,7 +7782,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7804,7 +7804,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7826,7 +7826,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7848,7 +7848,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7870,7 +7870,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7892,7 +7892,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7914,7 +7914,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7936,7 +7936,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7958,7 +7958,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -7980,7 +7980,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8002,7 +8002,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8024,7 +8024,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8046,7 +8046,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8068,7 +8068,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8090,7 +8090,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8112,7 +8112,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8134,7 +8134,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8156,7 +8156,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8178,7 +8178,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8200,7 +8200,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8222,7 +8222,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8244,7 +8244,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8266,7 +8266,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8288,7 +8288,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8310,7 +8310,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8332,7 +8332,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8354,7 +8354,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8376,7 +8376,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8398,7 +8398,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8420,7 +8420,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8442,7 +8442,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8464,7 +8464,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8486,7 +8486,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8508,7 +8508,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8530,7 +8530,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8552,7 +8552,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8574,7 +8574,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8596,7 +8596,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8618,7 +8618,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8640,7 +8640,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8662,7 +8662,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8684,7 +8684,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8706,7 +8706,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8728,7 +8728,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8750,7 +8750,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8772,7 +8772,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8794,7 +8794,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8816,7 +8816,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8838,7 +8838,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8860,7 +8860,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8882,7 +8882,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8904,7 +8904,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8926,7 +8926,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8948,7 +8948,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8970,7 +8970,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -8992,7 +8992,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9014,7 +9014,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9036,7 +9036,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9058,7 +9058,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9080,7 +9080,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9102,7 +9102,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9124,7 +9124,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9146,7 +9146,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9168,7 +9168,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9190,7 +9190,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9212,7 +9212,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9234,7 +9234,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9256,7 +9256,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9278,7 +9278,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9300,7 +9300,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9322,7 +9322,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9344,7 +9344,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9366,7 +9366,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9388,7 +9388,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9410,7 +9410,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9432,7 +9432,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9454,7 +9454,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9476,7 +9476,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9498,7 +9498,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9520,7 +9520,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9542,7 +9542,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9564,7 +9564,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9586,7 +9586,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9608,7 +9608,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9630,7 +9630,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9652,7 +9652,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9674,7 +9674,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9696,7 +9696,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9718,7 +9718,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9740,7 +9740,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9762,7 +9762,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9784,7 +9784,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9806,7 +9806,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9828,7 +9828,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9850,7 +9850,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9872,7 +9872,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9894,7 +9894,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9916,7 +9916,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9938,7 +9938,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9960,7 +9960,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -9982,7 +9982,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10004,7 +10004,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10026,7 +10026,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10048,7 +10048,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10070,7 +10070,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10092,7 +10092,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10114,7 +10114,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10136,7 +10136,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10158,7 +10158,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10180,7 +10180,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10202,7 +10202,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10224,7 +10224,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10246,7 +10246,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10268,7 +10268,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10290,7 +10290,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10312,7 +10312,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10334,7 +10334,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10356,7 +10356,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10378,7 +10378,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10400,7 +10400,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10422,7 +10422,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10444,7 +10444,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10466,7 +10466,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10488,7 +10488,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10510,7 +10510,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10532,7 +10532,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10554,7 +10554,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10576,7 +10576,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10598,7 +10598,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10620,7 +10620,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10642,7 +10642,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10664,7 +10664,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10686,7 +10686,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10708,7 +10708,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10730,7 +10730,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10752,7 +10752,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10774,7 +10774,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10796,7 +10796,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10818,7 +10818,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10840,7 +10840,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10862,7 +10862,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10884,7 +10884,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10906,7 +10906,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10928,7 +10928,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10950,7 +10950,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10972,7 +10972,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -10994,7 +10994,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11016,7 +11016,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11038,7 +11038,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11060,7 +11060,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11082,7 +11082,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11104,7 +11104,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11126,7 +11126,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11148,7 +11148,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11170,7 +11170,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11192,7 +11192,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11214,7 +11214,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11236,7 +11236,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11258,7 +11258,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11280,7 +11280,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11302,7 +11302,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11324,7 +11324,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11346,7 +11346,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11368,7 +11368,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11390,7 +11390,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11412,7 +11412,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11434,7 +11434,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11456,7 +11456,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11478,7 +11478,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11500,7 +11500,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11522,7 +11522,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11544,7 +11544,7 @@
 
       "pair_dex": "ETH",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11566,7 +11566,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11588,7 +11588,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     },
 
@@ -11610,7 +11610,7 @@
 
       "pair_dex": "USDT",
 
-      "status": "TRUE"
+      "status": true
 
     }
 
