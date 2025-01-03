@@ -1,0 +1,145 @@
+{
+    "DEXS": [
+        "1INCH",
+        "ODOS",
+        "KYBERSWAP",
+        "PARASWAP",
+        "OX",
+        "OKX"
+    ],
+    "ETH": { 
+        "Kode_Chain": 1, 
+        "Nama_Chain": "ethereum", 
+        "URL_Chain": "https://etherscan.io",
+        "WARNA": "#5876df",
+        "ICON": "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png",
+        "BaseFEEDEX": "ETHUSDT",
+        "PAIRDEXS": {  
+            "ETH": {
+                "symbolPair": "ETH",
+                "scAddressPair": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "desPair": 18
+            },
+            "USDT": {
+                "symbolPair": "USDT",
+                "scAddressPair": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "desPair": 6
+            },
+            "BNT": {
+                "symbolPair": "BNT",
+                "scAddressPair": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
+                "desPair": 18
+            }
+        } 
+    }, 
+    "BSC": { 
+        "Kode_Chain": 56, 
+        "Nama_Chain": "bsc", 
+        "URL_Chain": "https://bscscan.com", 
+        "WARNA": "#f6b92d",
+        "ICON": "https://cryptologos.cc/logos/bnb-bnb-logo.png",
+        "BaseFEEDEX": "BNBUSDT",        
+        "PAIRDEXS": {
+            "USDT": {
+                "symbolPair": "USDT",
+                "scAddressPair": "0x55d398326f99059fF775485246999027B3197955",
+                "desPair": 18
+            },
+            "BNB": {
+                "symbolPair": "BNB",
+                "scAddressPair": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                "desPair": 18
+            }
+        }
+    },
+    "BASE": { 
+        "Kode_Chain": 8453, 
+        "Nama_Chain": "base", 
+        "URL_Chain": "https://basescan.org/", 
+        "WARNA": "#1e46f9",
+        "ICON": "https://avatars.githubusercontent.com/u/108554348?v=4",
+        "BaseFEEDEX": "ETHUSDT",
+        "PAIRDEXS": {
+            "USDT": {
+                "symbolPair": "USDT",
+                "scAddressPair": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+                "desPair": 6
+            },
+            "ETH": {
+                "symbolPair": "ETH",
+                "scAddressPair": "0x4200000000000000000000000000000000000006",
+                "desPair": 18
+            },
+            "USDC": {
+                "symbolPair": "USDC",
+                "scAddressPair": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                "desPair": 6
+            }
+        }        
+    }, 
+    "POLYGON": { 
+        "Kode_Chain": 137, 
+        "Nama_Chain": "polygon", 
+        "URL_Chain": "https://polygonscan.com", 
+        "ICON": "https://s2.coinmarketcap.com/static/img/coins/200x200/3890.png",
+        "WARNA": "#a05df6",
+        "BaseFEEDEX": "POLUSDT",
+        "PAIRDEXS": {
+            "USDT": {
+                "symbolPair": "USDT",
+                "scAddressPair": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+                "desPair": 6
+            },
+            "POL": {
+                "symbolPair": "POL",
+                "scAddressPair": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+                "desPair": 18
+            },
+            "USDC": {
+                "symbolPair": "USDC",
+                "scAddressPair": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+                "desPair": 6
+            }
+        }
+    }, 
+    "ARBITRUM": { 
+        "Kode_Chain": 42161, 
+        "Nama_Chain": "arbitrum", 
+        "URL_Chain": "https://arbiscan.io",
+        "WARNA": "#16397c",
+        "ICON": "https://wiki.dextrac.com:3443/images/1/11/Arbitrum_Logo.png",
+        "BaseFEEDEX": "ETHUSDT",  
+        "PAIRDEXS": {  
+            "USDT": {
+                "symbolPair": "USDT",
+                "scAddressPair": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+                "desPair": 6
+            },
+            "USDC": {
+                "symbolPair": "USDC",
+                "scAddressPair": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+                "desPair": 6
+            }
+        }
+    },
+    "OPTIMISM": { 
+        "Kode_Chain": 10, 
+        "Nama_Chain": "OPTIMISM", 
+        "URL_Chain": "https://optimistic.etherscan.io",
+        "WARNA": "#ff0421",
+        "ICON": "https://s2.coinmarketcap.com/static/img/coins/200x200/11840.png",
+        "BaseFEEDEX": "ETHUSDT",  
+        "PAIRDEXS": {  
+            "USDT": {
+                "symbolPair": "USDT",
+                "scAddressPair": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+                "desPair": 6
+            },
+            "USDC": {
+                "symbolPair": "ETH",
+                "scAddressPair": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+                "desPair": 6
+            }
+        }
+    }
+}
