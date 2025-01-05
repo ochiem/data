@@ -29,6 +29,7 @@
             position: sticky;
             top: 0;           
         }
+        
     </style>
 </head>
 <body>
@@ -52,7 +53,7 @@
         </div>
 
         <!-- Statistics Section -->
-        <div class="uk-margin">
+        <div class="uk-margin ">
             <div id="tokenStats" class="uk-margin-top"></div>
         </div>
 
@@ -248,10 +249,11 @@
         function displayTokens() {
             const filterChain = $("#filterChain").val();
             const tokens = getLocalStorageData("BINANCE_TOKENS") || [];
-            const filteredTokens = (filterChain && filterChain !== "ALL") ? tokens.filter(token => token.namachain.toUpperCase() === filterChain.toUpperCase()) : tokens;
+            const filteredTokens = (filterChain && filterChain !== "ALL") ? tokens.filter(token => token.chaincex.toUpperCase() === filterChain.toUpperCase()) : tokens;
 
             let tableHTML = `<table class="uk-table uk-table-divider  uk-table-striped uk-table-hover">
                 <thead class=sticky-header>
+                    <tr></tr>
                     <tr>
                         <th>No</th>
                         <th>Token</th>
