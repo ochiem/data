@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Checker Desimals</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.18/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.18/dist/js/uikit.min.js"></script>
+</head>
+<body class="uk-container uk-margin-top">
+
+  <h1 class="uk-heading-line uk-text-center">
+    <span>Token Details Checker</span>
+  </h1>
+
+  <div class="uk-margin uk-text-center">    
+    <a href="#" id="downloadTemplate" class="uk-button uk-button-default">Download Format CSV</a>
+    <input type="file" id="csvInput" accept=".csv" class="uk-button uk-button-default uk-margin-small-left" />
+    <select id="chainSelect" class="uk-select uk-width-medium">
+        <option value="bsc">Binance Smart Chain</option>
+        <option value="polygon">Polygon</option>
+        <option value="base">Base</option>
+        <option value="arbitrum">Arbitrum</option>
+        <option value="avax">Avalanche</option>
+        <option value="eth">Ethereum</option>
+        <option value="optimism">Optimism</option>
+      </select>
+  
+    <button id="loadTokens" class="uk-button uk-button-primary uk-margin-small-left">
+      Cek Desimal
+    </button>
+
+    <div id="loadingSpinner" class="uk-hidden uk-margin-small-top">
+      <div uk-spinner></div> <span>Proses pengecekan desimal sedang berlangsung...</span>
+    </div>
+
+    <div id="processComplete" class="uk-hidden uk-alert-success uk-margin-small-top" uk-alert>
+      Proses pengecekan selesai! <a id="downloadResults" href="#">Download Hasil</a>
+    </div>
+  </div>
+
+  <table class="uk-table uk-table-divider uk-table-hover">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Coin</th>
+        <th>Smart Contract (SC)</th>
+        <th>Decimals</th>
+      </tr>
+    </thead>
+    <tbody id="tokenTableBody"></tbody>
+  </table>
+
+  <script>
+    function _0x4d27(){const _0x15b0a3=['removeClass','append','createObjectURL','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','#loadingSpinner','55OEtKmj','671810IRhRjH','isAddress','change','map','addClass','195504NYkbKx','download','1428704TCWNee','Coin,Smart\x20Contract\x20(SC)\x0aTOKEN1,0x0000000000000000000000000000000000000000\x0aTOKEN2,0x1111111111111111111111111111111111111111\x0a','#loadTokens','split','bsc','Coin,Smart\x20Contract\x20(SC),Decimals\x0a','https://mainnet.infura.io/v3/','810345zbSApU','result','click','9d0429abadc34232af7d5c0e6ab98631','https://bsc-dataseed.binance.org/','#downloadTemplate','eth','length','function','files','coin','#csvInput','ready','835812kJyxjh','decimals','#processComplete','revokeObjectURL','#tokenTableBody','result.csv','4CsSeyy','href','trim','https://avalanche-mainnet.infura.io/v3/','https://polygon-rpc.com','createElement','https://mainnet.base.org','815202pcygMm','methods','uk-hidden','#downloadResults','target','12MMJvTT','7nofdVp','384479HlQYFN','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','Error\x20fetching\x20decimals\x20for\x20','uint8','#chainSelect','empty','https://arbitrum-mainnet.infura.io/v3/','onload','Silakan\x20unggah\x20file\x20CSV\x20terlebih\x20dahulu.'];_0x4d27=function(){return _0x15b0a3;};return _0x4d27();}function _0x56f2(_0x592017,_0x218908){const _0x4d2732=_0x4d27();return _0x56f2=function(_0x56f239,_0x3694a5){_0x56f239=_0x56f239-0x196;let _0x2c1df1=_0x4d2732[_0x56f239];return _0x2c1df1;},_0x56f2(_0x592017,_0x218908);}const _0x1f6186=_0x56f2;(function(_0x54711c,_0x3e6be9){const _0x1b238b=_0x56f2,_0x34a311=_0x54711c();while(!![]){try{const _0x2da953=-parseInt(_0x1b238b(0x1ac))/0x1+-parseInt(_0x1b238b(0x1aa))/0x2*(-parseInt(_0x1b238b(0x1c1))/0x3)+-parseInt(_0x1b238b(0x19e))/0x4*(-parseInt(_0x1b238b(0x1ca))/0x5)+parseInt(_0x1b238b(0x1a5))/0x6*(parseInt(_0x1b238b(0x1ab))/0x7)+parseInt(_0x1b238b(0x1c3))/0x8+parseInt(_0x1b238b(0x198))/0x9+parseInt(_0x1b238b(0x1bc))/0xa*(-parseInt(_0x1b238b(0x1bb))/0xb);if(_0x2da953===_0x3e6be9)break;else _0x34a311['push'](_0x34a311['shift']());}catch(_0x2088b9){_0x34a311['push'](_0x34a311['shift']());}}}(_0x4d27,0x3a990),$(document)[_0x1f6186(0x197)](function(){const _0x4fb0f1=_0x1f6186,_0x2c9a99=_0x4fb0f1(0x1cd),_0x2396a7={'eth':_0x4fb0f1(0x1c9)+_0x2c9a99,'bsc':_0x4fb0f1(0x1ce),'polygon':_0x4fb0f1(0x1a2),'base':_0x4fb0f1(0x1a4),'arbitrum':_0x4fb0f1(0x1b3)+_0x2c9a99,'avax':_0x4fb0f1(0x1a1)+_0x2c9a99,'optimism':'https://optimism-mainnet.infura.io/v3/'+_0x2c9a99},_0x3576f5=[{'constant':!![],'inputs':[],'name':_0x4fb0f1(0x199),'outputs':[{'name':'','type':_0x4fb0f1(0x1b0)}],'type':_0x4fb0f1(0x1d2)}];let _0x4ba1c1=[],_0x47be96=_0x4fb0f1(0x1c7);$(_0x4fb0f1(0x1b1))['change'](function(){_0x47be96=$(this)['val']();}),$(_0x4fb0f1(0x196))['on'](_0x4fb0f1(0x1be),function(_0x49fd44){const _0x52dc07=_0x4fb0f1,_0x3d10fb=_0x49fd44[_0x52dc07(0x1a9)][_0x52dc07(0x1d3)][0x0];if(_0x3d10fb){const _0x5119ca=new FileReader();_0x5119ca[_0x52dc07(0x1b4)]=function(_0x5ce502){const _0x13615f=_0x52dc07,_0x28d86c=_0x5ce502[_0x13615f(0x1a9)][_0x13615f(0x1cb)];_0x4ba1c1=_0x52cf74(_0x28d86c);},_0x5119ca['readAsText'](_0x3d10fb);}});function _0x52cf74(_0x55bc31){const _0x3b0d4b=_0x4fb0f1,_0x15c696=_0x55bc31[_0x3b0d4b(0x1c6)]('\x0a');return _0x15c696['slice'](0x1)[_0x3b0d4b(0x1bf)](_0x468fdf=>{const _0x2a232d=_0x3b0d4b,[_0x20b97a,_0x478296]=_0x468fdf[_0x2a232d(0x1c6)](',');return{'coin':_0x20b97a[_0x2a232d(0x1a0)](),'sc':_0x478296[_0x2a232d(0x1a0)]()};});}function _0x532613(_0x415a55,_0x18e407=_0x4fb0f1(0x19d)){const _0x150af5=_0x4fb0f1,_0x2d743a=new Blob([_0x415a55],{'type':'text/csv'}),_0xb01593=URL[_0x150af5(0x1b8)](_0x2d743a),_0x55e426=document[_0x150af5(0x1a3)]('a');_0x55e426[_0x150af5(0x19f)]=_0xb01593,_0x55e426[_0x150af5(0x1c2)]=_0x18e407,_0x55e426[_0x150af5(0x1cc)](),URL[_0x150af5(0x19b)](_0xb01593);}$(_0x4fb0f1(0x1cf))[_0x4fb0f1(0x1cc)](function(){const _0x2717c8=_0x4fb0f1,_0x11334f=_0x2717c8(0x1c4);_0x532613(_0x11334f,'template.csv');});async function _0x57853d(){const _0x1ac24a=_0x4fb0f1;if(!_0x4ba1c1[_0x1ac24a(0x1d1)]){alert(_0x1ac24a(0x1b5));return;}$(_0x1ac24a(0x1ba))[_0x1ac24a(0x1b6)](_0x1ac24a(0x1a7)),$(_0x1ac24a(0x19a))[_0x1ac24a(0x1c0)](_0x1ac24a(0x1a7)),$(_0x1ac24a(0x19c))[_0x1ac24a(0x1b2)]();const _0x302a9b=new Web3(_0x2396a7[_0x47be96]);let _0x57a9f0=_0x1ac24a(0x1c8);for(let _0x21e850=0x0;_0x21e850<_0x4ba1c1['length'];_0x21e850++){const _0x355e3b=_0x4ba1c1[_0x21e850];let _0x20791a='N/A';if(_0x355e3b['sc']&&_0x302a9b['utils'][_0x1ac24a(0x1bd)](_0x355e3b['sc'])){const _0x2384fa=new _0x302a9b[(_0x1ac24a(0x1d0))]['Contract'](_0x3576f5,_0x355e3b['sc']);try{_0x20791a=await _0x2384fa[_0x1ac24a(0x1a6)][_0x1ac24a(0x199)]()['call']();}catch(_0x4b9f55){console['error'](_0x1ac24a(0x1af)+_0x355e3b[_0x1ac24a(0x1d4)]+':',_0x4b9f55);}}$(_0x1ac24a(0x19c))[_0x1ac24a(0x1b7)](_0x1ac24a(0x1ad)+(_0x21e850+0x1)+_0x1ac24a(0x1ae)+_0x355e3b[_0x1ac24a(0x1d4)]+_0x1ac24a(0x1ae)+_0x355e3b['sc']+_0x1ac24a(0x1ae)+_0x20791a+_0x1ac24a(0x1b9)),_0x57a9f0+=_0x355e3b['coin']+','+_0x355e3b['sc']+','+_0x20791a+'\x0a';}$(_0x1ac24a(0x1ba))[_0x1ac24a(0x1c0)]('uk-hidden'),$(_0x1ac24a(0x19a))[_0x1ac24a(0x1b6)](_0x1ac24a(0x1a7)),$(_0x1ac24a(0x1a8))['off'](_0x1ac24a(0x1cc))['on'](_0x1ac24a(0x1cc),function(){_0x532613(_0x57a9f0);});}$(_0x4fb0f1(0x1c5))[_0x4fb0f1(0x1cc)](_0x57853d);}));
+  </script>
+</body>
+</html>
