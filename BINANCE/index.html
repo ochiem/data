@@ -44,21 +44,38 @@
     <div class="uk-container">
         <h2 style=" text-align: center; margin: 10px; font-size: 36px; ">Tokens Management</h2>
         <!-- Sync Data Section -->
-        <div class="uk-flex uk-flex-middle uk-flex-between">
-            <div>
-                <div class="uk-button-group">
-                    <button class="uk-button uk-button-success uk-button-small"  onclick="SYNCData()">Sync Data</button>
-                    <button class="uk-button uk-button-danger uk-button-small" >Scan Price</button>
-                    <button class="uk-button uk-button-primary uk-button-small" onclick="editToken('')">Add Token</button>
+        <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
+            <div class="uk-button-group">
+                <!-- Sync Data Button -->
+                <button class="uk-button uk-button-small uk-button-success" onclick="SYNCData()">Sync Data</button>
+        
+                <!-- Scan Price Button -->
+                <button class="uk-button uk-button-small uk-button-danger">Scan Price</button>
+        
+                <!-- Download CSV Button -->
+                <button class="uk-button uk-button-small uk-button-primary" onclick="downloadCSV()">Download CSV</button>
+        
+                <!-- Import CSV Input -->
+                <div uk-form-custom="target: true">
+                    <input type="file" id="csvFile" accept=".csv" onchange="importCSV()" class="uk-input uk-width-small uk-form-small">
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" aria-label="Custom controls" disabled>
                 </div>
+        
+                <!-- Add Token Button -->
+                <button class="uk-button uk-button-small uk-button-primary" onclick="editToken('')">Add Token</button>
             </div>
-            <div>
-                <select id="filterChain" class="uk-select uk-width-auto" onchange="displayTokens()">
+        
+            <div class="uk-margin-left">
+                <!-- Select Chain Dropdown -->
+                <select id="filterChain" class="uk-select uk-width-auto uk-form-small" onchange="displayTokens()">
                     <option value="">Select Chain</option>
                     <!-- Pilihan Dinamis Akan Ditambahkan Di Sini -->
                 </select>
             </div>
         </div>
+        
+        
+        
         
         <!-- Statistics Section -->
         <div class="uk-margin ">
@@ -300,8 +317,8 @@
                 const updatedTokens = dataTOKEN.filter(token => token.UID !== parseInt(tokenUID)); // Menjamin UID perbandingan sesuai
                 setLocalStorageData("BINANCE_TOKENS", updatedTokens);
                 UIkit.notification("Token Berhasil di HAPUS", { status: 'success' });
-                calculateTokenStats();
                 displayTokens(); // Menampilkan data yang terbaru
+                calculateTokenStats();
             }).catch(() => {
                 UIkit.notification("Token deletion canceled!", { status: 'warning' });
             });
@@ -523,6 +540,81 @@
             }).fail(() => {
                 UIkit.notification("Failed to sync CEX data!", { status: 'danger' });
             });
+        }
+
+        // Import CSV
+        function importCSV() {
+            const fileInput = $("#csvFile")[0];
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please select a file!");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const csvData = event.target.result;
+                const rows = csvData.split("\n").filter(row => row.trim());
+
+                if (rows.length < 2) {
+                    alert("Invalid CSV format or empty file!");
+                    return;
+                }
+
+                // Parse CSV into array of objects
+                const tokens = rows.slice(1).map(row => {
+                    const cols = row.split(",");
+                    return {
+                        UID: parseInt(cols[0]),
+                        token: cols[1],
+                        namachain: cols[2],
+                        sc_in: cols[3],
+                        des_in: parseFloat(cols[4]),
+                        pair_cex: cols[5],
+                        sc_out: cols[6],
+                        des_out: parseFloat(cols[7]),
+                        pair_dex: cols[8],
+                        status: cols[9] === "true",
+                        chaincex: cols[10]
+                    };
+                });
+
+                // Replace existing data
+                localStorage.setItem("BINANCE_TOKENS", JSON.stringify(tokens));
+
+                // Refresh table
+                displayTokens();
+                UIkit.notification("Import Data successfully!", { status: 'success' });
+            };
+
+            reader.readAsText(file);
+        }
+
+        // Download CSV
+        function downloadCSV() {
+            const tokens = JSON.parse(localStorage.getItem("BINANCE_TOKENS")) || [];
+            if (tokens.length === 0) {
+                alert("No data available to download!");
+                return;
+            }
+
+            const csvContent = [
+                "UID,Token,Nama Chain,SC IN,Des IN,Pair CEX,SC OUT,Des OUT,Pair DEX,Status,Chain CEX",
+                ...tokens.map(token =>
+                    `${token.UID},${token.token},${token.namachain},${token.sc_in},${token.des_in},${token.pair_cex},${token.sc_out},${token.des_out},${token.pair_dex},${token.status},${token.chaincex}`
+                )
+            ].join("\n");
+
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const link = $("<a>")
+                .attr("href", url)
+                .attr("download", "tokens.csv")
+                .appendTo("body");
+
+            link[0].click();
+            link.remove();
         }
 
         $(document).ready(function () { 
