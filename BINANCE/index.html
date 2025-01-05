@@ -43,38 +43,34 @@
 <body>
     <div class="uk-container">
         <h2 style=" text-align: center; margin: 10px; font-size: 36px; ">Tokens Management</h2>
-        <!-- Sync Data Section -->
         <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
-            <div class="uk-button-group">
+            <div class="uk-button-group">                
                 <!-- Sync Data Button -->
-                <button class="uk-button uk-button-small uk-button-success" onclick="SYNCData()">Sync Data</button>
-        
-                <!-- Scan Price Button -->
-                <button class="uk-button uk-button-small uk-button-danger">Scan Price</button>
-        
+                <button class="uk-button uk-form-small uk-button-success" onclick="SYNCData()">Sync Data</button>
+
                 <!-- Download CSV Button -->
-                <button class="uk-button uk-button-small uk-button-primary" onclick="downloadCSV()">Download CSV</button>
-        
-                <!-- Import CSV Input -->
-                <div uk-form-custom="target: true">
-                    <input type="file" id="csvFile" accept=".csv" onchange="importCSV()" class="uk-input uk-width-small uk-form-small">
-                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" aria-label="Custom controls" disabled>
-                </div>
-        
+                <button class="uk-button uk-form-small uk-button-secondary" onclick="downloadCSV()">Download</button>
+                
+                <!-- Scan Price Button -->
+                <button class="uk-button uk-form-small uk-button-danger">Scan Price</button>
+                
                 <!-- Add Token Button -->
-                <button class="uk-button uk-button-small uk-button-primary" onclick="editToken('')">Add Token</button>
+                <button class="uk-button uk-form-small uk-button-primary" onclick="editToken('')">Add Token</button>
             </div>
         
             <div class="uk-margin-left">
-                <!-- Select Chain Dropdown -->
-                <select id="filterChain" class="uk-select uk-width-auto uk-form-small" onchange="displayTokens()">
-                    <option value="">Select Chain</option>
+                 <!-- Select Chain Dropdown -->
+                 <select id="filterChain" class="uk-select uk-width-auto uk-form-small" onchange="displayTokens()">
+                    <option value="">FILTER Chain</option>
                     <!-- Pilihan Dinamis Akan Ditambahkan Di Sini -->
                 </select>
+                <div uk-form-custom="target: true">
+                    <input type="file" id="csvFile" accept=".csv" onchange="importCSV()" class="uk-input uk-width-small uk-form-small">
+                    <input class="uk-input uk-form-width-medium  uk-form-small uk-button-secondary" type="text" placeholder="Import file" aria-label="Custom controls" disabled>
+                </div>
+               
             </div>
         </div>
-        
-        
         
         
         <!-- Statistics Section -->
