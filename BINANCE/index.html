@@ -13,6 +13,7 @@
             width: 96%;
             max-width: none;
         }
+        
         /* Style untuk sel dalam header */
         .sticky-header th {  
             background-color: #f6e6bf;
@@ -29,18 +30,25 @@
             position: sticky;
             top: 0;           
         }
-        
+        #tokenStats {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: white;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
     </style>
 </head>
 <body>
     <div class="uk-container">
-        <h1 class="uk-heading-medium uk-text-center">Tokens Management</h1>
-
+        <h2 style=" text-align: center; margin: 10px; font-size: 36px; ">Tokens Management</h2>
         <!-- Sync Data Section -->
-        <div class="uk-margin uk-flex uk-flex-middle uk-flex-between">
+        <div class="uk-flex uk-flex-middle uk-flex-between">
             <div>
                 <div class="uk-button-group">
                     <button class="uk-button uk-button-success uk-button-small"  onclick="SYNCData()">Sync Data</button>
+                    <button class="uk-button uk-button-danger uk-button-small" >Scan Price</button>
                     <button class="uk-button uk-button-primary uk-button-small" onclick="editToken('')">Add Token</button>
                 </div>
             </div>
@@ -51,7 +59,7 @@
                 </select>
             </div>
         </div>
-
+        
         <!-- Statistics Section -->
         <div class="uk-margin ">
             <div id="tokenStats" class="uk-margin-top"></div>
@@ -60,75 +68,75 @@
         <div class="uk-margin">
             <div id="tokenList" class="uk-margin-top"></div>            
         </div>
-    </div>
 
-   <!-- Form untuk Add/Edit Token -->
-    <div id="tokenFormModal" uk-overflow-auto>
-        <div class="uk-modal-dialog uk-modal-body">
-            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-            <h2 class="uk-text-center" id="formTitle">Tambah Token Baru</h2>
-            <form id="tokenForm">             
-                <input type="hidden" id="UID" value="">   
-                <!-- Pair CEX and Pair DEX -->
-                <div class="uk-margin uk-grid uk-child-width-1-2@s" uk-grid>
+        <!-- Form untuk Add/Edit Token -->
+        <div id="tokenFormModal" uk-overflow-auto>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                <h2 class="uk-text-center" id="formTitle">Tambah Token Baru</h2>
+                <form id="tokenForm">             
+                    <input type="hidden" id="UID" value="">   
+                    <!-- Pair CEX and Pair DEX -->
+                    <div class="uk-margin uk-grid uk-child-width-1-2@s" uk-grid>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Token</label>
+                            <input class="uk-input" type="text" id="tokenName" placeholder="Token Name" required>
+                        </div>
+                        <div>
+                            <label class="uk-form-label">Pair CEX</label>
+                            <input class="uk-input" type="text" id="pair_cex" placeholder="Pair CEX" required>
+                        </div>
+                    </div>
+                    <!-- SC In and Des In -->
+                    <div class="uk-margin uk-grid" uk-grid>
+                        <div class="uk-width-4-5">
+                            <label class="uk-form-label">SC In</label>
+                            <input class="uk-input" type="text" id="sc_in" placeholder="SC In" required>
+                        </div>
+                        <div class="uk-width-1-5">
+                            <label class="uk-form-label">Des In</label>
+                            <input class="uk-input" type="number" id="des_in" placeholder="Des In" required>
+                        </div>
+                    </div>
+                    <!-- Pair CEX and Pair DEX -->
+                    <div class="uk-margin uk-grid uk-child-width-1-2@s" uk-grid>
+                        <div>
+                            <label class="uk-form-label">Pair DEX</label>
+                            <input class="uk-input" type="text" id="pair_dex" placeholder="Pair DEX" required>
+                        </div>
+                    </div>
+                    <!-- SC Out and Des Out -->
+                    <div class="uk-margin uk-grid" uk-grid>
+                        <div class="uk-width-4-5">
+                            <label class="uk-form-label">SC Out</label>
+                            <input class="uk-input" type="text" id="sc_out" placeholder="SC Out" required>
+                        </div>
+                        <div class="uk-width-1-5">
+                            <label class="uk-form-label">Des Out</label>
+                            <input class="uk-input" type="number" id="des_out" placeholder="Des Out" required>
+                        </div>
+                    </div>
+            
+                    <div class="uk-margin uk-grid uk-child-width-1-2@s" uk-grid>
+                        <div class="uk-width-2-5">
+                            <label class="uk-form-label">Status </label><br/>
+                            <input class="uk-checkbox" type="checkbox" id="status"> 
+                            <label class="uk-form-label">Aktif </label>
+                        </div> 
+                        <div class="uk-width-3-5">
+                            <label class="uk-form-label">Chain </label>
+                            <select class="uk-select" id="chainIN" required>
+                            </select>
+                        </div>   
+                    </div>
+
                     <div class="uk-margin">
-                        <label class="uk-form-label">Token</label>
-                        <input class="uk-input" type="text" id="tokenName" placeholder="Token Name" required>
+                        <button type="submit" class="uk-button uk-button-primary uk-width-1-1">Save</button>
                     </div>
-                    <div>
-                        <label class="uk-form-label">Pair CEX</label>
-                        <input class="uk-input" type="text" id="pair_cex" placeholder="Pair CEX" required>
-                    </div>
-                </div>
-                <!-- SC In and Des In -->
-                <div class="uk-margin uk-grid" uk-grid>
-                    <div class="uk-width-4-5">
-                        <label class="uk-form-label">SC In</label>
-                        <input class="uk-input" type="text" id="sc_in" placeholder="SC In" required>
-                    </div>
-                    <div class="uk-width-1-5">
-                        <label class="uk-form-label">Des In</label>
-                        <input class="uk-input" type="number" id="des_in" placeholder="Des In" required>
-                    </div>
-                </div>
-                <!-- Pair CEX and Pair DEX -->
-                <div class="uk-margin uk-grid uk-child-width-1-2@s" uk-grid>
-                    <div>
-                        <label class="uk-form-label">Pair DEX</label>
-                        <input class="uk-input" type="text" id="pair_dex" placeholder="Pair DEX" required>
-                    </div>
-                </div>
-                <!-- SC Out and Des Out -->
-                <div class="uk-margin uk-grid" uk-grid>
-                    <div class="uk-width-4-5">
-                        <label class="uk-form-label">SC Out</label>
-                        <input class="uk-input" type="text" id="sc_out" placeholder="SC Out" required>
-                    </div>
-                    <div class="uk-width-1-5">
-                        <label class="uk-form-label">Des Out</label>
-                        <input class="uk-input" type="number" id="des_out" placeholder="Des Out" required>
-                    </div>
-                </div>
-        
-                <div class="uk-margin uk-grid uk-child-width-1-2@s" uk-grid>
-                    <div class="uk-width-2-5">
-                        <label class="uk-form-label">Status </label><br/>
-                        <input class="uk-checkbox" type="checkbox" id="status"> 
-                        <label class="uk-form-label">Aktif </label>
-                    </div> 
-                    <div class="uk-width-3-5">
-                        <label class="uk-form-label">Chain </label>
-                        <select class="uk-select" id="chainIN" required>
-                        </select>
-                    </div>   
-                </div>
-
-                <div class="uk-margin">
-                    <button type="submit" class="uk-button uk-button-primary uk-width-1-1">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>    
+                </form>
+            </div>
+        </div>    
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit-icons.min.js"></script>
@@ -151,6 +159,59 @@
                 localStorage.setItem(key, JSON.stringify(data));
             }
         }
+
+        // Display Tokens in Table with Filter
+        function displayTokens() {
+            const filterChain = $("#filterChain").val();
+            const tokens = getLocalStorageData("BINANCE_TOKENS") || [];
+            const filteredTokens = (filterChain && filterChain !== "ALL") ? tokens.filter(token => token.chaincex.toUpperCase() === filterChain.toUpperCase()) : tokens;
+
+            let tableHTML = `<table class="uk-table uk-table-divider  uk-table-striped uk-table-hover">
+                <thead class=sticky-header>
+                    <tr></tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Token</th>
+                        <th>Nama Chain</th>
+                        <th>Pair CEX</th>                       
+                        <th>Pair DEX</th>
+                        <th>Status</th>
+                        <th>Deposit</th>
+                        <th>Withdraw</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            filteredTokens.forEach((token, index) => {
+                tableHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td class=uk-text-nowrap>${token.token} <br/> <span class=uk-text-small uk-text-success>${token.sc_in} - {${token.des_in}}</span></td>                        
+                        <td>${token.namachain}</td>
+                        <td>${token.pair_cex}</td>
+                        <td class=uk-text-nowrap>${token.pair_dex} <br/> <span class=uk-text-small uk-text-success>${token.sc_out} - ${token.des_out} </span>
+                        </td>
+                        <td>
+                            <input type="checkbox" class="uk-checkbox" ${token.status ? "checked" : ""} onchange="updateTokenStatus('${token.token}', this.checked)">
+                        </td>
+                        <td>${token.deposit === true ? 'OPEN' : token.deposit === false ? 'CLOSE' : '-'}</td>
+                        <td>${token.withdraw === true ? 'OPEN' : token.withdraw === false ? 'CLOSE' : '-'}</td>
+
+                        <td>
+                            <div class="uk-button-group">
+                            <button class="uk-button uk-button-primary uk-button-small" onclick="editToken('${token.UID}')">ED</button>
+                            <button class="uk-button uk-button-danger uk-button-small" onclick="deleteToken('${token.UID}')">DEL</button>
+                            </div>
+                        </td>
+
+                    </tr>`;
+            });
+
+            tableHTML += `</tbody></table>`;
+            $("#tokenList").html(tableHTML);
+        }
+
         // Fungsi edit token
         function editToken(tokenUID) {
             // Cari token berdasarkan UID (konversi ke float untuk konsistensi)
@@ -239,6 +300,7 @@
                 const updatedTokens = dataTOKEN.filter(token => token.UID !== parseInt(tokenUID)); // Menjamin UID perbandingan sesuai
                 setLocalStorageData("BINANCE_TOKENS", updatedTokens);
                 UIkit.notification("Token Berhasil di HAPUS", { status: 'success' });
+                calculateTokenStats();
                 displayTokens(); // Menampilkan data yang terbaru
             }).catch(() => {
                 UIkit.notification("Token deletion canceled!", { status: 'warning' });
@@ -309,8 +371,10 @@
                 // Menampilkan pesan bahwa data telah berhasil diubah
                 UIkit.notification("STATUS TOKEN BERHASIL DIUBAH", { status: 'success' });
 
-                // Memuat ulang tampilan tabel
+                // Memuat ulang tampilan tabel                
                 displayTokens();
+                calculateTokenStats();
+
             } else {
                 UIkit.notification("Token tidak ditemukan!", { status: 'danger' });
             }
@@ -318,6 +382,7 @@
 
         // Function to Calculate and Display Token Stats
         function calculateTokenStats() {
+            const dataTOKEN = getLocalStorageData("BINANCE_TOKENS") || [];
             let chainStats = {};
             let totalAll = { total: 0, active: 0, inactive: 0 };
 
