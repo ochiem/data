@@ -78,6 +78,8 @@
         .uk-container {
             width: 96%;
             max-width: none;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
         }
 
         .sticky-header {
@@ -170,12 +172,16 @@
             padding: 5px; /* Tambahkan padding agar lebih mencolok */
         }
        
-
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 2px;
+            background-image: linear-gradient(#dff8dc, #f5f8e1, #fbfffd);
+            color: #0f0f0f;
+        }  
 </style>
 
 </head>
 <body>
-   
     <div class="uk-text-center" style="margin-top: 8px;"> <!-- Mengurangi margin-top -->
         <h3 class="uk-margin-remove" style="font-size: 30px;">
             <span id="chain-links-container"></span> 
@@ -203,7 +209,6 @@
         </h3>
     </div>
     
-    
     <!-- Modal UIKIT -->
     <div id="modal-setting" class="uk-modal-full" uk-modal>
         <div class="uk-modal-dialog">
@@ -221,7 +226,7 @@
                             
                             <!-- Kolom pertama -->
                             <div class="uk-card uk-card-default uk-card-body">
-                                <h3 style="text-align: center; margin: 12px 0px; color: #1317e1;">:: SETINGAN PERMODALAN</h3>
+                                <h3 style="text-align: center; margin: 4px 0px; color: #1317e1;">:: SETINGAN PERMODALAN</h3>
                                 <div id="modal-container"></div>                                
                             </div>
                         </div>
@@ -293,7 +298,7 @@
         <form>
             <div class="uk-margin" >
                 <!-- Informasi Setup -->
-                 <div class="uk-text-center " style="background-color: #eafff2; margin:  5px;">
+                 <div class="uk-text-center ">
                     <b>
                         <label class="uk-form-label uk-text-secondary"> INFO PAIR : [ <label class="uk-form-label uk-text-primary" id="JmlKoin"></label> ] </label> &nbsp;
                         [
@@ -362,7 +367,7 @@
                                             DEX PAIR 
                                             (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):
                                         </label>
-                                        <label class="uk-form-label uk-text-primary" id="dexpair-checkbox-container"></label>
+                                        <label class="uk-form-label uk-text-success" id="dexpair-checkbox-container"></label>
                                     </b>
                                     <b>
                                         <input type="checkbox" id="Cautorun" /> 
@@ -378,6 +383,7 @@
 
                 <!-- Bagian Sinyal DEX -->
                 <div class="uk-text uk-text-small uk-text-secondary" id="sinyal-container" style="margin-top:10px; background-color: #fdfff2; padding-left: 10px;">
+                    
                     <div class="sinyal-item" data-dex="1INCH"><b>1INCH</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> </div>
                     <div class="sinyal-item" data-dex="0X"><b>MATCHA</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> </div>
                     <div class="sinyal-item" data-dex="ODOS"><b>ODOS</b>: <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos"> </label> </div>
@@ -398,8 +404,6 @@
             <div id="bar" style="text-align: center;"> </div>
         </div>
     </div>
-    
-
  <!-- TABEL HASIL SCANNER -->
  <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 5px;">
     <!-- Menambahkan max-width dan overflow-x untuk scroll horizontal -->
@@ -453,8 +457,8 @@
 </div>
 
     <script>
-       function _0x6064(){const _0x5aa23b=['href','#modal-container','?chain=','type','ICON_Chain','text','128604AUTkYp','pathname','31788LlpJkk','cex-checkbox','#favicon','location','ready','background-color','dexpair-checkbox-container','490132VdDTdK','attr','\x22></a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>','<label></label>','#chain-links-container','val','toUpperCase','for','pop','<div></div>','1250NJgOgt','\x22><img\x20src=\x22','ModalKiri','addClass','append','ModalKanan','uk-input','add','5226168NVlHqq','5tytvNz','\x22\x20style=\x22','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','<input>','input','object','uk-text-primary','div#pilihan','Kiri','Nama_Chain','ICON','\x22\x20alt=\x22','keys','chain','.sticky-header\x20th','appendChild','uk-text-success','cex-checkbox-container','uk-form-label\x20uk-text-success','empty','2651JaMdGz','css','22995jkbUYX','uk-flex\x20uk-flex-middle','COLOR_CHAIN','forEach','opacity:\x200.4;','6596922ukNEKY','classList','required','3PFKCwr','number','get','createElement','bsc','dex-checkbox','isArray','12px\x200px','\x20icon\x22\x20width=\x22','DEXS','label','1010092ybfffL','7QJoQvZ','value'];_0x6064=function(){return _0x5aa23b;};return _0x6064();}const _0x5e7dbb=_0x3679;(function(_0x20b7dd,_0x5c3fb3){const _0x224cab=_0x3679,_0x360cc4=_0x20b7dd();while(!![]){try{const _0x3b1bf1=parseInt(_0x224cab(0x1a9))/0x1+-parseInt(_0x224cab(0x1b2))/0x2+parseInt(_0x224cab(0x1ec))/0x3*(parseInt(_0x224cab(0x1bb))/0x4)+parseInt(_0x224cab(0x1ce))/0x5*(parseInt(_0x224cab(0x1e9))/0x6)+parseInt(_0x224cab(0x1aa))/0x7*(-parseInt(_0x224cab(0x1cd))/0x8)+parseInt(_0x224cab(0x1e4))/0x9*(-parseInt(_0x224cab(0x1c5))/0xa)+-parseInt(_0x224cab(0x1e2))/0xb*(parseInt(_0x224cab(0x1b4))/0xc);if(_0x3b1bf1===_0x5c3fb3)break;else _0x360cc4['push'](_0x360cc4['shift']());}catch(_0x2589ca){_0x360cc4['push'](_0x360cc4['shift']());}}}(_0x6064,0x87ed3));const urlParams=new URLSearchParams(window[_0x5e7dbb(0x1b7)]['search']),chainName=urlParams[_0x5e7dbb(0x1a0)](_0x5e7dbb(0x1db))||_0x5e7dbb(0x1a2),DTChain=getChainData(chainName);$(_0x5e7dbb(0x1b6))['attr'](_0x5e7dbb(0x1ac),DTChain[_0x5e7dbb(0x1b0)]),$(_0x5e7dbb(0x1b6))[_0x5e7dbb(0x1bc)](_0x5e7dbb(0x1ac),DTChain['ICON_CHAIN']);function generateInputCheckbox(_0x2453fd,_0x23c161,_0x111f98,_0x3fefd8,_0x15ffea){const _0x1efbe4=_0x5e7dbb,_0x5d0dea=document['getElementById'](_0x23c161);_0x5d0dea['innerHTML']='',typeof _0x2453fd===_0x1efbe4(0x1d3)&&!Array[_0x1efbe4(0x1a4)](_0x2453fd)&&(_0x2453fd=Object['keys'](_0x2453fd)),_0x2453fd[_0x1efbe4(0x1e7)](_0x48364c=>{const _0x14c7a8=_0x1efbe4,_0x140624=document['createElement'](_0x14c7a8(0x1d2));_0x140624[_0x14c7a8(0x1af)]='checkbox',_0x140624[_0x14c7a8(0x1ea)][_0x14c7a8(0x1cc)](''+_0x111f98),_0x140624['id']=''+_0x3fefd8+_0x48364c[_0x14c7a8(0x1c1)](),_0x140624[_0x14c7a8(0x1ab)]=_0x48364c;const _0x4fdd0a=document[_0x14c7a8(0x1a1)](_0x14c7a8(0x1a8));_0x4fdd0a['setAttribute']('for',_0x140624['id']),_0x4fdd0a['textContent']='\x20'+_0x48364c[_0x14c7a8(0x1c1)](),typeof _0x15ffea==='string'&&_0x15ffea['split']('\x20')[_0x14c7a8(0x1e7)](_0x5da733=>_0x4fdd0a[_0x14c7a8(0x1ea)][_0x14c7a8(0x1cc)](_0x5da733)),_0x5d0dea[_0x14c7a8(0x1dd)](_0x140624),_0x5d0dea['appendChild'](_0x4fdd0a);});}function generateInputModal(_0x26a90e){const _0xa60390=_0x5e7dbb,_0x53756d=$(_0xa60390(0x1ad));_0x53756d[_0xa60390(0x1e1)](),_0x26a90e[_0xa60390(0x1e7)](_0x1bb877=>{const _0x38f2fd=_0xa60390,_0x11baea=_0x1bb877[_0x38f2fd(0x1c1)](),_0x3ea776=$('<h5></h5>')['css']({'margin':_0x38f2fd(0x1a5),'color':'#e4322c'})['text']('Modal\x20'+_0x11baea);_0x53756d['append'](_0x3ea776);const _0x1903dd=$(_0x38f2fd(0x1c4))['addClass'](_0x38f2fd(0x1e5)),_0x2e8740=$(_0x38f2fd(0x1c4)),_0x297b07=$('<label></label>')[_0x38f2fd(0x1bc)](_0x38f2fd(0x1c2),_0x38f2fd(0x1c7)+_0x11baea)[_0x38f2fd(0x1c8)](_0x38f2fd(0x1d4))['text'](_0x38f2fd(0x1d6)),_0x49459f=$('<input>')['attr'](_0x38f2fd(0x1af),_0x38f2fd(0x1ed))[_0x38f2fd(0x1bc)]('id',_0x38f2fd(0x1c7)+_0x11baea)[_0x38f2fd(0x1c8)](_0x38f2fd(0x1cb))[_0x38f2fd(0x1c0)]('0')[_0x38f2fd(0x1bc)](_0x38f2fd(0x1eb),!![]);_0x2e8740[_0x38f2fd(0x1c9)](_0x297b07,_0x49459f);const _0x405595=$(_0x38f2fd(0x1c4)),_0x32a605=$(_0x38f2fd(0x1be))[_0x38f2fd(0x1bc)](_0x38f2fd(0x1c2),_0x38f2fd(0x1ca)+_0x11baea)[_0x38f2fd(0x1c8)](_0x38f2fd(0x1de))[_0x38f2fd(0x1b1)]('Kanan'),_0x25bca4=$(_0x38f2fd(0x1d1))['attr'](_0x38f2fd(0x1af),_0x38f2fd(0x1ed))[_0x38f2fd(0x1bc)]('id','ModalKanan'+_0x11baea)[_0x38f2fd(0x1c8)](_0x38f2fd(0x1cb))[_0x38f2fd(0x1c0)]('0')[_0x38f2fd(0x1bc)](_0x38f2fd(0x1eb),!![]);_0x405595['append'](_0x32a605,_0x25bca4),_0x1903dd[_0x38f2fd(0x1c9)](_0x2e8740,_0x405595),_0x53756d[_0x38f2fd(0x1c9)](_0x1903dd);});}function _0x3679(_0x1768f0,_0x52004f){const _0x6064d9=_0x6064();return _0x3679=function(_0x36793e,_0x2cffa4){_0x36793e=_0x36793e-0x1a0;let _0x1123aa=_0x6064d9[_0x36793e];return _0x1123aa;},_0x3679(_0x1768f0,_0x52004f);}generateInputCheckbox(CONFIG_CEX,_0x5e7dbb(0x1df),_0x5e7dbb(0x1b5),'',_0x5e7dbb(0x1e0)),generateInputCheckbox(DTChain[_0x5e7dbb(0x1a7)],'dex-checkbox-container',_0x5e7dbb(0x1a3),'D','uk-form-label\x20uk-text-danger'),generateInputCheckbox(DTChain['PAIRDEXS'],_0x5e7dbb(0x1ba),'dexpair-checkbox'),$(document)[_0x5e7dbb(0x1b8)](function(){const _0x5a320b=_0x5e7dbb;var _0x2fe897=DTChain[_0x5a320b(0x1e6)];$('#bar')[_0x5a320b(0x1e3)]('background-color',_0x2fe897),$(_0x5a320b(0x1d5))[_0x5a320b(0x1e3)]('background-color',_0x2fe897),$(_0x5a320b(0x1dc))[_0x5a320b(0x1e3)](_0x5a320b(0x1b9),_0x2fe897);const _0x4eb3b9=window[_0x5a320b(0x1b7)][_0x5a320b(0x1b3)]['split']('/')[_0x5a320b(0x1c3)]();Object[_0x5a320b(0x1da)](CONFIG_CHAINS)[_0x5a320b(0x1e7)](_0xbee9b7=>{const _0x5e455a=_0x5a320b,_0x390c43=CONFIG_CHAINS[_0xbee9b7],_0x311399=_0x390c43[_0x5e455a(0x1d7)]===chainName,_0x5cfa5e='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22chain-link\x20'+(_0x311399?'active-chain':'')+_0x5e455a(0x1cf)+(!_0x311399?_0x5e455a(0x1e8):'')+_0x5e455a(0x1d0)+_0x4eb3b9+_0x5e455a(0x1ae)+_0x390c43[_0x5e455a(0x1d7)]+_0x5e455a(0x1c6)+_0x390c43[_0x5e455a(0x1d8)]+_0x5e455a(0x1d9)+_0x390c43[_0x5e455a(0x1d7)]+_0x5e455a(0x1a6)+(_0x311399?'45':'25')+_0x5e455a(0x1bd);$(_0x5e455a(0x1bf))['append'](_0x5cfa5e);}),generateInputModal(DTChain[_0x5a320b(0x1a7)]);});
-
+        
+      function _0x519b(_0x51fc10,_0x20d9d4){const _0x423777=_0x4237();return _0x519b=function(_0x519b48,_0x11b8f9){_0x519b48=_0x519b48-0x14f;let _0x28e3d4=_0x423777[_0x519b48];return _0x28e3d4;},_0x519b(_0x51fc10,_0x20d9d4);}const _0x14091b=_0x519b;(function(_0x1767f2,_0x4012e0){const _0x16f66f=_0x519b,_0x498edb=_0x1767f2();while(!![]){try{const _0x257a07=-parseInt(_0x16f66f(0x19e))/0x1*(parseInt(_0x16f66f(0x151))/0x2)+-parseInt(_0x16f66f(0x15b))/0x3*(parseInt(_0x16f66f(0x197))/0x4)+-parseInt(_0x16f66f(0x14f))/0x5*(parseInt(_0x16f66f(0x15d))/0x6)+parseInt(_0x16f66f(0x160))/0x7*(-parseInt(_0x16f66f(0x169))/0x8)+parseInt(_0x16f66f(0x185))/0x9*(-parseInt(_0x16f66f(0x17e))/0xa)+-parseInt(_0x16f66f(0x168))/0xb+parseInt(_0x16f66f(0x17c))/0xc;if(_0x257a07===_0x4012e0)break;else _0x498edb['push'](_0x498edb['shift']());}catch(_0x425828){_0x498edb['push'](_0x498edb['shift']());}}}(_0x4237,0xc58af));const urlParams=new URLSearchParams(window[_0x14091b(0x170)]['search']),chainName=urlParams[_0x14091b(0x166)]('chain')||_0x14091b(0x180),DTChain=getChainData(chainName);$(_0x14091b(0x179))['attr'](_0x14091b(0x182),DTChain[_0x14091b(0x150)]),$('#favicon')[_0x14091b(0x195)](_0x14091b(0x182),DTChain['ICON_CHAIN']);function _0x4237(){const _0x139c47=['#favicon','for','empty','51395616hJbFMy','Nama_Chain','20BiVZiZ','uk-form-label\x20uk-text-primary','bsc','ready','href','<input>','value','2125161dMZyDC','add','classList','div#pilihan','dexpair-checkbox-container','\x22><img\x20src=\x22','textContent','\x20icon\x22\x20width=\x22','?chain=','uk-text-primary','uk-text-success','toUpperCase','DEXS','#bar','ModalKanan','object','attr','forEach','1624zqtaTl','#modal-container','ICON','label','<div></div>','setAttribute','checkbox','712JJcRve','keys','15SoIDQm','ICON_Chain','554esWRIv','dex-checkbox-container','append','addClass','opacity:\x200.4;','type','.sticky-header\x20th','val','PAIRDEXS','isArray','8835lTPBIg','Kanan','1662216cgvMbL','ModalKiri','createElement','14SrQolG','string','text','number','Kiri','split','get','background-color','8174859zJjaSz','137616cXJznl','dex-checkbox','uk-input','appendChild','COLOR_CHAIN','pathname','uk-flex\x20uk-flex-middle','location','Modal\x20','cex-checkbox','dexpair-checkbox','#chain-links-container','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22chain-link\x20','#e4322c','required','css'];_0x4237=function(){return _0x139c47;};return _0x4237();}function generateInputCheckbox(_0x158a92,_0x47c678,_0x26aaab,_0x4a6b59,_0x565ff4){const _0x4744ea=_0x14091b,_0x549344=document['getElementById'](_0x47c678);_0x549344['innerHTML']='',typeof _0x158a92===_0x4744ea(0x194)&&!Array[_0x4744ea(0x15a)](_0x158a92)&&(_0x158a92=Object[_0x4744ea(0x19f)](_0x158a92)),_0x158a92[_0x4744ea(0x196)](_0x572f8f=>{const _0x49c2d0=_0x4744ea,_0x1b21ed=document[_0x49c2d0(0x15f)]('input');_0x1b21ed['type']=_0x49c2d0(0x19d),_0x1b21ed['classList'][_0x49c2d0(0x186)](''+_0x26aaab),_0x1b21ed['id']=''+_0x4a6b59+_0x572f8f['toUpperCase'](),_0x1b21ed[_0x49c2d0(0x184)]=_0x572f8f;const _0x3e3ca7=document[_0x49c2d0(0x15f)](_0x49c2d0(0x19a));_0x3e3ca7[_0x49c2d0(0x19c)](_0x49c2d0(0x17a),_0x1b21ed['id']),_0x3e3ca7[_0x49c2d0(0x18b)]='\x20'+_0x572f8f[_0x49c2d0(0x190)](),typeof _0x565ff4===_0x49c2d0(0x161)&&_0x565ff4[_0x49c2d0(0x165)]('\x20')[_0x49c2d0(0x196)](_0x364ec2=>_0x3e3ca7[_0x49c2d0(0x187)]['add'](_0x364ec2)),_0x549344[_0x49c2d0(0x16c)](_0x1b21ed),_0x549344[_0x49c2d0(0x16c)](_0x3e3ca7);});}function generateInputModal(_0x47a5c2){const _0x3c411d=_0x14091b,_0x573e68=$(_0x3c411d(0x198));_0x573e68[_0x3c411d(0x17b)](),_0x47a5c2[_0x3c411d(0x196)](_0x2cff05=>{const _0x1c7e37=_0x3c411d,_0x32a6db=_0x2cff05[_0x1c7e37(0x190)](),_0x2eb2cb=$('<h5></h5>')['css']({'margin':'6px\x200px','color':_0x1c7e37(0x176)})['text'](_0x1c7e37(0x171)+_0x32a6db);_0x573e68[_0x1c7e37(0x153)](_0x2eb2cb);const _0x111e50=$(_0x1c7e37(0x19b))[_0x1c7e37(0x154)](_0x1c7e37(0x16f)),_0x3cf201=$('<div></div>'),_0x233b02=$('<label></label>')[_0x1c7e37(0x195)]('for','ModalKiri'+_0x32a6db)[_0x1c7e37(0x154)](_0x1c7e37(0x18e))[_0x1c7e37(0x162)](_0x1c7e37(0x164)),_0x5afffa=$(_0x1c7e37(0x183))[_0x1c7e37(0x195)](_0x1c7e37(0x156),'number')[_0x1c7e37(0x195)]('id',_0x1c7e37(0x15e)+_0x32a6db)[_0x1c7e37(0x154)]('uk-input')[_0x1c7e37(0x158)]('0')[_0x1c7e37(0x195)]('required',!![]);_0x3cf201['append'](_0x233b02,_0x5afffa);const _0x5303f6=$(_0x1c7e37(0x19b)),_0x2ec0ab=$('<label></label>')['attr'](_0x1c7e37(0x17a),_0x1c7e37(0x193)+_0x32a6db)[_0x1c7e37(0x154)](_0x1c7e37(0x18f))['text'](_0x1c7e37(0x15c)),_0x54b39a=$(_0x1c7e37(0x183))['attr'](_0x1c7e37(0x156),_0x1c7e37(0x163))[_0x1c7e37(0x195)]('id',_0x1c7e37(0x193)+_0x32a6db)[_0x1c7e37(0x154)](_0x1c7e37(0x16b))['val']('0')['attr'](_0x1c7e37(0x177),!![]);_0x5303f6[_0x1c7e37(0x153)](_0x2ec0ab,_0x54b39a),_0x111e50[_0x1c7e37(0x153)](_0x3cf201,_0x5303f6),_0x573e68[_0x1c7e37(0x153)](_0x111e50);});}generateInputCheckbox(CONFIG_CEX,'cex-checkbox-container',_0x14091b(0x172),'',_0x14091b(0x17f)),generateInputCheckbox(DTChain['DEXS'],_0x14091b(0x152),_0x14091b(0x16a),'D','uk-form-label\x20uk-text-danger'),generateInputCheckbox(DTChain[_0x14091b(0x159)],_0x14091b(0x189),_0x14091b(0x173)),$(document)[_0x14091b(0x181)](function(){const _0x1401e4=_0x14091b;var _0x53090b=DTChain[_0x1401e4(0x16d)];$(_0x1401e4(0x192))['css'](_0x1401e4(0x167),_0x53090b),$(_0x1401e4(0x188))[_0x1401e4(0x178)](_0x1401e4(0x167),_0x53090b),$(_0x1401e4(0x157))['css'](_0x1401e4(0x167),_0x53090b);const _0xa9f2e4=window[_0x1401e4(0x170)][_0x1401e4(0x16e)][_0x1401e4(0x165)]('/')['pop']();Object['keys'](CONFIG_CHAINS)[_0x1401e4(0x196)](_0x56a0ab=>{const _0xc1f54d=_0x1401e4,_0x2a0c8c=CONFIG_CHAINS[_0x56a0ab],_0x58f1ea=_0x2a0c8c[_0xc1f54d(0x17d)]===chainName,_0x405725=_0xc1f54d(0x175)+(_0x58f1ea?'active-chain':'')+'\x22\x20style=\x22'+(!_0x58f1ea?_0xc1f54d(0x155):'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0xa9f2e4+_0xc1f54d(0x18d)+_0x2a0c8c[_0xc1f54d(0x17d)]+_0xc1f54d(0x18a)+_0x2a0c8c[_0xc1f54d(0x199)]+'\x22\x20alt=\x22'+_0x2a0c8c[_0xc1f54d(0x17d)]+_0xc1f54d(0x18c)+(_0x58f1ea?'45':'25')+'\x22></a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>';$(_0xc1f54d(0x174))['append'](_0x405725);}),generateInputModal(DTChain[_0x1401e4(0x191)]);});
     </script>
 <script src="multimarket.js"></script>
 
