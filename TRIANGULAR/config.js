@@ -266,7 +266,7 @@ const CONFIG_CHAINS = {
         URL_Chain: "https://bscscan.com" , 
         WARNA:"#f6cc6a",
         ICON:"https://cryptologos.cc/logos/bnb-bnb-logo.png",
-        DATAJSON: 'https://multichecker.vercel.app/JSON/bep20_multi.json',
+        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token.json',
         BaseFEEDEX : "BNBUSDT",
         DEXS: [
             "1inch",
