@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/603/603189.png" type="image/x-icon">
+    <script src="config.js"></script>
+    <style>
+        .uk-container { width: 94%; max-width: none; }
+        .table-header { background-color: #cdcbcb; }
+        .table-header th { color: black; font-size: medium; font-weight: bolder; cursor: pointer; position: relative; }
+        .status-active { color: green; }
+        .status-inactive { color: red; }
+        .pair-dex { font-size: 12px; color: gray; }
+        .action-buttons { display: flex; justify-content: center; gap: 5px; }
+        .action-buttons button { padding: 5px 10px; }
+        .token-cell { vertical-align: top; }
+        .sort-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+        /* Memaksa warna link untuk CEX */
+        .uk-link {
+            color: inherit !important;  /* Memastikan warna link mengikuti warna induk */
+        }
+        /* Memaksa warna status aktif */
+        .status-active {
+            color: inherit !important;  /* Warna aktif mengikuti warna yang ditentukan */
+        }
+        img:hover {
+                transform: scale(1.6); /* You can adjust the scale factor as needed */
+            }
+    </style>
+    
+</head>
+<body>
+<div class="uk-container uk-margin-top">
+    <div class="uk-text-center" style="margin-top: 13px;"> <!-- Mengurangi margin-top -->
+        <h3 id="judul" class="uk-margin-remove" style="font-size: 30px;" > &nbsp;
+                MASTER DATA TOKEN :: <label id="namachain"></label>&nbsp;&nbsp;
+            <span id="chain-links-container"></span>             
+        </h3>
+    </div>
+    <hr class="uk-divider-icon uk-margin-small-top uk-margin-small-bottom">
+    <form id="cryptoForm" class="uk-form-stacked" style="margin-top: 20px;">
+        <fieldset class="uk-fieldset">
+
+            <div class="uk-margin" style="display: flex; align-items: center; gap: 10px;">
+                <b><span class="uk-text-primary uk-text-medium">TOKEN : </span></b>
+                    <input class="uk-input" type="text" id="ID" hidden>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="text" id="token_in" placeholder="TOKEN CEX" required>
+                </div>
+                <div class="uk-form-controls" style="flex: 3;">
+                    <input class="uk-input" type="text" id="sc_in" placeholder="SC TOKEN CEX" required>
+                </div>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="number" id="des_in" placeholder="DES TOKEN CEX" required min="0">
+                </div>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="text" id="token_out" placeholder="PAIR DEX" required>
+                </div>
+                <div class="uk-form-controls" style="flex: 3;">
+                    <input class="uk-input" type="text" id="sc_out" placeholder="SC DEX" required>
+                </div>
+                <div class="uk-form-controls" style="flex: 1;">
+                    <input class="uk-input" type="number" id="des_out" placeholder="DES DEX" required min="0">
+                </div>
+            </div>
+
+            <div class="uk-margin-top dex-group uk-grid-small uk-flex uk-flex-between" uk-grid style="flex-wrap: wrap;">
+                <!-- Kolom untuk CEX -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <b><span class="uk-text-danger uk-text-medium">CEX:</span></b>
+                    <div id="cex-options" class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <!-- Radio button CEX akan di-generate di sini -->
+                    </div>
+                </div>
+            
+                <!-- Kolom untuk STATUS -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <b><span class="uk-text-danger uk-text-medium">STATUS:</span></b> 
+                    <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <label><input class="uk-checkbox uk-text-warning" type="checkbox" id="status" checked> AKTIF</label>
+                    </div>
+                </div>
+            
+                <!-- Kolom untuk Tombol -->
+                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
+                    <button type="submit" id="SaveButton" class="uk-button uk-button-primary">SIMPAN</button>
+                </div>
+            </div>
+                        
+            
+        </fieldset>
+    </form><hr/><br/>
+    <div>
+        <div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
+             
+            <!-- Judul dan Jumlah Token -->
+            <div class="uk-width-expand">
+                <h3 class="uk-heading-line uk-margin-remove uk-text-primary">
+                    <span style="font-size:large;">DAFTAR TOKEN <span id="namachain2"></span> (<span id="tokenCount" class="token-count">0</span>)</span>
+                </h3>
+            </div>
+           
+            <!-- Pencarian -->
+            <div class="uk-width-auto uk-flex uk-flex-middle">
+                <input type="text" id="searchInput" class="uk-input uk-form-width-medium" placeholder="Cari di tabel...">
+            </div>
+
+            <!-- Bagian Kanan: Import/Export -->
+            <div class="uk-flex uk-flex-middle" style="gap: 20px;">
+                <div id="importStatus" class="uk-text-small uk-animation-fade"></div>
+                <div uk-form-custom="target: true">
+                    <input type="file" id="importFile" accept=".csv">
+                    <input class="uk-input uk-form-width-small uk-button-success" placeholder="Pilih File" disabled>
+
+                </div>                   
+                <button id="importButton" class="uk-button uk-button-primary ">
+                    <span uk-icon="icon: upload"></span> Import CSV
+                </button>                
+            </div>
+        </div>
+    </div>
+
+     <table class="uk-table uk-table-striped">
+        <thead class="table-header">
+            <tr>
+                <th class="uk-text-center uk-text-bold" >No <span class="sort-icon" id="sortIcon0"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(1)">CEX <span class="sort-icon" id="sortIcon1"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(2)">TOKEN CEX <span class="sort-icon" id="sortIcon2"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(3)">SC_IN & DES_IN <span class="sort-icon" id="sortIcon3"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(4)">PAIR DEX <span class="sort-icon" id="sortIcon4"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(5)">SC_OUT & DES_OUT <span class="sort-icon" id="sortIcon5"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(6)">STATUS <span class="sort-icon" id="sortIcon6"></span></th>
+                <th class="uk-text-center uk-text-bold">Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="dataTableBody">
+        </tbody>
+    </table>
+
+   
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Mendapatkan parameter dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const chainParam = urlParams.get('chain') || "bsc"; // Default ke 'bsc' jika tidak ada parameter 'chain' di URL
+
+    // Memilih chain yang sesuai berdasarkan parameter URL
+    const selectedChain = CONFIG_CHAINS[chainParam] || CONFIG_CHAINS['bsc']; 
+
+    // Mengatur konfigurasi global chain berdasarkan input dari URL
+    const { Kode_Chain, Nama_Chain, URL_Chain, pairs } = selectedChain; 
+
+    const storageKey = "TRIANGULAR_" + Nama_Chain.toUpperCase() + "_TOKEN";
+    let sortOrder = {};
+
+    // Fungsi untuk mendapatkan data dari Local Storage
+    function getFromLocalStorage(defaultValue) {
+        const data = JSON.parse(localStorage.getItem(storageKey));
+        return data ? data : defaultValue;
+    }
+
+    function saveToLocalStorage(value) {
+        localStorage.setItem(storageKey, JSON.stringify(value));
+    }
+
+
+    $('#tokenCount').on('click', function() {
+        const data = getFromLocalStorage([]);
+        
+        // Fungsi untuk mengonversi JSON ke CSV
+        const jsonToCsv = (jsonData) => {
+            const headers = Object.keys(jsonData[0] || {}).join(','); // Header CSV
+            const rows = jsonData.map(obj => 
+                Object.values(obj).map(value => 
+                    `"${value}"` // Menambahkan tanda kutip untuk menghindari kesalahan parsing
+                ).join(',')
+            );
+            return [headers, ...rows].join('\n');
+        };
+
+        const csvData = jsonToCsv(data);
+        const blob = new Blob([csvData], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'TRIANGULAR_' + Nama_Chain.toUpperCase() + '_TOKEN.csv';
+        a.click();
+        URL.revokeObjectURL(url);
+    });
+
+    $(document).ready(function() {
+
+    if (typeof CONFIG_CEX !== 'undefined' && typeof CONFIG_CHAINS !== 'undefined') {
+        const currentPage = window.location.pathname.split('/').pop(); // Mengambil bagian terakhir dari path URL
+
+            loadStoredData();
+        
+            // Ambil data chain yang dipilih berdasarkan Nama_Chain
+            const selectedChain = CONFIG_CHAINS[Nama_Chain.toLowerCase()];
+
+            // Pastikan data chain ditemukan
+            if (selectedChain) {
+                // Generate Pilihan CEX
+                generateCexOptions(selectedChain.WALLET_CEX);
+            
+                // Update tampilan dengan nama chain dan warna
+                $('title').text("MASTER TOKEN " + Nama_Chain.toUpperCase());
+                $('#namachain').text(Nama_Chain.toUpperCase());
+                $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
+                $('h3#judul').css('color', selectedChain.color);
+
+                 // Untuk setiap chain yang ada di CONFIG_CHAINS dibuatkan ICON LINK CHAIN
+                Object.keys(CONFIG_CHAINS).forEach(chainKey => {
+                    const chain = CONFIG_CHAINS[chainKey];
+
+                    // Periksa apakah chain saat ini cocok dengan chainName
+                    const isActive = chain.Nama_Chain === Nama_Chain;
+
+                    // Buat elemen link dan icon dengan pengaturan khusus jika cocok dengan chainName
+                    const linkHTML = `<span class="chain-link ${isActive ? 'active-chain' : ''}" style="${!isActive ? 'opacity: 0.3;' : ''}">
+                             <a href="${currentPage}?chain=${chain.Nama_Chain}" ><img src="${chain.ICON}" alt="${chain.Nama_Chain} icon" width="${isActive ? '45' : '30'}"></a></span>`;
+                    
+                    // Masukkan ke dalam container
+                    $('#chain-links-container').append(linkHTML);
+                });
+            } else {
+                alert(`Chain dengan nama ${Nama_Chain} tidak ditemukan.`);
+            }
+        } else {
+            console.warn("CONFIG tidak tersedia.");
+        }
+
+        // Fungsi untuk generate pilihan CEX (checkbox)
+        function generateCexOptions(cexConfig) {
+            const cexOptions = $("#cex-options");
+            cexOptions.empty(); // Kosongkan kontainer
+
+            // Iterasi melalui setiap elemen di dalam WALLET_CEX
+            $.each(cexConfig, function (cexName, config) {
+                const checkbox = `
+                    <label >
+                        <input class="uk-checkbox"  type="checkbox" name="cex" value="${cexName}">
+                        ${cexName}
+                    </label>`;
+                cexOptions.append(checkbox); // Tambahkan setiap checkbox
+            });
+        }
+
+        // Submit Form
+        $('#cryptoForm').on('submit', function (event) {
+            event.preventDefault();
+            const cex = Array.from($("input[name='cex']:checked")).map(checkbox => checkbox.value);
+
+            if (cex.length === 0) {
+                    UIkit.notification('Harap pilih minimal satu checkbox untuk CEX!', { status: 'warning' });
+                    return; // Hentikan eksekusi jika tidak ada checkbox yang dipilih
+                }
+            const tokenIn = $('#token_in').val();
+            const scIn = $('#sc_in').val();
+            const desIn = parseInt($('#des_in').val());
+            const tokenOut = $('#token_out').val();
+            const scOut = $('#sc_out').val();
+            const desOut = parseInt($('#des_out').val());
+            const status = $('#status').is(':checked');
+
+            const data = getFromLocalStorage([]);
+            const editIndex = $('#cryptoForm').data('edit-index');
+
+            cex.forEach((cexChoice) => {
+                    const newData = {
+                        no: editIndex !== undefined ? data[editIndex].no : data.length + 1,
+                        cex: cexChoice,
+                        status,
+                        symbol_in: tokenIn,
+                        sc_in: scIn,
+                        des_in: desIn,
+                        symbol_out: tokenOut,
+                        sc_out: scOut,
+                        des_out: desOut,
+                    };
+                    
+                    if (editIndex !== undefined) {
+                        data[editIndex] = newData;
+                    } else {
+                        data.push(newData);
+                    }
+                });
+
+            saveToLocalStorage(data);
+            loadStoredData();
+            resetForm();
+
+            UIkit.notification('Data berhasil disimpan!', { status: 'success' });
+        });
+
+        $('#cryptoForm2').on('submit', function(event) {
+                event.preventDefault();
+                const cex = Array.from($("input[name='cex']:checked")).map(checkbox => checkbox.value);
+                if (cex.length === 0) {
+                    UIkit.notification('Harap pilih minimal satu checkbox untuk CEX!', { status: 'warning' });
+                    return; // Hentikan eksekusi jika tidak ada checkbox yang dipilih
+                }
+                const symbol = $('#tokenName').val();
+                const cmcID = $('#cmcID').val();
+                const sc = $('#sc').val();
+                const desimal = $('#desimal').val();
+                
+                const status = $('#status').is(':checked');
+                const pairdex = $("input[name='dex']:checked").val();
+
+                const data = getFromLocalStorage([]);
+                const editIndex = $('#cryptoForm').data('edit-index');
+
+                if (editIndex !== undefined) {
+                    delete $('#cryptoForm').data('edit-index'); 
+                }
+
+                cex.forEach((cexChoice) => {
+                    const newData = {
+                        cex: cexChoice,
+                        symbol,
+                        sc,
+                        desimal: parseInt(desimal),
+                        cmcID,
+                        status,
+                        pairdex
+                    };
+                    
+                    if (editIndex !== undefined) {
+                        data[editIndex] = newData;
+                    } else {
+                        data.push(newData);
+                    }
+                });
+
+                saveToLocalStorage(data);
+                loadStoredData();
+                resetForm();
+
+                // Tampilkan notifikasi UIkit saat data berhasil disimpan
+                UIkit.notification('Data berhasil disimpan!', { status: 'success' });
+            });
+
+        $('#dataTableBody').on('click', '.delete-btn', function() {
+            const index = $(this).data('index');
+
+            // Konfirmasi penghapusan data
+            UIkit.modal.confirm('Apakah Anda yakin ingin menghapus data ini?').then(() => {
+                // Jika pengguna memilih "OK", hapus data
+                deleteRow(index);
+                UIkit.notification('Data berhasil dihapus!', { status: 'success' });
+            }, () => {
+                // Jika pengguna memilih "Cancel", tidak melakukan apa-apa
+                UIkit.notification('Penghapusan data dibatalkan.', { status: 'primary' });
+            });
+        });
+
+        $('#dataTableBody').on('click', '.edit-btn', function() {
+            const index = $(this).data('index');
+            editRow(index);
+            UIkit.notification('Silakan lakukan perubahan data!', { status: 'success' });
+        });
+        // Fungsi untuk menghapus data
+        function deleteRow(index) {
+            const data = getFromLocalStorage([]);
+            data.splice(index, 1); // Hapus data pada index tertentu
+            saveToLocalStorage(data); // Simpan kembali data yang telah diperbarui
+            loadStoredData(); // Muat ulang data
+        }
+
+        // Fungsi untuk mengedit data
+        function editRow(index) {
+            const data = getFromLocalStorage([]);
+            const item = data[index];
+
+            // Set nilai pada form sesuai data item
+            $('#token_in').val(item.symbol_in);
+            $('#sc_in').val(item.sc_in);
+            $('#des_in').val(item.des_in);
+            $('#token_out').val(item.symbol_in);
+            $('#sc_out').val(item.sc_in);
+            $('#des_out').val(item.des_in);
+            $('#status').prop('checked', item.status);
+            $("input[name='dex'][value='" + item.pairdex + "']").prop('checked', true);
+
+            // Nonaktifkan semua checkbox cex
+            $("input[name='cex']").prop('checked', false).prop('disabled', true);
+
+            // Centang hanya satu checkbox sesuai data item.cex
+            if (item.cex) {
+                $("input[name='cex'][value='" + item.cex + "']").prop('checked', true);
+            }
+
+            $('#cryptoForm').data('edit-index', index); // Simpan index edit untuk form
+            $('#cancelButton').show(); // Tampilkan tombol cancel
+
+            // Pindahkan cursor ke bagian form dengan animasi scroll
+            $('html, body').animate({
+                scrollTop: $('#cryptoForm').offset().top
+            }, 500); // 500 ms adalah durasi scrolling
+        }
+
+        function resetForm() {
+            $('#cryptoForm')[0].reset();
+            $('#cryptoForm').removeData('edit-index');
+            $('#cancelButton').hide();
+            // Aktifkan kembali semua checkbox cex
+            $("input[name='cex']").prop('disabled', false);
+        }
+        // Tombol cancel untuk membatalkan edit
+        $('#cancelButton').on('click', function() {
+            $('#cryptoForm')[0].reset(); 
+            $('#cryptoForm').removeData('edit-index'); // Hapus index edit
+            $(this).hide(); // Sembunyikan tombol cancel
+            resetForm();
+        });
+
+        $('#searchInput').on('input', function() {
+            const searchValue = $(this).val().toLowerCase();
+            $('#dataTableBody tr').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(searchValue) > -1);
+            });
+        });
+        
+        // Hapus efek peringatan saat memilih file
+        $('#importFile').on('change', function() {
+            $(this).next().removeClass('uk-form-danger');
+            $('#importStatus').text(''); // Kosongkan pesan status
+        });
+        
+        // Fungsi untuk mengonversi CSV ke JSON
+        function csvToJson(csvString) {
+            const lines = csvString.split('\n').filter(line => line.trim() !== '');
+            const headers = lines[0].split(',').map(header => header.trim());
+            const rows = lines.slice(1);
+
+            return rows.map(row => {
+                const values = row.split(',').map(value => value.trim().replace(/^"|"$/g, ''));
+                return headers.reduce((acc, header, index) => {
+                    let value = values[index];
+
+                    // Konversi nilai khusus jika header adalah "status"
+                    if (header.toLowerCase() === 'status') {
+                        value = value.toLowerCase() === 'true'; // Konversi "TRUE"/"true" ke boolean true
+                    }
+
+                    // Tambahkan nilai ke objek hasil
+                    acc[header] = value;
+                    return acc;
+                }, {});
+            });
+        }
+
+        $('#importButton').on('click', function () {
+            const fileInput = $('#importFile');
+            const importStatus = $('#importStatus');
+
+            if (fileInput[0].files.length > 0) {
+                const file = fileInput[0].files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    try {
+                        const csvData = e.target.result;
+                        const jsonData = csvToJson(csvData);
+
+                        console.log('Data CSV berhasil dibaca:', jsonData); // Debugging
+                        
+                        if (Array.isArray(jsonData)) {
+                            saveToLocalStorage(jsonData);
+                            console.log('Data disimpan ke localStorage'); // Debugging
+                            loadStoredData();
+                            importStatus.text('Data berhasil diimpor.')
+                                .removeClass('uk-text-danger')
+                                .addClass('uk-text-success');
+                        } else {
+                            importStatus.text('Format file tidak valid.')
+                                .removeClass('uk-text-success')
+                                .addClass('uk-text-danger');
+                        }
+                    } catch (error) {
+                        console.error('Gagal memuat file:', error); // Debugging
+                        importStatus.text('Gagal memuat file.')
+                            .removeClass('uk-text-success')
+                            .addClass('uk-text-danger');
+                    }
+                };
+
+                reader.readAsText(file);
+            } else {
+                fileInput.next().addClass('uk-form-danger');
+                importStatus.text('Silakan pilih file untuk diimpor.')
+                    .removeClass('uk-text-success')
+                    .addClass('uk-text-danger');
+                fileInput.focus();
+            }
+        });
+    });
+    
+    // Fungsi untuk menentukan warna berdasarkan nama CEX
+    function getWarnaCEX(cex) {
+        const cexConfig = CONFIG_CEX[cex.toUpperCase()]; // Ambil konfigurasi berdasarkan nama CEX
+        return cexConfig && cexConfig.WARNA ? cexConfig.WARNA : 'black'; // Gunakan warna dari konfigurasi atau 'black' jika tidak ditemukan
+    }
+
+   // Fungsi untuk memuat data yang disimpan
+    function loadStoredData() {
+        const storedData = getFromLocalStorage([]);  // Ambil data dari localStorage
+        $('#dataTableBody').empty();  // Kosongkan tabel sebelum menambahkan data baru
+        $('#tokenCount').text(" TOTAL : " + storedData.length + " PAIR-TOKEN ");  // Tampilkan jumlah token
+
+        storedData.forEach((data, index) => {
+            const statusClass = data.status ? 'status-active' : 'status-inactive';
+            const warnaCEX = getWarnaCEX(data.cex);  // Mendapatkan warna berdasarkan nama CEX
+
+            // Membuat baris tabel
+            const row = `
+                <tr data-index="${index}" style="color: ${warnaCEX};">
+                    <td class="uk-text-center">${index + 1}</td>
+                    <td class="uk-text-center">${data.cex}</td> <!-- Warna berdasarkan CEX -->
+                    <td style="text-align:center;">${data.symbol_in}</td>
+                    <td style="font-size:small;">
+                        <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">${data.sc_in}</a><br/>(${data.des_in})
+                    </td>
+                    <td style="text-align:center;">${data.symbol_out}</td>
+                    <td style="font-size:small;">
+                        <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">${data.sc_out}</a><br/>(${data.des_out})
+                    </td>
+                    <!-- Kolom Status dengan Checkbox -->
+                    <td class="uk-text-center">
+                        <label>
+                            <input type="checkbox" class="statusCheckbox" data-index="${index}" ${data.status ? 'checked' : ''}>
+                            ${data.status ? 'Aktif' : 'Tidak Aktif'}
+                        </label>
+                    </td>
+                    <td class="action-buttons">
+                        <button class="uk-button uk-button-secondary edit-btn" data-index="${index}">Edit</button>
+                        <button class="uk-button uk-button-danger delete-btn" data-index="${index}">Delete</button>
+                    </td>
+                </tr>
+            `;
+            $('#dataTableBody').append(row);  // Tambahkan baris ke tbody
+        });
+
+        // Memperbarui ikon urutan jika diperlukan
+        updateSortIcons();
+    }
+
+    // Fungsi untuk menangani perubahan status checkbox
+    $(document).on('change', '.statusCheckbox', function() {
+        const index = $(this).data('index');  // Ambil index dari data
+        const isChecked = $(this).prop('checked');  // Ambil status checkbox (checked/un-checked)
+        
+        const storedData = getFromLocalStorage([]);  // Ambil data dari localStorage
+
+        if (index >= 0 && index < storedData.length) {
+            // Update status data
+            storedData[index].status = isChecked;
+
+            // Simpan kembali ke localStorage
+            saveToLocalStorage(storedData);
+            
+            // Perbarui tampilan status pada checkbox (aktif/tidak aktif)
+            $(this).next().text(isChecked ? 'Aktif' : 'Tidak Aktif');
+            UIkit.notification('Berhasil UBAH status PAIR '+storedData[index].symbol_in+'-'+storedData[index].symbol_out+' !', { status: 'success' });
+        }
+    });
+
+
+    // Fungsi untuk mengurutkan tabel
+    function sortTable(columnIndex) {
+        const rows = $('#dataTableBody tr').get();
+
+        rows.sort(function(a, b) {
+            const keyA = $(a).children('td').eq(columnIndex).text().toUpperCase();
+            const keyB = $(b).children('td').eq(columnIndex).text().toUpperCase();
+
+            if (sortOrder[columnIndex] === undefined) {
+                sortOrder[columnIndex] = true; // Default ke urutan naik
+            }
+
+            if (keyA < keyB) return sortOrder[columnIndex] ? -1 : 1;
+            if (keyA > keyB) return sortOrder[columnIndex] ? 1 : -1;
+            return 0;
+        });
+
+        // Kosongkan tabel dan tambahkan kembali baris yang sudah diurutkan
+        $('#dataTableBody').empty().append(rows);
+
+        // Update kolom No agar tetap berurutan
+        $('#dataTableBody tr').each((index, row) => {
+            $(row).children('td').first().text(index + 1); // Set nomor berurutan
+        });
+
+        // Toggle urutan untuk kolom yang sama
+        sortOrder[columnIndex] = !sortOrder[columnIndex];
+        updateSortIcons();
+    }
+
+    // Memperbarui ikon urutan
+    function updateSortIcons() {
+        $('.sort-icon').html(''); // Reset semua ikon
+        for (let index in sortOrder) {
+            const icon = sortOrder[index] ? '▲' : '▼';
+            $('#sortIcon' + index).html(icon);
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+</body>
+</html>
