@@ -99,10 +99,10 @@
       "https://myserver5.mohafe9330.workers.dev/?",
       "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?"
     ],
-  "telegram": [
+  "telegram": {
     "token": "7668945651:AAFBqu4Px9IdWgQ4b9X00gnm9SE7lXMpG8Y",
     "id_grup": "-1002079288809"
-  ],
+  },
 "token":
 [
     {
