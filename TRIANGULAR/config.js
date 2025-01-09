@@ -48,7 +48,7 @@ const CONFIG_CHAINS = {
         URL_Chain: "https://polygonscan.com", 
         ICON: "https://s2.coinmarketcap.com/static/img/coins/200x200/3890.png",
         WARNA:"#a05df6",
-        DATAJSON: 'https://multichecker.vercel.app/JSON/poly_multi.json',
+        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token_polygon.json',
         BaseFEEDEX : "POLUSDT",
         DEXS: [
             "1inch",
@@ -119,7 +119,7 @@ const CONFIG_CHAINS = {
         URL_Chain: "https://arbiscan.io" ,
         WARNA:"#a6b0c3",
         ICON:"https://wiki.dextrac.com:3443/images/1/11/Arbitrum_Logo.png",
-        DATAJSON: 'https://multichecker.vercel.app/JSON/arb_multi.json',
+        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token_arb.json',
         BaseFEEDEX : "ETHUSDT",
         DEXS: [
             "1inch",
@@ -190,7 +190,7 @@ const CONFIG_CHAINS = {
         URL_Chain: "https://etherscan.io" ,
         WARNA:"#8098ee",
         ICON:"https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png",
-        DATAJSON: 'https://multichecker.vercel.app/JSON/erc20_multi.json',
+        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token_erc20.json',
         BaseFEEDEX : "ETHUSDT",
         DEXS: [
             "1inch",
@@ -266,7 +266,7 @@ const CONFIG_CHAINS = {
         URL_Chain: "https://bscscan.com" , 
         WARNA:"#f6cc6a",
         ICON:"https://cryptologos.cc/logos/bnb-bnb-logo.png",
-        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token.json',
+        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token_bep20.json',
         BaseFEEDEX : "BNBUSDT",
         DEXS: [
             "1inch",
@@ -472,7 +472,7 @@ const CONFIG_CHAINS = {
         URL_Chain: "https://basescan.org/", 
         WARNA:"#1e46f9",
         ICON:"https://avatars.githubusercontent.com/u/108554348?v=4",
-        DATAJSON: 'https://multichecker.vercel.app/JSON/base_multi.json',
+        DATAJSON: 'https://multichecker.vercel.app/TRIANGULAR/token_base.json',
         BaseFEEDEX : "ETHUSDT",
         DEXS: [
             "1inch",
