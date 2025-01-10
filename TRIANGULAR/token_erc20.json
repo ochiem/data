@@ -3969,66 +3969,6 @@
         "cex": "BINANCE",
         "status": true,
         "symbol_in": "BNT",
-        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-        "des_in": 18,
-        "symbol_out": "USDT",
-        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "des_out": 6
-    },
-    {
-        "cex": "BITGET",
-        "status": true,
-        "symbol_in": "BNT",
-        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-        "des_in": 18,
-        "symbol_out": "USDT",
-        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "des_out": 6
-    },
-    {
-        "cex": "BYBIT",
-        "status": true,
-        "symbol_in": "BNT",
-        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-        "des_in": 18,
-        "symbol_out": "USDT",
-        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "des_out": 6
-    },
-    {
-        "cex": "GATE",
-        "status": true,
-        "symbol_in": "BNT",
-        "sc_in": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
-        "des_in": 18,
-        "symbol_out": "ETH",
-        "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        "des_out": 18
-    },
-    {
-        "cex": "MEXC",
-        "status": true,
-        "symbol_in": "BNT",
-        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-        "des_in": 18,
-        "symbol_out": "USDT",
-        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "des_out": 6
-    },
-    {
-        "cex": "OKX",
-        "status": true,
-        "symbol_in": "BNT",
-        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-        "des_in": 18,
-        "symbol_out": "USDT",
-        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "des_out": 6
-    },
-    {
-        "cex": "BINANCE",
-        "status": true,
-        "symbol_in": "BNT",
         "sc_in": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
         "des_in": 18,
         "symbol_out": "1INCH",
@@ -4459,6 +4399,16 @@
         "cex": "BINANCE",
         "status": true,
         "symbol_in": "BNT",
+        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+        "des_in": 18,
+        "symbol_out": "USDT",
+        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "des_out": 6
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "BNT",
         "sc_in": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
         "des_in": 18,
         "symbol_out": "WOO",
@@ -4484,6 +4434,56 @@
         "symbol_out": "ZRX",
         "sc_out": "0xe41d2489571d322189246dafa5ebde1f4699f498",
         "des_out": 18
+    },
+    {
+        "cex": "BITGET",
+        "status": true,
+        "symbol_in": "BNT",
+        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+        "des_in": 18,
+        "symbol_out": "USDT",
+        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "des_out": 6
+    },
+    {
+        "cex": "BYBIT",
+        "status": true,
+        "symbol_in": "BNT",
+        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+        "des_in": 18,
+        "symbol_out": "USDT",
+        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "des_out": 6
+    },
+    {
+        "cex": "GATE",
+        "status": true,
+        "symbol_in": "BNT",
+        "sc_in": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_out": 18
+    },
+    {
+        "cex": "MEXC",
+        "status": true,
+        "symbol_in": "BNT",
+        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+        "des_in": 18,
+        "symbol_out": "USDT",
+        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "des_out": 6
+    },
+    {
+        "cex": "OKX",
+        "status": true,
+        "symbol_in": "BNT",
+        "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+        "des_in": 18,
+        "symbol_out": "USDT",
+        "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "des_out": 6
     },
     {
         "cex": "GATE",
@@ -19303,6 +19303,1356 @@
         "des_in": 18,
         "symbol_out": "ZRX",
         "sc_out": "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "1MBABYDOGE",
+        "sc_out": "0xac57de9c1a09fec648e93eb98875b212db0d460b",
+        "des_out": 15
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ACH",
+        "sc_out": "0xed04915c23f00a313a544955524eb7dbd823143d",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ADX",
+        "sc_out": "0xade00c28244d5ce17d72e40330b1c318cd12b7c3",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AERGO",
+        "sc_out": "0x91af0fbb28aba7e31403cb457106ce79397fd4e6",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AEVO",
+        "sc_out": "0xb528edbef013aff855ac3c50b381f253af13b997",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AGLD",
+        "sc_out": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ALICE",
+        "sc_out": "0xac51066d7bec65dc4589368da368b212745d63e8",
+        "des_out": 6
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ALT",
+        "sc_out": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "APE",
+        "sc_out": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ARKM",
+        "sc_out": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ARPA",
+        "sc_out": "0xba50933c268f567bdc86e1ac131be072c6b0b71a",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ATA",
+        "sc_out": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AUCTION",
+        "sc_out": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AUDIO",
+        "sc_out": "0x18aaa7115705e8be94bffebde57af9bfc265b998",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AVA",
+        "sc_out": "0xa6c0c097741d55ecd9a3a7def3a8253fd022ceb9",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "AXL",
+        "sc_out": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3",
+        "des_out": 6
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BADGER",
+        "sc_out": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BANANA",
+        "sc_out": "0x38e68a37e401f7271568cecaac63c6b1e19130b4",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BEAMX",
+        "sc_out": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BEL",
+        "sc_out": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BETA",
+        "sc_out": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BICO",
+        "sc_out": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BIFI",
+        "sc_out": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BLUR",
+        "sc_out": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "BTC",
+        "sc_out": "0x9be89d2a4cd102d8fecc6bf9da793be995c22541",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "C98",
+        "sc_out": "0xae12c5930881c53715b369cec7606b70d8eb229f",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CAKE",
+        "sc_out": "0x152649ea73beab28c5b49b26eb48f7ead6d4c898",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CELR",
+        "sc_out": "0x4f9254c83eb525f9fcf346490bbb3ed28a81c667",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CHESS",
+        "sc_out": "0xd6123271f980d966b00ca4fca6c2c021f05e2e73",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CHR",
+        "sc_out": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
+        "des_out": 6
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CLV",
+        "sc_out": "0x80c62fe4487e1351b47ba49809ebd60ed085bf52",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "COMBO",
+        "sc_out": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "COS",
+        "sc_out": "0x589891a198195061cb8ad1a75357a3b7dbadd7bc",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "COTI",
+        "sc_out": "0xddb3422497e61e13543bea06989c0789117555c5",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "COW",
+        "sc_out": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CVC",
+        "sc_out": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CVX",
+        "sc_out": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "CYBER",
+        "sc_out": "0x14778860e937f509e651192a90589de711fb88a9",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "DAR",
+        "sc_out": "0x081131434f93063751813c619ecca9c4dc7862a3",
+        "des_out": 6
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "DEGO",
+        "sc_out": "0x3da932456d082cba208feb0b096d49b202bf89c8",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "DENT",
+        "sc_out": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "DF",
+        "sc_out": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "DIA",
+        "sc_out": "0x84ca8bc7997272c7cfb4d0cd3d55cd942b3c9419",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "DODO",
+        "sc_out": "0x43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "EIGEN",
+        "sc_out": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ENA",
+        "sc_out": "0x57e114b691db790c35207b2e685d4a43181e6061",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ERN",
+        "sc_out": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ETHFI",
+        "sc_out": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "EURI",
+        "sc_out": "0x9d1a7a3191102e9f900faa10540837ba84dcbae7",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FET",
+        "sc_out": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FIS",
+        "sc_out": "0xef3a930e1ffffacd2fc13434ac81bd278b0ecc8d",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FLOKI",
+        "sc_out": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
+        "des_out": 9
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FORTH",
+        "sc_out": "0x77fba179c79de5b7653f68b5039af940ada60ce0",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FTM",
+        "sc_out": "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FTT",
+        "sc_out": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "FUN",
+        "sc_out": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "G",
+        "sc_out": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "GALA",
+        "sc_out": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "GHST",
+        "sc_out": "0x3f382dbd960e3a9bbceae22651e88158d2791550",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "GLM",
+        "sc_out": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "GMT",
+        "sc_out": "0xe3c408bd53c31c085a1746af401a4042954ff740",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "HFT",
+        "sc_out": "0xb3999f658c0391d94a37f7ff328f3fec942bcadc",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "HIFI",
+        "sc_out": "0x4b9278b94a1112cad404048903b8d343a810b07e",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "HIGH",
+        "sc_out": "0x71ab77b7dbb4fa7e017bc15090b2163221420282",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "IDEX",
+        "sc_out": "0xb705268213d593b8fd88d3fdeff93aff5cbdcfae",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ILV",
+        "sc_out": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "IMX",
+        "sc_out": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "IOST",
+        "sc_out": "0xfa1a856cfa3409cfa145fa4e20eb270df3eb21ab",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "IOTX",
+        "sc_out": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "IQ",
+        "sc_out": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "JASMY",
+        "sc_out": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LDO",
+        "sc_out": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LEVER",
+        "sc_out": "0x4b5f49487ea7b3609b1ad05459be420548789f1f",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LINA",
+        "sc_out": "0x3e9bc21c9b189c09df3ef1b824798658d5011937",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LIT",
+        "sc_out": "0xb59490ab09a0f526cc7305822ac65f2ab12f9723",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LOKA",
+        "sc_out": "0x61e90a50137e1f645c9ef4a0d3a4f01477738406",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LPT",
+        "sc_out": "0x58b6a8a3302369daec383334672404ee733ab239",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LSK",
+        "sc_out": "0x6033f7f88332b8db6ad452b7c6d5bb643990ae3f",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "LTO",
+        "sc_out": "0xd01409314acb3b245cea9500ece3f6fd4d70ea30",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "MEME",
+        "sc_out": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "METIS",
+        "sc_out": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "NEIRO",
+        "sc_out": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
+        "des_out": 9
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "NKN",
+        "sc_out": "0x5cf04716ba20127f1e2297addcf4b5035000c9eb",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "OGN",
+        "sc_out": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "OM",
+        "sc_out": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "OMNI",
+        "sc_out": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "OXT",
+        "sc_out": "0x4575f41308ec1483f3d399aa9a2826d74da13deb",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PAXG",
+        "sc_out": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PDA",
+        "sc_out": "0x0d3cbed3f69ee050668adf3d9ea57241cba33a2b",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PENDLE",
+        "sc_out": "0x808507121b80c02388fad14726482e061b8da827",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PEOPLE",
+        "sc_out": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PHA",
+        "sc_out": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PIXEL",
+        "sc_out": "0x3429d03c6f7521aec737a0bbf2e5ddcef2c3ae31",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "POL",
+        "sc_out": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "POND",
+        "sc_out": "0x57b946008913b82e4df85f501cbaed910e58d26c",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PORTAL",
+        "sc_out": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PROS",
+        "sc_out": "0x8642a849d0dcb7a15a974794668adcfbe4794b56",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PUNDIX",
+        "sc_out": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "PYR",
+        "sc_out": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "QKC",
+        "sc_out": "0xea26c4ac16d4a5a106820bc8aee85fd0b7b2b664",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "RAD",
+        "sc_out": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "RARE",
+        "sc_out": "0xba5bde662c17e2adff1075610382b9b691296350",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "RDNT",
+        "sc_out": "0x137ddb47ee24eaa998a535ab00378d6bfa84f893",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "REZ",
+        "sc_out": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SAND",
+        "sc_out": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SFP",
+        "sc_out": "0x12e2b8033420270db2f3b328e32370cb5b2ca134",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SKL",
+        "sc_out": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SLP",
+        "sc_out": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25",
+        "des_out": 0
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SSV",
+        "sc_out": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "STG",
+        "sc_out": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "STMX",
+        "sc_out": "0xa62cc35625b0c8dc1faea39d33625bb4c15bd71c",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "STORJ",
+        "sc_out": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "STPT",
+        "sc_out": "0xde7d85157d9714eadf595045cc12ca4a5f3e2adb",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "STRK",
+        "sc_out": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SUPER",
+        "sc_out": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "SYN",
+        "sc_out": "0x0f2d719407fdbeff09d87557abb7232601fd9f29",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "T",
+        "sc_out": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "TLM",
+        "sc_out": "0x888888848b652b3e3a0f34c96e00eec0f3a23f72",
+        "des_out": 4
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "TROY",
+        "sc_out": "0x4574562e9310a94f9ca962bd23168d8a06875b1a",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "TRX",
+        "sc_out": "0xf230b790e05390fc8295f4d3f60332c93bed42e2",
+        "des_out": 6
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "TURBO",
+        "sc_out": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "TUSD",
+        "sc_out": "0x0000000000085d4780b73119b644ae5ecd22b376",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "UFT",
+        "sc_out": "0x0202be363b8a4820f3f4de7faf5224ff05943ab1",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "UTK",
+        "sc_out": "0xdc9ac3c20d1ed0b540df9b1fedc10039df13f99c",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "VANRY",
+        "sc_out": "0x8de5b80a0c1b02fe4976851d030b36122dbb8624",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "VIB",
+        "sc_out": "0x2c974b2d0ba1716e644c1fc59982a89ddd2ff724",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "VIC",
+        "sc_out": "0x05d3606d5c81eb9b7b18530995ec9b29da05faba",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "VIDT",
+        "sc_out": "0x3be7bf1a5f23bd8336787d0289b70602f1940875",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "W",
+        "sc_out": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "WAXP",
+        "sc_out": "0x2a79324c19ef2b89ea98b23bc669b7e7c9f8a517",
+        "des_out": 8
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "WBETH",
+        "sc_out": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "WLD",
+        "sc_out": "0x163f8c2467924be0ae7b5347228cabf260318753",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "XRP",
+        "sc_out": "0x39fbbabf11738317a448031930706cd3e612e1b9",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "YGG",
+        "sc_out": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+        "des_out": 18
+    },
+    {
+        "cex": "BINANCE",
+        "status": true,
+        "symbol_in": "ETH",
+        "sc_in": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "des_in": 18,
+        "symbol_out": "ZRO",
+        "sc_out": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
         "des_out": 18
     },
     {
