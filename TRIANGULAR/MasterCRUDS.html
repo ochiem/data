@@ -498,14 +498,14 @@
 
             if (data.cex !== 'GATE') {
                 // Periksa data wallet terkait untuk withdraw dan deposit
-                const StatusToken = getWalletStatus(data.cex, data.symbol_in, (data.sc_in || "").toLowerCase());
+                const StatusToken = getWalletStatus(data.cex, data.symbol_in);
                 if (StatusToken) {
                     withdrawStatus.text = StatusToken.withdrawEnable ? 'OPEN' : 'CLOSE';
                     withdrawStatus.style = StatusToken.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
                 }
-            // console.log(`CEK WD: ${data.symbol_in} CEX:${data.cex}`, StatusToken);
+             //console.log(`CEK WD: ${data.symbol_in} CEX:${data.cex}`, StatusToken);
 
-                const StatusPair = getWalletStatus(data.cex, data.symbol_out, (data.sc_out || "").toLowerCase());
+                const StatusPair = getWalletStatus(data.cex, data.symbol_out);
                 if (StatusPair) {
                     depositStatus.text = StatusPair.depositEnable ? 'OPEN' : 'CLOSE';
                     depositStatus.style = StatusPair.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
@@ -637,10 +637,10 @@
     }
 
     // Fungsi untuk mengambil status wallet berdasarkan CEX dan token
-    function getWalletStatus(cex, tokenName, scToken) {
+    function getWalletStatus(cex, tokenName) {
         // Validasi parameter wajib
-        if (!cex || !tokenName || !scToken) {
-            console.error("Parameter tidak valid: cex, tokenName, atau scToken kosong.");
+        if (!cex || !tokenName) {
+            console.error("Parameter tidak valid: cex, tokenName kosong.");
             return null;
         }
 
@@ -652,8 +652,9 @@
             // Cari token berdasarkan cex, tokenName, dan scToken
             const token = WalletCEXData.find(item => 
                 item.cex === cex &&               // Cek nama CEX (case-insensitive)
-                item.tokenName === tokenName &&  // Cek tokenName (case-insensitive)
-                item.scToken === scToken         // Cek smart contract token (case-insensitive)
+                item.tokenName === tokenName 
+                //&&  // Cek tokenName (case-insensitive)
+               // item.scToken === scToken         // Cek smart contract token (case-insensitive)
             );
 
             // Jika token ditemukan, kembalikan status withdraw dan deposit
