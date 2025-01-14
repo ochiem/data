@@ -97,8 +97,8 @@
         </fieldset>
     </form><hr/><br/>
     <div>
+
         <div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
-             
             <!-- Judul dan Jumlah Token -->
             <div class="uk-width-expand">
                 <h3 class="uk-heading-line uk-margin-remove uk-text-primary">
@@ -108,7 +108,7 @@
            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
-                <input type="text" id="searchInput" class="uk-input uk-form-width-medium" placeholder="Cari di tabel...">
+                <input type="text" id="searchInput" class="uk-input uk-form-width-small" placeholder="Cari di tabel...">
             </div>
 
             <!-- Bagian Kanan: Import/Export -->
@@ -133,12 +133,15 @@
                 <th class="uk-text-center uk-text-bold" onclick="sortTable(1)">CEX <span class="sort-icon" id="sortIcon1"></span></th>
                 <th class="uk-text-center uk-text-bold" onclick="sortTable(2)">TOKEN CEX <span class="sort-icon" id="sortIcon2"></span></th>
                 <th class="uk-text-center uk-text-bold" onclick="sortTable(3)">SC_IN & DES_IN <span class="sort-icon" id="sortIcon3"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(8)">WD <span class="sort-icon" id="sortIcon8"></span></th>
                 <th class="uk-text-center uk-text-bold" onclick="sortTable(4)">PAIR DEX <span class="sort-icon" id="sortIcon4"></span></th>
                 <th class="uk-text-center uk-text-bold" onclick="sortTable(5)">SC_OUT & DES_OUT <span class="sort-icon" id="sortIcon5"></span></th>
-                <th class="uk-text-center uk-text-bold" onclick="sortTable(6)">STATUS <span class="sort-icon" id="sortIcon6"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(6)">DEPO <span class="sort-icon" id="sortIcon6"></span></th>
+                <th class="uk-text-center uk-text-bold" onclick="sortTable(7)">STATUS <span class="sort-icon" id="sortIcon7"></span></th>
                 <th class="uk-text-center uk-text-bold">Aksi</th>
             </tr>
         </thead>
+        <div id="loadingStatus" style="text-align:center; font-weight:bold; color:blue;">Loading DATA TOKEN...</div>
         <tbody id="dataTableBody">
         </tbody>
     </table>
@@ -171,6 +174,9 @@
         localStorage.setItem(storageKey, JSON.stringify(value));
     }
 
+    const chainName = urlParams.get('chain') || 'bsc'; // Jika tidak ada parameter 'chain', default ke 'polygon'
+    // Mendapatkan data untuk chain yang dipilih
+    const DTChain = getChainData(chainName);
 
     $('#tokenCount').on('click', function() {
         const data = getFromLocalStorage([]);
@@ -197,7 +203,8 @@
     });
 
     $(document).ready(function() {
-
+        
+        
     if (typeof CONFIG_CEX !== 'undefined' && typeof CONFIG_CHAINS !== 'undefined') {
         const currentPage = window.location.pathname.split('/').pop(); // Mengambil bagian terakhir dari path URL
 
@@ -300,54 +307,6 @@
 
             UIkit.notification('Data berhasil disimpan!', { status: 'success' });
         });
-
-        $('#cryptoForm2').on('submit', function(event) {
-                event.preventDefault();
-                const cex = Array.from($("input[name='cex']:checked")).map(checkbox => checkbox.value);
-                if (cex.length === 0) {
-                    UIkit.notification('Harap pilih minimal satu checkbox untuk CEX!', { status: 'warning' });
-                    return; // Hentikan eksekusi jika tidak ada checkbox yang dipilih
-                }
-                const symbol = $('#tokenName').val();
-                const cmcID = $('#cmcID').val();
-                const sc = $('#sc').val();
-                const desimal = $('#desimal').val();
-                
-                const status = $('#status').is(':checked');
-                const pairdex = $("input[name='dex']:checked").val();
-
-                const data = getFromLocalStorage([]);
-                const editIndex = $('#cryptoForm').data('edit-index');
-
-                if (editIndex !== undefined) {
-                    delete $('#cryptoForm').data('edit-index'); 
-                }
-
-                cex.forEach((cexChoice) => {
-                    const newData = {
-                        cex: cexChoice,
-                        symbol,
-                        sc,
-                        desimal: parseInt(desimal),
-                        cmcID,
-                        status,
-                        pairdex
-                    };
-                    
-                    if (editIndex !== undefined) {
-                        data[editIndex] = newData;
-                    } else {
-                        data.push(newData);
-                    }
-                });
-
-                saveToLocalStorage(data);
-                loadStoredData();
-                resetForm();
-
-                // Tampilkan notifikasi UIkit saat data berhasil disimpan
-                UIkit.notification('Data berhasil disimpan!', { status: 'success' });
-            });
 
         $('#dataTableBody').on('click', '.delete-btn', function() {
             const index = $(this).data('index');
@@ -511,17 +470,45 @@
         return cexConfig && cexConfig.WARNA ? cexConfig.WARNA : 'black'; // Gunakan warna dari konfigurasi atau 'black' jika tidak ditemukan
     }
 
-   // Fungsi untuk memuat data yang disimpan
+    // memuat data TOKEN pada tabel
     function loadStoredData() {
-        const storedData = getFromLocalStorage([]);  // Ambil data dari localStorage
-        $('#dataTableBody').empty();  // Kosongkan tabel sebelum menambahkan data baru
-        $('#tokenCount').text(" TOTAL : " + storedData.length + " PAIR-TOKEN ");  // Tampilkan jumlah token
+        // Tampilkan pesan loading sebelum proses pengecekan
+        
+        const storedData = getFromLocalStorage([]); // Ambil data dari localStorage
+        $('#dataTableBody').empty(); // Kosongkan tabel sebelum menambahkan data baru
 
         storedData.forEach((data, index) => {
-            const statusClass = data.status ? 'status-active' : 'status-inactive';
-            const warnaCEX = getWarnaCEX(data.cex);  // Mendapatkan warna berdasarkan nama CEX
+            // Setelah semua data selesai diproses
+            if(index>data.length){
+                $('div#loadingStatus').text("Sedang Memuat DATA TOKEN..."); 
+            }else{
+                $('div#loadingStatus').text("SELESAI, Memuat DATA TOKEN !!"); 
+                setTimeout(() => $('div#loadingStatus').fadeOut(), 2000); 
+            }
+            const warnaCEX = getWarnaCEX(data.cex); // Mendapatkan warna berdasarkan nama CEX
+            
+            // Default status untuk Wallet
+            let withdrawStatus = { text: '---', style: '' };
+            let depositStatus = { text: '---', style: '' };
 
-            // Membuat baris tabel
+            if (data.cex !== 'GATE') {
+                // Periksa data wallet terkait untuk withdraw dan deposit
+                const StatusToken = getWalletStatus(data.cex, data.symbol_in, (data.sc_in || "").toLowerCase());
+                if (StatusToken) {
+                    withdrawStatus.text = StatusToken.withdrawEnable ? 'OPEN' : 'CLOSE';
+                    withdrawStatus.style = StatusToken.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
+                }
+            // console.log(`CEK WD: ${data.symbol_in} CEX:${data.cex}`, StatusToken);
+
+                const StatusPair = getWalletStatus(data.cex, data.symbol_out, (data.sc_out || "").toLowerCase());
+                if (StatusPair) {
+                    depositStatus.text = StatusPair.depositEnable ? 'OPEN' : 'CLOSE';
+                    depositStatus.style = StatusPair.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
+                }
+            // console.log(`CEK DP: ${data.symbol_out} CEX:${data.cex}`, StatusPair);
+            }
+
+            // Baris tabel untuk ditampilkan
             const row = `
                 <tr data-index="${index}" style="color: ${warnaCEX};">
                     <td class="uk-text-center">${index + 1}</td>
@@ -530,11 +517,12 @@
                     <td style="font-size:small;">
                         <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">${data.sc_in}</a><br/>(${data.des_in})
                     </td>
+                    <td class="uk-text-center" style="${withdrawStatus.style}">${withdrawStatus.text}</td> <!-- Status Withdraw -->
                     <td style="text-align:center;">${data.symbol_out}</td>
                     <td style="font-size:small;">
                         <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">${data.sc_out}</a><br/>(${data.des_out})
                     </td>
-                    <!-- Kolom Status dengan Checkbox -->
+                    <td class="uk-text-center" style="${depositStatus.style}">${depositStatus.text}</td> <!-- Status Deposit -->
                     <td class="uk-text-center">
                         <label>
                             <input type="checkbox" class="statusCheckbox" data-index="${index}" ${data.status ? 'checked' : ''}>
@@ -547,13 +535,14 @@
                     </td>
                 </tr>
             `;
-            $('#dataTableBody').append(row);  // Tambahkan baris ke tbody
+            $('#dataTableBody').append(row); // Tambahkan baris ke tbody
         });
 
+        // Sembunyikan pesan setelah 3 detik
+        $('#tokenCount').text(` TOTAL : ${storedData.length} PAIR-TOKEN `); // Tampilkan jumlah token
         // Memperbarui ikon urutan jika diperlukan
         updateSortIcons();
     }
-
     // Fungsi untuk menangani perubahan status checkbox
     $(document).on('change', '.statusCheckbox', function() {
         const index = $(this).data('index');  // Ambil index dari data
@@ -613,6 +602,71 @@
             $('#sortIcon' + index).html(icon);
         }
     }
+
+    // fungsi mengecek status DEPO & WD GATE
+    function StatusWalletGATE(currency) {
+        return new Promise((resolve, reject) => {
+            $.get('https://api.gateio.ws/api/v4/wallet/currency_chains?currency=' + currency, function(response) {
+                var ChainCoin = response.find(function(chain) {
+                    return chain.chain === DTChain.CEXCHAIN.GATE.chainCEX;
+                });
+
+                if (ChainCoin) {
+                    // Tentukan status deposit dan withdraw
+                    var depositActive = !ChainCoin.is_deposit_disabled; // true if deposit is active
+                    var withdrawActive = !ChainCoin.is_withdraw_disabled; // true if withdraw is active
+                    
+                   // Resolve with deposit and withdraw statuses
+                    resolve({ depositActive, withdrawActive });
+                    
+                } else {
+                    //UIkit.notification("GAGAL CEK WALLET GATE!! TOKEN:"+currency, { status: 'error' });
+                    resolve({ depositActive: false, withdrawActive: false }); // Resolving with false if chain not found
+                }
+
+            }).fail(function(xhr, status, error) {
+                console.error(status, error);
+                reject(error); // Reject the promise on error
+            });
+        });
+    }
+
+    // Fungsi untuk mengambil status wallet berdasarkan CEX dan token
+    function getWalletStatus(cex, tokenName, scToken) {
+        // Validasi parameter wajib
+        if (!cex || !tokenName || !scToken) {
+            console.error("Parameter tidak valid: cex, tokenName, atau scToken kosong.");
+            return null;
+        }
+
+        const key = "TRIANGULAR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX"; // Membuat key berdasarkan chain
+        const WalletCEXData = JSON.parse(localStorage.getItem(key)) || []; // Ambil data dari localStorage
+
+        // Pastikan data ada
+        if (WalletCEXData.length > 0) {
+            // Cari token berdasarkan cex, tokenName, dan scToken
+            const token = WalletCEXData.find(item => 
+                item.cex === cex &&               // Cek nama CEX (case-insensitive)
+                item.tokenName === tokenName &&  // Cek tokenName (case-insensitive)
+                item.scToken === scToken         // Cek smart contract token (case-insensitive)
+            );
+
+            // Jika token ditemukan, kembalikan status withdraw dan deposit
+            if (token) {
+                return {
+                    withdrawEnable: token.withdrawEnable || false,  // Status Withdraw
+                    depositEnable: token.depositEnable || false     // Status Deposit
+                };
+            }
+        }
+
+        // Kembalikan null jika data tidak ditemukan
+    // console.warn("Token tidak ditemukan:", { cex, tokenName, scToken });
+        return null;
+    }
+
+
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
 </body>
