@@ -169,7 +169,7 @@
         #TabelHarga tr:nth-child(6n+1), 
         #TabelHarga tr:nth-child(6n+2),
         #TabelHarga tr:nth-child(6n+3) {
-            background-color: #f8f3e5; /* Warna latar belakang untuk tiga baris pertama */
+            background-color: #ecf9f6; /* Warna latar belakang untuk tiga baris pertama */
         }
 
         /* Warna latar belakang untuk tiga baris berikutnya */
@@ -230,7 +230,7 @@
                             
                             <!-- Kolom pertama -->
                             <div class="uk-card uk-card-default uk-card-body">
-                                <h3 style="text-align: center; margin: 12px 0px; color: #1317e1;">:: SETINGAN PERMODALAN</h3>
+                                <h3 style="text-align: center; color: #1317e1;">:: SETINGAN PERMODALAN</h3>
                                 <div id="modal-container"></div>                                
                             </div>
                         </div>
@@ -245,16 +245,18 @@
                                     <!-- <div style="display: none;"> -->
                                        <div>
                                            <label for="jeda-time-group" class="uk-text-danger">SCAN PERKOIN : </label>
-                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="20"  name="koin-group"> 20</label> 
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="18"  name="koin-group"> 18</label> 
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="16"  name="koin-group"> 16</label> 
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="14"  name="koin-group"> 14</label> 
-                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="12"  name="koin-group"> 12</label> 
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="12"  name="koin-group"> 12</label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="10"  name="koin-group"> 10</label>  
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="8" checked name="koin-group"> 8</label>                                           
-                                         |  &nbsp;
                                         </div>
+                                    </div>
+                                <div class="uk-flex uk-flex-middle uk-margin ">
                                        <div>
                                             <label for="SPEEDSCAN" class="uk-text-danger">SPEED SCAN</label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5"  name="waktu-tunggu"> SLOW </label>
                                             <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="waktu-tunggu"> NORMAL </label>
                                             <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" checkbox name="waktu-tunggu"> MEDIUM </label>
                                             <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2" name="waktu-tunggu"> FAST </label>
@@ -361,41 +363,20 @@
                                 <span id="dexpair">
                                     <b>
                                         <label class="uk-form-label uk-text-secondary">
-                                            TOKEN PAIR 
+                                            PAIR 
                                             (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):
                                         </label>
                                         <label class="uk-form-label uk-text-primary" id="dexpair-checkbox-container"></label>
                                     </b>
                                     <b>
-                                        <input type="checkbox" id="Cautorun" /> 
-                                        <span class="uk-form-label uk-text-danger uk-text-small" id="autorun">AUTO</span>
+                                        <!-- <input type="checkbox" id="Cautorun" /> 
+                                        <span class="uk-form-label uk-text-danger uk-text-small" id="autorun">AUTO</span> -->
                                     </b>
                                     <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
                                     <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START</button>
                                 </span>
                             </div>
-                        </div>
-                
-                        <!-- Kolom Kanan -->
-                      
-                            <!-- Bagian DEX PAIR
-                            <div  style="margin-top: 0px;">
-                                <span id="dexpair">
-                                    <b>
-                                        <label class="uk-form-label uk-text-secondary">
-                                            TOKEN PAIR 
-                                            (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>):
-                                        </label>
-                                        <label class="uk-form-label uk-text-primary" id="dexpair-checkbox-container"></label>
-                                    </b>
-                                    <b>
-                                        <input type="checkbox" id="Cautorun" /> 
-                                        <span class="uk-form-label uk-text-danger uk-text-small" id="autorun">AUTO</span>
-                                    </b>
-                                    <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
-                                    <button class="uk-button uk-button-small uk-button-primary" type="button" style="display: none;" id="startSCAN">START</button>
-                                </span>
-                            </div> -->
+                        </div>                
                         
                     </div>
                 </div>
@@ -409,6 +390,7 @@
                     <div class="sinyal-item" data-dex="PARASWAP"><b>PARA</b>: <span class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </span> </div>
                     <div class="sinyal-item" data-dex="KYBERSWAP"><b>KYBER</b>: <span class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </span> </div>
                     <div class="sinyal-item" data-dex="OKX"><b>OKXDEX</b>: <span class="uk-text uk-text-small uk-text-primary" id="sinyalokx"> </span> </div>
+                    <div class="sinyal-item" data-dex="MAGPIE"><b>MAGPIE</b>: <span class="uk-text uk-text-small uk-text-primary" id="sinyalmagpie"> </span> </div>
                     <div class="sinyal-item" data-dex="JUPITER"><b>JUPITER</b>: <span class="uk-text uk-text-small uk-text-primary" id="sinyaljupiter"> </span> </div>
                     </div>
 
@@ -437,6 +419,7 @@
                         <th class="uk-text-secondary dx_paraswap"> <span  id="lKiriPARASWAPSinyal"></span> PARA </th>
                         <th class="uk-text-secondary dx_0x"> <span  id="lKiri0XSinyal"></span> MATCHA</th>
                         <th class="uk-text-secondary dx_okx"> <span  id="lKiriOKXSinyal"></span> OKXDEX</th>
+                        <th class="uk-text-secondary dx_magpie"> <span  id="lKiriMAGPIESinyal"></span> MAGPIE</th>
                         <th class="uk-text-secondary dx_jupiter"> <span  id="lKiriJUPITERSinyal"></span> JUPITER</th>
                         <th class="uk-text-secondary"> PRICE </th>
                     </tr>
@@ -448,6 +431,7 @@
                         <th class=" dx_paraswap"> <input type="number" class="uk-input" required id="LModalPARASWAP"/> $</th>
                         <th class=" dx_0x"> <input type="number" class="uk-input" required id="LModal0X"/> $</th>
                         <th class=" dx_okx"> <input type="number" class="uk-input" required id="LModalOKX"/> $</th>
+                        <th class=" dx_magpie"> <input type="number" class="uk-input" required id="LModalMAGPIE"/> $</th>
                         <th class=" dx_jupiter"> <input type="number" class="uk-input" required id="LModalJUPITER"/> $</th>
                         <th class="uk-text-secondary"> VOL SELL </th>
                     </tr>
@@ -516,13 +500,13 @@
 
                 // Membuat heading
                 const heading = $('<h5></h5>')
-                    .css({ 'margin': '12px 0px', 'color': '#e4322c' })
+                    .css({ 'margin': '8px 0px', 'color': '#e4322c' })
                     .text(`Modal ${dexUpperCase}`);
                 
                 container.append(heading);
 
                 // Membuat modal div
-                const modalDiv = $('<div></div>').addClass('uk-margin');
+                const modalDiv = $('<div></div>');
 
                 // Input modal
                 const modalInput = $('<input>')
