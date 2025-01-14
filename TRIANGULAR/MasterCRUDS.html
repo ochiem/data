@@ -341,14 +341,16 @@
             const item = data[index];
 
             // Set nilai pada form sesuai data item
-            $('#token_in').val(item.symbol_in);
-            $('#sc_in').val(item.sc_in);
-            $('#des_in').val(item.des_in);
-            $('#token_out').val(item.symbol_in);
-            $('#sc_out').val(item.sc_in);
-            $('#des_out').val(item.des_in);
+            $('#token_in').val(item.symbol_in); // Token CEX
+            $('#sc_in').val(item.sc_in);       // Smart Contract Token CEX
+            $('#des_in').val(item.des_in);     // Decimal Token CEX
+
+            $('#token_out').val(item.symbol_out); // Pair DEX
+            $('#sc_out').val(item.sc_out);       // Smart Contract Pair DEX
+            $('#des_out').val(item.des_out);     // Decimal Pair DEX
+
+            // Set status checkbox
             $('#status').prop('checked', item.status);
-            $("input[name='dex'][value='" + item.pairdex + "']").prop('checked', true);
 
             // Nonaktifkan semua checkbox cex
             $("input[name='cex']").prop('checked', false).prop('disabled', true);
@@ -358,13 +360,16 @@
                 $("input[name='cex'][value='" + item.cex + "']").prop('checked', true);
             }
 
-            $('#cryptoForm').data('edit-index', index); // Simpan index edit untuk form
-            $('#cancelButton').show(); // Tampilkan tombol cancel
+            // Simpan index edit untuk form
+            $('#cryptoForm').data('edit-index', index); 
 
-            // Pindahkan cursor ke bagian form dengan animasi scroll
+            // Tampilkan tombol cancel jika ada
+            $('#cancelButton').show();
+
+            // Pindahkan scroll ke bagian form
             $('html, body').animate({
                 scrollTop: $('#cryptoForm').offset().top
-            }, 500); // 500 ms adalah durasi scrolling
+            }, 500);
         }
 
         function resetForm() {
