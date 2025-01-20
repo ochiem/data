@@ -42,7 +42,6 @@
     </style>
     
 </head>
-<body>
 <div class="uk-container uk-margin-top">
     <div class="uk-text-center" style="margin-top: 13px;"> <!-- Mengurangi margin-top -->
         <h3 id="judul" class="uk-margin-remove" style="font-size: 30px;" > &nbsp;
@@ -527,6 +526,10 @@
         }
 
         $('#importButton').on('click', function () {
+            removeFromLocalStorage("TOKEN")
+            removeFromLocalStorage("TOKEN_SCANNER")
+            removeFromLocalStorage("WALLET_CEX")
+
             // hapus token & fee wd
             const fileInput = $('#importFile');
             const importStatus = $('#importStatus');
@@ -543,14 +546,12 @@
                         console.log('Data CSV berhasil dibaca:', jsonData); // Debugging
                         
                         if (Array.isArray(jsonData)) {
+
                             saveToLocalStorage("TOKEN",jsonData);
                             console.log('Data disimpan ke localStorage'); // Debugging
                             loadStoredData();
                             importStatus.text('Data berhasil diimpor.')
                             toastr.success('IMPORT DATA BERHASIL!!')
-                            removeFromLocalStorage("TOKEN")
-                            removeFromLocalStorage("TOKEN_SCANNER")
-                            removeFromLocalStorage("WALLET_CEX")
                                 .removeClass('uk-text-danger')
                                 .addClass('uk-text-success');
                         } else {
