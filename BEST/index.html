@@ -1279,7 +1279,7 @@
             return;
         }
 
-        const apiUrl = `https://cors-anywhere.herokuapp.com/https://api.mexc.com/api/v3/capital/config/getall`;
+        const apiUrl = selectedServer+`https://api.mexc.com/api/v3/capital/config/getall`;
         
         $.ajax({
             url: `${apiUrl}?${queryString}&signature=${signature}`,
