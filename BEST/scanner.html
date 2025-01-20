@@ -2083,7 +2083,7 @@
                                 break;    
                             case 'okx':
                                 amount_out = response.data[0].toTokenAmount / Math.pow(10, des_output);
-                                FeeSwap = (response.data[0].estimateGasFee / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('GASGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));            
+                                FeeSwap = (response.data[0].estimateGasFee / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));            
                                 break;                         
                             case 'jupiter':
                                 var amount_out = response.outAmount/Math.pow(10, des_output);
