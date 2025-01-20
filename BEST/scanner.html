@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link id="favicon" rel="icon" type="image/png" >
-    <script src="config.js"></script>
+    <script src="BEST/config.js"></script>
     <style>
         .uk-container { width: 96%; max-width: none; }
         .status-active { color: green; }
@@ -255,6 +255,9 @@
         <div class="uk-grid-small uk-flex uk-flex-middle  uk-margin-small-top" uk-grid>
             <!-- Judul dan Jumlah Token -->
             <div class="uk-width-expand">
+                <h3 class="uk-heading-line uk-margin-remove uk-text-danger">
+                    <span style="font-size:medium; font-weight: bolder;" id="sinyalselisih">INFO SINYAL</span>
+                </h3>
                 <h4 class="uk-heading-line uk-margin-remove uk-text-primary">
                     <span style="font-size:medium; font-weight: bolder;">DAFTAR TOKEN <span id="namachain2"></span> (<span id="tokenCount" class="token-count">0</span>)</span>
                 </h4>
@@ -1732,16 +1735,19 @@
          // == 0 ? totalFee + (Modal * 0.2 / 100) : parseFloat(savedSettingData.FilterPNL);
          
          var conlusion="NO SELISIH";
+         var selisih =false;
         // Jika filter PNL adalah 0, bandingkan nilai akhir dengan modal + semua biaya
         if (filterPNLValue == 0) {
             if (totalValue > totalModal + totalFee) {
                 conlusion = "GET SIGNAL";
+                selisih=true;
             }
         }
         // Jika filter PNL bukan 0, bandingkan selisih nilai akhir dan modal dengan filter PNL
         else {
             if ((totalValue - totalModal) > filterPNLValue) {
                 conlusion = "GET SIGNAL";
+                selisih=true;
             }
         }         // Output log
          console.log("-------------------------------------");
@@ -1793,33 +1799,71 @@
            
         }
 
-        DisplayPNL( profitLoss,  DataCEX.cex,  NameToken, TokenPair, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, DataDEX.sc_input, DataDEX.sc_output, NamePair,totalValue,totalModal );
+       DisplayPNL( profitLoss,  DataCEX.cex,  NameToken, TokenPair, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, DataDEX.sc_input, DataDEX.sc_output, NamePair,totalValue,totalModal,conlusion,selisih );
         
      }
 
      // Fungsi INFO SINYAL
-    function DisplayPNL(PNL,cex,NameToken, TokenPair, totalFee, modal,dex,priceCEX,priceDEX,FeeSwap,FeeWD,sc_input, sc_output,pairdex,totalValue,totalModal){
-        //console.log(PNL,action,cex,NameToken, TokenPair, totalFee, modal,dex,priceCEX,priceDEX,FeeSwap,FeeWD,sc_input, sc_output,pairdex);
-        var filterPNLValue = parseFloat(savedSettingData.FilterPNL);
-        let dexResult = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+    function DisplayPNL(PNL,cex,NameToken, TokenPair, totalFee, modal,dex,priceCEX,priceDEX,FeeSwap,FeeWD,sc_input, sc_output,pairdex,totalValue,totalModal,conlusion,selisih){
+       
+        var filterPNLValue = parseFloat(savedSettingData.filterPNL);
+        var totalValue = parseFloat(totalValue);
+        var totalModal = parseFloat(totalModal);
+        var totalFee = parseFloat(totalFee);
 
+        var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         if (filterPNLValue == 0) {
-            if (totalValue > totalModal) {
-                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-secondary>PNL:${(PNL).toFixed(2)}$</span>`).removeClass().addClass('ijo');
-                 InfoSinyal(dex.toUpperCase(), TokenPair, PNL, totalFee, cex.toUpperCase(),NameToken,pairdex);
-            }else{
-                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-danger>PNL:${(PNL).toFixed(2)}$</span>`);
-            }
-        }
-        else {
-            if ((totalValue - modal) > filterPNLValue) {
-                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-secondary>PNL:${(PNL).toFixed(2)}$</span>`).removeClass().addClass('ijo');
-                InfoSinyal(dex.toUpperCase(), TokenPair, PNL, totalFee, cex.toUpperCase(),NameToken,pairdex);
-            }else{
-                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-danger>PNL:${(PNL).toFixed(2)}$</span>`);
-            }
-        }
+            if (totalValue > totalModal + totalFee) {
+                
+                var sinyals = `${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)}) `;
+                toastr.info("SELISIH",sinyals);
+                $("#sinyalselisih").append(sinyals);
 
+                $(`#${IdCELL}`).css('background-color', '#9be99b');
+                $(`#RESULT_${IdCELL}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-secondary>PNL:${(PNL).toFixed(2)}$</span>`).addClass('ijo');
+                var audio = new Audio('audio.mp3');  // Ganti dengan path file suara yang sesuai
+                 audio.play(); 
+               // InfoSinyal(dex.toLowerCase(), TokenPair, PNL, totalFee, cex.toUpperCase(),NameToken,pairdex);
+            }else{
+                $(`#RESULT_${IdCELL}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-danger>PNL:${(PNL).toFixed(2)}$</span>`);
+            }
+        }
+        // Jika filter PNL bukan 0, bandingkan selisih nilai akhir dan modal dengan filter PNL
+        else {
+            if ((totalValue - totalModal) > filterPNLValue) {
+                var sinyals = `${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)}) `;
+                toastr.info("SELISIH",sinyals);
+                $("#sinyalselisih").append(sinyals);
+                
+                $(`#${IdCELL}`).css('background-color', '#9be99b');
+                $(`#RESULT_${IdCELL}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-secondary>PNL:${(PNL).toFixed(2)}$</span>`).addClass('ijo');
+                var audio = new Audio('audio.mp3');  // Ganti dengan path file suara yang sesuai
+                audio.play();
+              //  InfoSinyal(dex.toLowerCase(), TokenPair, PNL, totalFee, cex.toUpperCase(),NameToken,pairdex);
+            }else{
+                $(`#RESULT_${IdCELL}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-danger>PNL:${(PNL).toFixed(2)}$</span>`);
+            }
+        }  
+/*
+       if (filterPNLValue == 0) {
+            if (totalValue > totalModal + totalFee) {
+                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-secondary>PNL:${(PNL).toFixed(2)}$</span>`).removeClass().addClass('ijo');
+                // InfoSinyal(dex.toUpperCase(), TokenPair, PNL, totalFee, cex.toUpperCase(),NameToken,pairdex);
+            }else{
+                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-danger>PNL:${(PNL).toFixed(2)}$</span>`);
+            }
+        }
+        // Jika filter PNL bukan 0, bandingkan selisih nilai akhir dan modal dengan filter PNL
+        else {
+            if ((totalValue - totalModal) > filterPNLValue) {
+                toastr.error("SELISIH",TokenPair);
+                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-secondary>PNL:${(PNL).toFixed(2)}$</span>`).removeClass().addClass('ijo');
+                // InfoSinyal(dex.toUpperCase(), TokenPair, PNL, totalFee, cex.toUpperCase(),NameToken,pairdex);
+            }else{
+                $(`#RESULT_${dexResult}`).html(`<span class=uk-text-secondary>FeeALL:${totalFee.toFixed(2)}$</span> <span class=uk-text-primary>SW:${FeeSwap.toFixed(2)}$</span> <span class=uk-text-danger>PNL:${(PNL).toFixed(2)}$</span>`);
+            }
+        }   
+*/
         // if(PNL>1){
         //     MultisendMessage( cex, dex.toUpperCase(), TokenPair, modal, PNL, priceCEX, priceDEX, FeeSwap,FeeWD, totalFee);
         // }
@@ -1835,7 +1879,9 @@
             ${NameToken}->${NamePair} 
             (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span>${(PNL).toFixed(2)}$)
         </a>`;
-    
+        console.log($("#sinyal" + DEXPLUS.toLowerCase()).length);
+        console.log("ID Target: #sinyal" + DEXPLUS.toLowerCase());
+
         // Menambahkan link ke elemen dengan ID yang sesuai
         $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink} |`);
     
@@ -1879,7 +1925,6 @@
                                 NamePair === "SOL" ? "WSOL" :
                                 NamePair === "AVAX" ? "WAVAX" :
                                 NamePair;
-
         var linkDEX = generateDexLink(dexType, NameToken, sc_input, NamePair, sc_output);
 
         switch (dexType) {
