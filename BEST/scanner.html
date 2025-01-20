@@ -885,7 +885,46 @@
     }
 
     //fungsi filter TOKEN berdasarkan CEX,DEX dan DEX-PAIR
+    //fungsi filter TOKEN berdasarkan CEX,DEX dan DEX-PAIR
     function filterTokens() {
+        const allTokens = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil semua token dari localStorage
+        const selectedCEX = getFromLocalStorage("CEX_PILIH", []); // Ambil pilihan CEX dari localStorage
+        const selectedDEXPAIR = getFromLocalStorage("DEXPAIR_PILIH", []); // Ambil pilihan DEXPAIR dari localStorage
+
+        if (!Array.isArray(allTokens) || allTokens.length === 0) {
+            console.warn("No tokens available for filtering.");
+            return [];
+        }
+
+        // Cek jika "NON" dipilih
+        const isNonSelected = selectedDEXPAIR.includes("NON");
+        const dexPairs = Object.keys(DTChain.PAIRDEXS).filter(pair => pair !== "NON"); // Semua pasangan kecuali "NON"
+
+        // Filter token
+        const filteredTokens = allTokens.filter(token => {
+            const validCEX = selectedCEX.includes(token.cex); // Token harus memiliki CEX yang dipilih
+            let validDexPair;
+
+            if (isNonSelected) {
+                // Jika "NON" dipilih
+                validDexPair = !dexPairs.some(pair => 
+                    token.symbol_in === pair || token.symbol_out === pair
+                ) || selectedDEXPAIR.some(pair =>
+                    token.symbol_in === pair || token.symbol_out === pair
+                ); // Tampilkan token di luar daftar DEX kecuali yang dipilih
+            } else {
+                // Jika "NON" tidak dipilih
+                validDexPair = selectedDEXPAIR.some(pair => 
+                    token.symbol_in === pair || token.symbol_out === pair
+                );
+            }
+
+            // Kembalikan token jika CEX valid, DEX pair valid, dan status true
+            return validCEX && validDexPair && token.status === true && token.withdrawEnable === true && token.depositEnable === true;
+        });
+        return filteredTokens;
+    }
+    function filterTokens2() {
         const allTokens = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil semua token dari localStorage
         const selectedCEX = getFromLocalStorage("CEX_PILIH", []); // Ambil pilihan CEX dari localStorage
         const selectedDEXPAIR = getFromLocalStorage("DEXPAIR_PILIH", []); // Ambil pilihan DEXPAIR dari localStorage
