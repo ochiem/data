@@ -50,7 +50,7 @@
             <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank"><img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="30px" /> </a> &nbsp;
             <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" /> &nbsp;
             <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
-            <a href="BEST/scanner.html" target="_blank" > <img class="icon" id="Scan Price" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
+            <a href="scanner.html" target="_blank" > <img class="icon" id="Scan Price" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
             
                 SETTING MULTI :: <label id="namachain"></label>&nbsp;&nbsp;
             <span id="chain-links-container"></span>             
@@ -548,6 +548,9 @@
                             loadStoredData();
                             importStatus.text('Data berhasil diimpor.')
                             toastr.success('IMPORT DATA BERHASIL!!')
+                            removeFromLocalStorage("TOKEN")
+                            removeFromLocalStorage("TOKEN_SCANNER")
+                            removeFromLocalStorage("WALLET_CEX")
                                 .removeClass('uk-text-danger')
                                 .addClass('uk-text-success');
                         } else {
@@ -1273,7 +1276,7 @@
         const recvWindow = "5000";
         const queryString = `recvWindow=${recvWindow}&timestamp=${timestamp}`;
         const signature = calculateSignature("MEXC", apiSecret, queryString);
-        console.log("API",ApiKey);
+
         if (!signature) {
             toastr.error("Gagal menghitung signature MEXC. Periksa konfigurasi.");
             return;
