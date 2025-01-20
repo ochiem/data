@@ -1273,7 +1273,7 @@
         const recvWindow = "5000";
         const queryString = `recvWindow=${recvWindow}&timestamp=${timestamp}`;
         const signature = calculateSignature("MEXC", apiSecret, queryString);
-
+        console.log("API",ApiKey);
         if (!signature) {
             toastr.error("Gagal menghitung signature MEXC. Periksa konfigurasi.");
             return;
