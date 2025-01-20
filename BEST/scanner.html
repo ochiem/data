@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link id="favicon" rel="icon" type="image/png" >
-    <script src="config.js"></script>
+    <script src="BEST/config.js"></script>
     <style>
         .uk-container { width: 96%; max-width: none; }
         .status-active { color: green; }
@@ -248,15 +248,15 @@
     </div>
 
     <div>
-        <!-- Bagian untuk menampilkan sinyal DEX -->
+        <!-- Bagian untuk menampilkan sinyal DEX
         <div class="uk-text uk-text-small uk-text-secondary  uk-margin-small-top " id="sinyal-container" style="background-color: #fdfff2;">
-            <!-- Sinyal DEX akan dimuat di sini -->
+            Sinyal DEX akan dimuat di sini -->
         </div>
         <div class="uk-grid-small uk-flex uk-flex-middle  uk-margin-small-top" uk-grid>
             <!-- Judul dan Jumlah Token -->
             <div class="uk-width-expand">
                 <h3 class="uk-heading-line uk-margin-remove uk-text-danger">
-                    <span style="font-size:medium; font-weight: bolder;" id="sinyalselisih">INFO SINYAL</span>
+                    <span style="font-size:small; font-weight: bolder;" id="sinyalselisih">INFO SINYAL</span>
                 </h3>
                 <h4 class="uk-heading-line uk-margin-remove uk-text-primary">
                     <span style="font-size:medium; font-weight: bolder;">DAFTAR TOKEN <span id="namachain2"></span> (<span id="tokenCount" class="token-count">0</span>)</span>
@@ -646,6 +646,7 @@
 
     //fungsi memulai pengecekan harga CEX dan DEX
    $("#startSCAN").click(function () {
+        $("#sinyalselisih").text('');
         form_off();
         setNullInfoSinyal();
         $("#stopSCAN").show().prop('disabled', false);
@@ -1812,10 +1813,11 @@
         var totalFee = parseFloat(totalFee);
 
         var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+                        
+        var sinyals = ` <a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class' >${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)})</a> | `;
+
         if (filterPNLValue == 0) {
             if (totalValue > totalModal + totalFee) {
-                
-                var sinyals = `${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)}) `;
                 toastr.info("SELISIH",sinyals);
                 $("#sinyalselisih").append(sinyals);
 
@@ -1831,7 +1833,6 @@
         // Jika filter PNL bukan 0, bandingkan selisih nilai akhir dan modal dengan filter PNL
         else {
             if ((totalValue - totalModal) > filterPNLValue) {
-                var sinyals = `${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)}) `;
                 toastr.info("SELISIH",sinyals);
                 $("#sinyalselisih").append(sinyals);
                 
@@ -1875,7 +1876,7 @@
         var warnaCEX = getWarnaCEX(cex);
         let idCELL=`${cex.toUpperCase()}_${dex.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         // Membuat link dengan format umum tanpa pengecekan kondisi
-        var sLink = `<a href='#SWAP_${idCELL}' class='link-class' >
+        var sLink = `<a href=#SWAP_${idCELL} class='link-class' >
             ${NameToken}->${NamePair} 
             (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span>${(PNL).toFixed(2)}$)
         </a>`;
