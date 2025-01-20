@@ -10,7 +10,7 @@ const CONFIG_CEX = {
         ApiSecret: "XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn",
         WARNA: "#e0a50c",  // Orange tua
     },
-   MEXC: {
+    MEXC: {
         ApiKey: "mx0vglmCjExQHIImo9", // Ganti dengan ApiKey asli
         ApiSecret: "d58a2b54af264d8fa09293f1a8a4a140", // Ganti dengan ApiSecret asli
         WARNA: "#1448ce",  // Biru muda
