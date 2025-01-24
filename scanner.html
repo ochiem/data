@@ -490,7 +490,6 @@
         }
     };   
 
-     
      // Fungsi untuk mendapatkan fee gas dalam Gwei
      function feeGasGwei() {
         $.when(
@@ -850,10 +849,10 @@
             $("#LoadDataBtn, #SettingModal, #chain-links-container").css("pointer-events", "auto").css("opacity", "1");
         }
 
-
         processTokens(); // Memulai pemrosesan token
     });
 
+    //genereta inputan checkbox
     function generateInputCheckbox(items, containerId, idPrefix, labelText, style) {
             const $container = $(`#${containerId}`);
             $container.empty(); // Bersihkan container
@@ -885,28 +884,6 @@
 
             $container.append(checkboxWrapper); // Masukkan checkbox ke dalam container
         }
-
-    //genereta inputan checkbox
-    function generateInputCheckbox2(items, containerId, idPrefix, style) {
-        const $container = $(`#${containerId}`);
-        $container.empty(); // Bersihkan container
-
-        // Jika items adalah objek, ambil key-nya
-        if (typeof items === 'object' && !Array.isArray(items)) {
-            items = Object.keys(items); // Ambil key dari objek
-        }
-
-        // Iterasi dan tambahkan checkbox beserta label
-        items.forEach(item => {
-            const checkboxId = `${idPrefix}${item.toUpperCase()}`;
-            const checkbox = `
-                <label class="${style || ''}" for="${checkboxId}">
-                    <input type="checkbox" id="${checkboxId}" value="${item}" checked>
-                    ${item.toUpperCase()}
-                </label>`;
-            $container.append(checkbox);
-        });
-    }
 
     // Fungsi untuk memuat data dari localStorage saat halaman dimuat
     function loadCheckboxSelections() {
@@ -1213,7 +1190,6 @@
        
     });
    
-
     function GeturlExchanger(cex, NameToken, NamePair) {
         // Konversi nama token dan pasangan ke uppercase
         const token = NameToken.toUpperCase();
@@ -1354,12 +1330,11 @@
         location.reload();
     });
 
-    // Fungsi untuk menangani perubahan CEX/DEX/DEXPAIR
-   // $(document).on('change', 'input[type="checkbox"]', function() {
-        $(document).on('change', 'div#cex-options input[type="checkbox"], div#dex-options input[type="checkbox"], div#dexpair-options input[type="checkbox"]', function() {
+    $(document).on('change', '#cex-options input[type="checkbox"], #dex-options input[type="checkbox"], #dexpair-options input[type="checkbox"]', function() {
         // Menentukan kategori checkbox berdasarkan ID
-        const groupName = $(this).closest('div').attr('id'); // Ambil ID div induk dari checkbox
-        
+        const groupName = $(this).closest('div[id^="cex-options"], div[id^="dex-options"], div[id^="dexpair-options"]').attr('id');
+
+        console.log(groupName);
         let selectedValues = [];
         $(`#${groupName} input[type="checkbox"]:checked`).each(function() {
             selectedValues.push($(this).val());
@@ -1375,14 +1350,15 @@
 
         if (localStorageKey) {
             saveToLocalStorage(localStorageKey, selectedValues);  // Simpan ke localStorage
-           // console.log(`${groupName} selected saved:`, selectedValues);
-            UIkit.notification(`SETTING APLIKASI menjadi ${selectedValues} !`, { status: 'success' });
+            UIkit.notification(`SETTING APLIKASI ${groupName.toUpperCase()} menjadi ${selectedValues.join(', ')} !`, { status: 'success' });
         }
 
-        // Memanggil fungsi filter dan reload tabel setelah ada perubahan
-        const filteredTokens = filterTokens();
-        loadStoredData(filteredTokens);
-        location.reload();
+        // Memanggil fungsi filter dan reload data
+        const filteredTokens = filterTokens(selectedValues);  // Pastikan filterTokens menerima nilai yang difilter
+        loadStoredData(filteredTokens); 
+        
+        location.reload()
+        // Memuat data yang sudah difilter
     });
 
     // Fungsi untuk mengurutkan tabel
