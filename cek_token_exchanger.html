@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker Wallet CEX</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1969/1969111.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/css/uikit.min.css" />
+    <style>
+        .uk-container { width: 96%; max-width: none; }
+        .cex-checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .color-box {
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="uk-container uk-margin-top">
+        <h2 class="uk-heading-line"><span>Pilih Exchanger dan Chain</span></h2>
+        <form id="cex-form" class="uk-form-stacked">
+            <div id="cex-checkbox-container" class="uk-grid-small uk-child-width-1-2@s uk-grid-match" uk-grid>
+                <!-- Checkbox akan dimuat di sini -->
+            </div>
+            <div id="chain-select-container" class="uk-margin-top">
+                <label for="chain-select">Pilihan Chain</label>
+                <select id="chain-select" class="uk-select">
+                    <!-- Options untuk chain akan dimuat di sini -->
+                </select>
+            </div>
+            <button type="submit" class="uk-button uk-button-primary uk-margin-top">Check Token</button>
+             <!-- Tombol untuk ekspor CSV -->
+            <button id="export-csv" class="uk-button uk-button-secondary uk-margin-top">Download CSV</button>
+
+        </form>
+                <h3 id="judul" class="uk-text-primary uk-text-center uk-margin-small-top"></h3>
+                <!-- Tabel untuk menampilkan token -->
+                <div id="token-table-container" class="uk-margin-top">
+                    <table id="token-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>EXCHANGER</th>
+                                <th>CHAIN</th>
+                                <th>Token Name</th>
+                                <th>Contract Address</th>
+                                <th>Withdraw Fee</th>
+                                <th>Pair DEX</th>
+                                <th>SC Pair DEX</th>
+                                <th>Des Pair DEX</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data token akan ditambahkan di sini -->
+                        </tbody>
+                    </table>
+                </div>
+    </div>
+
+    <!-- Include UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="config_tri.js"></script> <!-- Pastikan config_tri.js di-load -->
+    <script>
+        $(document).ready(function () {
+            // Ambil data dari CONFIG_CEX dan CONFIG_CHAINS
+            const cexData = CONFIG_CEX;
+            const chainData = CONFIG_CHAINS; // Pastikan data chain sesuai dengan struktur yang ada
+            const $checkboxContainer = $("#cex-checkbox-container");
+            const $chainSelect = $("#chain-select");
+            const $tokenTableBody = $("#token-table tbody");
+
+            // Iterasi dan buat checkbox untuk CEX
+            $.each(cexData, function (key, value) {
+                const html = `
+                    <div>
+                        <label class="cex-checkbox-label uk-checkbox">
+                            <input class="uk-checkbox" type="checkbox" name="cex" value="${key}">
+                            <span style="color: ${value.WARNA};" >&nbsp;&nbsp;${key}</span>
+                        </label>
+                    </div>
+                `;
+                $checkboxContainer.append(html);
+            });
+
+            $chainSelect.append('<option value="">Pilihan Chain</option>');
+
+            // Iterasi dan buat pilihan chain dalam select
+            $.each(chainData, function (key, value) {
+                const optionHtml = `<option value="${value.Nama_Chain}">${(value.Nama_Chain).toUpperCase()}</option>`;
+                $chainSelect.append(optionHtml);
+            });
+
+            // Fungsi untuk memuat token berdasarkan CEX dan Chain yang dipilih
+            function loadTokens(cexSelected, chainSelected) {                
+                // Clear tabel sebelum memuat data baru
+                $tokenTableBody.empty();
+                let allTokens = [];
+
+                // Cek CEX yang dipilih
+                if (cexSelected.includes('BINANCE')) {
+                    CekfeeWDBINANCE(CONFIG_CHAINS[chainSelected].WALLET_CEX.BINANCE.chainCEX);
+                }
+                if (cexSelected.includes('MEXC')) {
+                    CekfeeWDMEXC(CONFIG_CHAINS[chainSelected].WALLET_CEX.MEXC.chainCEX);
+                } 
+                if (cexSelected.includes('GATE')) {
+                    CekfeeWDGATE(CONFIG_CHAINS[chainSelected].WALLET_CEX.GATE.chainCEX);
+                }
+                if (cexSelected.includes('KUCOIN')) {
+                    CekfeeWDKUCOIN(CONFIG_CHAINS[chainSelected].WALLET_CEX.KUCOIN.chainCEX);
+                }
+                if (cexSelected.includes('BYBIT')) {
+                    CekfeeWDBYBIT(CONFIG_CHAINS[chainSelected].WALLET_CEX.BYBIT.chainCEX);
+                }
+                if (cexSelected.includes('OKX')) {
+                    CekfeeWDOKX(CONFIG_CHAINS[chainSelected].WALLET_CEX.OKX.chainCEX);
+                }     
+                 
+             }
+
+            // Submit form
+            $("#cex-form").submit(function (e) {
+                e.preventDefault();
+
+                // Ambil CEX yang dipilih
+                const cexSelected = [];
+                $("input[name='cex']:checked").each(function () {
+                    cexSelected.push($(this).val());
+                });
+
+                // Ambil Chain yang dipilih
+                const chainSelected = $chainSelect.val();
+
+                // Cek apakah CEX dan Chain dipilih
+                if (cexSelected.length === 0) {
+                    toastr.error("Silakan pilih CEX terlebih dahulu.");
+                    return; // Tidak lanjutkan eksekusi jika CEX belum dipilih
+                }
+
+                if (!chainSelected) {
+                    toastr.error("Silakan pilih Chain terlebih dahulu.");
+                    return; // Tidak lanjutkan eksekusi jika Chain belum dipilih
+                }
+
+                // Muat token berdasarkan pilihan CEX dan Chain
+                loadTokens(cexSelected, chainSelected);
+            });
+
+        
+            // Fungsi untuk mengekspor tabel ke CSV            
+            $("#export-csv").click(function () {
+                // Header kolom
+                let csv = 'cex,symbol_in,sc_in,des_in,symbol_out,sc_out,des_out,status\n';
+
+                // Iterasi melalui data tabel
+                $("#token-table tbody tr").each(function () {
+                    let row = $(this);
+                    const cex = row.find("td:nth-child(2)").text(); // Kolom cex
+                    const symbol_in = row.find("td:nth-child(4)").text(); // Kolom tokenName
+                    const sc_in = row.find("td:nth-child(5)").text(); // Kolom scToken
+                    const des_in = 18; // Default des_in
+                    const symbol_out = row.find("td:nth-child(7)").text(); // Kolom symbolPair
+                    const sc_out = row.find("td:nth-child(8)").text(); // Kolom scAddressPair
+                    const des_out = row.find("td:nth-child(9)").text() ? 6 : ''; // Default des_out berdasarkan pair
+                    const status = true; // Status default
+
+                    // Tambahkan ke CSV
+                    csv += `${cex},${symbol_in},${sc_in},${des_in},${symbol_out},${sc_out},${des_out},${status}\n`;
+                });
+
+                // Buat file CSV dan unduh
+                let hiddenElement = document.createElement('a');
+                hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+                hiddenElement.target = '_blank';
+                hiddenElement.download = 'tokens.csv';
+                hiddenElement.click();
+            });
+
+            //fungsi tampilkan daftar token
+            function displayTokens(cex, tokens, pilihchain) {
+                let no = 1;
+
+                // Konfigurasi pasangan DEX untuk setiap chain
+                const pairConfig = {
+                    "ETHEREUM": {
+                        symbolPair: 'ETH',
+                        scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+                        desPair: '18',
+                    },
+                    "BSC": {
+                        symbolPair: 'USDT',
+                        scAddressPair: '0x55d398326f99059fF775485246999027B3197955',
+                        desPair: '18',
+                    },
+                    "BASE": {
+                        symbolPair: 'ETH',
+                        scAddressPair: '0x4200000000000000000000000000000000000006',
+                        desPair: '18',
+                    },
+                    "ARBITRUM": {
+                        symbolPair: 'USDT',
+                        scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
+                        desPair: '6',
+                    },
+                    "MATIC": {
+                        symbolPair: 'USDT',
+                        scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+                        desPair: '6',
+                    },
+                };
+
+                // Ambil pasangan DEX berdasarkan chain yang dipilih
+                const chainPair = pairConfig[pilihchain] || {};
+                $("#judul").text(`DAFTAR TOKEN ${pilihchain}`);
+                tokens.forEach(token => {
+                    const rowHtml = `
+                        <tr>
+                            <td>${no++}</td>
+                            <td>${cex}</td>
+                            <td>${pilihchain}</td>
+                            <td>${token.tokenName}</td>
+                            <td>${token.scToken}</td>
+                            <td>${token.feeWDs}</td>
+                            <td>${chainPair.symbolPair || '-'}</td>
+                            <td>${chainPair.scAddressPair || '-'}</td>
+                            <td>${chainPair.desPair || '-'}</td>
+                        </tr>
+                    `;
+                    $tokenTableBody.append(rowHtml);
+                });
+            }
+
+            // Fungsi menampilkan token pada tabel
+            function displayTokensLama(cex,tokens,pilihchain) {
+                let no=1;
+                    tokens.forEach(token => {
+                        const rowHtml = `
+                            <tr>
+                                <td>${no++}</td>
+                                <td>${cex}</td>
+                                 <td>${pilihchain}</td>
+                                <td>${token.tokenName}</td>
+                                <td>${token.scToken}</td>
+                                <td>${token.feeWDs}</td>
+                            </tr>
+                        `;
+                        // <td>${token.depositEnable ? 'Yes' : 'No'}</td>
+                       // <td>${token.withdrawEnable ? 'Yes' : 'No'}</td>
+
+                        $tokenTableBody.append(rowHtml);
+                    });
+                }
+        // Fungsi untuk Signature CEX
+    function calculateSignature(exchange, apiSecret, dataToSign, hashMethod = "HmacSHA256") {
+        if (!apiSecret || !dataToSign) {
+            console.error(`[${exchange}] API Secret atau Data untuk Signature tidak valid!`);
+            return null;
+        }
+    
+        switch (exchange.toUpperCase()) {
+            case "MEXC":
+            case "BINANCE":
+            case "KUCOIN":
+            case "BYBIT":
+                // Gunakan HMAC-SHA256
+                return CryptoJS[hashMethod](dataToSign, apiSecret).toString(CryptoJS.enc.Hex);
+    
+            case "OKX":
+                // Gunakan BASE64 untuk OKX
+                const hmac = CryptoJS.HmacSHA256(dataToSign, apiSecret);
+                return CryptoJS.enc.Base64.stringify(hmac);
+    
+            default:
+                console.error(`[${exchange}] Exchange tidak didukung untuk perhitungan signature.`);
+                return null;
+        }
+    }    
+
+    //fungsi cek FEE WD per TOKEN GATE
+    function CekfeeWDGATE(pilihchain) {
+            var key = CONFIG_CEX.GATE.ApiKey;
+            var secret = CONFIG_CEX.GATE.ApiSecret;
+            var host = "https://proxykanan.awokawok.workers.dev/?https://api.gateio.ws";
+            var prefix = "/api/v4";
+            var method = "GET";
+            var chain = pilihchain; // Chain yang difokuskan
+            var timestamp = Math.floor(Date.now() / 1000); // Current timestamp in seconds
+
+            var buildSignature = function (url, body) {
+                var bodyHash = CryptoJS.SHA512(body).toString(CryptoJS.enc.Hex);
+                var signString = method + "\n" + prefix + url + "\n" + "" + "\n" + bodyHash + "\n" + timestamp;
+                var hmac = CryptoJS.HmacSHA512(signString, secret);
+                return hmac.toString(CryptoJS.enc.Hex);
+            };
+
+            // API untuk fee WD
+            var feeWDUrl = "/wallet/withdraw_status";
+            var feeWDHeaders = {
+                'Timestamp': timestamp,
+                'KEY': key,
+                'SIGN': buildSignature(feeWDUrl, "")
+            };
+
+            // API untuk status deposit dan withdraw
+            var statusUrl = "/spot/currencies";
+            var statusHeaders = {
+                'Timestamp': timestamp,
+                'KEY': key,
+                'SIGN': buildSignature(statusUrl, "")
+            };
+
+            // Lakukan dua panggilan API secara paralel
+            $.when(
+                $.ajax({
+                    url: host + prefix + feeWDUrl,
+                    method: method,
+                    headers: feeWDHeaders
+                }),
+                $.ajax({
+                    url: host + prefix + statusUrl,
+                    method: method,
+                    headers: statusHeaders
+                })
+            ).done(function (feeWDResponse, statusResponse) {
+                var feeWDData = feeWDResponse[0];
+                var statusData = statusResponse[0];
+
+                if (!Array.isArray(feeWDData) || !Array.isArray(statusData)) {
+                    console.error("Unexpected API response");
+                    toastr.error("Respons API tidak sesuai format!");
+                    return;
+                }
+
+                // Gabungkan data status dan fee WD
+                var combinedData = statusData
+                    .filter(function (statusItem) {
+                        // Filter status berdasarkan chain yang relevan
+                        return (
+                            statusItem.currency &&
+                            !statusItem.currency.includes("_OLD") &&
+                            !statusItem.delisted &&
+                            statusItem.chain === chain
+                        );
+                    })
+                    .map(function (statusItem) {
+                        var feeWDItem = feeWDData.find(function (feeItem) {
+                            var statusCurrency = statusItem.currency;
+                            var feeCurrency = feeItem.currency;
+
+                            // Hapus suffix "_chain" pada statusItem.currency jika ada
+                            var cleanStatusCurrency = statusCurrency.replace(`_${chain}`, "");
+
+                            // Bandingkan currency tanpa suffix "_chain" dengan feeCurrency
+                            if (feeCurrency === cleanStatusCurrency) {
+                                return feeItem.withdraw_fix_on_chains && feeItem.withdraw_fix_on_chains[chain];
+                            }
+
+                            return false;
+                        });
+
+                        // Jika feeWDItem tidak ditemukan, set feeWDs ke null atau nilai default lain
+                        var feeWD = feeWDItem ? parseFloat(feeWDItem.withdraw_fix_on_chains[chain]) : null;
+
+                        return {
+                            cex: "GATE",
+                            chain: statusItem.chain || "---",
+                            tokenName: statusItem.currency.replace(`_${chain}`, "") || "---", // Hapus suffix "_chain"
+                            scToken: "---", // Tetap default
+                            depositEnable: !statusItem.deposit_disabled ? true : false,
+                            withdrawEnable: !statusItem.withdraw_disabled ? true : false,
+                            feeWDs: feeWD // Tetap simpan dengan feeWD yang ada atau null jika tidak ditemukan
+                        };
+                    });
+
+                combinedData = combinedData.filter(function (item) {
+                    return item.chain && item.tokenName;
+                });
+                console.warn("GATE",combinedData);
+                displayTokens("GATE",combinedData,pilihchain);
+                toastr.info("SUKSES, CEK TOKEN GATE");
+            }).fail(function (xhr, status, error) {
+                console.error("Error:", error);
+                toastr.error("Gagal mendapatkan data dari API GATE");
+            });
+        }
+    //fungsi cek FEE WD per TOKEN BITGET
+    function CekfeeWDBITGET(pilihchain) {
+        $.ajax({
+            url: 'https://api.bitget.com/api/v2/spot/public/coins',
+            method: "GET",
+            success: function(response) {
+                // Filter data untuk coin dengan network sesuai dengan chainTypeConfig dan hanya yang deposit atau withdraw aktif
+                const coinsWithChain = response.data.filter(function(item) {
+                    return item.chains.some(function(chain) {
+                        return chain.chain === pilihchain &&
+                               (chain.rechargeable === "true" || chain.withdrawable === "true"); // Salah satu harus aktif
+                    });
+                });
+    
+                const coinDepositWithdrawStatus = coinsWithChain.map(function(item) {
+                    const CEXChain = item.chains.find(function(chain) {
+                        return chain.chain === pilihchain;
+                    });
+                
+                    return {
+                        cex: "BITGET",
+                        chain: pilihchain,
+                        tokenName: item.coin,
+                        scToken: CEXChain ? CEXChain.contractAddress : "---",  // Jika tidak ada contractAddress, tampilkan "---"
+                        feeWDs: CEXChain ? CEXChain.withdrawFee : 0,
+                        depositEnable: CEXChain ? CEXChain.rechargeable === "true" : false,
+                        withdrawEnable: CEXChain ? CEXChain.withdrawable === "true" : false
+                    };
+                });
+                console.warn("BITGET",coinDepositWithdrawStatus);
+                displayTokens("BITGET",coinDepositWithdrawStatus,pilihchain);
+                toastr.info("SUKSES, CEK TOKEN BITGET");
+            },
+            error: function(xhr, status, error) {
+                toastr.error('UPDATE FEE WD BITGET GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }    
+    //fungsi cek FEE WD per TOKEN KUCOIN
+    function CekfeeWDKUCOIN(pilihchain) {
+        const ApiKey = CONFIG_CEX.KUCOIN.ApiKey;
+        const ApiSecret = CONFIG_CEX.KUCOIN.ApiSecret;
+        const ApiPassphrase = CONFIG_CEX.KUCOIN.ApiPassphrase;
+    
+        // Timestamp dan endpoint
+        const timestamp = Date.now().toString();
+        const endpoint = "/api/v3/currencies";
+        const queryString = ""; // KuCoin tidak memerlukan query string tambahan dalam request ini
+        
+        // Format data untuk dihitung signature
+        const dataToSign = timestamp + "GET" + endpoint + queryString;
+        const signature = calculateSignature("KUCOIN", ApiSecret, dataToSign, "HmacSHA256");
+        const passphraseSignature = calculateSignature("KUCOIN", ApiSecret, ApiPassphrase, "HmacSHA256");
+    
+        if (!signature || !passphraseSignature) {
+            toastr.error("Gagal menghitung signature KuCoin. Periksa konfigurasi.");
+            return;
+        }
+    
+        const apiUrl = "https://proxykanan.awokawok.workers.dev/?https://api.kucoin.com" + endpoint;
+    
+        $.ajax({
+            url: `${apiUrl}?${queryString}&signature=${signature}`,
+            method: "GET",
+            headers: {
+                "KC-API-KEY": ApiKey,
+                "KC-API-TIMESTAMP": timestamp,
+                "KC-API-SIGN": signature,
+                "KC-API-PASSPHRASE": CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(ApiPassphrase, ApiSecret)),
+                "KC-API-KEY-VERSION": "2",
+            },
+            success: function (data) {
+                if (data.code === "200000") { // Pastikan kode respon sukses
+
+                    // Filter berdasarkan chainName yang sesuai dan status deposit & withdraw aktif
+                    const filteredCoins = data.data.filter(function (item) {
+                        return item.chains && item.chains.some(function (network) {
+                            return network.chainName === pilihchain && // Filter berdasarkan chain yang diinginkan
+                                (network.isDepositEnabled === true || network.isWithdrawEnabled === true); // Pastikan salah satu status aktif
+                        });
+                    });
+
+                    // Ambil hanya koin beserta status deposit dan withdraw untuk jaringan yang sesuai
+                    const coinDepositWithdrawStatus = filteredCoins.map(function (item) {
+                        const network = item.chains.find(function (network) {
+                            return network.chainName === pilihchain;
+                        });
+
+                        return {
+                            cex: "KUCOIN",
+                            chain: pilihchain,
+                            tokenName: item.currency,
+                            scToken: network ? network.contractAddress : "---", // Jika tidak ada contractAddress, tampilkan "---"
+                            feeWDs: network ? network.withdrawalMinFee : 0,
+                            depositEnable: network ? network.isDepositEnabled : false,
+                            withdrawEnable: network ? network.isWithdrawEnabled : false
+                        };
+                    });
+
+                    // Gabungkan hasil ke allFeeWD
+                    console.warn("KUCOIN",coinDepositWithdrawStatus);
+                    displayTokens("KUCOIN",coinDepositWithdrawStatus,pilihchain);
+                    toastr.info("SUKSES, CEK TOKEN KUCOIN");
+                } else {
+                    toastr.error('Gagal mendapatkan data, kode: ' + data.code);
+                }
+            },
+            error: function (xhr, status, error) {
+                toastr.error('UPDATE FEE WD KUCOIN GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }
+    // Fungsi cek FEE WD per TOKEN BINANCE    
+    function CekfeeWDBINANCE(pilihchain) {
+        const ApiKey = CONFIG_CEX.BINANCE.ApiKey;
+        const ApiSecret = CONFIG_CEX.BINANCE.ApiSecret;
+    
+        const timestamp = Date.now().toString();
+        const recvWindow = CONFIG_CEX.BINANCE.recvWindow || "5000";
+        const queryString = `timestamp=${timestamp}`;
+        const signature = calculateSignature("BINANCE", ApiSecret, queryString, "HmacSHA256");
+    
+        if (!signature) {
+            toastr.error("Gagal menghitung signature Binance. Periksa konfigurasi.");
+            return;
+        }
+    
+        const apiUrl = "https://api.binance.me/sapi/v1/capital/config/getall";
+    
+        $.ajax({
+            url: `${apiUrl}?timestamp=${timestamp}&signature=${signature}`,
+            method: "GET",
+            headers: {
+                "X-MBX-ApiKey": ApiKey,
+            },
+            success: function (data) {
+                // Filter berdasarkan network yang sesuai dengan pilihchain dan status trading yang true
+                const coinsWithNetworkAndTradingTrue = data.filter(function (item) {
+                    return item.trading === true && item.networkList.some(function (network) {
+                        return network.network === pilihchain;
+                    });
+                });
+    
+                // Ambil hanya koin beserta status deposit dan withdraw untuk jaringan yang sesuai
+                const coinDepositWithdrawStatus = coinsWithNetworkAndTradingTrue.map(function (item) {
+                    const Network = item.networkList.find(function (network) {
+                        return network.network === pilihchain;
+                    });
+    
+                    // Memastikan depositEnable atau withdrawEnable adalah true
+                    const depositEnable = Network ? Network.depositEnable === true : false;
+                    const withdrawEnable = Network ? Network.withdrawEnable === true : false;
+    
+                    // Hanya ambil token yang salah satunya memiliki status true
+                    if (depositEnable || withdrawEnable) {
+                        return {
+                            cex: "BINANCE",
+                            chain: pilihchain,
+                            tokenName: item.coin,
+                            scToken: Network.contractAddress,
+                            feeWDs: Network ? Network.withdrawFee : 0,
+                            depositEnable: depositEnable,
+                            withdrawEnable: withdrawEnable
+                        };
+                    }
+                    return null; // Token ini diabaikan jika kedua status adalah false
+                }).filter(item => item !== null); // Hapus nilai null (yang tidak memenuhi syarat)    
+                console.warn("BINANCE",coinDepositWithdrawStatus);
+                displayTokens("BINANCE",coinDepositWithdrawStatus,pilihchain);
+                toastr.info("SUKSES, CEK TOKEN BINANCE");
+            },
+            error: function () {
+                toastr.error('UPDATE FEE WD BINANCE GAGAL, SILAKAN REFRESH!!');
+            }
+        });
+    }    
+    // fungsi mengecek status DEPO & WD MEXC
+    function CekfeeWDMEXC(pilihchain) {
+        const ApiKey = CONFIG_CEX.MEXC.ApiKey; // Ambil API Key dari konfigurasi
+        const chainTypeConfig = pilihchain; // Ambil nilai chainType dari konfigurasi
+        const apiSecret = CONFIG_CEX.MEXC.ApiSecret;
+        const timestamp = Date.now().toString();
+        const recvWindow = "5000";
+        const queryString = `recvWindow=${recvWindow}&timestamp=${timestamp}`;
+        const signature = calculateSignature("MEXC", apiSecret, queryString);
+
+        if (!signature) {
+            toastr.error("Gagal menghitung signature MEXC. Periksa konfigurasi.");
+            return;
+        }
+
+        const apiUrl = `https://proxykanan.awokawok.workers.dev/?https://api.mexc.com/api/v3/capital/config/getall`;
+        
+        $.ajax({
+            url: `${apiUrl}?${queryString}&signature=${signature}`,
+            method: "GET",
+            headers: {
+                "X-MEXC-APIKEY": ApiKey,
+            },
+            success: function (data) {
+                // Filter koin berdasarkan konfigurasi chainType
+                const coinsWithNetwork = data.filter(item => 
+                    item.networkList.some(network => network.netWork === chainTypeConfig)
+                );
+    
+                // Mapping koin yang ditemukan untuk mendapatkan informasi fee dan sc
+                const coinDepositWithdrawStatus = coinsWithNetwork.map(item => {
+                    const selectedNetwork = item.networkList.find(network => network.netWork === chainTypeConfig);
+    
+                    return {
+                        cex: "MEXC",
+                        chain: pilihchain,
+                        tokenName: item.coin,
+                        scToken: selectedNetwork ? selectedNetwork.contract : "---",  // Ambil contract address jika ada
+                        feeWDs: selectedNetwork ? parseFloat(selectedNetwork.withdrawFee) : 0,
+                        depositEnable: selectedNetwork ? selectedNetwork.depositEnable : false,
+                        withdrawEnable: selectedNetwork ? selectedNetwork.withdrawEnable : false
+                    };
+                }).filter(item => item.depositEnable || item.withdrawEnable); // Hanya ambil yang salah satu deposit / withdraw aktif
+                console.warn("MEXC",coinDepositWithdrawStatus);
+                displayTokens("MEXC",coinDepositWithdrawStatus,pilihchain);
+                toastr.info("SUKSES, CEK TOKEN MEXC");
+            },
+            error: function (xhr, status, error) {
+                toastr.error('UPDATE WALLET MEXC GAGAL, MASALAH KONEKSI!!');
+            }
+        });
+    }
+    //fungsi cek FEE WD per TOKEN BYBIT  
+    function CekfeeWDBYBIT(pilihchain) {
+        const ApiKey = CONFIG_CEX.BYBIT.ApiKey;
+        const apiSecret = CONFIG_CEX.BYBIT.ApiSecret;
+        const chainTypeConfig = pilihchain; // Ambil konfigurasi chain
+        
+        const timestamp = Date.now().toString();
+        const recvWindow = "5000";
+        const dataToSign = timestamp + ApiKey + recvWindow;
+        const signature = calculateSignature("BYBIT", apiSecret, dataToSign, "HmacSHA256");
+    
+        const apiUrl = "https://api.bybit.com/v5/asset/coin/query-info";
+    
+        $.ajax({    
+            url: apiUrl,
+            method: "GET",
+            headers: {
+                "X-BAPI-SIGN": signature,
+                "X-BAPI-API-KEY": ApiKey,
+                "X-BAPI-TIMESTAMP": timestamp,
+                "X-BAPI-RECV-WINDOW": recvWindow,
+            },
+            success: function (data) {
+                dataCoins = data.result.rows;
+    
+                // Filter berdasarkan chainType yang sesuai dengan konfigurasi di chainTypeConfig dan hanya ambil yang deposit atau withdraw enable
+                const coinsWithNetwork = dataCoins.filter(function (item) {
+                    return item.chains.some(function (network) {
+                        return network.chainType === chainTypeConfig &&
+                                (network.chainDeposit === '1' || network.chainWithdraw === '1');  // Salah satu harus aktif
+                    });
+                });
+    
+                const coinDepositWithdrawStatus = coinsWithNetwork.map(function (item) {
+                    const Network = item.chains.find(function (network) {
+                        return network.chain === chainTypeConfig;
+                    });
+    
+                    return {
+                        cex: "BYBIT",
+                        chain: pilihchain,
+                        tokenName: item.coin,
+                        scToken: Network.contractAddress,  // Tidak ada informasi contract address di BYBIT
+                        feeWDs: Network ? Network.withdrawFee : 0,
+                        depositEnable: Network ? (Network.chainDeposit === '1') : false,
+                        withdrawEnable: Network ? (Network.chainWithdraw === '1') : false
+                    };
+                });
+                console.warn("BYBIT",coinDepositWithdrawStatus);
+                displayTokens("BYBIT",coinDepositWithdrawStatus,pilihchain);
+                toastr.info("SUKSES, CEK TOKEN BYBIT");                
+            },
+            error: function (xhr, status, error) {
+                toastr.error('UPDATE WALLET BYBIT GAGAL, MASALAH KONEKSI!!');
+            }
+        });
+    }
+    //fungsi cek FEE WD per TOKEN OKX
+    function CekfeeWDOKX(pilihchain) {
+        const ApiKey = CONFIG_CEX.OKX.ApiKey;
+        const apiSecret = CONFIG_CEX.OKX.ApiSecret;
+        const passphrase = CONFIG_CEX.OKX.ApiPassphrase;
+        const chainTypeConfig = pilihchain; // Ambil konfigurasi chain, misalnya 'USDT-TRC20'
+    
+        const timestamp = new Date().toISOString();
+        const method = "GET";
+        const queryString = "/api/v5/asset/currencies";
+        const dataToSign = timestamp + method + queryString;
+    
+        const signature = calculateSignature("OKX", apiSecret, dataToSign, "BASE64");
+    
+        if (!signature) {
+            toastr.error("Gagal menghitung signature OKX. Periksa konfigurasi.");
+            return;
+        }
+    
+        const apiUrl = "https://kirihaha.awokawok.workers.dev/?https://www.okx.com";
+    
+        const headers = {
+            "OK-ACCESS-KEY": ApiKey,
+            "OK-ACCESS-SIGN": signature,
+            "OK-ACCESS-TIMESTAMP": timestamp,
+            "OK-ACCESS-PASSPHRASE": passphrase,
+        };
+    
+        // Lakukan request AJAX untuk mengambil data dari API
+        $.ajax({
+            url: apiUrl + queryString, 
+            type: "GET",
+            headers: headers,
+            success: function (data) {
+                if (!Array.isArray(data.data)) {
+                    toastr.error("Data dari API OKX tidak valid.");
+                    return;
+                }
+    
+                // Filter data untuk chain yang berakhiran dengan 'TRC20'
+                const coinsWithNetwork = data.data.filter(item => {
+                    // Cek apakah chain berakhiran dengan 'TRC20' dan memiliki status deposit dan withdraw yang aktif
+                    return item.chain.endsWith(chainTypeConfig) && item.canDep && item.canWd;
+                });
+    
+                // Mapping data untuk mendapatkan informasi deposit, withdraw, dan fee
+                const coinDepositWithdrawStatus = coinsWithNetwork.map(item => {
+                    return {
+                        cex: "OKX",
+                        chain: pilihchain,
+                        tokenName: item.ccy,                // Mata uang (misalnya: USDT)
+                        scToken: item.ctAddr,               // Alamat kontrak (misalnya: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t)
+                        feeWDs: parseFloat(item.fee),  // Fee withdrawal (misalnya: 1.5)
+                        depositEnable: item.canDep,    // Status deposit
+                        withdrawEnable: item.canWd     // Status withdraw
+                    };
+                });
+                console.warn("OKX",coinDepositWithdrawStatus);
+                displayTokens("OKX",coinDepositWithdrawStatus,pilihchain);
+                toastr.info("SUKSES, CEK TOKEN OKX");
+            },
+            error: function (xhr, status, error) {
+                toastr.error('UPDATE WALLET OKX GAGAL, MASALAH KONEKSI!!');
+                console.error("Error response: ", xhr.responseText);
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>
