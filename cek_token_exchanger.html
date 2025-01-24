@@ -42,40 +42,45 @@
             <div id="cex-checkbox-container" class="uk-grid-small uk-child-width-1-2@s uk-grid-match" uk-grid>
                 <!-- Checkbox akan dimuat di sini -->
             </div>
-            <div id="chain-select-container" class="uk-margin-top">
-                <label for="chain-select">Pilihan Chain</label>
-                <select id="chain-select" class="uk-select">
-                    <!-- Options untuk chain akan dimuat di sini -->
-                </select>
-            </div>
-            <button type="submit" class="uk-button uk-button-primary uk-margin-top">Check Token</button>
-             <!-- Tombol untuk ekspor CSV -->
-            <button id="export-csv" class="uk-button uk-button-secondary uk-margin-top">Download CSV</button>
-
-        </form>
-                <h3 id="judul" class="uk-text-primary uk-text-center uk-margin-small-top"></h3>
-                <!-- Tabel untuk menampilkan token -->
-                <div id="token-table-container" class="uk-margin-top">
-                    <table id="token-table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>EXCHANGER</th>
-                                <th>CHAIN</th>
-                                <th>Token Name</th>
-                                <th>Contract Address</th>
-                                <th>Withdraw Fee</th>
-                                <th>Pair DEX</th>
-                                <th>SC Pair DEX</th>
-                                <th>Des Pair DEX</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Data token akan ditambahkan di sini -->
-                        </tbody>
-                    </table>
+            <div id="chain-select-container" class="uk-margin-top uk-grid-small" uk-grid>
+                <!-- Select dan tombol dalam satu baris -->
+                <div class="uk-width-expand">
+                    <label for="chain-select">Pilihan Chain</label>
+                    <select id="chain-select" class="uk-select">
+                        <!-- Options untuk chain akan dimuat di sini -->
+                    </select>
                 </div>
+                <div class="uk-width-auto uk-flex uk-flex-middle">
+                    <!-- Tombol berada di sebelah select -->
+                    <button id="export-csv" class="uk-button uk-button-danger" style="display: none;">Download CSV</button>
+                    <button type="submit" class="uk-button uk-button-primary uk-margin-left">Check Token</button>
+                </div>
+            </div>
+        </form>
+        <h3 id="judul" class="uk-text-primary uk-text-center uk-margin-small-top"></h3>
+        <!-- Tabel untuk menampilkan token -->
+        <div id="token-table-container" class="uk-margin-top">
+            <table id="token-table" class="uk-table uk-table-divider">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>EXCHANGER</th>
+                        <th>CHAIN</th>
+                        <th>Token Name</th>
+                        <th>Contract Address</th>
+                        <th>Withdraw Fee</th>
+                        <th>Pair DEX</th>
+                        <th>SC Pair DEX</th>
+                        <th>Des Pair DEX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data token akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </div>
     </div>
+    
 
     <!-- Include UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit.min.js"></script>
@@ -193,12 +198,12 @@
                     // Tambahkan ke CSV
                     csv += `${cex},${symbol_in},${sc_in},${des_in},${symbol_out},${sc_out},${des_out},${status}\n`;
                 });
-
+                const chainName = $("#chain-select").val();
                 // Buat file CSV dan unduh
                 let hiddenElement = document.createElement('a');
                 hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
                 hiddenElement.target = '_blank';
-                hiddenElement.download = 'tokens.csv';
+                hiddenElement.download = `daftar_token_${chainName}.csv`;
                 hiddenElement.click();
             });
 
@@ -254,28 +259,9 @@
                     `;
                     $tokenTableBody.append(rowHtml);
                 });
+                $("#export-csv").show();
             }
 
-            // Fungsi menampilkan token pada tabel
-            function displayTokensLama(cex,tokens,pilihchain) {
-                let no=1;
-                    tokens.forEach(token => {
-                        const rowHtml = `
-                            <tr>
-                                <td>${no++}</td>
-                                <td>${cex}</td>
-                                 <td>${pilihchain}</td>
-                                <td>${token.tokenName}</td>
-                                <td>${token.scToken}</td>
-                                <td>${token.feeWDs}</td>
-                            </tr>
-                        `;
-                        // <td>${token.depositEnable ? 'Yes' : 'No'}</td>
-                       // <td>${token.withdrawEnable ? 'Yes' : 'No'}</td>
-
-                        $tokenTableBody.append(rowHtml);
-                    });
-                }
         // Fungsi untuk Signature CEX
     function calculateSignature(exchange, apiSecret, dataToSign, hashMethod = "HmacSHA256") {
         if (!apiSecret || !dataToSign) {
