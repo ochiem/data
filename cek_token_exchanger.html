@@ -178,11 +178,15 @@
 
                 // Muat token berdasarkan pilihan CEX dan Chain
                 loadTokens(cexSelected, chainSelected);
+                 // Menonaktifkan semua inputan kecuali tombol Download CSV
+                $("#cex-form input, #cex-form select, #cex-form button:not(#export-csv)").attr("disabled", true);
+
             });
 
         
             // Fungsi untuk mengekspor tabel ke CSV            
             $("#export-csv").click(function () {
+                event.preventDefault();
                 // Header kolom
                 let csv = 'cex,symbol_in,sc_in,des_in,symbol_out,sc_out,des_out,status\n';
 
@@ -208,6 +212,7 @@
                 hiddenElement.target = '_blank';
                 hiddenElement.download = `daftar_token_${chainName}.csv`;
                 hiddenElement.click();
+                
             });
 
             //fungsi tampilkan daftar token
@@ -221,7 +226,7 @@
                         scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
                         desPair: '18',
                     },
-                    "BSC": {
+                    "bsc": {
                         symbolPair: 'USDT',
                         scAddressPair: '0x55d398326f99059fF775485246999027B3197955',
                         desPair: '18',
