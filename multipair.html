@@ -56,7 +56,7 @@
             <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
             <a href="memory.html" target="_blank"><img title="MANAJEMEN MEMORY" src="https://cdn-icons-png.flaticon.com/512/9776/9776871.png" width="30px" /></a> &nbsp;            
             <a href="cek_token_exchanger.html" target="_blank"><img title="CHECKER COIN EXCHANGER" src="https://cdn-icons-png.flaticon.com/512/1969/1969111.png" width="30px" /></a> &nbsp;            
-            <a href="scanner.html" target="_blank" > <img class="icon" id="Scan Price" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
+            <a href="scanner.html" target="_blank" > <img class="icon" id="Scanner" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
               MULTIPAIR SETTING <label id="namachain"></label>&nbsp;&nbsp;
             <span id="chain-links-container"></span>             
         </h3>
@@ -323,7 +323,7 @@
             toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
             $("#infoAPP").html("SILAKAN, SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');;     
             info=false;
-            $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
+            $('#UpdateWalletCEX,#Scanner').css('pointer-events', 'none').css('opacity', '0.4');
         } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
             $("#UpdateWalletCEX").addClass("img-large");  
             toastr.warning("SILAKAN UPDATE WALLET CEX");
