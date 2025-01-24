@@ -238,19 +238,19 @@
                     },
                     "arbitrum": {
                         symbolPair: 'USDT',
-                        scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
+                        scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
                         desPair: '6',
                     },
                     "polygon": {
                         symbolPair: 'USDT',
-                        scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+                        scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
                         desPair: '6',
                     },
                 };
 
                 // Ambil pasangan DEX berdasarkan chain yang dipilih
                 const chainPair = pairConfig[chainName] || {};
-                $("#judul").text(`DAFTAR TOKEN ${pilihchain}`);
+                $("#judul").text(`DAFTAR TOKEN ${chainName.toUpperCase()}`);
                 tokens.forEach(token => {
                     const rowHtml = `
                         <tr>
