@@ -579,8 +579,9 @@
                 }, {});
             });
         }
-
+        // fungsi import CSV
         $('#importButton').on('click', function () {
+            event.preventDefault();
             removeFromLocalStorage("TOKEN");
             removeFromLocalStorage("TOKEN_SCANNER");
             removeFromLocalStorage("WALLET_CEX");
@@ -602,7 +603,13 @@
                         
                         if (Array.isArray(jsonData)) {
 
-                            saveToLocalStorage("TOKEN",jsonData);
+                            // Tambahkan nomor urut (no) di awal setiap objek data
+                            jsonData.forEach((item, index) => {
+                                item.no = index + 1; // Menambahkan no (dimulai dari 1)
+                            });
+
+                            // Simpan data ke localStorage
+                            saveToLocalStorage("TOKEN", jsonData);
                             console.log('Data disimpan ke localStorage'); // Debugging
                             loadStoredData();
                             toastr.success("IMPORT DATA BERHASIL, SILAKAN REFRESH!!");
@@ -611,7 +618,7 @@
                             toastr.error("IMPORT DATA GAGAL, SILAKAN COBA LAGI!!");
                         }
                     } catch (error) {
-                        console.error('Gagal memuat file:', error); // Debugging
+                        toastr.error('Gagal memuat file:', error); // Debugging
                         importStatus.text('Gagal memuat file.')
                             .removeClass('uk-text-success')
                             .addClass('uk-text-danger');
@@ -621,12 +628,11 @@
                 reader.readAsText(file);
             } else {
                 fileInput.next().addClass('uk-form-danger');
-                importStatus.text('Silakan pilih file untuk diimpor.')
-                    .removeClass('uk-text-success')
-                    .addClass('uk-text-danger');
+                toastr.error("MASUKAN FILE IMPORT DAHULU!!");
                 fileInput.focus();
             }
         });
+
     });
     
     // Fungsi untuk menentukan warna berdasarkan nama CEX
