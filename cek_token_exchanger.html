@@ -99,7 +99,34 @@
             const $checkboxContainer = $("#cex-checkbox-container");
             const $chainSelect = $("#chain-select");
             const $tokenTableBody = $("#token-table tbody");
-
+            // Konfigurasi pasangan DEX untuk setiap chain
+            var pairConfig = {
+                    "ethereum": {
+                        symbolPair: 'ETH',
+                        scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+                        desPair: '18',
+                    },
+                    "bsc": {
+                        symbolPair: 'USDT',
+                        scAddressPair: '0x55d398326f99059fF775485246999027B3197955',
+                        desPair: '18',
+                    },
+                    "base": {
+                        symbolPair: 'ETH',
+                        scAddressPair: '0x4200000000000000000000000000000000000006',
+                        desPair: '18',
+                    },
+                    "arbitrum": {
+                        symbolPair: 'USDT',
+                        scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+                        desPair: '6', // Pastikan desPair untuk Arbitrum adalah 6
+                    },
+                    "polygon": {
+                        symbolPair: 'USDT',
+                        scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
+                        desPair: '6',
+                    },
+                };
             // Iterasi dan buat checkbox untuk CEX
             $.each(cexData, function (key, value) {
                 const html = `
@@ -183,12 +210,16 @@
 
             });
 
-        
             // Fungsi untuk mengekspor tabel ke CSV            
             $("#export-csv").click(function () {
                 event.preventDefault();
                 // Header kolom
                 let csv = 'cex,symbol_in,sc_in,des_in,symbol_out,sc_out,des_out,status\n';
+
+                // Ambil nama chain yang dipilih
+                const chainName = $("#chain-select").val();
+                // Ambil pasangan DEX berdasarkan chain yang dipilih
+                const chainPair = pairConfig[chainName] || {};
 
                 // Iterasi melalui data tabel
                 $("#token-table tbody tr").each(function () {
@@ -199,55 +230,26 @@
                     const des_in = 18; // Default des_in
                     const symbol_out = row.find("td:nth-child(7)").text(); // Kolom symbolPair
                     const sc_out = row.find("td:nth-child(8)").text(); // Kolom scAddressPair
-                    const des_out = row.find("td:nth-child(9)").text() ? 6 : ''; // Default des_out berdasarkan pair
+                    const des_out = chainPair.desPair || 18; // Ambil desPair sesuai chain, default 18 jika tidak ditemukan
                     const status = true; // Status default
 
                     // Tambahkan ke CSV
                     csv += `${cex},${symbol_in},${sc_in},${des_in},${symbol_out},${sc_out},${des_out},${status}\n`;
                 });
-                const chainName = $("#chain-select").val();
+
                 // Buat file CSV dan unduh
                 let hiddenElement = document.createElement('a');
                 hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
                 hiddenElement.target = '_blank';
                 hiddenElement.download = `daftar_token_${chainName}.csv`;
                 hiddenElement.click();
-                
             });
+
 
             //fungsi tampilkan daftar token
             function displayTokens(cex, tokens, pilihchain) {
                 let no = 1;
                 const chainName = $("#chain-select").val();
-                // Konfigurasi pasangan DEX untuk setiap chain
-                const pairConfig = {
-                    "ethereum": {
-                        symbolPair: 'ETH',
-                        scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-                        desPair: '18',
-                    },
-                    "bsc": {
-                        symbolPair: 'USDT',
-                        scAddressPair: '0x55d398326f99059fF775485246999027B3197955',
-                        desPair: '18',
-                    },
-                    "base": {
-                        symbolPair: 'ETH',
-                        scAddressPair: '0x4200000000000000000000000000000000000006',
-                        desPair: '18',
-                    },
-                    "arbitrum": {
-                        symbolPair: 'USDT',
-                        scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
-                        desPair: '6',
-                    },
-                    "polygon": {
-                        symbolPair: 'USDT',
-                        scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
-                        desPair: '6',
-                    },
-                };
-
                 // Ambil pasangan DEX berdasarkan chain yang dipilih
                 const chainPair = pairConfig[chainName] || {};
                 $("#judul").text(`DAFTAR TOKEN ${chainName.toUpperCase()}`);
