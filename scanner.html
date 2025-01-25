@@ -129,7 +129,7 @@
                     MULTIPAIR SCANNER <label id="namachain"></label>&nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
-                <img class="icon" id="SettingModal" title="CONFIG APLIKASI" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
+                <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
                 <img class="icon" id="UpdateWalletCEX" title="LOAD STATUS WALLET" width="30px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" />
                 <a href="manajemen_aset.html" target="_blank">
                     <img class="icon" id="Modal" title="MANAJEMEN ASSET" width="30px" src="https://cdn-icons-png.flaticon.com/512/1194/1194711.png" />
@@ -306,6 +306,14 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    toastr.options = {
+        "timeOut": "2000",            // Durasi munculnya toastr dalam milidetik
+        "extendedTimeOut": "2000",    // Waktu tambahan saat toastr di-hover
+        "closeButton": true,          // Tampilkan tombol close (opsional)
+        "progressBar": true,          // Tampilkan progress bar (opsional)
+        "positionClass": "toast-top-right" // Posisi toastr (ubah sesuai kebutuhan)
+    };
+
     // Mendapatkan parameter dari URL
     const urlParams = new URLSearchParams(window.location.search);
     const chainName = urlParams.get('chain') || "bsc"; // Default ke 'bsc' jika tidak ada parameter 'chain' di URL
@@ -1887,14 +1895,13 @@
         var rowCell = $(`#${IdCELL}`);
 
         var sinyals = ` <a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
-            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)})</a> | `;
+            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)}$)</a> `;
 
         // Simplified condition check
         var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
-        //var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal + totalFee) || ((totalValue - totalModal) > filterPNLValue);
-
+        
         if (isPositivePNL) {
-            toastr.info(sinyals);
+            toastr.success(sinyals);
 
             rowCell.css({'background-color': '#c2f890','font-weight':'bolder'});
             resultCell.html(`
@@ -2113,16 +2120,9 @@
                 var warna = "#f39999";
                 switch (xhr.status) {
                     case 0:                                            
-                        if(dexType!=='jupiter' || dexType=='odos' || dexType=='okx' ){
-                            warna = "#f6f2f1";   
-                        //     getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
-                        // }
-                        // // else if(dexType=='odos'){
-                          //   warna = "#f6f2f1";  
+                        if(dexType!=='jupiter' || dexType !== 'magpie' ){
+                            warna = "#f6f2f1";                          
                              getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
-                        // }
-                        //else{
-                           // var warna = "#f39999";
                         } 
                         break;                        
                     case 400:
@@ -2150,7 +2150,7 @@
                     case 429:
                         if (dexType !== '0x' && dexType !== 'magpie') {
                             warna = "#f6f2f1";
-                            getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                            getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         }else{
                             warna = "#f39999";
                             alertMessage = "AKSES KENA LIMIT";
@@ -2555,8 +2555,6 @@
 
             saveToLocalStorage('ID', simplifiedIdentitas);
             let savedID = getFromLocalStorage('ID', {});
-            $("#ip").text(`IP: ${savedID.ip}`);
-            toastr.success(`ANDA MENDAPATKAN IP: ${savedID.ip}`);
         } catch (error) {
             //toastr.info("GAGAL CEK IP!!");
         }
