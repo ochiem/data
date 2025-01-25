@@ -263,6 +263,7 @@
     var WalletCEX = getFromLocalStorage("LASTUPDATE_FEEWD", []);
     var DATAWalletCEX = getFromLocalStorage("WALLET_CEX", []);
     var dataACTION = getFromLocalStorage('HISTORY');
+    var dataTokenPilih = getFromLocalStorage('TOKEN_PILIH');
 
     function getRandomServerFromCORSList() {       
         if (!serverCORSList || serverCORSList.length === 0) {
@@ -319,7 +320,20 @@
 
         // Verifikasi awal untuk memastikan DATA_SETTING sudah di-sync
         var info=true;
-        if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
+        if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
+            form_off();
+            $("#ImportDataBtn").addClass("img-large");
+            toastr.error('<b>SILAKAN PILIH DATA TOKEN PAIR TERLEBIH DAHULU !!</b><br/>');
+            $("#infoAPP").html("SILAKAN, PILIH TOKEN PAIR DAHULU!!!").addClass('uk-text-danger');
+            info = false;
+            // Menonaktifkan elemen #Scanner
+            $('#SyncDataBtn,#UpdateWalletCEX,#Scanner').css({
+                'pointer-events': 'none', // Menonaktifkan interaksi klik
+                'opacity': '0.4',         // Memberikan efek visual tidak aktif
+                'cursor': 'not-allowed'   // Mengubah kursor menjadi tanda larangan
+            });
+        }
+        else if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
             form_off(); 
             $("#SyncDataBtn").addClass("img-large");               
             toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
