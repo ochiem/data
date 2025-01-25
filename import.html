@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import DATA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6378/6378038.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="config_tri.js"></script>
+    <style>
+        .uk-container { width: 96%; max-width: none; }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .uk-container {
+            margin-top: 30px;
+        }
+        .uk-button {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .uk-grid-small {
+            margin-bottom: 15px;
+        }
+        .uk-table th, .uk-table td {
+            text-align: center;
+        }
+        #pair-checkboxes {
+            margin-bottom: 20px;
+        }
+        #filter-btn, #load-data-btn, #stop-btn {
+            margin-top: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-container .uk-card {
+            flex: 1;
+            min-width: 300px;
+        }
+        #cex-options, #pair-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #cex-options label, #pair-checkboxes label {
+            flex: 1 0 48%;
+        }
+        img:hover {
+                transform: scale(1.6); /* You can adjust the scale factor as needed */
+            }
+        .img-large {
+            width: 80px !important; /* Atur ukuran sesuai kebutuhan */
+            transition: transform 0.3s; /* Menambahkan efek animasi */
+        }
+        .uk-table th{
+            color: white;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="uk-container">
+        <!-- Filter Section -->
+        <div class="form-container">
+            <!-- Kolom untuk CEX -->
+            <div class="uk-card ">
+                <h4 class="uk-heading-divider" id="judulcex">Pilihan Exchanger (CEX)</h4>
+                <div id="cex-options" class="uk-grid-small uk-child-width-auto uk-grid"></div>
+            </div>
+            <div class="uk-card ">
+                <h4 class="uk-heading-divider" id="judulpair">Pilihan TOKEN PAIR</h4>
+                <div id="pair-checkboxes" class="uk-grid-small uk-child-width-auto uk-grid"></div>
+            </div>
+            <div class="uk-card uk-text-center" >
+                <h3 id="judul">DATA TOKEN <label id="namachain"></label>&nbsp;&nbsp;</h3>
+                <span id="chain-links-container"></span> 
+                <a href="multipair.html" target="_blank" > <img class="icon" id="Setting" title="SETTING DATA" width="35px" src="https://cdn-icons-png.flaticon.com/512/7490/7490577.png" /></a> &nbsp;
+                <div class="uk-margin-remove uk-flex uk-flex-between">
+                    <button id="filter-btn" class="uk-button uk-button-primary" disabled>Tampilkan</button>
+                    <button id="stop-btn" class="uk-button uk-button-danger">Refresh</button>
+                    <button id="load-data-btn" class="uk-button uk-button-secondary" style="display: none;">SYCN DATA</button>
+                </div>
+            </div>
+        </div>
+       
+
+        <!-- Tabel Hasil -->
+        <h3 class="uk-heading-line uk-margin-remove" id="daftar"><span>Daftar Token Pair</span></h3>
+       
+        <table class="uk-table uk-table-striped uk-table-hover" id="result-table">
+            <thead class="table-header">
+                <tr>
+                    <th>CEX</th>
+                    <th>Symbol In</th>
+                    <th>SC In</th>
+                    <th>Symbol Out</th>
+                    <th>SC Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6" class="uk-text-center">Data tidak ditemukan.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Mendapatkan parameter dari URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const chainParam = urlParams.get('chain') || "bsc"; // Default ke 'bsc' jika tidak ada parameter 'chain' di URL
+
+            // Memilih chain yang sesuai berdasarkan parameter URL
+            const selectedChain = CONFIG_CHAINS[chainParam] || CONFIG_CHAINS['bsc']; 
+
+            // Mengatur konfigurasi global chain berdasarkan input dari URL
+            const { Kode_Chain, Nama_Chain, URL_Chain, pairs } = selectedChain; 
+
+            const storagePrefix = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_";
+            let sortOrder = {};
+
+            // Fungsi umum untuk mendapatkan data dari localStorage
+            function getFromLocalStorage(key, defaultValue) {
+                return JSON.parse(localStorage.getItem(storagePrefix + key)) || defaultValue;
+            // console.log("Data from localStorage:", data); // Debug log
+            }
+
+            // Fungsi umum untuk menyimpan data ke localStorage
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(storagePrefix + key, JSON.stringify(value));
+                    //console.log("Data saved successfully:", key);
+                } catch (error) {
+                    if (error.name === "QuotaExceededError" && isLocalStorageFull()) {
+                        toastr.error("MEMORY BROWSER PENUH!!!");
+                        $("#infoAPP").text("MEMORY BROWSER PENUH!!!");
+                    } else {
+                        console.error("Unexpected error:", error);
+                    }
+                }
+            }
+
+            // Fungsi untuk memeriksa apakah localStorage penuh
+            function isLocalStorageFull() {
+                try {
+                    const testKey = "__test__";
+                    localStorage.setItem(testKey, "test"); // Coba simpan data sementara
+                    localStorage.removeItem(testKey); // Hapus data setelah dicek
+                    return false; // Tidak penuh
+                } catch (e) {
+                    return true; // Penuh jika error
+                }
+            }
+
+            // Fungsi untuk menghapus item dari localStorage
+            function removeFromLocalStorage(key) {
+                localStorage.removeItem(storagePrefix + key);
+            // console.log("Remove from localStorage:", key); // Debug log
+            }
+            // Fungsi untuk mendapatkan data chain berdasarkan nama chain
+            function getChainData(chainName) {
+                const chainData = CONFIG_CHAINS[chainName]; // base
+                
+                if (!chainData) {
+                    console.log(`Chain dengan nama ${chainName} tidak ditemukan.`);
+                    return null;
+                }
+                return {
+                    Kode_Chain: chainData.Kode_Chain,
+                    Nama_Chain: chainData.Nama_Chain,
+                    DEXS: chainData.DEXS,
+                    PAIRDEXS: chainData.PAIRDEXS,
+                    URL_Chain: chainData.URL_Chain, 
+                    DATAJSON: chainData.DATAJSON, 
+                    BaseFEEDEX: chainData.BaseFEEDEX, 
+                    CEXCHAIN: chainData.WALLET_CEX,
+                    ICON_CHAIN: chainData.ICON,
+                    COLOR_CHAIN: chainData.WARNA,
+                };
+            }
+
+            const chainName = urlParams.get('chain') || 'bsc'; // Jika tidak ada parameter 'chain', default ke 'polygon'
+            // Mendapatkan data untuk chain yang dipilih
+            const DTChain = getChainData(chainName);
+            const cexOptions = Object.keys(DTChain.CEXCHAIN);
+            const pairOptions = Object.keys(DTChain.PAIRDEXS);
+            let jsonData = [];
+            const validTokens = pairOptions.filter(token => token !== "NON");
+
+            if (typeof CONFIG_CEX !== 'undefined' && typeof CONFIG_CHAINS !== 'undefined') {
+                const currentPage = window.location.pathname.split('/').pop(); // Mengambil bagian terakhir dari path URL
+                var link = $('a[href="multipair.html"]'); // Pilih elemen link
+                var href = link.attr('href'); // Ambil URL href
+                link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+    
+                    // Ambil data chain yang dipilih berdasarkan Nama_Chain
+                    const selectedChain = CONFIG_CHAINS[Nama_Chain.toLowerCase()];
+
+                    // Pastikan data chain ditemukan
+                    if (selectedChain) {
+                        // Generate Pilihan CEX
+                        // Update tampilan dengan nama chain dan warna
+                        $('title').text("IMPORT TOKEN " + Nama_Chain.toUpperCase());
+                        $('#namachain').text(Nama_Chain.toUpperCase());
+                        $('h4#judulcex, h4#judulpair, #daftar').css('color', selectedChain.WARNA);
+                        $('h3#judul').css({
+                            'text-align':"center",
+                            'color': selectedChain.WARNA, // Fallback warna dasar
+                        });
+                        $('.table-header').css({
+                            'text-align':"center",
+                            'background-color': selectedChain.WARNA,
+                        });
+                        var url = DTChain.DATAJSON; // Ganti dengan URL JSON Anda
+
+                        // Untuk setiap chain yang ada di CONFIG_CHAINS dibuatkan ICON LINK CHAIN
+                        Object.keys(CONFIG_CHAINS).forEach(chainKey => {
+                            const chain = CONFIG_CHAINS[chainKey];
+
+                            // Periksa apakah chain saat ini cocok dengan chainName
+                            const isActive = chain.Nama_Chain === Nama_Chain;
+
+                            // Buat elemen link dan icon dengan pengaturan khusus jika cocok dengan chainName
+                            const linkHTML = `<span class="chain-link ${isActive ? 'active-chain' : ''}" style="${!isActive ? 'opacity: 0.3;' : ''}">
+                                    <a href="${currentPage}?chain=${chain.Nama_Chain}" ><img src="${chain.ICON}" alt="${chain.Nama_Chain} icon" width="${isActive ? '45' : '30'}"></a></span>`;
+                            
+                            // Masukkan ke dalam container
+                            $('#chain-links-container').append(linkHTML);
+                        });
+                        
+                    } else {
+                        alert(`Chain dengan nama ${Nama_Chain} tidak ditemukan.`);
+                    }
+                } else {
+                    console.warn("CONFIG tidak tersedia.");
+                }
+
+            // Ambil data dari JSON
+            $.getJSON(url, function (data) {
+                jsonData = data.token;
+
+                // Hitung jumlah token berdasarkan CEX
+                const cexCounts = {};
+                cexOptions.forEach(cex => cexCounts[cex] = 0);
+
+                data.token.forEach(item => {
+                    if (cexOptions.includes(item.cex)) {
+                        cexCounts[item.cex]++;
+                    }
+                });
+
+                // Tambahkan checkbox CEX dengan jumlah token
+                cexOptions.forEach(cex => {
+                    $("#cex-options").append(`
+                        <label><input class="uk-checkbox cex-filter" type="checkbox" value="${cex}"> ${cex} (${cexCounts[cex]})</label>
+                    `);
+                });
+
+                // Fungsi untuk menampilkan Pair berdasarkan CEX yang dipilih
+                function updatePairCheckboxes() {
+                    const selectedCEX = $(".cex-filter:checked").map(function () { return $(this).val(); }).get();
+
+                    let pairCountsForCEX = {}; 
+
+                    const filteredData = jsonData.filter(item => selectedCEX.includes(item.cex));
+
+                    filteredData.forEach(item => {
+                        const pairIn = validTokens.includes(item.symbol_in) ? item.symbol_in : null;
+                        const pairOut = validTokens.includes(item.symbol_out) ? item.symbol_out : null;
+                        const pair = (pairIn || pairOut) ? (pairIn || pairOut) : "NON"; 
+
+                        pairCountsForCEX[pair] = pairCountsForCEX[pair] ? pairCountsForCEX[pair] + 1 : 1;
+                    });
+
+                    // Menyimpan status checkbox pair yang dipilih
+                    const selectedPair = $(".pair-filter:checked").map(function () { return $(this).val(); }).get();
+
+                    $("#pair-checkboxes").empty();
+                    pairOptions.forEach(pair => {
+                        const isRelevantPair = pairCountsForCEX[pair] > 0;
+                        const isChecked = selectedPair.includes(pair) ? "checked" : ""; // Menandai pair yang sudah dipilih sebelumnya
+                        $("#pair-checkboxes").append(`
+                            <label><input class="uk-checkbox pair-filter" type="checkbox" value="${pair}" ${isRelevantPair ? '' : 'disabled'} ${isChecked}> ${pair} (${pairCountsForCEX[pair] || 0})</label>
+                        `);
+                    });
+
+                    
+                    // Enable tombol hanya jika ada pair yang dipilih
+                    if ($(".cex-filter:checked").length > 0 && $(".pair-filter:checked").length > 0) {
+                        $("#filter-btn").prop("disabled", false);
+                    } else {
+                        $("#filter-btn").prop("disabled", true);
+                    }
+                }
+
+                // Event listener untuk filter CEX
+                $(document).on("change", ".cex-filter", function () {
+                    updatePairCheckboxes();
+                });
+
+                // Event listener untuk filter Pair
+                $(document).on("change", ".pair-filter", function () {
+                    if ($(".cex-filter:checked").length > 0 && $(".pair-filter:checked").length > 0) {
+                        $("#filter-btn").prop("disabled", false);
+                    } else {
+                        $("#filter-btn").prop("disabled", true);
+                    }
+                });
+
+                // Event listener untuk menampilkan data setelah tombol diklik
+                $("#filter-btn").click(function () {
+                    const selectedCEX = $(".cex-filter:checked").map(function () { return $(this).val(); }).get();
+                    const selectedPair = $(".pair-filter:checked").map(function () { return $(this).val(); }).get();
+
+                    // Filter data berdasarkan CEX dan Pair yang dipilih
+                    const filteredData = jsonData.filter(item => {
+                        const pairIn = validTokens.includes(item.symbol_in) ? item.symbol_in : null;
+                        const pairOut = validTokens.includes(item.symbol_out) ? item.symbol_out : null;
+                        const pair = (pairIn || pairOut) ? (pairIn || pairOut) : "NON"; 
+                        return selectedCEX.includes(item.cex) && selectedPair.includes(pair);
+                    });
+
+                    // Menonaktifkan semua input setelah tombol diklik
+                    $(".cex-filter, .pair-filter").prop("disabled", true);
+                    $("#filter-btn").prop("disabled", true);
+
+                    // Tampilkan data yang sudah difilter
+                    displayData(filteredData);
+
+                    // Tampilkan tombol Load Data setelah filter
+                    $("#load-data-btn").show();
+                    // Simpan data sementara untuk digunakan tombol Load Data
+                    $("#load-data-btn").data("filteredData", filteredData);
+                });
+
+                // Event listener untuk tombol Load Data
+                $("#load-data-btn").click(function () {
+                // Ambil data sementara yang disimpan di tombol
+                const filteredData = $(this).data("filteredData");
+
+                if (filteredData) {
+                    // Simpan data ke localStorage
+                    saveToLocalStorage("TOKEN_PILIH",filteredData)
+                    // Tampilkan data yang sudah disimpan
+                    displayData(filteredData);
+                    toastr.success("SUKSES PILIH TOKEN PAIR, SILAKAN KESETTING DATA!!");
+                } else {
+                    toastr.error("GAGAL PILIH TOKEN PAIR, SILAKAN ULANGI LAGI!!");
+                }
+            });
+
+                // Fungsi untuk menampilkan data ke tabel
+                function displayData(data) {
+                    const $tableBody = $("#result-table tbody");
+                    $tableBody.empty();
+
+                    if (data.length === 0) {
+                        $tableBody.append('<tr><td colspan="6" class="uk-text-center">Data tidak ditemukan.</td></tr>');
+                    } else {
+                        data.forEach(item => {
+                            $tableBody.append(`
+                                <tr>
+                                    <td>${item.cex}</td>
+                                    <td>${item.symbol_in}</td>
+                                    <td>${item.sc_in} (${item.des_in})</td>
+                                    <td>${item.symbol_out}</td>
+                                    <td>${item.sc_out}(${item.des_out})</td>
+                                </tr>
+                            `);
+                        });
+                    }
+                }
+
+                // Update Pair berdasarkan checkbox yang dipilih
+                updatePairCheckboxes();
+
+                // Event listener untuk tombol Stop (refresh halaman)
+                $("#stop-btn").click(function () {
+                    location.reload();  // Refresh halaman
+                });
+
+                
+            });
+        });
+    </script>
+</body>
+</html>
