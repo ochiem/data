@@ -30,9 +30,12 @@
             color: inherit !important;  /* Warna aktif mengikuti warna yang ditentukan */
         }
         img:hover {
-                transform: scale(1.6); /* You can adjust the scale factor as needed */
+                opacity:1;
+                transform: scale(1.8); /* You can adjust the scale factor as needed */
             }
-
+        img{
+            margin: 1.5px;
+        }    
         #progress-container {
             width: 100%;
             background-color: #f3f3f3;
@@ -43,7 +46,7 @@
         #progress-bar {
             height: 14px;  /* Mengurangi tinggi bar progress menjadi 10px */
             width: 0%;
-            background-color: #4caf50;
+            /* background-color: #4caf50; */
             border-radius: 5px; /* Untuk membuat ujung bar lebih melengkung */
             position: relative;
         }
@@ -54,20 +57,6 @@
             line-height: 10px;  /* Menyesuaikan tinggi bar agar teks tetap berada di tengah */
             display: block;
             font-weight: bold;
-        }
-
-        .table-header th {
-            background-color: #9ef6ab; 
-            position: sticky; /* Header tetap di tempat */
-            top: 0; /* Posisi tetap pada bagian atas */
-            z-index: 10; /* Agar tetap di atas elemen lain */
-            color: black; /* Warna teks header */
-            text-align: center;
-            padding: 8px;
-            font-size: 14px; /* Ukuran font */
-            font-weight: bolder; /* Tebal */
-            border: 1px solid #ddd; /* Border */
-            cursor: pointer; /* Ubah kursor menjadi pointer untuk interaksi */
         }
 
         /* Tambahkan scroll untuk tabel */
@@ -85,8 +74,16 @@
             color: rgb(250, 249, 249) !important;
             background-color:#eb6464!important;
         }
+        .buy {
+            color:#05a705;
+            font-weight:bolder;
+        }
+        .sell {
+            color:#ea0c0c;
+            font-weight:bolder;
+        }
         .ijo {
-            color: black;
+            color: black !important;
             font-weight: bolder;
         }
         .error{
@@ -96,10 +93,7 @@
         .errorrestapi{
             background-color: #f6f2f1!important;
         }
-        .img-large {
-            width: 60px !important; /* Atur ukuran sesuai kebutuhan */
-            transition: transform 0.3s; /* Menambahkan efek animasi */
-        }
+       
         .sinyal-item {
             margin-bottom: 2px;  /* Jarak antar sinyal */
             padding-bottom: 1px;  /* Jarak dari garis bawah ke teks */
@@ -111,6 +105,17 @@
             /* background-image: linear-gradient(#cffad4, #fefefe, #f3f7f4); */
             color: #0f0f0f;
         }
+        .icon-wrapper {
+            display: inline-flex;          /* Menjadikan elemen inline fleksibel */
+            justify-content: center;       /* Pusatkan gambar secara horizontal */
+            align-items: center;           /* Pusatkan gambar secara vertikal */
+            margin: 10px;
+            transform: scale(1.6);              /* Tinggi ikon */
+            background-color: #f97aa8;     /* Warna latar belakang */
+            border-radius: 35%;            /* Membuat bentuk lingkaran */
+            cursor: pointer;               /* Ubah kursor menjadi tangan saat diklik */
+            transition: background-color 0.3s ease; /* Animasi untuk efek hover */
+        }
 
     </style>
     
@@ -120,28 +125,29 @@
         <div class="uk-flex uk-flex-between uk-grid-small" uk-grid style="flex: 1;">
             <!-- Bagian Kiri (Form) -->
             <div class="uk-width-auto">
-                <h2 id="judul" class="uk-margin-remove" style="font-size: 30px;">
+                <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
                     MULTIPAIR SCANNER <label id="namachain"></label>&nbsp;
                 </h2>
-                <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="25px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
-                <img class="icon" id="SettingModal" title="CONFIG APLIKASI" width="25px" src="https://cdn-icons-png.flaticon.com/512/771/771203.png" />
-                <img class="icon" id="reload" title="REFRESH PAGE" width="25px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" />
-                <img class="icon" id="UpdateWalletCEX" title="LOAD STATUS WALLET" width="25px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" />
-                <a href="multipair.html" target="_blank">
-                    <img class="icon" id="MasterData" title="SETTING DATA" width="25px" src="https://cdn3.iconfinder.com/data/icons/servers-4/24/Computer-Database-512.png" />
-                </a>
+                <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
+                <img class="icon" id="SettingModal" title="CONFIG APLIKASI" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
+                <img class="icon" id="UpdateWalletCEX" title="LOAD STATUS WALLET" width="30px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" />
                 <a href="manajemen_aset.html" target="_blank">
-                    <img class="icon" id="Modal" title="MANAJEMEN ASSET" width="25px" src="https://cdn-icons-png.flaticon.com/512/6573/6573160.png" />
+                    <img class="icon" id="Modal" title="MANAJEMEN ASSET" width="30px" src="https://cdn-icons-png.flaticon.com/512/1194/1194711.png" />
+                </a>
+                <a href="multipair.html" target="_blank">
+                    <img class="icon" id="MasterData" title="SETTING DATA" width="30px" src="https://cdn-icons-png.flaticon.com/128/3934/3934107.png" />
                 </a>
                 <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
-                    <img class="icon" id="BukaKunci" title="BUKA AKSES" width="25px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" />
+                    <img class="icon" id="BukaKunci" title="BUKA AKSES" width="30px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" />
                 </a>
+                <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" />
+              
                 <span id="chain-links-container"></span>                
             </div>
     
             <!-- Bagian Kanan (Konten Lainnya) -->
             <div class="uk-width-expand uk-margin-small-top">
-                <form id="cryptoForm" style="margin-left: 30px; width: 94%;">
+                <form id="cryptoForm" style=" width: 96%;">
                         <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                             <!-- Kolom untuk CEX -->
                             <div class="uk-width-auto uk-flex uk-flex-middle">
@@ -323,7 +329,7 @@
     function saveToLocalStorage(key, value) {
         try {
             localStorage.setItem(storagePrefix + key, JSON.stringify(value));
-            console.log("Data saved successfully:", key);
+           // console.log("Data saved successfully:", key);
         } catch (error) {
             // Tambahkan log untuk memverifikasi jenis error
             console.error("Error saat menyimpan data:", error);
@@ -537,24 +543,24 @@
         let errorMessages = [];
         if (!MasterTokens.length) {
             errorMessages.push('TIDAK ADA DATA PADA SETTINGAN!');
-            $("#MasterData").addClass("img-large");
+            $("#MasterData").addClass("icon-wrapper");
             $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');            
         }else if (!DataTokens.length) {
             form_off(); 
-            $("#LoadDataBtn").addClass("img-large");   
+            $("#LoadDataBtn").addClass("icon-wrapper");   
             errorMessages.push('<b>SILAKAN LOAD DATA TERLEBIH DAHULU !!</b><br/>');         
         }else if (!SavedSettingData || SavedSettingData.walletMeta === '-' ) {
             errorMessages.push('CEK, SETTINGAN APLIKASI {MODAL,WALLET METAMASK}!');
-            $("#SettingModal").addClass("img-large");
+            $("#SettingModal").addClass("icon-wrapper");
             form_off();
         }else if (!WalletCEX.length) {
             errorMessages.push('TIDAK ADA DATA WALLET CEX, SILAKAN UPDATE WALLET PADA SETTINGAN!');
-            $("#MasterData").addClass("img-large");
+            $("#MasterData").addClass("icon-wrapper");
             $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
             
         }else{
-            generateInputCheckbox(CONFIG_CEX,  "cex-options","","EXCHANGER :","uk-form-label uk-text-success");
-            generateInputCheckbox(DTChain.DEXS,  "dex-options","D","DEFI :","uk-form-label uk-text-danger");
+            generateInputCheckbox(CONFIG_CEX,  "cex-options","","EXCH:","uk-form-label uk-text-success");
+            generateInputCheckbox(DTChain.DEXS,  "dex-options","D","DEFI:","uk-form-label uk-text-danger");
             generateInputCheckbox(DTChain.PAIRDEXS, "dexpair-options","","PAIRING :","uk-form-label uk-text-primary");
             generateInputModal(DTChain.DEXS);
             loadStoredData(filteredTokens);
@@ -590,18 +596,18 @@
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                      $('h2#judul').css('color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
-                   // $("thead.table-header").css('background-color', selectedChain.WARNA);
                     $('#sinyal-container').css('color', selectedChain.WARNA);
-                    $('h4#daftar').css({'background-color': selectedChain.WARNA,'padding-left':'4px','color':'white'});
-                    
+                    $('#progress-bar').css('background-color', selectedChain.WARNA);
+                    $('h4#daftar').css({'color': selectedChain.WARNA,'padding-left':'4px'});
+                   
                     cekDataAwal();
 
                     // Untuk setiap chain yang ada di CONFIG_CHAINS dibuatkan ICON LINK CHAIN
                     Object.keys(CONFIG_CHAINS).forEach(chainKey => {
                         const chain = CONFIG_CHAINS[chainKey];
                         const isActive = chain.Nama_Chain === Nama_Chain;
-                        const linkHTML = `<span class="chain-link ${isActive ? 'active-chain' : ''}" style="${!isActive ? 'opacity: 0.3;' : ''}">
-                                <a href="${currentPage}?chain=${chain.Nama_Chain}" ><img src="${chain.ICON}" alt="${chain.Nama_Chain} icon" width="${isActive ? '40' : '25'}"></a></span>`;
+                        const linkHTML = `<span class="chain-link" style="${!isActive ? 'opacity: 0.3;' : ''}">
+                                <a href="${currentPage}?chain=${chain.Nama_Chain}" ><img src="${chain.ICON}" alt="${chain.Nama_Chain} icon" width="${isActive ? '30' : '30'}"></a></span>`;
                         $('#chain-links-container').append(linkHTML);
                     });
                 } else {
@@ -746,7 +752,7 @@
                     let token = groupTokens[tokenIndex];
 
                     try {
-                        console.log(`Memproses token ${token.symbol_in}_${token.symbol_out}`);
+                        //console.log(`Memproses token ${token.symbol_in}_${token.symbol_out}`);
                         updateProgress(
                             currentProcessed + tokenIndex + 1,
                             totalTokens,
@@ -801,7 +807,7 @@
                                             var amount_in =parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
                                                 if (error) {
-                                                    console.error("Error dalam getPriceDEX:", error);
+                                                    console.error("Error: Get Pice DEX:", error);
                                                     $(`#${dexId}`).css('background-color',error.color);
 
                                                      $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
@@ -846,7 +852,7 @@
 
             // Mengaktifkan kembali UI
             $("#stopSCAN").hide().prop("disabled", false);
-            $("#LoadDataBtn, #SettingModal, #chain-links-container").css("pointer-events", "auto").css("opacity", "1");
+            $("#LoadDataBtn, #SettingModal, #MasterData,#UpdateWalletCEX,#chain-links-container").css("pointer-events", "auto").css("opacity", "1");
         }
 
         processTokens(); // Memulai pemrosesan token
@@ -1131,12 +1137,13 @@
                 row.innerHTML += `
                     <td class="uk-text-center" style="vertical-align: middle;" id="${idCELL}">
                         <a href="${urlsCEX.tradeToken}" target="_blank">
-                            <span class="uk-text-success" id="BUY_${idCELL}"> --- </span>
+                            <span class="buy" id="BUY_${idCELL}"> --- </span>
                         </a><br>
-                        <span class="uk-text-secondary" id="SWAP_${idCELL}"> --- </span><br>
+                        <span class="uk-text-primary uk-text-bolder" id="SWAP_${idCELL}"> --- </span><br>
                         <a href="${urlsCEX.tradePair}" target="_blank">
-                            <span class="uk-text-danger" id="SELL_${idCELL}"> --- </span>
+                            <span class="sell" id="SELL_${idCELL}"> --- </span>
                         </a><br>
+                        <hr class="uk-divider-small uk-margin-remove">
                         <span class="uk-text-primary" id="RESULT_${idCELL}"> --- </span>
                     </td>
                 `;
@@ -1165,7 +1172,16 @@
         $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
         $("#startSCAN").show();
         setTimeout(() => $InfoStatus.fadeOut(), 2000);
-
+        //beri warna header
+        $(".table-header th").css({
+            "background-color": selectedChain.WARNA, // Warna latar belakang header
+            "color": "white",             // Warna teks
+            "position": "sticky",         // Membuat header sticky
+            "top": "0",
+            "font-weight":"bolder",   
+            "text-align":"center",                  // Tetap di bagian atas
+            "z-index": "10"               // Prioritas tampilan
+        });
         updateSortIcons();
     }
 
@@ -1333,8 +1349,6 @@
     $(document).on('change', '#cex-options input[type="checkbox"], #dex-options input[type="checkbox"], #dexpair-options input[type="checkbox"]', function() {
         // Menentukan kategori checkbox berdasarkan ID
         const groupName = $(this).closest('div[id^="cex-options"], div[id^="dex-options"], div[id^="dexpair-options"]').attr('id');
-
-        console.log(groupName);
         let selectedValues = [];
         $(`#${groupName} input[type="checkbox"]:checked`).each(function() {
             selectedValues.push($(this).val());
@@ -1801,32 +1815,37 @@
                 selisih=true;
             }
         }         // Output log
-         console.log("-------------------------------------");
-         console.log("---- " + NameToken + "/" + NamePair +" "+DataCEX.cex.toUpperCase()+" VS DEX : " + dextype.toUpperCase() + "  | Modal : " + Modal);
-         console.log("--------------- HARGA & PROSES CEX ");
-         console.log("Rate Beli Token " + NameToken + "/USDT di CEX:", priceBuyToken_CEX, "USDT");
-         console.log("Rate Jual Token " + NameToken + "/USDT di CEX:", priceSellToken_CEX, "USDT");
-         console.log("Jumlah HASIL Beli USDT => " + NameToken + " di CEX:", amount_in, NameToken);
-         console.log("Rate Beli Pair " + NamePair + "/USDT di CEX:", priceBuyPair_CEX, "USDT");
-         console.log("Rate Jual Pair " + NamePair + "/USDT di CEX:", priceSellPair_CEX, "USDT");
-         console.log("--------------- HARGA & PROSES SWAP DEX");
-         console.log("Jumlah HASIL SWAP " + NameToken + "=>" + NamePair + " di DEX:", amount_out, NamePair);     
-         console.log("Rate Jual " + NameToken + "=>USDT di DEX:", rateSellTokenDEX.toFixed(4), "USDT");
-         console.log("Rate " + NamePair + "=>" + NameToken + " di DEX:", rateTokentoPair.toFixed(10));
-         console.log("Rate Beli USDT => " + NamePair + " di DEX:", rateBuyPairDEX.toFixed(4), "USDT");
-         
-         console.log("--------------- KESIMPULAN ");
-         console.log("Modal Awal (USDT):", Modal, "USDT");
-         console.log(`All Fee => Swap: ${FeeSwap.toFixed(2)} , WD: ${FeeWD.toFixed(2)} , Trade: ${FeeTrade.toFixed(2)} = ${totalFee.toFixed(2)}`);
-         console.log("Modal Awal (USDT) + FEE:", totalModal.toFixed(2), "USDT");        
-         console.log("Filter PNL:", filterPNLValue.toFixed(4), "USDT");
-         console.log("Nilai Akhir (USDT):", totalValue.toFixed(4), "USDT");
-         console.log("Profit/Loss (USDT):", profitLoss.toFixed(4), "USDT");
-         console.log("Profit/Loss (%):", profitLossPercent.toFixed(2), "%");
-         console.log("###################################");
-         console.log(`${conlusion} => ${NameToken}/${NamePair} on ${DataCEX.cex.toUpperCase()}`);
-         console.log("###################################");
-         
+       
+         console.log("-----------------------");
+         console.log("" + NameToken + "/" + NamePair +"("+DataCEX.cex.toUpperCase()+" VS " + dextype.toUpperCase()+")");
+         if(selisih){
+            console.log(" Modal : " + Modal);
+            console.log("--------------- HARGA & PROSES CEX ");
+            console.log("Rate Beli Token " + NameToken + "/USDT di CEX:", priceBuyToken_CEX, "USDT");
+            console.log("Rate Jual Token " + NameToken + "/USDT di CEX:", priceSellToken_CEX, "USDT");
+            console.log("Jumlah HASIL Beli USDT => " + NameToken + " di CEX:", amount_in, NameToken);
+            console.log("Rate Beli Pair " + NamePair + "/USDT di CEX:", priceBuyPair_CEX, "USDT");
+            console.log("Rate Jual Pair " + NamePair + "/USDT di CEX:", priceSellPair_CEX, "USDT");
+            console.log("--------------- HARGA & PROSES SWAP DEX");
+            console.log("Jumlah HASIL SWAP " + NameToken + "=>" + NamePair + " di DEX:", amount_out, NamePair);     
+            console.log("Rate Jual " + NameToken + "=>USDT di DEX:", rateSellTokenDEX.toFixed(4), "USDT");
+            console.log("Rate " + NamePair + "=>" + NameToken + " di DEX:", rateTokentoPair.toFixed(10));
+            console.log("Rate Beli USDT => " + NamePair + " di DEX:", rateBuyPairDEX.toFixed(4), "USDT");
+            
+            console.log("--------------- KESIMPULAN ");
+            console.log("Modal Awal (USDT):", Modal, "USDT");
+            console.log(`All Fee => Swap: ${FeeSwap.toFixed(2)} , WD: ${FeeWD.toFixed(2)} , Trade: ${FeeTrade.toFixed(2)} = ${totalFee.toFixed(2)}`);
+            console.log("Modal Awal (USDT) + FEE:", totalModal.toFixed(2), "USDT");        
+            console.log("Filter PNL:", filterPNLValue.toFixed(4), "USDT");
+            console.log("Nilai Akhir (USDT):", totalValue.toFixed(4), "USDT");
+            console.log("Profit/Loss (USDT):", profitLoss.toFixed(4), "USDT");
+            console.log("Profit/Loss (%):", profitLossPercent.toFixed(2), "%");
+            console.log("###################################");
+            console.log(`${conlusion} => ${NameToken}/${NamePair} on ${DataCEX.cex.toUpperCase()}`);
+            console.log("###################################");
+        }else {
+            console.log("NO SELISIH");
+        }
          let IdCELL = `${DataCEX.cex.toUpperCase()}_${dextype.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
          var linkDEX = generateDexLink(dextype.toLowerCase(), NameToken, DataCEX.sc_input, NamePair, DataCEX.sc_output);
     
@@ -1836,12 +1855,11 @@
         }
         
         if (NameToken == "USDT") {
-            var RateSwap = `<label class="uk-text-success"> ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
+            var RateSwap = `<label class="uk-text-success" title="${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}"> ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
         }else if(NamePair == "USDT"){
-            var RateSwap = `<label class="uk-text-danger"> ${formatPrice(rateTokentoPair)} ${NameToken}</label>`; // Kosongkan jika salah satunya adalah USDT
+            var RateSwap = `<label class="uk-text-danger" title="${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}"> ${formatPrice(rateTokentoPair)} ${NameToken}</label>`; // Kosongkan jika salah satunya adalah USDT
         }else  {
-            var RateSwap = ` <label class="uk-text-danger">  ${formatPrice(rateSellTokenDEX)} ${NameToken}</label><br/>
-                            <label class="uk-text-success">  ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
+            var RateSwap = ` <label class="uk-text-primary" title="${formatPrice(rateSellTokenDEX)} ${NameToken}  ${formatPrice(rateBuyPairDEX)} ${NamePair}">${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}</label>`;
         }  
 
         // Cek apakah elemen dengan ID ada di DOM
@@ -1858,6 +1876,7 @@
         var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
         var nickname = SavedSettingData.nickname;
         var totalValue = parseFloat(totalValue);
+        var totalGet = parseFloat(totalValue)-parseFloat(modal);
         var totalModal = parseFloat(totalModal);
         var totalFee = parseFloat(totalFee);
 
@@ -1871,33 +1890,33 @@
             ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)})</a> | `;
 
         // Simplified condition check
-        var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal + totalFee) || ((totalValue - totalModal) > filterPNLValue);
+        var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
+        //var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal + totalFee) || ((totalValue - totalModal) > filterPNLValue);
 
         if (isPositivePNL) {
             toastr.info(sinyals);
 
-            rowCell.css('background-color', '#e6fbd8');
-            buyCell.addClass('ijo');
-            sellCell.addClass('ijo');
-
+            rowCell.css({'background-color': '#c2f890','font-weight':'bolder'});
             resultCell.html(`
-                <span class="uk-text-secondary">ALL:${totalFee.toFixed(2)}$</span>
-                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span>
-                <span class="uk-text-secondary">PNL:${(PNL).toFixed(2)}$</span>
-            `).addClass('ijo');
+                <span class="uk-text-danger">FEE:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span><br/>
+                <span class="uk-text-warning">GET:${(totalGet).toFixed(2)}$</span>
+                 <span class="uk-text-secondary" >PNL:${(PNL).toFixed(2)}$</span>
+            `);
 
             InfoSinyal(dex.toLowerCase(), TokenPair, PNL, totalFee, cex.toUpperCase(), NameToken, pairdex);
         } else {
             resultCell.html(`
-                <span class="uk-text-secondary">ALL:${totalFee.toFixed(2)}$</span>
-                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span>
-                <span class="uk-text-danger">PNL:${(PNL).toFixed(2)}$</span>
+                <span class="uk-text-danger">FEE:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span><br/>
+                <span class="uk-text-warning">GET:${(totalGet).toFixed(2)}$</span>
+                 <span class="uk-text-secondary" >PNL:${(PNL).toFixed(2)}$</span>
             `);
         }
 
         // Send message if PNL > 2
         if (PNL > 2) {
-            MultisendMessage(cex, dex.toUpperCase(), TokenPair, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname);
+            MultisendMessage(cex, dex.toUpperCase(), NameToken,TokenPair, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname);
         }
     }
 
@@ -1909,9 +1928,9 @@
         let idCELL = `${cex.toUpperCase()}_${DEXPLUS.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         
         // Membuat link dengan format umum tanpa pengecekan kondisi
-        var sLink = `<a href=#SWAP_${idCELL} class='uk-text-secondary'>
+        var sLink = `<a href=#SWAP_${idCELL} class='buy'>
             ${NameToken}->${NamePair}
-            (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span>${PNL.toFixed(2)}$)
+            (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span><span class="uk-text-secondary">${PNL.toFixed(2)}$</span>)
         </a>`;
 
         // Menambahkan link ke elemen dengan ID yang sesuai
@@ -2003,7 +2022,6 @@
             case 'jupiter':
                 apiUrl = "https://quote-api.jup.ag/v6/quote?inputMint=" + sc_input + "&outputMint=" + sc_output + "&amount=" + amount_in;
                 headers = {}; // Tidak memerlukan header khusus
-                console.log("https://quote-api.jup.ag/v6/quote?inputMint=" + sc_input + "&outputMint=" + sc_output + "&amount=" + amount_in);
                 break;                 
             default:
                 console.error("Unsupported DEX type");
@@ -2274,7 +2292,9 @@
     // Fungsi untuk mengecek harga pada RANGO
     function getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback) {
         var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
-        var amount_in = amount_in / Math.pow(10, 18);
+      //  var amount_in = amount_in / Math.pow(10, 18);
+        var amount_in = Number(amount_in) / Math.pow(10, 18);
+
         let transformedChain = 
             DTChain.Nama_Chain.toUpperCase() === "ETHEREUM" ? "ETH" : 
             DTChain.Nama_Chain.toUpperCase() === "AVAX" ? "AVAX_CCHAIN" : 
@@ -2426,7 +2446,6 @@
     }
     // ALL Sent TELE
     function sendStatusTELE(user, status) {
-        console.log(user, status);
         var users = [
             { chat_id: SavedSettingData.ID_GRUP }
         ];
@@ -2443,7 +2462,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> MULTIPAIR ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> MULTIPAIR_V2 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
@@ -2475,15 +2494,15 @@
           }
         }
         //sent sinyal kegrup tele
-        function MultisendMessage(cex, dex, token, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname) {
+        function MultisendMessage(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname) {
             // Mengambil user dari localStorage menggunakan getFromLocalStorage        
             var message = 
-                "<b>#MULTIPAIR #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
+                "<b>#MULTIPAIR_V2 #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
                 " \n ----------------------------------------- \n MARKET: " + cex +" VS " + dex +
-                " \n TOKEN-PAIR: <b>#" + token + "</b> " + 
+                " \n TOKEN-PAIR: <b>#" + token+"_"+pair + "</b> " + 
                 " \n MODAL: <b> " + modal + "$</b> | PROFIT: <b>" + PNL.toFixed(2) + "$ </b> " +
-                " \n <b>BUY: </b> " + priceBUY.toFixed(9) +
-                " \n <b>SELL: </b>" + priceSELL.toFixed(9) + 
+                " \n <b>BUY "+token+": </b> " + priceBUY.toFixed(9) +
+                " \n <b>SELL "+pair+": </b>" + priceSELL.toFixed(9) + 
                 " \n <b>FEEWD: </b>" + FeeWD.toFixed(3) + 
                 " \n FEETOTAL: <b>" + totalFee.toFixed(2) + "$</b> | SWAP:<b>" + FeeSwap.toFixed(2) + "$</b>" +
                 " \n -----------------------------------------";
@@ -2539,7 +2558,7 @@
             $("#ip").text(`IP: ${savedID.ip}`);
             toastr.success(`ANDA MENDAPATKAN IP: ${savedID.ip}`);
         } catch (error) {
-            toastr.info("GAGAL CEK IP!!");
+            //toastr.info("GAGAL CEK IP!!");
         }
     }
 
@@ -2565,16 +2584,6 @@
         // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
         const storedData = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil data token yang sudah ada
         const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
-
-        // Cek apakah WalletCEXData kosong
-        // if (!Array.isArray(WalletCEXData) || WalletCEXData.length === 0) {
-        //     toastr.error("DATA WALLET PADA SETTINGAN KOSONG! TIDAK DAPAT MEMPERBAHARUI STATUS.", {
-        //         timeOut: 5000, // Durasi toast (5 detik)
-        //         progressBar: true, // Tampilkan progress bar
-        //         closeButton: true, // Tampilkan tombol close
-        //     });
-        //     return; // Hentikan proses jika WalletCEXData kosong
-        // }
 
         // Gabungkan data dari TOKEN dan status dari WALLET_CEX
         const combinedData = storedData.map(token => {
