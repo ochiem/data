@@ -614,6 +614,7 @@
                             loadStoredData();
                             toastr.success("IMPORT DATA BERHASIL, SILAKAN REFRESH!!");
                             setLastAction("IMPORT DATA VIA CSV");    
+                            location.reload()
                         } else {
                             toastr.error("IMPORT DATA GAGAL, SILAKAN COBA LAGI!!");
                         }
@@ -846,7 +847,8 @@
        // removeFromLocalStorage('DATA_SETTING');
         removeFromLocalStorage("LASTUPDATE_FEEWD");
         removeFromLocalStorage("WALLET_CEX");
-        
+        removeFromLocalStorage("TOKEN_SCANNER");
+
         $.ajax({
             url: DTChain.DATAJSON,
             success: function(response) {
@@ -869,8 +871,8 @@
                     const DataJSON = {
                         TOKEN: tele_token,
                         ID_GRUP: id_grup,
-                        jedaKoin: 200,
-                        jedaTimeGroup: 700,
+                        jedaKoin: 100,
+                        jedaTimeGroup: 500,
                         scanPerKoin: 12,
                         filterPNL: 0,
                         walletMeta: "-",
