@@ -1034,10 +1034,10 @@
         "cex": "BINANCE",
         "symbol_in": "1000CAT",
         "sc_in": "0x6894cde390a3f51155ea41ed24a33a4827d3063d",
-        "des_in": 18,
+        "des_in": 21,
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
-        "des_out": 18,
+        "des_out": 21,
         "status": true
     },
     {
@@ -2951,7 +2951,7 @@
         "des_in": 18,
         "symbol_out": "1000CAT",
         "sc_out": "0x6894cde390a3f51155ea41ed24a33a4827d3063d",
-        "des_out": 18,
+        "des_out": 21,
         "status": true
     },
     {
