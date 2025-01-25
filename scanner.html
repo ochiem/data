@@ -755,6 +755,7 @@
             for (let groupIndex = 0; groupIndex < tokenGroups.length; groupIndex++) {
                 let groupTokens = tokenGroups[groupIndex];
                 console.log(`Memproses grup ${groupIndex + 1} dari ${tokenGroups.length}`);
+                feeGasGwei()
 
                 for (let tokenIndex = 0; tokenIndex < groupTokens.length; tokenIndex++) {
                     let token = groupTokens[tokenIndex];
@@ -767,8 +768,6 @@
                             startTime,
                             `${token.symbol_in}_${token.symbol_out}`
                         );
-
-                        feeGasGwei()
 
                         let cex = token.cex.toUpperCase();
                         let symbolIn = token.symbol_in.toUpperCase();
