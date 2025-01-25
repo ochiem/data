@@ -2156,7 +2156,21 @@
                         }                        
                         break;
                     case 500:
-                        alertMessage = "GAGAL DAPATKAN DATA";
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            if (errorResponse.msg && errorResponse.msg.toLowerCase().includes("too many requests")) {
+                                alertMessage = "AKSES KENA LIMIT (500 Too Many Requests)";
+                                warna = "#f39999";
+                                // if (dexType == '0kx') {
+                                //     warna = "#f6f2f1";
+                                //     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                                // }
+                            } else {
+                                alertMessage = errorResponse.detail || "GAGAL DAPATKAN DATA";
+                            }
+                        } catch (e) {
+                            alertMessage = "GAGAL DAPATKAN DATA";
+                        }
                         break;
                     case 503:
                         alertMessage = "Layanan tidak tersedia";
