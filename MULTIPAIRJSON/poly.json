@@ -4772,7 +4772,7 @@
         "des_in": 18,
         "symbol_out": "FAN",
         "sc_out": "0x3B9E9100Db1389c518d47c635D80a90ad4C4f41b",
-        "des_out": 18,
+        "des_out": 8,
         "status": true
     },
     {
@@ -5132,7 +5132,7 @@
         "des_in": 18,
         "symbol_out": "UCO",
         "sc_out": "0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD",
-        "des_out": 18,
+        "des_out": 8,
         "status": true
     },
     {
@@ -5729,7 +5729,7 @@
         "cex": "MEXC",
         "symbol_in": "FAN",
         "sc_in": "0x3B9E9100Db1389c518d47c635D80a90ad4C4f41b",
-        "des_in": 18,
+        "des_in": 8,
         "symbol_out": "USDT",
         "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
         "des_out": 6,
@@ -5739,7 +5739,7 @@
         "cex": "MEXC",
         "symbol_in": "FAN",
         "sc_in": "0x3B9E9100Db1389c518d47c635D80a90ad4C4f41b",
-        "des_in": 18,
+        "des_in": 8,
         "symbol_out": "ETH",
         "sc_out": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
         "des_out": 18,
@@ -9769,7 +9769,7 @@
         "cex": "MEXC",
         "symbol_in": "UCO",
         "sc_in": "0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD",
-        "des_in": 18,
+        "des_in": 8,
         "symbol_out": "USDT",
         "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
         "des_out": 6,
@@ -9779,7 +9779,7 @@
         "cex": "MEXC",
         "symbol_in": "UCO",
         "sc_in": "0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD",
-        "des_in": 18,
+        "des_in": 8,
         "symbol_out": "ETH",
         "sc_out": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
         "des_out": 18,
@@ -12572,7 +12572,7 @@
         "des_in": 6,
         "symbol_out": "FAN",
         "sc_out": "0x3B9E9100Db1389c518d47c635D80a90ad4C4f41b",
-        "des_out": 18,
+        "des_out": 8,
         "status": true
     },
     {
@@ -12932,7 +12932,7 @@
         "des_in": 6,
         "symbol_out": "UCO",
         "sc_out": "0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD",
-        "des_out": 18,
+        "des_out": 8,
         "status": true
     },
     {
