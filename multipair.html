@@ -320,6 +320,7 @@
 
         // Verifikasi awal untuk memastikan DATA_SETTING sudah di-sync
         var info=true;
+       /*
         if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
             form_off();
             $("#ImportDataBtn").addClass("img-large");
@@ -333,7 +334,9 @@
                 'cursor': 'not-allowed'   // Mengubah kursor menjadi tanda larangan
             });
         }
-        else if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
+        else 
+            */
+                if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
             form_off(); 
             $("#SyncDataBtn").addClass("img-large");               
             toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
@@ -870,8 +873,8 @@
                 // Memastikan data yang diambil sesuai dengan format yang diharapkan
                 if (response && response.serverCORS && response.token && response.telegram) {
                     const serverCORS = response.serverCORS;
-                   // const rawTokenData = response.token; // Token asli dari server
-                    const rawTokenData = getFromLocalStorage("TOKEN_PILIH");
+                    const rawTokenData = response.token; // Token asli dari server
+                   // const rawTokenData = getFromLocalStorage("TOKEN_PILIH");
                     const tele_token = response.telegram.token;
                     const id_grup = response.telegram.id_grup;
     
