@@ -14,13 +14,13 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.21/dist/js/uikit-icons.min.js"></script>
     
     <link rel="icon" href="https://www.iconpacks.net/icons/1/free-settings-icon-778-thumb.png" type="image/x-icon">
-    <script src="config_tri.js"></script>
+    <script src="config_multipairv2.js"></script>
     <style>
          body{
             font-family: Arial, Helvetica, sans-serif;
             padding: 1px;
             color: #0f0f0f;
-            background-color: #dbfac7;
+            /* background-color: #dbfac7; */
         }
         .uk-container { width: 96%; max-width: none; }
         .table-header th { color: rgb(251, 250, 250); font-size: medium; font-weight: bolder; cursor: pointer; position: relative; }
@@ -40,7 +40,7 @@
                 transform: scale(1.6); /* You can adjust the scale factor as needed */
             }
         .img-large {
-            width: 80px !important; /* Atur ukuran sesuai kebutuhan */
+            width: 60px !important; /* Atur ukuran sesuai kebutuhan */
             transition: transform 0.3s; /* Menambahkan efek animasi */
         }
        
@@ -49,105 +49,124 @@
 </head>
 <body>
 <div class="uk-container uk-margin-top">
-    <div class="uk-text-center"> <!-- Mengurangi margin-top -->
-        <h3 id="judul" class="uk-margin-remove" style="font-size: 30px;" > &nbsp;
-           <!--- <a href="import.html" target="_blank"><img class="icon" id="ImportDataBtn" title="PILIH TOKEN PAIR" width="30px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" /> </a>&nbsp;
-           -->
-            <img class="icon" id="SyncDataBtn" title="SINKRONISASI DATA" width="30px" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" /> &nbsp;
-            <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank"><img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="30px" /></a> &nbsp;
-            <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" /> &nbsp;
-            <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
-            <a href="memory.html" target="_blank"><img title="MANAJEMEN MEMORY" src="https://cdn-icons-png.flaticon.com/512/9776/9776871.png" width="30px" /></a> &nbsp;            
-            <a href="cek_token_exchanger.html" target="_blank"><img title="CHECKER COIN EXCHANGER" src="https://cdn-icons-png.flaticon.com/512/1969/1969111.png" width="30px" /></a> &nbsp;            
-            <a href="scanner.html" target="_blank" > <img class="icon" id="Scanner" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
-              MULTIPAIR SETTING <label id="namachain"></label>&nbsp;&nbsp;
-            <span id="chain-links-container"></span>             
-        </h3>
-    </div>
-    <form id="cryptoForm" class="uk-form-stacked" style="margin-top: 20px;">
-        <fieldset class="uk-fieldset">
-
-            <div class="uk-margin" style="display: flex; align-items: center; gap: 10px;">
-                <b><span class="uk-text-primary uk-text-medium">TOKEN : </span></b>
-                    <input class="uk-input" type="text" id="ID" hidden>
-                <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="text" id="token_in" placeholder="NAME TOKEN" required>
-                </div>
-                <div class="uk-form-controls" style="flex: 3;">
-                    <input class="uk-input" type="text" id="sc_in" placeholder="SC TOKEN CEX" required>
-                </div>
-                <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="number" id="des_in" placeholder="DES TOKEN" required min="0">
-                </div>
-                <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="text" id="token_out" placeholder="NAME PAIR" required>
-                </div>
-                <div class="uk-form-controls" style="flex: 3;">
-                    <input class="uk-input" type="text" id="sc_out" placeholder="SC PAIR DEX" required>
-                </div>
-                <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="number" id="des_out" placeholder="DES PAIR" required min="0">
-                </div>
+    <div class="uk-text-center" uk-grid>
+        <div class="uk-width-auto@m">
+            <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                <h3 id="judul">
+                    MULTIPAIR V2 :: SETTING <label id="namachain"></h3>
+                    &nbsp;
+                    <a href="import.html">
+                        <img class="icon" id="ImportDataBtn" title="PILIH TOKEN PAIR" width="30px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" />
+                    </a>&nbsp;
+                    <a href="multipair.html">
+                        <img class="icon" id="MasterDataBtn" title="PILIH TOKEN PAIR" width="30px" src="https://cdn-icons-png.flaticon.com/512/324/324125.png" />
+                    </a>&nbsp;
+                    <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
+                        <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="30px" />
+                    </a> &nbsp;
+                    <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" /> &nbsp;
+                    <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
+                    <a href="memory.html" target="_blank">
+                        <img title="MANAJEMEN MEMORY" src="https://cdn-icons-png.flaticon.com/512/9776/9776871.png" width="30px" />
+                    </a> &nbsp;
+                   
+                    <a href="scanner.html" target="_blank">
+                        <img class="icon" id="Scanner" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" />
+                    </a> &nbsp;
+                    <br/>  <br/>
+                    <span id="chain-links-container"></span>  
             </div>
+        </div>
+        <div class="uk-width-expand@m">
+            <div >
+                <form id="cryptoForm" class="uk-form-stacked">
+                    <h3 id="judulform" style="text-align:center;">FORMULIR DATA TOKEN & PAIR</h3>
 
-            <div class="uk-margin-top dex-group uk-grid-small uk-flex uk-flex-between" uk-grid style="flex-wrap: wrap;">
-                <!-- Kolom untuk CEX -->
-                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
-                    <b><span class="uk-text-danger uk-text-medium">CEX:</span></b>
-                    <div id="cex-options" class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
-                        <!-- Radio button CEX akan di-generate di sini -->
+                    <div class="uk-margin" style="display: flex; align-items: center; gap: 10px;">
+                        <b><span class="uk-text-primary uk-text-medium">TOKEN : </span></b>
+                        <input class="uk-input" type="text" id="ID" hidden>
+                        <div class="uk-form-controls" style="flex: 1;">
+                            <input class="uk-input" type="text" id="token_in" placeholder="NAME TOKEN" required>
+                        </div>
+                        <div class="uk-form-controls" style="flex: 3;">
+                            <input class="uk-input" type="text" id="sc_in" placeholder="SC TOKEN CEX" required>
+                        </div>
+                        <div class="uk-form-controls" style="flex: 1;">
+                            <input class="uk-input" type="number" id="des_in" placeholder="DES TOKEN" required min="0">
+                        </div>
+                        <div class="uk-form-controls" style="flex: 1;">
+                            <input class="uk-input" type="text" id="token_out" placeholder="NAME PAIR" required>
+                        </div>
+                        <div class="uk-form-controls" style="flex: 3;">
+                            <input class="uk-input" type="text" id="sc_out" placeholder="SC PAIR DEX" required>
+                        </div>
+                        <div class="uk-form-controls" style="flex: 1;">
+                            <input class="uk-input" type="number" id="des_out" placeholder="DES PAIR" required min="0">
+                        </div>
+                        
                     </div>
-                </div>
-            
-                <!-- Kolom untuk STATUS -->
-                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
-                    <b><span class="uk-text-danger uk-text-medium">STATUS:</span></b> 
-                    <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
-                        <label><input class="uk-checkbox uk-text-warning" type="checkbox" id="status" checked> AKTIF</label>
+    
+                    <div class="uk-margin-top dex-group uk-grid-small uk-flex uk-flex-between" uk-grid style="flex-wrap: wrap;">
+                        <!-- Kolom untuk CEX -->
+                        <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                            <b><span class="uk-text-danger uk-text-medium">CEX:</span></b>
+                            <div id="cex-options" class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                                <!-- Radio button CEX akan di-generate di sini -->
+                            </div>
+                        </div>
+    
+                        <!-- Kolom untuk STATUS -->
+                        <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                            <b><span class="uk-text-danger uk-text-medium">STATUS:</span></b>
+                            <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                                <label><input class="uk-checkbox uk-text-warning" type="checkbox" id="status" checked> AKTIF</label>
+                            </div>
+                        </div>
+    
+                        <!-- Kolom untuk Tombol -->
+                        <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                            <button type="button" id="addButton" class="uk-button uk-button-secondary">TAMBAH</button>
+                            <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
+                            <button type="submit" id="SaveButton" class="uk-button uk-button-primary">SIMPAN</button>
+                        </div>
+                        <div class="uk-align-center">
+                            <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
+                            <b><span class="uk-text-success uk-text-medium" id="infoAPP"></span></b>&nbsp; &nbsp; &nbsp;
+                        </div>   
                     </div>
-                </div>
-                
-                <!-- Kolom untuk Tombol -->
-                <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
-                    <button type="button" id="addButton" class="uk-button uk-button-secondary">TAMBAH</button>
-                    <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
-                    <button type="submit" id="SaveButton" class="uk-button uk-button-primary">SIMPAN</button>
-                </div>
-                 <!-- Bagian Kanan: Import/Export -->
-                <div class="uk-flex uk-flex-middle" style="gap: 20px;">
-                    <b><span class="uk-text-secondary uk-text-medium">IMPORT CSV:</span></b>
-                    <div id="importStatus" class="uk-text-small uk-animation-fade"></div>
-                    <div uk-form-custom="target: true">
-                        <input type="file" id="importFile" accept=".csv">
-                        <input class="uk-input uk-form-width-small uk-button-success" placeholder="Pilih File" disabled>
-
-                    </div>                   
-                    <button id="importButton" class="uk-button uk-button-danger ">
-                        <span uk-icon="icon: upload"></span> Import FILE
-                    </button>                
-                </div>  
-            </div>            
-        </fieldset>
-    </form>
+            </form>
+            </div>
+        </div>
+    </div>
+    
     <div>
-        <hr class="uk-divider-icon uk-margin-small-bottom">
-
+        <hr class="uk-margin-top" />
         <div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
+             <!-- Bagian Kanan: Import/Export -->
+             <div class="uk-flex uk-flex-middle" style="gap: 20px;">
+                <div id="importStatus" class="uk-text-small uk-animation-fade"></div>
+                <div uk-form-custom="target: true">
+                    <input type="file" id="importFile" accept=".csv">
+                    <input class="uk-input uk-form-width-small uk-button-success" placeholder="Masukan File" disabled>
+                </div>
+                <button id="importButton" class="uk-button uk-button-danger">
+                    <span uk-icon="icon: upload"></span> Kirim FILE
+                </button>
+            </div>
             <!-- Judul dan Jumlah Token -->
             <div class="uk-width-expand">
+
                 <h3 class="uk-heading-line uk-margin-remove uk-text-primary">
                     <span style="font-size:large;">DAFTAR TOKEN <span id="namachain2"></span> (<span id="tokenCount" class="token-count">0</span>)</span>
                 </h3>
+
             </div>
            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
-                     <!-- <button type="button" id="cekPriceButton" class="uk-button uk-button-secondary uk-button-small">CEK PRICE</button>&nbsp; &nbsp; -->
-                    <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
-                    <b><span class="uk-text-success uk-text-medium" id="infoAPP"></span></b>&nbsp; &nbsp; &nbsp;
                     <input type="text" id="searchInput" class="uk-input uk-form-width-small" placeholder="Cari di tabel...">
-
             </div>
+
             
         </div>
     </div>
@@ -191,13 +210,13 @@
     // Mengatur konfigurasi global chain berdasarkan input dari URL
     const { Kode_Chain, Nama_Chain, URL_Chain, pairs } = selectedChain; 
 
-    const storagePrefix = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_";
+    const storagePrefix = "MULTIPAIR_V2_" + Nama_Chain.toUpperCase() + "_";
     let sortOrder = {};
 
     // Fungsi umum untuk mendapatkan data dari localStorage
     function getFromLocalStorage(key, defaultValue) {
         return JSON.parse(localStorage.getItem(storagePrefix + key)) || defaultValue;
-       // console.log("Data from localStorage:", data); // Debug log
+        console.log("Data from localStorage:", data); // Debug log
     }
 
     // Fungsi umum untuk menyimpan data ke localStorage
@@ -308,53 +327,75 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'MULTIPAIR_' + Nama_Chain.toUpperCase() + '_TOKEN.csv';
+        a.download = 'MULTIPAIR_V2_' + Nama_Chain.toUpperCase() + '_TOKEN.csv';
         a.click();
         URL.revokeObjectURL(url);
     });
 
-
     function cekDataAwal() {
-        var link = $('a[href="scanner.html"]'); // Pilih elemen link
-            var href = link.attr('href'); // Ambil URL href
-            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+        // Update href untuk scanner.html
+        var scannerLink = $('a[href="scanner.html"]');
+        var scannerHref = scannerLink.attr('href');
+        scannerLink.attr('href', scannerHref + "?chain=" + encodeURIComponent(chainName));
 
-        // Verifikasi awal untuk memastikan DATA_SETTING sudah di-sync
-        var info=true;
-       /*
+        // Update href untuk import.html
+        var importLink = $('a[href="multipair.html"]');
+        var importHref = importLink.attr('href');
+        importLink.attr('href', importHref + "?chain=" + encodeURIComponent(chainName));
+        
+        // Update href untuk import.html
+        var importLink = $('a[href="import.html"]');
+        var importHref = importLink.attr('href');
+        importLink.attr('href', importHref + "?chain=" + encodeURIComponent(chainName));
+
+        // Variabel info untuk status akhir
+        var info = true;
+
+        $('#UpdateWalletCEX, #Scanner').css({
+            'pointer-events': 'none',
+            'opacity': '0.4',
+        });
+
         if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
-            form_off();
-            $("#ImportDataBtn").addClass("img-large");
-            toastr.error('<b>SILAKAN PILIH DATA TOKEN PAIR TERLEBIH DAHULU !!</b><br/>');
-            $("#infoAPP").html("SILAKAN, PILIH TOKEN PAIR DAHULU!!!").addClass('uk-text-danger');
+            // Jika data token dan data token pilih tidak ada
+            if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
+                $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU!!!").addClass('uk-text-danger');
+                toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR TERLEBIH DAHULU !!</b><br/>');
+                form_off();
+                $("#ImportDataBtn").addClass("img-large");
+                $('#MasterDataBtn').css({
+                    'pointer-events': 'none',
+                    'opacity': '0.4',
+                });
+                info = false;
+            } else{
+                $('#MasterDataBtn').css({
+                    'opacity': '1'
+                });
+            }
+        } 
+        if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
+            // Jika data wallet CEX kosong
+            $("#infoAPP").show().html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');
+            toastr.warning('<b>SILAKAN UPDATE WALLET CEX</b>');
+            $('#UpdateWalletCEX').css({
+                'pointer-events': 'auto',
+                'opacity': '1'
+            });
+            $("#UpdateWalletCEX").addClass("img-large");
             info = false;
-            // Menonaktifkan elemen #Scanner
-            $('#SyncDataBtn,#UpdateWalletCEX,#Scanner').css({
-                'pointer-events': 'none', // Menonaktifkan interaksi klik
-                'opacity': '0.4',         // Memberikan efek visual tidak aktif
-                'cursor': 'not-allowed'   // Mengubah kursor menjadi tanda larangan
+        }else{
+            $('#Scanner').css({
+                'pointer-events': 'auto',
+                'opacity': '1'
             });
         }
-        else 
-            */
-                if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
-            form_off(); 
-            $("#SyncDataBtn").addClass("img-large");               
-            toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
-            $("#infoAPP").html("SILAKAN, SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');;     
-            info=false;
-            $('#UpdateWalletCEX,#Scanner').css('pointer-events', 'none').css('opacity', '0.4');
-        } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
-            $("#UpdateWalletCEX").addClass("img-large");  
-            toastr.warning("SILAKAN UPDATE WALLET CEX");
-            $("#infoAPP").html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');;
-            info=false;
-        }// Menampilkan aksi terakhir
 
-        if (info && dataACTION.time) {
-            $("#infoAPP").text(`${dataACTION.action} at ${dataACTION.time}`);
+        if (info && dataACTION && dataACTION.time) {
+            // Menampilkan aksi terakhir jika semua kondisi terpenuhi
+            $("#infoAPP").show().text(`${dataACTION.action} at ${dataACTION.time}`);
             loadStoredData();
-        } 
+        }
     }
 
     $(document).ready(function() {
@@ -376,7 +417,7 @@
                  $('.table-header').css({
                      'background-color': selectedChain.WARNA,
                  });
-                 $('h3#judul').css({
+                 $('h3#judul,h3#judulform').css({
                      'color': selectedChain.WARNA, // Fallback warna dasar
                  });
                 cekDataAwal(); 
@@ -389,7 +430,7 @@
 
                     // Buat elemen link dan icon dengan pengaturan khusus jika cocok dengan chainName
                     const linkHTML = `<span class="chain-link ${isActive ? 'active-chain' : ''}" style="${!isActive ? 'opacity: 0.3;' : ''}">
-                             <a href="${currentPage}?chain=${chain.Nama_Chain}" ><img src="${chain.ICON}" alt="${chain.Nama_Chain} icon" width="${isActive ? '45' : '30'}"></a></span>`;
+                             <a href="${currentPage}?chain=${chain.Nama_Chain}" ><img src="${chain.ICON}" alt="${chain.Nama_Chain} icon" width="${isActive ? '35' : '35'}"></a></span>`;
                     
                     // Masukkan ke dalam container
                     $('#chain-links-container').append(linkHTML);
@@ -668,7 +709,7 @@
         // Ambil data dari localStorage
         const storedData = getFromLocalStorage("TOKEN", []);
         $('#dataTableBody').empty(); // Kosongkan tabel sebelum menambahkan data baru
-
+       
         let rows = ''; // Variabel untuk menyimpan semua baris tabel
         storedData.forEach((data, index) => {
             // Mendapatkan warna berdasarkan nama CEX
@@ -860,82 +901,13 @@
         }
     }
 
-    // fungsi sync data dari SERVER
-    $('#SyncDataBtn').on('click', function() {       
-        // Menghapus data yang ada di localStorage dengan key yang sesuai
-       // removeFromLocalStorage('DATA_SETTING');
-        removeFromLocalStorage("LASTUPDATE_FEEWD");
-        removeFromLocalStorage("WALLET_CEX");
-        removeFromLocalStorage("TOKEN_SCANNER");
-
-        $.ajax({
-            url: DTChain.DATAJSON,
-            success: function(response) {
-                // Memastikan data yang diambil sesuai dengan format yang diharapkan
-                if (response && response.serverCORS && response.token && response.telegram) {
-                    const serverCORS = response.serverCORS;
-                    const rawTokenData = response.token; // Token asli dari server
-                   // const rawTokenData = getFromLocalStorage("TOKEN_PILIH");
-                    const tele_token = response.telegram.token;
-                    const id_grup = response.telegram.id_grup;
-    
-                    // Menambahkan ID auto-increment pada setiap token
-                    const tokenWithID = rawTokenData.map((tokenData, index) => {
-                        return {
-                            no: index + 1, // Auto-increment ID dimulai dari 1
-                            ...tokenData // Copy data token asli
-                        };
-                    });
-    
-                    // Struktur data untuk DATA_SETTING
-                    const DataJSON = {
-                        TOKEN: tele_token,
-                        ID_GRUP: id_grup,
-                        jedaKoin: 100,
-                        jedaTimeGroup: 500,
-                        scanPerKoin: 12,
-                        filterPNL: 0,
-                        walletMeta: "-",
-                        nickname:"",
-                        speedScan:1
-                    };
-                    // Menyimpan data yang berhasil disinkronisasi ke localStorage
-                    saveToLocalStorage('SERVERCORS', serverCORS);
-                    saveToLocalStorage('TOKEN', tokenWithID); // Menyimpan token dengan ID
-                    saveToLocalStorage('DATA_SETTING', DataJSON);
-    
-                    // Menggunakan konfirmasi dengan tombol OK untuk refresh
-                    if (confirm('SINKRONISASI BERHASIL, LANJUT SETINGAN BERIKUTNYA!')) {
-                        removeFromLocalStorage("TOKEN_PILIH");
-                        setLastAction("SINKRONISASI DATA");
-                        location.reload(); // Refresh halaman jika pengguna klik OK
-                    }
-                } else {
-                    // Jika struktur data dari server tidak sesuai
-                    alert('SYNC DATA GAGAL: Data yang diterima tidak sesuai format.');
-                }
-            },
-    
-            error: function(xhr, status, error) {
-                // Menampilkan pesan kesalahan secara lebih lengkap
-                const errorMessage = `
-                    SYNC DATA GAGAL
-                    Status: ${status}
-                    Error: ${error}
-                    Response Text: ${xhr.responseText || 'Tidak ada respon dari server'}
-                `;
-                alert(errorMessage);
-            }
-        });
-    });
-
     // Simpan data dalam bentuk objek yang lebih cepat untuk pencarian
     let cachedWalletData = null;
 
     function getWalletStatus(cex, tokenName) {
         // Cek apakah data sudah di-cache
         if (!cachedWalletData) {
-            const key = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX";
+            const key = "MULTIPAIR_V2_" + Nama_Chain.toUpperCase() + "_WALLET_CEX";
             cachedWalletData = JSON.parse(localStorage.getItem(key)) || {};
 
             // Ubah data menjadi objek dengan key unik
