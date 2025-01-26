@@ -2475,7 +2475,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> MULTIPAIR_V2 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> MULTIPAIR ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
@@ -2510,7 +2510,7 @@
         function MultisendMessage(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname) {
             // Mengambil user dari localStorage menggunakan getFromLocalStorage        
             var message = 
-                "<b>#MULTIPAIR_V2 #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
+                "<b>#MULTIPAIR #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
                 " \n ----------------------------------------- \n MARKET: " + cex +" VS " + dex +
                 " \n TOKEN-PAIR: <b>#" + token+"_"+pair + "</b> " + 
                 " \n MODAL: <b> " + modal + "$</b> | PROFIT: <b>" + PNL.toFixed(2) + "$ </b> " +
