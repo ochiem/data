@@ -1465,6 +1465,1046 @@
         "status": true
     },
     {
+        "cex": "BYBIT",
+        "symbol_in": "AERO",
+        "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "BONUS",
+        "sc_in": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "BRETT",
+        "sc_in": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "COOKIE",
+        "sc_in": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "EVERY",
+        "sc_in": "0x717d31A60a9e811469673429c9F8Ea24358990f1",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "F",
+        "sc_in": "0x2C24497D4086490e7EaD87CC12597fb50c2E6eD6",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "FLOCK",
+        "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "GAME",
+        "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "GPS",
+        "sc_in": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "LUNAI",
+        "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MFER",
+        "sc_in": "0xE3086852A4B125803C815a158249ae468A3254Ca",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MOG",
+        "sc_in": "0x2Da56AcB9Ea78330f947bD57C54119Debda7AF71",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MOJO",
+        "sc_in": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MORPHO",
+        "sc_in": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "OBT",
+        "sc_in": "0x514D8E8099286a13486Ef6C525C120f51C239B52",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ODOS",
+        "sc_in": "0xca73ed1815e5915489570014e024b7EbE65dE679",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xD3C68968137317a57a9bAbeacC7707Ec433548B4",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "TOSHI",
+        "sc_in": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ZAP",
+        "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+        "des_in": 18,
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "AERO",
+        "sc_out": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "AIXBT",
+        "sc_out": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "BONUS",
+        "sc_out": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "BRETT",
+        "sc_out": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "CARV",
+        "sc_out": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "COOKIE",
+        "sc_out": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "DEGEN",
+        "sc_out": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "EVERY",
+        "sc_out": "0x717d31A60a9e811469673429c9F8Ea24358990f1",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "F",
+        "sc_out": "0x2C24497D4086490e7EaD87CC12597fb50c2E6eD6",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "FLOCK",
+        "sc_out": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "GAME",
+        "sc_out": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "GPS",
+        "sc_out": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "LUNAI",
+        "sc_out": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "MAVIA",
+        "sc_out": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "MFER",
+        "sc_out": "0xE3086852A4B125803C815a158249ae468A3254Ca",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "MOG",
+        "sc_out": "0x2Da56AcB9Ea78330f947bD57C54119Debda7AF71",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "MOJO",
+        "sc_out": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "MORPHO",
+        "sc_out": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "OBT",
+        "sc_out": "0x514D8E8099286a13486Ef6C525C120f51C239B52",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "ODOS",
+        "sc_out": "0xca73ed1815e5915489570014e024b7EbE65dE679",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "SOCIAL",
+        "sc_out": "0xD3C68968137317a57a9bAbeacC7707Ec433548B4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "TOSHI",
+        "sc_out": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "VIRTUAL",
+        "sc_out": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "ZAP",
+        "sc_out": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": 18,
+        "symbol_out": "ZRO",
+        "sc_out": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "AERO",
+        "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "BONUS",
+        "sc_in": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "BRETT",
+        "sc_in": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "COOKIE",
+        "sc_in": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "EVERY",
+        "sc_in": "0x717d31A60a9e811469673429c9F8Ea24358990f1",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "F",
+        "sc_in": "0x2C24497D4086490e7EaD87CC12597fb50c2E6eD6",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "FLOCK",
+        "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "GAME",
+        "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "GPS",
+        "sc_in": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "LUNAI",
+        "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MFER",
+        "sc_in": "0xE3086852A4B125803C815a158249ae468A3254Ca",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MOG",
+        "sc_in": "0x2Da56AcB9Ea78330f947bD57C54119Debda7AF71",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MOJO",
+        "sc_in": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "MORPHO",
+        "sc_in": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "OBT",
+        "sc_in": "0x514D8E8099286a13486Ef6C525C120f51C239B52",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ODOS",
+        "sc_in": "0xca73ed1815e5915489570014e024b7EbE65dE679",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xD3C68968137317a57a9bAbeacC7707Ec433548B4",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "TOSHI",
+        "sc_in": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ZAP",
+        "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+        "des_in": 18,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "AERO",
+        "sc_out": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "AIXBT",
+        "sc_out": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "BONUS",
+        "sc_out": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "BRETT",
+        "sc_out": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "CARV",
+        "sc_out": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "COOKIE",
+        "sc_out": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "DEGEN",
+        "sc_out": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "EVERY",
+        "sc_out": "0x717d31A60a9e811469673429c9F8Ea24358990f1",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "F",
+        "sc_out": "0x2C24497D4086490e7EaD87CC12597fb50c2E6eD6",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "FLOCK",
+        "sc_out": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "GAME",
+        "sc_out": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "GPS",
+        "sc_out": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "LUNAI",
+        "sc_out": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "MAVIA",
+        "sc_out": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "MFER",
+        "sc_out": "0xE3086852A4B125803C815a158249ae468A3254Ca",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "MOG",
+        "sc_out": "0x2Da56AcB9Ea78330f947bD57C54119Debda7AF71",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "MOJO",
+        "sc_out": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "MORPHO",
+        "sc_out": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "OBT",
+        "sc_out": "0x514D8E8099286a13486Ef6C525C120f51C239B52",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "ODOS",
+        "sc_out": "0xca73ed1815e5915489570014e024b7EbE65dE679",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "SOCIAL",
+        "sc_out": "0xD3C68968137317a57a9bAbeacC7707Ec433548B4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "TOSHI",
+        "sc_out": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_out": 6,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "VIRTUAL",
+        "sc_out": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "ZAP",
+        "sc_out": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_out": 18,
+        "status": true
+    },
+    {
+        "cex": "BYBIT",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "des_in": 6,
+        "symbol_out": "ZRO",
+        "sc_out": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+        "des_out": 18,
+        "status": true
+    },
+    {
         "cex": "GATE",
         "symbol_in": "BUZ",
         "sc_in": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
