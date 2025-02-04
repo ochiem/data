@@ -228,7 +228,7 @@
                                            <label for="jeda-time-group" class="uk-text-danger">KOIN/GRUP : </label>
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="7" name="koin-group"> 7</label>                                          
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="6"  name="koin-group"> 6</label> 
-                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5"  name="koin-group"> 5</label>
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" checked name="koin-group"> 5</label>
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="koin-group"> 4</label>  
                                         </div>
                                     </div>
@@ -1671,133 +1671,14 @@
         return { priceBuy, priceSell };
     }
 
+    // fungsi dapatkan harga token dari Exchanger
     function getPriceCEX(coins, NameToken, NamePair, cex, callback) {
-    const config = exchangeConfig[cex];
-    if (!config) {
-        callback(`Exchange ${cex} tidak ditemukan dalam konfigurasi.`, null);
-        return;
-    }
-
-    const feeList = getFromLocalStorage("TOKEN_SCANNER", []);
-    if (!Array.isArray(feeList) || feeList.length === 0) {
-        toastr.error("PERIKSA ULANG FEE WD dari EXCHANGER !!");
-        callback("Token scanner belum diatur.", null);
-        return;
-    }
-
-    const tokenData = feeList.find(item => item.symbol_in === NameToken && item.symbol_out === NamePair && item.cex === cex);
-    
-    const isStablecoin = (token) => stablecoins.includes(token);
-    let results = {};
-
-    const urls = [
-        isStablecoin(NameToken) ? null : config.url({ symbol: NameToken }),
-        isStablecoin(NamePair) ? null : config.url({ symbol: NamePair })
-    ];
-
-    const processFinalResult = () => {
-        if (Object.keys(results).length === 2) { 
-            const priceBuyToken = results[NameToken]?.price_buy || 0;
-            const priceBuyPair = results[NamePair]?.price_buy || 0;
-
-            const feeWDToken = parseFloat(tokenData.feeWDToken) * priceBuyToken;
-            const feeWDPair = parseFloat(tokenData.feeWDPair) * priceBuyPair;
-
-            if (isNaN(feeWDToken) || feeWDToken < 0) {
-                callback(`FeeWD untuk ${NameToken} di ${cex} tidak valid: ${feeWDToken}`, null);
-                return;
-            }
-            if (isNaN(feeWDPair) || feeWDPair < 0) {
-                callback(`FeeWD untuk ${NamePair} di ${cex} tidak valid: ${feeWDPair}`, null);
-                return;
-            }
-
-            const finalResult = {
-                token: NameToken.toUpperCase(),
-                sc_input: coins.sc_in,
-                sc_output: coins.sc_out,
-                pair: NamePair.toUpperCase(),
-                cex: cex.toUpperCase(),
-                price_sellToken: results[NameToken].price_sell,
-                price_buyToken: priceBuyToken,
-                price_sellPair: results[NamePair].price_sell,
-                price_buyPair: priceBuyPair,
-                volumes_sellToken: results[NameToken].volumes_sell,
-                volumes_buyToken: results[NameToken].volumes_buy,
-                volumes_sellPair: results[NamePair].volumes_sell,
-                volumes_buyPair: results[NamePair].volumes_buy,
-                feeWDToken: feeWDToken,
-                feeWDPair: feeWDPair
-            };
-
-            updateTableVolCEX({}, finalResult, cex);
-            callback(null, finalResult);
-        }
-    };
-
-    urls.forEach((url, index) => {
-        const tokenName = index === 0 ? NameToken : NamePair;
-        if (isStablecoin(tokenName)) {
-            results[tokenName] = {
-                price_sell: 1,
-                price_buy: 1,
-                volumes_sell: [{ price: 1, volume: 10000 }],
-                volumes_buy: [{ price: 1, volume: 10000 }]
-            };
-            processFinalResult();
-            return;
-        }
-
-        if (url) {
-            $.ajax({
-                url: url,
-                method: 'GET',
-                success: function (data) {
-                    let processedData;
-                    try {
-                        processedData = config.processData(data);
-                    } catch (error) {
-                        console.error(`Error processing data untuk ${tokenName} di ${cex}:`, error);
-                        callback(`Error processing data untuk ${tokenName} di ${cex}.`, null);
-                        return;
-                    }
-
-                    const priceBuy = processedData.priceSell[0]?.price || null;
-                    const priceSell = processedData.priceBuy[0]?.price || null;
-
-                    if (priceBuy === null || priceSell === null) {
-                        callback(`Harga buy/sell untuk ${tokenName} di ${cex} tidak tersedia.`, null);
-                        return;
-                    }
-
-                    results[tokenName] = {
-                        price_sell: priceSell,
-                        price_buy: priceBuy,
-                        volumes_sell: processedData.priceBuy,
-                        volumes_buy: processedData.priceSell
-                    };
-
-                    processFinalResult();
-                },
-                error: function (xhr) {
-                    const errorMessage = xhr.responseJSON?.msg || "Unknown ERROR";
-                    callback(`Error koneksi API untuk ${tokenName} di ${cex}: ${errorMessage}`, null);
-                }
-            });
-        }
-    });
-}
-
-    // Fungsi cek harga pada CEX
-    function getPriceCEXlama(coins, NameToken, NamePair, cex, callback) {
         const config = exchangeConfig[cex];
-
         if (!config) {
             callback(`Exchange ${cex} tidak ditemukan dalam konfigurasi.`, null);
             return;
         }
 
-         // Ambil data TOKEN_SCANNER dari localStorage
         const feeList = getFromLocalStorage("TOKEN_SCANNER", []);
         if (!Array.isArray(feeList) || feeList.length === 0) {
             toastr.error("PERIKSA ULANG FEE WD dari EXCHANGER !!");
@@ -1805,17 +1686,15 @@
             return;
         }
 
-        // Cari token yang sesuai berdasarkan symbol dan cex
         const tokenData = feeList.find(item => item.symbol_in === NameToken && item.symbol_out === NamePair && item.cex === cex);
-
-        const isUSDT = (token) => token === "USDT";
+        
+        const isStablecoin = (token) => stablecoins.includes(token);
         let results = {};
 
         const urls = [
-            isUSDT(NameToken) ? null : config.url({ symbol: NameToken }),
-            isUSDT(NamePair) ? null : config.url({ symbol: NamePair })
+            isStablecoin(NameToken) ? null : config.url({ symbol: NameToken }),
+            isStablecoin(NamePair) ? null : config.url({ symbol: NamePair })
         ];
-        // Fungsi untuk memproses hasil jika kedua token sudah mendapatkan harga
 
         const processFinalResult = () => {
             if (Object.keys(results).length === 2) { 
@@ -1825,12 +1704,10 @@
                 const feeWDToken = parseFloat(tokenData.feeWDToken) * priceBuyToken;
                 const feeWDPair = parseFloat(tokenData.feeWDPair) * priceBuyPair;
 
-                // Validasi feeWD kosong atau tidak valid
                 if (isNaN(feeWDToken) || feeWDToken < 0) {
                     callback(`FeeWD untuk ${NameToken} di ${cex} tidak valid: ${feeWDToken}`, null);
                     return;
                 }
-
                 if (isNaN(feeWDPair) || feeWDPair < 0) {
                     callback(`FeeWD untuk ${NamePair} di ${cex} tidak valid: ${feeWDPair}`, null);
                     return;
@@ -1859,23 +1736,16 @@
             }
         };
 
-        // Iterasi untuk setiap token/pair dan memproses data
         urls.forEach((url, index) => {
             const tokenName = index === 0 ? NameToken : NamePair;
-
-            if (isUSDT(tokenName)) {
-                const feeWDToken = tokenData.feeWDToken * 1;
-                const feeWDPair = tokenData.feeWDToken * 1;
-                // Jika token adalah USDT, gunakan nilai default
+            if (isStablecoin(tokenName)) {
                 results[tokenName] = {
                     price_sell: 1,
                     price_buy: 1,
-                    volumes_sell: [{ price: 1, volume: 1000000 }],
-                    volumes_buy: [{ price: 1, volume: 1000000 }],
-                    feeWDToken: feeWDToken,
-                    feeWDPair: feeWDPair 
+                    volumes_sell: [{ price: 1, volume: 10000 }],
+                    volumes_buy: [{ price: 1, volume: 10000 }]
                 };
-                processFinalResult(); // Cek jika kedua token sudah diproses
+                processFinalResult();
                 return;
             }
 
@@ -1908,11 +1778,10 @@
                             volumes_buy: processedData.priceSell
                         };
 
-                        processFinalResult(); // Cek jika kedua token sudah diproses
+                        processFinalResult();
                     },
                     error: function (xhr) {
                         const errorMessage = xhr.responseJSON?.msg || "Unknown ERROR";
-                       // toastr.warning(`ERROR: ${errorMessage}, KONEKSI ${cex.toUpperCase()} GAGAL TOKEN ${tokenName}`);
                         callback(`Error koneksi API untuk ${tokenName} di ${cex}: ${errorMessage}`, null);
                     }
                 });
@@ -1920,18 +1789,13 @@
         });
     }
 
+
     // Fungsi update price & vol untuk token dan pair
    function updateTableVolCEX(processedData, finalResult, cex) {
         const cexName = cex.toUpperCase();
         const TokenPair = finalResult.token + "_" + finalResult.pair;
         
-        // Pengecekan jika token bernilai "USDT" untuk id=buy
-        if (finalResult.token === "USDT") {
-            $('#LEFT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
-                `<span class='uk-text-secondary uk-text-bolder' style="color: black;">~</span><br/>`
-            );
-        } else {
-            $('#LEFT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
+        $('#LEFT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
                 finalResult.volumes_buyToken.map((data, index) => {
                     return `<span class='uk-text-success'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
                 }).join('') +
@@ -1939,20 +1803,10 @@
                // <span class='uk-text-primary uk-text-bolder'>FeeWD: ${finalResult.feeWDToken}</span><br/>` + 
                 finalResult.volumes_sellPair.map((data, index) => {
                     return `<span class='uk-text-danger'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
-                }).join('')
-               
-            );
-            
-         //   $('#feeWDToken_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).text(`FEE WD: ${(finalResult.feeWDToken).toFixed(2)}$`);
-        }
+                }).join('')       
+        );
 
-        // Pengecekan jika pair bernilai "USDT" untuk id=sell
-        if (finalResult.pair === "USDT") {
-            $('#RIGHT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
-                `<span class='uk-text-secondary uk-text-bolder' style="color: black;">~</span><br/>`
-            );
-        } else {
-            $('#RIGHT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
+        $('#RIGHT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
                 finalResult.volumes_buyPair.map((data, index) => {
                     return `<span class='uk-text-success'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
                 }).join('')+
@@ -1961,8 +1815,7 @@
                 finalResult.volumes_sellToken.map((data, index) => {
                     return `<span class='uk-text-danger'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
                 }).join('')                 
-            );
-        }
+        );
     }
 
     // list api OKXDEX sell_BINANCE_USDT_buy_0x_BAL
@@ -2186,100 +2039,6 @@
             DisplayPNL( profitLoss,  cex,  Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out,totalValue,totalModal,conlusion,selisih );
             
     }
-
-      function ResultEksekusiLama(DataDEX, DataCEX, Modal, amount_in, priceBuyToken_CEX, priceSellToken_CEX, priceBuyPair_CEX, priceSellPair_CEX, NameToken, NamePair, feeWD, dextype) {
-         var TokenPair = NameToken+"_"+NamePair;  
-         var amount_out = Number(DataDEX.amount_out);
-         var FeeSwap = parseFloat(DataDEX.FeeSwap);
-         var FeeWD = parseFloat(feeWD);
-         var FeeTrade = parseFloat(0.002 * Modal);
-         
-         // Hitung Harga Rata-rata
-         var rateSellTokenDEX = (amount_out * priceSellPair_CEX) / amount_in; // Harga rata-rata jual NameToken di DEX
-         var rateBuyPairDEX = (amount_in * priceBuyToken_CEX) / amount_out;
-         var rateTokentoPair = amount_out / amount_in; // Menghitung rate MDT per BNT atau per jumlah yang dibeli
-     
-         // Hitung Nilai Akhir dan P&L
-         var totalModal = Modal + FeeSwap + FeeWD + FeeTrade; // Modal awal (USDT)
-         var totalFee = FeeSwap + FeeWD + FeeTrade; // Total biaya (USDT)
-         var totalValue = amount_out * priceSellPair_CEX; // Nilai akhir (USDT)
-         var profitLoss = totalValue - totalModal; // Profit or Loss (USDT)
-         var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0; // Profit or Loss (%)
-         var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
-         // == 0 ? totalFee + (Modal * 0.2 / 100) : parseFloat(SavedSettingData.FilterPNL);
-         
-         var conlusion="NO SELISIH";
-         var selisih =false;
-        // Jika filter PNL adalah 0, bandingkan nilai akhir dengan modal + semua biaya
-        if (filterPNLValue == 0) {
-            if (totalValue > totalModal + totalFee) {
-                conlusion = "GET SIGNAL";
-                selisih=true;
-            }
-        }
-        // Jika filter PNL bukan 0, bandingkan selisih nilai akhir dan modal dengan filter PNL
-        else {
-            if ((totalValue - totalModal) > filterPNLValue) {
-                conlusion = "GET SIGNAL";
-                selisih=true;
-            }
-        }         // Output log
-       /*
-         console.log("-----------------------");
-         console.log("" + NameToken + "/" + NamePair +"("+DataCEX.cex.toUpperCase()+" VS " + dextype.toUpperCase()+")");
-         if(selisih){
-            console.log(" Modal : " + Modal);
-            console.log("--------------- HARGA & PROSES CEX ");
-            console.log("Rate Beli Token " + NameToken + "/USDT di CEX:", priceBuyToken_CEX, "USDT");
-            console.log("Rate Jual Token " + NameToken + "/USDT di CEX:", priceSellToken_CEX, "USDT");
-            console.log("Jumlah HASIL Beli USDT => " + NameToken + " di CEX:", amount_in, NameToken);
-            console.log("Rate Beli Pair " + NamePair + "/USDT di CEX:", priceBuyPair_CEX, "USDT");
-            console.log("Rate Jual Pair " + NamePair + "/USDT di CEX:", priceSellPair_CEX, "USDT");
-            console.log("--------------- HARGA & PROSES SWAP DEX");
-            console.log("Jumlah HASIL SWAP " + NameToken + "=>" + NamePair + " di DEX:", amount_out, NamePair);     
-            console.log("Rate Jual " + NameToken + "=>USDT di DEX:", rateSellTokenDEX.toFixed(4), "USDT");
-            console.log("Rate " + NamePair + "=>" + NameToken + " di DEX:", rateTokentoPair.toFixed(10));
-            console.log("Rate Beli USDT => " + NamePair + " di DEX:", rateBuyPairDEX.toFixed(4), "USDT");
-            
-            console.log("--------------- KESIMPULAN ");
-            console.log("Modal Awal (USDT):", Modal, "USDT");
-            console.log(`All Fee => Swap: ${FeeSwap.toFixed(2)} , WD: ${FeeWD.toFixed(2)} , Trade: ${FeeTrade.toFixed(2)} = ${totalFee.toFixed(2)}`);
-            console.log("Modal Awal (USDT) + FEE:", totalModal.toFixed(2), "USDT");        
-            console.log("Filter PNL:", filterPNLValue.toFixed(4), "USDT");
-            console.log("Nilai Akhir (USDT):", totalValue.toFixed(4), "USDT");
-            console.log("Profit/Loss (USDT):", profitLoss.toFixed(4), "USDT");
-            console.log("Profit/Loss (%):", profitLossPercent.toFixed(2), "%");
-            console.log("###################################");
-            console.log(`${conlusion} => ${NameToken}/${NamePair} on ${DataCEX.cex.toUpperCase()}`);
-            console.log("###################################");
-        }else {
-            console.log("NO SELISIH");
-        }
-        */
-         let IdCELL = `${DataCEX.cex.toUpperCase()}_${dextype.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
-         var linkDEX = generateDexLink(dextype.toLowerCase(), NameToken, DataCEX.sc_input, NamePair, DataCEX.sc_output);
-    
-        if (!linkDEX) {
-            console.error(`DEX Type "${dexType}" tidak valid atau belum didukung.`);
-            return;
-        }
-        
-        if (NameToken == "USDT") {
-            var RateSwap = `<label class="uk-text-success" title="DEX ${dextype.toUpperCase()} : ${formatPrice(rateBuyPairDEX)}(USDT->${NamePair})"> ${formatPrice(rateBuyPairDEX)}</label>`;
-        }else if(NamePair == "USDT"){
-            var RateSwap = `<label class="uk-text-danger" title="DEX ${dextype.toUpperCase()} : ${formatPrice(rateTokentoPair)} (${NameToken}->USDT)"> ${formatPrice(rateTokentoPair)}</label>`; // Kosongkan jika salah satunya adalah USDT
-        }else  {
-            var RateSwap = ` <label class="uk-text-primary" title="DEX ${dextype.toUpperCase()} : ${formatPrice(rateSellTokenDEX)} ${NameToken} ${formatPrice(rateBuyPairDEX)} ${NamePair}">${formatPrice(rateTokentoPair)}</label>`;
-        }  
-
-        // Cek apakah elemen dengan ID ada di DOM
-        if ($(`#SWAP_${IdCELL}`).length > 0) {
-            $(`#SWAP_${IdCELL}`).html(`<a href="${linkDEX}" target="_blank">  ${RateSwap} `);           
-        }
-
-       DisplayPNL( profitLoss,  DataCEX.cex,  NameToken, TokenPair, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, DataDEX.sc_input, DataDEX.sc_output, NamePair,totalValue,totalModal,conlusion,selisih );
-        
-     }
 
      // Fungsi INFO SINYAL
      function DisplayPNL(PNL, cex, NameToken, TokenPair, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, pairdex, totalValue, totalModal, conclusion, selisih) {
