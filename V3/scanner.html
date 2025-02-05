@@ -478,7 +478,8 @@
             processData: data => processOrderBook(data)
         },
         KUCOIN: {
-            url: coins => `https://proxykiri.awokawok.workers.dev/?https://api.kucoin.com/api/v1/market/orderbook/level2_20?symbol=${coins.symbol}-USDT`,
+          //  url: coins => `https://proxykiri.awokawok.workers.dev/?https://api.kucoin.com/api/v1/market/orderbook/level2_20?symbol=${coins.symbol}-USDT`,
+            url: coins => `https://api.kucoin.com/api/v1/market/orderbook/level2_20?symbol=${coins.symbol}-USDT`,
             processData: data => {
                 if (!data?.data?.asks || !data?.data?.bids) {
                     console.error('Invalid KUCOIN response structure:', data);
@@ -778,7 +779,7 @@
 
     function formatPrice(price) {
         if (price >= 1) {
-            return price.toFixed(2) + '$'; // Jika >= 1, tampilkan 2 angka desimal
+            return price.toFixed(3) + '$'; // Jika >= 1, tampilkan 2 angka desimal
         }
 
         let strPrice = price.toFixed(20).replace(/0+$/, ''); // Paksa format desimal, hapus nol di akhir
