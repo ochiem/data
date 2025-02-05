@@ -1526,66 +1526,6 @@
         };
     }
 
-    function GeturlExchangerLama(cex, NameToken, NamePair) {
-        // Konversi nama token dan pasangan ke uppercase
-        const token = NameToken.toUpperCase();
-        const pair = NamePair.toUpperCase();
-        // Jika salah satu adalah USDT, kembalikan #
-        if (token === "USDT" || pair === "USDT") {
-            return "#";
-        }
-        let baseUrlTradeToken = null;
-        let baseUrlTradePair = null;
-        let baseUrlWithdraw = null;
-        let baseUrlDeposit = null;
-
-        // Menentukan URL berdasarkan nilai cex
-        if (cex === "GATE") {
-            baseUrlTradeToken = `https://www.gate.io/trade/${token}_USDT`;
-            baseUrlTradePair = `https://www.gate.io/trade/${pair}_USDT`;
-            baseUrlWithdraw = `https://www.gate.io/myaccount/withdraw/${token}`;
-            baseUrlDeposit = `https://www.gate.io/myaccount/deposit/${pair}`;
-        } else if (cex === "BINANCE") {
-            baseUrlTradeToken = `https://www.binance.com/en/trade/${token}_USDT`;
-            baseUrlTradePair = `https://www.binance.com/en/trade/${pair}_USDT`;
-            baseUrlWithdraw = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${token}`;
-            baseUrlDeposit = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${pair}`;
-        } else if (cex === "KUCOIN") {
-            baseUrlTradeToken = `https://www.kucoin.com/trade/${token}-USDT`;
-            baseUrlTradePair = `https://www.kucoin.com/trade/${pair}-USDT`;
-            baseUrlWithdraw = `https://www.kucoin.com/assets/withdraw/${token}`;
-            baseUrlDeposit = `https://www.kucoin.com/assets/coin/${pair}`;
-        } else if (cex === "BITGET") {
-            baseUrlTradeToken = `https://www.bitget.com/spot/${token}USDT`;
-            baseUrlTradePair = `https://www.bitget.com/spot/${pair}USDT`;
-            baseUrlWithdraw = `https://www.bitget.com/asset/withdraw`;
-            baseUrlDeposit = `https://www.bitget.com/asset/recharge`;
-        } else if (cex === "BYBIT") {
-            baseUrlTradeToken = `https://www.bybit.com/en/trade/spot/${token}/USDT`;
-            baseUrlTradePair = `https://www.bybit.com/en/trade/spot/${pair}/USDT`;
-            baseUrlWithdraw = "https://www.bybit.com/user/assets/withdraw";
-            baseUrlDeposit = "https://www.bybit.com/user/assets/deposit";
-        } else if (cex === "MEXC") {
-            baseUrlTradeToken = `https://www.mexc.com/exchange/${token}_USDT?_from=search`;
-            baseUrlTradePair = `https://www.mexc.com/exchange/${pair}_USDT?_from=search`;
-            baseUrlWithdraw = `https://www.mexc.com/assets/withdraw/${token}`;
-            baseUrlDeposit = `https://www.mexc.com/assets/deposit/${pair}`;
-        } else if (cex === "OKX") {
-            baseUrlTradeToken = `https://www.okx.com/trade-spot/${token}-usdt`;
-            baseUrlTradePair = `https://www.okx.com/trade-spot/${pair}-usdt`;
-            baseUrlWithdraw = `https://www.okx.com/balance/withdrawal/${token}-chain`;
-            baseUrlDeposit = `https://www.okx.com/balance/recharge/${pair}`;
-        }
-
-        // Kembalikan objek URL
-        return {
-            tradeToken: baseUrlTradeToken,
-            tradePair: baseUrlTradePair,
-            withdrawUrl: baseUrlWithdraw,
-            depositUrl: baseUrlDeposit
-        };
-    }
-
     // Menampilkan form settingan
     $("#SettingModal").on("click", function () {
         UIkit.modal("#modal-setting").show(); // Menampilkan modal settingan
@@ -2350,6 +2290,8 @@
                                 FeeSwap = ((response.data.routeSummary.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
                                 break;
                             case 'kana':
+                                const chainName = DTChain.Nama_Chain.toLowerCase();
+                                const kanaChainId = KanaChainID[chainName];
                                 if (!kanaChainId) {
                                     amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
                                     FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
