@@ -778,25 +778,27 @@
 
     function formatPrice(price) {
         if (price >= 1) {
-            return price.toFixed(2) + '$'; // Jika >= 1, ambil 2 angka desimal
+            return price.toFixed(2) + '$'; // Jika >= 1, tampilkan 2 angka desimal
         }
 
-        // Konversi harga ke string untuk analisis pola angka
-        let strPrice = price.toString();
+        let strPrice = price.toFixed(20).replace(/0+$/, ''); // Paksa format desimal, hapus nol di akhir
         let match = strPrice.match(/0\.(0*)(\d+)/); // Ambil nol setelah koma dan angka signifikan
 
         if (match) {
             let zeroCount = match[1].length; // Hitung jumlah nol setelah koma
-            let significant = match[2].replace(/^0+/, '').substring(0, 5); // Ambil 5 digit signifikan setelah nol
+            let significant = match[2].substring(0, 4); // Ambil 5 digit signifikan pertama
+
+            // Jika angka signifikan kurang dari 5 digit, tambahkan nol di akhir
+            significant = significant.padEnd(4, '0');
 
             if (zeroCount >= 2) {
-                return `0.{${zeroCount}}${significant}$`; // Format sesuai jumlah nol jika >=2
+                return `0.{${zeroCount}}${significant}$`; // Format dengan {N} jika nol >= 2
             } else {
-                return `0.${match[1]}${significant}$`; // Format normal jika nol < 2
+                return `0.${match[1]}${significant}$`; // Format biasa jika nol < 2
             }
         }
 
-        return price.toFixed(5) + '$'; // Fallback jika tidak sesuai format
+        return price.toFixed(6) + '$'; // Fallback jika format tidak dikenali
     }
 
     //scan dengan batas maksimum eksekusi pergrup (speedscan)
@@ -2285,14 +2287,15 @@
                 const kanaChainId = KanaChainID[chainName];
 
                 if (!kanaChainId) {
-                    console.error("Unsupported chain for Kana");
-                    callback({
-                        statusCode: 400,
-                        pesanDEX: `Unsupported chain for Kana: ${DTChain.Nama_Chain}`,
-                        color: "#f39999",
-                        DEX: dexType.toUpperCase(),
-                    }, null);
-                    return;
+                    apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                    // console.error("Unsupported chain for Kana");
+                    // callback({
+                    //     statusCode: 400,
+                    //     pesanDEX: `Unsupported chain for Kana: ${DTChain.Nama_Chain}`,
+                    //     color: "#f39999",
+                    //     DEX: dexType.toUpperCase(),
+                    // }, null);
+                    // return;
                 }
 
                 // Endpoint untuk Kana
@@ -2347,8 +2350,13 @@
                                 FeeSwap = ((response.data.routeSummary.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
                                 break;
                             case 'kana':
-                                amount_out = response.data[0].finalAmountOut / Math.pow(10, des_output);
-                                FeeSwap = (response.data[0].estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));
+                                if (!kanaChainId) {
+                                    amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
+                                    FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
+                                }else{
+                                    amount_out = response.data[0].finalAmountOut / Math.pow(10, des_output);
+                                    FeeSwap = (response.data[0].estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));                                    
+                                }
                                 break;
                             case 'odos':
                             if (action === "TokentoPair") {
