@@ -70,8 +70,9 @@
 
         .uk-table tbody td {
             font-size: 11.5px;
-            border: 0.5px solid #ddd;
-            padding: 2px;
+            border: 0.85px solid #ddd;
+            padding: 6px;
+            white-space: nowrap;
         }
         .uk-background{
             background-color: lightgray;
@@ -920,7 +921,7 @@
                                                             }
                                                         else{
                                                                 $(`#${IdTokentoPair}`).css('background-color',altError.color);
-                                                                $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="${error.pesanDEX}">[ERRORX]</span>`);
+                                                                $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="TIDAK DAPAT HARGA">[ERROR]</span>`);
                                                         }
                                                     });
                                                 }
@@ -970,7 +971,7 @@
                                                             ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype);
                                                         }else{
                                                             $(`#${IdPairtoToken}`).css('background-color',altError.color);
-                                                            $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="${error.pesanDEX}">[ERRORX]</span>`);
+                                                            $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`)
                                                         }
                                                 });
                                             }
@@ -1229,7 +1230,7 @@
     function loadStoredData(filteredData) {
         $('.table-header th').css('background-color', DTChain.COLOR_CHAIN);
         loadSignalData();
-
+        console.warn("KOIN FILTERING",filteredData);
         const selectedDEX = getFromLocalStorage('DEX_PILIH', []);
         const appSettings = getFromLocalStorage('DATA_SETTING', {});
         const $InfoStatus = $('#InfoStatus');
@@ -1349,10 +1350,11 @@
             });
 
             let detailTd = document.createElement('td');
-            detailTd.className = 'uk-text-center uk-background';
+            detailTd.className = 'uk-text-center uk-background uk-text-nowrap';
 
             detailTd.innerHTML = `
                 <input type="checkbox" class="statusCheckbox" data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>
+                <span class="uk-text-danger uk-text-bolder">KOIN KE- ${index+1}<br/></span>
                 <span class="uk-text-secondary uk-text-bolder">${linkToken} VS ${linkPair}</span><br>
                <span class="uk-text-primary uk-text-bolder">${withdrawToken}~${depositToken}</span> | <span class="uk-text-warning uk-text-bolder">${withdrawPair}~${depositPair}</span> <br/>
                 <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}</span><br/>
@@ -2110,11 +2112,11 @@
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out);
         } else {
             resultCell.html(`
-                <span class="uk-text-secondary">FeeWD:${FeeWD.toFixed(2)}$</span><br/>
-                <span class="uk-text-danger">Fee:${totalFee.toFixed(2)}$</span>
-                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span><br/>
-                <span class="uk-text-success">GT:${(totalGet).toFixed(2)}$</span>
-                 <span class="uk-text-secondary" >PL:${(PNL).toFixed(2)}$</span>
+                <span class="uk-text-secondary" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
+                <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-primary" title="FEE SWAP">~${FeeSwap.toFixed(2)}$</span><br/>
+                <span class="uk-text-success" title="GET BRUTO">Get:${(totalGet).toFixed(2)}$</span>
+                 <span class="uk-text-secondary" title="GET NETTO / PNL" >~${(PNL).toFixed(2)}$</span>
             `);
         }
 
@@ -2229,14 +2231,6 @@
 
                 if (!kanaChainId) {
                     apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
-                    // console.error("Unsupported chain for Kana");
-                    // callback({
-                    //     statusCode: 400,
-                    //     pesanDEX: `Unsupported chain for Kana: ${DTChain.Nama_Chain}`,
-                    //     color: "#f39999",
-                    //     DEX: dexType.toUpperCase(),
-                    // }, null);
-                    // return;
                 }
 
                 // Endpoint untuk Kana
