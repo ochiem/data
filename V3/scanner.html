@@ -299,6 +299,7 @@
                     <span class="uk-form-label uk-text-primary">
                         <input type="radio" name="toggle" checked value="opt_A"> A 
                         <input type="radio" name="toggle" value="opt_B"> Z
+                        <input type="checkbox" checked id="strictFilter"> OPEN WALLET
                         </span>  
                 </span>
                 &nbsp;&nbsp;&nbsp;
@@ -2256,7 +2257,12 @@
                     apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
                 break;
             case 'magpie':
+                if(DTChain.Nama_Chain.toLowerCase() === 'bsc'){
+                    apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.1"+
+                    "&liquiditySources=pancakeswap-v2,mdex,bakeryswap,biswap,apeswap,babyswap,jetswap,julswap,wardenswap,acsiswap-stable,acsiswap-weighted,uniswap-v3,dodo-v2-stable,dodo-v2-private,trident-stable,trident-constant-product,kyber-swap-classic-static,kyber-swap-classic-dynamic,sushi,trader-joe,elk-finance,baby-doge-swap,w3-swap,thena-fusion,nomiswap-v3,woo-fi,wombat,thena-stable,thena-volatile,trader-joe-v2-1,radio-shack-swap,archly-stable,archly-volatile,sushi-v3,nomiswap,synapse,lif3-swap,kapinus,ben-swap,planet,knight-swap,alita-finance,coin-swap,dinosaur-eggs,kyoto-swap,panther-swap,i-swap-v2,hyper-jump,pad-swap,native,pancakeswap-v3,dodo-v2-vending-manchine,a-crypto-s,ellipsis-stable,a-crypto-s-lp,ellipsis-stable-lp,ellipsis-crypto,ellipsis-crypto-lp,maverick,pancakeswap-stable,pancakeswap-stable-lp,pancakeswap-v2-lp,mdex-lp,bakeryswap-lp,biswap-lp,apeswap-lp,babyswap-lp,jetswap-lp,julswap-lp,wardenswap-lp,sushi-lp,trader-joe-lp,elk-finance-lp,baby-doge-swap-lp,w3-swap-lp,radio-shack-swap-lp,nomiswap-lp,lif3-swap-lp,kapinus-lp,ben-swap-lp,planet-lp,knight-swap-lp,alita-finance-lp,coin-swap-lp,dinosaur-eggs-lp,kyoto-swap-lp,panther-swap-lp,i-swap-v2-lp,hyper-jump-lp,pad-swap-lp,spartan,smar-dex,maverick-v2,bebop,beefy,swaap-v2,elk-finance-v3,yield-nest-lrt-single-vault,yield-nest-max-lrt-vault";
+                }else{
                     apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.1";
+                }
                 break;
             case 'kana':
                     // Mapping chainId dari DTChain.Nama_Chain ke KanaChainID
@@ -2502,6 +2508,8 @@
         };
     
         $.ajax({
+            //url:'https://bzvwrjfhuefn.up.railway.app/swap',
+
            // url:'https://swoop-backend.up.railway.app/swap',
             url:'https://swoop-backend-2.up.railway.app/swap',
 
