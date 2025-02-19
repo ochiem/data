@@ -1339,7 +1339,8 @@
             const linkUNIDEX = createLink(`https://app.unidex.exchange/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#UNDX', 'uk-text-danger');
             const linkRango = createLink(`https://app.rango.exchange/bridge?fromBlockchain=${DTChain.Kode_Chain}&toBlockchain=${DTChain.Kode_Chain}&fromToken=${data.symbol_in}--${data.sc_in}&toToken=${data.symbol_out}--${data.sc_out}`, '#RGOX', 'uk-text-danger');
             const linkRBX = createLink(`https://app.rubic.exchange/?fromChain=${DTChain.Nama_Chain.toUpperCase()}&toChain=${DTChain.Nama_Chain.toUpperCase()}&from=${data.sc_in}&to=${data.sc_out}`, '#RBCX', 'uk-text-primary');
-
+            const linkDEFIL = createLink(`https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#DFlX', 'uk-text-primary');
+            
             let row = document.createElement('tr');
             row.dataset.index = index;
             row.id = `${data.cex}_${data.symbol_in}_${data.symbol_out}_${DTChain.Nama_Chain.toUpperCase()}`;
@@ -1379,7 +1380,7 @@
                 <a href="${DTChain.URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>: ${linkStokToken}<br>    
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_out}</span> 
                 <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a>: ${linkStokPair}<br>                   
-                ${linkOKDEX} ${linkUNIDEX} ${linkRBX}
+                ${linkOKDEX} ${linkUNIDEX} ${linkDEFIL}
             `;
 
             row.appendChild(detailTd);
