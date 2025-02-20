@@ -6564,6 +6564,2175 @@
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
         "status": true
+    },    {
+        "cex": "BITGET",
+        "symbol_in": "10SET",
+        "sc_in": "0x1ae369a6ab222aff166325b7b87eb9af06c86e57",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "3TH",
+        "sc_in": "0x6ccc8db8e3fd5ffdd2e7b92bd92e8e27baf704a8",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ACE",
+        "sc_in": "0xc27a719105a987b4c34116223cae8bd8f4b5def4",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ACH",
+        "sc_in": "0xbc7d6b50616989655afd682fb42743507003056d",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AI",
+        "sc_in": "0xbda011d7f8ec00f66c1923b049b94c67d148d8b2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AIMX",
+        "sc_in": "0x75d6bd84de4cbcb92495204de959f7fea6a3f89a",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AIPAD",
+        "sc_in": "0xe55d97a97ae6a17706ee281486e98a84095d8aaf",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AITECH",
+        "sc_in": "0x2d060ef4d6bf7f9e5edde373ab735513c0e4f944",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALE",
+        "sc_in": "0x9dce13e71b11eb5df66ca269bd657696587fd4e2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALICE",
+        "sc_in": "0xac51066d7bec65dc4589368da368b212745d63e8",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALITA",
+        "sc_in": "0x33679898ceb9dc930024de84e7339d403191d8f6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALPACA",
+        "sc_in": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALPHA",
+        "sc_in": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALPINE",
+        "sc_in": "0x287880ea252b52b63cc5f40a2d3e5a44aa665a76",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALT",
+        "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALU",
+        "sc_in": "0x8263cd1601fe73c066bf49cc09841f35348e3be0",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ARPA",
+        "sc_in": "0x6f769e65c14ebd1f68817f5f1dcdb61cfa2d6f7e",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ARTY",
+        "sc_in": "0x617cab4aaae1f8dfb3ee138698330776a1e1b324",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ATS",
+        "sc_in": "0x75d8bb7fbd4782a134211dc350ba5c715197b81d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AVA",
+        "sc_in": "0xd9483ea7214fcfd89b4fb8f513b544920e315a52",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AXL",
+        "sc_in": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "AXS",
+        "sc_in": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BABYBONK",
+        "sc_in": "0xbb2826ab03b6321e170f0558804f2b6488c98775",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BABYDOGE",
+        "sc_in": "0xc748673057861a797275cd8a068abb95a902e8de",
+        "des_in": "15",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BABYDOGE2",
+        "sc_in": "0xa4e068e2b8f58e6c3090174a9e4e95f5bb025ca4",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BABYDRAGON",
+        "sc_in": "0xd7935bf3a576e997021789f895f0e898fc1aadd6",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BABYELON",
+        "sc_in": "0x258903a8e68d5248de85cf8a0a173d9e046edd98",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BABYGROK",
+        "sc_in": "0x88da9901b3a02fe24e498e1ed683d2310383e295",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BAKE",
+        "sc_in": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BCCOIN",
+        "sc_in": "0x450593bf7f2d7e559e38496cfb06bdce5e963795",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BEL",
+        "sc_in": "0x8443f091997f06a61670b735ed92734f5628692f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BETA",
+        "sc_in": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BGSC",
+        "sc_in": "0xa4b68d48d7bc6f04420e8077e6f74bdef809dea3",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BICITY",
+        "sc_in": "0x6fa9c0ee8a1f237466bb9cac8466bfa2aa63a978",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BITCOINBSC",
+        "sc_in": "0x14beb72194866e1b4d6ffad3cd5b488f76168b61",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BLUEOLD",
+        "sc_in": "0x3a36dc12efaa14a3f692b94f97450594459661b6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BNX",
+        "sc_in": "0x5b1f874d0b0c5ee17a495cbb70ab8bf64107a3bd",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BRISE",
+        "sc_in": "0x8fff93e810a2edaafc326edee51071da9d398e83",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BRN",
+        "sc_in": "0x926ecc7687fcfb296e97a2b4501f41a6f5f8c214",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BROCCOLI",
+        "sc_in": "0x6d5ad1592ed9d6d1df9b93c793ab759573ed6714",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BSW",
+        "sc_in": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BTC",
+        "sc_in": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BURGER",
+        "sc_in": "0xae9269f27437f0fcbc232d39ec814844a51d6b8f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "C98",
+        "sc_in": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CAKE",
+        "sc_in": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CAPS",
+        "sc_in": "0xffba7529ac181c2ee1844548e6d7061c9a597df4",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CATA",
+        "sc_in": "0xbdf5bafee1291eec45ae3aadac89be8152d4e673",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CATEOLD",
+        "sc_in": "0xe4fae3faa8300810c835970b9187c268f55d998f",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CEC",
+        "sc_in": "0x111111267109489dc6f350608d5113b10c0c5cd7",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CEEK",
+        "sc_in": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CGPT",
+        "sc_in": "0x9840652dc04fb9db2c43853633f0f62be6f00f98",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CHAPZ",
+        "sc_in": "0x7b56748a3ef9970a5bae99c58ad8bc67b26c525f",
+        "des_in": "10",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CHEEMS",
+        "sc_in": "0x0df0587216a4a1bb7d5082fdc491d93d2dd4b413",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CHESS",
+        "sc_in": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "COOKIE",
+        "sc_in": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CREO",
+        "sc_in": "0x9521728bf66a867bc65a93ece4a543d817871eb7",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CSIX",
+        "sc_in": "0x04756126f044634c9a0f0e985e60c88a51acc206",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "D",
+        "sc_in": "0x8fb238058e71f828f505582e65b1d14f8cf52067",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DAI",
+        "sc_in": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DCB",
+        "sc_in": "0xeac9873291ddaca754ea5642114151f3035c67a2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DCK",
+        "sc_in": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DEFI",
+        "sc_in": "0x6d106c0b8d2f47c5465bdbd58d1be253762cbbc1",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DIGI",
+        "sc_in": "0x7ec0da57eba5398470c6bcb5518406d885240c85",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DLC",
+        "sc_in": "0xd610be30b06a3828a27d608a38f1e85faafdedcc",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DMAIL",
+        "sc_in": "0xcc6f1e1b87cfcbe9221808d2d85c501aab0b5192",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DODO",
+        "sc_in": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DOME",
+        "sc_in": "0x475bfaa1848591ae0e6ab69600f48d828f61a80e",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DONS",
+        "sc_in": "0x95c91eef65f50570cfc3f269961a00108cf7bf59",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DUEL",
+        "sc_in": "0xa1ed0bd9a4776830c5b7ba004f26427b71152ca5",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DZOO",
+        "sc_in": "0x56d06a78ef8e95d6043341f24759e2834be6f97b",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "EDU",
+        "sc_in": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "EGO",
+        "sc_in": "0x44a21b3577924dcd2e9c81a3347d204c36a55466",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ENTS",
+        "sc_in": "0x9240c44ee90d058b0b17ababe0f74ab1a205ae04",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ETC",
+        "sc_in": "0x3d6545b08693dae087e957cb1180ee38b9e3c25e",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "F3",
+        "sc_in": "0x9e57e83ad79ac5312ba82940ba037ed30600e167",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FAST",
+        "sc_in": "0x391088b4594e41c003463c7e3a56a8ba00b8e7a9",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FDUSD",
+        "sc_in": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FLOKI",
+        "sc_in": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FLUX",
+        "sc_in": "0xaff9084f2374585879e8b434c399e29e80cce635",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FMB",
+        "sc_in": "0x6b3c58bfc74a41c1f7e6c0516471fdb8e42868ad",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FURY",
+        "sc_in": "0x0203d275d2a65030889af45ed91d472be3948b92",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GFAL",
+        "sc_in": "0x47c454ca6be2f6def6f32b638c80f91c9c3c5949",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GFT",
+        "sc_in": "0x72ff5742319ef07061836f5c924ac6d72c919080",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GINOA",
+        "sc_in": "0x7fdd4efff72b9b2d5b7067f883c129a60285d98d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GMRX",
+        "sc_in": "0x998305efdc264b9674178899fffbb44a47134a76",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GOMD",
+        "sc_in": "0xf29bf05de3dd6a5f7496841f81f96a3a130c3420",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GOMINING",
+        "sc_in": "0x7ddc52c4de30e94be3a6a0a2b259b2850f421989",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GPT",
+        "sc_in": "0x30842a9c941d9de3af582c41ad12b11d776ba69e",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GPTG",
+        "sc_in": "0x7dc6dc21ce07e6499fdcc30dcdb943a8ee4db802",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GPTV",
+        "sc_in": "0x1f56efffee38eeeae36cd38225b66c56e4d095a7",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GQ",
+        "sc_in": "0xf700d4c708c2be1463e355f337603183d20e0808",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GRAPE",
+        "sc_in": "0x555296de6a86e72752e5c5dc091fe49713aa145c",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GROKCEO",
+        "sc_in": "0x6294deb10817e47a4ee6869db59c85f3ef4bee29",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GRV",
+        "sc_in": "0xf33893de6eb6ae9a67442e066ae9abd228f5290c",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GTAI",
+        "sc_in": "0x003d87d02a2a01e9e8a20f507c83e15dd83a33d1",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GXE",
+        "sc_in": "0x510975eda48a97e0ca228dd04d1217292487bea6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HALO",
+        "sc_in": "0xb6b8ccd230bb4235c7b87986274e7ab550b72261",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HAM",
+        "sc_in": "0x679d5b2d94f454c950d683d159b87aa8eae37c9e",
+        "des_in": "7",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HELLO",
+        "sc_in": "0x0f1cbed8efa0e012adbccb1638d0ab0147d5ac00",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HGPT",
+        "sc_in": "0x529c79f6918665ebe250f32eeeaa1d410a0798c6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HIGH",
+        "sc_in": "0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HMTT",
+        "sc_in": "0x7f68528a0464ecf3eb7f0c16bf77bbbb466c0288",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HODL",
+        "sc_in": "0x137ffd84025c582482e03d3a0b9f74c26dddfbad",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "HOOK",
+        "sc_in": "0xa260e12d2b924cb899ae80bb58123ac3fee1e2f0",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ICE",
+        "sc_in": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ID",
+        "sc_in": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "IGU",
+        "sc_in": "0x201bc9f242f74c47bbd898a5dc99cdcd81a21943",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "IUSD",
+        "sc_in": "0x0a3bb08b3a15a19b4de82f8acfc862606fb69a2d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "IVPAY",
+        "sc_in": "0xde5bdcbd4d7dfa86e527fef9971bd6ca6a76eefb",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "KAKI",
+        "sc_in": "0x42414624c55a9cba80789f47c8f9828a7974e40f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "KATA",
+        "sc_in": "0x6d6ba21e4c4b29ca7bfa1c344ba1e35b8dae7205",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "KOMA",
+        "sc_in": "0xd5eaaac47bd1993d661bc087e15dfb079a7f3c19",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LAI",
+        "sc_in": "0x776f9987d9deed90eed791cbd824d971fd5ccf09",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LAZIO",
+        "sc_in": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LIFEFORM",
+        "sc_in": "0xa9f978c02915246e435c0bda9785aaaad3cc46d2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LIME",
+        "sc_in": "0x7bc75e291e656e8658d66be1cc8154a3769a35dd",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LIMO",
+        "sc_in": "0xd2b6bf88b7d9da599331719e338fcdeb235a0b99",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LING",
+        "sc_in": "0x68c0e798b749183c97239114bb76fd1e5e3db98c",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LISTA",
+        "sc_in": "0xfceb31a79f71ac9cbdcf853519c1b12d379edc46",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LIVE",
+        "sc_in": "0xdc9df5b6fb6a13ae1c9ff8b749cd5c95fbb060e1",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LSD7",
+        "sc_in": "0x055d5c0d7c7c07e3e443d09f7016f5f73978008b",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "LVL",
+        "sc_in": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MBOX",
+        "sc_in": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MCRT",
+        "sc_in": "0x4b8285ab433d8f69cb48d5ad62b415ed1a221e4f",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MDAO",
+        "sc_in": "0x60322971a672b81bcce5947706d22c19daecf6fb",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MGT",
+        "sc_in": "0x3c6256f234ba638e5883c46b3fedb00ea2e66b8a",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MMIT",
+        "sc_in": "0x9767c8e438aa18f550208e6d1fdf5f43541cc2c8",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MNTC",
+        "sc_in": "0xe4e11e02aa14c7f24db749421986eaec1369e8c9",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MOVEZ",
+        "sc_in": "0x039cd22cb49084142d55fcd4b6096a4f51ffb3b4",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MSTR",
+        "sc_in": "0x2290c6bd9560e6498dfdf10f9ecb17997ca131f2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MULTI",
+        "sc_in": "0x9fb9a33956351cf4fa040f65a13b835a3c8764e3",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "NEBL",
+        "sc_in": "0x5ceae8dfad98327412c43d6bc767f20bf884d635",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "NMT",
+        "sc_in": "0x03aa6298f1370642642415edc0db8b957783e8d6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "OFN",
+        "sc_in": "0x8899ec96ed8c96b5c86c23c3f069c3def75b6d97",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "OGGY",
+        "sc_in": "0x92ed61fb8955cc4e392781cb8b7cd04aadc43d0c",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "OPUL",
+        "sc_in": "0x686318000d982bc8dcc1cdcf8ffd22322f0960ed",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ORKL",
+        "sc_in": "0x36bc1f4d4af21df024398150ad39627fb2c8a847",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ORT",
+        "sc_in": "0x9e711221b34a2d4b8f552bd5f4a6c4e7934920f7",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PAYU",
+        "sc_in": "0x9aeb2e6dd8d55e14292acfcfc4077e33106e4144",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PBUX",
+        "sc_in": "0x9d1d4de9cd93203147fac3bc0262a78e3a0e96bb",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PGPT",
+        "sc_in": "0x33a64943a0eaecc2b06b10f89686b797ba75ffad",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PGT",
+        "sc_in": "0x2d230f311f1f663eb5d0aafd58800cf6f2097c85",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PHB",
+        "sc_in": "0x0409633a72d846fc5bbe2f98d88564d35987904d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PIT",
+        "sc_in": "0xa57ac35ce91ee92caefaa8dc04140c8e232c2e50",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PLAY",
+        "sc_in": "0xd069599e718f963bd84502b49ba8f8657faf5b3a",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PMG",
+        "sc_in": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "POLC",
+        "sc_in": "0x6ae9701b9c423f40d54556c9a443409d79ce170a",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "POOLX",
+        "sc_in": "0xbaea9aba1454df334943951d51116ae342eab255",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PORTO",
+        "sc_in": "0x49f2145d6366099e13b10fbf80646c0f377ee7f6",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PORTUMA",
+        "sc_in": "0x9000cac49c3841926baac5b2e13c87d43e51b6a4",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PPAD",
+        "sc_in": "0x93bb13e90678ccd8bbab07d1daef15086746dc9b",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PPT",
+        "sc_in": "0xdf061250302e5ccae091b18ca2b45914d785f214",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PROM",
+        "sc_in": "0xaf53d56ff99f1322515e54fdde93ff8b3b7dafd5",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PUMP",
+        "sc_in": "0x22b4fa9a13a0d303ad258ee6d62a6ac60364b0c9",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "PZP",
+        "sc_in": "0xdce40c14d5956f8b8ba912402ba73b4d4d599612",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "QUACK",
+        "sc_in": "0xd74b782e05aa25c50e7330af541d46e18f36661c",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "RACA",
+        "sc_in": "0x12bb890508c125661e03b09ec06e404bc9289040",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "REX",
+        "sc_in": "0x90869b3a42e399951bd5f5ff278b8cc5ee1dc0fe",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "RIO",
+        "sc_in": "0x8c49a510756224e887b3d99d00d959f2d86dda1c",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "RJV",
+        "sc_in": "0x602b6c6cce5f95c00603bd07d8fa7ebaf3747d44",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ROOBEE",
+        "sc_in": "0xf77351d8f4ee853135961a936bb8d2e4ffa75f9d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "RTF",
+        "sc_in": "0xa89e2871a850e0e6fd8f0018ec1fc62fa75440d4",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SAE",
+        "sc_in": "0x2fd85ed6ef7c26e07619cf32aee535f3d4393a0f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SAKAI",
+        "sc_in": "0x43b35e89d15b91162dea1c51133c4c93bdd1c4af",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SANTOS",
+        "sc_in": "0xa64455a4553c9034236734faddaddbb64ace4cc7",
+        "des_in": "8",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SCLP",
+        "sc_in": "0xf2c96e402c9199682d5ded26d3771c6b192c01af",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SCPT",
+        "sc_in": "0x0669538fcdef9a73cd37938eba8c79e652bb93aa",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SERAPH",
+        "sc_in": "0xd6b48ccf41a62eb3891e58d0f006b19b01d50cca",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SERSH",
+        "sc_in": "0x84affeef925cdce87f8a99b7b2e540da5140fc09",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SFP",
+        "sc_in": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SHELL",
+        "sc_in": "0xf2c88757f8d03634671208935974b60a2a28bdb3",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SHIB",
+        "sc_in": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SHILL",
+        "sc_in": "0xfb9c339b4bace4fe63ccc1dd9a3c3c531441d5fe",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SIN",
+        "sc_in": "0x6397de0f9aedc0f7a8fa8b438dde883b9c201010",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SIX",
+        "sc_in": "0x070a9867ea49ce7afc4505817204860e823489fe",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SKR",
+        "sc_in": "0xe2dca969624795985f2f083bcd0b674337ba130a",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SLT",
+        "sc_in": "0x39e8aaaaf4b642f9c4fd57a9bee3f337665678d0",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SNIFT",
+        "sc_in": "0x5c4625ac040486ce7a9054924b8cd3e4ba8480a6",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SOLV",
+        "sc_in": "0xabe8e5cabe24cb36df9540088fd7ce1175b9bc52",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SOPH",
+        "sc_in": "0x73fbd93bfda83b111ddc092aa3a4ca77fd30d380",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "STRM",
+        "sc_in": "0xc598275452fa319d75ee5f176fd3b8384925b425",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SXCH",
+        "sc_in": "0xe58c3a44b74362048e202cb7c8036d4b0b28af50",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "THE",
+        "sc_in": "0xf4c8e32eadec4bfe97e0f595add0f4450a863a11",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "THG",
+        "sc_in": "0x9fd87aefe02441b123c3c32466cd9db4c578618f",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TLM",
+        "sc_in": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
+        "des_in": "4",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TLOS",
+        "sc_in": "0x193f4a4a6ea24102f49b931deeeb931f6e32405d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TRIAS",
+        "sc_in": "0x184cff0e719826b966025f93e05d8c8b0a79b3f9",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TSTBSC",
+        "sc_in": "0x86bb94ddd16efc8bc58e6b056e8df71d9e666429",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TUSD",
+        "sc_in": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TWT",
+        "sc_in": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TYPE",
+        "sc_in": "0xd9a44c40584288505931880c9915c6a5eb5f2fb1",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "UBXS",
+        "sc_in": "0x4f1960e29b2ca581a38c5c474e123f420f8092db",
+        "des_in": "6",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ULTI",
+        "sc_in": "0x0e7779e698052f8fe56c415c3818fcf89de9ac6d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "UNFI",
+        "sc_in": "0x728c5bac3c3e370e372fc4671f9ef6916b814d8b",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "UNICE",
+        "sc_in": "0xa0cf89ee581313d84d28409eb6bb1d1f9b55d410",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "USDC",
+        "sc_in": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VELO",
+        "sc_in": "0xf486ad071f3bee968384d2e39e2d8af0fcf6fd46",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VIA",
+        "sc_in": "0x21ac3bb914f90a2bb1a16088e673a9fdda641434",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VINU",
+        "sc_in": "0xfebe8c1ed424dbf688551d4e2267e7a53698f0aa",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VISION",
+        "sc_in": "0x332e78c687c3fcd91494c6b13f0fc685b2a57434",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VOLT",
+        "sc_in": "0x7f792db54b0e580cdc755178443f0430cf799aca",
+        "des_in": "9",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VSC",
+        "sc_in": "0xcdf937995a55a9ab551d81b463ac0f7f02795368",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VT",
+        "sc_in": "0xed66ec1acb7dbd0c01cccff33e3ff1f423057c21",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VV",
+        "sc_in": "0x1f7e7a030aef0a0f600de1350c23d30b73fc7270",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "WHY",
+        "sc_in": "0x9ec02756a559700d8d9e79ece56809f7bcc5dc27",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "WIRTUAL",
+        "sc_in": "0xa19d3f4219e2ed6dc1cb595db20f70b8b6866734",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "WOM",
+        "sc_in": "0xad6742a35fb341a9cc6ad674738dd8da98b94fb1",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "WOO",
+        "sc_in": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "XCAD",
+        "sc_in": "0xa026ad2ceda16ca5fc28fd3c72f99e2c332c8a26",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "XCN",
+        "sc_in": "0x7324c7c0d95cebc73eea7e85cbaac0dbdf88a05b",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "XPR",
+        "sc_in": "0x5de3939b2f811a61d830e6f52d13b066881412ab",
+        "des_in": "4",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "XTER",
+        "sc_in": "0x103071da56e7cd95b415320760d6a0ddc4da1ca5",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "XWG",
+        "sc_in": "0x6b23c89196deb721e6fd9726e6c76e4810a464bc",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZBU",
+        "sc_in": "0x4d3dc895a9edb234dfa3e303a196c009dc918f84",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZIL",
+        "sc_in": "0xb86abcb37c3a4b64f74f59301aff131a1becc787",
+        "des_in": "12",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZKJ",
+        "sc_in": "0xc71b5f631354be6853efe9c3ab6b9590f8302e81",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "des_in": "18",
+        "symbol_out": "USDT",
+        "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+        "des_out": "18",
+        "status": true
     }
 ]
 }
