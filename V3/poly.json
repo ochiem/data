@@ -2359,10 +2359,10 @@
         "cex": "MEXC",
         "symbol_in": "FAN",
         "sc_in": "0x3B9E9100Db1389c518d47c635D80a90ad4C4f41b",
-        "des_in": "18",
+        "des_in": "8",
         "symbol_out": "USDT",
         "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-        "des_out": "8",
+        "des_out": "6",
         "status": true
     },
     {
@@ -3059,10 +3059,10 @@
         "cex": "MEXC",
         "symbol_in": "UCO",
         "sc_in": "0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD",
-        "des_in": "18",
+        "des_in": "8",
         "symbol_out": "USDT",
         "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-        "des_out": "8",
+        "des_out": "6",
         "status": true
     },
     {
