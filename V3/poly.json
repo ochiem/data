@@ -2362,7 +2362,7 @@
         "des_in": "18",
         "symbol_out": "USDT",
         "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-        "des_out": "6",
+        "des_out": "8",
         "status": true
     },
     {
@@ -3062,7 +3062,7 @@
         "des_in": "18",
         "symbol_out": "USDT",
         "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-        "des_out": "6",
+        "des_out": "8",
         "status": true
     },
     {
