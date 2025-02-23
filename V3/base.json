@@ -105,13 +105,133 @@
     },
     "token":[
     {
-        "cex": "MEXC",
-        "symbol_in": "ACOLYT",
-        "sc_in": "0x79dacb99A8698052a9898E81Fdf883c29efb93cb",
+        "cex": "BINANCE",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
         "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "AXL",
+        "sc_in": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+        "des_in": "6",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "KAITO",
+        "sc_in": "0x98d0baa52b2d063e780de12f615f963fe8537553",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "MAV",
+        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "RDNT",
+        "sc_in": "0xd722e55c1d9d9fa0021a5215cbb904b92b3dc5d4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "MAV",
+        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "AXL",
+        "sc_in": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "KAITO",
+        "sc_in": "0x98d0baa52b2d063e780de12f615f963fe8537553",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "RDNT",
+        "sc_in": "0xd722e55c1d9d9fa0021a5215cbb904b92b3dc5d4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
         "status": true
     },
     {
@@ -125,29 +245,299 @@
         "status": true
     },
     {
+        "cex": "BITGET",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ALU",
+        "sc_in": "0x91ad1b44913cd1b8241a4ff1e2eaa198da6bf4c9",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ARCA",
+        "sc_in": "0xdd177b9086c0f781380c4e5d7a3109cc85977acf",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BCP",
+        "sc_in": "0x87c211144b1d9bdaa5a791b8099ea4123dc31d21",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BRETT",
+        "sc_in": "0x532f27101965dd16442e59d40670faf5ebb142e4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CATA",
+        "sc_in": "0xbdf5bafee1291eec45ae3aadac89be8152d4e673",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CLANKER",
+        "sc_in": "0x1bc0c42215582d5a085795f4badbac3ff36d1bcb",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "COOKIE",
+        "sc_in": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "EMT",
+        "sc_in": "0xe2c86869216ac578bd62a4b8313770d9ee359a05",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "F",
+        "sc_in": "0x2c24497d4086490e7ead87cc12597fb50c2e6ed6",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FOMO",
+        "sc_in": "0x9a86980d3625b4a6e69d8a4606d51cbc019e2002",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GAME",
+        "sc_in": "0x1c4cca7c5db003824208adda61bd749e55f463a3",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GPS",
+        "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MCADE",
+        "sc_in": "0xc48823ec67720a04a9dfd8c7d109b2c3d6622094",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MFER",
+        "sc_in": "0xe3086852a4b125803c815a158249ae468a3254ca",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MIGGLES",
+        "sc_in": "0xb1a03eda10342529bbf8eb700a06c60441fef25d",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MOEW",
+        "sc_in": "0x15ac90165f8b45a80534228bdcb124a011f62fee",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MORPHO",
+        "sc_in": "0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ROOST",
+        "sc_in": "0xed899bfdb28c8ad65307fa40f4acab113ae2e14c",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xd3c68968137317a57a9babeacc7707ec433548b4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TOWER",
+        "sc_in": "0xf7c1cefcf7e1dd8161e00099facd3e1db9e528ee",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "UNIO",
+        "sc_in": "0x01aac2b594f7bdbec740f0f1aa22910ebb4b74ab",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_in": "6",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZBU",
+        "sc_in": "0x2c8c89c442436cc6c0a77943e09c8daf49da3161",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
         "cex": "GATE",
         "symbol_in": "AERO",
         "sc_in": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "MEXC",
-        "symbol_in": "AERO",
-        "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "MEXC",
-        "symbol_in": "AEROBUD",
-        "sc_in": "0xFad8CB754230dbFd249Db0E8ECCb5142DD675a0d",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -168,6 +558,636 @@
         "cex": "GATE",
         "symbol_in": "AIFUN",
         "sc_in": "0xbDF317F9C153246C429F23f4093087164B145390",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AIVA",
+        "sc_in": "0xbdB0e1c40A76c5113A023d685b419B90b01e3D61",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AKUMA",
+        "sc_in": "0x2F20Cf3466f80A5f7f532fCa553c8cbc9727FEf6",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ANS",
+        "sc_in": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BASEX",
+        "sc_in": "0xb8E564B206032bBcDa2C3978Bc371Da52152f72e",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BCP",
+        "sc_in": "0x87c211144b1D9bDAA5A791B8099EA4123dC31D21",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BENJI",
+        "sc_in": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BONUS",
+        "sc_in": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BRETT",
+        "sc_in": "0x532f27101965dd16442e59d40670faf5ebb142e4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BSX",
+        "sc_in": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BUZ",
+        "sc_in": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
+        "des_in": "4",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "CLANKER",
+        "sc_in": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "DRINK",
+        "sc_in": "0x2dc90Fa3a0f178ba4beE16CAc5D6c9A5a7B4C6cB",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "EMT",
+        "sc_in": "0xe2c86869216ac578bd62a4b8313770d9ee359a05",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "F",
+        "sc_in": "0x2c24497d4086490e7ead87cc12597fb50c2e6ed6",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "FLOCK",
+        "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "FRIEND",
+        "sc_in": "0x0bD4887f7D41B35CD75DFF9FfeE2856106f86670",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "FROKAI",
+        "sc_in": "0xcbfe8E065534D0cc117Bd71A11B0249a63E247F7",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "GAMEVIRTUAL",
+        "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "GPS",
+        "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "GPTW",
+        "sc_in": "0x0171ae9879C7FBCf3071B149bB4F2130daEF7457",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "HENAI",
+        "sc_in": "0x42B08e7a9211482d3643a126a7dF1895448d3509",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "HINT",
+        "sc_in": "0x91dA780BC7f4B7Cf19ABE90411a2a296Ec5FF787",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ISK",
+        "sc_in": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "KOS",
+        "sc_in": "0xd173C2C9386AEE88b1Ca06522C951be67cbf38CC",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LAZYCAT",
+        "sc_in": "0x41eD891897117450adBd710006855B12F98cb86b",
+        "des_in": "9",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LUNAI",
+        "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LUNARLENS",
+        "sc_in": "0xf95e1c0a67492720ca22842122fe7fa63d5519e5",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LVLY",
+        "sc_in": "0xc734635cd30e882037c3f3de1ebccf9fa9d27d9f",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LYP",
+        "sc_in": "0x4837b18a6d7aF6159c8665505B90a2ed393255E0",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MAG7SSI",
+        "sc_in": "0x9E6A46f294bB67c20F1D1E7AfB0bBEf614403B55",
+        "des_in": "8",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MAV",
+        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MFER",
+        "sc_in": "0xe3086852a4b125803c815a158249ae468a3254ca",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MIGGLES",
+        "sc_in": "0xb1a03eda10342529bbf8eb700a06c60441fef25d",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MOJO",
+        "sc_in": "0xed2d13a70acbd61074fc56bd0d0845e35f793e5e",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MOXIE",
+        "sc_in": "0x8C9037D1Ef5c6D1f6816278C7AAF5491d24CD527",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "NAYM",
+        "sc_in": "0x314d7f9e2f55B430ef656FBB98A7635D43a2261E",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ROOST",
+        "sc_in": "0xed899bfdb28c8ad65307fa40f4acab113ae2e14c",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "RWA",
+        "sc_in": "0x928A6a9fc62b2C94BaF2992a6fBa4715f5Bb0066",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SEAM",
+        "sc_in": "0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SKI",
+        "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
+        "des_in": "9",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SKOP",
+        "sc_in": "0x6d3b8c76c5396642960243febf736c6be8b60562",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xd3c68968137317a57a9babeacc7707ec433548b4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "STIX",
+        "sc_in": "0xFD1013c72CBB0FFB920D347C5836bF88965D0D5e",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TALENT",
+        "sc_in": "0x9a33406165f562E16C3abD82fd1185482E01b49a",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TAOCAT",
+        "sc_in": "0x7a5f5ccd46ebd7ac30615836d988ca3bd57412b3",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TMAI",
+        "sc_in": "0xCa4569949699D56E1834EFe9f58747Ca0f151B01",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TOSHI",
+        "sc_in": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "UNA",
+        "sc_in": "0x24569d33653c404f90af10a2b98d6e0030d3d267",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_in": "6",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "VADER",
+        "sc_in": "0x731814e491571A2e9eE3c5b1F7f3b962eE8f4870",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "WLTH",
+        "sc_in": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "XCN",
+        "sc_in": "0x9c632e6aaa3ea73f91554f8a3cb2ed2f29605e0c",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "XSWAP",
+        "sc_in": "0x8fe815417913a93ea99049fc0718ee1647a2a07c",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ZAP",
+        "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ACOLYT",
+        "sc_in": "0x79dacb99A8698052a9898E81Fdf883c29efb93cb",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AERO",
+        "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "des_in": "18",
+        "symbol_out": "ETH",
+        "sc_out": "0x4200000000000000000000000000000000000006",
+        "des_out": "18",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AEROBUD",
+        "sc_in": "0xFad8CB754230dbFd249Db0E8ECCb5142DD675a0d",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -205,16 +1225,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "AIVA",
-        "sc_in": "0xbdB0e1c40A76c5113A023d685b419B90b01e3D61",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "AIVA",
         "sc_in": "0xbdB0e1c40A76c5113A023d685b419B90b01e3D61",
@@ -235,39 +1245,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "AIXBT",
-        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "AIXBT",
-        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "AIXBT",
         "sc_in": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "AIXBT",
-        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -285,16 +1265,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "AKUMA",
-        "sc_in": "0x2F20Cf3466f80A5f7f532fCa553c8cbc9727FEf6",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "AKUMA",
         "sc_in": "0x2F20Cf3466f80A5f7f532fCa553c8cbc9727FEf6",
@@ -305,39 +1275,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "ALU",
-        "sc_in": "0x91ad1b44913cd1b8241a4ff1e2eaa198da6bf4c9",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "ANS",
-        "sc_in": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "ANS",
         "sc_in": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "ARCA",
-        "sc_in": "0xdd177b9086c0f781380c4e5d7a3109cc85977acf",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -359,16 +1299,6 @@
         "symbol_in": "AUKI",
         "sc_in": "0xF9569cFb8FD265e91aa478d86ae8c78b8AF55Df4",
         "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "AXL",
-        "sc_in": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
-        "des_in": "6",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
         "des_out": "18",
@@ -405,16 +1335,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "BASEX",
-        "sc_in": "0xb8E564B206032bBcDa2C3978Bc371Da52152f72e",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "BASEX",
         "sc_in": "0xb8E564B206032bBcDa2C3978Bc371Da52152f72e",
@@ -435,69 +1355,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "BCP",
-        "sc_in": "0x87c211144b1d9bdaa5a791b8099ea4123dc31d21",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "BCP",
-        "sc_in": "0x87c211144b1D9bDAA5A791B8099EA4123dC31D21",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "BENJI",
-        "sc_in": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "BNY",
         "sc_in": "0x6009e7CD237087e6d7570990e8bDac09C3E182B0",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "BONUS",
-        "sc_in": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "BRETT",
-        "sc_in": "0x532f27101965dd16442e59d40670faf5ebb142e4",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "BRETT",
-        "sc_in": "0x532f27101965dd16442e59d40670faf5ebb142e4",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -515,49 +1375,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "BSX",
-        "sc_in": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "BSX",
         "sc_in": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "BUZ",
-        "sc_in": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
-        "des_in": "4",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "CARV",
-        "sc_in": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "CARV",
-        "sc_in": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -575,39 +1395,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "CATA",
-        "sc_in": "0xbdf5bafee1291eec45ae3aadac89be8152d4e673",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "CATA",
         "sc_in": "0xBDf5bAfEE1291EEc45Ae3aadAc89BE8152D4E673",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "CLANKER",
-        "sc_in": "0x1bc0c42215582d5a085795f4badbac3ff36d1bcb",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "CLANKER",
-        "sc_in": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -645,16 +1435,6 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "COOKIE",
-        "sc_in": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "COOKIE",
         "sc_in": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
@@ -685,26 +1465,6 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "DEGEN",
-        "sc_in": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "DEGEN",
-        "sc_in": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "DEGEN",
         "sc_in": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
@@ -718,16 +1478,6 @@
         "cex": "MEXC",
         "symbol_in": "DOGINME",
         "sc_in": "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "DRINK",
-        "sc_in": "0x2dc90Fa3a0f178ba4beE16CAc5D6c9A5a7B4C6cB",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -755,59 +1505,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "EMT",
-        "sc_in": "0xe2c86869216ac578bd62a4b8313770d9ee359a05",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "EMT",
-        "sc_in": "0xe2c86869216ac578bd62a4b8313770d9ee359a05",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "EMT",
         "sc_in": "0xe2c86869216aC578bd62a4b8313770d9EE359A05",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "ETH",
-        "sc_in": "0x4200000000000000000000000000000000000006",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "F",
-        "sc_in": "0x2c24497d4086490e7ead87cc12597fb50c2e6ed6",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "F",
-        "sc_in": "0x2c24497d4086490e7ead87cc12597fb50c2e6ed6",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -825,69 +1525,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "FLOCK",
-        "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "FLOCK",
         "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "FOMO",
-        "sc_in": "0x9a86980d3625b4a6e69d8a4606d51cbc019e2002",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "FRIEND",
-        "sc_in": "0x0bD4887f7D41B35CD75DFF9FfeE2856106f86670",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "FROKAI",
-        "sc_in": "0xcbfe8E065534D0cc117Bd71A11B0249a63E247F7",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "GAME",
-        "sc_in": "0x1c4cca7c5db003824208adda61bd749e55f463a3",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "GAMEVIRTUAL",
-        "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -955,26 +1595,6 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "GPS",
-        "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "GPS",
-        "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "GPS",
         "sc_in": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
@@ -985,29 +1605,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "GPTW",
-        "sc_in": "0x0171ae9879C7FBCf3071B149bB4F2130daEF7457",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "GPTW",
         "sc_in": "0x0171ae9879C7FBCf3071B149bB4F2130daEF7457",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "HENAI",
-        "sc_in": "0x42B08e7a9211482d3643a126a7dF1895448d3509",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1028,16 +1628,6 @@
         "cex": "MEXC",
         "symbol_in": "HEU",
         "sc_in": "0xEF22cb48B8483dF6152e1423b19dF5553BbD818b",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "HINT",
-        "sc_in": "0x91dA780BC7f4B7Cf19ABE90411a2a296Ec5FF787",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1085,16 +1675,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "ISK",
-        "sc_in": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "ISK",
         "sc_in": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
@@ -1108,16 +1688,6 @@
         "cex": "MEXC",
         "symbol_in": "KAITO",
         "sc_in": "0x98d0baa52b2D063E780DE12F615f963Fe8537553",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "KAITO",
-        "sc_in": "0x98d0baa52b2d063e780de12f615f963fe8537553",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1145,30 +1715,10 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "KOS",
-        "sc_in": "0xd173C2C9386AEE88b1Ca06522C951be67cbf38CC",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "KOS",
         "sc_in": "0xd173C2C9386AEE88b1Ca06522C951be67cbf38CC",
         "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "LAZYCAT",
-        "sc_in": "0x41eD891897117450adBd710006855B12F98cb86b",
-        "des_in": "9",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
         "des_out": "18",
@@ -1205,39 +1755,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "LUNAI",
-        "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "LUNAI",
         "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "LUNARLENS",
-        "sc_in": "0xf95e1c0a67492720ca22842122fe7fa63d5519e5",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "LVLY",
-        "sc_in": "0xc734635cd30e882037c3f3de1ebccf9fa9d27d9f",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1255,16 +1775,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "LYP",
-        "sc_in": "0x4837b18a6d7aF6159c8665505B90a2ed393255E0",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "LYP",
         "sc_in": "0x4837b18a6d7aF6159c8665505B90a2ed393255E0",
@@ -1275,59 +1785,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "MAG7SSI",
-        "sc_in": "0x9E6A46f294bB67c20F1D1E7AfB0bBEf614403B55",
-        "des_in": "8",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "MAG7SSI",
         "sc_in": "0x9E6A46f294bB67c20F1D1E7AfB0bBEf614403B55",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "MAV",
-        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "MAV",
-        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "MAVIA",
-        "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "MAVIA",
-        "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1338,36 +1798,6 @@
         "cex": "MEXC",
         "symbol_in": "MAVIA",
         "sc_in": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "MCADE",
-        "sc_in": "0xc48823ec67720a04a9dfd8c7d109b2c3d6622094",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "MFER",
-        "sc_in": "0xe3086852a4b125803c815a158249ae468a3254ca",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "MFER",
-        "sc_in": "0xe3086852a4b125803c815a158249ae468a3254ca",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1395,26 +1825,6 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "MIGGLES",
-        "sc_in": "0xb1a03eda10342529bbf8eb700a06c60441fef25d",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "MIGGLES",
-        "sc_in": "0xb1a03eda10342529bbf8eb700a06c60441fef25d",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "MIGGLES",
         "sc_in": "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
@@ -1435,16 +1845,6 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "MOEW",
-        "sc_in": "0x15ac90165f8b45a80534228bdcb124a011f62fee",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "MOEW",
         "sc_in": "0x15aC90165f8B45A80534228BdCB124A011F62Fee",
@@ -1455,39 +1855,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "MOJO",
-        "sc_in": "0xed2d13a70acbd61074fc56bd0d0845e35f793e5e",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "MOJO",
         "sc_in": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "MORPHO",
-        "sc_in": "0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "MOXIE",
-        "sc_in": "0x8C9037D1Ef5c6D1f6816278C7AAF5491d24CD527",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1508,16 +1878,6 @@
         "cex": "MEXC",
         "symbol_in": "MUSIC",
         "sc_in": "0xc655C331d1Aa7f96c252F1f40CE13D80eAc53504",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "NAYM",
-        "sc_in": "0x314d7f9e2f55B430ef656FBB98A7635D43a2261E",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1585,16 +1945,6 @@
         "status": true
     },
     {
-        "cex": "BINANCE",
-        "symbol_in": "RDNT",
-        "sc_in": "0xd722e55c1d9d9fa0021a5215cbb904b92b3dc5d4",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "RECORD",
         "sc_in": "0xE642657E4F43e6DcF0bd73Ef24008394574Dee28",
@@ -1655,39 +2005,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "ROOST",
-        "sc_in": "0xed899bfdb28c8ad65307fa40f4acab113ae2e14c",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "ROOST",
-        "sc_in": "0xed899bfdb28c8ad65307fa40f4acab113ae2e14c",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "ROOST",
         "sc_in": "0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "RWA",
-        "sc_in": "0x928A6a9fc62b2C94BaF2992a6fBa4715f5Bb0066",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1735,26 +2055,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "SEAM",
-        "sc_in": "0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "SKI",
-        "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
-        "des_in": "9",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "SKI",
         "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
@@ -1775,39 +2075,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "SKOP",
-        "sc_in": "0x6d3b8c76c5396642960243febf736c6be8b60562",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "SKOP",
         "sc_in": "0x6d3B8C76c5396642960243Febf736C6BE8b60562",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "SOCIAL",
-        "sc_in": "0xd3c68968137317a57a9babeacc7707ec433548b4",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "SOCIAL",
-        "sc_in": "0xd3c68968137317a57a9babeacc7707ec433548b4",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1835,16 +2105,6 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "STIX",
-        "sc_in": "0xFD1013c72CBB0FFB920D347C5836bF88965D0D5e",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "SUPERANON",
         "sc_in": "0x0Db510e79909666d6dEc7f5e49370838c16D950f",
@@ -1865,29 +2125,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "TALENT",
-        "sc_in": "0x9a33406165f562E16C3abD82fd1185482E01b49a",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "TALENT",
         "sc_in": "0x9a33406165f562E16C3abD82fd1185482E01b49a",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "TAOCAT",
-        "sc_in": "0x7a5f5ccd46ebd7ac30615836d988ca3bd57412b3",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1905,29 +2145,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "TMAI",
-        "sc_in": "0xCa4569949699D56E1834EFe9f58747Ca0f151B01",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "TMAI",
         "sc_in": "0xCa4569949699D56E1834EFe9f58747Ca0f151B01",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "TOSHI",
-        "sc_in": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -1945,36 +2165,6 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "TOWER",
-        "sc_in": "0xf7c1cefcf7e1dd8161e00099facd3e1db9e528ee",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "UNA",
-        "sc_in": "0x24569d33653c404f90af10a2b98d6e0030d3d267",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "UNIO",
-        "sc_in": "0x01aac2b594f7bdbec740f0f1aa22910ebb4b74ab",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "UNIO",
         "sc_in": "0x01aaC2b594F7bdBeC740F0F1AA22910EbB4B74Ab",
@@ -1985,69 +2175,9 @@
         "status": true
     },
     {
-        "cex": "BITGET",
-        "symbol_in": "USDC",
-        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-        "des_in": "6",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "USDC",
-        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-        "des_in": "6",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "USDC",
-        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "VADER",
-        "sc_in": "0x731814e491571A2e9eE3c5b1F7f3b962eE8f4870",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "VADER",
         "sc_in": "0x731814e491571A2e9eE3c5b1F7f3b962eE8f4870",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "VIRTUAL",
-        "sc_in": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "VIRTUAL",
-        "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -2095,29 +2225,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "WLTH",
-        "sc_in": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "WLTH",
         "sc_in": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "XCN",
-        "sc_in": "0x9c632e6aaa3ea73f91554f8a3cb2ed2f29605e0c",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -2135,39 +2245,9 @@
         "status": true
     },
     {
-        "cex": "GATE",
-        "symbol_in": "XSWAP",
-        "sc_in": "0x8fe815417913a93ea99049fc0718ee1647a2a07c",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "GATE",
-        "symbol_in": "ZAP",
-        "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
         "cex": "MEXC",
         "symbol_in": "ZAP",
         "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BITGET",
-        "symbol_in": "ZBU",
-        "sc_in": "0x2c8c89c442436cc6c0a77943e09c8daf49da3161",
         "des_in": "18",
         "symbol_out": "ETH",
         "sc_out": "0x4200000000000000000000000000000000000006",
@@ -2186,28 +2266,8 @@
     },
     {
         "cex": "BITGET",
-        "symbol_in": "ZRO",
-        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "ZRO",
-        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
-        "des_in": "18",
-        "symbol_out": "ETH",
-        "sc_out": "0x4200000000000000000000000000000000000006",
-        "des_out": "18",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
-        "symbol_in": "ZRO",
-        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "symbol_in": "AERO",
+        "sc_in": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
         "des_in": "18",
         "symbol_out": "USDC",
         "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
@@ -2215,17 +2275,7 @@
         "status": true
     },
     {
-        "cex": "BINANCE",
-        "symbol_in": "MAV",
-        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
-        "des_in": "18",
-        "symbol_out": "USDC",
-        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-        "des_out": "6",
-        "status": true
-    },
-    {
-        "cex": "BINANCE",
+        "cex": "BITGET",
         "symbol_in": "AIXBT",
         "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
         "des_in": "18",
@@ -2235,9 +2285,9 @@
         "status": true
     },
     {
-        "cex": "BINANCE",
-        "symbol_in": "AXL",
-        "sc_in": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+        "cex": "BITGET",
+        "symbol_in": "ALU",
+        "sc_in": "0x91ad1b44913cd1b8241a4ff1e2eaa198da6bf4c9",
         "des_in": "18",
         "symbol_out": "USDC",
         "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
@@ -2245,9 +2295,1429 @@
         "status": true
     },
     {
-        "cex": "BINANCE",
+        "cex": "BITGET",
+        "symbol_in": "ARCA",
+        "sc_in": "0xdd177b9086c0f781380c4e5d7a3109cc85977acf",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BCP",
+        "sc_in": "0x87c211144b1d9bdaa5a791b8099ea4123dc31d21",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "BRETT",
+        "sc_in": "0x532f27101965dd16442e59d40670faf5ebb142e4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CATA",
+        "sc_in": "0xbdf5bafee1291eec45ae3aadac89be8152d4e673",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "CLANKER",
+        "sc_in": "0x1bc0c42215582d5a085795f4badbac3ff36d1bcb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "COOKIE",
+        "sc_in": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "EMT",
+        "sc_in": "0xe2c86869216ac578bd62a4b8313770d9ee359a05",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "F",
+        "sc_in": "0x2c24497d4086490e7ead87cc12597fb50c2e6ed6",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "FOMO",
+        "sc_in": "0x9a86980d3625b4a6e69d8a4606d51cbc019e2002",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GAME",
+        "sc_in": "0x1c4cca7c5db003824208adda61bd749e55f463a3",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "GPS",
+        "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MCADE",
+        "sc_in": "0xc48823ec67720a04a9dfd8c7d109b2c3d6622094",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MFER",
+        "sc_in": "0xe3086852a4b125803c815a158249ae468a3254ca",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MIGGLES",
+        "sc_in": "0xb1a03eda10342529bbf8eb700a06c60441fef25d",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MOEW",
+        "sc_in": "0x15ac90165f8b45a80534228bdcb124a011f62fee",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "MORPHO",
+        "sc_in": "0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ROOST",
+        "sc_in": "0xed899bfdb28c8ad65307fa40f4acab113ae2e14c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xd3c68968137317a57a9babeacc7707ec433548b4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "TOWER",
+        "sc_in": "0xf7c1cefcf7e1dd8161e00099facd3e1db9e528ee",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "UNIO",
+        "sc_in": "0x01aac2b594f7bdbec740f0f1aa22910ebb4b74ab",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_in": "6",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZBU",
+        "sc_in": "0x2c8c89c442436cc6c0a77943e09c8daf49da3161",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BITGET",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AERO",
+        "sc_in": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AGENT",
+        "sc_in": "0xF5Bc3439f53A45607cCaD667AbC7DAF5A583633F",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AIFUN",
+        "sc_in": "0xbDF317F9C153246C429F23f4093087164B145390",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AIVA",
+        "sc_in": "0xbdB0e1c40A76c5113A023d685b419B90b01e3D61",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "AKUMA",
+        "sc_in": "0x2F20Cf3466f80A5f7f532fCa553c8cbc9727FEf6",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ANS",
+        "sc_in": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BASEX",
+        "sc_in": "0xb8E564B206032bBcDa2C3978Bc371Da52152f72e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BCP",
+        "sc_in": "0x87c211144b1D9bDAA5A791B8099EA4123dC31D21",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BENJI",
+        "sc_in": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BONUS",
+        "sc_in": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BRETT",
+        "sc_in": "0x532f27101965dd16442e59d40670faf5ebb142e4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BSX",
+        "sc_in": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "BUZ",
+        "sc_in": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
+        "des_in": "4",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08cd26474722ce93f4d0c34d16201461c10aa8c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "CLANKER",
+        "sc_in": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "DRINK",
+        "sc_in": "0x2dc90Fa3a0f178ba4beE16CAc5D6c9A5a7B4C6cB",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "EMT",
+        "sc_in": "0xe2c86869216ac578bd62a4b8313770d9ee359a05",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ETH",
+        "sc_in": "0x4200000000000000000000000000000000000006",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "F",
+        "sc_in": "0x2c24497d4086490e7ead87cc12597fb50c2e6ed6",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "FLOCK",
+        "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "FRIEND",
+        "sc_in": "0x0bD4887f7D41B35CD75DFF9FfeE2856106f86670",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "FROKAI",
+        "sc_in": "0xcbfe8E065534D0cc117Bd71A11B0249a63E247F7",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "GAMEVIRTUAL",
+        "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "GPS",
+        "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "GPTW",
+        "sc_in": "0x0171ae9879C7FBCf3071B149bB4F2130daEF7457",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "HENAI",
+        "sc_in": "0x42B08e7a9211482d3643a126a7dF1895448d3509",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "HINT",
+        "sc_in": "0x91dA780BC7f4B7Cf19ABE90411a2a296Ec5FF787",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ISK",
+        "sc_in": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "KOS",
+        "sc_in": "0xd173C2C9386AEE88b1Ca06522C951be67cbf38CC",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LAZYCAT",
+        "sc_in": "0x41eD891897117450adBd710006855B12F98cb86b",
+        "des_in": "9",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LUNAI",
+        "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LUNARLENS",
+        "sc_in": "0xf95e1c0a67492720ca22842122fe7fa63d5519e5",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LVLY",
+        "sc_in": "0xc734635cd30e882037c3f3de1ebccf9fa9d27d9f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "LYP",
+        "sc_in": "0x4837b18a6d7aF6159c8665505B90a2ed393255E0",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MAG7SSI",
+        "sc_in": "0x9E6A46f294bB67c20F1D1E7AfB0bBEf614403B55",
+        "des_in": "8",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MAV",
+        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MFER",
+        "sc_in": "0xe3086852a4b125803c815a158249ae468a3254ca",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MIGGLES",
+        "sc_in": "0xb1a03eda10342529bbf8eb700a06c60441fef25d",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MOJO",
+        "sc_in": "0xed2d13a70acbd61074fc56bd0d0845e35f793e5e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "MOXIE",
+        "sc_in": "0x8C9037D1Ef5c6D1f6816278C7AAF5491d24CD527",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "NAYM",
+        "sc_in": "0x314d7f9e2f55B430ef656FBB98A7635D43a2261E",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ROOST",
+        "sc_in": "0xed899bfdb28c8ad65307fa40f4acab113ae2e14c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "RWA",
+        "sc_in": "0x928A6a9fc62b2C94BaF2992a6fBa4715f5Bb0066",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SEAM",
+        "sc_in": "0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SKI",
+        "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
+        "des_in": "9",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SKOP",
+        "sc_in": "0x6d3b8c76c5396642960243febf736c6be8b60562",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xd3c68968137317a57a9babeacc7707ec433548b4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "STIX",
+        "sc_in": "0xFD1013c72CBB0FFB920D347C5836bF88965D0D5e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TALENT",
+        "sc_in": "0x9a33406165f562E16C3abD82fd1185482E01b49a",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TAOCAT",
+        "sc_in": "0x7a5f5ccd46ebd7ac30615836d988ca3bd57412b3",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TMAI",
+        "sc_in": "0xCa4569949699D56E1834EFe9f58747Ca0f151B01",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "TOSHI",
+        "sc_in": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "UNA",
+        "sc_in": "0x24569d33653c404f90af10a2b98d6e0030d3d267",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "USDC",
+        "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_in": "6",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "VADER",
+        "sc_in": "0x731814e491571A2e9eE3c5b1F7f3b962eE8f4870",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "WLTH",
+        "sc_in": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "XCN",
+        "sc_in": "0x9c632e6aaa3ea73f91554f8a3cb2ed2f29605e0c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "XSWAP",
+        "sc_in": "0x8fe815417913a93ea99049fc0718ee1647a2a07c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "GATE",
+        "symbol_in": "ZAP",
+        "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ACOLYT",
+        "sc_in": "0x79dacb99A8698052a9898E81Fdf883c29efb93cb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AERO",
+        "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AEROBUD",
+        "sc_in": "0xFad8CB754230dbFd249Db0E8ECCb5142DD675a0d",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIFUN",
+        "sc_in": "0xbDF317F9C153246C429F23f4093087164B145390",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIGO",
+        "sc_in": "0xf41872f81c154822bb450188FAc9A5B9B1502322",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIPUMP",
+        "sc_in": "0xfbecd19292b1eFfEAA7B2e61F5101DdB6744A1Fb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIVA",
+        "sc_in": "0xbdB0e1c40A76c5113A023d685b419B90b01e3D61",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIX9",
+        "sc_in": "0x8e306E02ec1EFFC4fDAd3f952fbEEebf3730ae19",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AIXCB",
+        "sc_in": "0x76C71F1703Fbf19FFdcF3051E1e684Cb9934510f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AKUMA",
+        "sc_in": "0x2F20Cf3466f80A5f7f532fCa553c8cbc9727FEf6",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ANS",
+        "sc_in": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ARI",
+        "sc_in": "0xD1e6f3f0a7f40d5412F7471875879381441BF722",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "AUKI",
+        "sc_in": "0xF9569cFb8FD265e91aa478d86ae8c78b8AF55Df4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "B3",
+        "sc_in": "0xB3B32F9f8827D4634fE7d973Fa1034Ec9fdDB3B3",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BABYTIGER",
+        "sc_in": "0x8A638Ea79f71f3B91bDC96BbdF9fb27C93013D60",
+        "des_in": "5",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BASEDPEPE",
+        "sc_in": "0x52b492a33E447Cdb854c7FC19F1e57E8BfA1777D",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BASEX",
+        "sc_in": "0xb8E564B206032bBcDa2C3978Bc371Da52152f72e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BBB",
+        "sc_in": "0xc7b7a8DA6fD290Dd945cE104AFf976C7665F6a5E",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BNY",
+        "sc_in": "0x6009e7CD237087e6d7570990e8bDac09C3E182B0",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BSA",
+        "sc_in": "0xf0333061d8Ff799f6CEDb748E06a2c9db9ffc20a",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "BSX",
+        "sc_in": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "CARV",
+        "sc_in": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "CATA",
+        "sc_in": "0xBDf5bAfEE1291EEc45Ae3aadAc89BE8152D4E673",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "CLANKER",
+        "sc_in": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "CLUSTR",
+        "sc_in": "0x4b361e60CF256b926bA15f157D69cAc9cD037426",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "CONVO",
+        "sc_in": "0xab964f7b7b6391bd6c4e8512eF00d01f255d9c0D",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "COOKIE",
+        "sc_in": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "DEEPSEEK",
+        "sc_in": "0x81a382272Bd2BeC1f3F9FDAb5763a500Cbd8EBAD",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "DEFAI",
+        "sc_in": "0xb3621cd34803Cf7065Dcb0D5BfB0f56C1834a063",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "DEGEN",
+        "sc_in": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "DOGINME",
+        "sc_in": "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "DRINK",
+        "sc_in": "0x2dc90Fa3a0f178ba4beE16CAc5D6c9A5a7B4C6cB",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "DYOR",
+        "sc_in": "0xa001dCC9A7974DAE133A11D2800A7ABf7b8f5F3C",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "EMT",
+        "sc_in": "0xe2c86869216aC578bd62a4b8313770d9EE359A05",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "FAI",
+        "sc_in": "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "FLOCK",
+        "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GAMEVIRTUAL",
+        "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GB",
+        "sc_in": "0xfaA3478081e59B5fBEFf6bC96eFB23917C04C2B4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GENOME",
+        "sc_in": "0x1db0c569ebb4a8b57AC01833B9792F526305e062",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GLUTEU",
+        "sc_in": "0x06A63c498eF95AD1fA4FfF841955e512b4B2198a",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GMRT",
+        "sc_in": "0x6967F0974d76d34e140caE27efeA32CDf546b58E",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GOCHU",
+        "sc_in": "0x9aAaE745cf2830FB8DDc6248B17436dC3a5E701C",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GPS",
+        "sc_in": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "GPTW",
+        "sc_in": "0x0171ae9879C7FBCf3071B149bB4F2130daEF7457",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "HENAI",
+        "sc_in": "0x42B08e7a9211482d3643a126a7dF1895448d3509",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "HEU",
+        "sc_in": "0xEF22cb48B8483dF6152e1423b19dF5553BbD818b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "HINT",
+        "sc_in": "0x91dA780BC7f4B7Cf19ABE90411a2a296Ec5FF787",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "HIPPOSWAP",
+        "sc_in": "0x46A157F74503a7b32c3fFFCF424227E00D7dfDC9",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "IMGNAI",
+        "sc_in": "0x18E692c03De43972Fe81058f322fa542Ae1A5E2c",
+        "des_in": "9",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "INTOS",
+        "sc_in": "0x42e07fA3d31190731368Ca2F88D12D80139DCa42",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ISK",
+        "sc_in": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
         "symbol_in": "KAITO",
-        "sc_in": "0x98d0baa52b2d063e780de12f615f963fe8537553",
+        "sc_in": "0x98d0baa52b2D063E780DE12F615f963Fe8537553",
         "des_in": "18",
         "symbol_out": "USDC",
         "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
@@ -2255,14 +3725,574 @@
         "status": true
     },
     {
-        "cex": "BINANCE",
-        "symbol_in": "RDNT",
-        "sc_in": "0xd722e55c1d9d9fa0021a5215cbb904b92b3dc5d4",
+        "cex": "MEXC",
+        "symbol_in": "KEYCAT",
+        "sc_in": "0x9a26F5433671751C3276a065f57e5a02D2817973",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "KOLZ",
+        "sc_in": "0x50CE4129Ca261CCDe4EB100c170843c2936Bc11b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "KOS",
+        "sc_in": "0xd173C2C9386AEE88b1Ca06522C951be67cbf38CC",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "LBM",
+        "sc_in": "0x56A38E7216304108E841579041249fEb236C887b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "LINGO",
+        "sc_in": "0xfb42Da273158B0F642F59F2Ba7cc1d5457481677",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "LUM",
+        "sc_in": "0x0fD7a301B51d0A83FCAf6718628174D527B373b6",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "LUNAI",
+        "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "LVLY",
+        "sc_in": "0xc734635CD30E882037C3f3De1EbCCF9fA9D27D9F",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "LYP",
+        "sc_in": "0x4837b18a6d7aF6159c8665505B90a2ed393255E0",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MAG7SSI",
+        "sc_in": "0x9E6A46f294bB67c20F1D1E7AfB0bBEf614403B55",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MAVIA",
+        "sc_in": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MFER",
+        "sc_in": "0xE3086852A4B125803C815a158249ae468A3254Ca",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MFT",
+        "sc_in": "0xb372dC09D8D84e1246760EE9d279E504A89f5684",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MIGGLES",
+        "sc_in": "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MOCHI",
+        "sc_in": "0xF6e932Ca12afa26665dC4dDE7e27be02A7c02e50",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MOEW",
+        "sc_in": "0x15aC90165f8B45A80534228BdCB124A011F62Fee",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MOJO",
+        "sc_in": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MPAA",
+        "sc_in": "0x4194F4e29D652656b6DC84F10363482c5ac101b5",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "MUSIC",
+        "sc_in": "0xc655C331d1Aa7f96c252F1f40CE13D80eAc53504",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "NAYM",
+        "sc_in": "0x314d7f9e2f55B430ef656FBB98A7635D43a2261E",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "OBORTECH",
+        "sc_in": "0xF83759099dC88f75FC83de854c41E0D9e83AdA9B",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "OBT",
+        "sc_in": "0x514D8E8099286a13486Ef6C525C120f51C239B52",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ODOS",
+        "sc_in": "0xca73ed1815e5915489570014e024b7EbE65dE679",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "PAID",
+        "sc_in": "0x655A51e6803faF50D4acE80fa501af2F29C856cF",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "PMX",
+        "sc_in": "0x0B3EAEAd748facDb9d943d3407011f16Eb17D0Cf",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RECORD",
+        "sc_in": "0xE642657E4F43e6DcF0bd73Ef24008394574Dee28",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "REM",
+        "sc_in": "0x83d5D441eD15737D34226b682F7427d2217f2a8f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RFL",
+        "sc_in": "0x6e2c81b6c2C0e02360F00a0dA694e489acB0b05e",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RGOAT",
+        "sc_in": "0xF0268c5F9aA95Baf5C25D646AAbB900Ac12F0800",
+        "des_in": "8",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RIVAL",
+        "sc_in": "0x41a359EecffBaAbE3b6a11A285Ee4aE6c9e3BC99",
+        "des_in": "8",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RIZ",
+        "sc_in": "0x67543CF0304C19CA62AC95ba82FD4F4B40788dc1",
+        "des_in": "8",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ROOST",
+        "sc_in": "0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RWA",
+        "sc_in": "0xE2B1dc2D4A3b4E59FDF0c47B71A7A86391a8B35a",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "RWA1",
+        "sc_in": "0x928A6a9fc62b2C94BaF2992a6fBa4715f5Bb0066",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SAINT",
+        "sc_in": "0x7588880d9c78E81FAde7b7e8DC0781E95995a792",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SDT",
+        "sc_in": "0x04bc5918a08A526653E83420044B1a26FF34863B",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SKI",
+        "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
+        "des_in": "9",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SKICAT",
+        "sc_in": "0xA6f774051dFb6b54869227fDA2DF9cb46f296c09",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SKOP",
+        "sc_in": "0x6d3B8C76c5396642960243Febf736C6BE8b60562",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SOCIAL",
+        "sc_in": "0xD3C68968137317a57a9bAbeacC7707Ec433548B4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SPN",
+        "sc_in": "0x035098c2A3bEa5e03b1E08e7140a5369D47Bd349",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SUPERANON",
+        "sc_in": "0x0Db510e79909666d6dEc7f5e49370838c16D950f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "SVTS",
+        "sc_in": "0xb4e017223Fd3D639d0264DE4Da1b9E080325Cb5E",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "TALENT",
+        "sc_in": "0x9a33406165f562E16C3abD82fd1185482E01b49a",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "TAOCAT",
+        "sc_in": "0x7A5f5CcD46EBd7aC30615836D988ca3BD57412b3",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "TMAI",
+        "sc_in": "0xCa4569949699D56E1834EFe9f58747Ca0f151B01",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "TOSHI",
+        "sc_in": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "UNIO",
+        "sc_in": "0x01aaC2b594F7bdBeC740F0F1AA22910EbB4B74Ab",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "VADER",
+        "sc_in": "0x731814e491571A2e9eE3c5b1F7f3b962eE8f4870",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "VIRTUAL",
+        "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "VTN",
+        "sc_in": "0xA9bc478A44a8c8FE6fd505C1964dEB3cEe3b7abC",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "VVV",
+        "sc_in": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "WANDER",
+        "sc_in": "0xef0fd52e65DdcDc201E2055a94D2aBff6fF10a7a",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "WLTH",
+        "sc_in": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "XOXO",
+        "sc_in": "0xc799AdA44171b741Abf41Ee54fb1B47fda5960bE",
+        "des_in": "6",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ZAP",
+        "sc_in": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "MEXC",
+        "symbol_in": "ZBU",
+        "sc_in": "0x2C8C89C442436CC6C0a77943E09c8Daf49Da3161",
         "des_in": "18",
         "symbol_out": "USDC",
         "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
         "des_out": "6",
         "status": true
     }
-]    
+]
 }
