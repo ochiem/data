@@ -2203,6 +2203,66 @@
         "sc_out": "0x4200000000000000000000000000000000000006",
         "des_out": "18",
         "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "ZRO",
+        "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "MAV",
+        "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "AIXBT",
+        "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "AXL",
+        "sc_in": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "KAITO",
+        "sc_in": "0x98d0baa52b2d063e780de12f615f963fe8537553",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
+    },
+    {
+        "cex": "BINANCE",
+        "symbol_in": "RDNT",
+        "sc_in": "0xd722e55c1d9d9fa0021a5215cbb904b92b3dc5d4",
+        "des_in": "18",
+        "symbol_out": "USDC",
+        "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "des_out": "6",
+        "status": true
     }
 ]    
 }
