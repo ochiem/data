@@ -95,7 +95,7 @@
 
 <div class="uk-container uk-margin-small-top">
 
-    <h3 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 0px;"><span>MANAJEMEN ASSET</span></h3>
+    <h3 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 0px;"><span>MANAJEMEN MODAL</span></h3>
         
     <!-- Grid Container -->
     <div class="uk-grid uk-child-width-1-3 uk-grid-small " uk-grid>
@@ -655,7 +655,7 @@
         const chains = {
             ethereum: `https://mainnet.infura.io/v3/${infuraApiKey}`,
             bsc: 'https://bsc-dataseed.binance.org/',
-            polygon: 'https://polygon-rpc.com',
+            polygon: 'https://polygon-pokt.nodies.app',
             base: 'https://mainnet.base.org',
             arbitrum: `https://arbitrum-mainnet.infura.io/v3/${infuraApiKey}`,
             avax: `https://avalanche-mainnet.infura.io/v3/${infuraApiKey}`,
@@ -1087,7 +1087,7 @@
             var apiSecret = $("#secretkeyBITGET").val();
             var passphrase = $("#passphraseBITGET").val();
 
-            var apiUrl = "https://cors.gemul-putra.workers.dev/?https://api.bitget.com/api/v2/spot/account/assets";
+            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.bitget.com/api/v2/spot/account/assets";
             var timestamp = Date.now().toString();
             var preSignature = timestamp + "GET" + "/api/v2/spot/account/assets";
             var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
@@ -1132,7 +1132,7 @@
             var apiSecret = $("#secretkeyKUCOIN").val();
             var passphrase = $("#passphraseKUCOIN").val();
 
-            var apiUrl = "https://cors-anywhere.herokuapp.com/https://api.kucoin.com/api/v1/accounts";
+            var apiUrl = "https://api.kucoin.com/api/v1/accounts";
             var timestamp = Date.now().toString();
             var preSignature = timestamp + "GET" + "/api/v1/accounts";
             var signature = CryptoJS.HmacSHA256(preSignature, apiSecret).toString(CryptoJS.enc.Base64);
@@ -1767,7 +1767,7 @@
         async function fetchTokenRates() {
             try {
                 // Melakukan fetch data dari API
-                const response = await fetch("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22MATICUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]");
+                const response = await fetch("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22POLUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]");
                 
                 // Mengecek apakah respons valid
                 if (!response.ok) {
@@ -1782,7 +1782,7 @@
                     BTC: parseFloat(data.find(item => item.symbol === 'BTCUSDT')?.price) || 0,
                     ETH: parseFloat(data.find(item => item.symbol === 'ETHUSDT')?.price) || 0,
                     BNB: parseFloat(data.find(item => item.symbol === 'BNBUSDT')?.price) || 0,
-                    MATIC: parseFloat(data.find(item => item.symbol === 'MATICUSDT')?.price) || 0,
+                    MATIC: parseFloat(data.find(item => item.symbol === 'POLUSDT')?.price) || 0,
                     AVAX: parseFloat(data.find(item => item.symbol === 'AVAXUSDT')?.price) || 0,
                     SOL: parseFloat(data.find(item => item.symbol === 'SOLUSDT')?.price) || 0
                 };
