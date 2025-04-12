@@ -958,9 +958,9 @@
                                             $(`#${IdTokentoPair}`).css('background-color', error.color);
                                             $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
                                               
-                                                if ((error.statusCode == 0 && (dextype == "kyberswap" || dextype == "odos")) || 
+                                                if ((error.statusCode == 0 && (dextype == "kyberswap" || dextype == "odos" ||  dextype == "0x")) || 
                                                     (error.statusCode == 429 && dextype == "okx") || 
-                                                    //(error.statusCode == 403 && dextype == "0x") ||
+                                                    (error.statusCode == 403 && dextype == "0x") ||
                                                     (error.statusCode == 429 && dextype == "openocean")) {
 
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
@@ -1012,10 +1012,10 @@
                                             $(`#${IdPairtoToken}`).css('background-color', error.color);
                                             $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
                                                 
-                                                    if ((error.statusCode == 0 && (dextype == "kyberswap" || dextype == "odos")) || 
+                                                    if ((error.statusCode == 0 && (dextype == "kyberswap" || dextype == "odos" ||  dextype == "0x")) || 
                                                     
                                                     (error.statusCode == 429 && dextype == "okx") ||
-                                                    // (error.statusCode == 403 && dextype == "0x") ||
+                                                     (error.statusCode == 403 && dextype == "0x") ||
                                                     (error.statusCode == 429 && dextype == "openocean"))  {
 
                                                    // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
@@ -2267,14 +2267,8 @@
                     slippageLimitPercent: 0.3,
                 };                
                 break;
-            case '0x':
-                    if (DTChain.Nama_Chain.toLowerCase() === 'ethereum') {
-                        apiUrl = "https://api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
-                    }else  if (DTChain.Nama_Chain.toLowerCase() === 'avax') {
-                        apiUrl = "https://avalanche.api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
-                    } else {
-                        apiUrl = "https://" + DTChain.Nama_Chain + ".api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
-                    }
+            case '0x':           
+                    apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
                     break;
             case '1inch':
                     apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
@@ -2390,7 +2384,7 @@
                                 break;
                             case '0x':
                                 amount_out = response.buyAmount / Math.pow(10, des_output);
-                                FeeSwap = ((response.estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
+                                FeeSwap = ((response.transaction.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
                                 break;
                             case '1inch':
                                 amount_out = parseFloat(response.dstAmount) / Math.pow(10, des_output);
@@ -2438,9 +2432,14 @@
                 switch (xhr.status) {
                     case 0:  
 //                        alertMessage = "NO RESPON"; 
-                        if(dexType=='kyberswap' || dexType =='odos'){
+                        if(dexType=='kyberswap' || dexType =='odos' ||  dexType == '0x'){
                             alertMessage = "KENA LIMIT";
-                        }else{
+                        }
+                        // else if(dexType=='0x'){
+                        //         getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
+                        //         console.log(`${dexType} PINDAH KE SWOOP`);
+                        //     }
+                            else{
                             alertMessage = "NULL RESPONSE";
                         }
                         /*
@@ -2474,10 +2473,10 @@
                     case 403:
                         alertMessage = "AKSES DIBLOK";
                         warna = "#fff";
-                        if(dexType=='0x'){
-                                getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
-                                console.log(`${dexType} PINDAH KE SWOOP`);
-                            }
+                        // if(dexType=='0x'){
+                        //         getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
+                        //         console.log(`${dexType} PINDAH KE SWOOP`);
+                        //     }
                         break;
                     case 404:
                         alertMessage = "Permintaan tidak ditemukan";
