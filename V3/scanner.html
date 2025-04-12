@@ -959,7 +959,8 @@
                                             $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
                                               
                                                 if ((error.statusCode == 0 && (dextype == "kyberswap" || dextype == "odos")) || 
-                                                    (error.statusCode == 429 && dextype == "okx") ||
+                                                    (error.statusCode == 429 && dextype == "okx") || 
+                                                    //(error.statusCode == 403 && dextype == "0x") ||
                                                     (error.statusCode == 429 && dextype == "openocean")) {
 
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
@@ -1014,6 +1015,7 @@
                                                     if ((error.statusCode == 0 && (dextype == "kyberswap" || dextype == "odos")) || 
                                                     
                                                     (error.statusCode == 429 && dextype == "okx") ||
+                                                    // (error.statusCode == 403 && dextype == "0x") ||
                                                     (error.statusCode == 429 && dextype == "openocean"))  {
 
                                                    // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
@@ -2471,6 +2473,11 @@
                         break;
                     case 403:
                         alertMessage = "AKSES DIBLOK";
+                        warna = "#fff";
+                        if(dexType=='0x'){
+                                getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
+                                console.log(`${dexType} PINDAH KE SWOOP`);
+                            }
                         break;
                     case 404:
                         alertMessage = "Permintaan tidak ditemukan";
@@ -2665,7 +2672,7 @@
         const apiKeysRango = [
            // "a24ca428-a18e-4e84-b57f-edb3e2a5bf13", // rubic
             "c6381a79-2817-4602-83bf-6a641a409e32", // umum
-           // "4a624ab5-16ff-4f96-90b7-ab00ddfc342c" //baru
+            "4a624ab5-16ff-4f96-90b7-ab00ddfc342c" //baru
         ];
 
         // Fungsi untuk mendapatkan API Key secara acak
@@ -3229,49 +3236,14 @@
         $.ajax({
             url: 'https://api.bitget.com/api/v2/spot/public/coins',
             method: "GET",
-           /*
-            success: function(response) {
-                console.log(response);
-                // Filter data untuk coin dengan network sesuai dengan chainTypeConfig dan hanya yang deposit atau withdraw aktif
-                const coinsWithChain = response.data.filter(function(item) {
-                    return item.chains.some(function(chain) {
-                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX &&
-                               (chain.rechargeable === "true" || chain.withdrawable === "true"); // Salah satu harus aktif
-                    });
-                });
-    
-                const coinDepositWithdrawStatus = coinsWithChain.map(function(item) {
-                    const CEXChain = item.chains.find(function(chain) {
-                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX;
-                    });
-                
-                    return {
-                        cex: "BITGET",
-                        chain: DTChain.CEXCHAIN.BITGET.chainCEX,
-                        tokenName: item.coin,
-                        scToken: CEXChain ? CEXChain.contractAddress : "---",  // Jika tidak ada contractAddress, tampilkan "---"
-                        feeWDs: CEXChain ? CEXChain.withdrawFee : 0,
-                        depositEnable: CEXChain ? CEXChain.rechargeable === "true" : false,
-                        withdrawEnable: CEXChain ? CEXChain.withdrawable === "true" : false
-                    };
-                });
-                
-                console.log("BITGET WALLET:",coinDepositWithdrawStatus);
-                // Gabungkan hasil ke allFeeWD
-                allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
-                //checkAndSaveAllFeeWD();
-    
-                isBitgetSuccess = true; // Tandai sukses
-                toastr.info("SUKSES, CEK UPDATE WALLET BITGET");
-                checkAllUpdatesCompleted();
-                */
+           
                 success: function(response) {
 
                 // Filter data untuk coin dengan network sesuai dengan chainTypeConfig dan hanya yang deposit atau withdraw aktif
                 const coinsWithChain = response.data.filter(function(item) {
                     return item.chains.some(function(chain) {
                         // If chain is 'erc20' and coin is 'ETH', treat it as 'eth'
-                        if (chain.chain === 'ERC20' && item.coin === 'ETH') {
+                        if (DTChain.CEXCHAIN.BITGET.chainCEX === 'ERC20' && item.coin === 'ETH') {
                             chain.chain = 'ETH';
                         }
                         return (chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX || chain.chain === 'ETH') &&
@@ -3310,8 +3282,7 @@
                 toastr.error('UPDATE FEE WD BITGET GAGAL, SILAKAN REFRESH!!');
             }
         });
-    }    
-    //fungsi cek FEE WD per TOKEN KUCOIN
+    }   //fungsi cek FEE WD per TOKEN KUCOIN
     function CekfeeWDKUCOIN() {
         const ApiKey = CONFIG_CEX.KUCOIN.ApiKey;
         const ApiSecret = CONFIG_CEX.KUCOIN.ApiSecret;
