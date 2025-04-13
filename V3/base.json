@@ -955,36 +955,6 @@
     "status": true
   },
   {
-    "cex": "MEXC",
-    "symbol_in": "ETH",
-    "sc_in": "0x4200000000000000000000000000000000000006",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0x4200000000000000000000000000000000000006",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "BITGET",
-    "symbol_in": "ETH",
-    "sc_in": "0x4200000000000000000000000000000000000006",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0x4200000000000000000000000000000000000006",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "BINANCE",
-    "symbol_in": "ETH",
-    "sc_in": "0x4200000000000000000000000000000000000006",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0x4200000000000000000000000000000000000006",
-    "des_out": 18,
-    "status": true
-  },
-  {
     "cex": "BYBIT",
     "symbol_in": "ETH",
     "sc_in": "0x4200000000000000000000000000000000000006",
@@ -3755,26 +3725,6 @@
     "status": true
   },
   {
-    "cex": "BITGET",
-    "symbol_in": "ETH",
-    "sc_in": "0x4200000000000000000000000000000000000006",
-    "des_in": 18,
-    "symbol_out": "USDC",
-    "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "des_out": 6,
-    "status": true
-  },
-  {
-    "cex": "BINANCE",
-    "symbol_in": "ETH",
-    "sc_in": "0x4200000000000000000000000000000000000006",
-    "des_in": 18,
-    "symbol_out": "USDC",
-    "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "des_out": 6,
-    "status": true
-  },
-  {
     "cex": "BYBIT",
     "symbol_in": "ETH",
     "sc_in": "0x4200000000000000000000000000000000000006",
@@ -5375,26 +5325,6 @@
     "status": true
   },
   {
-    "cex": "BITGET",
-    "symbol_in": "USDC",
-    "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "des_in": 6,
-    "symbol_out": "USDC",
-    "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "des_out": 6,
-    "status": true
-  },
-  {
-    "cex": "BINANCE",
-    "symbol_in": "USDC",
-    "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "des_in": 6,
-    "symbol_out": "USDC",
-    "sc_out": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "des_out": 6,
-    "status": true
-  },
-  {
     "cex": "BYBIT",
     "symbol_in": "USDC",
     "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
@@ -5684,5 +5614,4 @@
     "des_out": 6,
     "status": true
   }
-]
-}
+]}
