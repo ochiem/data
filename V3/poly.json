@@ -249,7 +249,7 @@
     "cex": "BINANCE",
     "symbol_in": "AXL",
     "sc_in": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
-    "des_in": 18,
+    "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
     "des_out": 6,
@@ -257,7 +257,7 @@
   },
   {
     "cex": "BITGET",
-    "symbol_in": "AXL",
+    "symbol_in": "6",
     "sc_in": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
     "des_in": 18,
     "symbol_out": "USDT",
