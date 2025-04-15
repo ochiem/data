@@ -21475,6 +21475,495 @@
       "sc_out": "0x55d398326f99059fF775485246999027B3197955",
       "des_out": 18,
      "status":true
-    }
+    },{
+    "cex": "INDODAX",
+    "symbol_in": "CFX",
+    "sc_in": "0x045c4324039da91c52c55df5d785385aab073dcf",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CLV",
+    "sc_in": "0x09E889BB4D5b474f561db0491C38702F367A4e4d",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CAKE",
+    "sc_in": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CONX",
+    "sc_in": "0x1b2128AbC4119474D16Bb0a04200B63B0e68A971",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "NEAR",
+    "sc_in": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "TLM",
+    "sc_in": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
+    "des_in": 4,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "MRS",
+    "sc_in": "0x238D02eE3F80FBf5E381F049616025c186889B68",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "GMT",
+    "sc_in": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1",
+    "des_in": 8,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "MBOX",
+    "sc_in": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "TUSD",
+    "sc_in": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "TOKEN",
+    "sc_in": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
+    "des_in": 9,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "WOO",
+    "sc_in": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "NFP",
+    "sc_in": "0x551897f8203bd131b350601d3ac0679ba0fc0136",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "XR",
+    "sc_in": "0x5f78f4bfcb2b43bc174fe16a69a13945cefa2978",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "ARV",
+    "sc_in": "0x6679eb24f59dfe111864aec72b443d1da666b360",
+    "des_in": 8,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "DODO",
+    "sc_in": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CAT",
+    "sc_in": "0x6894CDe390a3f51155ea41Ed24a33A4827d3063D",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "KUNCI",
+    "sc_in": "0x6cf271270662be1C4fc1b7BB7D7D7Fc60Cc19125",
+    "des_in": 6,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "UNIX",
+    "sc_in": "0x6F03dB55a9954E95819a305814AD2E2a3acb9b28",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "GFT",
+    "sc_in": "0x72ff5742319ef07061836f5c924ac6d72c919080",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "MMETA",
+    "sc_in": "0x7a9c8d33963AeCcA9a821802Adfaf5Bd9392351F",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "MCT",
+    "sc_in": "0x8038B1F3EB4f70436569618530Ac96b439D67bAe",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "ALT",
+    "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "AXL",
+    "sc_in": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
+    "des_in": 6,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CTSI",
+    "sc_in": "0x8da443f84fea710266c8eb6bc34b71702d033ef2",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "ALPACA",
+    "sc_in": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "BRISE",
+    "sc_in": "0x8fff93e810a2edaafc326edee51071da9d398e83",
+    "des_in": 9,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "IOTX",
+    "sc_in": "0x9678e42cebeb63f23197d726b29b1cb20d0064e5",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CGPT",
+    "sc_in": "0x9840652dc04fb9db2c43853633f0f62be6f00f98",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "MULTI",
+    "sc_in": "0x9fb9a33956351cf4fa040f65a13b835a3c8764e3",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "ELF",
+    "sc_in": "0xa3f020a5c92e15be13caf0ee5c95cf79585eecc9",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "SYN",
+    "sc_in": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "CTK",
+    "sc_in": "0xa8c2b8eec3d368c0253ad3dae65a5f2bbb89c929",
+    "des_in": 6,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "H2O",
+    "sc_in": "0xaf3287cae99c982586c07401c0d911bf7de6cd82",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "PROM",
+    "sc_in": "0xaf53d56ff99f1322515e54fdde93ff8b3b7dafd5",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "PENDLE",
+    "sc_in": "0xb3ed0a426155b79b898849803e3b36552f7ed507",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "BNB",
+    "sc_in": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "AI",
+    "sc_in": "0xbda011d7f8ec00f66c1923b049b94c67d148d8b2",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "BETA",
+    "sc_in": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "W3F",
+    "sc_in": "0xC01444175FF3C39047F1548507CDf2183dC55E06",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "STRM",
+    "sc_in": "0xC598275452fA319d75ee5f176FD3B8384925b425",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "XVS",
+    "sc_in": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "SFP",
+    "sc_in": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "MAV",
+    "sc_in": "0xd691d9a68c887bdf34da8c36f63487333acfd103",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "BAKE",
+    "sc_in": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "FLOKI",
+    "sc_in": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+    "des_in": 9,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "SHILL",
+    "sc_in": "0xfb9C339b4BacE4Fe63ccc1dd9a3c3C531441D5fE",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "LISTA",
+    "sc_in": "0xfceb31a79f71ac9cbdcf853519c1b12d379edc46",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "INDODAX",
+    "symbol_in": "KNC",
+    "sc_in": "0xfe56d5892bdffc7bf58f2e84be1b2c32d21c308b",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "des_out": 18,
+    "status": true
+  }
   ]
 }
