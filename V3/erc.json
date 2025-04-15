@@ -36025,9 +36025,9 @@
       "des_out": 18,
      "status":true
     },
-  {
+    {
     "cex": "INDODAX",
-    "symbol_in": "skl",
+    "symbol_in": "SKL",
     "sc_in": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36037,7 +36037,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bear",
+    "symbol_in": "BEAR",
     "sc_in": "0x016ee7373248a80bde1fd6baa001311d233b3cfa",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36047,7 +36047,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "glch",
+    "symbol_in": "GLCH",
     "sc_in": "0x038a68ff68c393373ec894015816e33ad41bd564",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36057,7 +36057,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bond",
+    "symbol_in": "BOND",
     "sc_in": "0x0391d2021f89dc339f60fff84546ea23e337750f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36067,7 +36067,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "uma",
+    "symbol_in": "UMA",
     "sc_in": "0x04fa0d235c4abf4bcf4787af4cf447de572ef828",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36077,7 +36077,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dar",
+    "symbol_in": "DAR",
     "sc_in": "0x081131434f93063751813c619ecca9c4dc7862a3",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -36087,7 +36087,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "spell",
+    "symbol_in": "SPELL",
     "sc_in": "0x090185f2135308bad17527004364ebcc2d37e5f6",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36097,7 +36097,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "swell",
+    "symbol_in": "SWELL",
     "sc_in": "0x0a6e7ba5042b38349e437ec6db6214aec7b35676",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36107,7 +36107,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dnt",
+    "symbol_in": "DNT",
     "sc_in": "0x0abdace70d3790235af448c88547603b945604ea",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36117,7 +36117,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "api3",
+    "symbol_in": "API3",
     "sc_in": "0x0b38210ea11411557c13457d4da7dc6ea731b88a",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36127,7 +36127,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "yfi",
+    "symbol_in": "YFI",
     "sc_in": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36137,7 +36137,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "wnxm",
+    "symbol_in": "WNXM",
     "sc_in": "0x0d438f3b5175bebc262bf23753c1e53d03432bde",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36147,7 +36147,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bat",
+    "symbol_in": "BAT",
     "sc_in": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36157,7 +36157,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "abyss",
+    "symbol_in": "ABYSS",
     "sc_in": "0x0e8d6b471e332f140e7d9dbb99e5e3822f728da6",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36167,7 +36167,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dao",
+    "symbol_in": "DAO",
     "sc_in": "0x0f51bb10119727a7e5ea3538074fb341f56b09ad",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36177,7 +36177,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "mana",
+    "symbol_in": "MANA",
     "sc_in": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36187,7 +36187,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pundix",
+    "symbol_in": "PUNDIX",
     "sc_in": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36197,7 +36197,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dvi",
+    "symbol_in": "DVI",
     "sc_in": "0x10633216e7e8281e33c86f02bf8e565a635d9770",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36207,7 +36207,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "taiko",
+    "symbol_in": "TAIKO",
     "sc_in": "0x10dea67478c5f8c5e2d90e5e9b26dbe60c54d800",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36217,7 +36217,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "1inch",
+    "symbol_in": "1INCH",
     "sc_in": "0x111111111117dc0aa78b770fa6a738034120c302",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36227,7 +36227,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dogegov",
+    "symbol_in": "DOGEGOV",
     "sc_in": "0x1121AcC14c63f3C872BFcA497d10926A6098AAc5",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36237,7 +36237,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ladys",
+    "symbol_in": "LADYS",
     "sc_in": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36247,7 +36247,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cyber",
+    "symbol_in": "CYBER",
     "sc_in": "0x14778860e937f509e651192a90589de711fb88a9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36257,7 +36257,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "wld",
+    "symbol_in": "WLD",
     "sc_in": "0x163f8c2467924be0ae7b5347228cabf260318753",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36267,7 +36267,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "audio",
+    "symbol_in": "AUDIO",
     "sc_in": "0x18aaa7115705e8be94bffebde57af9bfc265b998",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36277,7 +36277,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cbg",
+    "symbol_in": "CBG",
     "sc_in": "0x1900E8B5619a3596745F715d0427Fe617c729BA9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36287,7 +36287,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rep",
+    "symbol_in": "REP",
     "sc_in": "0x1985365e9f78359a9b6ad760e32412f4a445e862",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36297,7 +36297,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dep",
+    "symbol_in": "DEP",
     "sc_in": "0x1a3496c18d558bd9c6c8f609e1b129f67ab08163",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36307,7 +36307,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "portal",
+    "symbol_in": "PORTAL",
     "sc_in": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36317,7 +36317,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "uni",
+    "symbol_in": "UNI",
     "sc_in": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36327,7 +36327,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "wbtc",
+    "symbol_in": "WBTC",
     "sc_in": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -36337,7 +36337,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "mavia",
+    "symbol_in": "MAVIA",
     "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36347,7 +36347,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pando",
+    "symbol_in": "PANDO",
     "sc_in": "0x252b9f56359901a0bde52d0675b1f1130d86f471",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36357,7 +36357,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ygg",
+    "symbol_in": "YGG",
     "sc_in": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36367,7 +36367,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "leo",
+    "symbol_in": "LEO",
     "sc_in": "0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36377,7 +36377,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cream",
+    "symbol_in": "CREAM",
     "sc_in": "0x2ba592f78db6436527729929aaf6c908497cb200",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36387,7 +36387,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rev",
+    "symbol_in": "REV",
     "sc_in": "0x2ef52ed7de8c5ce03a4ef0efbe9b7450f2d7edc9",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -36397,7 +36397,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "move",
+    "symbol_in": "MOVE",
     "sc_in": "0x3073f7aAA4DB83f95e9FFf17424F71D4751a3073",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -36407,7 +36407,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rad",
+    "symbol_in": "RAD",
     "sc_in": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36417,7 +36417,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rsr",
+    "symbol_in": "RSR",
     "sc_in": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36427,7 +36427,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pixel",
+    "symbol_in": "PIXEL",
     "sc_in": "0x3429d03c6f7521aec737a0bbf2e5ddcef2c3ae31",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36437,7 +36437,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "fxs",
+    "symbol_in": "FXS",
     "sc_in": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36447,7 +36447,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "badger",
+    "symbol_in": "BADGER",
     "sc_in": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36457,7 +36457,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "wozx",
+    "symbol_in": "WOZX",
     "sc_in": "0x34950ff2b487d9e5282c5ab342d08a2f712eb79f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36467,7 +36467,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "chz",
+    "symbol_in": "CHZ",
     "sc_in": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36477,7 +36477,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "om",
+    "symbol_in": "OM",
     "sc_in": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36487,7 +36487,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dent",
+    "symbol_in": "DENT",
     "sc_in": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -36497,7 +36497,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "omni",
+    "symbol_in": "OMNI",
     "sc_in": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36507,7 +36507,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "sand",
+    "symbol_in": "SAND",
     "sc_in": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36517,7 +36517,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "banana",
+    "symbol_in": "BANANA",
     "sc_in": "0x38e68a37e401f7271568cecaac63c6b1e19130b4",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36527,7 +36527,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "titan",
+    "symbol_in": "TITAN",
     "sc_in": "0x3a8cccb969a61532d1e6005e2ce12c200caece87",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36537,7 +36537,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rez",
+    "symbol_in": "REZ",
     "sc_in": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36547,7 +36547,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "mnt",
+    "symbol_in": "MNT",
     "sc_in": "0x3c3a81e81dc49a522a592e7622a7e711c06bf354",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36557,7 +36557,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "lina",
+    "symbol_in": "LINA",
     "sc_in": "0x3e9bc21c9b189c09df3ef1b824798658d5011937",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36567,7 +36567,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ren",
+    "symbol_in": "REN",
     "sc_in": "0x408e41876cccdc0f92210600ef50372656052a38",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36577,7 +36577,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cvc",
+    "symbol_in": "CVC",
     "sc_in": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -36587,7 +36587,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "loom",
+    "symbol_in": "LOOM",
     "sc_in": "0x42476f744292107e34519f9c357927074ea3f75d",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36597,7 +36597,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pyr",
+    "symbol_in": "PYR",
     "sc_in": "0x430ef9263e76dae63c84292c3409d61c598e9682",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36607,7 +36607,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "unfi",
+    "symbol_in": "UNFI",
     "sc_in": "0x441761326490cacf7af299725b6292597ee822c2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36617,7 +36617,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "solve",
+    "symbol_in": "SOLVE",
     "sc_in": "0x446c9033e7516d820cc9a2ce2d0b7328b579406f",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -36627,7 +36627,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pol",
+    "symbol_in": "POL",
     "sc_in": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36637,7 +36637,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "paxg",
+    "symbol_in": "PAXG",
     "sc_in": "0x45804880de22913dafe09f4980848ece6ecbaf78",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36647,7 +36647,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "tel",
+    "symbol_in": "TEL",
     "sc_in": "0x467bccd9d29f223bce8043b84e8c8b282827790f",
     "des_in": 2,
     "symbol_out": "ETH",
@@ -36657,7 +36657,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "srm",
+    "symbol_in": "SRM",
     "sc_in": "0x476c5e26a75bd202a9683ffd34359c0cc15be0ff",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -36667,7 +36667,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pxg",
+    "symbol_in": "PXG",
     "sc_in": "0x47e67ba66b0699500f18a53f94e2b9db3d47437e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36677,7 +36677,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "qnt",
+    "symbol_in": "QNT",
     "sc_in": "0x4a220e6096b25eadb88358cb44068a3248254675",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36687,7 +36687,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "lever",
+    "symbol_in": "LEVER",
     "sc_in": "0x4b5f49487ea7b3609b1ad05459be420548789f1f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36697,7 +36697,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "hifi",
+    "symbol_in": "HIFI",
     "sc_in": "0x4b9278b94a1112cad404048903b8d343a810b07e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36707,7 +36707,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "puffer",
+    "symbol_in": "PUFFER",
     "sc_in": "0x4d1c297d39c5c1277964d0e3f8aa901493664530",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36717,7 +36717,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ape",
+    "symbol_in": "APE",
     "sc_in": "0x4d224452801aced8b2f0aebe155379bb5d594381",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36727,7 +36727,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ftm",
+    "symbol_in": "FTM",
     "sc_in": "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36737,7 +36737,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cvx",
+    "symbol_in": "CVX",
     "sc_in": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36747,7 +36747,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "celr",
+    "symbol_in": "CELR",
     "sc_in": "0x4f9254c83eb525f9fcf346490bbb3ed28a81c667",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36757,7 +36757,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "link",
+    "symbol_in": "LINK",
     "sc_in": "0x514910771af9ca656af840dff83e8264ecf986ca",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36767,7 +36767,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "blur",
+    "symbol_in": "BLUR",
     "sc_in": "0x5283d291dbcf85356a21ba090e6db59121208b44",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36777,7 +36777,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bgb",
+    "symbol_in": "BGB",
     "sc_in": "0x54d2252757e1672eead234d27b1270728ff90581",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36787,7 +36787,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "blz",
+    "symbol_in": "BLZ",
     "sc_in": "0x5732046a883704404f284ce41ffadd5b007fd668",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36797,7 +36797,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "iq",
+    "symbol_in": "IQ",
     "sc_in": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36807,7 +36807,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ena",
+    "symbol_in": "ENA",
     "sc_in": "0x57e114b691db790c35207b2e685d4a43181e6061",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36817,7 +36817,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "lpt",
+    "symbol_in": "LPT",
     "sc_in": "0x58b6a8a3302369daec383334672404ee733ab239",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36827,7 +36827,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "apu",
+    "symbol_in": "APU",
     "sc_in": "0x594daad7d77592a2b97b725a7ad59d7e188b5bfa",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36837,7 +36837,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "powr",
+    "symbol_in": "POWR",
     "sc_in": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -36847,7 +36847,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ldo",
+    "symbol_in": "LDO",
     "sc_in": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36857,7 +36857,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "safe",
+    "symbol_in": "SAFE",
     "sc_in": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36867,7 +36867,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dad",
+    "symbol_in": "DAD",
     "sc_in": "0x5b322514ff727253292637d9054301600c2c81e8",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -36877,7 +36877,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "sgt",
+    "symbol_in": "SGT",
     "sc_in": "0x5b649c07e7ba0a1c529deaabed0b47699919b4a2",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -36887,7 +36887,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rlc",
+    "symbol_in": "RLC",
     "sc_in": "0x607f4c5bb672230e8672085532f7e901544a7375",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -36897,7 +36897,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "skya",
+    "symbol_in": "SKYA",
     "sc_in": "0x623cd3a3edf080057892aaf8d773bbb7a5c9b6e9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36907,7 +36907,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ssp",
+    "symbol_in": "SSP",
     "sc_in": "0x624d520bab2e4ad83935fa503fb130614374e850",
     "des_in": 4,
     "symbol_out": "ETH",
@@ -36917,7 +36917,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "aioz",
+    "symbol_in": "AIOZ",
     "sc_in": "0x626e8036deb333b408be468f951bdb42433cbf18",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36927,7 +36927,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "beam",
+    "symbol_in": "BEAM",
     "sc_in": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36937,7 +36937,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "efi",
+    "symbol_in": "EFI",
     "sc_in": "0x656c00e1bcd96f256f224ad9112ff426ef053733",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36947,7 +36947,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "orc",
+    "symbol_in": "ORC",
     "sc_in": "0x662b67d00a13faf93254714dd601f5ed49ef2f51",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36957,7 +36957,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "gno",
+    "symbol_in": "GNO",
     "sc_in": "0x6810e776880c02933d47db1b9fc05908e5386b96",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36967,7 +36967,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "xaut",
+    "symbol_in": "XAUT",
     "sc_in": "0x68749665ff8d2d112fa859aa293f07a622782f38",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -36977,7 +36977,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "andy",
+    "symbol_in": "ANDY",
     "sc_in": "0x68bbed6a47194eff1cf514b50ea91895597fc91e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36987,7 +36987,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bull",
+    "symbol_in": "BULL",
     "sc_in": "0x68eb95dc9934e19b86687a10df8e364423240e94",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -36997,7 +36997,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pepe",
+    "symbol_in": "PEPE",
     "sc_in": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37007,7 +37007,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "mask",
+    "symbol_in": "MASK",
     "sc_in": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37017,7 +37017,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "defi",
+    "symbol_in": "DEFI",
     "sc_in": "0x6b0faca7ba905a86f221ceb5ca404f605e5b3131",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37027,7 +37027,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dai",
+    "symbol_in": "DAI",
     "sc_in": "0x6b175474e89094c44da98b954eedeac495271d0f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37037,7 +37037,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "sushi",
+    "symbol_in": "SUSHI",
     "sc_in": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37047,7 +37047,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pha",
+    "symbol_in": "PHA",
     "sc_in": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37057,7 +37057,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "hot",
+    "symbol_in": "HOT",
     "sc_in": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37067,7 +37067,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "lqty",
+    "symbol_in": "LQTY",
     "sc_in": "0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37077,7 +37077,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "arkm",
+    "symbol_in": "ARKM",
     "sc_in": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37087,7 +37087,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "xsgd",
+    "symbol_in": "XSGD",
     "sc_in": "0x70e8de73ce538da2beed35d14187f6959a8eca96",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -37097,7 +37097,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "high",
+    "symbol_in": "HIGH",
     "sc_in": "0x71ab77b7dbb4fa7e017bc15090b2163221420282",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37107,7 +37107,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "flux",
+    "symbol_in": "FLUX",
     "sc_in": "0x720cd16b011b987da3518fbf38c3071d4f0d1495",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -37117,7 +37117,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "octo",
+    "symbol_in": "OCTO",
     "sc_in": "0x7240ac91f01233baaf8b064248e80feaa5912ba3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37127,7 +37127,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "jasmy",
+    "symbol_in": "JASMY",
     "sc_in": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37137,7 +37137,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "snt",
+    "symbol_in": "SNT",
     "sc_in": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37147,7 +37147,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "okb",
+    "symbol_in": "OKB",
     "sc_in": "0x75231f58b43240c9718dd58b4967c5114342a86c",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37157,7 +37157,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ilv",
+    "symbol_in": "ILV",
     "sc_in": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37167,7 +37167,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "people",
+    "symbol_in": "PEOPLE",
     "sc_in": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37177,7 +37177,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "agi",
+    "symbol_in": "AGI",
     "sc_in": "0x7da2641000cbb407c329310c461b2cb9c70c3046",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37187,7 +37187,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "glm",
+    "symbol_in": "GLM",
     "sc_in": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37197,7 +37197,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "volt",
+    "symbol_in": "VOLT",
     "sc_in": "0x7f792db54b0e580cdc755178443f0430cf799aca",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -37207,7 +37207,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "aave",
+    "symbol_in": "AAVE",
     "sc_in": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37217,7 +37217,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "neirocto",
+    "symbol_in": "NEIROCTO",
     "sc_in": "0x812Ba41e071C7b7fA4EBcFB62dF5F45f6fA853Ee",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -37227,7 +37227,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ogn",
+    "symbol_in": "OGN",
     "sc_in": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37237,7 +37237,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "game2",
+    "symbol_in": "GAME2",
     "sc_in": "0x825459139C897D769339f295E962396C4F9E4A4D",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37247,7 +37247,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ankr",
+    "symbol_in": "ANKR",
     "sc_in": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37257,7 +37257,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "pols",
+    "symbol_in": "POLS",
     "sc_in": "0x83e6f1e41cdd28eaceb20cb649155049fac3d5aa",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37267,7 +37267,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "drx",
+    "symbol_in": "DRX",
     "sc_in": "0x83f4389ccCe1CC044dD7441Add33c4F28b967434",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37277,7 +37277,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "altlayer",
+    "symbol_in": "ALTLAYER",
     "sc_in": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37287,7 +37287,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "l3",
+    "symbol_in": "L3",
     "sc_in": "0x88909d489678dd17aa6d9609f89b0419bf78fd9a",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37297,7 +37297,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "trb",
+    "symbol_in": "TRB",
     "sc_in": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37307,7 +37307,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "att",
+    "symbol_in": "ATT",
     "sc_in": "0x89Fb927240750c1B15d4743cd58440fc5f14A11C",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37317,7 +37317,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "chr",
+    "symbol_in": "CHR",
     "sc_in": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -37327,7 +37327,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "vanry",
+    "symbol_in": "VANRY",
     "sc_in": "0x8de5b80a0c1b02fe4976851d030b36122dbb8624",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37337,7 +37337,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "npc",
+    "symbol_in": "NPC",
     "sc_in": "0x8ed97a637a790be1feff5e888d43629dc05408f6",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37347,7 +37347,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "req",
+    "symbol_in": "REQ",
     "sc_in": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37357,7 +37357,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dydx",
+    "symbol_in": "DYDX",
     "sc_in": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37367,7 +37367,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "dusk",
+    "symbol_in": "DUSK",
     "sc_in": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37377,7 +37377,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "shib",
+    "symbol_in": "SHIB",
     "sc_in": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37387,7 +37387,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "kdag",
+    "symbol_in": "KDAG",
     "sc_in": "0x95e40e065afb3059dcabe4aaf404c1f92756603a",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37397,7 +37397,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bone",
+    "symbol_in": "BONE",
     "sc_in": "0x9813037ee2218799597d83d4a5b6f3b6778218d9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37407,7 +37407,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "poly",
+    "symbol_in": "POLY",
     "sc_in": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37417,7 +37417,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "kok",
+    "symbol_in": "KOK",
     "sc_in": "0x9b9647431632af44be02ddd22477ed94d14aacaa",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37427,7 +37427,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "gravity",
+    "symbol_in": "GRAVITY",
     "sc_in": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37437,7 +37437,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ssv",
+    "symbol_in": "SSV",
     "sc_in": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37447,7 +37447,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "metis",
+    "symbol_in": "METIS",
     "sc_in": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37457,7 +37457,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "mkr",
+    "symbol_in": "MKR",
     "sc_in": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37467,7 +37467,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cro",
+    "symbol_in": "CRO",
     "sc_in": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -37477,7 +37477,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "toko",
+    "symbol_in": "TOKO",
     "sc_in": "0xa0f0546eb5e3ee7e8cfc5da12e5949f3ae622675",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37487,7 +37487,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "yfii",
+    "symbol_in": "YFII",
     "sc_in": "0xa1d0e215a23d7030842fc67ce582a6afa3ccab83",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37497,7 +37497,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ata",
+    "symbol_in": "ATA",
     "sc_in": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37507,7 +37507,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "turbo",
+    "symbol_in": "TURBO",
     "sc_in": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37517,7 +37517,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "root",
+    "symbol_in": "ROOT",
     "sc_in": "0xa3d4bee77b05d4a0c943877558ce21a763c4fa29",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -37527,7 +37527,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ctc",
+    "symbol_in": "CTC",
     "sc_in": "0xa3ee21c306a700e682abcdfe9baa6a08f3820419",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37537,7 +37537,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "auction",
+    "symbol_in": "AUCTION",
     "sc_in": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37547,7 +37547,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cel",
+    "symbol_in": "CEL",
     "sc_in": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
     "des_in": 4,
     "symbol_out": "ETH",
@@ -37557,7 +37557,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "orderly",
+    "symbol_in": "ORDERLY",
     "sc_in": "0xABD4C63d2616A5201454168269031355f4764337",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37567,7 +37567,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cind",
+    "symbol_in": "CIND",
     "sc_in": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37577,7 +37577,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "alice",
+    "symbol_in": "ALICE",
     "sc_in": "0xac51066d7bec65dc4589368da368b212745d63e8",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -37587,7 +37587,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "c98",
+    "symbol_in": "C98",
     "sc_in": "0xae12c5930881c53715b369cec7606b70d8eb229f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37597,7 +37597,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "fet",
+    "symbol_in": "FET",
     "sc_in": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37607,7 +37607,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "stg",
+    "symbol_in": "STG",
     "sc_in": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37617,7 +37617,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "meme",
+    "symbol_in": "MEME",
     "sc_in": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37627,7 +37627,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "zig",
+    "symbol_in": "ZIG",
     "sc_in": "0xb2617246d0c6c0087f18703d576831899ca94f01",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37637,7 +37637,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "hft",
+    "symbol_in": "HFT",
     "sc_in": "0xb3999f658c0391d94a37f7ff328f3fec942bcadc",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37647,7 +37647,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "arb",
+    "symbol_in": "ARB",
     "sc_in": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37657,7 +37657,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "aevo",
+    "symbol_in": "AEVO",
     "sc_in": "0xb528edbef013aff855ac3c50b381f253af13b997",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37667,7 +37667,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "lit",
+    "symbol_in": "LIT",
     "sc_in": "0xb59490ab09a0f526cc7305822ac65f2ab12f9723",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37677,7 +37677,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "nexo",
+    "symbol_in": "NEXO",
     "sc_in": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37687,7 +37687,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "storj",
+    "symbol_in": "STORJ",
     "sc_in": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -37697,7 +37697,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "sfi",
+    "symbol_in": "SFI",
     "sc_in": "0xb753428af26e81097e7fd17f40c88aaa3e04902c",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37707,7 +37707,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bal",
+    "symbol_in": "BAL",
     "sc_in": "0xba100000625a3754423978a60c9317c58a424e3d",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37717,7 +37717,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "band",
+    "symbol_in": "BAND",
     "sc_in": "0xba11d00c5f74255f56a5e366f4f77f5a186d7f55",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37727,7 +37727,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rare",
+    "symbol_in": "RARE",
     "sc_in": "0xba5bde662c17e2adff1075610382b9b691296350",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37737,7 +37737,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "axs",
+    "symbol_in": "AXS",
     "sc_in": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37747,7 +37747,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "fanc",
+    "symbol_in": "FANC",
     "sc_in": "0xbb126042235e6bd38b17744cb31a8bf4a206c045",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37757,7 +37757,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "lrc",
+    "symbol_in": "LRC",
     "sc_in": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37767,7 +37767,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ern",
+    "symbol_in": "ERN",
     "sc_in": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37777,7 +37777,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "perp",
+    "symbol_in": "PERP",
     "sc_in": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37787,7 +37787,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ath",
+    "symbol_in": "ATH",
     "sc_in": "0xbe0ed4138121ecfc5c0e56b40517da27e6c5226b",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37797,7 +37797,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "comp",
+    "symbol_in": "COMP",
     "sc_in": "0xc00e94cb662c3520282e6f5717214004a7f26888",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37807,7 +37807,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "snx",
+    "symbol_in": "SNX",
     "sc_in": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37817,7 +37817,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "combo",
+    "symbol_in": "COMBO",
     "sc_in": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37827,7 +37827,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ens",
+    "symbol_in": "ENS",
     "sc_in": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37837,7 +37837,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "adp",
+    "symbol_in": "ADP",
     "sc_in": "0xc314b0e758d5ff74f63e307a86ebfe183c95767b",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37847,7 +37847,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "eurt",
+    "symbol_in": "EURT",
     "sc_in": "0xc581b735a1688071a1746c968e0798d642ede491",
     "des_in": 6,
     "symbol_out": "ETH",
@@ -37857,7 +37857,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "fdusd",
+    "symbol_in": "FDUSD",
     "sc_in": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37867,7 +37867,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "zkj",
+    "symbol_in": "ZKJ",
     "sc_in": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37877,7 +37877,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "grt",
+    "symbol_in": "GRT",
     "sc_in": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37887,7 +37887,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rss3",
+    "symbol_in": "RSS3",
     "sc_in": "0xc98d64da73a6616c42117b582e832812e7b8d57f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37897,7 +37897,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "strk",
+    "symbol_in": "STRK",
     "sc_in": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37907,7 +37907,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "slp",
+    "symbol_in": "SLP",
     "sc_in": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25",
     "des_in": 0,
     "symbol_out": "ETH",
@@ -37917,7 +37917,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "threshold",
+    "symbol_in": "THRESHOLD",
     "sc_in": "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37927,7 +37927,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "galagames",
+    "symbol_in": "GALAGAMES",
     "sc_in": "0xd1d2Eb1B1e90B638588728b4130137D262C87cae",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -37937,7 +37937,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "omg",
+    "symbol_in": "OMG",
     "sc_in": "0xd26114cd6ee289accf82350c8d8487fedb8a0c07",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37947,7 +37947,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "rpl",
+    "symbol_in": "RPL",
     "sc_in": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37957,7 +37957,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "crv",
+    "symbol_in": "CRV",
     "sc_in": "0xd533a949740bb3306d119cc777fa900ba034cd52",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37967,7 +37967,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "cbk",
+    "symbol_in": "CBK",
     "sc_in": "0xd85a6ae55a7f33b0ee113c234d2ee308edeaf7fd",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37977,7 +37977,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "eurs",
+    "symbol_in": "EURS",
     "sc_in": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
     "des_in": 2,
     "symbol_out": "ETH",
@@ -37987,7 +37987,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ten",
+    "symbol_in": "TEN",
     "sc_in": "0xdd16ec0f66e54d453e6756713e533355989040e4",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -37997,7 +37997,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "coti",
+    "symbol_in": "COTI",
     "sc_in": "0xddb3422497e61e13543bea06989c0789117555c5",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38007,7 +38007,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "gtc",
+    "symbol_in": "GTC",
     "sc_in": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38017,7 +38017,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "spx",
+    "symbol_in": "SPX",
     "sc_in": "0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -38027,7 +38027,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "inj",
+    "symbol_in": "INJ",
     "sc_in": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38037,7 +38037,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "zrx",
+    "symbol_in": "ZRX",
     "sc_in": "0xe41d2489571d322189246dafa5ebde1f4699f498",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38047,7 +38047,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "superverse",
+    "symbol_in": "SUPERVERSE",
     "sc_in": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38057,7 +38057,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "eigen",
+    "symbol_in": "EIGEN",
     "sc_in": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38067,7 +38067,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ach",
+    "symbol_in": "ACH",
     "sc_in": "0xed04915c23f00a313a544955524eb7dbd823143d",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -38077,7 +38077,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "botx",
+    "symbol_in": "BOTX",
     "sc_in": "0xEF19F4E48830093Ce5bC8b3Ff7f903A0AE3E9Fa1",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38087,7 +38087,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "zeta",
+    "symbol_in": "ZETA",
     "sc_in": "0xf091867ec603a6628ed83d274e835539d82e9cc8",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38097,7 +38097,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "islm",
+    "symbol_in": "ISLM",
     "sc_in": "0xf10c41ca085fc8d9326a65408d14dae28a3e69a5",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38107,7 +38107,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "hedg",
+    "symbol_in": "HEDG",
     "sc_in": "0xF1290473E210b2108A85237fbCd7b6eb42Cc654F",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38117,7 +38117,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "bico",
+    "symbol_in": "BICO",
     "sc_in": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38127,7 +38127,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "vra",
+    "symbol_in": "VRA",
     "sc_in": "0xf411903cbc70a74d22900a5de66a2dda66507255",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38137,7 +38137,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "mtl",
+    "symbol_in": "MTL",
     "sc_in": "0xf433089366899d83a9f26a773d59ec7ecf30355e",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -38147,7 +38147,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "looks",
+    "symbol_in": "LOOKS",
     "sc_in": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38157,7 +38157,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "imx",
+    "symbol_in": "IMX",
     "sc_in": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38167,27 +38167,27 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "enj",
+    "symbol_in": "ENJ",
     "sc_in": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
     "des_in": 18,
     "symbol_out": "ETH",
-    "sc_out": "",
-    "des_out": "",
-    "status": ""
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "moca",
+    "symbol_in": "MOCA",
     "sc_in": "0xf944e35f95e819e752f3ccb5faf40957d311e8c5",
     "des_in": 18,
     "symbol_out": "ETH",
-    "sc_out": "",
-    "des_out": "",
-    "status": ""
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ondo",
+    "symbol_in": "ONDO",
     "sc_in": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38197,7 +38197,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "zrc",
+    "symbol_in": "ZRC",
     "sc_in": "0xfd418e42783382e86ae91e445406600ba144d162",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38207,7 +38207,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "ethfi",
+    "symbol_in": "ETHFI",
     "sc_in": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38217,7 +38217,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "amp",
+    "symbol_in": "AMP",
     "sc_in": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38227,7 +38227,7 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "orbs",
+    "symbol_in": "ORBS",
     "sc_in": "0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -38235,6 +38235,5 @@
     "des_out": 18,
     "status": true
   }
-
   ]
 }
