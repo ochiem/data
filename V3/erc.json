@@ -36025,8 +36025,6 @@
       "des_out": 18,
      "status":true
     },
-
-    [
   {
     "cex": "INDODAX",
     "symbol_in": "skl",
@@ -38237,6 +38235,6 @@
     "des_out": 18,
     "status": true
   }
-]
+
   ]
 }
