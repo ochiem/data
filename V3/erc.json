@@ -30496,26 +30496,8 @@
       "des_out": 18,
       "status": true
     },
-    {
-      "cex": "INDODAX",
-      "symbol_in": "CIND",
-      "sc_in": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
-      "des_in": 18,
-      "symbol_out": "ETH",
-      "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      "des_out": 18,
-      "status": true
-    },
-    {
-      "cex": "INDODAX",
-      "symbol_in": "CLV",
-      "sc_in": "0x80C62FE4487E1351b47Ba49809EBD60ED085bf52",
-      "des_in": 18,
-      "symbol_out": "ETH",
-      "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      "des_out": 18,
-      "status": true
-    },
+    
+   
     {
       "cex": "INDODAX",
       "symbol_in": "COMBO",
@@ -30659,7 +30641,7 @@
     {
       "cex": "INDODAX",
       "symbol_in": "DAR",
-      "sc_in": "0x081131434f93063751813c619ecca9c4dc7862a3",
+      "sc_in": "0x33b481CbBF3c24f2B3184Ee7Cb02dAAD1C4F49A8",
       "des_in": 6,
       "symbol_out": "ETH",
       "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -31366,16 +31348,7 @@
       "des_out": 18,
       "status": true
     },
-    {
-      "cex": "INDODAX",
-      "symbol_in": "MULTI",
-      "sc_in": "0x65ef703f5594d2573eb71aaf55bc0cb548492df4",
-      "des_in": 18,
-      "symbol_out": "ETH",
-      "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      "des_out": 18,
-      "status": true
-    },
+    
     {
       "cex": "INDODAX",
       "symbol_in": "NBT",
