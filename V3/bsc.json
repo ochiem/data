@@ -592,6 +592,15 @@
       "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
       "des_out": 18,
       "status": true
+    }, {
+      "cex": "BINANCE",
+      "symbol_in": "HYPER",
+      "sc_in": "0xC9d23ED2ADB0f551369946BD377f8644cE1ca5c4",
+      "des_in": 18,
+      "symbol_out": "USDT",
+      "sc_out": "0x55d398326f99059ff775485246999027b3197955",
+      "des_out": 18,
+      "status": true
     },
     {
       "cex": "BINANCE",
