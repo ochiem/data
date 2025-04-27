@@ -18525,6 +18525,26 @@
     "des_out": 6,
     "status": true
   },
+   {
+    "cex": "INDODAX",
+    "symbol_in": "EPIC",
+    "sc_in": "0x94314a14df63779c99c0764a30e0cd22fa78fc0e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+{
+    "cex": "INDODAX",
+    "symbol_in": "EPIC",
+    "sc_in": "0x94314a14df63779c99c0764a30e0cd22fa78fc0e",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "des_out": 6,
+    "status": true
+  },
   {
     "cex": "BYBIT",
     "symbol_in": "ESE",
