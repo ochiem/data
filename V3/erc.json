@@ -72674,6 +72674,4625 @@
     "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "des_out": 6,
    "status": true
+  },  {
+    "cex": "COINEX",
+    "symbol_in": "SLP",
+    "sc_in": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25",
+    "des_in": 0,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AST",
+    "sc_in": "0x27054b13b1b798b345b591a4d22e6562d47ea75a",
+    "des_in": 4,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UOS",
+    "sc_in": "0xd13c7342e1ef687c5ad21b27c2b65d772cab5c8c",
+    "des_in": 4,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WHALE",
+    "sc_in": "0x9355372396e3f6daf13359b7b607a3374cc638e0",
+    "des_in": 4,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CEL",
+    "sc_in": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
+    "des_in": 4,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BRWL",
+    "sc_in": "0x4086e77c5e993fdb90a406285d00111a974f877a",
+    "des_in": 4,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WAXL",
+    "sc_in": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALICE",
+    "sc_in": "0xac51066d7bec65dc4589368da368b212745d63e8",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CHR",
+    "sc_in": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "POWR",
+    "sc_in": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "USDC",
+    "sc_in": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NYM",
+    "sc_in": "0x525a8f6f3ba4752868cde25164382bfbae3990e1",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RJV",
+    "sc_in": "0xa1f410f13b6007fca76833ee7eb58478d47bc5ef",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "XAUT",
+    "sc_in": "0x68749665ff8d2d112fa859aa293f07a622782f38",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SOMM",
+    "sc_in": "0xa670d7237398238de01267472c6f13e5b8010fd1",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WBTC",
+    "sc_in": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GALA",
+    "sc_in": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ACH",
+    "sc_in": "0xed04915c23f00a313a544955524eb7dbd823143d",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DENT",
+    "sc_in": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "STORJ",
+    "sc_in": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MOVE",
+    "sc_in": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CVC",
+    "sc_in": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TRU",
+    "sc_in": "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LTO",
+    "sc_in": "0xd01409314acb3b245cea9500ece3f6fd4d70ea30",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FUN",
+    "sc_in": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CRO",
+    "sc_in": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VGX",
+    "sc_in": "0x3c4b6e6e1ea3d4863700d7f76b36b7f3d3f13e3d",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MUSIC",
+    "sc_in": "0xd8c0b13b551718b808fc97ead59499d5ef862775",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BITCOIN",
+    "sc_in": "0x72e4f9f808c49a2a61de9c5896298920dc4eeea9",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "COVAL",
+    "sc_in": "0x3d658390460295fb963f54dc0899cfb1c30776df",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SPX",
+    "sc_in": "0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PRO",
+    "sc_in": "0x226bb599a12c826476e3a771454697ea52e9e220",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RLC",
+    "sc_in": "0x607f4c5bb672230e8672085532f7e901544a7375",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NEIROCTO",
+    "sc_in": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GROK",
+    "sc_in": "0x8390a1da07e376ef7add4be859ba74fb83aa02d5",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FEARNOT",
+    "sc_in": "0x6135177a17e02658df99a07a2841464deb5b8589",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MAGATRUMP",
+    "sc_in": "0x6aa56e1d98b3805921c170eb4b3fe7d4fda6d89b",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VOLT",
+    "sc_in": "0x7f792db54b0e580cdc755178443f0430cf799aca",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "EVER",
+    "sc_in": "0x1ffefd8036409cb6d652bd610de465933b226917",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FIGHTETH",
+    "sc_in": "0x8802269d1283cdb2a5a329649e5cb4cdcee91ab6",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MARSETH",
+    "sc_in": "0xb8d6196d71cdd7d90a053a7769a077772aaac464",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HOPPY",
+    "sc_in": "0x6e79b51959cf968d87826592f46f819f92466615",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CATE",
+    "sc_in": "0xa00453052a36d43a99ac1ca145dfe4a952ca33b8",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KEKIUS",
+    "sc_in": "0x26e550ac11b26f78a04489d5f20f24e3559f7dd9",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PAAL",
+    "sc_in": "0x14fee680690900ba0cccfc76ad70fd1b95d10e16",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MOODENGETH",
+    "sc_in": "0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NEIROETH",
+    "sc_in": "0xee2a03aa6dacf51c18679c516ad5283d8e7c2637",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TOKEN",
+    "sc_in": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TSUKA",
+    "sc_in": "0xc5fb36dd2fb59d3b98deff88425a3f425ee469ed",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MAGA",
+    "sc_in": "0xd29da236dd4aac627346e1bba06a619e8c22d7c5",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CERE",
+    "sc_in": "0x2da719db753dfa10a62e140f436e1d67f2ddb0d6",
+    "des_in": 10,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BZZ",
+    "sc_in": "0x19062190b1925b5b6689d7073fdfc8c2976ef8cb",
+    "des_in": 16,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PHA",
+    "sc_in": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CHZ",
+    "sc_in": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BEAMX",
+    "sc_in": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GNO",
+    "sc_in": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UNI",
+    "sc_in": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FIS",
+    "sc_in": "0xef3a930e1ffffacd2fc13434ac81bd278b0ecc8d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AXS",
+    "sc_in": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PENDLE",
+    "sc_in": "0x808507121b80c02388fad14726482e061b8da827",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SAND",
+    "sc_in": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LDO",
+    "sc_in": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PEPE",
+    "sc_in": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FARM",
+    "sc_in": "0xa0246c9032bc3a600820415ae600c6388619a14d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RED",
+    "sc_in": "0xc43c6bfeda065fe2c4c11765bf838789bd0bb5de",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "G",
+    "sc_in": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BEL",
+    "sc_in": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OM",
+    "sc_in": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "YFI",
+    "sc_in": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CVX",
+    "sc_in": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BIGTIME",
+    "sc_in": "0x64bc2ca1be492be7185faa2c8835d9b824c8a194",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MASK",
+    "sc_in": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CRV",
+    "sc_in": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DAI",
+    "sc_in": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OMNI",
+    "sc_in": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LOKA",
+    "sc_in": "0x61e90a50137e1f645c9ef4a0d3a4f01477738406",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "API3",
+    "sc_in": "0x0b38210ea11411557c13457d4da7dc6ea731b88a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FTT",
+    "sc_in": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TURBO",
+    "sc_in": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ARPA",
+    "sc_in": "0xba50933c268f567bdc86e1ac131be072c6b0b71a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BIO",
+    "sc_in": "0xcb1592591996765ec0efc1f92599a19767ee5ffa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ANKR",
+    "sc_in": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "APE",
+    "sc_in": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DIA",
+    "sc_in": "0x84ca8bc7997272c7cfb4d0cd3d55cd942b3c9419",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "QNT",
+    "sc_in": "0x4a220e6096b25eadb88358cb44068a3248254675",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "JASMY",
+    "sc_in": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MLN",
+    "sc_in": "0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PORTAL",
+    "sc_in": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ACX",
+    "sc_in": "0x44108f0223a3c3028f5fe7aec7f9bb2e66bef82f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SUSHI",
+    "sc_in": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LRC",
+    "sc_in": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LINK",
+    "sc_in": "0x514910771af9ca656af840dff83e8264ecf986ca",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "IMX",
+    "sc_in": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BETA",
+    "sc_in": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LPT",
+    "sc_in": "0x58b6a8a3302369daec383334672404ee733ab239",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SHIB",
+    "sc_in": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GRT",
+    "sc_in": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALCX",
+    "sc_in": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PERP",
+    "sc_in": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AEVO",
+    "sc_in": "0xb528edbef013aff855ac3c50b381f253af13b997",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PEOPLE",
+    "sc_in": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NKN",
+    "sc_in": "0x5cf04716ba20127f1e2297addcf4b5035000c9eb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ENA",
+    "sc_in": "0x57e114b691db790c35207b2e685d4a43181e6061",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DODO",
+    "sc_in": "0x43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HOT",
+    "sc_in": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UTK",
+    "sc_in": "0xdc9ac3c20d1ed0b540df9b1fedc10039df13f99c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CTSI",
+    "sc_in": "0x491604c0fdf08347dd1fa4ee062a822a5dd06b5d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NEXO",
+    "sc_in": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "1INCH",
+    "sc_in": "0x111111111117dc0aa78b770fa6a738034120c302",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RPL",
+    "sc_in": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ANIME",
+    "sc_in": "0x4dc26fc5854e7648a064a4abd590bbe71724c277",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "STG",
+    "sc_in": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LSK",
+    "sc_in": "0x6033f7f88332b8db6ad452b7c6d5bb643990ae3f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GLM",
+    "sc_in": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALPHA",
+    "sc_in": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZRX",
+    "sc_in": "0xe41d2489571d322189246dafa5ebde1f4699f498",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ETHFI",
+    "sc_in": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HFT",
+    "sc_in": "0xb3999f658c0391d94a37f7ff328f3fec942bcadc",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SYN",
+    "sc_in": "0x0f2d719407fdbeff09d87557abb7232601fd9f29",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "EPICCHAIN",
+    "sc_in": "0x94314a14df63779c99c0764a30e0cd22fa78fc0e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALT",
+    "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DUSK",
+    "sc_in": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CELR",
+    "sc_in": "0x4f9254c83eb525f9fcf346490bbb3ed28a81c667",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MANA",
+    "sc_in": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BAT",
+    "sc_in": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "COW",
+    "sc_in": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RSR",
+    "sc_in": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AUCTION",
+    "sc_in": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MKR",
+    "sc_in": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PDA",
+    "sc_in": "0x0d3cbed3f69ee050668adf3d9ea57241cba33a2b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "IDEX",
+    "sc_in": "0xb705268213d593b8fd88d3fdeff93aff5cbdcfae",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SPELL",
+    "sc_in": "0x090185f2135308bad17527004364ebcc2d37e5f6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "REZ",
+    "sc_in": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SUPER",
+    "sc_in": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NMR",
+    "sc_in": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BLUR",
+    "sc_in": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "STPT",
+    "sc_in": "0xde7d85157d9714eadf595045cc12ca4a5f3e2adb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SSV",
+    "sc_in": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "COMP",
+    "sc_in": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OXT",
+    "sc_in": "0x4575f41308ec1483f3d399aa9a2826d74da13deb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AGLD",
+    "sc_in": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MDT",
+    "sc_in": "0x814e0908b12a99fecf5bc101bb5d0b8b5cdf7d26",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CREAM",
+    "sc_in": "0x2ba592f78db6436527729929aaf6c908497cb200",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AUDIO",
+    "sc_in": "0x18aaa7115705e8be94bffebde57af9bfc265b998",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LQTY",
+    "sc_in": "0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BIFI",
+    "sc_in": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "YGG",
+    "sc_in": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BNT",
+    "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FORTH",
+    "sc_in": "0x77fba179c79de5b7653f68b5039af940ada60ce0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DATA",
+    "sc_in": "0x8f693ca8d21b157107184d29d398a8d082b38b76",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ILV",
+    "sc_in": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RARE",
+    "sc_in": "0xba5bde662c17e2adff1075610382b9b691296350",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "REQ",
+    "sc_in": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ENS",
+    "sc_in": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PYR",
+    "sc_in": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CYBER",
+    "sc_in": "0x14778860e937f509e651192a90589de711fb88a9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ONDO",
+    "sc_in": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BAL",
+    "sc_in": "0xba100000625a3754423978a60c9317c58a424e3d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GTC",
+    "sc_in": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "POND",
+    "sc_in": "0x57b946008913b82e4df85f501cbaed910e58d26c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OGN",
+    "sc_in": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AAVE",
+    "sc_in": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ARKM",
+    "sc_in": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HIFI",
+    "sc_in": "0x4b9278b94a1112cad404048903b8d343a810b07e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RAD",
+    "sc_in": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BANANA",
+    "sc_in": "0x38e68a37e401f7271568cecaac63c6b1e19130b4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KNC",
+    "sc_in": "0xdefa4e8a7bcba345f687a2f1456f5edd9ce97202",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "USUAL",
+    "sc_in": "0xc4441c2be5d8fa8126822b9929ca0b81ea0de38e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "EIGEN",
+    "sc_in": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PUNDIX",
+    "sc_in": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LEVER",
+    "sc_in": "0x4b5f49487ea7b3609b1ad05459be420548789f1f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PAXG",
+    "sc_in": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BICO",
+    "sc_in": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MEME",
+    "sc_in": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UMA",
+    "sc_in": "0x04fa0d235c4abf4bcf4787af4cf447de572ef828",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "T",
+    "sc_in": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SKL",
+    "sc_in": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SNX",
+    "sc_in": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TRB",
+    "sc_in": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SNT",
+    "sc_in": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BADGER",
+    "sc_in": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FXS",
+    "sc_in": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GHST",
+    "sc_in": "0x3f382dbd960e3a9bbceae22651e88158d2791550",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AMP",
+    "sc_in": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AVA",
+    "sc_in": "0xa6c0c097741d55ecd9a3a7def3a8253fd022ceb9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MAV",
+    "sc_in": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SAFE",
+    "sc_in": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MON",
+    "sc_in": "0xc555d625828c4527d477e595ff1dd5801b4a600e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "EPIK",
+    "sc_in": "0x4da0c48376c277cdbd7fc6fdc6936dee3e4adf75",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ANDY",
+    "sc_in": "0x68bbed6a47194eff1cf514b50ea91895597fc91e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TRAC",
+    "sc_in": "0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OL",
+    "sc_in": "0x1f57da732a77636d913c9a75d685b26cc85dcc3a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TOKE",
+    "sc_in": "0x2e9d63788249371f1dfc918a52f8d799f4a38c94",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "APP",
+    "sc_in": "0xc5d27f27f08d1fd1e3ebbaa50b3442e6c0d50439",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SOV",
+    "sc_in": "0xbdab72602e9ad40fc6a6852caf43258113b8f7a5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SD",
+    "sc_in": "0x30d20208d987713f46dfd34ef128bb16c404d10f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HMT",
+    "sc_in": "0xd1ba9bac957322d6e8c07a160a3a8da11a0d2867",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LON",
+    "sc_in": "0x0000000000095413afc295d19edeb1ad7b71c952",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ORBS",
+    "sc_in": "0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TORN",
+    "sc_in": "0x77777feddddffc19ff86db637967013e6c6a116c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SLN",
+    "sc_in": "0xdb82c0d91e057e05600c8f8dc836beb41da6df14",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZERC",
+    "sc_in": "0xf8428a5a99cb452ea50b6ea70b052daa3df4934f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WOLFETH",
+    "sc_in": "0x67466be17df832165f8c80a5a120ccc652bd7e69",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DEFI",
+    "sc_in": "0x6b0faca7ba905a86f221ceb5ca404f605e5b3131",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MYRIA",
+    "sc_in": "0xa0ef786bf476fe0810408caba05e536ac800ff86",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MAX",
+    "sc_in": "0xb7109df1a93f8fe2b8162c6207c9b846c1c68090",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CRU",
+    "sc_in": "0x32a7c02e79c4ea1008dd6564b35f131428673c41",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALEPH",
+    "sc_in": "0x27702a26126e0b3702af63ee09ac4d1a084ef628",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BLZ",
+    "sc_in": "0x5732046a883704404f284ce41ffadd5b007fd668",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ORDER",
+    "sc_in": "0xabd4c63d2616a5201454168269031355f4764337",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VISTA",
+    "sc_in": "0xc9bca88b04581699fab5aa276ccaff7df957cbbf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "STARL",
+    "sc_in": "0x8e6cd950ad6ba651f6dd608dc70e5886b1aa6b24",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "REVV",
+    "sc_in": "0x557b933a7c2c45672b610f8954a3deb39a51a8ca",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GLQ",
+    "sc_in": "0x9f9c8ec3534c3ce16f928381372bfbfbfb9f4d24",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BAD",
+    "sc_in": "0x32b86b99441480a7e5bd3a26c124ec2373e3f015",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "POLS",
+    "sc_in": "0x83e6f1e41cdd28eaceb20cb649155049fac3d5aa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SUDO",
+    "sc_in": "0x3446dd70b2d52a6bf4a5a192d9b0a161295ab7f9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KP3R",
+    "sc_in": "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SRK",
+    "sc_in": "0x0488401c3f535193fa8df029d9ffe615a06e74e6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RFD",
+    "sc_in": "0x955d5c14c8d4944da1ea7836bd44d54a8ec35ba1",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MOCA",
+    "sc_in": "0xf944e35f95e819e752f3ccb5faf40957d311e8c5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LITH",
+    "sc_in": "0x188e817b02e635d482ae4d81e25dda98a97c4a42",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "APU",
+    "sc_in": "0x594daad7d77592a2b97b725a7ad59d7e188b5bfa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MONG",
+    "sc_in": "0x1ce270557c1f68cfb577b856766310bf8b47fd9c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MCG",
+    "sc_in": "0xc9e503562d0db0a2629288a5d3b1c94ea7741869",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MUBI",
+    "sc_in": "0x38e382f74dfb84608f3c1f10187f6bef5951de93",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FOX",
+    "sc_in": "0xc770eefad204b5180df6a14ee197d99d808ee52d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OMG",
+    "sc_in": "0xd26114cd6ee289accf82350c8d8487fedb8a0c07",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RAI",
+    "sc_in": "0xc575bd129848ce06a460a19466c30e1d0328f52c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GOMINING",
+    "sc_in": "0x7ddc52c4de30e94be3a6a0a2b259b2850f421989",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "XYO",
+    "sc_in": "0x55296f69f40ea6d20e478533c15a6b08b654e758",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "JAM",
+    "sc_in": "0x23894dc9da6c94ecb439911caf7d337746575a72",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SWELL",
+    "sc_in": "0x0a6e7ba5042b38349e437ec6db6214aec7b35676",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WNXM",
+    "sc_in": "0x0d438f3b5175bebc262bf23753c1e53d03432bde",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NPC",
+    "sc_in": "0x8ed97a637a790be1feff5e888d43629dc05408f6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WNCG",
+    "sc_in": "0xf203ca1769ca8e9e8fe1da9d147db68b6c919817",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WOJAK",
+    "sc_in": "0x5026f006b85729a8b14553fae6af249ad16c9aab",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UMEE",
+    "sc_in": "0xc0a4df35568f116c370e6a6a6022ceb908eeddac",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALD",
+    "sc_in": "0xb26c4b3ca601136daf98593feaeff9e0ca702a8d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OPUL",
+    "sc_in": "0x80d55c03180349fff4a229102f62328220a96444",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ELON",
+    "sc_in": "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NCT",
+    "sc_in": "0x9e46a38f5daabe8683e10793b06749eef7d733d1",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KIP",
+    "sc_in": "0x946fb08103b400d1c79e07acccdef5cfd26cd374",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RBC",
+    "sc_in": "0x3330bfb7332ca23cd071631837dc289b09c33333",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GMEE",
+    "sc_in": "0xd9016a907dc0ecfa3ca425ab20b6b785b42f2373",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BEFI",
+    "sc_in": "0x8b9b95292f890df47fff5ac9cbe93d5fc242bd51",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "XEN",
+    "sc_in": "0x06450dee7fd2fb8e39061434babcfc05599a6fb8",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BOSON",
+    "sc_in": "0xc477d038d5420c6a9e0b031712f61c5120090de9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ATH",
+    "sc_in": "0xbe0ed4138121ecfc5c0e56b40517da27e6c5226b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MATH",
+    "sc_in": "0x08d967bb0134f2d07f7cfb6e246680c53927dd30",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HEGIC",
+    "sc_in": "0x584bc13c7d411c00c01a62e8019472de68768430",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BLOCK",
+    "sc_in": "0x8fc17671d853341d9e8b001f5fc3c892d09cb53a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SAVM",
+    "sc_in": "0x15e6e0d4ebeac120f9a97e71faa6a0235b85ed12",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SIDUS",
+    "sc_in": "0x549020a9cb845220d66d3e9c6d9f9ef61c981102",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BOX",
+    "sc_in": "0x32b77729cd87f1ef2bea4c650c16f89f08472c69",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SYNT",
+    "sc_in": "0xda987c655ebc38c801db64a8608bc1aa56cd9a31",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LOOKS",
+    "sc_in": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LOOM",
+    "sc_in": "0x42476f744292107e34519f9c357927074ea3f75d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GHX",
+    "sc_in": "0x728f30fa2f100742c7949d1961804fa8e0b1387d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SUKU",
+    "sc_in": "0x0763fdccf1ae541a5961815c0872a8c5bc6de4d7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SMURFCAT",
+    "sc_in": "0xff836a5821e69066c87e268bc51b849fab94240c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FLIP",
+    "sc_in": "0x826180541412d574cf1336d22c0c0a287822678a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PRIME",
+    "sc_in": "0xb23d80f5fefcddaa212212f028021b41ded428cf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RARI",
+    "sc_in": "0xfca59cd816ab1ead66534d82bc21e7515ce441cf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ESE",
+    "sc_in": "0x908ddb096bfb3acb19e2280aad858186ea4935c4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ASTO",
+    "sc_in": "0x823556202e86763853b40e9cde725f412e294689",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CULT",
+    "sc_in": "0x0000000000c5dc95539589fbd24be07c6c14eca4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "A8",
+    "sc_in": "0x3e5a19c91266ad8ce2477b91585d1856b84062df",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OPAI",
+    "sc_in": "0xf8e57ac2730d3088d98b79209739b0d5ba085a03",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AGI",
+    "sc_in": "0x7da2641000cbb407c329310c461b2cb9c70c3046",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DMTR",
+    "sc_in": "0x51cb253744189f11241becb29bedd3f1b5384fdb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PIRATE",
+    "sc_in": "0x7613c48e0cd50e42dd9bf0f6c235063145f6f8dc",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BOND",
+    "sc_in": "0x0391d2021f89dc339f60fff84546ea23e337750f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DUEL",
+    "sc_in": "0x943af2ece93118b973c95c2f698ee9d15002e604",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NGL",
+    "sc_in": "0x2653891204f463fb2a2f4f412564b19e955166ae",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "XCN",
+    "sc_in": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VAI",
+    "sc_in": "0xd13cfd3133239a3c73a9e535a5c4dadee36b395c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RSS3",
+    "sc_in": "0xc98d64da73a6616c42117b582e832812e7b8d57f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BONE",
+    "sc_in": "0x9813037ee2218799597d83d4a5b6f3b6778218d9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AZUR",
+    "sc_in": "0x9e6be44cc1236eef7e1f197418592d363bedcd5a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CTA",
+    "sc_in": "0x90685e300a4c4532efcefe91202dfe1dfd572f47",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MASA",
+    "sc_in": "0x944824290cc12f31ae18ef51216a223ba4063092",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LEASH",
+    "sc_in": "0x27c70cd1946795b66be9d954418546998b546634",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GFI",
+    "sc_in": "0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZKJ",
+    "sc_in": "0xc71b5f631354be6853efe9c3ab6b9590f8302e81",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DEAI",
+    "sc_in": "0x1495bc9e44af1f8bcb62278d2bec4540cf0c05ea",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GOG",
+    "sc_in": "0x9ab7bb7fdc60f4357ecfef43986818a2a3569c62",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KEY",
+    "sc_in": "0x4cc19356f2d37338b9802aa8e8fc58b0373296e7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MSN",
+    "sc_in": "0xaa247c0d81b83812e1abf8bab078e4540d87e3fb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FLT",
+    "sc_in": "0x236501327e701692a281934230af0b6be8df3353",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LADYS",
+    "sc_in": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RPK",
+    "sc_in": "0x313cae7ad4454aac7b208c1f089da2b0e5825e46",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SYRUP",
+    "sc_in": "0x643c4e15d7d62ad0abec4a9bd4b001aa3ef52d66",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BUBBLE",
+    "sc_in": "0xe9689028ede16c2fdfe3d11855d28f8e3fc452a3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MOOV",
+    "sc_in": "0x4116f14b6d462b32a1c10f98049e4b1765e34fa9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SIS",
+    "sc_in": "0xd38bb40815d2b0c2d2c866e0c72c5728ffc76dd9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "1CAT",
+    "sc_in": "0x508e00d5cef397b02d260d035e5ee80775e4c821",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MYTH",
+    "sc_in": "0xba41ddf06b7ffd89d1267b5a93bfef2424eb2003",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KARRAT",
+    "sc_in": "0xacd2c239012d17beb128b0944d49015104113650",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "STMX",
+    "sc_in": "0xa62cc35625b0c8dc1faea39d33625bb4c15bd71c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "XZK",
+    "sc_in": "0xe8fc52b1bb3a40fd8889c0f8f75879676310ddf0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CHO",
+    "sc_in": "0xbba39fd2935d5769116ce38d46a71bde9cf03099",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CFG",
+    "sc_in": "0xc221b7e65ffc80de234bbb6667abdd46593d34f0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RADAR",
+    "sc_in": "0x44709a920fccf795fbc57baa433cc3dd53c44dbe",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CPOOL",
+    "sc_in": "0x66761fa41377003622aee3c7675fc7b5c1c2fac5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "L3",
+    "sc_in": "0x88909d489678dd17aa6d9609f89b0419bf78fd9a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AERGO",
+    "sc_in": "0x91af0fbb28aba7e31403cb457106ce79397fd4e6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TRADE",
+    "sc_in": "0x6e5970dbd6fc7eb1f29c6d2edf2bc4c36124c0c1",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TRUF",
+    "sc_in": "0x243c9be13faba09f945ccc565547293337da0ad7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BTRST",
+    "sc_in": "0x799ebfabe77a6e34311eeee9825190b9ece32824",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZENT",
+    "sc_in": "0xdbb7a34bf10169d6d2d0d02a6cbb436cf4381bfa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BEPRO",
+    "sc_in": "0xcf3c8be2e2c42331da80ef210e9b1b307c03d36a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FLX",
+    "sc_in": "0x6243d8cea23066d098a15582d81a598b4e8391f4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RING",
+    "sc_in": "0x9469d013805bffb7d3debe5e7839237e535ec483",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PIXFI",
+    "sc_in": "0xd795eb12034c2b77d787a22292c26fab5f5c70aa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CVP",
+    "sc_in": "0x38e4adb44ef08f22f5b5b76a8f0c2d0dcbe7dca1",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "IZI",
+    "sc_in": "0x9ad37205d608b8b219e6a2573f922094cec5c200",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PLUME",
+    "sc_in": "0x4c1746a800d224393fe2470c70a35717ed4ea5f1",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OVR",
+    "sc_in": "0x21bfbda47a0b4b5b1248c767ee49f7caa9b23697",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZKB",
+    "sc_in": "0xbbbbbbbb46a1da0f0c3f64522c275baa4c332636",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SOVRN",
+    "sc_in": "0x031b8d752d73d7fe9678acef26e818280d0646b4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CTRL",
+    "sc_in": "0xe50e009ddb1a4d8ec668eac9d8b2df1f96348707",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SPEC",
+    "sc_in": "0xadf7c35560035944e805d98ff17d58cde2449389",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZRC",
+    "sc_in": "0xfd418e42783382e86ae91e445406600ba144d162",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DOP",
+    "sc_in": "0x97a9a15168c22b3c137e6381037e1499c8ad0978",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "EUL",
+    "sc_in": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KRL",
+    "sc_in": "0x464ebe77c293e473b48cfe96ddcf88fcf7bfdac0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SAI",
+    "sc_in": "0x3567aa22cd3ab9aef23d7e18ee0d7cf16974d7e6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ANGLE",
+    "sc_in": "0x31429d1856ad1377a8a0079410b297e1a9e214c2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MAVIA",
+    "sc_in": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FORT",
+    "sc_in": "0x41545f8b9472d758bb669ed8eaeeecd7a9c4ec29",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PARAM",
+    "sc_in": "0x69a1e699f562d7af66fc6cc473d99f4430c3acd2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SOSO",
+    "sc_in": "0x76a0e27618462bdac7a29104bdcfff4e6bfcea2d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "COMBO",
+    "sc_in": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NSTR",
+    "sc_in": "0x610dbd98a28ebba525e9926b6aaf88f9159edbfd",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ALI",
+    "sc_in": "0x6b0b3a982b4634ac68dd83a4dbf02311ce324181",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OKB",
+    "sc_in": "0x75231f58b43240c9718dd58b4967c5114342a86c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZKL",
+    "sc_in": "0xfc385a1df85660a7e041423db512f779070fcede",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LMWR",
+    "sc_in": "0x628a3b2e302c7e896acc432d2d0dd22b6cb9bc88",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GEAR",
+    "sc_in": "0xba3335588d9403515223f109edc4eb7269a9ab5d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CLEAR",
+    "sc_in": "0x58b9cb810a68a7f3e1e4f8cb45d1b9b3c79705e8",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PUSH",
+    "sc_in": "0xf418588522d5dd018b425e472991e52ebbeeeeee",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "INSP",
+    "sc_in": "0x186ef81fd8e77eec8bffc3039e7ec41d5fc0b457",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MORPHO",
+    "sc_in": "0x58d97b57bb95320f9a05dc918aef65434969c2b2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GEL",
+    "sc_in": "0x15b7c0c907e4c6b9adaaaabc300c08991d6cea05",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TOMI",
+    "sc_in": "0x4385328cc4d643ca98dfea734360c0f596c83449",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BOBO",
+    "sc_in": "0xb90b2a35c65dbc466b04240097ca756ad2005295",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "INV",
+    "sc_in": "0x41d5d79431a913c4ae7d69a668ecdfe5ff9dfb68",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LL",
+    "sc_in": "0x0921799cb1d702148131024d18fcde022129dc73",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PSP",
+    "sc_in": "0xcafe001067cdef266afb7eb5a286dcfd277f3de5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WILD",
+    "sc_in": "0x2a3bff78b79a009976eea096a51a948a3dc00e34",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PUFFER",
+    "sc_in": "0x4d1c297d39c5c1277964d0e3f8aa901493664530",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BCUT",
+    "sc_in": "0xbef26bd568e421d6708cca55ad6e35f8bfa0c406",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CGPT",
+    "sc_in": "0x25931894a86d47441213199621f1f2994e1c39aa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PEPE2",
+    "sc_in": "0x0305f515fa978cf87226cf8a9776d25bcfb2cc0b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ISLAND",
+    "sc_in": "0x157a6df6b74f4e5e45af4e4615fde7b49225a662",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PSTAKE",
+    "sc_in": "0xfb5c6815ca3ac72ce9f5006869ae67f18bf77006",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SWEAT",
+    "sc_in": "0xb4b9dc1c77bdbb135ea907fd5a08094d98883a35",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UNIBOT",
+    "sc_in": "0xf819d9cb1c2a819fd991781a822de3ca8607c3c9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DOGEGOV",
+    "sc_in": "0x1121acc14c63f3c872bfca497d10926a6098aac5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VRA",
+    "sc_in": "0xf411903cbc70a74d22900a5de66a2dda66507255",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TROLL",
+    "sc_in": "0xf8ebf4849f1fa4faf0dff2106a173d3a6cb2eb3a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CTC",
+    "sc_in": "0xa3ee21c306a700e682abcdfe9baa6a08f3820419",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PEIPEI",
+    "sc_in": "0x3ffeea07a27fab7ad1df5297fa75e77a43cb5790",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VR",
+    "sc_in": "0x7d5121505149065b562c789a0145ed750e6e8cdd",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SHRUB",
+    "sc_in": "0x3b991130eae3cca364406d718da22fa1c3e7c256",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "UNFI",
+    "sc_in": "0x441761326490cacf7af299725b6292597ee822c2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HLG",
+    "sc_in": "0x740df024ce73f589acd5e8756b377ef8c6558bab",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MOG",
+    "sc_in": "0xaaee1a9723aadb7afa2810263653a34ba2c21c7a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CULTDAO",
+    "sc_in": "0xf0f9d895aca5c8678f706fb8216fa22957685a13",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PNK",
+    "sc_in": "0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BLENDR",
+    "sc_in": "0x84018071282d4b2996272659d9c01cb08dd7327f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HOPR",
+    "sc_in": "0xf5581dfefd8fb0e4aec526be659cfab1f8c781da",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AIT",
+    "sc_in": "0x89d584a1edb3a70b3b07963f9a3ea5399e38b136",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PAW",
+    "sc_in": "0xc11158c5da9db1d553ed28f0c2ba1cbedd42cfcb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "REN",
+    "sc_in": "0x408e41876cccdc0f92210600ef50372656052a38",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ROOT",
+    "sc_in": "0xa3d4bee77b05d4a0c943877558ce21a763c4fa29",
+    "des_in": 6,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WQUIL",
+    "sc_in": "0x8143182a775c54578c8b7b3ef77982498866945d",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FUEL",
+    "sc_in": "0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "K_SMILEY",
+    "sc_in": "0x4c6e2c495b974b8d4220e370f23c7e0e1da9b644",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MSTR",
+    "sc_in": "0x42069026eac8eee0fd9b5f7adfa4f6e6d69a2b39",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TERMINUS",
+    "sc_in": "0xcbde0453d4e7d748077c1b0ac2216c011dd2f406",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "0x0",
+    "sc_in": "0x5a3e6a77ba2f983ec0d371ea3b475f8bc0811ad5",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KISHU",
+    "sc_in": "0xa2b4c0af19cc16a6cfacce81f192b024d625817d",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BOTTO",
+    "sc_in": "0x9dfad1b7102d46b1b197b90095b5c4e9f5845bba",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LRDS",
+    "sc_in": "0xd0a6053f087e87a25dc60701ba6e663b1a548e85",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OLAS",
+    "sc_in": "0x0001a500a6b18995b03f44bb040a5ffc28e45cb0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LAI",
+    "sc_in": "0x168e209d7b2f58f1f24b8ae7b7d35e662bbf11cc",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GURU",
+    "sc_in": "0x525574c899a7c877a11865339e57376092168258",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MCB",
+    "sc_in": "0x4e352cf164e64adcbad318c3a1e222e9eba4ce42",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BSSB",
+    "sc_in": "0xda31d0d1bc934fc34f7189e38a413ca0a5e8b44f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "STFX",
+    "sc_in": "0x9343e24716659a3551eb10aff9472a2dcad5db2d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SFI",
+    "sc_in": "0x7636d8722fdf7cd34232a915e48e96aa3eb386bf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LVVA",
+    "sc_in": "0x6243558a24cc6116abe751f27e6d7ede50abfc76",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "IXS",
+    "sc_in": "0x73d7c860998ca3c01ce8c808f5577d94d545d1b4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TOWER",
+    "sc_in": "0x1c9922314ed1415c95b9fd453c3818fd41867d0b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DRV",
+    "sc_in": "0xb1d1eae60eea9525032a6dcb4c1ce336a1de71be",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GODS",
+    "sc_in": "0xccc8cb5229b0ac8069c51fd58367fd1e622afd97",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "F",
+    "sc_in": "0x6e15a54b5ecac17e58dadeddbe8506a7560252f9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PROMPT",
+    "sc_in": "0x28d38df637db75533bd3f71426f3410a82041544",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ANYONE",
+    "sc_in": "0xfeac2eae96899709a43e252b6b92971d32f9c0f9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZKF",
+    "sc_in": "0xa1a52e35bf516edbd166d9a1b0097cbf11483a5d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KERNEL",
+    "sc_in": "0x3f80b1c54ae920be41a77f8b902259d48cf24ccf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DMAIL",
+    "sc_in": "0xcc6f1e1b87cfcbe9221808d2d85c501aab0b5192",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "APRS",
+    "sc_in": "0x95b4b8cad3567b5d7ef7399c2ae1d7070692ab0d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "REACT",
+    "sc_in": "0x817162975186d4d53dbf5a7377dd45376e2d2fc5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RBX",
+    "sc_in": "0x3ba925fdeae6b46d0bb4d424d829982cb2f7309e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BERRY",
+    "sc_in": "0xcb76314c2540199f4b844d4ebbc7998c604880ca",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "MAK",
+    "sc_in": "0xd073e6341a3aa6c4d94c4f8f20fbd1ede572b0da",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NLK",
+    "sc_in": "0x744030ad4e6c10faf5483b62473d88a254d62261",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GPU",
+    "sc_in": "0x1258d60b224c0c5cd888d37bbf31aa5fcfb7e870",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "INDEX",
+    "sc_in": "0x0954906da0bf32d5479e25f46056d22f08464cab",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ELX",
+    "sc_in": "0x89a8c847f41c0dfa6c8b88638bacca8a0b777da7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FLUID",
+    "sc_in": "0x6f40d4a6237c257fff2db00fa0510deeecd303eb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "APEX",
+    "sc_in": "0x52a8845df664d76c69d2eea607cd793565af42b8",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ARCA",
+    "sc_in": "0x1c00c3e03c3a10a0c1d9b6d1a42e797d7cb4147a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BOB",
+    "sc_in": "0x7d8146cf21e8d7cbe46054e01588207b51198729",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AVL",
+    "sc_in": "0x5c8d0c48810fd37a0a824d074ee290e64f7a8fa2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KENDU",
+    "sc_in": "0xaa95f26e30001251fb905d264aa7b00ee9df6c18",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SORA",
+    "sc_in": "0xb8a87405d9a4f2f866319b77004e88dff66c0d92",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NXRA",
+    "sc_in": "0x644192291cc835a93d6330b24ea5f5fedd0eef9e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DNT",
+    "sc_in": "0x0abdace70d3790235af448c88547603b945604ea",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "TST",
+    "sc_in": "0x0828096494ad6252f0f853abfc5b6ec9dfe9fdad",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AURA",
+    "sc_in": "0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "AIUS",
+    "sc_in": "0x8afe4055ebc86bd2afb3940c0095c9aca511d852",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "O",
+    "sc_in": "0x81ad60e5dd6bd97edaa4adcc7237978b14adf4e6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SIDESHIFT",
+    "sc_in": "0x35e78b3982e87ecfd5b3f3265b601c046cdbe232",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DEXT",
+    "sc_in": "0xfb7b4564402e5500db5bb6d63ae671302777c75a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ORA",
+    "sc_in": "0x33333333fede34409fb7f67c6585047e1f653333",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "XED",
+    "sc_in": "0xef7f7820a001aabac5e0979b175c9ff8af3dd4ec",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "VITA",
+    "sc_in": "0x81f8f0bb1cb2a06649e51913a151f0e7ef6fa321",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "FJO",
+    "sc_in": "0x69457a1c9ec492419344da01daf0df0e0369d5d0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ENQAI",
+    "sc_in": "0x710287d1d39dcf62094a83ebb3e736e79400068a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WRLD",
+    "sc_in": "0xd5d86fc8d5c0ea1ac1ac5dfab6e529c9967a45e9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SIPHER",
+    "sc_in": "0x9f52c8ecbee10e00d9faaac5ee9ba0ff6550f511",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RAIL",
+    "sc_in": "0xe76c6c83af64e4c60245d8c7de953df673a7a33d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SHU",
+    "sc_in": "0xe485e2f1bab389c08721b291f6b59780fec83fd7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "THOR",
+    "sc_in": "0xa5f2211b9b8170f694421f2046281775e8468044",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OPSEC",
+    "sc_in": "0x8be8c50e7d7acff6084899e71a6db085ff7134c8",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "EMP",
+    "sc_in": "0x39d5313c3750140e5042887413ba8aa6145a9bd2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "COMAI",
+    "sc_in": "0xc78b628b060258300218740b1a7a5b3c82b3bd9f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CET",
+    "sc_in": "0x081f67afa0ccf8c7b17540767bbe95df2ba8d97f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PUNDIAI",
+    "sc_in": "0x075f23b9cdfce2cc0ca466f4ee6cb4bd29d83bef",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RCH",
+    "sc_in": "0x57b96d4af698605563a4653d882635da59bf11af",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "BEND",
+    "sc_in": "0x0d02755a5700414b26ff040e1de35d337df56218",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "WMC",
+    "sc_in": "0x7fd4d7737597e7b4ee22acbf8d94362343ae0a79",
+    "des_in": 2,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "CUBE",
+    "sc_in": "0xdf801468a808a32656d2ed2d2d80b72a129739f4",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DHT",
+    "sc_in": "0xca1207647ff814039530d7d35df0e1dd2e91fa84",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "KAN",
+    "sc_in": "0x1410434b0346f5be678d0fb554e5c7ab620f8f4a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZYN",
+    "sc_in": "0x58cb30368ceb2d194740b144eab4c2da8a917dcb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "GAMMA",
+    "sc_in": "0x6bea7cfef803d1e3d5f7c0103f7ded065644e197",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "ZEND",
+    "sc_in": "0xb2606492712d311be8f41d940afe8ce742a52d44",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "PRE",
+    "sc_in": "0xec213f83defb583af3a000b1c0ada660b1902a0f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HOP",
+    "sc_in": "0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "SILO",
+    "sc_in": "0x6f80310ca7f2c654691d1383149fa1a57d8ab1f8",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "LORDS",
+    "sc_in": "0x686f2404e77ab0d9070a46cdfb0b7fecdd2318b0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "HULEZHI",
+    "sc_in": "0xc24d52e3d3a36e9481af0715180e530cbe4667ca",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "NOTE",
+    "sc_in": "0xcfeaead4947f0705a14ec42ac3d44129e1ef3ed5",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "DOGECAST",
+    "sc_in": "0x4955f6641bf9c8c163604c321f4b36e988698f75",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "JOECOIN",
+    "sc_in": "0x76e222b07c53d28b89b0bac18602810fc22b49a8",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "OLM",
+    "sc_in": "0xe5018913f2fdf33971864804ddb5fca25c539032",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "COINEX",
+    "symbol_in": "RSC",
+    "sc_in": "0xd101dcc414f310268c37eeb4cd376ccfa507f571",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+  "status": true
   }
 
 ]
