@@ -64774,16 +64774,7 @@
     "des_out": 18,
    "status": true
   },
-  {
-    "cex": "BITMART",
-    "symbol_in": "$MUSIC",
-    "sc_in": "0xD8c0b13B551718b808fc97eAd59499d5Ef862775",
-    "des_in": 8,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-   "status": true
-  },
+ 
   {
     "cex": "BITMART",
     "symbol_in": "WAXP",
