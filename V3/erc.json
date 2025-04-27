@@ -64887,7 +64887,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$MAGA",
+    "symbol_in": "MAGA",
     "sc_in": "0xD29DA236dd4AAc627346e1bBa06A619E8c22d7C5",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -64897,7 +64897,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$FIGHT",
+    "symbol_in": "FIGHT",
     "sc_in": "0x8802269D1283cdB2a5a329649E5cB4CdcEE91ab6",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -65037,7 +65037,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$ELON",
+    "symbol_in": "ELON",
     "sc_in": "0x69420E3A3aa9E17Dea102Bb3a9b3B73dcDDB9528",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -65107,7 +65107,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$BRETT",
+    "symbol_in": "BRETT",
     "sc_in": "0x240D6FAF8c3B1A7394e371792A3bf9D28DD65515",
     "des_in": 9,
     "symbol_out": "ETH",
@@ -65207,7 +65207,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$TURBO",
+    "symbol_in": "TURBO",
     "sc_in": "0xA35923162C49cF95e6BF26623385eb431ad920D3",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -65227,7 +65227,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$PAW",
+    "symbol_in": "PAW",
     "sc_in": "0xc11158c5dA9db1D553ED28f0C2BA1CbEDD42CFcb",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -65567,7 +65567,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$LINA",
+    "symbol_in": "LINA",
     "sc_in": "0x3E9BC21C9b189C09dF3eF1B824798658d5011937",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -65747,7 +65747,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$APU",
+    "symbol_in": "APU",
     "sc_in": "0x594DaaD7D77592a2b97b725A7AD59D7E188b5bFa",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -65777,7 +65777,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$DOP",
+    "symbol_in": "DOP",
     "sc_in": "0x97A9a15168C22B3C137E6381037E1499C8ad0978",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -66447,7 +66447,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$G",
+    "symbol_in": "G",
     "sc_in": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -66457,7 +66457,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$GEMS",
+    "symbol_in": "GEMS",
     "sc_in": "0x3010ccb5419F1EF26D40a7cd3F0d707a0fa127Dc",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -66647,7 +66647,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$SAFE",
+    "symbol_in": "SAFE",
     "sc_in": "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -66657,7 +66657,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$ATH",
+    "symbol_in": "ATH",
     "sc_in": "0xbe0Ed4138121EcFC5c0E56B40517da27E6c5226B",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -66667,7 +66667,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$MAX",
+    "symbol_in": "MAX",
     "sc_in": "0xb7109df1a93f8fe2B8162c6207C9B846C1C68090",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -66947,7 +66947,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$AVA",
+    "symbol_in": "AVA",
     "sc_in": "0xa6C0c097741D55ECd9a3A7DeF3A8253fD022ceB9",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -67397,7 +67397,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$PRIME",
+    "symbol_in": "PRIME",
     "sc_in": "0xb23d80f5FefcDDaa212212F028021B41DEd428CF",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -68187,7 +68187,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$BURN",
+    "symbol_in": "BURN",
     "sc_in": "0xA2fe5E51729BE71261BcF42854012827BC44c044",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -68297,7 +68297,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "NGTG$$",
+    "symbol_in": "NGTG",
     "sc_in": "0x810296898a4F870619B015C0B13C8c6E65b305e3",
     "des_in": 2,
     "symbol_out": "ETH",
@@ -68317,7 +68317,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$LF",
+    "symbol_in": "LF",
     "sc_in": "0x957c7fA189a408E78543113412f6Ae1a9b4022C4",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -68327,7 +68327,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$FORM",
+    "symbol_in": "FORM",
     "sc_in": "0xE7deE4823EE18F1347F1Cf7997f70B94eFDe2E1F",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -68797,7 +68797,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$MUSIC",
+    "symbol_in": "MUSIC",
     "sc_in": "0xD8c0b13B551718b808fc97eAd59499d5Ef862775",
     "des_in": 8,
     "symbol_out": "USDT",
@@ -68917,7 +68917,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$MAGA",
+    "symbol_in": "MAGA",
     "sc_in": "0xD29DA236dd4AAc627346e1bBa06A619E8c22d7C5",
     "des_in": 9,
     "symbol_out": "USDT",
@@ -68927,7 +68927,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$FIGHT",
+    "symbol_in": "FIGHT",
     "sc_in": "0x8802269D1283cdB2a5a329649E5cB4CdcEE91ab6",
     "des_in": 9,
     "symbol_out": "USDT",
@@ -69067,7 +69067,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$ELON",
+    "symbol_in": "ELON",
     "sc_in": "0x69420E3A3aa9E17Dea102Bb3a9b3B73dcDDB9528",
     "des_in": 9,
     "symbol_out": "USDT",
@@ -69137,7 +69137,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$BRETT",
+    "symbol_in": "BRETT",
     "sc_in": "0x240D6FAF8c3B1A7394e371792A3bf9D28DD65515",
     "des_in": 9,
     "symbol_out": "USDT",
@@ -69237,7 +69237,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$TURBO",
+    "symbol_in": "TURBO",
     "sc_in": "0xA35923162C49cF95e6BF26623385eb431ad920D3",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -69257,7 +69257,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$PAW",
+    "symbol_in": "PAW",
     "sc_in": "0xc11158c5dA9db1D553ED28f0C2BA1CbEDD42CFcb",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -69597,7 +69597,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$LINA",
+    "symbol_in": "LINA",
     "sc_in": "0x3E9BC21C9b189C09dF3eF1B824798658d5011937",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -69777,7 +69777,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$APU",
+    "symbol_in": "APU",
     "sc_in": "0x594DaaD7D77592a2b97b725A7AD59D7E188b5bFa",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -69807,7 +69807,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$DOP",
+    "symbol_in": "DOP",
     "sc_in": "0x97A9a15168C22B3C137E6381037E1499C8ad0978",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -70477,7 +70477,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$G",
+    "symbol_in": "G",
     "sc_in": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -70487,7 +70487,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$GEMS",
+    "symbol_in": "GEMS",
     "sc_in": "0x3010ccb5419F1EF26D40a7cd3F0d707a0fa127Dc",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -70677,7 +70677,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$SAFE",
+    "symbol_in": "SAFE",
     "sc_in": "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -70687,7 +70687,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$ATH",
+    "symbol_in": "ATH",
     "sc_in": "0xbe0Ed4138121EcFC5c0E56B40517da27E6c5226B",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -70697,7 +70697,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$MAX",
+    "symbol_in": "MAX",
     "sc_in": "0xb7109df1a93f8fe2B8162c6207C9B846C1C68090",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -70977,7 +70977,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$AVA",
+    "symbol_in": "AVA",
     "sc_in": "0xa6C0c097741D55ECd9a3A7DeF3A8253fD022ceB9",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -71427,7 +71427,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$PRIME",
+    "symbol_in": "PRIME",
     "sc_in": "0xb23d80f5FefcDDaa212212F028021B41DEd428CF",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -72217,7 +72217,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$BURN",
+    "symbol_in": "BURN",
     "sc_in": "0xA2fe5E51729BE71261BcF42854012827BC44c044",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -72327,7 +72327,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "NGTG$$",
+    "symbol_in": "NGTG",
     "sc_in": "0x810296898a4F870619B015C0B13C8c6E65b305e3",
     "des_in": 2,
     "symbol_out": "USDT",
@@ -72347,7 +72347,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$LF",
+    "symbol_in": "LF",
     "sc_in": "0x957c7fA189a408E78543113412f6Ae1a9b4022C4",
     "des_in": 18,
     "symbol_out": "USDT",
@@ -72357,7 +72357,7 @@
   },
   {
     "cex": "BITMART",
-    "symbol_in": "$FORM",
+    "symbol_in": "FORM",
     "sc_in": "0xE7deE4823EE18F1347F1Cf7997f70B94eFDe2E1F",
     "des_in": 18,
     "symbol_out": "USDT",
