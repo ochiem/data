@@ -58549,7 +58549,7 @@
     "cex": "MEXC",
     "symbol_in": "USDM",
     "sc_in": "0xbbAec992fc2d637151dAF40451f160bF85f3C8C1",
-    "des_in": 18,
+    "des_in": 6,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -58559,7 +58559,7 @@
     "cex": "MEXC",
     "symbol_in": "USDM",
     "sc_in": "0xbbAec992fc2d637151dAF40451f160bF85f3C8C1",
-    "des_in": 18,
+    "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "des_out": 6,
@@ -66665,16 +66665,7 @@
     "des_out": 18,
    "status": true
   },
-  {
-    "cex": "BITMART",
-    "symbol_in": "MAX",
-    "sc_in": "0xb7109df1a93f8fe2B8162c6207C9B846C1C68090",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-   "status": true
-  },
+ 
   {
     "cex": "BITMART",
     "symbol_in": "AIOZ",
@@ -67749,7 +67740,7 @@
     "cex": "BITMART",
     "symbol_in": "USDM",
     "sc_in": "0xbbAec992fc2d637151dAF40451f160bF85f3C8C1",
-    "des_in": 18,
+    "des_in": 6,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -71779,7 +71770,7 @@
     "cex": "BITMART",
     "symbol_in": "USDM",
     "sc_in": "0xbbAec992fc2d637151dAF40451f160bF85f3C8C1",
-    "des_in": 18,
+    "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "des_out": 6,
