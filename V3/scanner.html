@@ -2296,8 +2296,8 @@
                 };                
                 break;
             case '0x':           
-                   // apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
-                  apiUrl = selectedServer+"https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;   
+                  apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                 // apiUrl = selectedServer+"https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;   
                 break;
             case '1inch':
                     apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
