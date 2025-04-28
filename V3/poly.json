@@ -5284,6 +5284,295 @@
       "sc_out": "0x0000000000000000000000000000000000001010",
       "des_out": 18,
       "status": true
-    }
+    },  {
+    "cex": "BITMART",
+    "symbol_in": "APEPE",
+    "sc_in": "0xA3f751662e282E83EC3cBc387d225Ca56dD63D3A",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ATT",
+    "sc_in": "0xcCCf7C6552437ab1504C384C6Ed4501dAa3a9aC6",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "BLOK",
+    "sc_in": "0x229b1b6C23ff8953D663C4cBB519717e323a0a84",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "COCA",
+    "sc_in": "0x7B12598E3616261df1C05EC28De0d2fB10c1F206",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "DEOD",
+    "sc_in": "0xE77aBB1E75D2913B2076DD16049992FFeACa5235",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "NAKA",
+    "sc_in": "0x311434160D7537be358930def317AfB606C0D737",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "NRS",
+    "sc_in": "0x94615302bCB36309371ea7454f3e99A4002105dE",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "QUICK",
+    "sc_in": "0xB5C064F955D8e7F38fE0460C556a72987494eE17",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "RMV",
+    "sc_in": "0xf0949Dd87D2531D665010d6274F06a357669457a",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "SWCH",
+    "sc_in": "0x3ce1327867077B551ae9A6987bF10C9fd08edCE1",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "UPO",
+    "sc_in": "0x9dBfc1cbf7a1E711503a29B4b5F9130ebeCcaC96",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "VOXEL",
+    "sc_in": "0xd0258a3fD00f38aa8090dfee343f10A9D4d30D3F",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "WPAY",
+    "sc_in": "0x7ABE9Edf5C544A04dA83e9110CF46DBC4759170c",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "UPT",
+    "sc_in": "0xB62D9138Ba5D87D9bE0939a877e4Fb22448D7E1D",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ALOR",
+    "sc_in": "0xd4D996CcDA51B65C6FD884FeaEA83B237D084262",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ATRNO",
+    "sc_in": "0x29b4ccD16D630Df19f768F68f43A0229EAE26250",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "AUDT",
+    "sc_in": "0x91c5A5488c0dEcde1Eacd8a4F10e0942fb925067",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "AVT",
+    "sc_in": "0x2E1a50Cce250232c2e016CEC145cD103a1f40aa8",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "BID",
+    "sc_in": "0xae337601df74fDab7262E169Af274e36ec45d5d8",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ECET",
+    "sc_in": "0xC1ab7e48FaFEE6b2596c65261392E59690cE7742",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ECLD",
+    "sc_in": "0xc6920888988cAcEeA7ACCA0c96f2D65b05eE22Ba",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "EMT",
+    "sc_in": "0x708383ae0e80E75377d664E4D6344404dede119A",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "GPRO",
+    "sc_in": "0xACe7eb41D6BAd44907cdA84A122F052c74cB7826",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "GPTCH",
+    "sc_in": "0x7Efe72a61ee1Cd8De6DA40f071287328D11034e9",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "IXS",
+    "sc_in": "0x1BA17C639BdaeCd8DC4AAc37df062d17ee43a1b8",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "SCOMP",
+    "sc_in": "0xd94A8f9caeD25E63eCc90EDfefAf3635eA1e182a",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "SHARP",
+    "sc_in": "0xB36B62929762ACF8A9Cc27ECebF6D353eBB48244",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "STAU",
+    "sc_in": "0x37C5eBfaE4E4dA225e9D8042B05063c4A2C94bb6",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "WELT",
+    "sc_in": "0x23E8B6A3f6891254988B84Da3738D2bfe5E703b9",
+    "des_in": 18,
+    "symbol_out": "USDT",
+    "sc_out": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "des_out": 6,
+  "status": true
+  }
   ]
 }
