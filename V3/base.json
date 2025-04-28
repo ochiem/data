@@ -5784,6 +5784,455 @@
       "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       "des_out": 6,
       "status": true
-    }
+    },  {
+    "cex": "BITMART",
+    "symbol_in": "AERO",
+    "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "DEGEN",
+    "sc_in": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "SKI",
+    "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "AEROBUD",
+    "sc_in": "0xFad8CB754230dbFd249Db0E8ECCb5142DD675a0d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "AIXBT",
+    "sc_in": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ANDYBASE",
+    "sc_in": "0x18A8BD1fe17A1BB9FFB39eCD83E9489cfD17a022",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "APPLE",
+    "sc_in": "0xBef883839a86bFa693035511eC2b709B0B8e4Ac7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "B3",
+    "sc_in": "0xB3B32F9f8827D4634fE7d973Fa1034Ec9fdDB3B3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "BASEDPEPE",
+    "sc_in": "0x52b492a33E447Cdb854c7FC19F1e57E8BfA1777D",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "BENJI",
+    "sc_in": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "BIFE",
+    "sc_in": "0xD769d56f479E9E72a77bB1523e866A33098Feec5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "BRETT",
+    "sc_in": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "CARV",
+    "sc_in": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "CLANKER",
+    "sc_in": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "COCORO",
+    "sc_in": "0x937a1cFAF0A3d9f5Dc4D0927F72ee5e3e5F82a00",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "DOGINME",
+    "sc_in": "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "DRB",
+    "sc_in": "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "EDGE",
+    "sc_in": "0xED6E000dEF95780fb89734c07EE2ce9F6dcAf110",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "F",
+    "sc_in": "0x2C24497D4086490e7EaD87CC12597fb50c2E6eD6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "FAI",
+    "sc_in": "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "FLOCK",
+    "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "FROC",
+    "sc_in": "0x3C8cd0dB9a01EfA063a7760267b822A129bc7DCA",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "GAMEVIRTUAL",
+    "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "GLUTEU",
+    "sc_in": "0x06A63c498eF95AD1fA4FfF841955e512b4B2198a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "GPS",
+    "sc_in": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "GPUS",
+    "sc_in": "0x155979E71d5B781b546AB05b5bee313dBb2F6394",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "IVT",
+    "sc_in": "0x4b12507E171970b3AcD48edFEb5BD1c676e61280",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "KAITO",
+    "sc_in": "0x98d0baa52b2D063E780DE12F615f963Fe8537553",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "KEYCAT",
+    "sc_in": "0x9a26F5433671751C3276a065f57e5a02D2817973",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "KILT",
+    "sc_in": "0x9E5189a77f698305Ef76510AFF1C528cff48779c",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "LINGO",
+    "sc_in": "0xfb42Da273158B0F642F59F2Ba7cc1d5457481677",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "MAK",
+    "sc_in": "0xDB627d81Ab31A5924ea7B19D91cCdcC9ed243319",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "MCADE",
+    "sc_in": "0xc48823EC67720a04A9DFD8c7d109b2C3D6622094",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "MEY",
+    "sc_in": "0x8bFAc1b375bf2894D6F12fb2Eb48B1C1a7916789",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "MIGGLES",
+    "sc_in": "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "NUROX",
+    "sc_in": "0x89F4307eAdB19d8FD01844f8598F7D31569C77Fb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "PROMPT",
+    "sc_in": "0x30c7235866872213F68cb1F08c37Cb9eCCB93452",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "RFC",
+    "sc_in": "0x357655df177Fb0229DC8acA977114a420bf81799",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "TIG",
+    "sc_in": "0x01048872Cb67dd873f4d463b3f29E7c59cED19d7",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "TOSHI",
+    "sc_in": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "TPUP",
+    "sc_in": "0xAb7Bf87Aa2EabBD31b5cF50930006d90124Ca4C0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "TRUMPDOGE",
+    "sc_in": "0xf611F6A545a64797850b063C161Ec2637429368d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "TUP",
+    "sc_in": "0xcB8929D287c5e96B56c860f5c6dB1A0516082a6B",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "VVV",
+    "sc_in": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  },
+  {
+    "cex": "BITMART",
+    "symbol_in": "ZORA",
+    "sc_in": "0x1111111111166b7FE7bd91427724B487980aFc69",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0x4200000000000000000000000000000000000006",
+    "des_out": 18,
+  "status": true
+  }
   ]
 }
