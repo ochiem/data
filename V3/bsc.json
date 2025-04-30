@@ -3782,6 +3782,26 @@
       "des_out": 8,
       "status": true
     },
+  {
+      "cex": "BINANCE",
+      "symbol_in": "SIGN",
+      "sc_in": "0x868FCEd65edBF0056c4163515dD840e9f287A4c3",
+      "des_in": 18,
+      "symbol_out": "USDT",
+      "sc_out": "0x55d398326f99059ff775485246999027b3197955",
+      "des_out": 8,
+      "status": true
+    },
+  {
+      "cex": "BINANCE",
+      "symbol_in": "SIGN",
+      "sc_in": "0x868FCEd65edBF0056c4163515dD840e9f287A4c3",
+      "des_in": 18,
+      "symbol_out": "BNB",
+      "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "des_out": 18,
+      "status": true
+    },
     {
       "cex": "BINANCE",
       "symbol_in": "LAZIO",
