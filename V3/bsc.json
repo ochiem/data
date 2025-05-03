@@ -19921,16 +19921,7 @@
     "des_out": 18,
     "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "GFT",
-    "sc_in": "0x72ff5742319ef07061836f5c924ac6d72c919080",
-    "des_in": 18,
-    "symbol_out": "USDT",
-    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
-    "des_out": 18,
-    "status": true
-  },
+  
   {
     "cex": "INDODAX",
     "symbol_in": "MMETA",
@@ -19951,16 +19942,7 @@
     "des_out": 18,
     "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "ALT",
-    "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
-    "des_in": 18,
-    "symbol_out": "USDT",
-    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
-    "des_out": 18,
-    "status": true
-  },
+  
   {
     "cex": "INDODAX",
     "symbol_in": "AXL",
@@ -20242,13 +20224,13 @@
   },
   {
     "cex": "INDODAX",
-    "symbol_in": "CVP",
-    "sc_in": "0x09E889BB4D5b474f561db0491C38702F367A4e4d",
-    "des_in": 18,
+    "symbol_in": "CHEEMS",
+    "sc_in": "0x0DF0587216a4a1bB7d5082fdc491d93d2dD4B413",
+    "des_in": 21,
     "symbol_out": "USDT",
-    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
+    "sc_out": "0x55d398326f99059ff775485246999027b3197955",
     "des_out": 18,
-    "status": true
+  "status": true
   },
  
   {
