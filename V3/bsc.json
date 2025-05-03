@@ -19871,16 +19871,7 @@
     "des_out": 18,
     "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "ARV",
-    "sc_in": "0x6679eb24f59dfe111864aec72b443d1da666b360",
-    "des_in": 8,
-    "symbol_out": "USDT",
-    "sc_out": "0x55d398326f99059fF775485246999027B3197955",
-    "des_out": 18,
-    "status": true
-  },
+  
   {
     "cex": "INDODAX",
     "symbol_in": "DODO",
