@@ -1426,13 +1426,14 @@
                 .join('');
 
             // Link DEX
-            const linkOKDEX = createLink(`https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${data.sc_in}&outputChain=501&outputCurrency=${data.sc_out}`, '#OKXD', 'uk-text-secondary');
-            const linkUNIDEX = createLink(`https://app.unidex.exchange/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#UNDX', 'uk-text-danger');
+            const linkOKDEX = createLink(`https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${data.sc_in}&outputChain=501&outputCurrency=${data.sc_out}`, '#OKX', 'uk-text-secondary');
+            const linkUNIDEX = createLink(`https://app.unidex.exchange/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#UNX', 'uk-text-danger');
             const linkRango = createLink(`https://app.rango.exchange/bridge?fromBlockchain=${DTChain.Kode_Chain}&toBlockchain=${DTChain.Kode_Chain}&fromToken=${data.symbol_in}--${data.sc_in}&toToken=${data.symbol_out}--${data.sc_out}`, '#RNGX', 'uk-text-success');
             const linkRBX = createLink(`https://app.rubic.exchange/?fromChain=${DTChain.Nama_Chain.toUpperCase()}&toChain=${DTChain.Nama_Chain.toUpperCase()}&from=${data.sc_in}&to=${data.sc_out}`, '#RBCX', 'uk-text-warning');
-            const linkDEFIL = createLink(`https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#DFLX', 'uk-text-primary');
+            const linkDEFIL = createLink(`https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#DFL', 'uk-text-primary');
             const OPEN = createLink(` https://app.openocean.finance/swap/${DTChain.Nama_Chain}/${data.symbol_in}/${data.symbol_out}`, '#OPEN', 'uk-text-danger');
-
+            const linkRelay = createLink(`https://relay.link/bridge/bnb?fromChainId=${DTChain.Kode_Chain}&fromCurrency=${data.sc_in}&toCurrency=${data.sc_out}`, '#RLX', 'uk-text-warning');
+            
             let row = document.createElement('tr');
             row.dataset.index = index;
             row.id = `${data.cex}_${data.symbol_in}_${data.symbol_out}_${DTChain.Nama_Chain.toUpperCase()}`;
@@ -1472,7 +1473,7 @@
                 <a href="${DTChain.URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>: ${linkStokToken}<br>    
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_out}</span> 
                 <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a>: ${linkStokPair}<br>                   
-               ${linkUNIDEX} ${linkDEFIL} ${linkOKDEX}
+               ${linkUNIDEX} ${linkDEFIL} ${linkRelay} ${linkOKDEX} 
             `;
 
             row.appendChild(detailTd);
