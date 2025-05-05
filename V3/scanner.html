@@ -2878,7 +2878,53 @@
           }
         }
         //sent sinyal kegrup tele
-        function MultisendMessage(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname,sc_in,sc_out) {
+     function MultisendMessage(cex, dex, token, pair, modal, PNL, priceBUY, priceSELL, FeeSwap, FeeWD, totalFee, nickname, sc_in, sc_out) {
+            const urlsCEX = GeturlExchanger(cex, token, pair);
+            const SavedSettingData = getFromLocalStorage('DATA_SETTING', { ID_GRUP: 0, TOKEN: '' });
+
+            if (!SavedSettingData.TOKEN || !SavedSettingData.ID_GRUP) {
+                toastr.error("Token atau ID Grup Telegram tidak tersedia!");
+                return;
+            }
+
+            let Linksctoken = `<a href="${DTChain.URL_Chain}/token/${sc_in}" target="_blank" class="uk-link">${token}</a>`;
+            let Linkscpair = `<a href="${DTChain.URL_Chain}/token/${sc_out}" target="_blank" class="uk-link">${pair}</a>`;
+            let linkDEX = `<a href="https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${sc_in}&to=${sc_out}" target="_blank" class="uk-link">${dex}</a>`;
+            let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
+
+            let message = 
+                `<b>#MULTISCAN_V1 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `-----------------------------------------\n` +
+                `MARKET: ${linkCEX} VS ${linkDEX}\n` +
+                `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
+                `MODAL: <b>${modal}$</b> | PROFIT: <b>${PNL.toFixed(2)}$</b>\n` +
+                `<b>BUY ${Linksctoken}:</b> ${priceBUY.toFixed(9)}\n` +
+                `<b>SELL ${Linkscpair}:</b> ${priceSELL.toFixed(9)}\n` +
+                `<b>FEEWD:</b> ${FeeWD.toFixed(3)}\n` +
+                `FEETOTAL: <b>${totalFee.toFixed(2)}$</b> | SWAP: <b>${FeeSwap.toFixed(2)}$</b>\n` +
+                `-----------------------------------------`;
+
+            // Kirim ke Telegram
+            const apiUrl = 'https://api.telegram.org/bot' + SavedSettingData.TOKEN + '/sendMessage';
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: SavedSettingData.ID_GRUP,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function () {
+                    console.log("Pesan berhasil dikirim ke Telegram");
+                },
+                error: function (xhr, status, error) {
+                    console.error("Gagal kirim pesan:", error);
+                    toastr.error("Gagal kirim ke Telegram: " + error);
+                }
+            });
+        }
+        function MultisendMessageLama(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname,sc_in,sc_out) {
             // Mengambil user dari localStorage menggunakan getFromLocalStorage  
             let Linksctoken=`<a href="${DTChain.URL_Chain}/token/${sc_in}" target="_blank" class="uk-link"> ${token}</a>`;
             let Linkscpair=`<a href="${DTChain.URL_Chain}/token/${sc_out}" target="_blank" class="uk-link">  ${pair}</a>`;
