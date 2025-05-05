@@ -134,7 +134,7 @@
             <!-- Bagian Kiri (Form) -->
             <div class="uk-width-auto">
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTIPAIR V3.3 <label id="namachain"></label> :: SCANNER <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
+                    MULTIPAIR V3.4 <label id="namachain"></label> :: SCANNER <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
@@ -296,6 +296,13 @@
            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
+                <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
+                    <span class="uk-form-label uk-text-success">
+                        <input type="checkbox" checked class="posisi-check" value="Actionkiri"> KIRI 
+                        <input type="checkbox" checked class="posisi-check" value="ActionKana"> KANAN
+                    </span>  
+                </span>
+                &nbsp;&nbsp;
                 <span class="uk-form-label uk-text-danger uk-text-bolder">SORTING : 
                     <span class="uk-form-label uk-text-primary">
                         <input type="radio" name="toggle" checked value="opt_A"> A 
@@ -764,6 +771,27 @@
                 console.warn("CONFIG tidak tersedia.");
             }
 
+            $('.posisi-check').on('change', function () {
+                const kiri = $('input[value="Actionkiri"]');
+                const kanan = $('input[value="ActionKana"]');
+                
+                // Cek jumlah yang dicentang
+                const checkedCount = $('.posisi-check:checked').length;
+
+                if (checkedCount === 0) {
+                    // Kembalikan checkbox ini ke posisi sebelumnya (ON)
+                    $(this).prop('checked', true);
+                    toastr.error("Minimal salah satu POSISI harus aktif!");
+                    return;
+                }else{
+                    $("#startSCAN").show();
+                }
+
+                const label = $(this).val() === 'Actionkiri' ? 'KIRI' : 'KANAN';
+                const status = $(this).is(':checked') ? 'AKTIF' : 'NONAKTIF';
+                toastr.info(`POSISI ${label} ${status}`);
+            });
+
             $('#searchInput').on('input', function() {
                 const searchValue = $(this).val().toLowerCase();
                 $('#dataTableBody tr').filter(function() {
@@ -951,8 +979,9 @@
                                 var amount_in_pair = parseFloat(Modal) / parseFloat(priceBuyPairCEX);
                                 var amount_in_token = parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
                                  // token to pair
-                                
-                                if ($(`#${IdTokentoPair}`).length) {
+                                 if ($(`#${IdTokentoPair}`).length && $('input[type="checkbox"][value="Actionkiri"]').is(':checked')) {
+
+                               // if ($(`#${IdTokentoPair}`).length) {
                                     getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (error, DataDEX) {
                                         if (error || !DataDEX) {
                                             $(`#${IdTokentoPair}`).css('background-color', error.color);
@@ -1020,8 +1049,9 @@
                                 }                               
                                 
                                 // pair to token
-                                
-                                if ($(`#${IdPairtoToken}`).length) {
+                                if ($(`#${IdPairtoToken}`).length && $('input[type="checkbox"][value="ActionKana"]').is(':checked')) {
+
+                              //  if ($(`#${IdPairtoToken}`).length) {
                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (error, DataDEX) {
                                         if (error || !DataDEX) {
                                             $(`#${IdPairtoToken}`).css('background-color', error.color);
