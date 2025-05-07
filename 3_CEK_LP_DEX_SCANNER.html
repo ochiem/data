@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidity Pool Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.23/dist/css/uikit.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.23/dist/js/uikit.min.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3490/3490236.png" type="image/x-icon">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+        .uk-container { width: 96%; max-width: none; }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+        th {
+          background-color: #f4f4f4;
+        }
+        select, button {
+          margin: 10px 0;
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+        #progressIndicator {
+          margin: 10px 0;
+          font-size: 16px;
+          color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="uk-container uk-margin-top">
+    <h2 class="uk-heading-line"><span>Liquidity Pool Checker</span></h2>
+
+    <!-- Pilihan Network -->
+    <label for="networkSelect">Pilih Network:</label>
+    <select id="networkSelect" class="uk-select uk-margin-bottom">
+        <option value="-">Pilih Chain</option>
+        <option value="base">Base</option>
+        <option value="ethereum">Ethereum</option>
+        <option value="bsc">Binance Smart Chain</option>
+        <option value="polygon">Polygon (POS)</option>
+        <option value="arbitrum">Arbitrum</option>
+        <option value="avalanche">Avalanche</option>
+    </select>
+
+    <!-- Upload CSV -->
+    <input type="file" id="csvFile" class="uk-input uk-margin-bottom" accept=".csv">
+    <button id="loadData" class="uk-button uk-button-primary">CHECKER LP</button>
+    <button id="downloadCsv" class="uk-button uk-button-secondary uk-margin-left" style="display:none;">Download CSV</button>
+    <button id="downloadUploadCsv" class="uk-button uk-button-default uk-margin-left">Download Sample CSV</button>
+
+    <progress id="progressBar" value="0" max="100" class="uk-progress uk-margin-top"></progress>
+    <p id="progressText">Menunggu input...</p>
+
+    <table class="uk-table uk-table-striped uk-margin-top">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>DEX ID</th>
+                <th>Base Token</th>
+                <th>Base Address</th>
+                <th>Quote Token</th>
+                <th>Quote Address</th>
+                <th>Vol 24h (USD)</th>
+            </tr>
+        </thead>
+        <tbody id="lpTableBody">
+            <!-- Data LP akan ditampilkan di sini -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        let tokenCount = 0;
+
+        $("#loadData").click(async function () {
+            const file = $("#csvFile")[0].files[0];
+            const network = $("#networkSelect").val(); // Ambil nilai network yang dipilih
+            if (!file) {
+                alert("Pilih file CSV terlebih dahulu!");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = async function (e) {
+                const lines = e.target.result.split("\n").map(line => line.trim()).filter(line => line);
+                let csvData = "No,DEX ID,Base Token,Base Address,Quote Token,Quote Address,Vol 24h (USD)\n";
+
+                let totalTokens = lines.length - 1; // Kurangi 1 karena header
+                let processedTokens = 0;
+
+                $("#progressBar").val(0).attr("max", totalTokens);
+                $("#progressText").text(`Memulai pengecekan... (0/${totalTokens})`);
+                $("#lpTableBody").html(""); // Kosongkan tabel sebelum mulai
+
+                for (let i = 1; i < lines.length; i++) { // Skip header CSV
+                    const parts = lines[i].split(",");
+                    if (parts.length < 3) continue;
+
+                    const scAddress = parts[2].trim(); // Smart contract address
+                    const apiUrl = `https://api.dexscreener.com/token-pairs/v1/${network}/${scAddress}`; // Gunakan network yang dipilih
+                    
+                    try {
+                        console.log("Fetching:", apiUrl); // Debugging
+                        const response = await fetch(apiUrl);
+                        const data = await response.json();
+                        console.log("API Response:", data); // Debugging
+
+                        let tokenCount = 0; // Untuk menghitung nomor urut token utama
+                        let pairCount = {};  // Untuk menghitung pasangan token secara bertingkat
+                        let no=0;
+                    // Fungsi untuk memberikan nomor urut bertingkat
+                    function getFormattedIndex(mainIndex) {
+                        if (!pairCount[mainIndex]) 
+                        pairCount[mainIndex] = 1;
+                        else pairCount[mainIndex]++;
+
+                        return `${pairCount[mainIndex]} .${mainIndex}`;
+                    }
+
+                    if (data && Array.isArray(data) && data.length > 0) {
+                        no++;
+                        data.forEach((pair, index) => {
+                            // Tentukan nomor urut untuk token utama
+                            tokenCount++;
+                            const formattedIndex = getFormattedIndex(tokenCount);
+
+                            // Buat row HTML dan data CSV
+                            let rowHtml = `<tr>
+                                <td>${formattedIndex}</td>
+                                <td>${pair.dexId}</td>
+                                <td>${pair.baseToken.symbol}</td>
+                                <td>${pair.baseToken.address}</td>
+                                <td>${pair.quoteToken.symbol}</td>
+                                <td>${pair.quoteToken.address}</td>
+                                <td>${pair.volume.h24 ? `$${pair.volume.h24.toLocaleString()}` : "-"}</td>
+                            </tr>`;
+
+                            // Tambahkan row ke dalam tabel
+                            $("#lpTableBody").append(rowHtml);
+
+                            // Tambahkan data ke CSV
+                            csvData += `${formattedIndex},${pair.dexId},${pair.baseToken.symbol},${pair.baseToken.address},${pair.quoteToken.symbol},${pair.quoteToken.address},${pair.volume.h24 || 0}\n`;
+                        });
+                    } else {
+                        console.warn("API did not return valid data.");
+                    }
+
+
+                    } catch (error) {
+                        console.error("Error fetching data:", error);
+                    }
+
+                    // Perbarui progress
+                    processedTokens++;
+                    let progressPercent = (processedTokens / totalTokens) * 100;
+                    $("#progressBar").val(processedTokens);
+                    $("#progressText").text(`Mengecek token ${processedTokens}/${totalTokens} (${progressPercent.toFixed(1)}%)`);
+
+                    // Tunggu 200ms sebelum request berikutnya
+                    await new Promise(resolve => setTimeout(resolve, 200));
+                }
+
+                $("#downloadCsv").show().click(() => downloadCSV(csvData));
+                $("#progressText").text("Pengecekan selesai!");
+            };
+
+            reader.readAsText(file);
+        });
+
+        function downloadCSV(csvData) {
+            const blob = new Blob([csvData], { type: "text/csv" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "liquidity_pool_data.csv";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        $("#downloadUploadCsv").click(function() {
+            const sampleCSV = "Cex,Symbol,SC\nBINANCE,NEAR,0x1fa4a73a3f0133f0025378af00236f3abdee5d63\nBINANCE,FDUSD,0xc5f0f7b66764f6ec8c8dff7ba683102295e16409\n";
+            const blob = new Blob([sampleCSV], { type: "text/csv" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "sample_upload.csv";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    });
+</script>
+
+</body>
+</html>
