@@ -1279,7 +1279,7 @@
 
                     const formattedIDR = idrBalance.toLocaleString("id-ID");
 
-                    $("#INDODAXSaldo").text(`RP. ${formattedIDR} ≈ ${usdtEstimate.toFixed(2)} USDT`);
+                    $("#INDODAXSaldo").html(`<span class=uk-text-danger>RP. ${formattedIDR} </span> <br/>{${usdtEstimate.toFixed(2)} USDT}`);
 
                     localStorage.setItem("am_INDODAXSaldo", usdtEstimate.toFixed(2));
 
