@@ -1272,6 +1272,7 @@
                 if (response.success) {
                     const balance = response.return.balance;
                     const idrBalance = parseFloat(balance.idr || 0);
+                    const usdtBalance = parseFloat(balance.usdt || 0);
 
                     // Gunakan fungsi USDTIDR untuk ambil kurs
                     const rate = await USDTIDR(1); // akan ambil harga USDT/IDR dan simpan ke localStorage
@@ -1279,9 +1280,10 @@
 
                     const formattedIDR = idrBalance.toLocaleString("id-ID");
 
-                    $("#INDODAXSaldo").html(`<span class=uk-text-danger>RP. ${formattedIDR} </span> <br/>{${usdtEstimate.toFixed(2)} USDT}`);
-
-                    localStorage.setItem("am_INDODAXSaldo", usdtEstimate.toFixed(2));
+                    $("#INDODAXSaldo").html(`<span class=uk-text-danger>RP. ${formattedIDR} </span>≈ ${usdtEstimate.toFixed(2)} USDT <br/> ${usdtBalance.toFixed(2)} {USDT}`);
+                    
+                    const totalUSDT = usdtEstimate + usdtBalance;
+                    localStorage.setItem("am_INDODAXSaldo", totalUSDT.toFixed(2));
 
                     console.log("Cek Asset Indodax");
                     console.log("IDR:", idrBalance, "Rate:", rate, "≈ USDT:", usdtEstimate);
