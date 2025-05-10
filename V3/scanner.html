@@ -970,6 +970,7 @@
                     getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
                         
                       clearTimeout(timeout);
+                        let isInvalid = false;
                         // Validasi manual harga
                         let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || 0;
                         let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || 0;
