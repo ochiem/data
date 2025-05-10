@@ -969,16 +969,8 @@
                     //console.log("Detail TOKEN PAIR",token);
                     getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
                         
-                        const buyVolToken = DataCEX.volumes_buyToken.reduce((min, item) => 
-                            item.price < min.price ? item : min
-                        ).volume;
-
-                        const sellVolPair = DataCEX.volumes_sellToken.reduce((min, item) => 
-                            item.price > min.price ? item : min
-                        ).volume;
-
-                        clearTimeout(timeout);
-                        if (error) {
+                      clearTimeout(timeout);
+                        if (error || !DataCEX)  {
                             console.error("Error data from CEX:", error);
                             toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
                             resolve();
@@ -990,6 +982,14 @@
 
                             let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || "N/A";
                             let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || "N/A";
+
+                            const buyVolToken = (DataCEX.volumes_buyToken.length > 0) 
+                                ? DataCEX.volumes_buyToken.reduce((min, item) => item.price < min.price ? item : min).volume 
+                                : 1;
+
+                            const sellVolPair = (DataCEX.volumes_sellToken.length > 0) 
+                                ? DataCEX.volumes_sellToken.reduce((max, item) => item.price > max.price ? item : max).volume 
+                                : 1;
 
                             dexList.forEach((dex) => {
                                 let IdTokentoPair = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
