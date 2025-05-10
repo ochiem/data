@@ -134,7 +134,7 @@
             <!-- Bagian Kiri (Form) -->
             <div class="uk-width-auto">
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTIPAIR V3.4 <label id="namachain"></label> :: SCANNER <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
+                    MULTIPAIR V3.5 <label id="namachain"></label> :: SCANNER <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
@@ -184,6 +184,9 @@
                                     <!-- Radio button DEX akan di-generate di sini -->
                                 </div>
                                 &nbsp;&nbsp;
+                                <span class="uk-form-label uk-text-secondary uk-text-bolder">
+                                    <input type="checkbox" class="vol-check" id="checkVOL"> VOL CHECK
+                                </span> 
                                 &nbsp;&nbsp;
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>                                
@@ -906,7 +909,7 @@
     //scan dengan batas maksimum eksekusi pergrup (speedscan)
     $("#startSCAN").click(function () {
         cekDataAwal();
-        //  sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
+          sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
         CekIdentitas();
         $('#sinyal-container span[id^="sinyal"]').empty();
         form_off();
@@ -965,6 +968,15 @@
                     let timeout = setTimeout(() => reject("Timeout"), speedScan);
                     //console.log("Detail TOKEN PAIR",token);
                     getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
+                        
+                        const buyVolToken = DataCEX.volumes_buyToken.reduce((min, item) => 
+                            item.price < min.price ? item : min
+                        ).volume;
+
+                        const sellVolPair = DataCEX.volumes_sellToken.reduce((min, item) => 
+                            item.price > min.price ? item : min
+                        ).volume;
+
                         clearTimeout(timeout);
                         if (error) {
                             console.error("Error data from CEX:", error);
@@ -1010,7 +1022,7 @@
                                                             $(`#${IdTokentoPair}`).css('background-color', '#f9f9e4');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
-                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
                                                             }
                                                         else{
                                                                 $(`#${IdTokentoPair}`).css('background-color',altError.color);
@@ -1025,7 +1037,7 @@
                                                             $(`#${IdTokentoPair}`).css('background-color', '#f9f9e4');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
-                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
                                                             }
                                                         else{
                                                                 $(`#${IdTokentoPair}`).css('background-color',altError.color);
@@ -1040,7 +1052,7 @@
                                                             $(`#${IdTokentoPair}`).css('background-color', '#f9f9e4');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
-                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
                                                             }
                                                         else{
                                                                 $(`#${IdTokentoPair}`).css('background-color',altError.color);
@@ -1054,7 +1066,7 @@
                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
                                             
-                                            ResultEksekusi(DataDEX.amount_out,DataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
+                                            ResultEksekusi(DataDEX.amount_out,DataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
                                         }
                                     });
                                 }                               
@@ -1082,7 +1094,7 @@
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
 
-                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken');
+                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
                                                         }else{
                                                             $(`#${IdPairtoToken}`).css('background-color',altError.color);
                                                             $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${altError.pesanDEX}">[ERROR]</span>`);
@@ -1097,7 +1109,7 @@
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
 
-                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken');
+                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
                                                         }else{
                                                             $(`#${IdPairtoToken}`).css('background-color',altError.color);
                                                             $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`)
@@ -1112,7 +1124,7 @@
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
 
-                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken');
+                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
                                                         }else{
                                                             $(`#${IdPairtoToken}`).css('background-color',altError.color);
                                                             $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`)
@@ -1125,7 +1137,7 @@
                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
                                            
-                                            ResultEksekusi(DataDEX.amount_out,DataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken');
+                                            ResultEksekusi(DataDEX.amount_out,DataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
                                         }
                                     });
                                 }
@@ -1473,7 +1485,7 @@
                 <a href="${DTChain.URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>: ${linkStokToken}<br>    
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_out}</span> 
                 <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a>: ${linkStokPair}<br>                   
-               ${linkUNIDEX} ${linkDEFIL} ${linkRelay} ${linkOKDEX} 
+               ${linkOKDEX}  ${linkUNIDEX} ${linkDEFIL} ${linkRelay}
             `;
 
             row.appendChild(detailTd);
@@ -1959,32 +1971,47 @@
         });
     }
 
-
-    // Fungsi update price & vol untuk token dan pair
-   function updateTableVolCEX(processedData, finalResult, cex) {
+    function updateTableVolCEX(processedData, finalResult, cex) {
         const cexName = cex.toUpperCase();
         const TokenPair = finalResult.token + "_" + finalResult.pair;
-        
-        $('#LEFT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
-                finalResult.volumes_buyToken.map((data, index) => {
-                    return `<span class='uk-text-success'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
+
+        const getPriceIDR = priceUSDT => {
+            const rateIDR = getFromLocalStorage("PriceRateUSDT", 0);
+            return rateIDR ? (priceUSDT * rateIDR).toLocaleString("id-ID", { style: "currency", currency: "IDR" }) : "N/A";
+        };
+
+        $('#LEFT_' + cexName + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).html(
+            finalResult.volumes_buyToken.map((data, index) => {
+                    return `<span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
+                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                    </span>`;
                 }).join('') +
-                `<span class='uk-text-secondary uk-text-bolder'>${finalResult.token} -> ${finalResult.pair}</span><br/>`+
-               // <span class='uk-text-primary uk-text-bolder'>FeeWD: ${finalResult.feeWDToken}</span><br/>` + 
-                finalResult.volumes_sellPair.reverse().map((data, index) => {
-                    return `<span class='uk-text-danger'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
-                }).join('')       
+            `<span class='uk-text-primary uk-text-bolder'>${finalResult.token} -> ${finalResult.pair}</span><br/>` +
+            finalResult.volumes_sellPair
+                .slice()
+                .sort((a, b) => b.price - a.price) // Urut harga besar ke kecil
+                .map((data, index) => {
+                    return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
+                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                    </span>`;
+                }).join('')
         );
 
-        $('#RIGHT_' + cexName + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).html(
-                finalResult.volumes_buyPair.map((data, index) => {
-                    return `<span class='uk-text-success'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
-                }).join('')+
-                `<span class='uk-text-secondary uk-text-bolder'>${finalResult.pair} -> ${finalResult.token}</span><br/>` + 
-
-                finalResult.volumes_sellToken.reverse().map((data, index) => {
-                    return `<span class='uk-text-danger'>${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/></span>`;
-                }).join('')                 
+        $('#RIGHT_' + cexName + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).html(
+            finalResult.volumes_buyPair.map((data, index) => {
+                    return `<span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
+                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                    </span>`;
+                }).join('') +
+            `<span class='uk-text-primary uk-text-bolder'>${finalResult.pair} -> ${finalResult.token}</span><br/>` +
+            finalResult.volumes_sellToken
+                .slice()
+                .sort((a, b) => b.price - a.price) // Urut harga besar ke kecil
+                .map((data, index) => {
+                    return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
+                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                    </span>`;
+                }).join('')
         );
     }
 
@@ -2108,7 +2135,7 @@
         return apiKeysOKXDEX[randomIndex];
       }
 
-      function ResultEksekusi(amount_out,FeeSwap,sc_input, sc_output, cex, Modal, amount_in, priceBuyToken_CEX, priceSellToken_CEX, priceBuyPair_CEX, priceSellPair_CEX, Name_in, Name_out, feeWD, dextype, trx) {
+      function ResultEksekusi(amount_out,FeeSwap,sc_input, sc_output, cex, Modal, amount_in, priceBuyToken_CEX, priceSellToken_CEX, priceBuyPair_CEX, priceSellPair_CEX, Name_in, Name_out, feeWD, dextype, trx, vol) {
         var NameX = Name_in+"_"+Name_out;  
         var amount_out = Number(amount_out);
         var FeeSwap = parseFloat(FeeSwap);
@@ -2164,60 +2191,66 @@
             if ($(`#SWAP_${IdCELL}`).length > 0) {
                 $(`#SWAP_${IdCELL}`).html(`<a href="${linkDEX}" target="_blank">  ${RateSwap} `);           
             }
-
-            DisplayPNL( profitLoss,  cex,  Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out,totalValue,totalModal,conlusion,selisih,trx,profitLossPercent);
+            DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent,vol);
+           // DisplayPNL( profitLoss,  cex,  Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out,totalValue,totalModal,conlusion,selisih,trx,profitLossPercent);
             
     }
 
      // Fungsi INFO SINYAL
-     function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent) {
-       // console.log('trx',trx)
+     function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
         var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
         var nickname = SavedSettingData.nickname;
         var totalValue = parseFloat(totalValue);
         var totalGet = totalValue - parseFloat(modal);
         var totalModal = parseFloat(totalModal);
         var totalFee = parseFloat(totalFee);
+        var checkVol = $('#checkVOL').is(':checked');
 
         const urlsCEXToken = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out);
-      //  const urlsCEXPair = GeturlExchanger(cex.toUpperCase(), Coin_out, Coin_out);
-
-        // Mencari token yang sesuai dalam datatokens
-        var buyLink = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out).tradeToken;
-        var sellLink = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out).tradePair;
-
+        var buyLink = urlsCEXToken.tradeToken;
+        var sellLink = urlsCEXToken.tradePair;
         var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
+        var rowCell = $(`#${IdCELL}`);
         var resultCell = $(`#RESULT_${IdCELL}`);
         var buyCell = $(`#LEFT_${IdCELL}`);
         var sellCell = $(`#RIGHT_${IdCELL}`);
-        var rowCell = $(`#${IdCELL}`);
 
-        var sinyals = ` <a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
-            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a> `;
+        // console.log("PAIR", NameX);   
+        // console.log("TRX", trx);            
+        // console.log("Vol", vol);
+        // console.log("CheckVOL:", checkVol);
+        // console.log("PNL:", PNL);
+        // console.log("FEE ALL:", totalFee);
+        // console.log('------------------------------------');
 
-        var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
+        var sinyals = `<a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
+            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a>`;
 
-        if (isPositivePNL) {
-           // if(trx==='TokentoPair'){
-                var tokenData = DataTokens.find(t => t.cex === cex.toUpperCase() && t.symbol_in === Coin_in && t.symbol_out === Coin_out);
+        const isPNLPositive = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
+        const isVolEnough = parseFloat(vol) >= parseFloat(modal);
+        const canHighlight = (!checkVol && isPNLPositive) || (checkVol && isPNLPositive && isVolEnough);
 
-                var withdraw = tokenData.withdrawToken ? createLink(urlsCEXToken.withdrawUrl, 'WD') : `<b style="color:red; font-weight:bold;">WX</b>`;
-                var deposit = tokenData.depositPair ? createLink(urlsCEXToken.depositUrl, 'DP') : `<b style="color:red; font-weight:bold;">DX</b>`;
-            // }else{    
-            //     var tokenData = DataTokens.find(t => t.cex === cex.toUpperCase() && t.symbol_in === Coin_out && t.symbol_out === Coin_in);
-
-            //     var withdraw = tokenData.withdrawPair ? createLink(urlsCEXPair.withdrawUrl, 'WD') : `<b style="color:red; font-weight:bold;">WX</b>`;
-            //     var deposit = tokenData.depositToken ? createLink(urlsCEXToken.depositUrl, 'DP') : `<b style="color:red; font-weight:bold;">DX</b>`;
-            // }    
+        if (canHighlight) {
             toastr.success(sinyals);
-            rowCell.css({ 'background-color': '#c2f890', 'font-weight': 'bolder' });
-                resultCell.html(`
-                <span class="uk-text-secondary"> ${withdraw} [${FeeWD.toFixed(2)}$] ~ ${deposit}</span><br/>
-                    <span class="uk-text-danger">All:${totalFee.toFixed(2)}$</span>
-                    <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span> <br/>
-                    <span class="uk-text-secondary">GT:${totalGet.toFixed(2)}$</span>
-                    <span class="uk-text-secondary">PNL:${PNL.toFixed(2)}$ </span>
-                `);
+            rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
+
+            let htmlFee = '';
+            if (trx === "TokentoPair") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>`;
+            } else if (trx === "PairtoToken") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.depositUrl, 'DP')}<br/>`;
+            }
+
+            let htmlResult = `
+                ${htmlFee}
+                <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
+                <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
+                <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
+                <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span><br/>
+            `;
+            resultCell.html(htmlResult);
 
             if (!buyCell.parent().is("span")) {
                 buyCell.wrap('<a href="' + buyLink + '" target="_blank"></a>');
@@ -2226,18 +2259,18 @@
                 sellCell.wrap('<a href="' + sellLink + '" target="_blank"></a>');
             }
 
-            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out,profitLossPercent);
+            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal);
         } else {
             resultCell.html(`
-                <span class="uk-text-secondary" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
+                <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
                 <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
                 <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
-                <span class="uk-text-success" title="GET BRUTO">Get:${totalGet.toFixed(2)}$</span>
-                <span class="uk-text-secondary" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
+                <span class="uk-text-success" title="GET BRUTO">GT:${totalGet.toFixed(2)}$</span>
+                <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
             `);
         }
 
-        if (PNL > 1) {
+        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
             MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
         }
     }
@@ -2888,7 +2921,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> MULTIPAIR_V3 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> MULTIPAIR_V3.5 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
@@ -2935,7 +2968,7 @@
             let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
 
             let message = 
-                `<b>#MULTIPAIR_V3 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `<b>#MULTIPAIR_V3.5 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
                 `-----------------------------------------\n` +
                 `MARKET: ${linkCEX} VS ${linkDEX}\n` +
                 `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
@@ -2966,54 +2999,7 @@
                 }
             });
         }
-        function MultisendMessageLama(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname,sc_in,sc_out) {
-            // Mengambil user dari localStorage menggunakan getFromLocalStorage  
-            let Linksctoken=`<a href="${DTChain.URL_Chain}/token/${sc_in}" target="_blank" class="uk-link"> ${token}</a>`;
-            let Linkscpair=`<a href="${DTChain.URL_Chain}/token/${sc_out}" target="_blank" class="uk-link">  ${pair}</a>`;
-            var message = 
-                "<b>#MULTIPAIR_V3 #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
-                " \n ----------------------------------------- \n MARKET: " + cex +" VS " + dex +
-                " \n TOKEN-PAIR: <b>#" + token+"_"+pair + "</b> " + 
-                " \n MODAL: <b> " + modal + "$</b> | PROFIT: <b>" + PNL.toFixed(2) + "$ </b> " +
-                " \n <b>BUY "+Linksctoken+": </b> " + priceBUY.toFixed(9) +
-                " \n <b>SELL "+Linkscpair+": </b>" + priceSELL.toFixed(9) + 
-                " \n <b>FEEWD: </b>" + FeeWD.toFixed(3) + 
-                " \n FEETOTAL: <b>" + totalFee.toFixed(2) + "$</b> | SWAP:<b>" + FeeSwap.toFixed(2) + "$</b>" +
-                " \n -----------------------------------------";
         
-            // Mengambil setting dari localStorage
-            var SavedSettingData = getFromLocalStorage('DATA_SETTING', { ID_GRUP: 0, TOKEN: '' });
-            var users = [
-                { chat_id: SavedSettingData.ID_GRUP } // Menggunakan ID grup yang disimpan di localStorage
-            ];
-        
-            var token = SavedSettingData.TOKEN; // Menggunakan token yang disimpan di localStorage
-            var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
-        
-            // Loop melalui daftar pengguna dan mengirim pesan
-            for (var i = 0; i < users.length; i++) {
-                var user = users[i];
-                var chatId = user.chat_id; // ID chat pengguna
-        
-                // Membuat permintaan POST menggunakan jQuery
-                $.ajax({
-                    url: apiUrl,
-                    method: "POST",
-                    data: {
-                        chat_id: chatId,
-                        text: message,
-                        parse_mode: "HTML",
-                        disable_web_page_preview: true
-                    },
-                    success: function (response) {
-                        // console.log("Message sent successfully");
-                    },
-                    error: function (xhr, status, error) {
-                        // console.log("Error sending message:", error);
-                    }
-                });
-            }
-        }
     // Fungsi CekIdentitas untuk mendapatkan ID perangkat
     async function CekIdentitas() {
         try {
