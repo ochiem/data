@@ -26384,7 +26384,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26394,7 +26394,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26404,7 +26404,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26414,7 +26414,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26424,7 +26424,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26434,7 +26434,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26444,7 +26444,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26454,7 +26454,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26464,7 +26464,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26474,7 +26474,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26484,7 +26484,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26494,7 +26494,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26504,7 +26504,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26514,7 +26514,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26524,7 +26524,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26534,7 +26534,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26544,7 +26544,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26554,7 +26554,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26564,7 +26564,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26574,7 +26574,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26584,7 +26584,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26594,7 +26594,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059ff775485246999027b3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26604,7 +26604,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26614,7 +26614,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26624,7 +26624,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26634,7 +26634,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26644,7 +26644,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26654,7 +26654,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26664,7 +26664,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26674,7 +26674,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26684,7 +26684,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26694,7 +26694,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26704,7 +26704,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26714,7 +26714,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26724,7 +26724,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26734,7 +26734,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26744,7 +26744,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26754,7 +26754,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26764,7 +26764,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26774,7 +26774,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26784,7 +26784,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26794,7 +26794,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26804,7 +26804,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26814,7 +26814,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26824,7 +26824,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26834,7 +26834,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26844,7 +26844,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26854,7 +26854,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       },
       {
         "cex": "INDODAX",
@@ -26864,7 +26864,7 @@
         "symbol_out": "USDT",
         "sc_out": "0x55d398326f99059fF775485246999027B3197955",
         "des_out": 18,
-        "status": "TRUE"
+        "status": true
       }
       
     ]
