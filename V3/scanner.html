@@ -970,8 +970,26 @@
                     getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
                         
                       clearTimeout(timeout);
-                        if (error || !DataCEX)  {
-                            console.error("Error data from CEX:", error);
+                        // Validasi manual harga
+                        let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || 0;
+                        let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || 0;
+
+                        let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || 0;
+                        let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || 0;
+
+                        if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
+                            console.warn(`Harga beli ${NameToken} tidak valid: ${priceBuyTokenCEX}`);
+                            isInvalid = true;
+                        }
+
+                        if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
+                            console.warn(`Harga beli ${NamePair} tidak valid: ${priceBuyPairCEX}`);
+                            isInvalid = true;
+                        }
+
+                        // Gabungkan ke blok error utama
+                        if (error || !DataCEX || isInvalid) {
+                            console.error("Error data from CEX:", error || "Data tidak valid");
                             toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
                             resolve();
                             $('#' + cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
