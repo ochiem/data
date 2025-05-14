@@ -135,7 +135,7 @@
             <!-- Bagian Kiri (Form) -->
             <div class="uk-width-auto">
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    FAVORITE V3.1 <label id="namachain"></label> :: SCANNER <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
+                    FAVORITE V3.6 <label id="namachain"></label> :: SCANNER <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
                 </h2>
                 <!-- <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" /> -->
                 <a href="scanner.html" target="_blank">
@@ -699,8 +699,8 @@
             info = false;
         } else if (!DataTokens.length) {
             form_off();
-            $("#LoadDataBtn").addClass("icon-wrapper");
-            errorMessages.push('<b>SILAKAN LOAD DATA TERLEBIH DAHULU !!</b><br/>');
+           // $("#LoadDataBtn").addClass("icon-wrapper");
+            errorMessages.push('<b>SILAKAN PILIH TOKEN-PAIR FAVORITE DAHULU !!</b><br/>');
             info = false;
         } else if (!SavedSettingData || SavedSettingData.walletMeta === '-') {
             errorMessages.push('CEK, SETTINGAN APLIKASI {MODAL,WALLET METAMASK}!');
