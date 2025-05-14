@@ -968,32 +968,45 @@
                     let timeout = setTimeout(() => reject("Timeout"), speedScan);
                     //console.log("Detail TOKEN PAIR",token);
                     getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
-                        
-                      clearTimeout(timeout);
+                       // console.log(DataCEX);
+
+                        clearTimeout(timeout);
                         let isInvalid = false;
-                        // Validasi manual harga
-                        let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || 0;
-                        let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || 0;
 
-                        let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || 0;
-                        let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || 0;
+                        // Ambil harga dari volume level 0 atau fallback ke 0 jika tidak ada
+                        let priceBuyTokenCEX = DataCEX.volumes_buyToken?.[0]?.price || 0;
+                        let priceSellTokenCEX = DataCEX.volumes_sellToken?.[0]?.price || 0;
 
+                        let priceBuyPairCEX = DataCEX.volumes_buyPair?.[0]?.price || 0;
+                        let priceSellPairCEX = DataCEX.volumes_sellPair?.[0]?.price || 0;
+
+                        // Validasi harga-harga
                         if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
-                            console.warn(`Harga beli ${NameToken} tidak valid: ${priceBuyTokenCEX}`);
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+
+                        if (!isFinite(priceSellTokenCEX) || priceSellTokenCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
                             isInvalid = true;
                         }
 
                         if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
-                            console.warn(`Harga beli ${NamePair} tidak valid: ${priceBuyPairCEX}`);
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
                             isInvalid = true;
                         }
 
-                        // Gabungkan ke blok error utama
+                        if (!isFinite(priceSellPairCEX) || priceSellPairCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+
+                        // Jika error atau tidak valid, skip ke step berikutnya
                         if (error || !DataCEX || isInvalid) {
                             console.error("Error data from CEX:", error || "Data tidak valid");
-                            toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
-                            resolve();
-                            $('#' + cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
+                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
+                            resolve(); // lanjut ke iterasi berikutnya jika async dalam Promise
+                            $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
                             return;
                         } else {
                             let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || "N/A";
