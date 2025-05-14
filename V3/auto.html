@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script> 
 
-    <link id="favicon" rel="icon" type="image/png" >
+    <link id="favicon" rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/256/5046/5046573.png">
     <script src="config_multipairv3.js"></script>
     <style>
         .uk-container { width: 96%; max-width: none; }
@@ -787,11 +787,12 @@
                     $('#sinyal-container').css('background-color', warnaFaded);
 
                     // Update tampilan dengan nama chain dan warna
-                    $('title').text("SCANNER " + Nama_Chain.toUpperCase());
+                    $('title').text(Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                      $('h2#judul').css('color', selectedChain.WARNA);
-                    $('#favicon').attr('href', DTChain.ICON_CHAIN); 
+                    // $('#favicon').attr('href', DTChain.ICON_CHAIN); 
+
                     $('#sinyal-container').css('color', 'black');
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
                     $('h4#daftar').css({'text-align': 'center','color': selectedChain.WARNA,'padding-left':'4px'});
