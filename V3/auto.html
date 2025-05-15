@@ -490,7 +490,7 @@
             const validDexPair = selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair) ||
                 (isNonSelected && !dexPairs.some(pair => token.symbol_in === pair || token.symbol_out === pair));
 
-            if ( !validDexPair || !token.status) return false;
+            if (!token.status) return false;
             if (strictMode && (!token.withdrawToken || !token.depositPair || !token.withdrawPair || !token.depositToken)) return false;
             
             return true;
