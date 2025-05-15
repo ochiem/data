@@ -353,7 +353,7 @@
     // Mendapatkan parameter dari URL
     const urlParams = new URLSearchParams(window.location.search);
     const chainName = urlParams.get('chain') || "bsc"; // Default ke 'bsc' jika tidak ada parameter 'chain' di URL
-
+    const makfav=20;
     // Memilih chain yang sesuai berdasarkan parameter URL
     const selectedChain = CONFIG_CHAINS[chainName] || CONFIG_CHAINS['bsc']; 
 
@@ -490,7 +490,7 @@
             const validDexPair = selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair) ||
                 (isNonSelected && !dexPairs.some(pair => token.symbol_in === pair || token.symbol_out === pair));
 
-            if (!validCEX || !validDexPair || !token.status) return false;
+            if ( !validDexPair || !token.status) return false;
             if (strictMode && (!token.withdrawToken || !token.depositPair || !token.withdrawPair || !token.depositToken)) return false;
             
             return true;
@@ -506,7 +506,7 @@
 
     function updateTokenCount() {
         $("#tokenCount").text(`(${filteredTokens.length})`);
-        console.warn("Tokens data", filteredTokens);
+       //", filteredTokens);
     }
 
     $("#strictFilter").on("change", function() {
@@ -742,7 +742,7 @@
                 */
             ).length;
 
-            $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} PAIR-TOKEN`);  
+            $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} / ${makfav} PAIR-TOKEN`);  
         }
 
         // Update link dengan parameter baru
@@ -3019,7 +3019,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> FAVORITE 3.1 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> #FAVORITE 3.6 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
