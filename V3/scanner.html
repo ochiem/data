@@ -369,6 +369,7 @@
     const storagePrefix = "MULTIPAIR_V3_" + Nama_Chain.toUpperCase() + "_";
     let sortOrder = {};
     const stablecoins = ["USDT", "DAI", "USDC", "FDUSD"];
+    const makfav=20;
 
     // Fungsi umum untuk mendapatkan data dari localStorage
     function getFromLocalStorage(key, defaultValue) {
@@ -562,8 +563,8 @@
         if (!Array.isArray(tokens)) tokens = []; // 🛠 fix untuk error .some is not a function
 
         // Batas maksimal 10 token
-        if (tokens.length >= 20) {
-            toastr.warning("Maksimal 20 token yang bisa dipilih!", "Batas Tercapai");
+        if (tokens.length >= makfav) {
+            toastr.warning(`Maksimal ${makfav} token yang bisa dipilih!`, "Batas Tercapai");
             return;
         }
 
@@ -1020,41 +1021,41 @@
                        // console.log(DataCEX);
 
                         clearTimeout(timeout);
-                        let isInvalid = false;
+                        if (error || !DataCEX) {
+                            console.error("Error data from CEX:", error || "Data tidak valid");
+                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
+                            resolve(); // lanjut ke token berikutnya
+                            $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
+                            return; // ⛔ Hentikan eksekusi agar tidak akses null
+                        }
 
-                        // Ambil harga dari volume level 0 atau fallback ke 0 jika tidak ada
+                        let isInvalid = false;
                         let priceBuyTokenCEX = DataCEX.volumes_buyToken?.[0]?.price || 0;
                         let priceSellTokenCEX = DataCEX.volumes_sellToken?.[0]?.price || 0;
-
                         let priceBuyPairCEX = DataCEX.volumes_buyPair?.[0]?.price || 0;
                         let priceSellPairCEX = DataCEX.volumes_sellPair?.[0]?.price || 0;
 
-                        // Validasi harga-harga
+                        // Validasi harga
                         if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
                             isInvalid = true;
                         }
-
                         if (!isFinite(priceSellTokenCEX) || priceSellTokenCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
                             isInvalid = true;
                         }
-
                         if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
                             isInvalid = true;
                         }
-
                         if (!isFinite(priceSellPairCEX) || priceSellPairCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
                             isInvalid = true;
                         }
 
-                        // Jika error atau tidak valid, skip ke step berikutnya
-                        if (error || !DataCEX || isInvalid) {
-                            console.error("Error data from CEX:", error || "Data tidak valid");
-                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
-                            resolve(); // lanjut ke iterasi berikutnya jika async dalam Promise
+                        if (isInvalid) {
+                            toastr.error(`CEK MANUAL ${token.symbol_in} di ${token.cex}`);
+                            resolve();
                             $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
                             return;
                         } else {
