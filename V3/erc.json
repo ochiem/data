@@ -41958,7 +41958,7 @@
       {
         "cex": "GATE",
         "symbol_in": "GTC",
-        "sc_in": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+        "sc_in": "0xB70835D7822eBB9426B56543E391846C107bd32C",
         "des_in": 18,
         "symbol_out": "ETH",
         "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -49568,7 +49568,7 @@
       {
         "cex": "GATE",
         "symbol_in": "XED",
-        "sc_in": "0xee573a945b01b788b9287ce062a0cfc15be9fd86",
+        "sc_in": "0xef7f7820a001aabac5e0979b175c9ff8af3dd4ec",
         "des_in": 18,
         "symbol_out": "ETH",
         "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
