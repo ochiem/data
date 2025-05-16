@@ -2358,7 +2358,7 @@
             }
 
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal);
-              MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
+            //  MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
         } else {
             resultCell.html(`
                 <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
@@ -2369,9 +2369,9 @@
             `);
         }
 
-        // if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
-        //     MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
-        // }
+        if (PNL > 1) {
+            MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
+        }
     }
 
     // Fungsi untuk menampilkan sinyal hasil scan dan memutar suara
