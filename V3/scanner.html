@@ -2490,7 +2490,7 @@
                 apiUrl = `https://ag.kanalabs.io/v1/swapQuote?inputToken=${sc_input}&outputToken=${sc_output}&chain=${kanaChainId}&amountIn=${amount_in.toString()}&slippage=0.5&isFeeReferrer=false`;
                 break;
             case 'okx':
-                var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input}&toTokenAddress=${sc_output}`;
+                var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input_in}&toTokenAddress=${sc_output_in}`;
                 var timestamp = new Date().toISOString();
                 var method = "GET";
                 var dataToSign = timestamp + method + queryString;
