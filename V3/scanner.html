@@ -2279,8 +2279,89 @@
             
     }
 
+    
+    function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
+        var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
+        var nickname = SavedSettingData.nickname;
+        var totalValue = parseFloat(totalValue);
+        var totalGet = totalValue - parseFloat(modal);
+        var totalModal = parseFloat(totalModal);
+        var totalFee = parseFloat(totalFee);
+        var checkVol = $('#checkVOL').is(':checked');
+
+        const urlsCEXToken = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out);
+        var buyLink = urlsCEXToken.tradeToken;
+        var sellLink = urlsCEXToken.tradePair;
+        var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
+        var rowCell = $(`#${IdCELL}`);
+        var resultCell = $(`#RESULT_${IdCELL}`);
+        var buyCell = $(`#LEFT_${IdCELL}`);
+        var sellCell = $(`#RIGHT_${IdCELL}`);
+
+        var sinyals = `<a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
+            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a>`;
+
+        const isPNLPositive = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
+        const isVolEnough = parseFloat(vol) >= parseFloat(modal);
+        const canHighlight = (!checkVol && isPNLPositive) || (checkVol && isPNLPositive && isVolEnough);
+
+        if (canHighlight) {
+            toastr.success(sinyals);
+            rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
+
+            let htmlFee = '';
+            if (trx === "TokentoPair") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>`;
+            } else if (trx === "PairtoToken") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.depositUrl, 'DP')}<br/>`;
+            }
+
+            let htmlResult = `
+                ${htmlFee}
+                <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
+                <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
+                <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
+                <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span><br/>
+            `;
+            resultCell.html(htmlResult);
+
+            if (!buyCell.parent().is("span")) {
+                buyCell.wrap('<a href="' + buyLink + '" target="_blank"></a>');
+            }
+            if (!sellCell.parent().is("span")) {
+                sellCell.wrap('<a href="' + sellLink + '" target="_blank"></a>');
+            }
+
+            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal, trx);
+        } else {
+            resultCell.html(`
+                <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
+                <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
+                <span class="uk-text-success" title="GET BRUTO">GT:${totalGet.toFixed(2)}$</span>
+                <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
+            `);
+        }
+
+        // Highlight PNL < -50% dari modal (rugi besar)
+        if (PNL < (-0.5 * parseFloat(modal))) {
+            rowCell.attr("style", "background-color: #ffe0e6 !important; font-weight: bold !important; color: black !important;");
+        }
+
+        // Highlight PNL > 50% dari modal (cuan besar)
+        if (PNL > (0.5 * parseFloat(modal))) {
+            rowCell.attr("style", "background-color: #ffd9b2 !important; font-weight: bold !important; color: black !important;");
+        }
+
+        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
+            MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
+        }
+    }
+
      // Fungsi INFO SINYAL
-     function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
+     function DisplayPNLLAMA(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
         var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
         var nickname = SavedSettingData.nickname;
         var totalValue = parseFloat(totalValue);
