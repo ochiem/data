@@ -490,7 +490,7 @@
             const validDexPair = selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair) ||
                 (isNonSelected && !dexPairs.some(pair => token.symbol_in === pair || token.symbol_out === pair));
 
-            if (!token.status) return false;
+            if ( !token.status) return false;
             if (strictMode && (!token.withdrawToken || !token.depositPair || !token.withdrawPair || !token.depositToken)) return false;
             
             return true;
@@ -2358,7 +2358,7 @@
             }
 
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal);
-            //  MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
+           // MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
         } else {
             resultCell.html(`
                 <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
@@ -2473,10 +2473,12 @@
                 };                
                 break;
             case '0x':          
-            
-                      apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
-            //        apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
-                    break;
+                if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
+                    apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
+                }else{
+                    apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
+                }
+                break;
             case '1inch':
                     apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
                 break;
@@ -2506,7 +2508,7 @@
                 apiUrl = `https://ag.kanalabs.io/v1/swapQuote?inputToken=${sc_input}&outputToken=${sc_output}&chain=${kanaChainId}&amountIn=${amount_in.toString()}&slippage=0.5&isFeeReferrer=false`;
                 break;
             case 'okx':
-                var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input}&toTokenAddress=${sc_output}`;
+                var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input_in}&toTokenAddress=${sc_output_in}`;
                 var timestamp = new Date().toISOString();
                 var method = "GET";
                 var dataToSign = timestamp + method + queryString;
@@ -2538,7 +2540,7 @@
             headers: Object.assign(
                 {}, 
                 headers || {}, // Header tambahan dari variabel `headers`
-                dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
+              //  dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
                 dexType === 'okx' ? {
                     "OK-ACCESS-PROJECT": selectedApiKey.ProjectOKX,
                     "OK-ACCESS-KEY": selectedApiKey.ApiKeyOKX,
@@ -2599,8 +2601,23 @@
                               //  amount_out = response.buyAmount / Math.pow(10, des_output);
                               //  FeeSwap = ((response.transaction.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
                               
+                                // amount_out = response.buyAmount / Math.pow(10, des_output);
+                                // FeeSwap = ((response.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
                                 amount_out = response.buyAmount / Math.pow(10, des_output);
-                                FeeSwap = ((response.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
+
+                                if (DTChain.Nama_Chain.toLowerCase() === 'solana') {
+                                    // Jika jaringan adalah Solana, fee berasal dari totalNetworkFee (dalam lamport)
+                                    let feeLamport = Number(response.totalNetworkFee || 0); // fallback jika null
+                                    FeeSwap =( feeLamport / 1e9)* parseFloat(getFromLocalStorage('PRICEGAS', 0)); // konversi lamport ke SOL
+                                
+                                } else {
+                                    // // Jika bukan Solana (misal Ethereum, BSC, dll.), hitung dari gas dan harga gas
+                                    // let gasUsed = Number(response.transaction?.gas || 0);
+                                    // let gasPrice = parseFloat(getFromLocalStorage('PRICEGAS', 0));
+                                    FeeSwap = (response.gas / 1e9) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // hasil dalam native coin (ETH, BNB, dll.)
+                                }
+                                break;
+
                               break;
                             case '1inch':
                                 amount_out = parseFloat(response.dstAmount) / Math.pow(10, des_output);
@@ -3020,7 +3037,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> #FAVORITE V3.6 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> #FAVORITE 3.6 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
@@ -3067,7 +3084,7 @@
             let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
 
             let message = 
-                `<b>#FAVORITE V3.6 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `<b>#AUTOSCAN_V3.1 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
                 `-----------------------------------------\n` +
                 `MARKET: ${linkCEX} VS ${linkDEX}\n` +
                 `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
@@ -3093,8 +3110,8 @@
                     console.log("Pesan berhasil dikirim ke Telegram");
                 },
                 error: function (xhr, status, error) {
-                    console.error("Gagal kirim info:", error);
-                   // toastr.error("Gagal kirim ke Telegram: " + error);
+                    console.error("Gagal kirim INFO:", error);
+                  //  toastr.error("Gagal kirim ke Telegram: " + error);
                 }
             });
         }
