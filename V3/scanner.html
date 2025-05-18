@@ -268,7 +268,7 @@
                                 </div>
 
                                     <div>
-                                        <label for="walletMeta" class="uk-text-danger">WALLET ADDRESS</label><br />
+                                        <label for="walletMeta" class="uk-text-danger">WALLET ADDRESS </label><br />
                                         <input class="uk-input" type="text" id="walletMeta" name="walletMeta" >
                                     </div>
                                 <div>                                    
@@ -2527,7 +2527,7 @@
             headers: Object.assign(
                 {}, 
                 headers || {}, // Header tambahan dari variabel `headers`
-                dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
+               // dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
                 dexType === 'okx' ? {
                     "OK-ACCESS-PROJECT": selectedApiKey.ProjectOKX,
                     "OK-ACCESS-KEY": selectedApiKey.ApiKeyOKX,
