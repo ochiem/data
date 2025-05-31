@@ -13435,16 +13435,7 @@
     "des_out": 18,
      "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "ALT",
-    "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
-    "des_in": 18,
-    "symbol_out": "USDT",
-    "sc_out": "0x55d398326f99059ff775485246999027b3199288",
-    "des_out": 18,
-     "status": true
-  },
+  
   {
     "cex": "INDODAX",
     "symbol_in": "AXL",
@@ -27295,16 +27286,7 @@
     "des_out": 18,
      "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "ALT",
-    "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
-    "des_in": 18,
-    "symbol_out": "BNB",
-    "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-    "des_out": 18,
-     "status": true
-  },
+  
   {
     "cex": "INDODAX",
     "symbol_in": "AXL",
