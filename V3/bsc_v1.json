@@ -13419,7 +13419,7 @@
   {
     "cex": "INDODAX",
     "symbol_in": "MCT",
-    "sc_in": "0x8038B1F3EB4f70436569618530Ac96b439D67bAe",
+    "sc_in": "0xdF677713a2C661ECD0b2BD4d7485170Aa8c1ECeB",
     "des_in": 18,
     "symbol_out": "USDT",
     "sc_out": "0x55d398326f99059ff775485246999027b3199287",
@@ -27261,7 +27261,7 @@
   {
     "cex": "INDODAX",
     "symbol_in": "MCT",
-    "sc_in": "0x8038B1F3EB4f70436569618530Ac96b439D67bAe",
+    "sc_in": "0xdF677713a2C661ECD0b2BD4d7485170Aa8c1ECeB",
     "des_in": 18,
     "symbol_out": "BNB",
     "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
