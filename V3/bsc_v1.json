@@ -13355,16 +13355,7 @@
     "des_out": 18,
      "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "ARV",
-    "sc_in": "0x6679eb24f59dfe111864aec72b443d1da666b360",
-    "des_in": 8,
-    "symbol_out": "USDT",
-    "sc_out": "0x55d398326f99059ff775485246999027b3199280",
-    "des_out": 18,
-     "status": true
-  },
+ 
   {
     "cex": "INDODAX",
     "symbol_in": "DODO",
@@ -27206,16 +27197,7 @@
     "des_out": 18,
      "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "ARV",
-    "sc_in": "0x6679eb24f59dfe111864aec72b443d1da666b360",
-    "des_in": 8,
-    "symbol_out": "BNB",
-    "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-    "des_out": 18,
-     "status": true
-  },
+  
   {
     "cex": "INDODAX",
     "symbol_in": "DODO",
@@ -27427,16 +27409,7 @@
     "des_out": 18,
      "status": true
   },
-  {
-    "cex": "INDODAX",
-    "symbol_in": "BNB",
-    "sc_in": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-    "des_in": 18,
-    "symbol_out": "BNB",
-    "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-    "des_out": 18,
-     "status": true
-  },
+ 
   {
     "cex": "INDODAX",
     "symbol_in": "TWELVE",
