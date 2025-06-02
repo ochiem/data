@@ -163,7 +163,19 @@
                 <form id="cryptoForm" style=" width: 96%;">
                         <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                            
-                            <div class="uk-width-auto uk-flex uk-flex-middle uk-background-muted uk-text-small">
+                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">                                   
+                                <!-- Tombol Download (ikon merah) -->
+                                <a href="#" onclick="downloadTokenScannerJSON()" title="Download LIST TOKEN"  style=" color: red !important;">
+                                    <span uk-icon="icon: bag; ratio: 0.7"></span>
+                                </a>
+
+                                <!-- Tombol Upload (ikon hijau) -->
+                                <label for="uploadJSON" title="Upload LIST TOKEN" style=" color: green !important; cursor:pointer; margin-left:5px;">
+                                    <span uk-icon="icon: cloud-upload; ratio: 0.9"></span>
+                                </label>
+                                &nbsp;&nbsp; 
+                                <input type="file" id="uploadJSON" accept="application/json" style="display:none;" onchange="uploadTokenScannerJSON(event)">
+                
                                 <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
                                 <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                             </div> 
@@ -369,7 +381,7 @@
     const storagePrefix = "MULTIPAIR_V3_" + Nama_Chain.toUpperCase() + "_";
     let sortOrder = {};
     const stablecoins = ["USDT", "DAI", "USDC", "FDUSD"];
-    const makfav=35;
+    const makfav=20;
 
     // Fungsi umum untuk mendapatkan data dari localStorage
     function getFromLocalStorage(key, defaultValue) {
@@ -399,7 +411,6 @@
         }
     }
 
-
     // Fungsi untuk menghapus item dari localStorage
     function removeFromLocalStorage(key) {
         localStorage.removeItem(storagePrefix + key);
@@ -427,7 +438,55 @@
         };
     }
 
-    
+    const TOKEN_KEY = "TOKEN_SCANNER";
+
+    // Fungsi Download
+    function downloadTokenScannerJSON() {
+        const data = getFromLocalStorage(TOKEN_KEY, []);
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "LIST_TOKEN.json";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        setLastAction("DOWNLOAD LIST TOKEN");
+    }
+
+    // Fungsi Upload
+    function uploadTokenScannerJSON(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const json = JSON.parse(e.target.result);
+
+                // Tambahkan konfirmasi sebelum menyimpan
+                const userConfirmed = window.confirm("APAKAH ANDA INGIN UPLOAD FILE?");
+                if (!userConfirmed) {
+                    toastr.info("Upload dibatalkan.");
+                    return;
+                }
+
+                saveToLocalStorage(TOKEN_KEY, json);
+//                toastr.success("Data berhasil diunggah!");
+                setLastAction("UPLOAD LIST TOKEN");
+
+                location.reload(); // Refresh untuk melihat perubahan
+
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+                toastr.error("Format file JSON tidak valid!");
+            }
+        };
+        reader.readAsText(file);
+    }
    // Fungsi untuk memilih server secara acak dari array
    function getRandomServerFromCORSList() {
         const serverCORSList = getFromLocalStorage("SERVERCORS", []);  // Ambil data dari localStorage
@@ -767,10 +826,20 @@
             $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} PAIR-TOKEN`);  
         }
 
-        // Update link dengan parameter baru
-        var link = $('a[href="multipair.html"]'); // Pilih elemen link
-        var href = link.attr('href'); // Ambil URL href
-        link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+        // Daftar file HTML target
+        var targetFiles = ["multipair.html", "auto.html"];
+
+        // Loop setiap file dan update href-nya
+        targetFiles.forEach(function(file) {
+            $('a[href="' + file + '"]').each(function() {
+                var link = $(this);
+                var href = link.attr('href');
+
+                // Tambahkan parameter chain, sesuaikan separator jika sudah ada query string
+                var separator = href.includes('?') ? '&' : '?';
+                link.attr('href', href + separator + "chain=" + encodeURIComponent(chainName));
+            });
+        });
 
         // Tampilkan semua pesan error ke #infoAPP
         if (!info) {
@@ -2383,12 +2452,12 @@
             'kyberswap': `https://kyberswap.com/swap/${DTChain.Nama_Chain}/${sc_input}-to-${sc_output}`,
             'kana': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
             'odos': "https://app.odos.xyz",
-             '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
+            '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
            // `https://matcha.xyz/tokens/solana/${sc_input.toLowerCase()}?buyChain=1399811149&buyAddress=${sc_output.toLowerCase()}`
             ? `https://matcha.xyz/tokens/solana/${sc_input}?sellChain=1399811149&sellAddress=${sc_output}` 
             : `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
         
-          //  '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+        //    '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
             '1inch': ` https://app.1inch.io/advanced/swap?network=${DTChain.Kode_Chain}&src=${NameToken.toUpperCase()}&dst=${NamePair.toUpperCase()}`,
             // '1inch': `https://app.1inch.io/#/${DTChain.Kode_Chain}/advanced/swap/${sc_input}/${sc_output}`,
             'okx': `https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${sc_input}&outputChain=501&outputCurrency=${sc_output}`,
