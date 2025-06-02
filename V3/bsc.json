@@ -4638,7 +4638,7 @@
   {
     "cex": "INDODAX",
     "symbol_in": "BNXNEW",
-    "sc_in": "0x5b1f874d0b0c5ee17a495cbb70ab8bf64107a3bd",
+    "sc_in": "0x5b73A93b4E5e4f1FD27D8b3F8C97D69908b5E284",
     "des_in": 18,
     "symbol_out": "USDT",
     "sc_out": "0x55d398326f99059ff775485246999027b3197955",
@@ -4648,7 +4648,7 @@
   {
     "cex": "INDODAX",
     "symbol_in": "BNXNEW",
-    "sc_in": "0x5b1f874d0b0c5ee17a495cbb70ab8bf64107a3bd",
+    "sc_in": "0x5b73A93b4E5e4f1FD27D8b3F8C97D69908b5E284",
     "des_in": 18,
     "symbol_out": "BNB",
     "sc_out": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
