@@ -1114,6 +1114,13 @@
     "status": true
   },
   {
+    "symbol": "EPICIDR",
+    "sc": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
     "symbol": "ETHFIIDR",
     "sc": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
     "desimal": 18,
