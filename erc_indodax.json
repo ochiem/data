@@ -597,1571 +597,1613 @@
 [
   {
     "symbol": "1INCHIDR",
-    "desimal": 18,
     "sc": "0x111111111117dc0aa78b770fa6a738034120c302",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AAVEIDR",
-    "desimal": 18,
     "sc": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ABYSSIDR",
-    "desimal": 18,
     "sc": "0x0e8d6b471e332f140e7d9dbb99e5e3822f728da6",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ACHIDR",
-    "desimal": 8,
     "sc": "0xed04915c23f00a313a544955524eb7dbd823143d",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ADPIDR",
-    "desimal": 18,
     "sc": "0xc314b0e758d5ff74f63e307a86ebfe183c95767b",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AEVOIDR",
-    "desimal": 18,
     "sc": "0xB528edBef013aff855ac3c50b381f253aF13b997",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AGIIDR",
-    "desimal": 18,
     "sc": "0x7dA2641000Cbb407C329310C461b2cB9c70C3046",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "AIOZIDR",
+    "sc": "0x626E8036dEB333b408Be468F951bdB42433cBF18",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "ALICEIDR",
-    "desimal": 6,
     "sc": "0xAC51066d7bEC65Dc4589368da368b212745d63E8",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
-    "symbol": "ALTLAYERIDR",
-    "desimal": 18,
+    "symbol": "ALTIDR",
     "sc": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AMPIDR",
-    "desimal": 18,
     "sc": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "ANDYIDR",
+    "sc": "0x68bbed6a47194eff1cf514b50ea91895597fc91e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ANIMEIDR",
+    "sc": "0x4dc26fc5854e7648a064a4abd590bbe71724c277",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "ANKRIDR",
-    "desimal": 18,
     "sc": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ANTIDR",
     "desimal": 18,
-    "sc": "0xa117000000f279d81a1d3cc75430faa017fa5a2e",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AOAIDR",
-    "desimal": 18,
     "sc": "0x9ab165d795019b6d8b3e971dda91071421305e5a",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "APEIDR",
-    "desimal": 18,
     "sc": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "API3IDR",
-    "desimal": 18,
     "sc": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "APUIDR",
+    "sc": "0x594daad7d77592a2b97b725a7ad59d7e188b5bfa",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ARBIDR",
+    "sc": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "ARKMIDR",
-    "desimal": 18,
     "sc": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ARVUSDT",
-    "desimal": 8,
-    "sc": "0x79C7EF95aD32DcD5ECadB231568Bb03dF7824815",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ATAIDR",
     "desimal": 18,
-    "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ATHIDR",
-    "desimal": 18,
     "sc": "0xbe0ed4138121ecfc5c0e56b40517da27e6c5226b",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ATTIDR",
-    "desimal": 18,
     "sc": "0x89Fb927240750c1B15d4743cd58440fc5f14A11C",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AUCTIONIDR",
-    "desimal": 18,
     "sc": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AUDIOIDR",
-    "desimal": 18,
     "sc": "0x18aaa7115705e8be94bffebde57af9bfc265b998",
-    "wd": 1e-8,
-   "status":true
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "AXLIDR",
-    "desimal": 6,
     "sc": "0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "AXSIDR",
-    "desimal": 18,
     "sc": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BADGERIDR",
-    "desimal": 18,
     "sc": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BALIDR",
-    "desimal": 18,
     "sc": "0xba100000625a3754423978a60c9317c58a424e3D",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BANANAIDR",
-    "desimal": 18,
     "sc": "0x38e68a37e401f7271568cecaac63c6b1e19130b4",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BANDIDR",
-    "desimal": 18,
     "sc": "0xba11d00c5f74255f56a5e366f4f77f5a186d7f55",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BATIDR",
-    "desimal": 18,
     "sc": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BEAMIDR",
-    "desimal": 18,
     "sc": "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BETAIDR",
-    "desimal": 18,
     "sc": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BGBIDR",
-    "desimal": 18,
     "sc": "0x54D2252757e1672EEaD234D27B1270728fF90581",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BICOIDR",
-    "desimal": 18,
     "sc": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "BIOIDR",
+    "sc": "0xcb1592591996765ec0efc1f92599a19767ee5ffa",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "BLURIDR",
-    "desimal": 18,
     "sc": "0x5283d291dbcf85356a21ba090e6db59121208b44",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "BLZIDR",
     "desimal": 18,
-    "sc": "0x5732046a883704404f284ce41ffadd5b007fd668",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BONDIDR",
-    "desimal": 18,
     "sc": "0x0391D2021f89DC339F60Fff84546EA23E337750f",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BONEIDR",
-    "desimal": 18,
     "sc": "0x9813037ee2218799597d83D4a5B6F3b6778218d9",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BONKUSDT",
-    "desimal": 5,
     "sc": "0x1151CB3d861920e07a38e03eEAd12C32178567F6",
+    "desimal": 5,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "BOTXIDR",
-    "desimal": 18,
     "sc": "0xEF19F4E48830093Ce5bC8b3Ff7f903A0AE3E9Fa1",
+    "desimal": 18,
     "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "BRISEUSDT",
-    "desimal": 9,
-    "sc": "0xF2B2f7b47715256Ce4eA43363a867fdce9353e3A",
-    "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "C98IDR",
-    "desimal": 18,
     "sc": "0xae12c5930881c53715b369cec7606b70d8eb229f",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CAKEIDR",
-    "desimal": 18,
     "sc": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CBGIDR",
-    "desimal": 18,
     "sc": "0x1900E8B5619a3596745F715d0427Fe617c729BA9",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CELIDR",
-    "desimal": 4,
     "sc": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
-    "wd": 1e-8,
-   "status":true
+    "desimal": 4,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "CELRIDR",
-    "desimal": 18,
     "sc": "0x4f9254c83eb525f9fcf346490bbb3ed28a81c667",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CHRIDR",
-    "desimal": 6,
     "sc": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CHZIDR",
-    "desimal": 18,
     "sc": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CINDIDR",
-    "desimal": 18,
     "sc": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CLVIDR",
-    "desimal": 18,
     "sc": "0x80C62FE4487E1351b47Ba49809EBD60ED085bf52",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "COMBOIDR",
     "desimal": 18,
-    "sc": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "COMPIDR",
-    "desimal": 18,
     "sc": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "COTIIDR",
+    "sc": "0xddb3422497e61e13543bea06989c0789117555c5",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "CREAMIDR",
-    "desimal": 18,
     "sc": "0x2ba592f78db6436527729929aaf6c908497cb200",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "CROIDR",
+    "sc": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "desimal": 8,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "CRVIDR",
-    "desimal": 18,
     "sc": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "CTCIDR",
+    "sc": "0xa3ee21c306a700e682abcdfe9baa6a08f3820419",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "CTSIIDR",
-    "desimal": 18,
     "sc": "0x491604c0fdf08347dd1fa4ee062a822a5dd06b5d",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CVCIDR",
-    "desimal": 8,
     "sc": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CVXIDR",
-    "desimal": 18,
     "sc": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "CYBERIDR",
-    "desimal": 18,
     "sc": "0x14778860e937f509e651192a90589de711fb88a9",
+    "desimal": 18,
     "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "DADIDR",
-    "desimal": 9,
-    "sc": "0x5b322514ff727253292637d9054301600c2c81e8",
-    "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DAIIDR",
-    "desimal": 18,
     "sc": "0x6b175474e89094c44da98b954eedeac495271d0f",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "DAOIDR",
     "desimal": 18,
-    "sc": "0x0f51bb10119727a7e5ea3538074fb341f56b09ad",
     "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "DARIDR",
-    "desimal": 6,
-    "sc": "0x081131434f93063751813c619ecca9c4dc7862a3",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "DAXIDR",
-    "desimal": 18,
-    "sc": "0x0b4bdc478791897274652dc15ef5c135cae61e60",
-    "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DEFIIDR",
-    "desimal": 18,
     "sc": "0x6B0FaCA7bA905a86F221CEb5CA404f605e5b3131",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DENTIDR",
-    "desimal": 8,
     "sc": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DEPIDR",
-    "desimal": 18,
     "sc": "0x1a3496c18d558bd9c6c8f609e1b129f67ab08163",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
-    "symbol": "DGXIDR",
-    "desimal": 9,
-    "sc": "0x4f3afec4e5a3f2a6a1a411def7d7dfe50ee057bf",
+    "symbol": "DIDR",
+    "sc": "0x33b481CbBF3c24f2B3184Ee7Cb02dAAD1C4F49A8",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DNTIDR",
-    "desimal": 18,
     "sc": "0x0abdace70d3790235af448c88547603b945604ea",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DODOIDR",
-    "desimal": 18,
     "sc": "0x43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DUSKIDR",
-    "desimal": 18,
     "sc": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "DVIIDR",
-    "desimal": 18,
     "sc": "0x10633216e7e8281e33c86f02bf8e565a635d9770",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "DYDXIDR",
     "desimal": 18,
-    "sc": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "EFIIDR",
-    "desimal": 18,
     "sc": "0x656C00e1BcD96f256F224AD9112FF426Ef053733",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "EIGENIDR",
-    "desimal": 18,
     "sc": "0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "EMIDR",
-    "desimal": 8,
-    "sc": "0x35b08722aa26be119c1608029ccbc976ac5c1082",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ENAIDR",
-    "desimal": 18,
     "sc": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "ENJIDR",
+    "sc": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "ENSIDR",
-    "desimal": 18,
     "sc": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ERNIDR",
     "desimal": 18,
-    "sc": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ETHFIIDR",
-    "desimal": 18,
     "sc": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "EURTIDR",
-    "desimal": 6,
-    "sc": "0xc581b735a1688071a1746c968e0798d642ede491",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "FANCIDR",
-    "desimal": 18,
     "sc": "0xbB126042235E6bD38B17744cb31a8bF4A206c045",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
-    "symbol": "FDUSDIDR",
+    "symbol": "FETIDR",
+    "sc": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
     "desimal": 18,
-    "sc": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "FLOKIIDR",
-    "desimal": 9,
     "sc": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
+    "desimal": 9,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
-    "symbol": "FLOKIUSDT",
-    "desimal": 9,
-    "sc": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
+    "symbol": "FLUXIDR",
+    "sc": "0x720cd16b011b987da3518fbf38c3071d4f0d1495",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "FTMIDR",
+    "sc": "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "FUELIDR",
+    "sc": "0x675b68aa4d9c2d3bb3f0397048e62e6b7192079c",
+    "desimal": 9,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "FXSIDR",
-    "desimal": 18,
     "sc": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "GALAIDR",
-    "desimal": 8,
     "sc": "0xd1d2Eb1B1e90B638588728b4130137D262C87cae",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
-    "symbol": "GAME2IDR",
+    "symbol": "GIDR",
+    "sc": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "desimal": 18,
-    "sc": "0x825459139C897D769339f295E962396C4F9E4A4D",
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "GLCHIDR",
+    "sc": "0x038a68ff68c393373ec894015816e33ad41bd564",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "GLMIDR",
-    "desimal": 18,
     "sc": "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "GMTIDR",
-    "desimal": 8,
     "sc": "0xe3c408bd53c31c085a1746af401a4042954ff740",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "GNOIDR",
-    "desimal": 18,
     "sc": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "GRTIDR",
-    "desimal": 18,
     "sc": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "GSCIDR",
     "desimal": 18,
-    "sc": "0x228ba514309ffdf03a81a205a6d040e429d6e80c",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "GTCIDR",
-    "desimal": 18,
     "sc": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "HEDGIDR",
-    "desimal": 18,
     "sc": "0xF1290473E210b2108A85237fbCd7b6eb42Cc654F",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "HFTIDR",
-    "desimal": 18,
     "sc": "0xb3999F658C0391d94A37f7FF328F3feC942BcADC",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "HIFIIDR",
+    "sc": "0x4b9278b94a1112cad404048903b8d343a810b07e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "HIGHIDR",
-    "desimal": 18,
     "sc": "0x71Ab77b7dbB4fa7e017BC15090b2163221420282",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "HITOPIDR",
     "desimal": 18,
-    "sc": "0x01022591fCe0609B57670bebA60102dFd2b95D77",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "HOTIDR",
-    "desimal": 18,
     "sc": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ILVIDR",
-    "desimal": 18,
-    "sc": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "IMXIDR",
-    "desimal": 18,
-    "sc": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "INJIDR",
-    "desimal": 18,
-    "sc": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "IQIDR",
-    "desimal": 18,
-    "sc": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "JASMYIDR",
-    "desimal": 18,
-    "sc": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "KDAGIDR",
-    "desimal": 18,
-    "sc": "0x95e40e065afb3059dcabe4aaf404c1f92756603a",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "KNCIDR",
-    "desimal": 18,
-    "sc": "0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "KOKIDR",
-    "desimal": 18,
-    "sc": "0x9b9647431632af44be02ddd22477ed94d14aacaa",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LADYSIDR",
-    "desimal": 18,
-    "sc": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LDOIDR",
-    "desimal": 18,
-    "sc": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LEOIDR",
-    "desimal": 18,
-    "sc": "0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "LETIDR",
-    "desimal": 6,
-    "sc": "0xfa3118b34522580c35ae27f6cf52da1dbb756288",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "LEVERIDR",
-    "desimal": 18,
-    "sc": "0x4B5f49487ea7B3609b1aD05459BE420548789f1f",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "LINAIDR",
-    "desimal": 18,
-    "sc": "0x3e9bc21c9b189c09df3ef1b824798658d5011937",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LINKIDR",
-    "desimal": 18,
-    "sc": "0x514910771af9ca656af840dff83e8264ecf986ca",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LITIDR",
-    "desimal": 18,
-    "sc": "0xb59490ab09a0f526cc7305822ac65f2ab12f9723",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LOOKSIDR",
-    "desimal": 18,
-    "sc": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "LOOMIDR",
-    "desimal": 18,
-    "sc": "0x42476F744292107e34519F9c357927074Ea3F75D",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LPTIDR",
-    "desimal": 18,
-    "sc": "0x58b6a8a3302369daec383334672404ee733ab239",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LQTYIDR",
-    "desimal": 18,
-    "sc": "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "LRCIDR",
-    "desimal": 18,
-    "sc": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MANAIDR",
-    "desimal": 18,
-    "sc": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MASKIDR",
-    "desimal": 18,
-    "sc": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MAVIDR",
-    "desimal": 18,
-    "sc": "0x7448c7456a97769F6cD04F1E83A4a23cCdC46aBD",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MEMEIDR",
-    "desimal": 18,
-    "sc": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "METISIDR",
-    "desimal": 18,
-    "sc": "0x9E32b13ce7f2E80A01932B42553652E053D6ed8e",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MKRIDR",
-    "desimal": 18,
-    "sc": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MNTIDR",
-    "desimal": 18,
-    "sc": "0x3c3a81e81dc49a522a592e7622a7e711c06bf354",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MOCAIDR",
-    "desimal": 18,
-    "sc": "0xf944e35f95e819e752f3ccb5faf40957d311e8c5",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MOGIDR",
-    "desimal": 18,
-    "sc": "0xaaeE1A9723aaDB7afA2810263653A34bA2C21C7a",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MULTIIDR",
-    "desimal": 18,
-    "sc": "0x65ef703f5594d2573eb71aaf55bc0cb548492df4",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "MUSICIDR",
-    "desimal": 8,
-    "sc": "0xD8c0b13B551718b808fc97eAd59499d5Ef862775",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "NBTIDR",
-    "desimal": 18,
-    "sc": "0x446F2A8A39Cc730ef378Be759A3c57f1a3fE824c",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "NEIROIDR",
-    "desimal": 9,
-    "sc": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "NEXOIDR",
-    "desimal": 18,
-    "sc": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "NPTIDR",
-    "desimal": 18,
-    "sc": "0x306ee01a6bA3b4a8e993fA2C1ADC7ea24462000c",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "OCTOIDR",
-    "desimal": 18,
-    "sc": "0x7240aC91f01233BaAf8b064248E80feaA5912BA3",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "OGNIDR",
-    "desimal": 18,
-    "sc": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
-    "wd": 1e-8,
-   "status":true
-  },
-  {
-    "symbol": "OKBIDR",
-    "desimal": 18,
-    "sc": "0x75231f58b43240c9718dd58b4967c5114342a86c",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "OMIDR",
-    "desimal": 18,
-    "sc": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "OMGIDR",
-    "desimal": 18,
-    "sc": "0xd26114cd6ee289accf82350c8d8487fedb8a0c07",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "OMNIIDR",
-    "desimal": 18,
-    "sc": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ONDOIDR",
-    "desimal": 18,
-    "sc": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ORBSIDR",
     "desimal": 18,
-    "sc": "0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ORCIDR",
-    "desimal": 18,
-    "sc": "0x662b67d00a13faf93254714dd601f5ed49ef2f51",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ORDERIDR",
-    "desimal": 18,
-    "sc": "0xABD4C63d2616A5201454168269031355f4764337",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PANDOIDR",
-    "desimal": 18,
-    "sc": "0x252b9F56359901a0BDE52d0675b1f1130d86F471",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PAXGIDR",
-    "desimal": 18,
-    "sc": "0x45804880de22913dafe09f4980848ece6ecbaf78",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PENDLEIDR",
-    "desimal": 18,
-    "sc": "0x808507121b80c02388fad14726482e061b8da827",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PEOPLEIDR",
-    "desimal": 18,
-    "sc": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PEPEIDR",
-    "desimal": 18,
-    "sc": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PEPEUSDT",
-    "desimal": 18,
-    "sc": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PERPIDR",
-    "desimal": 18,
-    "sc": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PIXELIDR",
-    "desimal": 18,
-    "sc": "0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "POLSIDR",
-    "desimal": 18,
-    "sc": "0x83e6f1e41cdd28eaceb20cb649155049fac3d5aa",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "POLYIDR",
-    "desimal": 18,
-    "sc": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PORTALIDR",
-    "desimal": 18,
-    "sc": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "POWRIDR",
-    "desimal": 6,
-    "sc": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PROMIDR",
-    "desimal": 18,
-    "sc": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PUNDIXUSDT",
-    "desimal": 18,
-    "sc": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "PYRIDR",
-    "desimal": 18,
-    "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "QNTIDR",
-    "desimal": 18,
-    "sc": "0x4a220e6096b25eadb88358cb44068a3248254675",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RAREIDR",
-    "desimal": 18,
-    "sc": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RDNTIDR",
-    "desimal": 18,
-    "sc": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RENIDR",
-    "desimal": 18,
-    "sc": "0x408e41876cccdc0f92210600ef50372656052a38",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RENDERIDR",
-    "desimal": 18,
-    "sc": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "REPV2IDR",
-    "desimal": 18,
-    "sc": "0x1985365e9f78359a9B6AD760e32412f4a445E862",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "REQIDR",
-    "desimal": 18,
-    "sc": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "REVIDR",
-    "desimal": 6,
-    "sc": "0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "REZIDR",
-    "desimal": 18,
-    "sc": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RLCIDR",
-    "desimal": 9,
-    "sc": "0x607f4c5bb672230e8672085532f7e901544a7375",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RPLIDR",
-    "desimal": 18,
-    "sc": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RSRIDR",
-    "desimal": 18,
-    "sc": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "RSS3IDR",
-    "desimal": 18,
-    "sc": "0xc98d64da73a6616c42117b582e832812e7b8d57f",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SAFEIDR",
-    "desimal": 18,
-    "sc": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SANDIDR",
-    "desimal": 18,
-    "sc": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SFIIDR",
-    "desimal": 18,
-    "sc": "0xb753428af26e81097e7fd17f40c88aaa3e04902c",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SGTIDR",
-    "desimal": 8,
-    "sc": "0x5b649C07E7Ba0a1C529DEAabEd0b47699919B4a2",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SHIBIDR",
-    "desimal": 18,
-    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SHIBUSDT",
-    "desimal": 18,
-    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SKLIDR",
-    "desimal": 18,
-    "sc": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SKYAIDR",
-    "desimal": 18,
-    "sc": "0x623cD3a3EdF080057892aaF8D773Bbb7A5C9b6e9",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SLPIDR",
-    "desimal": 0,
-    "sc": "0xCC8Fa225D80b9c7D42F96e9570156c65D6cAAa25",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SNTIDR",
-    "desimal": 18,
-    "sc": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SNXIDR",
-    "desimal": 18,
-    "sc": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "SOLVEIDR",
-    "desimal": 8,
-    "sc": "0x446c9033e7516d820cc9a2ce2d0b7328b579406f",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "IDIDR",
-    "desimal": 18,
     "sc": "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "ILVIDR",
+    "sc": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "IMXIDR",
+    "sc": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "INJIDR",
+    "sc": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "IQIDR",
+    "sc": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ISLMIDR",
+    "sc": "0xf10c41ca085fc8d9326a65408d14dae28a3e69a5",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "JASMYIDR",
+    "sc": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KDAGIDR",
+    "sc": "0x95e40e065afb3059dcabe4aaf404c1f92756603a",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KERNELIDR",
+    "sc": "0x3f80b1c54ae920be41a77f8b902259d48cf24ccf",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KNCIDR",
+    "sc": "0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KOKIDR",
+    "sc": "0x9b9647431632af44be02ddd22477ed94d14aacaa",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "L3IDR",
+    "sc": "0x88909d489678dd17aa6d9609f89b0419bf78fd9a",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LADYSIDR",
+    "sc": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LDOIDR",
+    "sc": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LEOIDR",
+    "sc": "0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LEVERIDR",
+    "sc": "0x4B5f49487ea7B3609b1aD05459BE420548789f1f",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LINKIDR",
+    "sc": "0x514910771af9ca656af840dff83e8264ecf986ca",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LOOKSIDR",
+    "sc": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LOOMIDR",
+    "sc": "0x42476F744292107e34519F9c357927074Ea3F75D",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LPTIDR",
+    "sc": "0x58b6a8a3302369daec383334672404ee733ab239",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LQTYIDR",
+    "sc": "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LRCIDR",
+    "sc": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MANAIDR",
+    "sc": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MASKIDR",
+    "sc": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MAVIAIDR",
+    "sc": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MAVIDR",
+    "sc": "0x7448c7456a97769F6cD04F1E83A4a23cCdC46aBD",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MEMEIDR",
+    "sc": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "METISIDR",
+    "sc": "0x9E32b13ce7f2E80A01932B42553652E053D6ed8e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MKRIDR",
+    "sc": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MNTIDR",
+    "sc": "0x3c3a81e81dc49a522a592e7622a7e711c06bf354",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MOCAIDR",
+    "sc": "0xf944e35f95e819e752f3ccb5faf40957d311e8c5",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MOGIDR",
+    "sc": "0xaaeE1A9723aaDB7afA2810263653A34bA2C21C7a",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MOVEIDR",
+    "sc": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073",
+    "desimal": 8,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MTLIDR",
+    "sc": "0xf433089366899d83a9f26a773d59ec7ecf30355e",
+    "desimal": 8,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MULTIIDR",
+    "sc": "0x65ef703f5594d2573eb71aaf55bc0cb548492df4",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "NBTIDR",
+    "sc": "0x446F2A8A39Cc730ef378Be759A3c57f1a3fE824c",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "NEIROIDR",
+    "sc": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
+    "desimal": 9,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "NEXOIDR",
+    "sc": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "NPCIDR",
+    "sc": "0x8ed97a637a790be1feff5e888d43629dc05408f6",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "OCTOIDR",
+    "sc": "0x7240aC91f01233BaAf8b064248E80feaA5912BA3",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "OGNIDR",
+    "sc": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "OKBIDR",
+    "sc": "0x75231f58b43240c9718dd58b4967c5114342a86c",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "OMGIDR",
+    "sc": "0xd26114cd6ee289accf82350c8d8487fedb8a0c07",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "OMIDR",
+    "sc": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "OMNIIDR",
+    "sc": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ONDOIDR",
+    "sc": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ORBSIDR",
+    "sc": "0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ORCIDR",
+    "sc": "0x662b67d00a13faf93254714dd601f5ed49ef2f51",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ORDERIDR",
+    "sc": "0xABD4C63d2616A5201454168269031355f4764337",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PAXGIDR",
+    "sc": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PENDLEIDR",
+    "sc": "0x808507121b80c02388fad14726482e061b8da827",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PEOPLEIDR",
+    "sc": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PEPEIDR",
+    "sc": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PERPIDR",
+    "sc": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PHAIDR",
+    "sc": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PIXELIDR",
+    "sc": "0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "POLIDR",
+    "sc": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "POLSIDR",
+    "sc": "0x83e6f1e41cdd28eaceb20cb649155049fac3d5aa",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "POLYIDR",
+    "sc": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PORTALIDR",
+    "sc": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "POWRIDR",
+    "sc": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
+    "desimal": 6,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PROMIDR",
+    "sc": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PUFFERIDR",
+    "sc": "0x4d1c297d39c5c1277964d0e3f8aa901493664530",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PUNDIXUSDT",
+    "sc": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PYRIDR",
+    "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "QNTIDR",
+    "sc": "0x4a220e6096b25eadb88358cb44068a3248254675",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RADIDR",
+    "sc": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RAREIDR",
+    "sc": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RDNTIDR",
+    "sc": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "REDIDR",
+    "sc": "0xc43c6bfeda065fe2c4c11765bf838789bd0bb5de",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RENDERIDR",
+    "sc": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RENIDR",
+    "sc": "0x408e41876cccdc0f92210600ef50372656052a38",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "REPIDR",
+    "sc": "0x221657776846890989a759ba2973e427dff5c9bb",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "REQIDR",
+    "sc": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "REZIDR",
+    "sc": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RLCIDR",
+    "sc": "0x607f4c5bb672230e8672085532f7e901544a7375",
+    "desimal": 9,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ROOTIDR",
+    "sc": "0xa3d4BEe77B05d4a0C943877558Ce21A763C4fa29",
+    "desimal": 6,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RPLIDR",
+    "sc": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RSRIDR",
+    "sc": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RSS3IDR",
+    "sc": "0xc98d64da73a6616c42117b582e832812e7b8d57f",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SAFEIDR",
+    "sc": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SANDIDR",
+    "sc": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SFIIDR",
+    "sc": "0xb753428af26e81097e7fd17f40c88aaa3e04902c",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SGTIDR",
+    "sc": "0x5b649C07E7Ba0a1C529DEAabEd0b47699919B4a2",
+    "desimal": 8,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SHIBIDR",
+    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SKLIDR",
+    "sc": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SKYAIDR",
+    "sc": "0x623cD3a3EdF080057892aaF8D773Bbb7A5C9b6e9",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SLPIDR",
+    "sc": "0xCC8Fa225D80b9c7D42F96e9570156c65D6cAAa25",
+    "desimal": 0,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SNTIDR",
+    "sc": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SNXIDR",
+    "sc": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SOLVEIDR",
+    "sc": "0x446c9033e7516d820cc9a2ce2d0b7328b579406f",
+    "desimal": 8,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SPELLIDR",
+    "sc": "0x090185f2135308bad17527004364ebcc2d37e5f6",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SPXIDR",
+    "sc": "0xE0f63A424a4439cBE457D80E4f4b51aD25b2c56C",
+    "desimal": 8,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SRMIDR",
+    "sc": "0x476c5e26a75bd202a9683ffd34359c0cc15be0ff",
+    "desimal": 6,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "SSVIDR",
-    "desimal": 18,
     "sc": "0x9D65fF81a3c488d585bBfb0Bfe3c7707c7917f54",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "STGIDR",
-    "desimal": 18,
     "sc": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "STORJIDR",
-    "desimal": 8,
     "sc": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "STRKIDR",
-    "desimal": 18,
     "sc": "0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "STRMIDR",
-    "desimal": 18,
     "sc": "0x94a7f270cd12545a277e656266aef5e27df3eb28",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "SUPERIDR",
-    "desimal": 18,
     "sc": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "SUSHIIDR",
-    "desimal": 18,
     "sc": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "SYNIDR",
-    "desimal": 18,
     "sc": "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "TAIKOIDR",
+    "sc": "0x10dea67478c5f8c5e2d90e5e9b26dbe60c54d800",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "TELIDR",
-    "desimal": 2,
     "sc": "0x467bccd9d29f223bce8043b84e8c8b282827790f",
+    "desimal": 2,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TENIDR",
-    "desimal": 18,
     "sc": "0xdd16ec0f66e54d453e6756713e533355989040e4",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TIDR",
-    "desimal": 18,
     "sc": "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TITANIDR",
-    "desimal": 18,
     "sc": "0x3A8cCCB969a61532d1E6005e2CE12C200caeCe87",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TLMIDR",
-    "desimal": 4,
     "sc": "0x888888848B652B3E3a0f34c96E00EEC0F3a23F72",
+    "desimal": 4,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TOKOIDR",
-    "desimal": 18,
     "sc": "0xa0f0546eb5e3ee7e8cfc5da12e5949f3ae622675",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TRBIDR",
-    "desimal": 18,
     "sc": "0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TURBOIDR",
-    "desimal": 18,
     "sc": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "TUSDIDR",
-    "desimal": 18,
     "sc": "0x0000000000085d4780B73119b644AE5ecd22b376",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "UMAIDR",
-    "desimal": 18,
     "sc": "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "UNIIDR",
+    "sc": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "USDCIDR",
-    "desimal": 6,
     "sc": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "USDTIDR",
-    "desimal": 6,
     "sc": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "VANRYIDR",
-    "desimal": 18,
     "sc": "0x8DE5B80a0C1B02Fe4976851D030B36122dbb8624",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "VCGIDR",
-    "desimal": 18,
     "sc": "0x1F36FB2D91d9951Cf58aE4c1956C0b77e224F1E9",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "VCGUSDT",
     "desimal": 18,
-    "sc": "0x1F36FB2D91d9951Cf58aE4c1956C0b77e224F1E9",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "VIDYUSDT",
-    "desimal": 18,
     "sc": "0xc77b230f31b517f1ef362e59c173c2be6540b5e8",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "VRAIDR",
-    "desimal": 18,
     "sc": "0xf411903cbc70a74d22900a5de66a2dda66507255",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "WBTCIDR",
-    "desimal": 8,
     "sc": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+    "desimal": 8,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "WIDR",
+    "sc": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "WLDIDR",
-    "desimal": 18,
     "sc": "0x163f8c2467924be0ae7b5347228cabf260318753",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
+  },
+  {
+    "symbol": "WNXMIDR",
+    "sc": "0x0d438f3b5175bebc262bf23753c1e53d03432bde",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
   },
   {
     "symbol": "WOOIDR",
-    "desimal": 18,
     "sc": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "WORMHOLEIDR",
     "desimal": 18,
-    "sc": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "WOZXIDR",
-    "desimal": 18,
     "sc": "0x34950ff2b487d9e5282c5ab342d08a2f712eb79f",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "XAUTIDR",
-    "desimal": 6,
     "sc": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+    "desimal": 6,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "XVSIDR",
-    "desimal": 18,
     "sc": "0xd3CC9d8f3689B83c91b7B59cAB4946B063EB894A",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "YFIIDR",
-    "desimal": 18,
     "sc": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "YFIIIDR",
-    "desimal": 18,
     "sc": "0xa1d0E215a23d7030842FC67cE582a6aFa3CCaB83",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "YGGIDR",
-    "desimal": 18,
     "sc": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ZETAIDR",
-    "desimal": 18,
     "sc": "0xf091867ec603a6628ed83d274e835539d82e9cc8",
-    "wd": 0,
-   "status":true
-  },
-  {
-    "symbol": "ZIGIDR",
     "desimal": 18,
-    "sc": "0xb2617246d0c6c0087f18703d576831899ca94f01",
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ZKJIDR",
-    "desimal": 18,
     "sc": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ZROIDR",
-    "desimal": 18,
     "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   },
   {
     "symbol": "ZRXIDR",
-    "desimal": 18,
     "sc": "0xe41d2489571d322189246dafa5ebde1f4699f498",
+    "desimal": 18,
     "wd": 0,
-   "status":true
+    "status": true
   }
 ]
 }
