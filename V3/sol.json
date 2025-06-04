@@ -1738,7 +1738,7 @@
   {
     "cex": "GATE",
     "symbol_in": "BONK",
-    "sc_in": "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9",
+    "sc_in": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
     "des_in": 5,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -1868,7 +1868,7 @@
   {
     "cex": "GATE",
     "symbol_in": "CHILLGUY",
-    "sc_in": "6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx",
+    "sc_in": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
     "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -10038,7 +10038,7 @@
   {
     "cex": "GATE",
     "symbol_in": "BONK",
-    "sc_in": "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9",
+    "sc_in": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
     "des_in": 5,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
@@ -10168,7 +10168,7 @@
   {
     "cex": "GATE",
     "symbol_in": "CHILLGUY",
-    "sc_in": "6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx",
+    "sc_in": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
     "des_in": 6,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
