@@ -1765,16 +1765,7 @@
     "des_out": 6,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "BRAWL",
-    "sc_in": "5mdBkZ4dTP94SE7PyiuWseTDAd1kYxSk6oYaWB7186s7",
-    "des_in": 9,
-    "symbol_out": "USDT",
-    "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
-    "des_out": 6,
-    "status": true
-  },
+ 
   {
     "cex": "GATE",
     "symbol_in": "BUCK",
@@ -1845,16 +1836,7 @@
     "des_out": 6,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "CHATAI",
-    "sc_in": "DpfVseMtcwUMuMaNUgVoshxQ7Uo4Brtna3k5NaN44U1g",
-    "des_in": 9,
-    "symbol_out": "USDT",
-    "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
-    "des_out": 6,
-    "status": true
-  },
+  
   {
     "cex": "GATE",
     "symbol_in": "CHICKS",
@@ -2078,23 +2060,14 @@
   {
     "cex": "GATE",
     "symbol_in": "ELIZA",
-    "sc_in": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "sc_in": "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o",
     "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
     "des_out": 6,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "ELIZASOL",
-    "sc_in": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
-    "des_in": 6,
-    "symbol_out": "USDT",
-    "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
-    "des_out": 6,
-    "status": true
-  },
+  
   {
     "cex": "GATE",
     "symbol_in": "ELU",
@@ -2258,7 +2231,7 @@
   {
     "cex": "GATE",
     "symbol_in": "GOAT",
-    "sc_in": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn",
+    "sc_in": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
     "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -2518,7 +2491,7 @@
   {
     "cex": "GATE",
     "symbol_in": "KMNO",
-    "sc_in": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+    "sc_in": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
     "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -3318,7 +3291,7 @@
   {
     "cex": "GATE",
     "symbol_in": "SLERF",
-    "sc_in": "TNSRxcUxoT9xBG3de7PiJyTDYu7kskLqcpddxnEJAS6",
+    "sc_in": "7BgBvyjrZX1YKz4oh9mjb8ZScatkkwb8DzFx7LoiVkM3",
     "des_in": 9,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -3355,16 +3328,7 @@
     "des_out": 6,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "SNAKEAI",
-    "sc_in": "6Jt1B3wC4zD6ZjeJKvhNZtvYxzCyFcWCvVZT46TytH25",
-    "des_in": 6,
-    "symbol_out": "USDT",
-    "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
-    "des_out": 6,
-    "status": true
-  },
+  
   {
     "cex": "GATE",
     "symbol_in": "SNAP",
@@ -6128,7 +6092,7 @@
   {
     "cex": "MEXC",
     "symbol_in": "ELIZA",
-    "sc_in": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "sc_in": "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o",
     "des_in": 6,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -10065,16 +10029,7 @@
     "des_out": 9,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "BRAWL",
-    "sc_in": "5mdBkZ4dTP94SE7PyiuWseTDAd1kYxSk6oYaWB7186s7",
-    "des_in": 9,
-    "symbol_out": "SOL",
-    "sc_out": "So11111111111111111111111111111111111111112",
-    "des_out": 9,
-    "status": true
-  },
+ 
   {
     "cex": "GATE",
     "symbol_in": "BUCK",
@@ -10145,16 +10100,7 @@
     "des_out": 9,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "CHATAI",
-    "sc_in": "DpfVseMtcwUMuMaNUgVoshxQ7Uo4Brtna3k5NaN44U1g",
-    "des_in": 9,
-    "symbol_out": "SOL",
-    "sc_out": "So11111111111111111111111111111111111111112",
-    "des_out": 9,
-    "status": true
-  },
+  
   {
     "cex": "GATE",
     "symbol_in": "CHICKS",
@@ -10378,23 +10324,14 @@
   {
     "cex": "GATE",
     "symbol_in": "ELIZA",
-    "sc_in": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+    "sc_in": "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o",
     "des_in": 6,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
     "des_out": 9,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "ELIZASOL",
-    "sc_in": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
-    "des_in": 6,
-    "symbol_out": "SOL",
-    "sc_out": "So11111111111111111111111111111111111111112",
-    "des_out": 9,
-    "status": true
-  },
+  
   {
     "cex": "GATE",
     "symbol_in": "ELU",
@@ -10558,7 +10495,7 @@
   {
     "cex": "GATE",
     "symbol_in": "GOAT",
-    "sc_in": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn",
+    "sc_in": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
     "des_in": 6,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
@@ -10818,7 +10755,7 @@
   {
     "cex": "GATE",
     "symbol_in": "KMNO",
-    "sc_in": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+    "sc_in": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
     "des_in": 6,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
@@ -11618,7 +11555,7 @@
   {
     "cex": "GATE",
     "symbol_in": "SLERF",
-    "sc_in": "TNSRxcUxoT9xBG3de7PiJyTDYu7kskLqcpddxnEJAS6",
+    "sc_in": "7BgBvyjrZX1YKz4oh9mjb8ZScatkkwb8DzFx7LoiVkM3",
     "des_in": 9,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
@@ -11655,16 +11592,7 @@
     "des_out": 9,
     "status": true
   },
-  {
-    "cex": "GATE",
-    "symbol_in": "SNAKEAI",
-    "sc_in": "6Jt1B3wC4zD6ZjeJKvhNZtvYxzCyFcWCvVZT46TytH25",
-    "des_in": 6,
-    "symbol_out": "SOL",
-    "sc_out": "So11111111111111111111111111111111111111112",
-    "des_out": 9,
-    "status": true
-  },
+ 
   {
     "cex": "GATE",
     "symbol_in": "SNAP",
@@ -16706,4 +16634,5 @@
     "status": true
   }
 ]
+
 }
