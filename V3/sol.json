@@ -2331,7 +2331,7 @@
   {
     "cex": "GATE",
     "symbol_in": "HNT",
-    "sc_in": "BZLbGTNCSFfoth2GYDtwr7e4imWzpR5jqcUuGEwr646K",
+    "sc_in": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
     "des_in": 8,
     "symbol_out": "USDT",
     "sc_out": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
@@ -10595,7 +10595,7 @@
   {
     "cex": "GATE",
     "symbol_in": "HNT",
-    "sc_in": "BZLbGTNCSFfoth2GYDtwr7e4imWzpR5jqcUuGEwr646K",
+    "sc_in": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
     "des_in": 8,
     "symbol_out": "SOL",
     "sc_out": "So11111111111111111111111111111111111111112",
