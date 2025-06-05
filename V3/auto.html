@@ -2392,8 +2392,9 @@
         
          // Membuat link dengan format umum tanpa pengecekan kondisi
         var sLink = `<div><a href=#SWAP_${idCELL} class='buy'>
-            *<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span> ${NameToken}->${NamePair} <span class="uk-text-secondary">(${PNL.toFixed(2)}$ | ${profitLossPercent.toFixed(1)}% )</span>
+            * <span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span> ${NameToken}->${NamePair} <span class="uk-text-secondary"> [ ${PNL.toFixed(2)}$ | ${profitLossPercent.toFixed(1)}% ]</span>
         </a></div>`;
+        
         // Menambahkan link ke elemen dengan ID yang sesuai
         $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink}`);
         
