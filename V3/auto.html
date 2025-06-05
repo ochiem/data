@@ -103,10 +103,20 @@
             background-color: #f6f2f1!important;
         }
        
+        #sinyal-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 6px;
+            box-sizing: border-box;
+        }
+
         .sinyal-item {
-            margin-bottom: 2px;  /* Jarak antar sinyal */
-            padding-bottom: 1px;  /* Jarak dari garis bawah ke teks */
-            border-bottom: 1px solid #ccc;  /* Garis bawah sebagai pembatas */
+            flex: 1 1 220px;    /* fleksibel, responsif */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            min-height: 40px;
         }
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -353,7 +363,7 @@
     // Mendapatkan parameter dari URL
     const urlParams = new URLSearchParams(window.location.search);
     const chainName = urlParams.get('chain') || "bsc"; // Default ke 'bsc' jika tidak ada parameter 'chain' di URL
-    const makfav=35;
+    const makfav=20;
     // Memilih chain yang sesuai berdasarkan parameter URL
     const selectedChain = CONFIG_CHAINS[chainName] || CONFIG_CHAINS['bsc']; 
 
@@ -2381,10 +2391,10 @@
         let idCELL = `${cex.toUpperCase()}_${DEXPLUS.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         
         // Membuat link dengan format umum tanpa pengecekan kondisi
-        var sLink = `<a href=#SWAP_${idCELL} class='buy'>
+        var sLink = `<div><a href=#SWAP_${idCELL} class='buy'>
             ${NameToken}->${NamePair} <span class="uk-text-secondary"> ${profitLossPercent.toFixed(1)}% </span>
             (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span><span class="uk-text-primary">${PNL.toFixed(2)}$ </span>)
-        </a>`;
+        </a></div>`;
 
         // Menambahkan link ke elemen dengan ID yang sesuai
         $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink} |`);
@@ -2399,12 +2409,12 @@
             'kyberswap': `https://kyberswap.com/swap/${DTChain.Nama_Chain}/${sc_input}-to-${sc_output}`,
             'kana': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
             'odos': "https://app.odos.xyz",
-             '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
+            '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
            // `https://matcha.xyz/tokens/solana/${sc_input.toLowerCase()}?buyChain=1399811149&buyAddress=${sc_output.toLowerCase()}`
             ? `https://matcha.xyz/tokens/solana/${sc_input}?sellChain=1399811149&sellAddress=${sc_output}` 
             : `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
         
-           // '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+            // '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
             '1inch': ` https://app.1inch.io/advanced/swap?network=${DTChain.Kode_Chain}&src=${NameToken.toUpperCase()}&dst=${NamePair.toUpperCase()}`,
             // '1inch': `https://app.1inch.io/#/${DTChain.Kode_Chain}/advanced/swap/${sc_input}/${sc_output}`,
             'okx': `https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${sc_input}&outputChain=501&outputCurrency=${sc_output}`,
