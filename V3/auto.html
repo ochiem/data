@@ -2384,20 +2384,19 @@
         }
     }
 
-    // Fungsi untuk menampilkan sinyal hasil scan dan memutar suara
+   // Fungsi untuk menampilkan sinyal hasil scan dan memutar suara
     function InfoSinyal(DEXPLUS, TokenPair, PNL, totalFee, cex, NameToken, NamePair,profitLossPercent) {
         // Menentukan warna teks berdasarkan `cex` menggunakan fungsi getWarnaCEX
         var warnaCEX = getWarnaCEX(cex);
         let idCELL = `${cex.toUpperCase()}_${DEXPLUS.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         
         // Membuat link dengan format umum tanpa pengecekan kondisi
-        var sLink = `<div>* <a href=#SWAP_${idCELL} class='buy'>
-            ${NameToken}->${NamePair} <span class="uk-text-secondary"> ${profitLossPercent.toFixed(1)}% </span>
-            (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span><span class="uk-text-primary">${PNL.toFixed(2)}$ </span>)
+        var sLink = `<div><a href=#SWAP_${idCELL} class='buy'>
+            *<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span> ${NameToken}->${NamePair} <span class="uk-text-secondary">~${PNL.toFixed(2)}$ (${profitLossPercent.toFixed(1)}% )</span>
         </a></div>`;
 
         // Menambahkan link ke elemen dengan ID yang sesuai
-        $("#sinyal" + DEXPLUS.toLowerCase()).append(`${sLink}`);
+        $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink}`);
         
         var audio = new Audio('audio.mp3');  // Ganti dengan path file suara yang sesuai
         audio.play();
