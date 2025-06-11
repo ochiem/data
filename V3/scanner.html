@@ -2020,6 +2020,141 @@
             return;
         }
 
+        const tokenData = feeList.find(item =>
+            item.symbol_in === NameToken && item.symbol_out === NamePair && item.cex === cex
+        );
+
+        const isStablecoin = (token) => stablecoins.includes(token);
+        let results = {};
+
+        const urls = [
+            isStablecoin(NameToken) ? null : config.url({ symbol: NameToken }),
+            isStablecoin(NamePair) ? null : config.url({ symbol: NamePair })
+        ];
+
+        const processFinalResult = () => {
+            if (Object.keys(results).length === 2) {
+                const priceBuyToken = results[NameToken]?.price_buy || 0;
+                const priceBuyPair = results[NamePair]?.price_buy || 0;
+
+                const feeWDToken = parseFloat(tokenData?.feeWDToken || 0) * priceBuyToken;
+                const feeWDPair = parseFloat(tokenData?.feeWDPair || 0) * priceBuyPair;
+
+                if (isNaN(feeWDToken) || feeWDToken < 0) {
+                    callback(`FeeWD untuk ${NameToken} di ${cex} tidak valid: ${feeWDToken}`, null);
+                    return;
+                }
+                if (isNaN(feeWDPair) || feeWDPair < 0) {
+                    callback(`FeeWD untuk ${NamePair} di ${cex} tidak valid: ${feeWDPair}`, null);
+                    return;
+                }
+
+                const finalResult = {
+                    token: NameToken.toUpperCase(),
+                    sc_input: coins.sc_in,
+                    sc_output: coins.sc_out,
+                    pair: NamePair.toUpperCase(),
+                    cex: cex.toUpperCase(),
+                    price_sellToken: results[NameToken]?.price_sell || 0,
+                    price_buyToken: priceBuyToken,
+                    price_sellPair: results[NamePair]?.price_sell || 0,
+                    price_buyPair: priceBuyPair,
+                    volumes_sellToken: results[NameToken]?.volumes_sell || [],
+                    volumes_buyToken: results[NameToken]?.volumes_buy || [],
+                    volumes_sellPair: results[NamePair]?.volumes_sell || [],
+                    volumes_buyPair: results[NamePair]?.volumes_buy || [],
+                    feeWDToken: feeWDToken,
+                    feeWDPair: feeWDPair
+                };
+
+                updateTableVolCEX({}, finalResult, cex);
+                callback(null, finalResult);
+            }
+        };
+
+        urls.forEach((url, index) => {
+            const tokenName = index === 0 ? NameToken : NamePair;
+            if (isStablecoin(tokenName)) {
+                results[tokenName] = {
+                    price_sell: 1,
+                    price_buy: 1,
+                    volumes_sell: Array(3).fill({ price: 1, volume: 10000 }),
+                    volumes_buy: Array(3).fill({ price: 1, volume: 10000 })
+                };
+                processFinalResult();
+                return;
+            }
+
+            if (url) {
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                    success: function (data) {
+                        let processedData;
+                        try {
+                            processedData = config.processData(data);
+                        } catch (error) {
+                            console.error(`Error processing data untuk ${tokenName} di ${cex}:`, error);
+                            callback(`Error processing data untuk ${tokenName} di ${cex}.`, null);
+                            return;
+                        }
+
+                        const isIndodax = cex.toLowerCase() === "indodax";
+                        let priceBuy, priceSell, volumesBuy, volumesSell;
+
+                        if (isIndodax) {
+                            priceBuy = processedData?.priceSell?.[2]?.price || 0;
+                            priceSell = processedData?.priceBuy?.[2]?.price || 0;
+                            volumesBuy = processedData?.priceSell || [];
+                            volumesSell = processedData?.priceBuy || [];
+                        } else {
+
+                            // Urutkan data harga dan volume
+                            volumesBuy = (processedData?.priceBuy || []).sort((a, b) => b.price - a.price);   // beli → tertinggi ke rendah
+                            volumesSell = (processedData?.priceSell || []).sort((a, b) => a.price - b.price); // jual → terendah ke tinggi
+
+                            // Ambil harga berdasarkan urutan yang sudah benar
+                            priceBuy = volumesBuy[2]?.price || 0;
+                            priceSell = volumesSell[2]?.price || 0;
+
+                        }
+
+                        if (priceBuy <= 0 || priceSell <= 0) {
+                            callback(`Harga tidak valid untuk ${tokenName} di ${cex}.`, null);
+                            return;
+                        }
+
+                        results[tokenName] = {
+                            price_sell: priceSell,
+                            price_buy: priceBuy,
+                            volumes_sell: processedData?.priceBuy || [],
+                            volumes_buy: processedData?.priceSell || []
+                        };
+
+                        processFinalResult();
+                    },
+                    error: function (xhr) {
+                        const errorMessage = xhr.responseJSON?.msg || "Unknown ERROR";
+                        callback(`Error koneksi API untuk ${tokenName} di ${cex}: ${errorMessage}`, null);
+                    }
+                });
+            }
+        });
+    }
+    function getPriceCEXLAMA(coins, NameToken, NamePair, cex, callback) {
+        const config = exchangeConfig[cex];
+        if (!config) {
+            callback(`Exchange ${cex} tidak ditemukan dalam konfigurasi.`, null);
+            return;
+        }
+
+        const feeList = getFromLocalStorage("TOKEN_SCANNER", []);
+        if (!Array.isArray(feeList) || feeList.length === 0) {
+            toastr.error("PERIKSA ULANG FEE WD dari EXCHANGER !!");
+            callback("Token scanner belum diatur.", null);
+            return;
+        }
+
         const tokenData = feeList.find(item => item.symbol_in === NameToken && item.symbol_out === NamePair && item.cex === cex);
         
         const isStablecoin = (token) => stablecoins.includes(token);
