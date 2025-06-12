@@ -2449,7 +2449,7 @@
             `);
         }
 
-        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
+        if (PNL > 0.6 && parseFloat(vol) >= parseFloat(modal)) {
             MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
         }
     }
