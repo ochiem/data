@@ -3441,6 +3441,112 @@
 
     //fungsi cek FEE WD per TOKEN GATE
     function CekfeeWDGATE() {
+        var key = CONFIG_CEX.GATE.ApiKey;
+        var secret = CONFIG_CEX.GATE.ApiSecret;
+        var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
+        var prefix = "/api/v4";
+        var method = "GET";
+        var chain = DTChain.CEXCHAIN.GATE.chainCEX;
+        var timestamp = Math.floor(Date.now() / 1000);
+
+        var buildSignature = function (url, body) {
+            var bodyHash = CryptoJS.SHA512(body).toString(CryptoJS.enc.Hex);
+            var signString = method + "\n" + prefix + url + "\n" + "" + "\n" + bodyHash + "\n" + timestamp;
+            var hmac = CryptoJS.HmacSHA512(signString, secret);
+            return hmac.toString(CryptoJS.enc.Hex);
+        };
+
+        var feeWDUrl = "/wallet/withdraw_status";
+        var feeWDHeaders = {
+            'Timestamp': timestamp,
+            'KEY': key,
+            'SIGN': buildSignature(feeWDUrl, "")
+        };
+
+        var statusUrl = "/spot/currencies";
+        var statusHeaders = {
+            'Timestamp': timestamp,
+            'KEY': key,
+            'SIGN': buildSignature(statusUrl, "")
+        };
+
+        $.when(
+            $.ajax({
+                url: host + prefix + feeWDUrl,
+                method: method,
+                headers: feeWDHeaders
+            }),
+            $.ajax({
+                url: host + prefix + statusUrl,
+                method: method,
+                headers: statusHeaders
+            })
+        ).done(function (feeWDResponse, statusResponse) {
+            var feeWDData = feeWDResponse[0];
+            var statusData = statusResponse[0];
+
+            if (!Array.isArray(feeWDData) || !Array.isArray(statusData)) {
+                console.error("Unexpected API response");
+                toastr.error("Respons API tidak sesuai format!");
+                return;
+            }
+
+            var combinedData = statusData
+                .filter(function (statusItem) {
+                    return (
+                        statusItem.currency &&
+                        !statusItem.currency.includes("_OLD") &&
+                        !statusItem.delisted &&
+                        Array.isArray(statusItem.chains) &&
+                        statusItem.chains.some(function (c) {
+                            return c.name === chain;
+                        })
+                    );
+                })
+                .map(function (statusItem) {
+                    var matchedChain = statusItem.chains.find(function (c) {
+                        return c.name === chain;
+                    });
+
+                    var feeWDItem = feeWDData.find(function (feeItem) {
+                        var cleanStatusCurrency = statusItem.currency.replace(`-${chain}`, "");
+                        return (
+                            feeItem.currency === cleanStatusCurrency &&
+                            feeItem.withdraw_fix_on_chains &&
+                            feeItem.withdraw_fix_on_chains[chain]
+                        );
+                    });
+
+                    var feeWD = feeWDItem ? parseFloat(feeWDItem.withdraw_fix_on_chains[chain]) : null;
+
+                    return {
+                        cex: "GATE",
+                        chain: matchedChain ? matchedChain.name : "---",
+                        tokenName: statusItem.currency.replace(`-${chain}`, "") || "---",
+                        scToken: "---",
+                        depositEnable: matchedChain ? !matchedChain.deposit_disabled : false,
+                        withdrawEnable: matchedChain ? !matchedChain.withdraw_disabled : false,
+                        feeWDs: feeWD
+                    };
+                });
+
+            combinedData = combinedData.filter(function (item) {
+                return item.chain && item.tokenName;
+            });
+
+            console.log("GATE WALLET:", combinedData);
+            allFeeWD = allFeeWD.concat(combinedData);
+
+            toastr.info("SUKSES, CEK UPDATE WALLET GATE");
+            isGateSuccess = true;
+            checkAllUpdatesCompleted();
+        }).fail(function (xhr, status, error) {
+            console.error("Error:", error);
+            toastr.error("Gagal mendapatkan data dari API GATE");
+        });
+    }
+    
+    function CekfeeWDGATELAMA() {
             var key = CONFIG_CEX.GATE.ApiKey;
             var secret = CONFIG_CEX.GATE.ApiSecret;
             var host = "https://cors-anywhere.herokuapp.com/https://api.gateio.ws";
