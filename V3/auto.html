@@ -1047,13 +1047,7 @@
                             resolve(); // lanjut ke iterasi berikutnya jika async dalam Promise
                             $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
                             return;
-                        } else {
-                            let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || "N/A";
-                            let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || "N/A";
-
-                            let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || "N/A";
-                            let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || "N/A";
-
+                        } else {                        
                             const buyVolToken = (DataCEX.volumes_buyToken.length > 0) 
                                 ? DataCEX.volumes_buyToken.reduce((min, item) => item.price < min.price ? item : min).volume 
                                 : 1;
