@@ -23,7 +23,7 @@ function calculateSignature(exchange, apiSecret, dataToSign, hashMethod = "HmacS
 const CEXAPIs = {
     getBinanceOrderBook: async function(pair) {
         if (pair.baseSymbol === 'USDT' && pair.quoteSymbol === 'USDT') {
-            console.warn('⏭️ Skip Binance USDT/USDT (pair tidak valid)');
+            console.warn('⏭️ Skip Binance USDT/USDT ');
             return {
                 buy: 1, sell: 1, topAsks: [], topBids: [], quotePriceUSDT: 1
             };
@@ -50,7 +50,7 @@ const CEXAPIs = {
 
     getMEXCOrderBook: async function(pair) {
         if (pair.baseSymbol === 'USDT' && pair.quoteSymbol === 'USDT') {
-            console.warn('⏭️ Skip MEXC USDT/USDT (pair tidak valid)');
+            console.warn('⏭️ Skip MEXC USDT/USDT ');
             return {
                 buy: 1, sell: 1, topAsks: [], topBids: [], quotePriceUSDT: 1
             };
@@ -77,7 +77,7 @@ const CEXAPIs = {
 
     getGateOrderBook: async function(pair) {
         if (pair.baseSymbol === 'USDT' && pair.quoteSymbol === 'USDT') {
-            console.warn('⏭️ Skip Gate.io USDT/USDT (pair tidak valid)');
+            console.warn('⏭️ Skip Gate.io USDT/USDT ');
             return {
                 buy: 1, sell: 1, topAsks: [], topBids: [], quotePriceUSDT: 1
             };
@@ -435,15 +435,6 @@ const PriceUtils = {
         return revenue - cost;
     },
 
-    // Format price display
-    formatPrice: function(price) {
-        if (price >= 1) {
-            return price.toFixed(6);
-        } else {
-            return price.toFixed(8);
-        }
-    },
-
     // Format fee display
     formatFee: function(fee) {
         return `$${fee.toFixed(4)}`;
@@ -453,7 +444,21 @@ const PriceUtils = {
     formatPNL: function(pnl) {
         const sign = pnl >= 0 ? '+' : '';
         return `${sign}$${pnl.toFixed(2)}`;
+    },
+
+    formatPrice(val) {
+        return parseFloat(val).toFixed(8);
+    },
+
+    formatFee(val) {
+        return `$${parseFloat(val).toFixed(2)}`;
+    },
+
+    formatPNL(val) {
+        const prefix = val >= 0 ? '+' : '';
+        return `${prefix}${parseFloat(val).toFixed(2)}`;
     }
+
 };
 
 // Export for use in main application

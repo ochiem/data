@@ -1,4 +1,19 @@
 // Token Price Monitor Application - Updated for Frontend API Calls
+const dexOrder = ['KyberSwap', 'Matcha','OKXDEX', 'Magpie', 'ODOS'];
+const chainCodeMap = {
+            bsc: 56,
+            ethereum: 1,
+            polygon: 137,
+            arbitrum: 42161,
+            optimism: 10,
+            solana: 'solana'
+        };
+// URL eksplorasi
+const explorerUrls = {
+    '1': 'https://etherscan.io',
+    '56': 'https://bscscan.com',
+    '137': 'https://polygonscan.com'
+};
 class TokenPriceMonitor {
     constructor() {
         this.apiBaseUrl = window.location.origin + '/api';
@@ -20,16 +35,16 @@ class TokenPriceMonitor {
         this.updateStats();
         this.fetchGasTokenPrices();
         this.SearchCoin(); 
-        this.refreshPrices();
+        this.generateEmptyTable();
     }
 
     // Bind event handlers
     bindEvents() {
 
-        $('#manualRefreshBtn').on('click', async () => {
-            $('#manualRefreshBtn').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Refreshing...');
+        $('#CheckPrice').on('click', async () => {
+            $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
             await this.refreshPrices();
-            $('#manualRefreshBtn').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i> Refresh Now');
+            $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
         });
 
         // Auto refresh toggle
@@ -127,6 +142,49 @@ class TokenPriceMonitor {
             .fail(err => {
                 console.warn('[✘] Failed to fetch gas token prices', err);
             });
+    }
+
+    generateEmptyTable() {
+        const tbody = $('#priceTableBody');
+        tbody.empty();
+
+        const activeTokens = this.tokens.filter(t => t.isActive);
+        if (activeTokens.length === 0) {
+            tbody.html(`<tr><td colspan="13" class="text-center text-muted py-5">Belum ada token aktif</td></tr>`);
+            return;
+        }
+
+        for (const token of activeTokens) {
+            for (const cex of token.selectedCexs) {
+                const rowId = `token-row-${token.id}-${cex.replace(/\W+/g, '')}`;
+
+                // Kolom DEX arah CEX → DEX
+                const dexCEXtoDEX = dexOrder.map(dex => `
+                    <td class="dex-price-cell cex_to_dex-${dex} text-muted text-center">⏳</td>
+                `).join('');
+
+                // Kolom DEX arah DEX → CEX
+                const dexDEXtoCEX = dexOrder.map(dex => `
+                    <td class="dex-price-cell dex_to_cex-${dex} text-muted text-center">⏳</td>
+                `).join('');
+
+                // Kolom detail tengah (gunakan fungsi Anda)
+                const detailHTML = this.createTokenDetailContent(token, cex);
+
+                // Rangkaian baris lengkap
+                const rowHTML = `
+                    <tr id="${rowId}" class="token-data-row text-center">
+                        <td class="cex-order-buy-${cex} text-dark">${cex} ⏳</td>
+                        ${dexCEXtoDEX}
+                        <td class="token-detail-cell">${detailHTML}</td>
+                        ${dexDEXtoCEX}
+                        <td class="cex-order-sell-${cex} text-dark">${cex} ⏳</td>
+                    </tr>
+                `;
+
+                tbody.append(rowHTML);
+            }
+        }
     }
 
     // LocalStorage operations
@@ -502,12 +560,9 @@ class TokenPriceMonitor {
         if (this.isRefreshing) return;
 
         const activeTokens = this.tokens.filter(t => t.isActive);
-        const tbody = $('#priceTableBody');
-        tbody.empty();
-
         if (activeTokens.length === 0) {
             this.showAlert('No active tokens to monitor', 'info');
-            tbody.html(`<tr><td colspan="11" class="text-center text-muted py-5">
+            $('#priceTableBody').html(`<tr><td colspan="13" class="text-center text-muted py-5">
                 <i class="bi bi-info-circle me-2"></i>
                 Tidak ada DATA KOIN, Silakan ke Management TOKEN
             </td></tr>`);
@@ -537,41 +592,23 @@ class TokenPriceMonitor {
                     dex_data: {}
                 };
 
-                // Buat baris loading awal per CEX
-                for (const cex of token.selectedCexs) {
-                    const rowId = `token-row-${tokenId}-${cex.replace(/\W+/g, '')}`;
-                    const loadingRow = `<tr id="${rowId}" class="token-data-row text-center ">
-                        <td class="cex-price-cell">Loading...</td>
-                        <td class="dex-price-cell" colspan="5">⏳</td>
-                        <td class="token-detail-cell text-primary">Loading ${token.symbol} (${cex})...</td>
-                        <td class="dex-price-cell" colspan="5">⏳</td>
-                        <td class="cex-price-cell">Loading...</td>
-                    </tr>`;
-                    tbody.append(loadingRow);
-                }
-
-                // Fetch harga CEX untuk semua token base/quote dari semua CEX
                 await this.fetchCEXPrices(token, priceData[tokenId]);
 
-                // Lanjutkan proses per CEX
                 for (const cexName of token.selectedCexs) {
                     await this.fetchDEXPrices(token, priceData[tokenId], 'cex_to_dex', cexName);
                     await this.fetchDEXPrices(token, priceData[tokenId], 'dex_to_cex', cexName);
 
-                    // Tampilkan satu baris per CEX
                     this.updateTokenRow(token, priceData[tokenId], cexName);
-
-                    // Analisa (opsional)
-                    console.log(priceData[tokenId]);
                     this.printPriceAnalysis(token, priceData[tokenId]);
                 }
             }
 
             this.showAlert('Scanner Selesai..', 'success');
             if (this._isAutoRefreshActive) this.startCountdown();
+
         } catch (err) {
-            console.error('Error fetching prices:', err);
-            this.showAlert('Error fetching prices: ' + err.message, 'danger');
+            console.error('❌ Gagal saat refreshPrices:', err);
+            this.showAlert('Error saat refresh: ' + err.message, 'danger');
         } finally {
             this.isRefreshing = false;
             $('#manualRefreshBtn').removeClass('loading');
@@ -863,7 +900,35 @@ class TokenPriceMonitor {
         return rowHtml;
     }
 
-    updateTokenRow(token, priceData, targetCexName = null) {
+   updateTokenRow(token, priceData, targetCexName = null) {
+        const tokenId = token.id;
+        const cexData = priceData.cex_data || {};
+        const dexData = priceData.dex_data || {};
+        const tbody = $('#priceTableBody');
+
+        const cexNames = Object.keys(cexData);
+        for (const cexName of cexNames) {
+            if (targetCexName && cexName !== targetCexName) continue;
+
+            const rowId = `token-row-${tokenId}-${cexName.replace(/\W+/g, '')}`;
+            const $row = $(`#${rowId}`);
+            if ($row.length === 0) return;
+
+            const newRow = this.createCEXRow(token, cexName, cexData[cexName], dexData);
+            const $newRow = typeof newRow === 'string' ? $(newRow) : newRow;
+
+            // Ambil semua <td> baru dan update ke row lama
+            const $tds = $row.find('td');
+            const $newTds = $newRow.find('td');
+
+            $tds.each((i, td) => {
+                $(td).html($newTds.eq(i).html());
+            });
+        }
+    }
+
+
+    updateTokenRowLAMA(token, priceData, targetCexName = null) {
         const tokenId = token.id;
         const tbody = $('#priceTableBody');
         const cexData = priceData.cex_data || {};
@@ -947,7 +1012,7 @@ class TokenPriceMonitor {
         row += `</td>`;
 
         // ✅ DEX columns: CEX → DEX
-        const dexOrder = ['KyberSwap', 'Matcha','OKXDEX', 'Magpie', 'ODOS'];
+       // const dexOrder = ['KyberSwap', 'Matcha','OKXDEX', 'Magpie', 'ODOS'];
         dexOrder.forEach(dexName => {
             const dexInfo = dexData[dexName]?.['cex_to_dex'];
             row += this.createDEXCell(token, baseCexInfo, dexInfo, 'cex_to_dex', dexName);
@@ -1040,14 +1105,7 @@ class TokenPriceMonitor {
 
     generateDexLink(dex, tokenChain, tokenSymbol, tokenAddress, pairSymbol, pairAddress) {
         const chainName = tokenChain.toLowerCase(); // e.g. 'bsc', 'ethereum'
-        const chainCodeMap = {
-            bsc: 56,
-            ethereum: 1,
-            polygon: 137,
-            arbitrum: 42161,
-            optimism: 10,
-            solana: 'solana'
-        };
+        
         const chainCode = chainCodeMap[chainName] || 1;
 
         const links = {
@@ -1104,12 +1162,6 @@ class TokenPriceMonitor {
     createTokenDetailContent(token, cex) {
         const chainId = PriceUtils.getChainId(token.chain);
         
-        // URL eksplorasi
-        const explorerUrls = {
-            '1': 'https://etherscan.io',
-            '56': 'https://bscscan.com',
-            '137': 'https://polygonscan.com'
-        };
         const explorerUrl = explorerUrls[chainId] || explorerUrls['1'];
 
         const tokenSymbol = token.symbol.toUpperCase();
