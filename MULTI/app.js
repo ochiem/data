@@ -42,6 +42,7 @@ class TokenPriceMonitor {
     bindEvents() {
 
         $('#CheckPrice').on('click', async () => {
+            this.generateEmptyTable();
             $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
             await this.refreshPrices();
             $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
@@ -160,12 +161,12 @@ class TokenPriceMonitor {
 
                 // Kolom DEX arah CEX → DEX
                 const dexCEXtoDEX = dexOrder.map(dex => `
-                    <td class="dex-price-cell cex_to_dex-${dex} text-muted text-center">⏳</td>
+                    <td class="dex-price-cell cex_to_dex-${dex} text-muted text-center">🔒</td>
                 `).join('');
 
                 // Kolom DEX arah DEX → CEX
                 const dexDEXtoCEX = dexOrder.map(dex => `
-                    <td class="dex-price-cell dex_to_cex-${dex} text-muted text-center">⏳</td>
+                    <td class="dex-price-cell dex_to_cex-${dex} text-muted text-center">🔒</td>
                 `).join('');
 
                 // Kolom detail tengah (gunakan fungsi Anda)
@@ -174,11 +175,11 @@ class TokenPriceMonitor {
                 // Rangkaian baris lengkap
                 const rowHTML = `
                     <tr id="${rowId}" class="token-data-row text-center">
-                        <td class="cex-order-buy-${cex} text-dark">${cex} ⏳</td>
+                        <td class="cex-order-buy-${cex} text-dark">${cex} 🔒</td>
                         ${dexCEXtoDEX}
                         <td class="token-detail-cell">${detailHTML}</td>
                         ${dexDEXtoCEX}
-                        <td class="cex-order-sell-${cex} text-dark">${cex} ⏳</td>
+                        <td class="cex-order-sell-${cex} text-dark">${cex} 🔒</td>
                     </tr>
                 `;
 
@@ -601,6 +602,7 @@ class TokenPriceMonitor {
                     this.updateTokenRow(token, priceData[tokenId], cexName);
                     this.printPriceAnalysis(token, priceData[tokenId]);
                 }
+
             }
 
             this.showAlert('Scanner Selesai..', 'success');
@@ -614,6 +616,15 @@ class TokenPriceMonitor {
             $('#manualRefreshBtn').removeClass('loading');
         }
     }
+
+    setDexCellLoading(token, cexName, dexName, direction) {
+        const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '')}`;
+        const className = direction === 'cex_to_dex'
+            ? `.cex_to_dex-${dexName}`
+            : `.dex_to_cex-${dexName}`;
+        $(`#${rowId} ${className}`).html(`<div class="text-muted">${dexName} ⏳</div>`);
+    }
+
 
     async fetchCEXPrices(token, tokenPriceData, direction) {
         if (!this.gasTokenPrices) this.gasTokenPrices = {};
@@ -668,6 +679,12 @@ class TokenPriceMonitor {
         await Promise.allSettled(promises);
     }
 
+    getCEXRate(cexData, symbol, type = 'buy') {
+        if (!cexData) return 0;
+        const key = Object.keys(cexData).find(k => k.toUpperCase().includes(symbol.toUpperCase()));
+        return Number(cexData?.[key]?.[type] || 0);
+    }
+
     async fetchDEXPrices(token, tokenPriceData, direction) {
         const chainId = PriceUtils.getChainId(token.chain);
         const network = token.chain.toLowerCase();
@@ -682,42 +699,54 @@ class TokenPriceMonitor {
         const isBaseUSDT = baseSymbol === 'USDT';
         const isQuoteUSDT = quoteSymbol === 'USDT';
 
-        const cexName = token.selectedCexs?.[0];
-        const cexData = tokenPriceData.cex_data?.[cexName] || {};
+        // ✅ CEX yang tersedia
+        const cexName = token.selectedCexs.find(name => tokenPriceData.cex_data?.[name]);
+        const cexData = tokenPriceData.cex_data?.[cexName];
+        if (!cexData) {
+            console.warn(`❗ Tidak ada data CEX untuk ${token.symbol}/${token.pairSymbol}`);
+            return;
+        }
 
-        const baseBuy = isBaseUSDT ? 1 : (cexData?.[`${baseSymbol}ToUSDT`]?.buy || 1);
-        const baseSell = isBaseUSDT ? 1 : (cexData?.[`${baseSymbol}ToUSDT`]?.sell || 1);
-        const quoteBuy = isQuoteUSDT ? 1 : (cexData?.[`${quoteSymbol}ToUSDT`]?.buy || 1);
-        const quoteSell = isQuoteUSDT ? 1 : (cexData?.[`${quoteSymbol}ToUSDT`]?.sell || 1);
+        // ✅ Ambil harga dari CEX berdasarkan simbol token
+        const getCEXRate = (symbol, type = 'buy') => {
+            const key = Object.keys(cexData).find(k => k.toUpperCase().includes(symbol));
+            return Number(cexData?.[key]?.[type] || 0);
+        };
 
-        let inputTokenSymbol, outputTokenSymbol, inputContract, outputContract, inputDecimals, outputDecimals;
+        const baseBuy = isBaseUSDT ? 1 : getCEXRate(baseSymbol, 'buy');
+        const baseSell = isBaseUSDT ? 1 : getCEXRate(baseSymbol, 'sell');
+        const quoteBuy = isQuoteUSDT ? 1 : getCEXRate(quoteSymbol, 'buy');
+        const quoteSell = isQuoteUSDT ? 1 : getCEXRate(quoteSymbol, 'sell');
+
+        if (!baseBuy || !baseSell || !quoteBuy || !quoteSell) {
+            console.warn(`[CEX] Harga tidak lengkap:`, { baseBuy, baseSell, quoteBuy, quoteSell });
+            return;
+        }
+
+        // Tentukan arah swap
+        let inputContract, outputContract, inputDecimals, outputDecimals;
         if (direction === 'cex_to_dex') {
-            inputTokenSymbol = baseSymbol;
-            outputTokenSymbol = quoteSymbol;
             inputContract = token.contractAddress;
             outputContract = token.pairContractAddress;
             inputDecimals = tokenDecimals;
             outputDecimals = pairDecimals;
         } else {
-            inputTokenSymbol = quoteSymbol;
-            outputTokenSymbol = baseSymbol;
             inputContract = token.pairContractAddress;
             outputContract = token.contractAddress;
             inputDecimals = pairDecimals;
             outputDecimals = tokenDecimals;
         }
 
-        let inputAmountToken = 0;
-        if (direction === 'cex_to_dex') {
-            inputAmountToken = isBaseUSDT ? modal : modal / baseBuy;
-        } else {
-            inputAmountToken = isQuoteUSDT ? modal : modal / quoteBuy;
-        }
+        const inputAmountToken = direction === 'cex_to_dex'
+            ? (isBaseUSDT ? modal : modal / baseBuy)
+            : (isQuoteUSDT ? modal : modal / quoteBuy);
 
         const rawAmountIn = PriceUtils.calculateAmount(inputAmountToken, inputDecimals);
         const dexList = token.selectedDexs || [];
 
         await Promise.allSettled(dexList.map(async dex => {
+            this.setDexCellLoading(token, cexName, dex, direction); // ⏳
+
             const handleResult = (dexName, data, rawOutProp = 'amountOut') => {
                 const outRaw = data[rawOutProp] || '0';
                 const normalizedIn = PriceUtils.normalizeAmount(rawAmountIn, inputDecimals);
@@ -742,9 +771,9 @@ class TokenPriceMonitor {
                     price: priceInUSDT,
                     rawRate: price,
                     fee: data.fee || gasFeeUSD,
-                    from: inputTokenSymbol,
-                    to: outputTokenSymbol,
-                    rateSymbol: `${outputTokenSymbol}/${inputTokenSymbol}`,
+                    from: direction === 'cex_to_dex' ? baseSymbol : quoteSymbol,
+                    to: direction === 'cex_to_dex' ? quoteSymbol : baseSymbol,
+                    rateSymbol: `${direction === 'cex_to_dex' ? quoteSymbol : baseSymbol}/${direction === 'cex_to_dex' ? baseSymbol : quoteSymbol}`,
                     quotePriceUSDT: direction === 'cex_to_dex' ? quoteBuy : baseSell,
                     baseBuy, baseSell, quoteBuy, quoteSell,
                     gasEstimate: data.gasEstimate || 0,
@@ -752,24 +781,27 @@ class TokenPriceMonitor {
                     timestamp: Date.now()
                 };
 
-                this.updateTokenRow(token, tokenPriceData);
+                const html = this.createDEXCell(token, cexData, tokenPriceData.dex_data[dexName][direction], direction, dexName);
+                const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '')}`;
+                const selector = direction === 'cex_to_dex' ? `.cex_to_dex-${dexName}` : `.dex_to_cex-${dexName}`;
+                $(`#${rowId} ${selector}`).html($(html).html());
             };
 
             try {
                 switch (dex) {
                     case 'KyberSwap': {
-                        const kyberData = await DEXAPIs.getKyberSwapPrice(inputContract, outputContract, rawAmountIn, network);
-                        handleResult('KyberSwap', kyberData);
+                        const data = await DEXAPIs.getKyberSwapPrice(inputContract, outputContract, rawAmountIn, network);
+                        handleResult('KyberSwap', data);
                         break;
                     }
                     case 'Matcha': {
-                        const matchaData = await DEXAPIs.get0xPrice(inputContract, outputContract, rawAmountIn, chainId);
-                        handleResult('Matcha', matchaData, 'buyAmount');
+                        const data = await DEXAPIs.get0xPrice(inputContract, outputContract, rawAmountIn, chainId);
+                        handleResult('Matcha', data, 'buyAmount');
                         break;
                     }
                     case 'OKXDEX': {
-                        const okxData = await DEXAPIs.getOKXDEXPrice(inputContract, outputContract, rawAmountIn, network);
-                        handleResult('OKXDEX', okxData);
+                        const data = await DEXAPIs.getOKXDEXPrice(inputContract, outputContract, rawAmountIn, network);
+                        handleResult('OKXDEX', data);
                         break;
                     }
                     case 'ODOS': {
@@ -787,16 +819,19 @@ class TokenPriceMonitor {
                         break;
                     }
                     case 'Magpie': {
-                        const magpieData = await DEXAPIs.getMagpiePrice(inputContract, outputContract, rawAmountIn, network);
-                        handleResult('Magpie', magpieData);
+                        const data = await DEXAPIs.getMagpiePrice(inputContract, outputContract, rawAmountIn, network);
+                        handleResult('Magpie', data);
                         break;
                     }
                 }
             } catch (err) {
                 tokenPriceData.dex_data[dex] = tokenPriceData.dex_data[dex] || {};
-                tokenPriceData.dex_data[dex][direction] = err; // simpan seluruh objek error
-                this.updateTokenRow(token, tokenPriceData);
-            }            
+                tokenPriceData.dex_data[dex][direction] = { error: true };
+
+                const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '')}`;
+                const selector = direction === 'cex_to_dex' ? `.cex_to_dex-${dex}` : `.dex_to_cex-${dex}`;
+                $(`#${rowId} ${selector}`).html('<div class="text-danger">❌</div>');
+            }
         }));
     }
 
@@ -1038,12 +1073,12 @@ class TokenPriceMonitor {
         return row;
     }
 
-    createDEXCell(token, cexInfo, dexInfo, direction, dexName) {
+    createDEXCellLAMA(token, cexInfo, dexInfo, direction, dexName) {
         const linkSwap = direction === 'cex_to_dex'
             ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
             : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
 
-        // Jika DEX tidak dipilih → kosong warna abu
+        // Jika DEX tidak dipilih → tampilkan kosong/abu
         if (!(token.selectedDexs || []).includes(dexName)) {
             return `<td class="dex-price-cell text-muted text-center bg-secondary-subtle">
                 <div class="price-info">&nbsp;</div>
@@ -1052,6 +1087,7 @@ class TokenPriceMonitor {
             </td>`;
         }
 
+        // Jika error fetch
         if (!dexInfo || dexInfo.error) {
             const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
             return `<td class="dex-price-cell text-danger text-center bg-danger-subtle">
@@ -1068,11 +1104,11 @@ class TokenPriceMonitor {
         let sellPrice = 0;
 
         if (direction === 'cex_to_dex') {
-            buyPrice = cexInfo.buy || 0;
-            sellPrice = dexInfo.price || 0;
+            buyPrice = cexInfo?.buy || 0;        // Beli di CEX
+            sellPrice = dexInfo?.price || 0;     // Jual di DEX
         } else {
-            buyPrice = dexInfo.rawRate || 0; // Harga swap per unit dari DEX
-            sellPrice = cexInfo.sell || 0;   // Harga jual token ke USDT di CEX
+            buyPrice = dexInfo?.rawRate || 0;    // Beli di DEX
+            sellPrice = cexInfo?.sell || 0;      // Jual di CEX
         }
 
         const qty = buyPrice > 0 ? modal / buyPrice : 0;
@@ -1083,6 +1119,8 @@ class TokenPriceMonitor {
 
         const cexLinks = this.GeturlExchanger(token.selectedCexs[0]?.toUpperCase() || '', token.symbol, token.pairSymbol);
         const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
+        const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
+        const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
 
         const tooltip = `
             ${direction.replace(/_/g, ' ').toUpperCase()} ${dexName}
@@ -1095,12 +1133,93 @@ class TokenPriceMonitor {
 
         return `<td class="dex-price-cell align-middle ${tdClass}" title="${tooltip}">
             <div class="price-info">
-                <span class="buy-text"><a href="${linkSwap}" target="_blank">Buy: $${PriceUtils.formatPrice(buyPrice)}</a></span><br>
-                <span class="sell-text"><a href="${cexLink}" target="_blank">Sell: $${PriceUtils.formatPrice(sellPrice)}</a></span>
+                <span class="text-success">
+                    <a href="${buyLink}" target="_blank">Buy: $${PriceUtils.formatPrice(buyPrice)}</a>
+                </span><br>
+                <span class="text-danger">
+                    <a href="${sellLink}" target="_blank">Sell: $${PriceUtils.formatPrice(sellPrice)}</a>
+                </span>
             </div>
             <div class="fee-info">FeeSwap: ${PriceUtils.formatFee(fee)}</div>
             <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
         </td>`;
+    }
+
+    createDEXCell(token, cexInfo, dexInfo, direction, dexName) {
+        const linkSwap = direction === 'cex_to_dex'
+            ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
+            : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
+
+        if (!(token.selectedDexs || []).includes(dexName)) {
+            return `<td class="dex-price-cell text-muted text-center bg-secondary-subtle">
+                <div class="price-info">&nbsp;</div>
+                <div class="fee-info">---</div>
+                <div class="pnl-info">&nbsp;</div>
+            </td>`;
+        }
+
+            const fee = dexInfo.fee || 0;
+            const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
+
+            let buyPrice = 0;
+            let sellPrice = 0;
+
+            if (direction === 'cex_to_dex') {
+                buyPrice = cexInfo?.buy || 0;
+                sellPrice = dexInfo?.price || 0;
+            } else {
+                buyPrice = dexInfo?.rawRate || 0;
+                sellPrice = cexInfo?.sell || 0;
+            }
+
+            // ⏳ Jika belum ada harga yang valid, tampil loading
+            if (!buyPrice || !sellPrice) {
+                return `<td class="dex-price-cell text-center text-muted bg-light-subtle">
+                    <div class="text-muted small">⚠️</div>
+                </td>`;
+            }else {
+                if (!dexInfo || dexInfo.error) {
+            const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
+            return `<td class="dex-price-cell text-danger text-center bg-danger-subtle">
+                <div class="price-info">&nbsp;</div>
+                <div class="fee-info" title="${dexName}: ${errorMsg}">❌</div>
+                <div class="pnl-info">&nbsp;</div>
+            </td>`;
+        }
+            const qty = modal / buyPrice;
+            const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
+            const isPNLPositive = pnl > fee;
+            const tdClass = isPNLPositive ? 'bg-success-subtle' : '';
+            const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
+
+            const cexLinks = this.GeturlExchanger(token.selectedCexs[0]?.toUpperCase() || '', token.symbol, token.pairSymbol);
+            const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
+            const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
+            const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
+
+            const tooltip = `
+                ${direction.replace(/_/g, ' ').toUpperCase()} ${dexName}
+                Modal: $${modal}
+                Buy @: $${buyPrice}
+                Sell @: $${sellPrice}
+                Fee: $${fee}
+                PNL: $${pnl.toFixed(4)}
+            `.trim();
+
+            return `<td class="dex-price-cell align-middle ${tdClass}" title="${tooltip}">
+                <div class="price-info">
+                    <span class="text-success">
+                        <a href="${buyLink}" target="_blank">Buy: $${PriceUtils.formatPrice(buyPrice)}</a>
+                    </span><br>
+                    <span class="text-danger">
+                        <a href="${sellLink}" target="_blank">Sell: $${PriceUtils.formatPrice(sellPrice)}</a>
+                    </span>
+                </div>
+                <div class="fee-info">FeeSwap: ${PriceUtils.formatFee(fee)}</div>
+                <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
+            </td>`;
+            }
+        
     }
 
     generateDexLink(dex, tokenChain, tokenSymbol, tokenAddress, pairSymbol, pairAddress) {
@@ -1110,14 +1229,10 @@ class TokenPriceMonitor {
 
         const links = {
             kyberswap: `https://kyberswap.com/swap/${chainName}/${tokenAddress}-to-${pairAddress}`,
-
-            matcha: chainName === 'solana'
-                ? `https://matcha.xyz/tokens/solana/${tokenAddress}?sellChain=1399811149&sellAddress=${pairAddress}`
-                : `https://matcha.xyz/tokens/${chainName}/${tokenAddress.toLowerCase()}?buyChain=${chainCode}&buyAddress=${pairAddress.toLowerCase()}`,
-
+            matcha: `https://matcha.xyz/tokens/${chainName}/${tokenAddress.toLowerCase()}?buyChain=${chainCode}&buyAddress=${pairAddress.toLowerCase()}`,
             magpie: `https://app.magpiefi.xyz/swap/${chainName}/${tokenSymbol.toUpperCase()}/${chainName}/${pairSymbol.toUpperCase()}`,
-
-            odos: "https://app.odos.xyz"
+            odos: "https://app.odos.xyz",
+            OKXDEX: `https://www.okx.com/web3/dex-swap?inputChain=${chainCode}&inputCurrency=${tokenAddress}&outputChain=501&outputCurrency=${pairAddress}`,
         };
 
         return links[dex.toLowerCase()] || null;
@@ -1189,7 +1304,7 @@ class TokenPriceMonitor {
         const link1INCH = `<a href="https://app.1inch.io/advanced/swap?network=${chainId}&src=${token.contractAddress}&dst=${token.pairContractAddress}" target="_blank" class="uk-text-danger">#1NC</a>`;
 
         return `
-            <div class="text-center small" style="font-size: 0.85em;">
+            <div class="text-center">
                 <div><strong>${token.modalCexToDex}$ ⇔ ${token.modalDexToCex}$</strong></div>
                 <div class="text-secondary">
                     <span class="badge ${cexBadgeColor}">${cexUpper}</span>
