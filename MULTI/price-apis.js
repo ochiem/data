@@ -357,18 +357,12 @@ const DEXAPIs = {
                         reject({ exchange: 'OKXDEX', error: 'Invalid response format' });
                         return;
                     }
-                    // resolve({
-                    //     exchange: 'OKXDEX',
-                    //     amountOut: result.toTokenAmount || "0",
-                    //     price: parseFloat(result.amountOut) / parseFloat(amountIn),
-                    //     fee: parseFloat(result.tradeFee || 0),
-                    //     timestamp: Date.now()
-                    // });
+                    
                     resolve({
                         exchange: 'OKXDEX',
                         amountOut: result.toTokenAmount || "0",
                         price: parseFloat(result.amountOut) / parseFloat(amountIn),
-                        rawRate: parseFloat(amountIn) / parseFloat(result.amountOut), // ← tambahkan
+                        rawRate: parseFloat(amountIn) / parseFloat(result.amountOut), 
                         fee: parseFloat(result.tradeFee || 0),
                         timestamp: Date.now()
                     });
@@ -386,10 +380,61 @@ const DEXAPIs = {
                 }
             });
         });
+    },
+    getParaSwapPrice: function (fromToken, toToken, amountIn, fromDecimals, toDecimals, networkId) {
+        const apiUrl = `https://api.paraswap.io/prices?` +  `srcToken=${fromToken}` + `&srcDecimals=${fromDecimals}` + `&destToken=${toToken}` + `&destDecimals=${toDecimals}` +  `&side=SELL` + `&network=${networkId}` + `&amount=${amountIn}` + `&version=6.2`;
+
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                success: function (response) {
+                    if (!response || !response.priceRoute) {
+                        return reject({ exchange: 'ParaSwap', error: 'Invalid response format' });
+                    }
+
+                    const amountOut = parseFloat(response.priceRoute.destAmount);
+                    const gasCost = parseFloat(response.priceRoute.gasCostUSD || 0);
+
+                    if (!amountOut || isNaN(amountOut) || amountOut === 0) {
+                        return reject({ exchange: 'ParaSwap', error: 'Zero or invalid destAmount' });
+                    }
+
+                    resolve({
+                        exchange: 'ParaSwap',
+                        amountIn: amountIn,
+                        amountOut: amountOut,
+                        price: parseFloat(amountOut) / parseFloat(amountIn),
+                        rawRate: parseFloat(amountIn) / parseFloat(amountOut), 
+
+                        // price: amountOut / amountIn,
+                        // rawRate: amountIn / amountOut,
+                         fee: gasCost,
+                        gasEstimate: 0,    // konsisten dengan DEX lain
+                        gasPrice: 0,       // walaupun tidak tersedia
+                        timestamp: Date.now()
+                    });
+                },
+                error: function (xhr, status, error) {
+                    let errText = 'Unknown error';
+                    try {
+                        const res = JSON.parse(xhr.responseText);
+                        errText = res.message || error?.toString() || status;
+                    } catch {
+                        errText = error?.toString() || status;
+                    }
+                    reject({
+                        exchange: 'ParaSwap',
+                        error: errText,
+                        status: status
+                    });
+                }
+            });
+        });
     }
 
-};
 
+};
 
 // Utility Functions
 const PriceUtils = {
@@ -447,7 +492,29 @@ const PriceUtils = {
     },
 
     formatPrice(val) {
-        return parseFloat(val).toFixed(8);
+        const price = parseFloat(val);
+        if (isNaN(price)) return '-';
+        if (price === 0) return '$0.0000';
+
+        if (price >= 1) {
+            return `${price.toFixed(3)}`;
+        }
+
+        let strPrice = price.toFixed(20).replace(/0+$/, '');
+        let match = strPrice.match(/0\.(0*)(\d+)/); // nol dan angka signifikan
+
+        if (match) {
+            const zeroCount = match[1].length;
+            let significant = match[2].substring(0, 4).padEnd(4, '0');
+
+            if (zeroCount >= 2) {
+                return `0.{${zeroCount}}${significant}$`;
+            } else {
+                return `0.${match[1]}${significant}$`;
+            }
+        }
+
+        return `${price.toFixed(8)}`;
     },
 
     formatFee(val) {
