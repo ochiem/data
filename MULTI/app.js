@@ -487,6 +487,19 @@ class TokenPriceMonitor {
         return 'bg-secondary';
     }
 
+    getTextColorClassFromBadge(badgeClass) {
+        const map = {
+            'bg-success': 'text-success',
+            'bg-primary': 'text-primary',
+            'bg-danger': 'text-danger',
+            'bg-info': 'text-info',
+            'bg-secondary': 'text-secondary',
+            'bg-dark': 'text-dark',
+            'bg-warning': 'text-warning',
+        };
+        return map[badgeClass.split(' ')[0]] || 'text-secondary';
+    }
+
     loadSettingsForm() {
         $('#tokensPerBatch').val(this.settings.tokensPerBatch);
         $('#delayBetweenCalls').val(this.settings.delayBetweenCalls);
@@ -1198,7 +1211,7 @@ class TokenPriceMonitor {
         const qty = modal / buyPrice;
         const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
         const isPNLPositive = pnl > fee;
-        const tdClass = isPNLPositive ? 'bg-success-subtle' : '';
+        const tdClass = isPNLPositive ? 'bg-success' : '';
         const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
 
         // ✅ CEX & DEX Links
@@ -1225,19 +1238,34 @@ class TokenPriceMonitor {
             const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
             const fromSide = direction === 'cex_to_dex' ? (token.selectedCexs[0] || 'CEX') : dexName;
             const toSide = direction === 'cex_to_dex' ? dexName : (token.selectedCexs[0] || 'CEX');
-
             const chainLabel = token.chain?.toUpperCase() || 'CHAIN';
-            const message = `${fromSide.toUpperCase()} → ${toSide.toUpperCase()} [${chainLabel}] : $${modal} (${fromSymbol} → ${toSymbol}) = PNL: $${pnl.toFixed(2)}`;
 
-            this.pnlSignals[dexKey].push(message);
+            const modalText = `$${modal}`;
+            const pnlText = `$${pnl.toFixed(2)}`;
+            const rowId = `token-row-${token.id}-${(token.selectedCexs[0] || 'CEX').replace(/\W+/g, '')}`;
+            const linkHref = `#${rowId}`;
+
+            // Warna teks
+            const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(fromSide, 'cex'));
+            const dexColor = this.getTextColorClassFromBadge(this.getBadgeColor(toSide, 'dex'));
+            const chainColor = this.getTextColorClassFromBadge(this.getBadgeColor(token.chain, 'chain'));
+
+            const signalText = `<a href="${linkHref}" class="text-decoration-none text-dark">
+                <span class="${cexColor} fw-bold">${fromSide.toUpperCase()}</span> → 
+                <span class="${dexColor} fw-bold">${toSide.toUpperCase()}</span> 
+                <span class="${chainColor} fw-bold">[${chainLabel}]</span> : 
+                <span class="text-secondary fw-bold">${modalText} (${fromSymbol} → ${toSymbol}) = </span>
+                <span class="text-success fw-bold"> PNL: ${pnlText}</span>
+            </a>`;
+
+            this.pnlSignals[dexKey].push(signalText);
 
             const listEl = document.getElementById(`pnl-list-${dexKey}`);
             if (listEl) {
-                const li = document.createElement('li');
-                li.textContent = message;
-                listEl.appendChild(li);
+                listEl.innerHTML = `${this.pnlSignals[dexKey].join(' | ')}`;
             }
         }
+
 
         return `<td class="dex-price-cell align-middle ${tdClass}" title="${tooltip}">
             <div class="price-info">
@@ -1265,8 +1293,8 @@ class TokenPriceMonitor {
             const color = this.getBadgeColor(dex, 'dex');
             const html = `
                 <div id="pnl-${dexKey}">
-                    <span class="badge ${color} me-1">${dex}</span>
-                    <ul id="pnl-list-${dexKey}"></ul>
+                    <span class="badge ${color} me-1">${dex.toUpperCase()} : </span>
+                    <span id="pnl-list-${dexKey}"></span>
                 </div>
             `;
             container.append(html);
@@ -1444,58 +1472,6 @@ class TokenPriceMonitor {
         `;
         }
 
-    createTokenDetailContentLAMA(token, cex) {
-        const chainId = PriceUtils.getChainId(token.chain);
-        
-        const explorerUrl = explorerUrls[chainId] || explorerUrls['1'];
-
-        const tokenSymbol = token.symbol.toUpperCase();
-        const pairSymbol = token.pairSymbol.toUpperCase();
-        const chain = token.chain.toUpperCase();
-        const cexUpper = cex.toUpperCase();
-
-        // Warna badge konsisten
-        const cexBadgeColor = this.getBadgeColor(cex, 'cex');
-        const chainBadgeColor = this.getBadgeColor(token.chain, 'chain');
-
-        // Link CEX deposit/withdraw/trade
-        const url = this.GeturlExchanger(cexUpper, tokenSymbol, pairSymbol);
-
-        const tokenSC = `<a href="${url.tradeToken}" target="_blank">${tokenSymbol}</a>`;
-        const pairSC = `<a href="${url.tradePair}" target="_blank">${pairSymbol}</a>`;
-
-        const tokenLink = `<a href="${explorerUrl}/token/${token.contractAddress}" target="_blank">${tokenSymbol}</a> : <a href="${url.tradeToken}" target="_blank">#STOK</a>`;
-        const pairLink = `<a href="${explorerUrl}/token/${token.pairContractAddress}" target="_blank">${pairSymbol}</a> : <a href="${url.tradePair}" target="_blank">#STOK</a>`;
-
-        // Link DEX
-        const linkOKDEX = `<a href="https://www.okx.com/web3/dex-swap?inputChain=${chainId}&inputCurrency=${token.contractAddress}&outputChain=501&outputCurrency=${token.pairContractAddress}" target="_blank" class="uk-text-secondary">#OK</a>`;
-        const linkUNIDEX = `<a href="https://app.unidex.exchange/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="uk-text-warning">#UN</a>`;
-        const linkDEFIL = `<a href="https://swap.defillama.com/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="uk-text-primary">#DF</a>`;
-        const link1INCH = `<a href="https://app.1inch.io/advanced/swap?network=${chainId}&src=${token.contractAddress}&dst=${token.pairContractAddress}" target="_blank" class="uk-text-danger">#1NC</a>`;
-
-        return `
-            <div class="text-center">
-                <div><strong>${token.modalCexToDex}$ ⇔ ${token.modalDexToCex}$</strong></div>
-                <div class="text-secondary">
-                    <span class="badge ${cexBadgeColor}">${cexUpper}</span>
-                    ON <span class="badge ${chainBadgeColor}">${chain}</span>
-                </div>
-                <div class="text-secondary">
-                    ${tokenSC}
-                    <a href="${url.withdrawUrl}" target="_blank" class="text-success">[WD]</a>
-                    VS
-                    ${pairSC}
-                    <a href="${url.depositUrl}" target="_blank" class="text-success">[DP]</a>
-                </div>
-                <div>${tokenLink}</div>
-                <div>${pairLink}</div>
-                <div class="mt-1">
-                    ${linkUNIDEX} ${linkOKDEX} ${linkDEFIL} ${link1INCH}
-                </div>
-            </div>
-        `;
-    }
-
     // Create empty row when no CEX data
     createEmptyRows(token, dexData) {
         const rows = [];
@@ -1631,5 +1607,14 @@ class TokenPriceMonitor {
 // Initialize the application when DOM is ready
 $(document).ready(function() {
     window.app = new TokenPriceMonitor();
+    $(document).on('click', 'a[href^="#token-row-"]', function (e) {
+        e.preventDefault();
+        const target = $(this.getAttribute('href'));
+        if (target.length) {
+            $('.token-data-row').removeClass('highlight-row'); // hapus highlight lama
+            target.addClass('highlight-row');
+            $('html, body').animate({ scrollTop: target.offset().top - 100 }, 500);
+        }
+    });
 });
 
