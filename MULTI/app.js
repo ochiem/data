@@ -1150,82 +1150,6 @@ class TokenPriceMonitor {
         return row;
     }
 
-    createDEXCellLAMA(token, cexInfo, dexInfo, direction, dexName) {
-        const linkSwap = direction === 'cex_to_dex'
-            ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
-            : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
-
-        if (!(token.selectedDexs || []).includes(dexName)) {
-            return `<td class="dex-price-cell text-muted text-center bg-secondary-subtle">
-                <div class="price-info">&nbsp;</div>
-                <div class="fee-info">---</div>
-                <div class="pnl-info">&nbsp;</div>
-            </td>`;
-        }
-
-            const fee = dexInfo.fee || 0;
-            const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
-
-            let buyPrice = 0;
-            let sellPrice = 0;
-
-            if (direction === 'cex_to_dex') {
-                buyPrice = cexInfo?.buy || 0;
-                sellPrice = dexInfo?.price || 0;
-            } else {
-                buyPrice = dexInfo?.rawRate || 0;
-                sellPrice = cexInfo?.sell || 0;
-            }
-
-            // ⏳ Jika belum ada harga yang valid, tampil loading
-            if (!buyPrice || !sellPrice) {
-                return `<td class="dex-price-cell text-center text-muted bg-light-subtle">
-                    <div class="text-muted small">⚠️</div>
-                </td>`;
-            }else {
-                if (!dexInfo || dexInfo.error) {
-            const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
-            return `<td class="dex-price-cell text-danger text-center bg-danger-subtle">
-                <div class="price-info">&nbsp;</div>
-                <div class="fee-info" title="${dexName}: ${errorMsg}">❌</div>
-                <div class="pnl-info">&nbsp;</div>
-            </td>`;
-        }
-            const qty = modal / buyPrice;
-            const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
-            const isPNLPositive = pnl > fee;
-            const tdClass = isPNLPositive ? 'bg-success-subtle' : '';
-            const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
-
-            const cexLinks = this.GeturlExchanger(token.selectedCexs[0]?.toUpperCase() || '', token.symbol, token.pairSymbol);
-            const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
-            const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
-            const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
-
-            const tooltip = `
-                ${direction.replace(/_/g, ' ').toUpperCase()} ${dexName}
-                Modal: $${modal}
-                Buy @: $${buyPrice}
-                Sell @: $${sellPrice}
-                Fee: $${fee}
-                PNL: $${pnl.toFixed(4)}
-            `.trim();
-
-            return `<td class="dex-price-cell align-middle ${tdClass}" title="${tooltip}">
-                <div class="price-info">
-                    <span class="text-success">
-                        <a href="${buyLink}" target="_blank">$${PriceUtils.formatPrice(buyPrice)}</a>
-                    </span><br>
-                    <span class="text-danger">
-                        <a href="${sellLink}" target="_blank">$${PriceUtils.formatPrice(sellPrice)}</a>
-                    </span>
-                </div>
-                <div class="fee-info">Swap: ${PriceUtils.formatFee(fee)}</div>
-                <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
-            </td>`;
-            }        
-    }
-
     createDEXCell(token, cexInfo, dexInfo, direction, dexName) {
         const linkSwap = direction === 'cex_to_dex'
             ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
@@ -1292,18 +1216,20 @@ class TokenPriceMonitor {
             PNL: $${pnl.toFixed(4)}
         `.trim();
 
-        // ✅ Tambahkan ke buffer sinyal
-        if (isPNLPositive) {
+       if (isPNLPositive) {
             this.pnlSignals = this.pnlSignals || {};
             const dexKey = dexName.toUpperCase();
             this.pnlSignals[dexKey] = this.pnlSignals[dexKey] || [];
 
-            const directionLabel = `${direction === 'cex_to_dex' ? token.symbol : token.pairSymbol} → ${direction === 'cex_to_dex' ? token.pairSymbol : token.symbol}`;
-            const message = `${token.symbol}/${token.pairSymbol} (${directionLabel}) = PNL: $${pnl.toFixed(2)}`;
+            const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+            const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+            const fromSide = direction === 'cex_to_dex' ? (token.selectedCexs[0] || 'CEX') : dexName;
+            const toSide = direction === 'cex_to_dex' ? dexName : (token.selectedCexs[0] || 'CEX');
+
+            const message = `${fromSide.toUpperCase()} → ${toSide.toUpperCase()} : $${modal} (${fromSymbol} → ${toSymbol}) = PNL: $${pnl.toFixed(2)}`;
 
             this.pnlSignals[dexKey].push(message);
 
-            // Tambah ke DOM langsung jika list sudah ada
             const listEl = document.getElementById(`pnl-list-${dexKey}`);
             if (listEl) {
                 const li = document.createElement('li');
@@ -1311,7 +1237,6 @@ class TokenPriceMonitor {
                 listEl.appendChild(li);
             }
         }
-
 
         return `<td class="dex-price-cell align-middle ${tdClass}" title="${tooltip}">
             <div class="price-info">
@@ -1441,7 +1366,7 @@ class TokenPriceMonitor {
         let baseUrlWithdraw = null;
         let baseUrlDeposit = null;
 
-        if (cex === "GATE") {
+        if (cex === "GATEIO") {
             if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.gate.com/trade/${token}_USDT`;
             if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.gate.com/trade/${pair}_USDT`;
             baseUrlWithdraw = `https://www.gate.com/myaccount/withdraw/${token}`;
