@@ -111,7 +111,6 @@ class TokenPriceMonitor {
         this.fetchGasTokenPrices();
         this.SearchCoin(); 
         this.generateEmptyTable();
-        this.initPNLSignalStructure(); 
     }
 
     // Bind event handlers
@@ -119,6 +118,7 @@ class TokenPriceMonitor {
 
         $('#CheckPrice').on('click', async () => {
             this.generateEmptyTable();
+            this.initPNLSignalStructure(); 
             $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
             await this.refreshPrices();
             $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
