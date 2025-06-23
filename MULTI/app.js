@@ -249,7 +249,7 @@ class TokenPriceMonitor {
                 const dexCEXtoDEX = dexOrder.map(dex => {
                     const isDexSelected = token.selectedDexs?.includes(dex);
                     const icon = isDexSelected ? '🔒' : '---';
-                    const bgClass = isDexSelected ? '' : 'bg-secondary bg-gradient';
+                    const bgClass = isDexSelected ? '' : 'bg-secondary ';
                     return `<td class="dex-price-cell cex_to_dex-${dex} text-muted text-center ${bgClass}">${icon}</td>`;
                 }).join('');
 
@@ -257,7 +257,7 @@ class TokenPriceMonitor {
                 const dexDEXtoCEX = dexOrder.map(dex => {
                     const isDexSelected = token.selectedDexs?.includes(dex);
                     const icon = isDexSelected ? '🔒' : '---';
-                    const bgClass = isDexSelected ? '' : 'bg-secondary bg-gradient';
+                    const bgClass = isDexSelected ? '' : 'bg-secondary ';
                     return `<td class="dex-price-cell dex_to_cex-${dex} text-muted text-center ${bgClass}">${icon}</td>`;
                 }).join('');
 
@@ -894,7 +894,9 @@ class TokenPriceMonitor {
                 const html = this.createDEXCell(token, cexData, tokenPriceData.dex_data[dexName][direction], direction, dexName);
                 const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '')}`;
                 const selector = direction === 'cex_to_dex' ? `.cex_to_dex-${dexName}` : `.dex_to_cex-${dexName}`;
-                $(`#${rowId} ${selector}`).html($(html).html());
+             //   $(`#${rowId} ${selector}`).html($(html).html());
+                $(`#${rowId} ${selector}`).replaceWith(html);
+
             };
 
             try {
@@ -1169,7 +1171,7 @@ class TokenPriceMonitor {
             : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
 
         if (!(token.selectedDexs || []).includes(dexName)) {
-            return `<td class="dex-price-cell text-muted text-center bg-secondary-subtle">
+            return `<td class="dex-price-cell text-muted text-center">
                 <div class="price-info">&nbsp;</div>
                 <div class="fee-info">---</div>
                 <div class="pnl-info">&nbsp;</div>
@@ -1202,7 +1204,7 @@ class TokenPriceMonitor {
 
         // ⏳ Jika belum ada harga valid
         if (!buyPrice || !sellPrice) {
-            return `<td class="dex-price-cell text-center text-muted bg-light-subtle">
+            return `<td class="dex-price-cell text-center text-muted">
                 <div class="text-muted small">⚠️</div>
             </td>`;
         }
@@ -1211,9 +1213,9 @@ class TokenPriceMonitor {
         const qty = modal / buyPrice;
         const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
         const isPNLPositive = pnl > fee;
-        const tdClass = isPNLPositive ? 'bg-success' : '';
+        const tdStyle = isPNLPositive ? 'background-color:rgb(183, 235, 212) !important;' : '';
         const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
-
+        console.log("sssss",tdStyle);
         // ✅ CEX & DEX Links
         const cexLinks = this.GeturlExchanger(token.selectedCexs[0]?.toUpperCase() || '', token.symbol, token.pairSymbol);
         const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
@@ -1267,7 +1269,7 @@ class TokenPriceMonitor {
         }
 
 
-        return `<td class="dex-price-cell align-middle ${tdClass}" title="${tooltip}">
+        return `<td class="dex-price-cell align-middle" style="${tdStyle}" title="${tooltip}">
             <div class="price-info">
                 <span class="text-success">
                     <a href="${buyLink}" target="_blank">${PriceUtils.formatPrice(buyPrice)}</a>
@@ -1441,13 +1443,13 @@ class TokenPriceMonitor {
         const stokTokenLink = this.generateStokLinkCEX(token.contractAddress, token.chain, cexUpper);
         const stokPairLink = this.generateStokLinkCEX(token.pairContractAddress, token.chain, cexUpper);
 
-        const tokenLink = `<a href="${explorerUrl}/token/${token.contractAddress}" target="_blank">${tokenSymbol}</a> : <a href="${stokTokenLink}" target="_blank">#STOK</a>`;
-        const pairLink = `<a href="${explorerUrl}/token/${token.pairContractAddress}" target="_blank">${pairSymbol}</a> : <a href="${stokPairLink}" target="_blank">#STOK</a>`;
+        const tokenLink = `<a href="${explorerUrl}/token/${token.contractAddress}" target="_blank">${tokenSymbol}</a>: <a href="${stokTokenLink}" target="_blank">#1</a>`;
+        const pairLink = `<a href="${explorerUrl}/token/${token.pairContractAddress}" target="_blank">${pairSymbol}</a>: <a href="${stokPairLink}" target="_blank">#2</a>`;
 
-        const linkOKDEX = `<a href="https://www.okx.com/web3/dex-swap?inputChain=${chainId}&inputCurrency=${token.contractAddress}&outputChain=501&outputCurrency=${token.pairContractAddress}" target="_blank" class="uk-text-secondary">#OK</a>`;
-        const linkUNIDEX = `<a href="https://app.unidex.exchange/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="uk-text-warning">#UN</a>`;
-        const linkDEFIL = `<a href="https://swap.defillama.com/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="uk-text-primary">#DF</a>`;
-        const link1INCH = `<a href="https://app.1inch.io/advanced/swap?network=${chainId}&src=${token.contractAddress}&dst=${token.pairContractAddress}" target="_blank" class="uk-text-danger">#1NC</a>`;
+        const linkOKDEX = `<a href="https://www.okx.com/web3/dex-swap?inputChain=${chainId}&inputCurrency=${token.contractAddress}&outputChain=501&outputCurrency=${token.pairContractAddress}" target="_blank" class="text-dark">#OKX</a>`;
+        const linkUNIDEX = `<a href="https://app.unidex.exchange/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="text-info">#UNX</a>`;
+        const linkDEFIL = `<a href="https://swap.defillama.com/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="text-success">#DFL</a>`;
+        const link1INCH = `<a href="https://app.1inch.io/advanced/swap?network=${chainId}&src=${token.contractAddress}&dst=${token.pairContractAddress}" target="_blank" class="text-danger">#1NC</a>`;
 
         return `
             <div class="text-center">
@@ -1463,10 +1465,9 @@ class TokenPriceMonitor {
                     ${pairSC}
                     <a href="${url.depositUrl}" target="_blank" class="text-success">[DP]</a>
                 </div>
-                <div>${tokenLink}</div>
-                <div>${pairLink}</div>
+                <div>${tokenLink} | ${pairLink}</div>
                 <div class="mt-1">
-                    ${linkUNIDEX} ${linkOKDEX} ${linkDEFIL} ${link1INCH}
+                   ${linkOKDEX} ${linkUNIDEX}  ${linkDEFIL} ${link1INCH}
                 </div>
             </div>
         `;
