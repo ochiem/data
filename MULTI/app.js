@@ -1226,7 +1226,8 @@ class TokenPriceMonitor {
             const fromSide = direction === 'cex_to_dex' ? (token.selectedCexs[0] || 'CEX') : dexName;
             const toSide = direction === 'cex_to_dex' ? dexName : (token.selectedCexs[0] || 'CEX');
 
-            const message = `${fromSide.toUpperCase()} → ${toSide.toUpperCase()} : $${modal} (${fromSymbol} → ${toSymbol}) = PNL: $${pnl.toFixed(2)}`;
+            const chainLabel = token.chain?.toUpperCase() || 'CHAIN';
+            const message = `${fromSide.toUpperCase()} → ${toSide.toUpperCase()} [${chainLabel}] : $${modal} (${fromSymbol} → ${toSymbol}) = PNL: $${pnl.toFixed(2)}`;
 
             this.pnlSignals[dexKey].push(message);
 
