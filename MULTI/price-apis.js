@@ -4,6 +4,15 @@ const GasPriceUSD = {
     Ethereum: 0,
     Polygon: 0
 };
+const settings = JSON.parse(localStorage.getItem('SETT_MULTI') || '{}');
+const timeoutApi = settings.timeoutApi || 5000;
+
+function withTimeout(promise, timeout = 5000) {
+    return Promise.race([
+        promise,
+        new Promise((_, reject) => setTimeout(() => reject(new Error("Request timeout")), timeout))
+    ]);
+}
 
 function calculateSignature(exchange, apiSecret, dataToSign, hashMethod = "HmacSHA256") {
     if (!apiSecret || !dataToSign) {
@@ -29,12 +38,12 @@ const CEXAPIs = {
             };
         }
 
-        const baseResp = await fetch(`https://api.binance.com/api/v3/depth?symbol=${pair.baseSymbol}USDT&limit=5`);
+        const baseResp = await withTimeout(fetch(`https://api.binance.com/api/v3/depth?symbol=${pair.baseSymbol}USDT&limit=5`), timeoutApi);
         const baseData = await baseResp.json();
 
         let quotePriceUSDT = 1;
         if (pair.quoteSymbol !== 'USDT') {
-            const quoteResp = await fetch(`https://api.binance.com/api/v3/depth?symbol=${pair.quoteSymbol}USDT&limit=5`);
+            const quoteResp = await withTimeout(fetch(`https://api.binance.com/api/v3/depth?symbol=${pair.quoteSymbol}USDT&limit=5`), timeoutApi);
             const quoteData = await quoteResp.json();
             quotePriceUSDT = parseFloat(quoteData.asks[0][0]);
         }
@@ -56,12 +65,12 @@ const CEXAPIs = {
             };
         }
 
-        const baseResp = await fetch(`https://api.mexc.com/api/v3/depth?symbol=${pair.baseSymbol}USDT&limit=5`);
+        const baseResp = await withTimeout(fetch(`https://api.mexc.com/api/v3/depth?symbol=${pair.baseSymbol}USDT&limit=5`), timeoutApi);
         const baseData = await baseResp.json();
 
         let quotePriceUSDT = 1;
         if (pair.quoteSymbol !== 'USDT') {
-            const quoteResp = await fetch(`https://api.mexc.com/api/v3/depth?symbol=${pair.quoteSymbol}USDT&limit=5`);
+            const quoteResp = await withTimeout(fetch(`https://api.mexc.com/api/v3/depth?symbol=${pair.quoteSymbol}USDT&limit=5`), timeoutApi);
             const quoteData = await quoteResp.json();
             quotePriceUSDT = parseFloat(quoteData.asks[0][0]);
         }
@@ -83,12 +92,12 @@ const CEXAPIs = {
             };
         }
 
-        const baseResp = await fetch(`https://api.gateio.ws/api/v4/spot/order_book?currency_pair=${pair.baseSymbol}_USDT&limit=5`);
+        const baseResp = await withTimeout(fetch(`https://api.gateio.ws/api/v4/spot/order_book?currency_pair=${pair.baseSymbol}_USDT&limit=5`), timeoutApi);
         const baseData = await baseResp.json();
 
         let quotePriceUSDT = 1;
         if (pair.quoteSymbol !== 'USDT') {
-            const quoteResp = await fetch(`https://api.gateio.ws/api/v4/spot/order_book?currency_pair=${pair.quoteSymbol}_USDT&limit=5`);
+            const quoteResp = await withTimeout(fetch(`https://api.gateio.ws/api/v4/spot/order_book?currency_pair=${pair.quoteSymbol}_USDT&limit=5`), timeoutApi);
             const quoteData = await quoteResp.json();
             quotePriceUSDT = parseFloat(quoteData.asks[0][0]);
         }
@@ -114,7 +123,7 @@ const DEXAPIs = {
             $.ajax({
                 url: url,
                 method: 'GET',
-                //timeout: 15000,
+                timeout: timeoutApi,
                 success: function(data) {
                     // console.log("kyber",data);
                     // console.log("url",url);
@@ -171,16 +180,9 @@ const DEXAPIs = {
                     simulate: false,
                     referralCode: 0
                 }),
-                //timeout: 15000,
+                timeout: timeoutApi,
                 success: function(data) {
                     if (data && data.outAmounts && data.outAmounts.length > 0) {
-                        // resolve({
-                        //     exchange: 'ODOS',
-                        //     amountIn: amountIn,
-                        //     outAmounts: data.outAmounts,
-                        //     fee: parseFloat(data.gasEstimateValue),
-                        //     timestamp: Date.now()
-                        // });
                         resolve({
                             exchange: 'ODOS',
                             amountIn: amountIn,
@@ -209,6 +211,7 @@ const DEXAPIs = {
             $.ajax({
                 url: `https://matcha.xyz/api/swap/price?chainId=${chainId}&buyToken=${buyToken}&sellToken=${sellToken}&sellAmount=${sellAmount}`,
                 method: 'GET',
+                timeout: timeoutApi,
                 success: function (data) {
                     let feeETH = 0;
 
@@ -283,7 +286,7 @@ const DEXAPIs = {
             $.ajax({
                 url: url,
                 method: 'GET',
-                //timeout: 15000,
+                timeout: timeoutApi,
                 success: function(data) {
                     if (data && data.amountOut) {
                         resolve({
@@ -351,6 +354,7 @@ const DEXAPIs = {
                     'OK-ACCESS-TIMESTAMP': timestamp,
                     'OK-ACCESS-PASSPHRASE': selectedKey.PassphraseOKX
                 },
+                timeout: timeoutApi,
                 success: function (data) {
                     const result = data?.data?.[0];
                     if (!result) {
@@ -381,6 +385,7 @@ const DEXAPIs = {
             });
         });
     },
+
     getParaSwapPrice: function (fromToken, toToken, amountIn, fromDecimals, toDecimals, networkId) {
         const apiUrl = `https://api.paraswap.io/prices?` +  `srcToken=${fromToken}` + `&srcDecimals=${fromDecimals}` + `&destToken=${toToken}` + `&destDecimals=${toDecimals}` +  `&side=SELL` + `&network=${networkId}` + `&amount=${amountIn}` + `&version=6.2`;
 
@@ -388,6 +393,7 @@ const DEXAPIs = {
             $.ajax({
                 url: apiUrl,
                 method: 'GET',
+                timeout: timeoutApi,
                 success: function (response) {
                     if (!response || !response.priceRoute) {
                         return reject({ exchange: 'ParaSwap', error: 'Invalid response format' });
@@ -461,9 +467,12 @@ const PriceUtils = {
     // Get chain ID from chain name
     getChainId: function(chainName) {
         const chainMap = {
-            'BSC': '56',
-            'Ethereum': '1',
-            'Polygon': '137'
+            "BSC": 56,
+            "Ethereum": 1,
+            "Polygon": 137,
+            "Arbitrum": 42161,
+            "Base": 8453,
+            "Aolana": 501
         };
         return chainMap[chainName] || '1';
     },
