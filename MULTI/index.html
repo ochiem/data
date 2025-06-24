@@ -296,6 +296,14 @@
         .pnl-highlight {
             background-color: #b7ebd4 !important;
         }
+        .highlight-cell {
+            outline: 3px solid orange;
+            animation: flashCell 1s ease-in-out;
+        }
+        @keyframes flashCell {
+            0% { background-color: #fffae6; }
+            100% { background-color: transparent; }
+        }
 
 </style>
 
@@ -372,7 +380,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#apiSettings">
-                    <i class="bi bi-gear"></i> API Settings
+                    <i class="bi bi-gear"></i> Settings Aplikasi
                 </a>
             </li>
 
@@ -498,37 +506,38 @@
                     <div class="col-md-6 offset-md-3">
                         <div class="card mt-4">
                             <div class="card-header bg-primary text-white">
-                                <i class="bi bi-gear me-2"></i> API Settings
+                                <i class="bi bi-gear me-2"></i> APP Settings
                             </div>
                             <div class="card-body">
                                 <form id="settingsForm">
                                     <div class="mb-3">
+                                        <label class="form-label">User Name</label>
+                                        <input type="text" class="form-control" id="UserName" required>
+                                        <small class="form-text text-muted">UserName</small>
+                                    </div>
+
+                                    <div class="mb-3">
                                         <label class="form-label">Jumlah Anggota</label>
-                                        <input type="number" class="form-control" id="tokensPerBatch" min="1" max="5">
+                                        <input type="number" class="form-control" id="tokensPerBatch" min="1" max="5" required>
                                         <small class="form-text text-muted">Number of Grups</small>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Jeda Antar Anggota (ms)</label>
-                                        <input type="number" class="form-control" id="delayBetweenMember" min="300" step="800">
-                                        <small class="form-text text-muted">Delay between Member</small>
-                                    </div>
-                                    <div class="mb-3">
                                         <label class="form-label">Jeda Antar Grup (ms)</label>
-                                        <input type="number" class="form-control" id="delayBetweenGrup" min="500" max="5000">
+                                        <input type="number" class="form-control" id="delayBetweenGrup" min="500" max="5000" required>
                                         <small class="form-text text-muted">Delay between Grups</small>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Waktu Tunggu (ms)</label>
-                                        <input type="number" class="form-control" id="TimeoutCount" min="3000" max="5000">
+                                        <input type="number" class="form-control" id="TimeoutCount" min="3000" max="5000" required>
                                         <small class="form-text text-muted">Time Out </small>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Retry Delay (ms)</label>
-                                        <input type="number" class="form-control" id="retryDelay" min="1000" step="1000">
-                                        <small class="form-text text-muted">Delay before retrying failed API calls</small>
+                                        <label class="form-label">WALLET ADDRESS</label>
+                                        <input type="text" class="form-control" id="WalletAddress" required>
+                                        <small class="form-text text-muted">Wallet Address</small>
                                     </div>
                                     <div class="text-end">
-                                        <button type="button" class="btn btn-primary" id="saveSettingsBtn">
+                                        <button type="submit" class="btn btn-primary" id="saveSettingsBtn">
                                             <i class="bi bi-check-lg"></i> Save Settings
                                         </button>
                                     </div>
@@ -700,9 +709,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
     <!-- Price APIs -->
-    <script src="MULTI/price-apis.js"></script>
+    <script src="price-apis.js"></script>
     <!-- Custom JS -->
-    <script src="MULTI/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
 

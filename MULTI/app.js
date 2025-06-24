@@ -115,6 +115,7 @@ class TokenPriceMonitor {
         $('#CheckPrice').on('click', async () => {
             this.generateEmptyTable();
             this.initPNLSignalStructure(); 
+            this.sendStatusTELE("TEST", 'ONLINE');
             $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
             await this.CheckPricess();
             $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
@@ -249,7 +250,7 @@ class TokenPriceMonitor {
 
         for (const token of activeTokens) {
             for (const cex of token.selectedCexs) {
-                const rowId = `token-row-${token.id}-${cex.replace(/\W+/g, '')}`;
+                const rowId = `token-row-${token.id}-${cex.replace(/\W+/g, '').toLowerCase()}`;
 
                 // Kolom CEX → DEX
                 const dexCEXtoDEX = dexOrder.map(dex => {
@@ -371,10 +372,10 @@ class TokenPriceMonitor {
         const settings = localStorage.getItem('SETT_MULTI');
         return settings ? JSON.parse(settings) : {
             tokensPerBatch: 3, // jumlah anggota
-            delayBetweenMember: 300, // jeda antar member
+            UserName: 'XXX', // jeda antar member
             delayBetweenGrup: 1300, // jeda batch
             TimeoutCount: 3000, // timeout waktu tunggu
-            retryDelay: 5000
+            WalletAddress: '-'
         };
     }
 
@@ -583,10 +584,10 @@ class TokenPriceMonitor {
 
     loadSettingsForm() {
         $('#tokensPerBatch').val(this.settings.tokensPerBatch);
-        $('#delayBetweenMember').val(this.settings.delayBetweenMember);
+        $('#UserName').val(this.settings.UserName);
         $('#delayBetweenGrup').val(this.settings.delayBetweenGrup);
         $('#TimeoutCount').val(this.settings.TimeoutCount);
-        $('#retryDelay').val(this.settings.retryDelay);
+        $('#WalletAddress').val(this.settings.WalletAddress);
     }
 
     updateStats() {
@@ -667,6 +668,7 @@ class TokenPriceMonitor {
     }
 
     validateTokenForm(formData) {
+        // 🔸 Validasi token
         if (!formData.symbol || !formData.pairSymbol) {
             this.showAlert('Please enter token and pair symbols', 'warning');
             return false;
@@ -682,13 +684,85 @@ class TokenPriceMonitor {
             return false;
         }
 
-        if (formData.selectedCexs.length === 0) {
+        if (!formData.selectedCexs || formData.selectedCexs.length === 0) {
             this.showAlert('Please select at least one CEX', 'warning');
             return false;
         }
 
-        if (formData.selectedDexs.length === 0) {
+        if (!formData.selectedDexs || formData.selectedDexs.length === 0) {
             this.showAlert('Please select at least one DEX', 'warning');
+            return false;
+        }
+
+        // 🔸 Ambil nilai dari form #settingsForm
+        const userName = $('#UserName').val()?.trim();
+        const tokensPerBatch = parseInt($('#tokensPerBatch').val());
+        const delayBetweenGrup = parseInt($('#delayBetweenGrup').val());
+        const timeoutCount = parseInt($('#TimeoutCount').val());
+        const walletAddress = $('#retryDelay').val()?.trim(); // catatan: ID inputnya retryDelay
+
+        // 🔸 Validasi form settings
+        if (!userName || userName === 'XXX') {
+            this.showAlert('Please enter a valid User Name in Settings', 'danger');
+            return false;
+        }
+
+        if (!walletAddress || walletAddress === '-') {
+            this.showAlert('Please enter a valid Wallet Address in Settings', 'danger');
+            return false;
+        }
+
+        if (!tokensPerBatch || tokensPerBatch < 1 || tokensPerBatch > 5) {
+            this.showAlert('Jumlah Anggota (Tokens Per Batch) harus antara 1-5', 'danger');
+            return false;
+        }
+
+        if (!delayBetweenGrup || delayBetweenGrup < 500 || delayBetweenGrup > 5000) {
+            this.showAlert('Delay antar grup harus antara 500–5000 ms', 'danger');
+            return false;
+        }
+
+        if (!timeoutCount || timeoutCount < 3000 || timeoutCount > 5000) {
+            this.showAlert('Timeout harus antara 3000–5000 ms', 'danger');
+            return false;
+        }
+
+        // ✅ Semua valid
+        return true;
+    }
+
+    svalidateTokenForm(formData) {
+        // Validasi form token
+        if (!formData.symbol || !formData.pairSymbol) {
+            this.showAlert('Please enter token and pair symbols', 'warning');
+            return false;
+        }
+
+        if (!formData.contractAddress || !formData.pairContractAddress) {
+            this.showAlert('Please enter contract addresses', 'warning');
+            return false;
+        }
+
+        if (!formData.chain) {
+            this.showAlert('Please select a chain', 'warning');
+            return false;
+        }
+
+        if (!formData.selectedCexs || formData.selectedCexs.length === 0) {
+            this.showAlert('Please select at least one CEX', 'warning');
+            return false;
+        }
+
+        if (!formData.selectedDexs || formData.selectedDexs.length === 0) {
+            this.showAlert('Please select at least one DEX', 'warning');
+            return false;
+        }
+
+        if (
+            !settingsForm.UserName || settingsForm.UserName === 'XXX' || settingsForm.UserName.trim() === '' ||
+            !settingsForm.WalletAddress || settingsForm.WalletAddress === '-' || settingsForm.WalletAddress.trim() === ''
+        ) {
+            this.showAlert('Silakan lengkapi pengaturan aplikasi (UserName & WalletAddress)', 'danger');
             return false;
         }
 
@@ -728,10 +802,10 @@ class TokenPriceMonitor {
     saveSettings() {
         this.settings = {
             tokensPerBatch: parseInt($('#tokensPerBatch').val()),
-            delayBetweenMember: parseInt($('#delayBetweenMember').val()),
+            UserName: $('#UserName').val(),
             delayBetweenGrup: parseInt($('#delayBetweenGrup').val()),
             TimeoutCount: parseInt($('#TimeoutCount').val()),
-            retryDelay: parseInt($('#retryDelay').val())
+            WalletAddress: $('#WalletAddress').val()
         };
 
         this.saveSettingsToStorage();
@@ -745,109 +819,8 @@ class TokenPriceMonitor {
         }
     }
 
-    async CheckPricessBARU() {
-        if (this.isRefreshing) return;
-
-        const activeTokens = this.tokens
-        .slice() // copy array agar tidak mutasi this.tokens
-        .sort((a, b) => {
-            // 1. Urutkan isActive (true duluan)
-            if (a.isActive !== b.isActive) return a.isActive ? -1 : 1;
-            // 2. Jika sama-sama aktif, urutkan berdasarkan symbol A-Z
-            return a.symbol.localeCompare(b.symbol);
-        })
-        .filter(t => t.isActive); // Ambil yang aktif saja
-
-        if (activeTokens.length === 0) {
-            this.showAlert('No active tokens to monitor', 'info');
-            $('#priceTableBody').html(`<tr><td colspan="13" class="text-center text-muted py-5">
-                <i class="bi bi-info-circle me-2"></i> Tidak ada DATA KOIN, Silakan ke Management TOKEN
-            </td></tr>`);
-            return;
-        }
-
-        // 🔧 Ambil setting dari localStorage
-        const settings = this.loadSettings();
-        const tokensPerBatch = settings.tokensPerBatch || 3;
-        const delayBetweenGrup = settings.delayBetweenGrup || 1300;
-
-        const totalTokens = activeTokens.length;
-        let currentIndex = 0;
-
-        const chunkArray = (arr, size) => {
-            const result = [];
-            for (let i = 0; i < arr.length; i += size) {
-                result.push(arr.slice(i, i + size));
-            }
-            return result;
-        };
-
-        const tokenBatches = chunkArray(activeTokens, tokensPerBatch); // batch isi X token
-
-        this.isRefreshing = true;
-        $('#manualRefreshBtn').addClass('loading');
-
-        try {
-            for (const batch of tokenBatches) {
-                await Promise.allSettled(batch.map(async token => {
-                    currentIndex++;
-                    const percent = Math.round((currentIndex / totalTokens) * 100);
-                    $('#scanProgressText').text(`Progress: ${currentIndex} dari ${totalTokens}`);
-                    $('#scanProgressPercent').text(`${percent}%`);
-                    $('#scanProgressBar').css('width', `${percent}%`);
-
-                    const priceData = {
-                        token,
-                        analisis_data: {
-                            cex_to_dex: {},
-                            dex_to_cex: {}
-                        }
-                    };
-
-                    for (const cexName of token.selectedCexs) {
-                        // CEX → DEX
-                        await this.fetchCEXPrices(token, priceData, cexName, 'cex_to_dex');
-                        this.generateOrderBook(token, priceData, cexName, 'cex_to_dex');
-
-                        // DEX → CEX
-                        await this.fetchCEXPrices(token, priceData, cexName, 'dex_to_cex');
-                        this.generateOrderBook(token, priceData, cexName, 'dex_to_cex');
-
-                        // Loop per DEX untuk arah CEX → DEX
-                        for (const dexName of token.selectedDexs) {
-                            await this.fetchDEXPrices(token, priceData, dexName, cexName, 'cex_to_dex');
-                        }
-                        console.log(`cex_to_dex`, priceData);
-
-                        // Loop per DEX untuk arah DEX → CEX
-                        for (const dexName of token.selectedDexs) {
-                            await this.fetchDEXPrices(token, priceData, dexName, cexName, 'dex_to_cex');
-                        }
-
-                    
-                        console.log(`dex_to_cex`, priceData);
-                    }
-                }));
-
-                // 🔁 Delay antar batch
-                if (delayBetweenGrup > 0) {
-                    await new Promise(resolve => setTimeout(resolve, delayBetweenGrup));
-                }
-            }
-
-            this.showAlert('Scanner selesai.', 'success');
-        } catch (err) {
-            console.error('❌ Error saat refreshPrices:', err);
-            this.showAlert('Error saat refresh: ' + err.message, 'danger');
-        } finally {
-            this.isRefreshing = false;
-            $('#manualRefreshBtn').removeClass('loading');
-        }
-    }
-
     async CheckPricess() {
         if (this.isRefreshing) return;
-
         const activeTokens = this.tokens.filter(t => t.isActive)
             .sort((a, b) => a.symbol.localeCompare(b.symbol)); // ✅ Urutkan A-Z
 
@@ -861,8 +834,18 @@ class TokenPriceMonitor {
 
         // 🔧 Ambil setting dari localStorage
         const settings = this.loadSettings();
+
+        if (
+            !settings ||
+            settings.WalletAddress === '-' ||
+            settings.UserName === 'XXX'
+        ) {
+            this.showAlert('SILAKAN SETTING APLIKASI', 'danger');
+            $('#manualRefreshBtn').prop('disabled', true); // disable tombol
+            return;
+        }
         const tokensPerBatch = settings.tokensPerBatch || 3;
-        const delayBetweenMember = settings.delayBetweenMember || 1000;
+        const UserName = settings.UserName || 1000;
         const delayBetweenGrup = settings.delayBetweenGrup || 1300;
 
         const totalTokens = activeTokens.length;
@@ -884,7 +867,7 @@ class TokenPriceMonitor {
         // 🕒 Mulai timer
         const startTime = new Date();
         const startStr = startTime.toLocaleTimeString(); // HH:MM:SS
-        $('#scanTimeInfo').html(`&nbsp;<span class="text-secondary">&nbsp;🕒 Mulai: ${startStr}</span>&nbsp;&nbsp;`);
+        $('#scanTimeInfo').html(`<span class="text-secondary">&nbsp;🕒 Mulai: ${startStr}</span>&nbsp;&nbsp;`);
 
         try {
             for (const batch of tokenBatches) {
@@ -931,7 +914,7 @@ class TokenPriceMonitor {
             const minutes = Math.floor(durationSec / 60).toString().padStart(2, '0');
             const seconds = (durationSec % 60).toString().padStart(2, '0');
 
-            $('#scanTimeInfo').append(`<span class="text-success">&nbsp;&nbsp;✅ Durasi: ${minutes}:${seconds}</span>`);
+            $('#scanTimeInfo').append(`<span class="text-success">&nbsp;&nbsp;✅ Durasi: ${minutes}:${seconds}</span>&nbsp;`);
             this.showAlert('Scanner selesai.', 'success');
 
         } catch (err) {
@@ -1406,6 +1389,129 @@ class TokenPriceMonitor {
         let cellId = direction === 'cex_to_dex'
             ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
             : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
+        const cleanCellId = cellId.toLowerCase().replace(/\W+/g, '');
+
+        const linkSwap = direction === 'cex_to_dex'
+            ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
+            : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
+
+        // Jika DEX tidak dipilih
+        if (!(token.selectedDexs || []).includes(dexName)) {
+            return `<td id="${cleanCellId}" class="dex-price-cell text-muted text-center">
+                <div class="price-info">&nbsp;</div>
+                <div class="fee-info">---</div>
+                <div class="pnl-info">&nbsp;</div>
+            </td>`;
+        }
+
+        // Jika terjadi error
+        if (!dexInfo || dexInfo.error) {
+            const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
+            return `<td id="${cleanCellId}" class="dex-price-cell text-danger text-center bg-danger-subtle">
+                <div class="price-info">&nbsp;</div>
+                <div class="fee-info" title="${dexName}: ${errorMsg}">❌</div>
+                <div class="pnl-info">&nbsp;</div>
+            </td>`;
+        }
+
+        const fee = dexInfo.fee || 0;
+        const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
+
+        const base = token.symbol.toUpperCase() === 'USDT' ? token.pairSymbol.toUpperCase() : token.symbol.toUpperCase();
+        const cexKey = `${base}ToUSDT`;
+        const cexData = cexInfo?.[cexKey] || {};
+
+        let buyPrice = 0, sellPrice = 0;
+        if (direction === 'cex_to_dex') {
+            buyPrice = cexData.buy || 0;
+            sellPrice = dexInfo?.price || 0;
+        } else {
+            buyPrice = dexInfo?.rawRate || 0;
+            sellPrice = cexData.sell || 0;
+        }
+
+        if (!buyPrice || !sellPrice) {
+            return `<td id="${cleanCellId}" class="dex-price-cell text-center text-muted">
+                <div class="text-muted small">⚠️</div>
+            </td>`;
+        }
+
+        const qty = modal / buyPrice;
+        const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
+        const isPNLPositive = pnl > fee;
+        const tdStyle = isPNLPositive ? 'background-color:rgb(183, 235, 212) !important;' : '';
+        const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
+
+        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), token.symbol, token.pairSymbol);
+        const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
+        const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
+        const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
+
+        const tooltip = `
+            ${direction.replace(/_/g, ' ').toUpperCase()} via ${dexName}
+            Modal: $${modal}
+            Buy @: $${buyPrice}
+            Sell @: $${sellPrice}
+            Fee: $${fee}
+            PNL: $${pnl.toFixed(4)}
+        `.trim();
+
+        // 💡 SIMPAN SINYAL
+        if (isPNLPositive) {
+            this.pnlSignals = this.pnlSignals || {};
+            const dexKey = dexName.toUpperCase();
+            this.pnlSignals[dexKey] = this.pnlSignals[dexKey] || [];
+
+            const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+            const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+            const fromSide = direction === 'cex_to_dex' ? cexName : dexName;
+            const toSide = direction === 'cex_to_dex' ? dexName : cexName;
+            const chainLabel = token.chain?.toUpperCase() || 'CHAIN';
+
+            const modalText = `$${modal}`;
+            const pnlText = `$${pnl.toFixed(2)}`;
+
+            const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(fromSide, 'cex'));
+            const dexColor = this.getTextColorClassFromBadge(this.getBadgeColor(toSide, 'dex'));
+            const chainColor = this.getTextColorClassFromBadge(this.getBadgeColor(token.chain, 'chain'));
+            const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '').toLowerCase()}`;
+            const signalText = `<a href="#${rowId}" class="text-decoration-none text-dark">
+
+                <span class="${cexColor} fw-bold">${fromSide.toUpperCase()}</span> →
+                <span class="${dexColor} fw-bold">${toSide.toUpperCase()}</span> 
+                <span class="${chainColor} fw-bold">[${chainLabel}]</span> : 
+                <span class="text-secondary fw-bold">${modalText} (${fromSymbol} → ${toSymbol}) = </span>
+                <span class="text-success fw-bold"> PNL: ${pnlText}</span>
+            </a>`;
+
+            this.pnlSignals[dexKey].push(signalText);
+
+            const listEl = document.getElementById(`pnl-list-${dexKey}`);
+            if (listEl) {
+                listEl.innerHTML = `${this.pnlSignals[dexKey].join(' | ')}`;
+            }
+        }
+
+        return `<td id="${cleanCellId}" class="dex-price-cell align-middle" style="${tdStyle}" title="${tooltip}">
+            <div class="price-info">
+                <span class="text-success">
+                    <a href="${buyLink}" target="_blank">${PriceUtils.formatPrice(buyPrice)}</a>
+                </span><br>
+                <span class="text-danger">
+                    <a href="${sellLink}" target="_blank">${PriceUtils.formatPrice(sellPrice)}</a>
+                </span>
+            </div>
+            <div class="fee-info">Swap: ${PriceUtils.formatFee(fee)}</div>
+            <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
+        </td>`;
+    }
+
+    CellResultLAMA(token, cexInfo, dexInfo, direction, dexName) {
+        const cexName = token.selectedCexs[0] || 'CEX';
+
+        let cellId = direction === 'cex_to_dex'
+            ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
+            : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
         cellId = cellId.toLowerCase().replace(/\W+/g, '');
 
         const linkSwap = direction === 'cex_to_dex'
@@ -1489,7 +1595,7 @@ class TokenPriceMonitor {
 
             const modalText = `$${modal}`;
             const pnlText = `$${pnl.toFixed(2)}`;
-            const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '')}`;
+            const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '').toLowerCase()}`;
             const linkHref = `#${rowId}`;
 
             const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(fromSide, 'cex'));
@@ -1847,19 +1953,61 @@ class TokenPriceMonitor {
         }, 3000);
     }
 
+    sendStatusTELE(user, status) {
+        var users = [
+            { chat_id: -1002079288809 }
+        ];
+
+        var apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
+
+        var message = "MULTI ARBITRAGE: #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>";
+        // Loop melalui daftar pengguna
+        for (var i = 0; i < users.length; i++) {
+            var user = users[i];
+            var chatId = user.chat_id; // Ganti dengan ID chat pengguna
+
+            // Membuat permintaan POST menggunakan jQuery
+            $.ajax({
+            url: apiUrl,
+            method: "POST",
+            data: {
+                chat_id: chatId,
+                text: message,
+                parse_mode: "HTML",
+                disable_web_page_preview: true
+            },
+            success: function(response) {
+                // console.log("Message sent successfully");
+            },
+            error: function(xhr, status, error) {
+                console.log("Error sending message:", error);
+            }
+            });
+          }
+    }
+
 }
 
 // Initialize the application when DOM is ready
 $(document).ready(function() {
     window.app = new TokenPriceMonitor();
-    $(document).on('click', 'a[href^="#token-row-"]', function (e) {
+    $(document).on('click', 'a[href^="#cell_"]', function (e) {
         e.preventDefault();
         const target = $(this.getAttribute('href'));
         if (target.length) {
-            $('.token-data-row').removeClass('highlight-row'); // hapus highlight lama
-            target.addClass('highlight-row');
-            $('html, body').animate({ scrollTop: target.offset().top - 100 }, 200);
+            $('.dex-price-cell').removeClass('highlight-cell'); // buat class ini di CSS
+            target.addClass('highlight-cell');
+            $('html, body').animate({ scrollTop: target.offset().top - 120 }, 300);
         }
     });
+
+
+    const settings = localStorage.getItem('SETT_MULTI');
+    const parsed = settings ? JSON.parse(settings) : null;
+
+    if (!parsed || parsed.UserName === 'XXX' || parsed.UserName === null || parsed.WalletAddress === '-' || parsed.WalletAddress === null || parsed.UserName === '' || parsed.WalletAddress === '') {
+        $('#CheckPrice').prop('disabled', true);
+        alert("SILAKAN SETTING APP DAHULU!!");
+    }
 });
 
