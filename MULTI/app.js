@@ -96,6 +96,8 @@ class TokenPriceMonitor {
         this.settings = this.loadSettings();
         this.currentEditingToken = null;        
         this.init();
+        this.searchKeyword = '';
+        this.sortAscending = true;
     }
 
     // Initialize the application
@@ -112,12 +114,43 @@ class TokenPriceMonitor {
     // Bind event handlers
     bindEvents() {
 
-       $('#CheckPrice').on('click', async () => {
-            // Sembunyikan tab Token Management dan Settings Aplikasi
+    //    $('#CheckPrice').on('click', async () => {
+    //         // Sembunyikan tab Token Management dan Settings Aplikasi
+    //         const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
+    //         const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
+    //         tabToken.hide();
+    //         tabSetting.hide();
+
+    //         // Nonaktifkan tombol sorting saat proses berlangsung
+    //         $('#sortByToken').prop('disabled', true);
+
+    //         this.generateEmptyTable();
+    //         this.initPNLSignalStructure();
+    //         this.sendStatusTELE(this.settings.UserName, 'ONLINE');
+
+    //         $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
+
+    //         await this.CheckPricess();
+
+    //         // Tampilkan kembali tab setelah selesai scanning
+    //         tabToken.show();
+    //         tabSetting.show();
+
+    //         // Aktifkan kembali tombol sorting
+    //         $('#sortByToken').prop('disabled', false);
+    //         $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
+    //     });
+
+        $('#CheckPrice').on('click', async () => {
             const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
             const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
             tabToken.hide();
             tabSetting.hide();
+
+            $('#sortByToken').prop('disabled', true);
+
+            // Tampilkan tombol Stop
+            $('#StopScan').removeClass('d-none');
 
             this.generateEmptyTable();
             this.initPNLSignalStructure();
@@ -127,11 +160,18 @@ class TokenPriceMonitor {
 
             await this.CheckPricess();
 
-            // Tampilkan kembali tab setelah selesai scanning
             tabToken.show();
             tabSetting.show();
 
+            // Sembunyikan tombol Stop kembali
+            $('#StopScan').addClass('d-none');
+
+            $('#sortByToken').prop('disabled', false);
             $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
+        });
+
+       $('#StopScan').on('click', () => {
+            location.reload(); // ⬅️ ini langsung reload halaman
         });
 
       //  Save token button
@@ -164,17 +204,58 @@ class TokenPriceMonitor {
         });
 
         $('#exportTokensBtn').on('click', () => {
-            const dataStr = JSON.stringify(this.tokens, null, 2);
-            const blob = new Blob([dataStr], { type: "application/json" });
-            const url = URL.createObjectURL(blob);
+            const tokens = app.tokens;
+            if (!tokens.length) return app.showAlert('❌ Tidak ada token untuk diexport!', 'warning');
 
+            const maxCex = 3;
+            const maxDex = 6;
+
+            const headers = [
+                'id', 'symbol', 'pairSymbol', 'contractAddress', 'pairContractAddress',
+                'decimals', 'pairDecimals', 'chain',
+                'modalCexToDex', 'modalDexToCex'
+            ];
+
+            for (let i = 0; i < maxCex; i++) headers.push(`selectedCexs/${i}`);
+            for (let i = 0; i < maxDex; i++) headers.push(`selectedDexs/${i}`);
+            headers.push('isActive');
+
+            const rows = tokens.map(t => {
+                const row = [
+                    t.id,
+                    t.symbol,
+                    t.pairSymbol,
+                    t.contractAddress,
+                    t.pairContractAddress,
+                    t.decimals,
+                    t.pairDecimals,
+                    t.chain,
+                    t.modalCexToDex,
+                    t.modalDexToCex
+                ];
+
+                for (let i = 0; i < maxCex; i++) {
+                    row.push(t.selectedCexs?.[i] || '');
+                }
+
+                for (let i = 0; i < maxDex; i++) {
+                    row.push(t.selectedDexs?.[i] || '');
+                }
+
+                row.push(t.isActive);
+                return row;
+            });
+
+            const csvText = [headers.join('\t'), ...rows.map(r => r.join('\t'))].join('\n');
+
+            const blob = new Blob([csvText], { type: 'text/tab-separated-values;charset=utf-8;' });
             const link = document.createElement('a');
-            link.href = url;
-            link.download = 'tokens.json';
+            link.href = URL.createObjectURL(blob);
+            link.download = 'tokens-export.csv';
             link.click();
-
-            URL.revokeObjectURL(url);
         });
+
+
 
         $('#importTokensBtn').on('click', () => {
             $('#importTokensInput').click();
@@ -185,23 +266,96 @@ class TokenPriceMonitor {
             if (!file) return;
 
             const reader = new FileReader();
-            reader.onload = (e) => {
-                try {
-                    const importedTokens = JSON.parse(e.target.result);
-                    if (Array.isArray(importedTokens)) {
-                        this.tokens = importedTokens;
-                        this.saveTokensToStorage();
-                        this.loadTokenTable();
-                        this.updateStats();
-                        this.showAlert('Token berhasil diimpor', 'success');
-                    } else {
-                        this.showAlert('File tidak valid', 'danger');
-                    }
-                } catch (err) {
-                    this.showAlert('Gagal membaca file JSON', 'danger');
+
+            reader.onload = (event) => {
+                const csvText = event.target.result;
+                const lines = csvText.split('\n').map(line => line.trim()).filter(Boolean);
+
+                if (lines.length < 2) {
+                    app.showAlert('❌ Format file tidak valid atau kosong.', 'danger');
+                    return;
                 }
+
+                const delimiter = lines[0].includes('\t') ? '\t' : (
+                    lines[0].includes(',') ? ',' : null
+                );
+
+                if (!delimiter) {
+                    app.showAlert('❌ Format file tidak valid. Gunakan Tab atau Koma sebagai pemisah.', 'danger');
+                    return;
+                }
+
+                const headers = lines[0].split(delimiter);
+                const tokens = [];
+                let errorCount = 0;
+
+                lines.slice(1).forEach((line, index) => {
+                    const values = line.split(delimiter);
+                    const token = {};
+                    const selectedCexs = [];
+                    const selectedDexs = [];
+
+                    headers.forEach((h, i) => {
+                        const val = values[i]?.trim() ?? '';
+
+                        if (h.startsWith('selectedCexs/')) {
+                            if (val) selectedCexs.push(val);
+                        } else if (h.startsWith('selectedDexs/')) {
+                            if (val) selectedDexs.push(val);
+                        } else if (h === 'isActive') {
+                            token[h] = val.toLowerCase() === 'true';
+                        } else if (['modalCexToDex', 'modalDexToCex', 'decimals', 'pairDecimals', 'id'].includes(h)) {
+                            token[h] = Number(val);
+                        } else {
+                            token[h] = val;
+                        }
+                    });
+
+                    token.selectedCexs = selectedCexs;
+                    token.selectedDexs = selectedDexs;
+
+                    if (!token.symbol || !token.chain) {
+                        console.warn(`⛔ Baris ${index + 2} dilewati (symbol/chain kosong):`, token);
+                        errorCount++;
+                        return;
+                    }
+
+                    tokens.push(token);
+                });
+
+                if (tokens.length === 0) {
+                    app.showAlert('❌ Semua baris gagal diimpor. Periksa format dan isi file.', 'danger');
+                    return;
+                }
+
+                // ✅ Penempatan yang benar DI SINI
+                localStorage.setItem('TOKEN_MULTI', JSON.stringify(tokens));
+                app.tokens = tokens;
+                app.loadTokenTable();
+                app.updateStats();
+
+                const msg = errorCount > 0
+                    ? `✅ Import selesai, ${tokens.length} token berhasil. ⚠️ ${errorCount} baris dilewati karena tidak valid.`
+                    : `✅ Import berhasil, ${tokens.length} token dimuat.`;
+
+                app.showAlert(msg, 'success');
             };
+
             reader.readAsText(file);
+        });
+
+        // Pencarian Monitoring
+        $('#monitoringSearch').on('input', (e) => {
+            this.searchKeyword = e.target.value;
+            this.generateEmptyTable();
+        });
+
+        // Sorting A-Z / Z-A
+        $('#sortByToken').on('click', () => {
+            this.sortAscending = !this.sortAscending;
+            const icon = this.sortAscending ? 'bi-sort-alpha-down' : 'bi-sort-alpha-up';
+            $('#sortIcon').attr('class', `bi ${icon}`);
+            this.generateEmptyTable();
         });
 
     }
@@ -246,18 +400,38 @@ class TokenPriceMonitor {
         const tbody = $('#priceTableBody');
         tbody.empty();
 
+        // const activeTokens = this.tokens
+        //     .slice() // copy array agar tidak mutasi this.tokens
+        //     .sort((a, b) => {
+        //         // 1. Urutkan isActive (true duluan)
+        //         if (a.isActive !== b.isActive) return a.isActive ? -1 : 1;
+        //         // 2. Jika sama-sama aktif, urutkan berdasarkan symbol A-Z
+        //         return a.symbol.localeCompare(b.symbol);
+        //     })
+        //     .filter(t => t.isActive); // Ambil yang aktif saja
+
         const activeTokens = this.tokens
-            .slice() // copy array agar tidak mutasi this.tokens
-            .sort((a, b) => {
-                // 1. Urutkan isActive (true duluan)
-                if (a.isActive !== b.isActive) return a.isActive ? -1 : 1;
-                // 2. Jika sama-sama aktif, urutkan berdasarkan symbol A-Z
-                return a.symbol.localeCompare(b.symbol);
+            .filter(t => t.isActive)
+            .filter(t => {
+                const keyword = (this.searchKeyword || '').toLowerCase();
+                return (
+                    t.symbol.toLowerCase().includes(keyword) ||
+                    t.pairSymbol.toLowerCase().includes(keyword)
+                );
             })
-            .filter(t => t.isActive); // Ambil yang aktif saja
+            .sort((a, b) => {
+                const symbolA = a.symbol.toLowerCase();
+                const symbolB = b.symbol.toLowerCase();
+                if (this.sortAscending) {
+                    return symbolA.localeCompare(symbolB);
+                } else {
+                    return symbolB.localeCompare(symbolA);
+                }
+            });
+
 
         if (activeTokens.length === 0) {
-            tbody.html(`<tr><td colspan="13" class="text-center text-danger py-7">SILAKAN REFRESH JIKA TIDAK ADA DAFTAR TOKEN</td></tr>`);
+            tbody.html(`<tr><td colspan="16" class="text-center text-danger py-7">DATA TIDAK DITEMUAKN / TIDAK ADA DAFTAR TOKEN</td></tr>`);
             return;
         }
 
@@ -413,6 +587,8 @@ class TokenPriceMonitor {
 
         this.tokens.push(token);
         this.saveTokensToStorage();
+        this.loadTokenTable();      // ⬅️ update tabel tampilan
+        this.updateStats();         // ⬅️ update statistik
         this.showAlert(`Token ${token.symbol} berhasil ditambahkan`, 'success');
         return token;
     }
@@ -441,6 +617,8 @@ class TokenPriceMonitor {
             return this.tokens[index];
         }
         this.showAlert(`Token tidak ditemukan`, 'danger');
+        this.loadTokenTable();
+        this.updateStats();
         return null;
     }
 
@@ -457,6 +635,8 @@ class TokenPriceMonitor {
         this.tokens = this.tokens.filter(t => t.id !== tokenId);
         this.saveTokensToStorage();
         this.showAlert(`Token ${token.symbol} berhasil dihapus`, 'warning');
+        this.loadTokenTable();
+        this.updateStats();
         return true;
     }
 
@@ -470,6 +650,8 @@ class TokenPriceMonitor {
             return token;
         }
         showAlert(`Token tidak ditemukan`, 'danger');
+            this.loadTokenTable();
+            this.updateStats();
         return null;
     }
 
@@ -614,9 +796,9 @@ class TokenPriceMonitor {
         $('#bscCount').text(bscCount);
         $('#ethCount').text(ethCount);
         $('#polyCount').text(polyCount);
-        $('#arbCount').text(bscCount);
-        $('#baseCount').text(ethCount);
-        $('#solCount').text(polyCount);
+        $('#arbCount').text(arbCount);   // ✅ diperbaiki
+        $('#baseCount').text(baseCount); // ✅ diperbaiki
+        $('#solCount').text(solCount);   // ✅ diperbaiki
     }
 
     // Form operations
@@ -943,7 +1125,6 @@ class TokenPriceMonitor {
             $('#manualRefreshBtn').removeClass('loading');
         }
     }
-
 
     updateTokenDEXCell(token, priceData, cexName, dexName, direction) {
          if (!(token.selectedDexs || []).includes(dexName)) return;
@@ -1662,35 +1843,71 @@ class TokenPriceMonitor {
         const token = NameToken.toUpperCase();
         const pair = NamePair.toUpperCase();
 
-        let baseUrlTradeToken = token === "USDT" ? "#" : null;
-        let baseUrlTradePair = pair === "USDT" ? "#" : null;
-        let baseUrlWithdraw = null;
-        let baseUrlDeposit = null;
+        let tradeLink = null;
+        let withdrawUrl = null;
+        let depositUrl = null;
 
-        if (cex === "GATEIO") {
-            if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.gate.com/trade/${token}_USDT`;
-            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.gate.com/trade/${pair}_USDT`;
-            baseUrlWithdraw = `https://www.gate.com/myaccount/withdraw/${token}`;
-            baseUrlDeposit = `https://www.gate.com/myaccount/deposit/${pair}`;
-        } else if (cex === "BINANCE") {
-            if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.binance.com/en/trade/${token}_USDT`;
-            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.binance.com/en/trade/${pair}_USDT`;
-            baseUrlWithdraw = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${token}`;
-            baseUrlDeposit = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${pair}`;
-        } else if (cex === "MEXC") {
-            if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.mexc.com/exchange/${token}_USDT?_from=search`;
-            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.mexc.com/exchange/${pair}_USDT?_from=search`;
-            baseUrlWithdraw = `https://www.mexc.com/assets/withdraw/${token}`;
-            baseUrlDeposit = `https://www.mexc.com/assets/deposit/${pair}`;
+        const useQuote = token === 'USDT' && pair !== 'USDT'; // base = USDT → trade pair
+        const useBase  = pair === 'USDT' && token !== 'USDT'; // quote = USDT → trade token
+        const useBoth  = token !== 'USDT' && pair !== 'USDT'; // keduanya ≠ USDT
+
+        switch (cex.toUpperCase()) {
+            case 'BINANCE':
+                if (useQuote) {
+                    tradeLink = `https://www.binance.com/en/trade/${pair}_USDT`;
+                    withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${pair}`;
+                    depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${pair}`;
+                } else if (useBase) {
+                    tradeLink = `https://www.binance.com/en/trade/${token}_USDT`;
+                    withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${token}`;
+                    depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${token}`;
+                } else if (useBoth) {
+                    tradeLink = `https://www.binance.com/en/trade/${token}_${pair}`;
+                    withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${token}`;
+                    depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${pair}`;
+                }
+                break;
+
+            case 'GATEIO':
+                if (useQuote) {
+                    tradeLink = `https://www.gate.io/trade/${pair}_USDT`;
+                    withdrawUrl = `https://www.gate.io/myaccount/withdraw/${pair}`;
+                    depositUrl = `https://www.gate.io/myaccount/deposit/${pair}`;
+                } else if (useBase) {
+                    tradeLink = `https://www.gate.io/trade/${token}_USDT`;
+                    withdrawUrl = `https://www.gate.io/myaccount/withdraw/${token}`;
+                    depositUrl = `https://www.gate.io/myaccount/deposit/${token}`;
+                } else if (useBoth) {
+                    tradeLink = `https://www.gate.io/trade/${token}_${pair}`;
+                    withdrawUrl = `https://www.gate.io/myaccount/withdraw/${token}`;
+                    depositUrl = `https://www.gate.io/myaccount/deposit/${pair}`;
+                }
+                break;
+
+            case 'MEXC':
+                if (useQuote) {
+                    tradeLink = `https://www.mexc.com/exchange/${pair}_USDT?_from=search`;
+                    withdrawUrl = `https://www.mexc.com/assets/withdraw/${pair}`;
+                    depositUrl = `https://www.mexc.com/assets/deposit/${pair}`;
+                } else if (useBase) {
+                    tradeLink = `https://www.mexc.com/exchange/${token}_USDT?_from=search`;
+                    withdrawUrl = `https://www.mexc.com/assets/withdraw/${token}`;
+                    depositUrl = `https://www.mexc.com/assets/deposit/${token}`;
+                } else if (useBoth) {
+                    tradeLink = `https://www.mexc.com/exchange/${token}_${pair}?_from=search`;
+                    withdrawUrl = `https://www.mexc.com/assets/withdraw/${token}`;
+                    depositUrl = `https://www.mexc.com/assets/deposit/${pair}`;
+                }
+                break;
         }
 
         return {
-            tradeToken: baseUrlTradeToken,
-            tradePair: baseUrlTradePair,
-            withdrawUrl: baseUrlWithdraw,
-            depositUrl: baseUrlDeposit
+            tradeLink,
+            withdrawUrl,
+            depositUrl
         };
     }
+
     
     // Create token detail content
     createTokenDetailContent(token, cex) {
