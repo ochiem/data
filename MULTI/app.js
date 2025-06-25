@@ -124,7 +124,6 @@ class TokenPriceMonitor {
             // Tampilkan tombol Stop
             $('#StopScan').removeClass('d-none');
 
-           // this.generateEmptyTable();
             this.initPNLSignalStructure();
             this.sendStatusTELE(this.settings.UserName, 'ONLINE');
 
@@ -335,7 +334,6 @@ class TokenPriceMonitor {
             this.generateEmptyTable();
         });
 
-
     }
 
     fetchGasTokenPrices() {
@@ -377,11 +375,11 @@ class TokenPriceMonitor {
     generateEmptyTable() {
         const tbody = $('#priceTableBody');
         tbody.empty();
-
-        // const activeTokens = this.tokens
-        //     .filter(t => t.isActive)
+        if (typeof this.sortAscending === 'undefined') {
+                this.sortAscending = true;
+            }
         const activeTokens = this.tokens
-           .filter(t => t.isActive)
+            .filter(t => t.isActive)
             .filter(t => {
                 const keyword = (this.searchKeyword || '').toLowerCase();
                 return (
@@ -399,7 +397,7 @@ class TokenPriceMonitor {
                 }
             });
 
-
+        console.log("VIEW TABLE",activeTokens);    
         if (activeTokens.length === 0) {
             tbody.html(`<tr><td colspan="16" class="text-center text-danger py-7">DATA TIDAK DITEMUAKN / TIDAK ADA DAFTAR TOKEN</td></tr>`);
             return;
@@ -412,8 +410,8 @@ class TokenPriceMonitor {
                 // Kolom CEX → DEX
                 const dexCEXtoDEX = dexOrder.map(dex => {
                     const isDexSelected = token.selectedDexs?.includes(dex);
-                    const icon = isDexSelected ? '🔒' : '---';
-                    const bgClass = isDexSelected ? '' : 'bg-secondary ';
+                    const icon = isDexSelected ? '🔒' : '⛔';
+                    const bgClass = isDexSelected ? '' : 'abu';
                     const cellId = `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cex}_${dex}`.toLowerCase().replace(/\W+/g, '');
                     return `<td id="${cellId}" class="dex-price-cell text-center ${bgClass}">${icon}</td>`;
                 }).join('');
@@ -421,8 +419,8 @@ class TokenPriceMonitor {
                 // Kolom DEX → CEX
                 const dexDEXtoCEX = dexOrder.map(dex => {
                     const isDexSelected = token.selectedDexs?.includes(dex);
-                    const icon = isDexSelected ? '🔒' : '---';
-                    const bgClass = isDexSelected ? '' : 'bg-secondary ';
+                    const icon = isDexSelected ? '🔒' : '⛔';
+                    const bgClass = isDexSelected ? '' : 'abu';
                     const cellId = `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dex}_${cex}`.toLowerCase().replace(/\W+/g, '');
                     return `<td id="${cellId}" class="dex-price-cell text-center ${bgClass}">${icon}</td>`;
                 }).join('');
@@ -435,7 +433,7 @@ class TokenPriceMonitor {
                 const orderbookRightId = `orderbook_dex_to_cex_${cex}_${token.chain}_${token.pairSymbol}_${token.symbol}`;
 
                 const rowHTML = `
-                <tr id="${rowId}" class="token-data-row text-center">
+                <tr id="${rowId}" class="token-data-row text-center" style=" font-size: 12px">
                     <td id="${orderbookLeftId.toLowerCase()}" class="orderbook-cex text-muted ">${cex}🔒</td>
                     ${dexCEXtoDEX}
                     <td class="token-detail-cell">${detailHTML}</td>
@@ -989,19 +987,20 @@ class TokenPriceMonitor {
         this.saveSettingsToStorage();
         this.showAlert('Settings saved successfully!', 'success');
         $('#settingsModal').modal('hide');
-
-        // Restart auto-refresh if it's running
-        if (this.autodelayBetweenGrup) {
-            this.stopAutoRefresh();
-            this.startAutoRefresh();
-        }
     }
 
     async CheckPricess() {
-        // const activeTokens = this.tokens.filter(t => t.isActive)
-        //     .sort((a, b) => a.symbol.localeCompare(b.symbol)); // ✅ Urutkan A-Z
-        const activeTokens = this.tokens.filter(t => t.isActive); // 🟢 biarkan urutannya dari this.tokens
+        const activeTokens = this.tokens
+            .filter(t => t.isActive)
+            .sort((a, b) => {
+                const symbolA = a.symbol.toLowerCase();
+                const symbolB = b.symbol.toLowerCase();
+                return this.sortAscending
+                    ? symbolA.localeCompare(symbolB)
+                    : symbolB.localeCompare(symbolA);
+            });
 
+       // console.log("CLICKED CHECK",activeTokens);
         if (activeTokens.length === 0) {
             this.showAlert('No active tokens to monitor', 'info');
             $('#priceTableBody').html(`<tr><td colspan="13" class="text-center text-muted py-5">
@@ -1147,9 +1146,22 @@ class TokenPriceMonitor {
             : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
 
         const safeId = cellId.toLowerCase().replace(/\W+/g, '');
-        $(`#${safeId}`).html(`<div class="text-info small">${dexName}&nbsp;<span class="spinner-border spinner-border-sm me-1"></span></div>`);
-    }
+        const $cell = $('#' + safeId);
 
+        if ($cell.length) {
+            $cell
+                .removeClass()
+                .addClass('dex-price-cell text-info text-center align-middle')
+                .html(`
+                    <div class="text-info small">
+                        ${dexName}&nbsp;
+                        <span class="spinner-border spinner-border-sm me-1"></span>
+                    </div>
+                    <div class="fee-info">&nbsp;</div>
+                    <div class="pnl-info">&nbsp;</div>
+                `);
+        }
+    }
 
     async fetchCEXPrices(token, tokenPriceData, cexName, direction) {
         if (!this.gasTokenPrices) this.gasTokenPrices = {};
@@ -1325,6 +1337,11 @@ class TokenPriceMonitor {
                     const odosIn = [{ tokenAddress: inputContract, amount: rawAmountIn.toString() }];
                     const odosOut = [{ tokenAddress: outputContract, proportion: 1 }];
                     const odosData = await DEXAPIs.getODOSPrice(odosIn, odosOut, '0x0000000000000000000000000000000000000000', rawAmountIn.toString(), chainId);
+
+                    if (odosData?.status === 'timeout' || odosData?.error) {
+                        throw new Error(`ODOS error: ${odosData.error || odosData.status}`);
+                    }
+
                     handleResult('ODOS', { ...odosData, amountOut: odosData.outAmounts?.[0] || '0' });
                     break;
                 case 'Magpie':
@@ -1333,11 +1350,16 @@ class TokenPriceMonitor {
                 case 'ParaSwap':
                     handleResult('ParaSwap', await DEXAPIs.getParaSwapPrice(inputContract, outputContract, rawAmountIn, inputDecimals, outputDecimals, chainId));
                     break;
+                default:
+                    console.warn(`[⚠️ fetchDEXPrices] DEX tidak dikenal: ${dexName}`);
+                break;
             }
         } catch (err) {
-            console.error(`❌ DEX ${dexName} gagal →`, err);
+            console.error(`❌ DEX ${dexName} gagal →`,token, err);
             tokenPriceData.analisis_data[direction][dexName] = tokenPriceData.analisis_data[direction][dexName] || {};
             tokenPriceData.analisis_data[direction][dexName][`${baseSymbol}To${quoteSymbol}`] = { error: true };
+            // Ganti isi cell dengan error
+            this.CellResult(token, cexData, { error: err?.error || err?.message || 'Unknown DEX error' }, direction, dexName);
 
             const cellId = direction === 'cex_to_dex'
                 ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
@@ -1349,11 +1371,7 @@ class TokenPriceMonitor {
             } else if (err?.message) {
                 errorMessage = err.message;
             }
-            $(`#${cellId.toLowerCase().replace(/\W+/g, '')}`).html(`
-                <div class="text-danger" title="${errorMessage}">❌</div>
-            `);
-
-//            $(`#${cellId.toLowerCase().replace(/\W+/g, '')}`).html(`<div class="text-danger">❌</div>`);
+          this.CellResult(token, cexData, { error: errorMessage }, direction, dexName);
         }
     }
 
@@ -1416,161 +1434,6 @@ class TokenPriceMonitor {
         });
     }
 
-    createEmptyRow(token, dexData, availableDexs) {
-        let rowHtml = `
-            <tr>
-                <td class="text-center align-middle fw-bold">
-                    <div class="d-flex flex-column align-items-center">
-                        <span class="badge bg-secondary mb-1">${token.symbol}/${token.pairSymbol}</span>
-                        <small class="text-muted">${token.chain}</small>
-                    </div>
-                </td>
-                <td class="text-center align-middle">
-                    <span class="text-muted">No CEX data</span>
-                </td>
-        `;
-
-        // Add empty DEX columns
-        availableDexs.forEach(() => {
-            rowHtml += '<td class="text-center"><span class="text-muted">N/A</span></td>';
-            rowHtml += '<td class="text-center"><span class="text-muted">N/A</span></td>';
-        });
-
-        // Detail Token column
-        rowHtml += `
-            <td class="text-center align-middle">
-                <div class="d-flex flex-column gap-1">
-                    <a href="https://defillama.com/protocol/${token.symbol.toLowerCase()}" 
-                       target="_blank" class="btn btn-sm btn-outline-info" title="View on DeFiLlama">
-                        <i class="bi bi-graph-up"></i> DeFiLlama
-                    </a>
-                    <a href="${this.getExplorerUrl(token.contractAddress, token.chain)}" 
-                       target="_blank" class="btn btn-sm btn-outline-secondary" title="View Contract">
-                        <i class="bi bi-file-earmark-code"></i> Contract
-                    </a>
-                    <a href="${this.getTradeUrl(token.contractAddress, token.chain)}" 
-                       target="_blank" class="btn btn-sm btn-outline-success" title="Trade">
-                        <i class="bi bi-arrow-left-right"></i> Trade
-                    </a>
-                </div>
-            </td>
-        </tr>
-        `;
-        return rowHtml;
-    }
-
-   updateTokenRow(token, priceData, targetCexName = null) {
-        const tokenId = token.id;
-        const cexData = priceData.cex_data || {};
-        const dexData = priceData.dex_data || {};
-        const tbody = $('#priceTableBody');
-
-        const cexNames = Object.keys(cexData);
-        for (const cexName of cexNames) {
-            if (targetCexName && cexName !== targetCexName) continue;
-
-            const rowId = `token-row-${tokenId}-${cexName.replace(/\W+/g, '')}`;
-            const $row = $(`#${rowId}`);
-            if ($row.length === 0) return;
-
-            const newRow = this.createCEXRow(token, cexName, cexData[cexName], dexData);
-            const $newRow = typeof newRow === 'string' ? $(newRow) : newRow;
-
-            // Ambil semua <td> baru dan update ke row lama
-            const $tds = $row.find('td');
-            const $newTds = $newRow.find('td');
-
-            $tds.each((i, td) => {
-                $(td).html($newTds.eq(i).html());
-            });
-        }
-    }
-
-    // Create rows for a token
-    createTokenRows(token, priceData, tbody) {
-        const cexData = priceData.cex_data || {};
-        const dexData = priceData.dex_data || {};
-        
-        // If no CEX data, create a single row
-        if (Object.keys(cexData).length === 0) {
-            const row = this.createEmptyRow(token, dexData);
-            tbody.append(row);
-            return;
-        }
-
-        // Create rows for each CEX
-        const cexNames = Object.keys(cexData);
-        cexNames.forEach((cexName, index) => {
-            const cexInfo = cexData[cexName];
-            const row = this.createCEXRow(token, cexName, cexInfo, dexData);
-            tbody.append(row);
-        });
-    }
-
-    createCEXRow(token, cexName, cexInfo, dexData) {
-        const baseSymbol = token.symbol.toUpperCase();
-        const quoteSymbol = token.pairSymbol.toUpperCase();
-
-        const pairKeyBase = `${baseSymbol}ToUSDT`;
-        const pairKeyQuote = `${quoteSymbol}ToUSDT`;
-
-        const baseCexInfo = {
-            ...cexInfo[pairKeyBase],
-            buy: cexInfo[pairKeyBase]?.buy,
-            sell: cexInfo[pairKeyBase]?.sell
-        };
-
-        const dexToCexSymbol = baseSymbol;
-        const pairKeySell = `${dexToCexSymbol}ToUSDT`;
-        const quoteCexInfo = {
-            ...cexInfo[pairKeySell],
-            buy: cexInfo[pairKeySell]?.buy,
-            sell: cexInfo[pairKeySell]?.sell
-        };
-
-        let row = '<tr>';
-
-        // ✅ CEX BUY: kita JUAL ke CEX (lihat BID)
-        row += `<td class="cex-price-cell">`;
-        row += baseCexInfo.topAsks
-            ? baseCexInfo.topAsks.map(x => {
-                const priceFormatted = PriceUtils.formatPrice(x.price);
-                const volume = (x.price * x.qty).toFixed(2);
-                return `<div class="text-success">${priceFormatted} : $${volume}</div>`;
-            }).join('')
-            : '<div class="text-muted">N/A</div>';
-        row += `</td>`;
-
-        // ✅ DEX columns: CEX → DEX
-        dexOrder.forEach(dexName => {
-            const dexInfo = dexData[dexName]?.['cex_to_dex'];
-            row += this.createDEXCell(token, baseCexInfo, dexInfo, 'cex_to_dex', dexName);
-        });
-
-        // ✅ Token detail
-        row += `<td class="token-detail-cell">${this.createTokenDetailContent(token, cexName)}</td>`;
-
-        // ✅ DEX columns: DEX → CEX
-        dexOrder.forEach(dexName => {
-            const dexInfo = dexData[dexName]?.['dex_to_cex'];
-            row += this.createDEXCell(token, quoteCexInfo, dexInfo, 'dex_to_cex', dexName);
-        });
-
-        // ✅ CEX SELL: kita BELI dari CEX (lihat ASK)
-        row += `<td class="cex-price-cell">`;
-        row += quoteCexInfo.topBids
-            ? quoteCexInfo.topBids.map(x => {
-                const priceFormatted = PriceUtils.formatPrice(x.price);
-                const volume = (x.price * x.qty).toFixed(2);
-                return `<div class="text-danger">${priceFormatted} : $${volume}</div>`;
-            }).join('')
-            : '<div class="text-muted">N/A</div>';
-        row += `</td>`;
-
-        row += '</tr>';
-        return row;
-    }
-
     CellResult(token, cexInfo, dexInfo, direction, dexName) {
         const cexName = token.selectedCexs[0] || 'CEX';
 
@@ -1579,29 +1442,41 @@ class TokenPriceMonitor {
             : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
         const cleanCellId = cellId.toLowerCase().replace(/\W+/g, '');
 
+        const $cell = $('#' + cleanCellId);
+        if (!$cell.length) return;
+
         const linkSwap = direction === 'cex_to_dex'
             ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
             : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
 
-        // Jika DEX tidak dipilih
+        // 🔴 Jika DEX tidak dipilih
         if (!(token.selectedDexs || []).includes(dexName)) {
-            return `<td id="${cleanCellId}" class="dex-price-cell text-muted text-center">
-                <div class="price-info">&nbsp;</div>
-                <div class="fee-info">---</div>
-                <div class="pnl-info">&nbsp;</div>
-            </td>`;
+            $cell
+                .removeClass()
+                .addClass('dex-price-cell text-muted text-center')
+                .html(`
+                    <div class="price-info">&nbsp;</div>
+                    <div class="fee-info">---</div>
+                    <div class="pnl-info">&nbsp;</div>
+                `);
+            return;
         }
 
-        // Jika terjadi error
+        // ❌ Jika terjadi error
         if (!dexInfo || dexInfo.error) {
             const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
-            return `<td id="${cleanCellId}" class="dex-price-cell text-danger text-center bg-danger-subtle">
-                <div class="price-info">&nbsp;</div>
-                <div class="fee-info" title="${dexName}: ${errorMsg}">❌</div>
-                <div class="pnl-info">&nbsp;</div>
-            </td>`;
+            $cell
+                .removeClass()
+                .addClass('dex-price-cell text-danger text-center bg-danger-subtle')
+                .html(`
+                    <div class="price-info">&nbsp;</div>
+                    <div class="fee-info" title="${dexName}: ${errorMsg}">❌</div>
+                    <div class="pnl-info">&nbsp;</div>
+                `);
+            return;
         }
 
+        // ✅ Jika data valid
         const fee = dexInfo.fee || 0;
         const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
 
@@ -1619,9 +1494,11 @@ class TokenPriceMonitor {
         }
 
         if (!buyPrice || !sellPrice) {
-            return `<td id="${cleanCellId}" class="dex-price-cell text-center text-muted">
-                <div class="text-muted small">⚠️</div>
-            </td>`;
+            $cell
+                .removeClass()
+                .addClass('dex-price-cell text-center text-muted')
+                .html(`<div class="text-muted small">⚠️</div>`);
+            return;
         }
 
         const qty = modal / buyPrice;
@@ -1632,28 +1509,42 @@ class TokenPriceMonitor {
 
         const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
         const toSymbol   = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
-        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), fromSymbol, toSymbol);
+        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(),toSymbol, fromSymbol);
         const cexLink = cexLinks.tradeLink || '#';
         const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
         const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
 
-        const tooltip = `
+        const feeTrade = modal*0.001; // dari dexInfo
+        const feeWD = 0.000;  // biaya withdraw, bisa diganti dinamis
+        const totalFee = feeTrade + feeWD + fee;
+
+        const tokenReceived = qty.toFixed(6);
+        const pairReceived = (qty * sellPrice).toFixed(6);
+
+        const tooltip = `            
             ${direction.replace(/_/g, ' ').toUpperCase()} via ${dexName}
-            Modal: $${modal}
-            Buy @: $${buyPrice}
-            Sell @: $${sellPrice}
-            Fee: $${fee}
-            PNL: $${pnl.toFixed(4)}
+            ${fromSymbol} => ${toSymbol}
+            Modal: $${modal} 
+            Buy ${fromSymbol}@: $${buyPrice.toFixed(8)}
+            Token Qty: ${tokenReceived} ${fromSymbol}
+
+            Sell ${toSymbol}@: $${sellPrice.toFixed(8)}
+            Est Result: ${pairReceived} ${toSymbol}
+
+            Fee Trade: $${feeTrade.toFixed(2)}
+            Fee WD: $${feeWD.toFixed(2)}
+            Fee Swap: $${fee.toFixed(2)}
+            Total Fee: $${totalFee.toFixed(2)}
+            PNL: $${pnl.toFixed(2)}
         `.trim();
 
-        // 💡 SIMPAN SINYAL
+
+        // ✅ Simpan sinyal PNL jika untung
         if (isPNLPositive) {
             this.pnlSignals = this.pnlSignals || {};
             const dexKey = dexName.toUpperCase();
             this.pnlSignals[dexKey] = this.pnlSignals[dexKey] || [];
 
-            const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
-            const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
             const fromSide = direction === 'cex_to_dex' ? cexName : dexName;
             const toSide = direction === 'cex_to_dex' ? dexName : cexName;
             const chainLabel = token.chain?.toUpperCase() || 'CHAIN';
@@ -1681,38 +1572,31 @@ class TokenPriceMonitor {
             if (listEl) {
                 listEl.innerHTML = `${this.pnlSignals[dexKey].join(' | ')}`;
             }
-            // ✅ Kirim sinyal ke Telegram
-            const modalValue = parseFloat(modal);
-            const feeWD = 0.000; // Ganti jika Anda punya data withdrawal fee
 
-            this.sendInfoSignal(
-                this.settings.UserName || 'Anon',
-                token,
-                cexName,
-                dexName,
-                buyPrice,
-                sellPrice,
-                feeWD,
-                fee,
-                pnl,
-                direction,
-                modalValue
-            );
+            const modalValue = parseFloat(modal);
+            const feeWD = 0.000;
+            this.sendInfoSignal(this.settings.UserName || 'Anon',  token, cexName,  dexName,  buyPrice,  sellPrice, feeWD, fee, pnl, direction, modalValue );
         }
 
-        return `<td id="${cleanCellId}" class="dex-price-cell align-middle" style="${tdStyle}" title="${tooltip}">
-            <div class="price-info">
-                <span class="text-success">
-                    <a href="${buyLink}" target="_blank">${PriceUtils.formatPrice(buyPrice)}</a>
-                </span><br>
-                <span class="text-danger">
-                    <a href="${sellLink}" target="_blank">${PriceUtils.formatPrice(sellPrice)}</a>
-                </span>
-            </div>
-            <div class="fee-info">WD: XXX </div>
-            <div class="fee-info">Swap: ${PriceUtils.formatFee(fee)}</div>
-            <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
-        </td>`;
+        // ✅ Update isi cell
+        $cell
+            .attr('style', tdStyle)
+            .attr('title', tooltip)
+            .removeClass()
+            .addClass('dex-price-cell align-middle')
+            .html(`
+                <div class="price-info">
+                    <span class="text-success">
+                        <a href="${buyLink}" target="_blank">${PriceUtils.formatPrice(buyPrice)}</a>
+                    </span><br>
+                    <span class="text-danger">
+                        <a href="${sellLink}" target="_blank">${PriceUtils.formatPrice(sellPrice)}</a>
+                    </span>
+                </div>
+                <div class="fee-info">WD: XXX </div>
+                <div class="fee-info">Swap: ${PriceUtils.formatFee(fee)}</div>
+                <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
+            `);
     }
 
     initPNLSignalStructure() {
@@ -1732,60 +1616,6 @@ class TokenPriceMonitor {
                 </div>
             `;
             container.append(html);
-        }
-    }
-
-    renderPNLSignals() {
-        const signalDiv = $('#dexSignals');
-        signalDiv.empty();
-
-        if (!this.pnlSignals || Object.keys(this.pnlSignals).length === 0) {
-            signalDiv.html('<div class="text-muted small">Tidak ada sinyal PNL positif</div>');
-            return;
-        }
-
-        for (const [dex, signals] of Object.entries(this.pnlSignals)) {
-            const html = `<div><strong>${dex.toUpperCase()} :</strong><br>• ${signals.join('<br>• ')}</div><hr>`;
-            signalDiv.append(html);
-        }
-    }
-
-    updatePNLSignals(allTokenPriceData) {
-        const dexSummary = {}; // untuk menyimpan DEX → list sinyal
-
-        // Loop semua token
-        for (const tokenData of allTokenPriceData) {
-            const { token, priceData } = tokenData;
-
-            for (const dex of dexOrder) {
-                const dexInfoCEXtoDEX = priceData.dex_data?.[dex]?.cex_to_dex;
-                const dexInfoDEXtoCEX = priceData.dex_data?.[dex]?.dex_to_cex;
-
-                [dexInfoCEXtoDEX, dexInfoDEXtoCEX].forEach(info => {
-                    if (info && !info.error && info.pnl > info.fee) {
-                        const key = dex.toUpperCase();
-                        const direction = info.from + ' → ' + info.to;
-                        const msg = `${token.symbol}/${token.pairSymbol} (${direction}) = PNL: ${info.pnl.toFixed(2)}$`;
-
-                        if (!dexSummary[key]) dexSummary[key] = [];
-                        dexSummary[key].push(msg);
-                    }
-                });
-            }
-        }
-
-        // Render ke HTML
-        const signalDiv = $('#dexSignals');
-        signalDiv.empty();
-
-        if (Object.keys(dexSummary).length === 0) {
-            signalDiv.html('<div class="text-muted">Tidak ada sinyal PNL positif saat ini</div>');
-            return;
-        }
-
-        for (const [dex, messages] of Object.entries(dexSummary)) {
-            const dexHTML = `<div><strong>${dex} :</strong><br>• ${messages.join('<br>• ')}</div><hr>`;
-            signalDiv.append(dexHTML);
         }
     }
 
@@ -1918,67 +1748,6 @@ class TokenPriceMonitor {
                 </div>
             </div>
         `;
-    }
-
-    // Create empty row when no CEX data
-    createEmptyRows(token, dexData) {
-        const rows = [];
-        const dexList = ['KyberSwap', 'Matcha', 'Magpie', 'ODOS'];
-        const selectedDexs = token.selectedDexs || [];
-        const selectedCexs = token.selectedCexs || [];
-
-        // Loop setiap CEX sebagai satu baris
-        selectedCexs.forEach(cex => {
-            let row = '<tr>';
-
-            // Kolom harga CEX
-            row += `<td class="cex-price-cell text-muted">${cex}</td>`;
-
-            // Kolom CEX → DEX (harga beli dari CEX, jual ke DEX)
-            dexList.forEach(dex => {
-                row += `<td class="dex-price-cell text-muted">${
-                    selectedDexs.includes(dex) ? 'N/A' : '---'
-                }</td>`;
-            });
-
-            // Kolom detail token
-            row += `<td class="token-detail-cell">${this.createTokenDetailContent(token)}</td>`;
-
-            // Kolom DEX → CEX (beli di DEX, jual ke CEX)
-            dexList.forEach(dex => {
-                row += `<td class="dex-price-cell text-muted">${
-                    selectedDexs.includes(dex) ? 'N/A' : '---'
-                }</td>`;
-            });
-
-            row += '</tr>';
-            rows.push(row);
-        });
-
-        return rows.join('\n');
-    }
-    
-    // Auto refresh functionality
-    toggleAutoRefresh() {
-        if (this.autodelayBetweenGrup) {
-            this.stopAutoRefresh();
-        } else {
-            this.startAutoRefresh();
-        }
-    }
-
-    // ✅ Final fix: countdown dimulai setelah scan SELESAI, termasuk untuk auto-refresh berikutnya
-    startAutoRefresh() {
-        const interval = this.settings.delayBetweenGrup * 1000;
-
-        this._autoIntervalMs = interval;
-        this._isAutoRefreshActive = true;
-
-        $('#autoRefreshToggle').html('<i class="bi bi-pause-fill"></i> Stop Auto');
-        $('#autoRefreshStatus').text('Enabled');
-        this.showAlert('Auto refresh started', 'info');
-
-        this.refreshPrices(); // Awal
     }
 
     startCountdown() {
@@ -2159,7 +1928,7 @@ class TokenPriceMonitor {
                     disable_web_page_preview: true
                 },
                 success: function () {
-                    console.log("✅ Signal berhasil dikirim ke Telegram");
+                   // console.log("✅ Signal berhasil dikirim ke Telegram");
                 },
                 error: function (xhr, status, error) {
                     console.error("❌ Gagal kirim ke Telegram:", error);
