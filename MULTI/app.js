@@ -565,12 +565,12 @@ class TokenPriceMonitor {
         }
         if (type === 'chain') {
             const colors = {
-                bsc: 'bg-warning',
+                bsc: 'bg-warning text-dark',
                 ethereum: 'bg-primary',
-                polygon: 'bg-info',
+                polygon: 'bg-info text-dark',
                 arbitrum: 'bg-secondary',
-                base: 'bg-success',
-                solana: 'bg-danger',
+                base: 'bg-danger text-light',
+                solana: 'bg-danger text-light',
             };
             return colors[name.toLowerCase()] || 'bg-dark';
         }
@@ -582,12 +582,13 @@ class TokenPriceMonitor {
             'bg-success': 'text-success',
             'bg-primary': 'text-primary',
             'bg-danger': 'text-danger',
+            'bg-light': 'text-light',
             'bg-info': 'text-info',
             'bg-secondary': 'text-secondary',
             'bg-dark': 'text-dark',
             'bg-warning': 'text-warning',
         };
-        return map[badgeClass.split(' ')[0]] || 'text-secondary';
+        return map[badgeClass.split(' ')[0]] || 'text-success';
     }
 
     loadSettingsForm() {
@@ -1920,63 +1921,6 @@ class TokenPriceMonitor {
             }
             });
           }
-    }
-
-    sendInfoSignalLAMA(user, token, cex, dex, buyPrice, sellPrice, feeWD, feeSwap, pnl, direction, modal) {
-        var users = [
-            { chat_id: -1002079288809 }
-        ];
-
-        var apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
-
-        const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
-        const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
-        const scIn = direction === 'cex_to_dex' ? token.contractAddress : token.pairContractAddress;
-        const scOut = direction === 'cex_to_dex' ? token.pairContractAddress : token.contractAddress;
-
-        const chainUrl = token.chain.toLowerCase() === 'solana'
-            ? `https://solscan.io/token`
-            : `https://etherscan.io/token`;
-
-        const linkBuy = `<a href="${chainUrl}/${scIn}" target="_blank">${fromSymbol}</a>`;
-        const linkSell = `<a href="${chainUrl}/${scOut}" target="_blank">${toSymbol}</a>`;
-
-        const totalFee = feeWD + feeSwap;
-
-        let message =
-            `<b>#MULTISCAN SIGNAL v1.7</b>\n` +
-            `<b>User:</b> ~ ${user}\n` +
-            `<b>-----------------------------------------</b>\n` +
-            `<b>MARKET:</b> ${cex} VS ${dex}\n` +
-             `<b>CHAIN:</b> ${(token.chain).toUpperCase()}\n` +
-            `<b>TOKEN-PAIR:</b> <b>#${fromSymbol}_${toSymbol}</b>\n` +
-            `<b>MODAL:</b> $${modal} | <b>PROFIT:</b> $${pnl.toFixed(2)}\n` +
-            `<b>BUY:</b> ${linkBuy} @ ${buyPrice.toFixed(9)}\n` +
-            `<b>SELL:</b> ${linkSell} @ ${sellPrice.toFixed(9)}\n` +
-            `<b>FEE WD:</b> ${feeWD.toFixed(3)}\n` +
-            `<b>FEE TOTAL:</b> $${totalFee.toFixed(2)} | <b>SWAP:</b> $${feeSwap.toFixed(2)}\n` +
-            `<b>-----------------------------------------</b>`;
-
-        for (let i = 0; i < users.length; i++) {
-            const chatId = users[i].chat_id;
-
-            $.ajax({
-                url: apiUrl,
-                method: "POST",
-                data: {
-                    chat_id: chatId,
-                    text: message,
-                    parse_mode: "HTML",
-                    disable_web_page_preview: true
-                },
-                success: function () {
-                    console.log("✅ Signal berhasil dikirim ke Telegram");
-                },
-                error: function (xhr, status, error) {
-                    console.error("❌ Gagal kirim ke Telegram:", error);
-                }
-            });
-        }
     }
 
     sendInfoSignal(user, token, cex, dex, buyPrice, sellPrice, feeWD, feeSwap, pnl, direction, modal) {
