@@ -124,7 +124,7 @@ class TokenPriceMonitor {
             // Tampilkan tombol Stop
             $('#StopScan').removeClass('d-none');
 
-            this.generateEmptyTable();
+           // this.generateEmptyTable();
             this.initPNLSignalStructure();
             this.sendStatusTELE(this.settings.UserName, 'ONLINE');
 
@@ -322,13 +322,19 @@ class TokenPriceMonitor {
             this.generateEmptyTable();
         });
 
-        // Sorting A-Z / Z-A
         $('#sortByToken').on('click', () => {
             this.sortAscending = !this.sortAscending;
             const icon = this.sortAscending ? 'bi-sort-alpha-down' : 'bi-sort-alpha-up';
             $('#sortIcon').attr('class', `bi ${icon}`);
+
+            // ✅ Tambahkan ini untuk ubah urutan token
+            this.tokens.sort((a, b) => this.sortAscending
+                ? a.symbol.localeCompare(b.symbol)
+                : b.symbol.localeCompare(a.symbol));
+
             this.generateEmptyTable();
         });
+
 
     }
 
@@ -373,17 +379,9 @@ class TokenPriceMonitor {
         tbody.empty();
 
         // const activeTokens = this.tokens
-        //     .slice() // copy array agar tidak mutasi this.tokens
-        //     .sort((a, b) => {
-        //         // 1. Urutkan isActive (true duluan)
-        //         if (a.isActive !== b.isActive) return a.isActive ? -1 : 1;
-        //         // 2. Jika sama-sama aktif, urutkan berdasarkan symbol A-Z
-        //         return a.symbol.localeCompare(b.symbol);
-        //     })
-        //     .filter(t => t.isActive); // Ambil yang aktif saja
-
+        //     .filter(t => t.isActive)
         const activeTokens = this.tokens
-            .filter(t => t.isActive)
+           .filter(t => t.isActive)
             .filter(t => {
                 const keyword = (this.searchKeyword || '').toLowerCase();
                 return (
@@ -758,7 +756,6 @@ class TokenPriceMonitor {
         const activeTokens = this.tokens.filter(t => t.isActive);
         const count = (chain) => activeTokens.filter(t => t.chain?.toLowerCase() === chain.toLowerCase()).length;
 
-        // Jika Anda punya dua panel: Monitoring & Management
         const targets = ['Monitoring', 'Management'];
 
         for (const target of targets) {
@@ -771,6 +768,16 @@ class TokenPriceMonitor {
             $(`#baseCount${target}`).text(count('Base'));
             $(`#solCount${target}`).text(count('Solana'));
         }
+
+        // ✅ Tambahkan ini untuk hitung total baris monitoring (token × cex aktif)
+        let totalBaris = 0;
+        activeTokens.forEach(token => {
+            if (Array.isArray(token.selectedCexs)) {
+                totalBaris += token.selectedCexs.length;
+            }
+        });
+
+        $('#totalBarisMonitoring').text(totalBaris);
     }
 
     // Form operations
@@ -887,13 +894,13 @@ class TokenPriceMonitor {
             return false;
         }
 
-        if (!delayBetweenGrup || delayBetweenGrup < 500 || delayBetweenGrup > 5000) {
-            this.showAlert('Delay antar grup harus antara 500–5000 ms', 'danger');
+        if (!delayBetweenGrup || delayBetweenGrup < 300 || delayBetweenGrup > 5000) {
+            this.showAlert('Delay antar grup harus antara 300–5000 ms', 'danger');
             return false;
         }
 
-        if (!timeoutCount || timeoutCount < 3000 || timeoutCount > 5000) {
-            this.showAlert('Timeout harus antara 3000–5000 ms', 'danger');
+        if (!timeoutCount || timeoutCount < 1000 || timeoutCount > 5000) {
+            this.showAlert('Timeout harus antara 1000–5000 ms', 'danger');
             return false;
         }
 
@@ -991,9 +998,9 @@ class TokenPriceMonitor {
     }
 
     async CheckPricess() {
-        if (this.isRefreshing) return;
-        const activeTokens = this.tokens.filter(t => t.isActive)
-            .sort((a, b) => a.symbol.localeCompare(b.symbol)); // ✅ Urutkan A-Z
+        // const activeTokens = this.tokens.filter(t => t.isActive)
+        //     .sort((a, b) => a.symbol.localeCompare(b.symbol)); // ✅ Urutkan A-Z
+        const activeTokens = this.tokens.filter(t => t.isActive); // 🟢 biarkan urutannya dari this.tokens
 
         if (activeTokens.length === 0) {
             this.showAlert('No active tokens to monitor', 'info');
@@ -2129,7 +2136,7 @@ class TokenPriceMonitor {
 
         const message =
             `<b>#SIGNAL_MULTIALL</b>\n` +
-            `<b>User:</b> ~ ${user}\n` +
+            `<b>USER:</b> ~ #${user}\n` +
             `--------------------------------------------\n` +
             `<b>MARKET:</b> <a href="${cexTradeLink}" target="_blank">${cex.toUpperCase()}</a> VS <a href="${dexTradeLink}" target="_blank">${dex.toUpperCase()}</a>\n` +
             `<b>CHAIN:</b> ${token.chain.toUpperCase()}\n` +
