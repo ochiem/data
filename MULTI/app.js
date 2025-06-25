@@ -257,7 +257,7 @@ class TokenPriceMonitor {
             .filter(t => t.isActive); // Ambil yang aktif saja
 
         if (activeTokens.length === 0) {
-            tbody.html(`<tr><td colspan="13" class="text-center text-danger py-7">SILAKAN REFRESH JIKA TIDAK DAFTAR TOKEN</td></tr>`);
+            tbody.html(`<tr><td colspan="13" class="text-center text-danger py-7">SILAKAN REFRESH JIKA TIDAK ADA DAFTAR TOKEN</td></tr>`);
             return;
         }
 
