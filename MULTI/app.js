@@ -366,9 +366,10 @@ class TokenPriceMonitor {
 
     // LocalStorage operations
     loadTokens() {
-        const tokens = localStorage.getItem('TOKEN_MULTI');
-        return tokens ? JSON.parse(tokens) : [];
+        const tokens = JSON.parse(localStorage.getItem('TOKEN_MULTI') || '[]');
+        return tokens.map(t => ({ ...t, id: String(t.id) }));
     }
+
 
     saveTokensToStorage() {
         localStorage.setItem('TOKEN_MULTI', JSON.stringify(this.tokens));
@@ -786,6 +787,7 @@ class TokenPriceMonitor {
 
     editToken(tokenId) {
         const token = this.tokens.find(t => t.id === tokenId);
+
         if (!token) return;
 
         this.currentEditingToken = token;
