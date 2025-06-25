@@ -113,34 +113,6 @@ class TokenPriceMonitor {
 
     // Bind event handlers
     bindEvents() {
-
-    //    $('#CheckPrice').on('click', async () => {
-    //         // Sembunyikan tab Token Management dan Settings Aplikasi
-    //         const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
-    //         const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
-    //         tabToken.hide();
-    //         tabSetting.hide();
-
-    //         // Nonaktifkan tombol sorting saat proses berlangsung
-    //         $('#sortByToken').prop('disabled', true);
-
-    //         this.generateEmptyTable();
-    //         this.initPNLSignalStructure();
-    //         this.sendStatusTELE(this.settings.UserName, 'ONLINE');
-
-    //         $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
-
-    //         await this.CheckPricess();
-
-    //         // Tampilkan kembali tab setelah selesai scanning
-    //         tabToken.show();
-    //         tabSetting.show();
-
-    //         // Aktifkan kembali tombol sorting
-    //         $('#sortByToken').prop('disabled', false);
-    //         $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
-    //     });
-
         $('#CheckPrice').on('click', async () => {
             const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
             const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
@@ -784,21 +756,21 @@ class TokenPriceMonitor {
 
     updateStats() {
         const activeTokens = this.tokens.filter(t => t.isActive);
-        const bscCount = activeTokens.filter(t => t.chain === 'BSC').length;
-        const ethCount = activeTokens.filter(t => t.chain === 'Ethereum').length;
-        const polyCount = activeTokens.filter(t => t.chain === 'Polygon').length;
-        const baseCount = activeTokens.filter(t => t.chain === 'Base').length;
-        const arbCount = activeTokens.filter(t => t.chain === 'Arbitrum').length;
-        const solCount = activeTokens.filter(t => t.chain === 'Solana').length;
+        const count = (chain) => activeTokens.filter(t => t.chain?.toLowerCase() === chain.toLowerCase()).length;
 
-        $('#totalTokens').text(this.tokens.length);
-        $('#activeTokens').text(activeTokens.length);
-        $('#bscCount').text(bscCount);
-        $('#ethCount').text(ethCount);
-        $('#polyCount').text(polyCount);
-        $('#arbCount').text(arbCount);   // ✅ diperbaiki
-        $('#baseCount').text(baseCount); // ✅ diperbaiki
-        $('#solCount').text(solCount);   // ✅ diperbaiki
+        // Jika Anda punya dua panel: Monitoring & Management
+        const targets = ['Monitoring', 'Management'];
+
+        for (const target of targets) {
+            $(`#totalTokens${target}`).text(this.tokens.length);
+            $(`#activeTokens${target}`).text(activeTokens.length);
+            $(`#bscCount${target}`).text(count('BSC'));
+            $(`#ethCount${target}`).text(count('Ethereum'));
+            $(`#polyCount${target}`).text(count('Polygon'));
+            $(`#arbCount${target}`).text(count('Arbitrum'));
+            $(`#baseCount${target}`).text(count('Base'));
+            $(`#solCount${target}`).text(count('Solana'));
+        }
     }
 
     // Form operations
@@ -1651,8 +1623,10 @@ class TokenPriceMonitor {
         const tdStyle = isPNLPositive ? 'background-color:rgb(183, 235, 212) !important;' : '';
         const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
 
-        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), token.symbol, token.pairSymbol);
-        const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
+        const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+        const toSymbol   = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), fromSymbol, toSymbol);
+        const cexLink = cexLinks.tradeLink || '#';
         const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
         const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
 
@@ -1839,7 +1813,7 @@ class TokenPriceMonitor {
     }
 
  // ✅ Tambahkan fungsi ini dalam class
-    GeturlExchanger(cex, NameToken, NamePair) {
+    GeturlExchangerLAMA(cex, NameToken, NamePair) {
         const token = NameToken.toUpperCase();
         const pair = NamePair.toUpperCase();
 
@@ -1908,7 +1882,53 @@ class TokenPriceMonitor {
         };
     }
 
-    
+    GeturlExchanger(cex, NameToken, NamePair, direction = 'cex_to_dex') {
+        const token = NameToken.toUpperCase();
+        const pair = NamePair.toUpperCase();
+        const dir = direction.toLowerCase();
+
+        let tradeLink = '#';
+        let withdrawUrl = null;
+        let depositUrl = null;
+
+        // ✅ Tentukan simbol untuk trade berdasarkan arah dan posisi USDT
+        let symbolForTrade = 'BTC'; // fallback jika tidak ada pilihan
+
+        if (token === 'USDT') {
+            symbolForTrade = pair;
+        } else if (pair === 'USDT') {
+            symbolForTrade = token;
+        } else {
+            symbolForTrade = pair;
+        }
+
+        switch (cex.toUpperCase()) {
+            case 'BINANCE':
+                tradeLink = `https://www.binance.com/en/trade/${symbolForTrade}_USDT`;
+                withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${symbolForTrade}`;
+                depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${symbolForTrade}`;
+                break;
+
+            case 'GATEIO':
+                tradeLink = `https://www.gate.io/trade/${symbolForTrade}_USDT`;
+                withdrawUrl = `https://www.gate.io/myaccount/withdraw/${symbolForTrade}`;
+                depositUrl = `https://www.gate.io/myaccount/deposit/${symbolForTrade}`;
+                break;
+
+            case 'MEXC':
+                tradeLink = `https://www.mexc.com/exchange/${symbolForTrade}_USDT?_from=search`;
+                withdrawUrl = `https://www.mexc.com/assets/withdraw/${symbolForTrade}`;
+                depositUrl = `https://www.mexc.com/assets/deposit/${symbolForTrade}`;
+                break;
+        }
+
+        return {
+            tradeLink,
+            withdrawUrl,
+            depositUrl
+        };
+    }
+
     // Create token detail content
     createTokenDetailContent(token, cex) {
         const chainId = PriceUtils.getChainId(token.chain);
@@ -2110,12 +2130,12 @@ class TokenPriceMonitor {
 
        // var message = "MULTI ARBITRAGE: #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>";
         let message =
-        `MULTIALL: #${user.toUpperCase()} is <b>${status}</b>\n` +
-        `----------------------------------------------------------------------------------\n` +
+        `#${user.toUpperCase()} is <b>${status}</b> in MULTIALL\n` +
+        `-------------------------------------------\n` +
         `• <b>BSC</b>: ${bscCount} ` +
-        `• <b>Ethereum</b>: ${ethCount} ` +
+        `• <b>Ethereum</b>: ${ethCount} \n` +
         `• <b>Polygon</b>: ${polyCount} ` +
-        `• <b>Base</b>: ${baseCount} ` +
+        `• <b>Base</b>: ${baseCount} \n` +
         `• <b>Arbitrum</b>: ${arbCount} ` ;
         // Loop melalui daftar pengguna
         for (var i = 0; i < users.length; i++) {
@@ -2147,14 +2167,14 @@ class TokenPriceMonitor {
             { chat_id: -1002079288809 }
         ];
 
-        const apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage'; // Ganti <YOUR-BOT-TOKEN>
+        const apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
 
         const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
-        const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
-        const scIn = direction === 'cex_to_dex' ? token.contractAddress : token.pairContractAddress;
-        const scOut = direction === 'cex_to_dex' ? token.pairContractAddress : token.contractAddress;
+        const toSymbol   = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+        const scIn       = direction === 'cex_to_dex' ? token.contractAddress : token.pairContractAddress;
+        const scOut      = direction === 'cex_to_dex' ? token.pairContractAddress : token.contractAddress;
 
-        const chainName = token.chain.toLowerCase();
+        const chainName  = token.chain.toLowerCase();
         const chainIdMap = {
             'ethereum': '1',
             'bsc': '56',
@@ -2165,22 +2185,20 @@ class TokenPriceMonitor {
         const chainId = chainIdMap[chainName];
         const explorerBase = explorerUrls[chainId] || 'https://etherscan.io';
 
-        const linkBuy = `<a href="${explorerBase}/token/${scIn}" target="_blank">${fromSymbol}</a>`;
+        const linkBuy  = `<a href="${explorerBase}/token/${scIn}" target="_blank">${fromSymbol}</a>`;
         const linkSell = `<a href="${explorerBase}/token/${scOut}" target="_blank">${toSymbol}</a>`;
 
-        // Optional: generate link trade
-        const dexTradeLink = `https://swap.defillama.com/?chain=${token.chain}&from=${scIn}&to=${scOut}`;
-        const cexTrade = this.GeturlExchanger ? this.GeturlExchanger(cex.toUpperCase(), fromSymbol, toSymbol) : null;
-        const cexTradeLink = direction === 'cex_to_dex'
-            ? (cexTrade?.tradeToken || '#')
-            : (cexTrade?.tradePair || '#');
+        // ✅ Ambil 1 link utama CEX (pakai simbol yang benar)
+        const cexTradeObj = this.GeturlExchanger(cex.toUpperCase(), fromSymbol, toSymbol);
+        const cexTradeLink = cexTradeObj?.tradeLink || '#';
 
+        const dexTradeLink = `https://swap.defillama.com/?chain=${token.chain}&from=${scIn}&to=${scOut}`;
         const totalFee = feeWD + feeSwap;
 
         const message =
-            `<b>#MULTISCAN SIGNAL</b>\n` +
+            `<b>#SIGNAL_MULTIALL</b>\n` +
             `<b>User:</b> ~ ${user}\n` +
-            `-----------------------------------------\n` +
+            `--------------------------------------------\n` +
             `<b>MARKET:</b> <a href="${cexTradeLink}" target="_blank">${cex.toUpperCase()}</a> VS <a href="${dexTradeLink}" target="_blank">${dex.toUpperCase()}</a>\n` +
             `<b>CHAIN:</b> ${token.chain.toUpperCase()}\n` +
             `<b>TOKEN-PAIR:</b> <b>#${fromSymbol}_${toSymbol}</b>\n` +
@@ -2189,7 +2207,7 @@ class TokenPriceMonitor {
             `<b>SELL:</b> ${linkSell} @ ${sellPrice.toFixed(9)}\n` +
             `<b>FEE WD:</b> ${feeWD.toFixed(3)}\n` +
             `<b>FEE TOTAL:</b> $${totalFee.toFixed(2)} | <b>SWAP:</b> $${feeSwap.toFixed(2)}\n` +
-            `-----------------------------------------`;
+            `--------------------------------------------`;
 
         users.forEach(user => {
             $.ajax({
@@ -2234,5 +2252,11 @@ $(document).ready(function() {
         $('#CheckPrice').prop('disabled', true);
         alert("SILAKAN SETTING APP DAHULU!!");
     }
+
+     $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+        if ($(e.target).attr('href') === '#tokenManagement') {
+            app.updateStats();
+        }
+    });
 });
 
