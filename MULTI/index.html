@@ -396,7 +396,7 @@
                     <!-- Kanan: Statistik -->
                     <div class="text-end small">                        
                         <div class="d-flex flex-wrap gap-3">
-                            <div class="fw-bold text-secondary">📊 Statistik Token </div>: <div class="text-success">Total: <span id="totalTokensMonitoring" class="fw-bold">0</span></div> [
+                            <div class="fw-bold text-secondary">📊 Statistik Token ~ <span id="totalBarisMonitoring" class="fw-bold text-danger">0</span> Baris</div>: <div class="text-success">Total: <span id="totalTokensMonitoring" class="fw-bold">0</span> Coins</div> [
                             <div class="text-warning">BSC: <span id="bscCountMonitoring" class="fw-bold">0</span></div>
                             <div class="text-primary">ETH: <span id="ethCountMonitoring" class="fw-bold">0</span></div>
                             <div class="text-info">Polygon: <span id="polyCountMonitoring" class="fw-bold">0</span></div>
@@ -407,13 +407,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="d-flex justify-content-between align-items-center mb-2 px-2">
-                    <input type="text" id="monitoringSearch" class="form-control form-control-sm" placeholder="🔍 Cari Token..." style="width: 200px;">
-
-                    <button class="btn btn-outline-secondary btn-sm" id="sortByToken">
-                        Sort A-Z <i id="sortIcon" class="bi bi-sort-alpha-down"></i>
-                    </button>
-                </div> -->
 
                 <div class="card">
                     <div class="card-body p-0">
@@ -423,10 +416,7 @@
                                     <tr>
                                         <th rowspan="2" class="text-center align-middle">CEX</th>
                                         <th colspan="6" class="text-center align-middle">CEX → DEX</th>
-                                        <!-- <th rowspan="2" class="text-center align-middle token-detail-header">DETAIL TOKEN</th> -->
-                                        <th rowspan="2" class="text-center align-middle token-detail-header" style="cursor:pointer;" id="sortByToken">
-                                            DETAIL TOKEN 
-                                        </th>
+                                        <th rowspan="2" class="text-center align-middle token-detail-header">DETAIL TOKEN</th>
                                         <th colspan="6" class="text-center align-middle">DEX → CEX</th>
                                         <th rowspan="2" class="text-center align-middle">CEX</th>
                                     </tr>
@@ -547,18 +537,18 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label">Jumlah Anggota</label>
+                                        <label class="form-label">Jumlah Anggota [1-5]</label>
                                         <input type="number" class="form-control" id="tokensPerBatch" min="1" max="5" required>
                                         <small class="form-text text-muted">Number of Grups</small>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Jeda Antar Grup (ms)</label>
-                                        <input type="number" class="form-control" id="delayBetweenGrup" min="500" max="5000" required>
+                                        <label class="form-label">Jeda Antar Grup (ms) [300-5000]</label>
+                                        <input type="number" class="form-control" id="delayBetweenGrup" min="300" max="5000" required>
                                         <small class="form-text text-muted">Delay between Grups</small>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Waktu Tunggu (ms)</label>
-                                        <input type="number" class="form-control" id="TimeoutCount" min="3000" max="5000" required>
+                                        <label class="form-label">Waktu Tunggu (ms) [1000-5000]</label>
+                                        <input type="number" class="form-control" id="TimeoutCount" min="1000" max="5000" required>
                                         <small class="form-text text-muted">Time Out </small>
                                     </div>
                                     <div class="mb-3">
