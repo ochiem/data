@@ -317,16 +317,87 @@ const DEXAPIs = {
 
     getOKXDEXPrice: function(fromToken, toToken, amountIn, chainName) {
         const apiKeys = [
-            {
-                ApiKeyOKX: "47953eea-d5aa-43f9-9d56-34966978d693",
-                secretKeyOKX: "11C0BD3536C759C5A5E5F7A70077A483",
-                PassphraseOKX: "2017-Ochiem"
-            },
-            {
-                ApiKeyOKX: "fb673273-7b7e-4857-b30d-316e5600e13c",
-                secretKeyOKX: "C6F812C9670DE4327408BB21B09F38BC",
-                PassphraseOKX: "2017-Ochiem"
-            }
+          {
+            ApiKeyOKX: "47953eea-d5aa-43f9-9d56-34966978d693",
+            secretKeyOKX: "11C0BD3536C759C5A5E5F7A70077A483",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "22747ba1b56f9da3a7c10140cb95ffa5"
+        },{
+            ApiKeyOKX: "fb673273-7b7e-4857-b30d-316e5600e13c",
+            secretKeyOKX: "C6F812C9670DE4327408BB21B09F38BC",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "ebb6d5612181cb993230ca49c7b50cb8"
+        },{
+            ApiKeyOKX: "6db77592-fb30-466e-ae0e-c7f3ae15ce7c",
+            secretKeyOKX: "BAFD1D91B6D359DCB92629FD44852307",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "df27a64d6c0130624609cc5b56c274d0"
+        },{
+            ApiKeyOKX: "9ed6219f-980c-417a-a544-055c937b4296",
+            secretKeyOKX: "17CEA820AF94463DB8AC6AEC283287D0",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "c95a51b2e06febfbe3976621beb95975"
+        },{
+            ApiKeyOKX: "7540524b-85a7-440b-84e4-f71280ec8919",
+            secretKeyOKX: "A992D6F2890740F8509587868C8A37A3",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "55b213a813f3fd8080a209acdc4aec9b"
+        },{
+            ApiKeyOKX: "46df841b-4e72-4f3f-a91c-1d1a9b315708",
+            secretKeyOKX: "DA06455105A85C3F770C6E01AC42F9DA",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "3174e031e2d03982662688a2734d542e"
+        },{
+            ApiKeyOKX: "3a3e9296-6c13-4562-84d8-7f4824fb7ac7",
+            secretKeyOKX: "1DD3C44F3CA652D4478F739E15C84515",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "9c6ae2d2465046deb6e2965b28a07c42"
+        },{
+            ApiKeyOKX: "d675d069-4054-4932-a8b1-303b981b8124",
+            secretKeyOKX: "2D957A6AAFA1DB1D521296FB0D89F151",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "54e89c9d24d9fb531c527661c84f42dc"
+        },{
+            ApiKeyOKX: "32ecce69-add4-4fda-984e-7cb34a22797f",
+            secretKeyOKX: "5FB9974EA1AC161A27DB68BA51531534",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "35379ea55673bc3516eb8026539be558"
+        },{
+            ApiKeyOKX: "cccd8b36-a09a-4578-9837-48135f0ff230",
+            secretKeyOKX: "EEA4E6EE19EBCDB8CD59F52A9FC8B3CD",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "bab376dfe9e2815c5902e7694bed486e"
+        },{
+            ApiKeyOKX: "8a059b63-002c-471d-b495-5e55b15bf12a",
+            secretKeyOKX: "CAC05FFFD91F84230AA5E8BA0E06B172",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "df1bcaf4acca274c769fc170a7f9dcbb"
+        },{
+            ApiKeyOKX: "75b75f5e-dbd3-4948-a5ce-77af8871e6ac",
+            secretKeyOKX: "5D9F841F0B57E8D51DC574EBE487748C",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "ca2ed1bae58cacd15cf1006a933a2c94"
+        },{
+            ApiKeyOKX: "54aa3296-d6ab-4873-a5bb-b00d2b006015",
+            secretKeyOKX: "971AC2D6264E45F895D446D878B55AE4",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "7304207d79c2df4956d5fdd9f1afc2c2"
+        },{
+            ApiKeyOKX: "3f6b0085-2d3a-4fc0-8917-a555d1cd259c",
+            secretKeyOKX: "68A12A595AA5EA5EFC03DDBAD452DBD6",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "591778696ad3438a4266b0bbd6297d2e"
+        },{
+            ApiKeyOKX: "3b96a61f-68fd-4d4c-94d9-ff357ef2fb83",
+            secretKeyOKX: "3E29ED11AF70FCC530C39948BFAA2405",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "0fbd7084efbd79e915f99701aa989c28"
+        },{
+            ApiKeyOKX: "94e7d78e-708f-48ff-814d-70a1f3e6fd49",
+            secretKeyOKX: "2FD013E26D1309B2B532407FFD4BC097",
+            PassphraseOKX: "2017-Ochiem",
+            ProjectOKX: "8607ef99dc6e31a80e21b16f914a0f18"
+        },
         ];
 
         const selectedKey = apiKeys[Math.floor(Math.random() * apiKeys.length)];
@@ -488,6 +559,14 @@ const PriceUtils = {
         const cost = buyPrice * amount + fee;
         return revenue - cost;
     },
+
+    //calculatePNL: function(buyPrice, sellPrice, amount) {
+    //     const feeRate = 0.001; // 0.1%
+    //     const cost = buyPrice * amount;
+    //     const fee = cost * feeRate;
+    //     const revenue = sellPrice * amount;
+    //     return revenue - (cost + fee); // total modal = cost + fee
+    // },
 
     // Format fee display
     formatFee: function(fee) {
