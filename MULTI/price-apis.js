@@ -32,7 +32,7 @@ function calculateSignature(exchange, apiSecret, dataToSign, hashMethod = "HmacS
 const CEXAPIs = {
     getBinanceOrderBook: async function(pair) {
         if (pair.baseSymbol === 'USDT' && pair.quoteSymbol === 'USDT') {
-            console.warn('⏭️ Skip Binance USDT/USDT ');
+            //console.warn('⏭️ Skip Binance USDT/USDT ');
             return {
                 buy: 1, sell: 1, topAsks: [], topBids: [], quotePriceUSDT: 1
             };
@@ -59,7 +59,7 @@ const CEXAPIs = {
 
     getMEXCOrderBook: async function(pair) {
         if (pair.baseSymbol === 'USDT' && pair.quoteSymbol === 'USDT') {
-            console.warn('⏭️ Skip MEXC USDT/USDT ');
+          //  console.warn('⏭️ Skip MEXC USDT/USDT ');
             return {
                 buy: 1, sell: 1, topAsks: [], topBids: [], quotePriceUSDT: 1
             };
@@ -86,7 +86,7 @@ const CEXAPIs = {
 
     getGateOrderBook: async function(pair) {
         if (pair.baseSymbol === 'USDT' && pair.quoteSymbol === 'USDT') {
-            console.warn('⏭️ Skip Gate.io USDT/USDT ');
+           // console.warn('⏭️ Skip Gate.io USDT/USDT ');
             return {
                 buy: 1, sell: 1, topAsks: [], topBids: [], quotePriceUSDT: 1
             };
@@ -506,7 +506,7 @@ const PriceUtils = {
         if (price === 0) return '$0.0000';
 
         if (price >= 1) {
-            return `${price.toFixed(3)}`;
+            return `${price.toFixed(4)}`;
         }
 
         let strPrice = price.toFixed(20).replace(/0+$/, '');
@@ -517,9 +517,9 @@ const PriceUtils = {
             let significant = match[2].substring(0, 4).padEnd(4, '0');
 
             if (zeroCount >= 2) {
-                return `0.{${zeroCount}}${significant}$`;
+                return `0.{${zeroCount}}${significant}`;
             } else {
-                return `0.${match[1]}${significant}$`;
+                return `0.${match[1]}${significant}`;
             }
         }
 

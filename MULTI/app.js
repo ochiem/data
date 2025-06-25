@@ -112,12 +112,25 @@ class TokenPriceMonitor {
     // Bind event handlers
     bindEvents() {
 
-        $('#CheckPrice').on('click', async () => {
+       $('#CheckPrice').on('click', async () => {
+            // Sembunyikan tab Token Management dan Settings Aplikasi
+            const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
+            const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
+            tabToken.hide();
+            tabSetting.hide();
+
             this.generateEmptyTable();
-            this.initPNLSignalStructure(); 
-            this.sendStatusTELE("TEST", 'ONLINE');
+            this.initPNLSignalStructure();
+            this.sendStatusTELE(this.settings.UserName, 'ONLINE');
+
             $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
+
             await this.CheckPricess();
+
+            // Tampilkan kembali tab setelah selesai scanning
+            tabToken.show();
+            tabSetting.show();
+
             $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
         });
 
@@ -279,11 +292,11 @@ class TokenPriceMonitor {
 
                 const rowHTML = `
                 <tr id="${rowId}" class="token-data-row text-center">
-                    <td id="${orderbookLeftId.toLowerCase()}" class="orderbook-cex text-muted small">${cex}🔒</td>
+                    <td id="${orderbookLeftId.toLowerCase()}" class="orderbook-cex text-muted ">${cex}🔒</td>
                     ${dexCEXtoDEX}
                     <td class="token-detail-cell">${detailHTML}</td>
                     ${dexDEXtoCEX}
-                    <td id="${orderbookRightId.toLowerCase()}" class="orderbook-dex text-muted small">${cex}🔒</td>
+                    <td id="${orderbookRightId.toLowerCase()}" class="orderbook-dex text-muted ">${cex}🔒</td>
                 </tr>
                 `;
 
@@ -349,11 +362,6 @@ class TokenPriceMonitor {
         } else if (direction === 'dex_to_cex') {
             $(`#${orderbookRightId}`).html(rightText || '-');
         }
-
-        // console.log(`[ORDERBOOK] ${direction} for ${base}/${quote} on ${cexName}`, {
-        //     leftText,
-        //     rightText
-        // });
     }
 
     // LocalStorage operations
@@ -373,7 +381,7 @@ class TokenPriceMonitor {
         return settings ? JSON.parse(settings) : {
             tokensPerBatch: 3, // jumlah anggota
             UserName: 'XXX', // jeda antar member
-            delayBetweenGrup: 1300, // jeda batch
+            delayBetweenGrup: 1000, // jeda batch
             TimeoutCount: 3000, // timeout waktu tunggu
             WalletAddress: '-'
         };
@@ -508,8 +516,8 @@ class TokenPriceMonitor {
                         <br><small class="text-muted">${this.shortenAddress(token.contractAddress)} / ${this.shortenAddress(token.pairContractAddress)}</small>
                     </td>
                     <td>${chainBadge}</td>
-                    <td>${cexBadges}</td>
-                    <td>${dexBadges}</td>
+                    <td><strong>Modal: $${token.modalCexToDex}</strong> <br/>${cexBadges}</td>
+                    <td><strong>Modal: $${token.modalDexToCex}</strong> <br/>${dexBadges}</td>
                     <td>${statusBadge}</td>
                     <td>
                         <div class="btn-group btn-group-sm">
@@ -595,12 +603,18 @@ class TokenPriceMonitor {
         const bscCount = activeTokens.filter(t => t.chain === 'BSC').length;
         const ethCount = activeTokens.filter(t => t.chain === 'Ethereum').length;
         const polyCount = activeTokens.filter(t => t.chain === 'Polygon').length;
+        const baseCount = activeTokens.filter(t => t.chain === 'Base').length;
+        const arbCount = activeTokens.filter(t => t.chain === 'Arbitrum').length;
+        const solCount = activeTokens.filter(t => t.chain === 'Solana').length;
 
         $('#totalTokens').text(this.tokens.length);
         $('#activeTokens').text(activeTokens.length);
         $('#bscCount').text(bscCount);
         $('#ethCount').text(ethCount);
         $('#polyCount').text(polyCount);
+        $('#arbCount').text(bscCount);
+        $('#baseCount').text(ethCount);
+        $('#solCount').text(polyCount);
     }
 
     // Form operations
@@ -699,7 +713,7 @@ class TokenPriceMonitor {
         const tokensPerBatch = parseInt($('#tokensPerBatch').val());
         const delayBetweenGrup = parseInt($('#delayBetweenGrup').val());
         const timeoutCount = parseInt($('#TimeoutCount').val());
-        const walletAddress = $('#retryDelay').val()?.trim(); // catatan: ID inputnya retryDelay
+        const walletAddress = $('#WalletAddress').val()?.trim(); // catatan: ID inputnya retryDelay
 
         // 🔸 Validasi form settings
         if (!userName || userName === 'XXX') {
@@ -867,7 +881,7 @@ class TokenPriceMonitor {
         // 🕒 Mulai timer
         const startTime = new Date();
         const startStr = startTime.toLocaleTimeString(); // HH:MM:SS
-        $('#scanTimeInfo').html(`<span class="text-secondary">&nbsp;🕒 Mulai: ${startStr}</span>&nbsp;&nbsp;`);
+        $('#scanTimeInfo').html(`<span class="text-secondary">&nbsp;🕒 Mulai: ${startStr}</span>&nbsp;`);
 
         try {
             for (const batch of tokenBatches) {
@@ -901,6 +915,7 @@ class TokenPriceMonitor {
                             await this.fetchDEXPrices(token, priceData, dexName, cexName, 'dex_to_cex');
                         }
                     }
+                    console.log(priceData);
                 }));
 
                 if (delayBetweenGrup > 0) {
@@ -1165,7 +1180,17 @@ class TokenPriceMonitor {
                 ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
                 : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
 
-            $(`#${cellId.toLowerCase().replace(/\W+/g, '')}`).html(`<div class="text-danger">❌</div>`);
+            let errorMessage = 'Unknown error';
+            if (err?.response?.error) {
+                errorMessage = err.response.error;
+            } else if (err?.message) {
+                errorMessage = err.message;
+            }
+            $(`#${cellId.toLowerCase().replace(/\W+/g, '')}`).html(`
+                <div class="text-danger" title="${errorMessage}">❌</div>
+            `);
+
+//            $(`#${cellId.toLowerCase().replace(/\W+/g, '')}`).html(`<div class="text-danger">❌</div>`);
         }
     }
 
@@ -1470,15 +1495,16 @@ class TokenPriceMonitor {
 
             const modalText = `$${modal}`;
             const pnlText = `$${pnl.toFixed(2)}`;
-
-            const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(fromSide, 'cex'));
-            const dexColor = this.getTextColorClassFromBadge(this.getBadgeColor(toSide, 'dex'));
+            const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(cexName, 'cex'));
             const chainColor = this.getTextColorClassFromBadge(this.getBadgeColor(token.chain, 'chain'));
             const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '').toLowerCase()}`;
-            const signalText = `<a href="#${rowId}" class="text-decoration-none text-dark">
 
-                <span class="${cexColor} fw-bold">${fromSide.toUpperCase()}</span> →
-                <span class="${dexColor} fw-bold">${toSide.toUpperCase()}</span> 
+            const directionLabel = direction === 'cex_to_dex'
+                ? ` <span class="text-success fw-bold"> DARI </span> <span class="${cexColor} fw-bold">${fromSide.toUpperCase()}</span>`
+                : ` <span class="text-danger fw-bold"> KE </span> <span class="${cexColor} fw-bold">${toSide.toUpperCase()}</span>`;
+
+            const signalText = `<a href="#${rowId}" class="text-decoration-none text-dark">
+                ${directionLabel}
                 <span class="${chainColor} fw-bold">[${chainLabel}]</span> : 
                 <span class="text-secondary fw-bold">${modalText} (${fromSymbol} → ${toSymbol}) = </span>
                 <span class="text-success fw-bold"> PNL: ${pnlText}</span>
@@ -1490,6 +1516,23 @@ class TokenPriceMonitor {
             if (listEl) {
                 listEl.innerHTML = `${this.pnlSignals[dexKey].join(' | ')}`;
             }
+            // ✅ Kirim sinyal ke Telegram
+            const modalValue = parseFloat(modal);
+            const feeWD = 0.000; // Ganti jika Anda punya data withdrawal fee
+
+            this.sendInfoSignal(
+                this.settings.UserName || 'Anon',
+                token,
+                cexName,
+                dexName,
+                buyPrice,
+                sellPrice,
+                feeWD,
+                fee,
+                pnl,
+                direction,
+                modalValue
+            );
         }
 
         return `<td id="${cleanCellId}" class="dex-price-cell align-middle" style="${tdStyle}" title="${tooltip}">
@@ -1501,132 +1544,7 @@ class TokenPriceMonitor {
                     <a href="${sellLink}" target="_blank">${PriceUtils.formatPrice(sellPrice)}</a>
                 </span>
             </div>
-            <div class="fee-info">Swap: ${PriceUtils.formatFee(fee)}</div>
-            <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
-        </td>`;
-    }
-
-    CellResultLAMA(token, cexInfo, dexInfo, direction, dexName) {
-        const cexName = token.selectedCexs[0] || 'CEX';
-
-        let cellId = direction === 'cex_to_dex'
-            ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
-            : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
-        cellId = cellId.toLowerCase().replace(/\W+/g, '');
-
-        const linkSwap = direction === 'cex_to_dex'
-            ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
-            : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
-
-        // DEX tidak dipilih
-        if (!(token.selectedDexs || []).includes(dexName)) {
-            return `<td id="${cellId}" class="dex-price-cell text-muted text-center">
-                <div class="price-info">&nbsp;</div>
-                <div class="fee-info">---</div>
-                <div class="pnl-info">&nbsp;</div>
-            </td>`;
-        }
-
-        // DEX error
-        if (!dexInfo || dexInfo.error) {
-            const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
-            return `<td id="${cellId}" class="dex-price-cell text-danger text-center bg-danger-subtle">
-                <div class="price-info">&nbsp;</div>
-                <div class="fee-info" title="${dexName}: ${errorMsg}">❌</div>
-                <div class="pnl-info">&nbsp;</div>
-            </td>`;
-        }
-
-        const fee = dexInfo.fee || 0;
-        const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
-
-        // ✅ Bentuk CEX key → base always bukan USDT
-        const base = token.symbol.toUpperCase() === 'USDT' ? token.pairSymbol.toUpperCase() : token.symbol.toUpperCase();
-        const cexKey = `${base}ToUSDT`;
-        const cexData = cexInfo?.[cexKey] || {};
-
-        let buyPrice = 0;
-        let sellPrice = 0;
-
-        if (direction === 'cex_to_dex') {
-            buyPrice = cexData.buy || 0;
-            sellPrice = dexInfo?.price || 0;
-        } else {
-            buyPrice = dexInfo?.rawRate || 0;
-            sellPrice = cexData.sell || 0;
-        }
-
-        if (!buyPrice || !sellPrice) {
-            return `<td id="${cellId}" class="dex-price-cell text-center text-muted">
-                <div class="text-muted small">⚠️</div>
-            </td>`;
-        }
-
-        const qty = modal / buyPrice;
-        const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
-        const isPNLPositive = pnl > fee;
-        const tdStyle = isPNLPositive ? 'background-color:rgb(183, 235, 212) !important;' : '';
-        const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
-
-        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), token.symbol, token.pairSymbol);
-        const cexLink = direction === 'cex_to_dex' ? cexLinks.tradeToken : cexLinks.tradePair;
-        const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
-        const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
-
-        const tooltip = `
-            ${direction.replace(/_/g, ' ').toUpperCase()} via ${dexName}
-            Modal: $${modal}
-            Buy @: $${buyPrice}
-            Sell @: $${sellPrice}
-            Fee: $${fee}
-            PNL: $${pnl.toFixed(4)}
-        `.trim();
-
-        if (isPNLPositive) {
-            this.pnlSignals = this.pnlSignals || {};
-            const dexKey = dexName.toUpperCase();
-            this.pnlSignals[dexKey] = this.pnlSignals[dexKey] || [];
-
-            const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
-            const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
-            const fromSide = direction === 'cex_to_dex' ? cexName : dexName;
-            const toSide = direction === 'cex_to_dex' ? dexName : cexName;
-            const chainLabel = token.chain?.toUpperCase() || 'CHAIN';
-
-            const modalText = `$${modal}`;
-            const pnlText = `$${pnl.toFixed(2)}`;
-            const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '').toLowerCase()}`;
-            const linkHref = `#${rowId}`;
-
-            const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(fromSide, 'cex'));
-            const dexColor = this.getTextColorClassFromBadge(this.getBadgeColor(toSide, 'dex'));
-            const chainColor = this.getTextColorClassFromBadge(this.getBadgeColor(token.chain, 'chain'));
-
-            const signalText = `<a href="${linkHref}" class="text-decoration-none text-dark">
-                <span class="${cexColor} fw-bold">${fromSide.toUpperCase()}</span> → 
-                <span class="${dexColor} fw-bold">${toSide.toUpperCase()}</span> 
-                <span class="${chainColor} fw-bold">[${chainLabel}]</span> : 
-                <span class="text-secondary fw-bold">${modalText} (${fromSymbol} → ${toSymbol}) = </span>
-                <span class="text-success fw-bold"> PNL: ${pnlText}</span>
-            </a>`;
-
-            this.pnlSignals[dexKey].push(signalText);
-
-            const listEl = document.getElementById(`pnl-list-${dexKey}`);
-            if (listEl) {
-                listEl.innerHTML = `${this.pnlSignals[dexKey].join(' | ')}`;
-            }
-        }
-
-        return `<td id="${cellId}" class="dex-price-cell align-middle" style="${tdStyle}" title="${tooltip}">
-            <div class="price-info">
-                <span class="text-success">
-                    <a href="${buyLink}" target="_blank">${PriceUtils.formatPrice(buyPrice)}</a>
-                </span><br>
-                <span class="text-danger">
-                    <a href="${sellLink}" target="_blank">${PriceUtils.formatPrice(sellPrice)}</a>
-                </span>
-            </div>
+            <div class="fee-info">WD: XXX </div>
             <div class="fee-info">Swap: ${PriceUtils.formatFee(fee)}</div>
             <div class="pnl-info ${pnlClass}">PNL: ${PriceUtils.formatPNL(pnl)}</div>
         </td>`;
@@ -1715,8 +1633,8 @@ class TokenPriceMonitor {
             matcha: `https://matcha.xyz/tokens/${chainName}/${tokenAddress.toLowerCase()}?buyChain=${chainCode}&buyAddress=${pairAddress.toLowerCase()}`,
             magpie: `https://app.magpiefi.xyz/swap/${chainName}/${tokenSymbol.toUpperCase()}/${chainName}/${pairSymbol.toUpperCase()}`,
             odos: "https://app.odos.xyz",
-            OKXDEX: `https://www.okx.com/web3/dex-swap?inputChain=${chainCode}&inputCurrency=${tokenAddress}&outputChain=501&outputCurrency=${pairAddress}`,
-            ParaSwap: `https://app.ParaSwap.xyz/#/swap/${tokenAddress}-${pairAddress}?version=6.2&network=${chainName}`,
+            okxdex: `https://www.okx.com/web3/dex-swap?inputChain=${chainCode}&inputCurrency=${tokenAddress}&outputChain=501&outputCurrency=${pairAddress}`,
+            paraswap: `https://app.ParaSwap.xyz/#/swap/${tokenAddress}-${pairAddress}?version=6.2&network=${chainName}`,
         };
 
         return links[dex.toLowerCase()] || null;
@@ -1958,9 +1876,27 @@ class TokenPriceMonitor {
             { chat_id: -1002079288809 }
         ];
 
+         // Ambil hanya token yang aktif
+        const activeTokens = this.tokens.filter(t => t.isActive);
+
+        // Hitung jumlah per chain
+        const bscCount = activeTokens.filter(t => t.chain === 'BSC').length;
+        const ethCount = activeTokens.filter(t => t.chain === 'Ethereum').length;
+        const polyCount = activeTokens.filter(t => t.chain === 'Polygon').length;
+        const baseCount = activeTokens.filter(t => t.chain === 'Base').length;
+        const arbCount = activeTokens.filter(t => t.chain === 'Arbitrum').length;
+        const solCount = activeTokens.filter(t => t.chain === 'Solana').length;
         var apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
 
-        var message = "MULTI ARBITRAGE: #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>";
+       // var message = "MULTI ARBITRAGE: #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>";
+        let message =
+        `MULTIALL: #${user.toUpperCase()} is <b>${status}</b>\n` +
+        `----------------------------------------------------------------------------------\n` +
+        `• <b>BSC</b>: ${bscCount} ` +
+        `• <b>Ethereum</b>: ${ethCount} ` +
+        `• <b>Polygon</b>: ${polyCount} ` +
+        `• <b>Base</b>: ${baseCount} ` +
+        `• <b>Arbitrum</b>: ${arbCount} ` ;
         // Loop melalui daftar pengguna
         for (var i = 0; i < users.length; i++) {
             var user = users[i];
@@ -1984,6 +1920,132 @@ class TokenPriceMonitor {
             }
             });
           }
+    }
+
+    sendInfoSignalLAMA(user, token, cex, dex, buyPrice, sellPrice, feeWD, feeSwap, pnl, direction, modal) {
+        var users = [
+            { chat_id: -1002079288809 }
+        ];
+
+        var apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
+
+        const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+        const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+        const scIn = direction === 'cex_to_dex' ? token.contractAddress : token.pairContractAddress;
+        const scOut = direction === 'cex_to_dex' ? token.pairContractAddress : token.contractAddress;
+
+        const chainUrl = token.chain.toLowerCase() === 'solana'
+            ? `https://solscan.io/token`
+            : `https://etherscan.io/token`;
+
+        const linkBuy = `<a href="${chainUrl}/${scIn}" target="_blank">${fromSymbol}</a>`;
+        const linkSell = `<a href="${chainUrl}/${scOut}" target="_blank">${toSymbol}</a>`;
+
+        const totalFee = feeWD + feeSwap;
+
+        let message =
+            `<b>#MULTISCAN SIGNAL v1.7</b>\n` +
+            `<b>User:</b> ~ ${user}\n` +
+            `<b>-----------------------------------------</b>\n` +
+            `<b>MARKET:</b> ${cex} VS ${dex}\n` +
+             `<b>CHAIN:</b> ${(token.chain).toUpperCase()}\n` +
+            `<b>TOKEN-PAIR:</b> <b>#${fromSymbol}_${toSymbol}</b>\n` +
+            `<b>MODAL:</b> $${modal} | <b>PROFIT:</b> $${pnl.toFixed(2)}\n` +
+            `<b>BUY:</b> ${linkBuy} @ ${buyPrice.toFixed(9)}\n` +
+            `<b>SELL:</b> ${linkSell} @ ${sellPrice.toFixed(9)}\n` +
+            `<b>FEE WD:</b> ${feeWD.toFixed(3)}\n` +
+            `<b>FEE TOTAL:</b> $${totalFee.toFixed(2)} | <b>SWAP:</b> $${feeSwap.toFixed(2)}\n` +
+            `<b>-----------------------------------------</b>`;
+
+        for (let i = 0; i < users.length; i++) {
+            const chatId = users[i].chat_id;
+
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function () {
+                    console.log("✅ Signal berhasil dikirim ke Telegram");
+                },
+                error: function (xhr, status, error) {
+                    console.error("❌ Gagal kirim ke Telegram:", error);
+                }
+            });
+        }
+    }
+
+    sendInfoSignal(user, token, cex, dex, buyPrice, sellPrice, feeWD, feeSwap, pnl, direction, modal) {
+        const users = [
+            { chat_id: -1002079288809 }
+        ];
+
+        const apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage'; // Ganti <YOUR-BOT-TOKEN>
+
+        const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+        const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+        const scIn = direction === 'cex_to_dex' ? token.contractAddress : token.pairContractAddress;
+        const scOut = direction === 'cex_to_dex' ? token.pairContractAddress : token.contractAddress;
+
+        const chainName = token.chain.toLowerCase();
+        const chainIdMap = {
+            'ethereum': '1',
+            'bsc': '56',
+            'polygon': '137',
+            'arbitrum': '42161',
+            'base': '8453',
+        };
+        const chainId = chainIdMap[chainName];
+        const explorerBase = explorerUrls[chainId] || 'https://etherscan.io';
+
+        const linkBuy = `<a href="${explorerBase}/token/${scIn}" target="_blank">${fromSymbol}</a>`;
+        const linkSell = `<a href="${explorerBase}/token/${scOut}" target="_blank">${toSymbol}</a>`;
+
+        // Optional: generate link trade
+        const dexTradeLink = `https://swap.defillama.com/?chain=${token.chain}&from=${scIn}&to=${scOut}`;
+        const cexTrade = this.GeturlExchanger ? this.GeturlExchanger(cex.toUpperCase(), fromSymbol, toSymbol) : null;
+        const cexTradeLink = direction === 'cex_to_dex'
+            ? (cexTrade?.tradeToken || '#')
+            : (cexTrade?.tradePair || '#');
+
+        const totalFee = feeWD + feeSwap;
+
+        const message =
+            `<b>#MULTISCAN SIGNAL</b>\n` +
+            `<b>User:</b> ~ ${user}\n` +
+            `-----------------------------------------\n` +
+            `<b>MARKET:</b> <a href="${cexTradeLink}" target="_blank">${cex.toUpperCase()}</a> VS <a href="${dexTradeLink}" target="_blank">${dex.toUpperCase()}</a>\n` +
+            `<b>CHAIN:</b> ${token.chain.toUpperCase()}\n` +
+            `<b>TOKEN-PAIR:</b> <b>#${fromSymbol}_${toSymbol}</b>\n` +
+            `<b>MODAL:</b> $${modal} | <b>PROFIT:</b> $${pnl.toFixed(2)}\n` +
+            `<b>BUY:</b> ${linkBuy} @ ${buyPrice.toFixed(9)}\n` +
+            `<b>SELL:</b> ${linkSell} @ ${sellPrice.toFixed(9)}\n` +
+            `<b>FEE WD:</b> ${feeWD.toFixed(3)}\n` +
+            `<b>FEE TOTAL:</b> $${totalFee.toFixed(2)} | <b>SWAP:</b> $${feeSwap.toFixed(2)}\n` +
+            `-----------------------------------------`;
+
+        users.forEach(user => {
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: user.chat_id,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function () {
+                    console.log("✅ Signal berhasil dikirim ke Telegram");
+                },
+                error: function (xhr, status, error) {
+                    console.error("❌ Gagal kirim ke Telegram:", error);
+                }
+            });
+        });
     }
 
 }
