@@ -1812,76 +1812,7 @@ class TokenPriceMonitor {
         return `${explorer}/token/${tokenAddress}?a=${wallet}`;
     }
 
- // ✅ Tambahkan fungsi ini dalam class
-    GeturlExchangerLAMA(cex, NameToken, NamePair) {
-        const token = NameToken.toUpperCase();
-        const pair = NamePair.toUpperCase();
-
-        let tradeLink = null;
-        let withdrawUrl = null;
-        let depositUrl = null;
-
-        const useQuote = token === 'USDT' && pair !== 'USDT'; // base = USDT → trade pair
-        const useBase  = pair === 'USDT' && token !== 'USDT'; // quote = USDT → trade token
-        const useBoth  = token !== 'USDT' && pair !== 'USDT'; // keduanya ≠ USDT
-
-        switch (cex.toUpperCase()) {
-            case 'BINANCE':
-                if (useQuote) {
-                    tradeLink = `https://www.binance.com/en/trade/${pair}_USDT`;
-                    withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${pair}`;
-                    depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${pair}`;
-                } else if (useBase) {
-                    tradeLink = `https://www.binance.com/en/trade/${token}_USDT`;
-                    withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${token}`;
-                    depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${token}`;
-                } else if (useBoth) {
-                    tradeLink = `https://www.binance.com/en/trade/${token}_${pair}`;
-                    withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${token}`;
-                    depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${pair}`;
-                }
-                break;
-
-            case 'GATEIO':
-                if (useQuote) {
-                    tradeLink = `https://www.gate.io/trade/${pair}_USDT`;
-                    withdrawUrl = `https://www.gate.io/myaccount/withdraw/${pair}`;
-                    depositUrl = `https://www.gate.io/myaccount/deposit/${pair}`;
-                } else if (useBase) {
-                    tradeLink = `https://www.gate.io/trade/${token}_USDT`;
-                    withdrawUrl = `https://www.gate.io/myaccount/withdraw/${token}`;
-                    depositUrl = `https://www.gate.io/myaccount/deposit/${token}`;
-                } else if (useBoth) {
-                    tradeLink = `https://www.gate.io/trade/${token}_${pair}`;
-                    withdrawUrl = `https://www.gate.io/myaccount/withdraw/${token}`;
-                    depositUrl = `https://www.gate.io/myaccount/deposit/${pair}`;
-                }
-                break;
-
-            case 'MEXC':
-                if (useQuote) {
-                    tradeLink = `https://www.mexc.com/exchange/${pair}_USDT?_from=search`;
-                    withdrawUrl = `https://www.mexc.com/assets/withdraw/${pair}`;
-                    depositUrl = `https://www.mexc.com/assets/deposit/${pair}`;
-                } else if (useBase) {
-                    tradeLink = `https://www.mexc.com/exchange/${token}_USDT?_from=search`;
-                    withdrawUrl = `https://www.mexc.com/assets/withdraw/${token}`;
-                    depositUrl = `https://www.mexc.com/assets/deposit/${token}`;
-                } else if (useBoth) {
-                    tradeLink = `https://www.mexc.com/exchange/${token}_${pair}?_from=search`;
-                    withdrawUrl = `https://www.mexc.com/assets/withdraw/${token}`;
-                    depositUrl = `https://www.mexc.com/assets/deposit/${pair}`;
-                }
-                break;
-        }
-
-        return {
-            tradeLink,
-            withdrawUrl,
-            depositUrl
-        };
-    }
-
+    // ✅ Tambahkan fungsi ini dalam class
     GeturlExchanger(cex, NameToken, NamePair, direction = 'cex_to_dex') {
         const token = NameToken.toUpperCase();
         const pair = NamePair.toUpperCase();
@@ -1943,15 +1874,16 @@ class TokenPriceMonitor {
         const chainBadgeColor = this.getBadgeColor(token.chain, 'chain');
 
         const url = this.GeturlExchanger(cexUpper, tokenSymbol, pairSymbol);
+        const url2 = this.GeturlExchanger(cexUpper, pairSymbol, tokenSymbol);
 
-        const tokenSC = `<a href="${url.tradeToken}" target="_blank">${tokenSymbol}</a>`;
-        const pairSC = `<a href="${url.tradePair}" target="_blank">${pairSymbol}</a>`;
+        const tokenSC = `<a href="${url2.tradeLink}" target="_blank">${tokenSymbol}</a>`;
+        const pairSC = `<a href="${url.tradeLink}" target="_blank">${pairSymbol}</a>`;
 
         const stokTokenLink = this.generateStokLinkCEX(token.contractAddress, token.chain, cexUpper);
         const stokPairLink = this.generateStokLinkCEX(token.pairContractAddress, token.chain, cexUpper);
 
-        const tokenLink = `<a href="${explorerUrl}/token/${token.contractAddress}" target="_blank">${tokenSymbol}</a>: <a href="${stokTokenLink}" target="_blank">#1</a>`;
-        const pairLink = `<a href="${explorerUrl}/token/${token.pairContractAddress}" target="_blank">${pairSymbol}</a>: <a href="${stokPairLink}" target="_blank">#2</a>`;
+        const tokenLink = `<i class="bi bi-wallet"></i> <a href="${explorerUrl}/token/${token.contractAddress}" target="_blank">${tokenSymbol}</a>: <a href="${stokTokenLink}" target="_blank">#1</a>`;
+        const pairLink = `<i class="bi bi-wallet"></i> <a href="${explorerUrl}/token/${token.pairContractAddress}" target="_blank">${pairSymbol}</a>: <a href="${stokPairLink}" target="_blank">#2</a>`;
 
         const linkOKDEX = `<a href="https://www.okx.com/web3/dex-swap?inputChain=${chainId}&inputCurrency=${token.contractAddress}&outputChain=501&outputCurrency=${token.pairContractAddress}" target="_blank" class="text-dark">#OKX</a>`;
         const linkUNIDEX = `<a href="https://app.unidex.exchange/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="text-info">#UNX</a>`;
@@ -1967,10 +1899,10 @@ class TokenPriceMonitor {
                 </div>
 
                 <div class="text-secondary">
-                    ${tokenSC}
+                    💹 ${tokenSC}
                     <a href="${url.withdrawUrl}" target="_blank" class="text-success">[WD]</a>
                     VS
-                    ${pairSC}
+                    💹 ${pairSC}
                     <a href="${url.depositUrl}" target="_blank" class="text-success">[DP]</a>
                 </div>
                 <div>${tokenLink} | ${pairLink}</div>
@@ -1979,7 +1911,7 @@ class TokenPriceMonitor {
                 </div>
             </div>
         `;
-        }
+    }
 
     // Create empty row when no CEX data
     createEmptyRows(token, dexData) {
