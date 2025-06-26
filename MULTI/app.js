@@ -397,7 +397,7 @@ class TokenPriceMonitor {
                 }
             });
 
-        console.log("VIEW TABLE",activeTokens);    
+       // console.log("VIEW TABLE",activeTokens);    
         if (activeTokens.length === 0) {
             tbody.html(`<tr><td colspan="16" class="text-center text-danger py-7">DATA TIDAK DITEMUAKN / TIDAK ADA DAFTAR TOKEN</td></tr>`);
             return;
@@ -1356,22 +1356,7 @@ class TokenPriceMonitor {
             }
         } catch (err) {
             console.error(`❌ DEX ${dexName} gagal →`,token, err);
-            tokenPriceData.analisis_data[direction][dexName] = tokenPriceData.analisis_data[direction][dexName] || {};
-            tokenPriceData.analisis_data[direction][dexName][`${baseSymbol}To${quoteSymbol}`] = { error: true };
-            // Ganti isi cell dengan error
             this.CellResult(token, cexData, { error: err?.error || err?.message || 'Unknown DEX error' }, direction, dexName);
-
-            const cellId = direction === 'cex_to_dex'
-                ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
-                : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
-
-            let errorMessage = 'Unknown error';
-            if (err?.response?.error) {
-                errorMessage = err.response.error;
-            } else if (err?.message) {
-                errorMessage = err.message;
-            }
-          this.CellResult(token, cexData, { error: errorMessage }, direction, dexName);
         }
     }
 
@@ -1501,8 +1486,12 @@ class TokenPriceMonitor {
             return;
         }
 
+        const feeTrade = modal*0.001; // dari dexInfo
+        const feeWD = 0.000;  // biaya withdraw, bisa diganti dinamis
+        const totalFee = feeTrade + feeWD + fee;
+
         const qty = modal / buyPrice;
-        const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
+        const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, totalFee);
         const isPNLPositive = pnl > fee;
         const tdStyle = isPNLPositive ? 'background-color:rgb(183, 235, 212) !important;' : '';
         const pnlClass = pnl >= 0 ? 'pnl-positive' : 'pnl-negative';
@@ -1514,14 +1503,10 @@ class TokenPriceMonitor {
         const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
         const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
 
-        const feeTrade = modal*0.001; // dari dexInfo
-        const feeWD = 0.000;  // biaya withdraw, bisa diganti dinamis
-        const totalFee = feeTrade + feeWD + fee;
-
         const tokenReceived = qty.toFixed(6);
         const pairReceived = (qty * sellPrice).toFixed(6);
 
-        const tooltip = `            
+        const tooltipLAMA = `            
             ${direction.replace(/_/g, ' ').toUpperCase()} via ${dexName}
             ${fromSymbol} => ${toSymbol}
             Modal: $${modal} 
@@ -1538,7 +1523,49 @@ class TokenPriceMonitor {
             PNL: $${pnl.toFixed(2)}
         `.trim();
 
+        const tooltip = (direction === 'cex_to_dex') ? `
+            CEX → DEX via ${dexName}
 
+            Modal: $${modal}
+            Harga beli ${token.symbol}: $${buyPrice.toFixed(8)}
+            ⇒ Jumlah: ${qty.toFixed(4)} ${token.symbol}
+
+            Swap rate (DEX): 1 ${token.symbol} = ${sellPrice.toFixed(8)} ${token.pairSymbol}
+            ⇒ Hasil: ${(qty * sellPrice).toFixed(4)} ${token.pairSymbol}
+
+            Konversi ${token.pairSymbol} ke USDT via CEX:
+            Harga ${token.pairSymbol} di CEX: $${cexInfo?.[`${token.pairSymbol.toUpperCase()}ToUSDT`]?.buy?.toFixed(6) || 'N/A'}
+            ⇒ Nilai akhir: $${(qty * sellPrice * (cexInfo?.[`${token.pairSymbol.toUpperCase()}ToUSDT`]?.buy || 0)).toFixed(2)}
+
+            Fee Trade: $${feeTrade.toFixed(2)}
+            Fee Swap: $${fee.toFixed(2)}
+            Fee Withdraw: $${feeWD.toFixed(2)}
+            Total Fee: $${totalFee.toFixed(2)}
+
+            PNL: $${pnl.toFixed(2)}
+            `.trim() : `
+            DEX → CEX via ${dexName}
+
+            Modal: $${modal}
+            Harga beli ${token.pairSymbol}: $${buyPrice.toFixed(8)}
+            ⇒ Jumlah: ${qty.toFixed(4)} ${token.pairSymbol}
+
+            Swap rate (DEX): 1 ${token.pairSymbol} = ${sellPrice.toFixed(68)} ${token.symbol}
+            ⇒ Hasil: ${(qty * sellPrice).toFixed(4)} ${token.symbol}
+
+            Konversi ${token.symbol} ke USDT via CEX:
+            Harga ${token.symbol} di CEX: $${cexInfo?.[`${token.symbol.toUpperCase()}ToUSDT`]?.sell?.toFixed(6) || 'N/A'}
+            ⇒ Nilai akhir: $${(qty * sellPrice * (cexInfo?.[`${token.symbol.toUpperCase()}ToUSDT`]?.sell || 0)).toFixed(2)}
+
+            Fee Trade: $${feeTrade.toFixed(2)}
+            Fee Swap: $${fee.toFixed(2)}
+            Fee Withdraw: $${feeWD.toFixed(2)}
+            Total Fee: $${totalFee.toFixed(2)}
+
+            PNL: $${pnl.toFixed(2)}
+            `.trim();
+
+        console.log("ALUR PROSES",tooltip);
         // ✅ Simpan sinyal PNL jika untung
         if (isPNLPositive) {
             this.pnlSignals = this.pnlSignals || {};
