@@ -329,20 +329,17 @@
                                     <small class="fw-bolder text-success"><span id="scanTimeInfo" class="fs-6 text-muted"></span></small>
                                 </span>
                             </div>
+                            <div id="alertBox" class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1050;"></div>
+                           <div id="loadingOverlay" style="display:none; position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(255,255,255,0.8);text-align:center;">
+                            <div class="spinner-border text-primary mt-5" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-3 fw-bold text-primary">Mohon Menunggu, Sedang Proses update wallet CEX...<br>Layar Akan Berkedip & Freeze -_-</p>
+                            </div>
 
                             <div class="d-flex gap-2">
-                                <button class="btn btn-success" id="CheckPrice">
-                                    <i class="bi bi-play-fill"></i> Check Price
-                                </button>
-                                <button class="btn btn-danger d-none" id="StopScan">
-                                    <i class="bi bi-stop-circle"></i> Stop Scan
-                                </button>                                
-                                <button class="btn btn-primary" id="CheckCEX" disabled>
-                                    <i class="bi bi-wallet"></i> Check CEX
-                                </button>
-
-                            </div>
-                            
+                            <small class="fw-bolder text-danger">INFO: <span id="infostatus" class="text-light">---</span></small>
+                            </div>                            
                         </div>
                         <div class="mt-2">
                                 <div class="progress" style="height: 20px;">
@@ -391,26 +388,29 @@
             <!-- Price Monitoring Tab -->
             <div class="tab-pane fade show active" id="priceMonitoring">
                  <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
-                    <!-- Kiri: Search & Sort -->
-                    <div class="d-flex gap-2">
-                        <input type="text" id="monitoringSearch" class="form-control form-control-sm" placeholder="🔍 Cari Token..." style="width: 200px;">
-                        <button class="btn btn-outline-secondary btn-sm" id="sortByToken">
-                        Sort <i id="sortIcon" class="bi bi-sort-alpha-down"></i>
-                        </button>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div class="fw-bold text-secondary">📊 Statistik Token ~ <span id="totalBarisMonitoring" class="fw-bold text-danger">0</span> Baris</div>: 
+                        <div class="text-success">Total: <span id="totalTokensMonitoring" class="fw-bold">0</span> Coins</div> [
+                        <div class="text-warning">BSC: <span id="bscCountMonitoring" class="fw-bold">0</span></div>
+                        <div class="text-primary">ETH: <span id="ethCountMonitoring" class="fw-bold">0</span></div>
+                        <div class="text-info">Polygon: <span id="polyCountMonitoring" class="fw-bold">0</span></div>
+                        <div class="text-secondary">Arbitrum: <span id="arbCountMonitoring" class="fw-bold">0</span></div>
+                        <div class="text-danger">Base: <span id="baseCountMonitoring" class="fw-bold">0</span></div> ]
                     </div>
 
-                    <!-- Kanan: Statistik -->
-                    <div class="text-end small">                        
-                        <div class="d-flex flex-wrap gap-3">
-                            <div class="fw-bold text-secondary">📊 Statistik Token ~ <span id="totalBarisMonitoring" class="fw-bold text-danger">0</span> Baris</div>: <div class="text-success">Total: <span id="totalTokensMonitoring" class="fw-bold">0</span> Coins</div> [
-                            <div class="text-warning">BSC: <span id="bscCountMonitoring" class="fw-bold">0</span></div>
-                            <div class="text-primary">ETH: <span id="ethCountMonitoring" class="fw-bold">0</span></div>
-                            <div class="text-info">Polygon: <span id="polyCountMonitoring" class="fw-bold">0</span></div>
-                            <div class="text-secondary">Arbitrum: <span id="arbCountMonitoring" class="fw-bold">0</span></div>
-                            <div class="text-danger">Base: <span id="baseCountMonitoring" class="fw-bold">0</span></div> ]
-                            <!-- <div class="text-danger">Sol: <span id="solCount" class="fw-bold">0</span></div> -->
-                            
-                        </div>
+                    <!-- Tombol Sort dan Search berdampingan -->
+                    <div class="d-flex align-items-center gap-2 btn-sm">
+                          <button class="btn btn-success btn-sm" id="CheckPrice">
+                            <i class="bi bi-play-fill"></i> Check Price
+                        </button>
+                        <button class="btn btn-danger d-none btn-sm" id="StopScan">
+                            <i class="bi bi-stop-circle"></i> Stop Scan
+                        </button>                                
+                        
+                        <button class="btn btn-outline-secondary btn-sm" id="sortByToken">
+                            Sort <i id="sortIcon" class="bi bi-sort-alpha-down"></i>
+                        </button>
+                        <input type="text" id="monitoringSearch" class="form-control form-control-sm" placeholder="🔍 Cari Token..." style="width: 200px;">
                     </div>
                 </div>
 
@@ -456,47 +456,47 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-left">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tokenModal">
-                                    <i class="bi bi-plus-lg"></i> Add Tokens
-                                </button>
-                                    <small class="fw-bolder text-secondary d-block">Statistik Tokens </small>
-                                    <small class="text-warning d-block">BSC: 
-                                    <span class="fw-bold" id="bscCountManagement">0</span> </small>
-                               
-                                    <small class="text-primary d-block">ETH: 
-                                    <span class="fw-bold" id="ethCountManagement">0</span> </small>
-                                
-                                    <small class="text-danger d-block">BASE: 
-                                    <span class="fw-bold" id="baseCountManagement">0</span></small>
+                            <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <!-- Tombol Aksi -->
+                                <div class="d-flex align-items-center gap-2 flex-wrap">
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tokenModal">
+                                        <i class="bi bi-plus-lg"></i> Add Tokens
+                                    </button>
 
-                                    <small class="text-info d-block">POLYGON: 
-                                    <span class="fw-bold" id="polyCountManagement">0</span></small>
-                                
-                                    <small class="text-secondary d-block">ARBITRUM: 
-                                    <span class="fw-bold" id="arbCountManagement">0</span></small>
-                                
-                                    <!-- <small class="text-danger d-block">SOL: 
-                                    <span class="fw-bold" id="solCount">0</span></small> -->
-                                
-                                    <small class="text-success d-block">TOTAL: 
-                                    <span class="fw-bold" id="totalTokensManagement">0</span></small>
-                                
-                                    <small class="text-light d-block">ACTIVE: 
-                                    <span class="fw-bold" id="activeTokensManagement">0</span></small>
+                                    <button class="btn btn-sm btn-outline-success" id="exportTokensBtn">
+                                        <i class="bi bi-download"></i> Export
+                                    </button>
 
-                                <button class="btn btn-success btn-sm" id="exportTokensBtn">
-                                    <i class="bi bi-download"></i> Export Tokens
-                                </button>
-                                <!-- <input type="file" id="importTokensInput" accept=".json" hidden> -->
-                                <input type="file" id="importTokensInput" accept=".csv" hidden>
+                                    <button class="btn btn-sm btn-outline-danger" id="importTokensBtn">
+                                        <i class="bi bi-upload"></i> Import
+                                    </button>
 
-                                <button class="btn btn-danger btn-sm" id="importTokensBtn">
-                                    <i class="bi bi-upload"></i> Import Tokens
-                                </button>
-                                 <i class="bi bi-search-lg"></i><input type="text" id="tokenSearch" class="form-control form-control-sm" placeholder="Search token..." style="width: 200px; margin-bottom: 10px; float: right;">                              
-                                    
+                                    <button class="btn btn-sm btn-outline-info" id="CheckCEX">
+                                        <i class="bi bi-wallet"></i> Check CEX
+                                    </button>
+
+                                    <input type="file" id="importTokensInput" accept=".csv" hidden>
+
+                                    <div class="input-group input-group-sm" style="width: 200px;">
+                                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                        <input type="text" id="tokenSearch" class="form-control" placeholder="Search token...">
+                                    </div>
+                                </div>
+
+                                <!-- Statistik Token -->
+                                <div class="d-flex align-items-center flex-wrap gap-3 small text-nowrap">
+                                    <div class="text-secondary fw-bold">📊 Statistik Tokens</div>
+                                    <div class="text-warning">BSC: <span id="bscCountManagement" class="fw-bold">0</span></div>
+                                    <div class="text-primary">ETH: <span id="ethCountManagement" class="fw-bold">0</span></div>
+                                    <div class="text-danger">BASE: <span id="baseCountManagement" class="fw-bold">0</span></div>
+                                    <div class="text-info">POLYGON: <span id="polyCountManagement" class="fw-bold">0</span></div>
+                                    <div class="text-secondary">ARBITRUM: <span id="arbCountManagement" class="fw-bold">0</span></div>
+                                    <!-- <div class="text-danger">SOL: <span id="solCount" class="fw-bold">0</span></div> -->
+                                    <div class="text-success">TOTAL: <span id="totalTokensManagement" class="fw-bold">0</span></div>
+                                    <div class="text-light">ACTIVE: <span id="activeTokensManagement" class="fw-bold">0</span></div>
+                                </div>
                             </div>
+
                             <div class="card-body p-0">
                                 <div class="table-responsive">
                                     <table class="table table-hover table-striped mb-0" id="tokenTable">
@@ -595,13 +595,13 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label">Token Symbol</label>
-                                    <input type="text" class="form-control" id="tokenSymbol" placeholder="e.g., AUCTION" required>
+                                    <input type="text" class="form-control" id="tokenSymbol" placeholder="NAMA/SYMBOL KOIN DI CEX" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label">Pair Symbol</label>
-                                    <input type="text" class="form-control" id="pairSymbol" placeholder="e.g., USDT" required>
+                                    <input type="text" class="form-control" id="pairSymbol" placeholder="NAMA/SYMBOL KOIN DI DEX" required>
                                 </div>
                             </div>
                         </div>
