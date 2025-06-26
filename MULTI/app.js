@@ -1078,7 +1078,7 @@ class TokenPriceMonitor {
                             await this.fetchDEXPrices(token, priceData, dexName, cexName, 'dex_to_cex');
                         }
                     }
-                    console.log(priceData);
+                    
                 }));
 
                 if (delayBetweenGrup > 0) {
@@ -1360,65 +1360,6 @@ class TokenPriceMonitor {
         }
     }
 
-    printPriceAnalysis(token, tokenPriceData,direction) {
-        const baseSymbol = token.symbol.toUpperCase();
-        const quoteSymbol = token.pairSymbol.toUpperCase();
-        const cex = token.selectedCexs?.[0];
-        const dexList = token.selectedDexs || [];
-
-        const cexData = tokenPriceData.cex_data?.[cex] || {};
-        const baseBuy = cexData?.[`${baseSymbol}ToUSDT`]?.buy || 1;
-        const baseSell = cexData?.[`${baseSymbol}ToUSDT`]?.sell || 1;
-        const quoteBuy = cexData?.[`${quoteSymbol}ToUSDT`]?.buy || 1;
-        const quoteSell = cexData?.[`${quoteSymbol}ToUSDT`]?.sell || 1;
-
-        const modalCEXtoDEX = token.modalCexToDex;
-        const modalDEXtoCEX = token.modalDexToCex;
-
-        console.log(`\n📊 ANALISA PELUANG ${baseSymbol}/${quoteSymbol}`);
-
-        dexList.forEach(dex => {
-            const dexData = tokenPriceData.dex_data?.[dex];
-            if (!dexData) return;
-
-            // ▶️ CEX → DEX
-            const dexCEXtoDEX = dexData.cex_to_dex;
-            if (dexCEXtoDEX && !dexCEXtoDEX.error) {
-                const buyPrice = baseBuy;
-                const sellPrice = dexCEXtoDEX.price;
-                const qty = buyPrice > 0 ? modalCEXtoDEX / buyPrice : 0;
-                const fee = dexCEXtoDEX.fee || 0;
-                const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
-
-               // console.log(`\n✅ CEX → DEX (${cex} → ${dex})`);
-                console.log(`\n✅ CEX → DEX (${direction})`);
-                console.log(`Modal: $${modalCEXtoDEX}`);
-                console.log(`Beli ${baseSymbol} @ $${buyPrice}`);
-                console.log(`Swap ${baseSymbol} → ${quoteSymbol} @ $${sellPrice}`);
-                console.log(`FeeSwap: $${fee.toFixed(6)}`);
-                console.log(`PNL: ${PriceUtils.formatPNL(pnl)}`);
-            }
-
-            // ▶️ DEX → CEX (❗ FIXED)
-            const dexDEXtoCEX = dexData.dex_to_cex;
-            if (dexDEXtoCEX && !dexDEXtoCEX.error) {
-                const buyPrice = dexDEXtoCEX.rawRate;   // beli quote token (misal: BNB)
-                const sellPrice = baseSell;             // jual base token (misal: AUCTION → USDT)
-                const qty = buyPrice > 0 ? modalDEXtoCEX / buyPrice : 0;
-                const fee = dexDEXtoCEX.fee || 0;
-                const pnl = PriceUtils.calculatePNL(buyPrice, sellPrice, qty, fee);
-
-                //console.log(`\n🔁 DEX → CEX (${dex} → ${cex})`);
-                console.log(`\n🔁 DEX → CEX (${direction})`);
-                console.log(`Modal: $${modalDEXtoCEX}`);
-                console.log(`Beli ${quoteSymbol} @ $${buyPrice}`);
-                console.log(`Swap ${quoteSymbol} → ${baseSymbol} @ $${sellPrice}`);
-                console.log(`FeeSwap: $${fee.toFixed(6)}`);
-                console.log(`PNL: ${PriceUtils.formatPNL(pnl)}`);
-            }
-        });
-    }
-
     CellResult(token, cexInfo, dexInfo, direction, dexName) {
         const cexName = token.selectedCexs[0] || 'CEX';
 
@@ -1512,46 +1453,46 @@ class TokenPriceMonitor {
         const usdtValueFinal = resultQty * resultPriceUSDT;
 
         const tooltip = (direction === 'cex_to_dex') ? `
-    CEX → DEX via ${dexName}
+            CEX → DEX via ${dexName}
 
-    Modal: $${modal}
-    Harga beli ${token.symbol}: $${buyPrice.toFixed(8)}
-    ⇒ Jumlah: ${qty.toFixed(4)} ${token.symbol}
+            Modal: $${modal}
+            Harga beli ${token.symbol}: $${buyPrice.toFixed(8)}
+            ⇒ Jumlah: ${qty.toFixed(4)} ${token.symbol}
 
-    Swap rate (DEX): 1 ${token.symbol} = ${sellPrice.toFixed(8)} ${token.pairSymbol}
-    ⇒ Hasil: ${resultQty.toFixed(4)} ${token.pairSymbol}
+            Swap rate (DEX): 1 ${token.symbol} = ${sellPrice.toFixed(8)} ${token.pairSymbol}
+            ⇒ Hasil: ${resultQty.toFixed(4)} ${token.pairSymbol}
 
-    Harga ${token.pairSymbol} di CEX: $${resultPriceUSDT.toFixed(6)}
-    ⇒ Nilai akhir: $${usdtValueFinal.toFixed(2)}
+            Harga ${token.pairSymbol} di CEX: $${resultPriceUSDT.toFixed(6)}
+            ⇒ Nilai akhir: $${usdtValueFinal.toFixed(2)}
 
-    Fee Trade: $${feeTrade.toFixed(2)}
-    Fee Swap: $${fee.toFixed(2)}
-    Fee Withdraw: $${feeWD.toFixed(2)}
-    Total Fee: $${totalFee.toFixed(2)}
+            Fee Trade: $${feeTrade.toFixed(2)}
+            Fee Swap: $${fee.toFixed(2)}
+            Fee Withdraw: $${feeWD.toFixed(2)}
+            Total Fee: $${totalFee.toFixed(2)}
 
-    PNL: $${pnl.toFixed(2)}
-    `.trim() : `
-    DEX → CEX via ${dexName}
+            PNL: $${pnl.toFixed(2)}
+            `.trim() : `
+            DEX → CEX via ${dexName}
 
-    Modal: $${modal}
-    Harga beli ${token.pairSymbol}: $${buyPrice.toFixed(8)}
-    ⇒ Jumlah: ${qty.toFixed(4)} ${token.pairSymbol}
+            Modal: $${modal}
+            Harga beli ${token.pairSymbol}: $${buyPrice.toFixed(8)}
+            ⇒ Jumlah: ${qty.toFixed(4)} ${token.pairSymbol}
 
-    Swap rate (DEX): 1 ${token.pairSymbol} = ${sellPrice.toFixed(8)} ${token.symbol}
-    ⇒ Hasil: ${resultQty.toFixed(4)} ${token.symbol}
+            Swap rate (DEX): 1 ${token.pairSymbol} = ${sellPrice.toFixed(8)} ${token.symbol}
+            ⇒ Hasil: ${resultQty.toFixed(4)} ${token.symbol}
 
-    Harga ${token.symbol} di CEX: $${resultPriceUSDT.toFixed(6)}
-    ⇒ Nilai akhir: $${usdtValueFinal.toFixed(2)}
+            Harga ${token.symbol} di CEX: $${resultPriceUSDT.toFixed(6)}
+            ⇒ Nilai akhir: $${usdtValueFinal.toFixed(2)}
 
-    Fee Trade: $${feeTrade.toFixed(2)}
-    Fee Swap: $${fee.toFixed(2)}
-    Fee Withdraw: $${feeWD.toFixed(2)}
-    Total Fee: $${totalFee.toFixed(2)}
+            Fee Trade: $${feeTrade.toFixed(2)}
+            Fee Swap: $${fee.toFixed(2)}
+            Fee Withdraw: $${feeWD.toFixed(2)}
+            Total Fee: $${totalFee.toFixed(2)}
 
-    PNL: $${pnl.toFixed(2)}
-    `.trim();
+            PNL: $${pnl.toFixed(2)}
+            `.trim();
 
-        console.log("ALUR PROSES", tooltip);
+      //  console.log("ALUR PROSES", tooltip);
 
         if (isPNLPositive) {
             this.pnlSignals = this.pnlSignals || {};
