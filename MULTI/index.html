@@ -291,7 +291,7 @@
         color: #065f46;
         }
         .pnl-highlight {
-            background-color: #b7ebd4 !important;
+            background-color: #cbfdd9 !important;
         }
         .highlight-cell {
             outline: 3px solid orange;
@@ -307,6 +307,14 @@
         .abu{
             background-color: #acacb5 !important; 
         }
+        /* Override warna strip bawaan Bootstrap */
+        #priceTable.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #cbbcf2 !important;  /* biru muda */
+        }
+        #priceTable.table-striped tbody tr:nth-of-type(even) {
+            background-color: #ffffff !important;  /* putih */
+        }
+
 </style>
 
 </head>
@@ -407,9 +415,6 @@
                             <i class="bi bi-stop-circle"></i> Stop Scan
                         </button>                                
                         
-                        <button class="btn btn-outline-secondary btn-sm" id="sortByToken">
-                            Sort <i id="sortIcon" class="bi bi-sort-alpha-down"></i>
-                        </button>
                         <input type="text" id="monitoringSearch" class="form-control form-control-sm" placeholder="🔍 Cari Token..." style="width: 200px;">
                     </div>
                 </div>
@@ -423,7 +428,11 @@
                                     <tr>
                                         <th rowspan="2" class="text-center align-middle">CEX</th>
                                         <th colspan="6" class="text-center align-middle">CEX → DEX</th>
-                                        <th rowspan="2" class="text-center align-middle token-detail-header">DETAIL TOKEN</th>
+                                        <th rowspan="2" class="text-center align-middle token-detail-header">DETAIL TOKEN  
+                                            <button class="btn" id="sortByToken">
+                                            <i id="sortIcon" class="bi bi-sort-alpha-down"></i>
+                                            </button>
+                                        </th>
                                         <th colspan="6" class="text-center align-middle">DEX → CEX</th>
                                         <th rowspan="2" class="text-center align-middle">CEX</th>
                                     </tr>
