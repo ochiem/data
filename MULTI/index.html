@@ -510,15 +510,36 @@
                                 <!-- Statistik Token -->
                                 <div class="d-flex align-items-center flex-wrap gap-3 small text-nowrap">
                                     <div class="text-secondary fw-bold">📊 Statistik Tokens</div>
-                                    <div class="text-warning">BSC: <span id="bscCountManagement" class="fw-bold">0</span></div>
-                                    <div class="text-primary">ETH: <span id="ethCountManagement" class="fw-bold">0</span></div>
-                                    <div class="text-danger">BASE: <span id="baseCountManagement" class="fw-bold">0</span></div>
-                                    <div class="text-info">POLYGON: <span id="polyCountManagement" class="fw-bold">0</span></div>
-                                    <div class="text-secondary">ARBITRUM: <span id="arbCountManagement" class="fw-bold">0</span></div>
-                                    <!-- <div class="text-danger">SOL: <span id="solCount" class="fw-bold">0</span></div> -->
-                                    <div class="text-success">TOTAL: <span id="totalTokensManagement" class="fw-bold">0</span></div>
-                                    <div class="text-light">ACTIVE: <span id="activeTokensManagement" class="fw-bold">0</span></div>
+
+                                    <div class="text-warning">
+                                        BSC: <span id="bscCountManagement" class="fw-bold">0</span>
+                                    </div>
+
+                                    <div class="text-primary">
+                                        ETH: <span id="ethCountManagement" class="fw-bold">0</span>
+                                    </div>
+
+                                    <div class="text-danger">
+                                        BASE: <span id="baseCountManagement" class="fw-bold">0</span>
+                                    </div>
+
+                                    <div class="text-info">
+                                        POLYGON: <span id="polyCountManagement" class="fw-bold">0</span>
+                                    </div>
+
+                                    <div class="text-secondary">
+                                        ARBITRUM: <span id="arbCountManagement" class="fw-bold">0</span>
+                                    </div>
+
+                                    <div class="text-dark fw-bolder">
+                                        TOTAL: <span id="totalTokensManagement">0</span>
+                                        [ 
+                                       <span class="fw-bold text-success">ACTIVE:</span> <span id="activeTokensManagement" class="fw-bold text-success">0</span>
+                                        <span class="fw-bold text-danger">INACTIVE: </span><span id="inactiveTokensManagement" class="fw-bold text-danger">0</span> 
+                                        ]
+                                    </div>
                                 </div>
+
                             </div>
 
                             <div class="card-body p-0">
@@ -705,6 +726,10 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="MEXC" id="cexMexc">
                                             <label class="form-check-label" for="cexMexc">MEXC</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="INDODAX" id="cexINDODAX">
+                                            <label class="form-check-label" for="cexMexc">INDODAX</label>
                                         </div>
                                     </div>
                                 </div>
