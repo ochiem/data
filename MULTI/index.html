@@ -334,6 +334,7 @@
                                     <small class="fw-bolder text-warning">BNB: <span id="bnbPrice">--</span> | </small>
                                     <small class="fw-bolder text-primary">ETH: <span id="ethPrice">--</span> | </small>
                                     <small class="fw-bolder text-info">MATIC: <span id="maticPrice">--</span> | </small>
+                                    <small class="fw-bolder text-danger">USDT/IDR: <span id="usdtIdrPrice">--</span> | </small>
                                     <!-- <small class="fw-bolder text-danger">SOLANA: <span id="solPrice">--</span> | </small> -->
                                     <small class="fw-bolder text-success"><span id="scanTimeInfo" class="fs-6 text-muted"></span></small>
                                 </span>
@@ -422,9 +423,9 @@
                 </div>
                     <!-- Progress bar diletakkan di luar <ul>, agar tidak jadi tab -->
                     <div class="progress mb-3" style="height: 20px;">
-                        <div class="progress-bar progress-bar-striped bg-success" id="scanProgressBar" role="progressbar" style="width: 0%;">
+                        <div class="progress-bar bg-success" id="scanProgressBar" role="progressbar" style="width: 0%;">
                             <div class="d-flex justify-content-between w-100 px-2">
-                                <small id="scanProgressText">Progress: 0 dari 0</small>
+                                <strong class="text-dark"><small id="scanProgressText">Progress: 0 dari 0</small></strong>
                                 <small id="scanProgressPercent">(0%)</small>
                             </div>
                         </div>
@@ -785,9 +786,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
     <!-- Price APIs -->
-    <script src="MULTI/price-apis.js"></script>
+    <script src="price-apis.js"></script>
     <!-- Custom JS -->
-    <script src="MULTI/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
 
