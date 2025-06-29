@@ -156,19 +156,36 @@
             text-align: center;
         }
 
-        /* .cex-price-cell {
-            background-color: #dbeafe;
-            text-align: center;
-            vertical-align: middle;
-            font-size: 0.8em;
-        }
+/* 1. Hilangkan border atau garis bawah dari heading/tombol toggle */
+.card-body .d-flex .text-uppercase {
+    border-bottom: none !important;
+}
 
-        .dex-price-cell {
-            background-color: #fdf4ff;
-            padding: 0.5rem;
-            text-align: center;
-            vertical-align: top;
-        } */
+/* 2. Atur margin/padding di bawah ul agar lebih padat */
+.card-body ul {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 3. Hilangkan padding bawah pada card-body */
+.card-body {
+    padding-bottom: 0.25rem !important;
+}
+
+/* 4. Hilangkan space putih bawah total card */
+.card.h-100 {
+    margin-bottom: 0 !important;
+}
+
+/* 5. Atur tinggi minimum (jika diperlukan) agar konsisten */
+.card .collapse {
+    min-height: 0 !important;
+}
+.collapse {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 
         .price-info {
             margin-bottom: 0.25rem;
@@ -254,9 +271,8 @@
             min-width: 90px;
         }
         #dexSignals div {
-            font-size: 0.85rem;
-            border-bottom: 1px solid #dee2e6;
-            margin-bottom: 6px;
+            font-size: 0.75rem;
+            margin-bottom: 2px;
         }
         #dexSignals ul {
             margin-bottom: 0;
@@ -314,6 +330,10 @@
         }
         #priceTable.table-striped tbody tr:nth-of-type(even) {
             background-color: #ffffff !important;  /* putih */
+        }
+        .card.no-rounded-bottom {
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
         }
 
 </style>
@@ -779,7 +799,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
