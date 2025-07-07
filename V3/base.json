@@ -5134,6 +5134,1306 @@
     "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "des_out": 6,
     "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AAI",
+    "sc_in": "0xDf8da8b53bAa464A6cE7Cac8eCC6d33E1aeaB215",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AERO",
+    "sc_in": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AIDEV",
+    "sc_in": "0x62039061c366433e6d075b78905681c19795313C",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AIFUN",
+    "sc_in": "0xbDF317F9C153246C429F23f4093087164B145390",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AIVA",
+    "sc_in": "0xbdB0e1c40A76c5113A023d685b419B90b01e3D61",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AIXBT",
+    "sc_in": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ARCHAI",
+    "sc_in": "0xD3b0b58eC9516e4b875a075328E2CB059d4d54dB",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ARI",
+    "sc_in": "0xD1e6f3f0a7f40d5412F7471875879381441BF722",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AUKI",
+    "sc_in": "0xF9569cFb8FD265e91aa478d86ae8c78b8AF55Df4",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "AWE",
+    "sc_in": "0x1B4617734C43F6159F3a70b7E06d883647512778",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "B3",
+    "sc_in": "0xB3B32F9f8827D4634fE7d973Fa1034Ec9fdDB3B3",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "BASEDPEPE",
+    "sc_in": "0x52b492a33E447Cdb854c7FC19F1e57E8BfA1777D",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "BEE",
+    "sc_in": "0x1f1bA52c445755C92caFFe7B608B87dCDAf9d825",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "BROAK",
+    "sc_in": "0x02537463e57a44f861Ee861Ba4F590C413f984a6",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "BSX",
+    "sc_in": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "CAI",
+    "sc_in": "0x360ee0225CD8ABF0aDf1F97f4c0f4079a4BF41ec",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "CALCIFY",
+    "sc_in": "0x019029665a6E73eF98E1970f8A5434B3de38d41c",
+    "des_in": 6,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "CARV",
+    "sc_in": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "CHISAI",
+    "sc_in": "0x21023e347CF3c69355dAF36107945876E2c4071a",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "CLANKER",
+    "sc_in": "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "CLX",
+    "sc_in": "0x44551CA46Fa5592bb572E20043f7C3D54c85cAD7",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "COOKIE",
+    "sc_in": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "DCC",
+    "sc_in": "0x773F305d4F03f9Dff09F6FDe489c5397526dF439",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "DEEPSEEK",
+    "sc_in": "0x81a382272Bd2BeC1f3F9FDAb5763a500Cbd8EBAD",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "DEFIAI",
+    "sc_in": "0xb3621cd34803Cf7065Dcb0D5BfB0f56C1834a063",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "DEGEN",
+    "sc_in": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "DINO",
+    "sc_in": "0x85E90a5430AF45776548ADB82eE4cD9E33B08077",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "DOGINME",
+    "sc_in": "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "EDGE",
+    "sc_in": "0xED6E000dEF95780fb89734c07EE2ce9F6dcAf110",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "EMT",
+    "sc_in": "0xe2c86869216aC578bd62a4b8313770d9EE359A05",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ESX",
+    "sc_in": "0x6a72d3A87f97a0fEE2c2ee4233BdAEBc32813D7a",
+    "des_in": 9,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "FAI",
+    "sc_in": "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "FLOCK",
+    "sc_in": "0x5aB3D4c385B400F3aBB49e80DE2fAF6a88A7B691",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "FLOWER",
+    "sc_in": "0x3E12b9d6A4D12cd9b4a6d613872d0Eb32f68b380",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "FPX",
+    "sc_in": "0x940a699c08f7f05EAA29EB85f183434c59b26FcA",
+    "des_in": 6,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "FUTBOL",
+    "sc_in": "0x3D45987F1C8812913a80Efbe3aCdd91DA8676E9c",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GAMEVIRTUAL",
+    "sc_in": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GB",
+    "sc_in": "0xfaA3478081e59B5fBEFf6bC96eFB23917C04C2B4",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GENOME",
+    "sc_in": "0x1db0c569ebb4a8b57AC01833B9792F526305e062",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GIZA",
+    "sc_in": "0x590830dFDf9A3F68aFCDdE2694773dEBDF267774",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GLUTEU",
+    "sc_in": "0x06A63c498eF95AD1fA4FfF841955e512b4B2198a",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GOCHU",
+    "sc_in": "0x9aAaE745cf2830FB8DDc6248B17436dC3a5E701C",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GPS",
+    "sc_in": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "GRAMPUS",
+    "sc_in": "0x856D602E73545deAA1491a3726cF628d49f74F51",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "HEU",
+    "sc_in": "0xEF22cb48B8483dF6152e1423b19dF5553BbD818b",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "HINT",
+    "sc_in": "0x91dA780BC7f4B7Cf19ABE90411a2a296Ec5FF787",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "HOME",
+    "sc_in": "0x4BfAa776991E85e5f8b1255461cbbd216cFc714f",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ICNT",
+    "sc_in": "0xE0Cd4cAcDdcBF4f36e845407CE53E87717b6601d",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "IFR",
+    "sc_in": "0x01812Ca908B5731Be0dB86000C15c5afA3E834B2",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "IMGN",
+    "sc_in": "0x9BbA915F036158582C20B51113B925f243A1A1A1",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "IMO",
+    "sc_in": "0x5A7a2bf9fFae199f088B25837DcD7E115CF8E1bb",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ISK",
+    "sc_in": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "KAITO",
+    "sc_in": "0x98d0baa52b2D063E780DE12F615f963Fe8537553",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "KEYCAT",
+    "sc_in": "0x9a26F5433671751C3276a065f57e5a02D2817973",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "KOLZ",
+    "sc_in": "0x50CE4129Ca261CCDe4EB100c170843c2936Bc11b",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LAY",
+    "sc_in": "0xb89D354AD1b0d95a48b3De4607F75a8cD710c1bA",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LBM",
+    "sc_in": "0x56A38E7216304108E841579041249fEb236C887b",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LINGO",
+    "sc_in": "0xfb42Da273158B0F642F59F2Ba7cc1d5457481677",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LUM",
+    "sc_in": "0x0fD7a301B51d0A83FCAf6718628174D527B373b6",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LUNAI",
+    "sc_in": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LVLY",
+    "sc_in": "0xc734635CD30E882037C3f3De1EbCCF9fA9D27D9F",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LYP",
+    "sc_in": "0x4837b18a6d7aF6159c8665505B90a2ed393255E0",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MAVIA",
+    "sc_in": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MEY",
+    "sc_in": "0x8bFAc1b375bf2894D6F12fb2Eb48B1C1a7916789",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MFER",
+    "sc_in": "0xE3086852A4B125803C815a158249ae468A3254Ca",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MFT",
+    "sc_in": "0xb372dC09D8D84e1246760EE9d279E504A89f5684",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MIGGLES",
+    "sc_in": "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MOCHI",
+    "sc_in": "0xF6e932Ca12afa26665dC4dDE7e27be02A7c02e50",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MOEW",
+    "sc_in": "0x15aC90165f8B45A80534228BdCB124A011F62Fee",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MOG",
+    "sc_in": "0x2Da56AcB9Ea78330f947bD57C54119Debda7AF71",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "MPAA",
+    "sc_in": "0x4194F4e29D652656b6DC84F10363482c5ac101b5",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "NOVAAI",
+    "sc_in": "0x0c811bB14C3EAe3FD22F21b2B645b661318b7392",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "NTV",
+    "sc_in": "0x6B67AAc5e7456CF47D8901ba2CEf01a89002973E",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "NUROAI",
+    "sc_in": "0x869f7c5C8d42E3dD971322425313b46685e64868",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "OBORTECH",
+    "sc_in": "0xF83759099dC88f75FC83de854c41E0D9e83AdA9B",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "OBT",
+    "sc_in": "0x514D8E8099286a13486Ef6C525C120f51C239B52",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ODOS",
+    "sc_in": "0xca73ed1815e5915489570014e024b7EbE65dE679",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "PADD",
+    "sc_in": "0xF6dC6b3C80179C88290548aD077160249ABDf8E3",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "PAID",
+    "sc_in": "0x655A51e6803faF50D4acE80fa501af2F29C856cF",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "PBT",
+    "sc_in": "0x0d7f78956A756C43016047273A6340DE903F7380",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "PROMPT",
+    "sc_in": "0x30c7235866872213F68cb1F08c37Cb9eCCB93452",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RDAC",
+    "sc_in": "0xD3F68c6e8AeE820569D58AdF8d85d94489315192",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "REM",
+    "sc_in": "0x83d5D441eD15737D34226b682F7427d2217f2a8f",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RFL",
+    "sc_in": "0x6e2c81b6c2C0e02360F00a0dA694e489acB0b05e",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RGOAT",
+    "sc_in": "0xF0268c5F9aA95Baf5C25D646AAbB900Ac12F0800",
+    "des_in": 8,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RIZ",
+    "sc_in": "0x67543CF0304C19CA62AC95ba82FD4F4B40788dc1",
+    "des_in": 8,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RKNE",
+    "sc_in": "0x555a04A1234B291445497eC52700622E74698f8F",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RWAI",
+    "sc_in": "0x9a574ea719B5E69df7C783D15C9514A26F3FaF53",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "RWAINC",
+    "sc_in": "0xE2B1dc2D4A3b4E59FDF0c47B71A7A86391a8B35a",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SDT",
+    "sc_in": "0x04bc5918a08A526653E83420044B1a26FF34863B",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SHARDS",
+    "sc_in": "0xd8707B400A5Dc85CBaDDB7279c2Bf40221dF2521",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SIGN",
+    "sc_in": "0x868FCEd65edBF0056c4163515dD840e9f287A4c3",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SKI",
+    "sc_in": "0x768BE13e1680b5ebE0024C42c896E3dB59ec0149",
+    "des_in": 9,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SKOP",
+    "sc_in": "0x6d3B8C76c5396642960243Febf736C6BE8b60562",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SOGNI",
+    "sc_in": "0xE014d2A4da6E450f21b5050120D291e63c8940FD",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SOSO",
+    "sc_in": "0x624e2e7fDc8903165F64891672267AB0FCB98831",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SVTS",
+    "sc_in": "0xb4e017223Fd3D639d0264DE4Da1b9E080325Cb5E",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "SXT",
+    "sc_in": "0xA2c22252cDc8b7cDdEe1B0b2E242818509fCf7b8",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "TALENT",
+    "sc_in": "0x9a33406165f562E16C3abD82fd1185482E01b49a",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "TEVA",
+    "sc_in": "0x00309D634d11541b857f927BE91aD2f0bD78894c",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "TMAI",
+    "sc_in": "0xCa4569949699D56E1834EFe9f58747Ca0f151B01",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "TOSHI",
+    "sc_in": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "USDC",
+    "sc_in": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_in": 6,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "VADER",
+    "sc_in": "0x731814e491571A2e9eE3c5b1F7f3b962eE8f4870",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "VIRTUAL",
+    "sc_in": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "VVV",
+    "sc_in": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "WLTH",
+    "sc_in": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "WNK",
+    "sc_in": "0xbF82115918A88E2120C0f73d99CCd8f95c301B59",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "WUNDER",
+    "sc_in": "0xecE6A5a6Ff5Ccc377472c2E9b7Afb0ac62748909",
+    "des_in": 9,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "XOXO",
+    "sc_in": "0xc799AdA44171b741Abf41Ee54fb1B47fda5960bE",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ZBU",
+    "sc_in": "0x2C8C89C442436CC6C0a77943E09c8Daf49Da3161",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ZORA",
+    "sc_in": "0x1111111111166b7FE7bd91427724B487980aFc69",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "ZYGO",
+    "sc_in": "0xAF4C1405aA8aB2A4f267a9700F9230ddC592F63F",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "AIXBT",
+    "sc_in": "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "AWE",
+    "sc_in": "0x1b4617734c43f6159f3a70b7e06d883647512778",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "AXL",
+    "sc_in": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+    "des_in": 6,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "BIO",
+    "sc_in": "0x226a2fa2556c48245e57cd1cba4c6c9e67077dd2",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "GPS",
+    "sc_in": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "HOME",
+    "sc_in": "0x4bfaa776991e85e5f8b1255461cbbd216cfc714f",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "HYPER",
+    "sc_in": "0xc9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "KAITO",
+    "sc_in": "0x98d0baa52b2d063e780de12f615f963fe8537553",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "MAV",
+    "sc_in": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "PARTI",
+    "sc_in": "0x59264f02d301281f3393e1385c0aefd446eb0f00",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "RDNT",
+    "sc_in": "0xd722e55c1d9d9fa0021a5215cbb904b92b3dc5d4",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "SIGN",
+    "sc_in": "0x868fced65edbf0056c4163515dd840e9f287a4c3",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "SXT",
+    "sc_in": "0xa2c22252cdc8b7cddee1b0b2e242818509fcf7b8",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "SYRUP",
+    "sc_in": "0x688aee022aa544f150678b8e5720b6b96a9e9a2f",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "USDC",
+    "sc_in": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "des_in": 6,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "VIRTUAL",
+    "sc_in": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "ZRO",
+    "sc_in": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "des_in": 18,
+    "symbol_out": "USDC",
+    "sc_out": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "des_out": 6,
+    "status": true
   }
 ]
 }
