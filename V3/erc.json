@@ -247,16 +247,6 @@
   },
   {
     "cex": "BINANCE",
-    "symbol_in": "ALPHA",
-    "sc_in": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "BINANCE",
     "symbol_in": "ALT",
     "sc_in": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
     "des_in": 18,
@@ -1267,6 +1257,16 @@
   },
   {
     "cex": "BINANCE",
+    "symbol_in": "IOTX",
+    "sc_in": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
     "symbol_in": "IQ",
     "sc_in": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
     "des_in": 18,
@@ -1307,8 +1307,8 @@
   },
   {
     "cex": "BINANCE",
-    "symbol_in": "LDO",
-    "sc_in": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+    "symbol_in": "LA",
+    "sc_in": "0x0fc2a55d5bd13033f1ee0cdd11f60f7efe66f467",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -1317,8 +1317,8 @@
   },
   {
     "cex": "BINANCE",
-    "symbol_in": "LEVER",
-    "sc_in": "0x4b5f49487ea7b3609b1ad05459be420548789f1f",
+    "symbol_in": "LDO",
+    "sc_in": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -1400,16 +1400,6 @@
     "symbol_in": "LSK",
     "sc_in": "0x6033f7f88332b8db6ad452b7c6d5bb643990ae3f",
     "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "BINANCE",
-    "symbol_in": "LTO",
-    "sc_in": "0xd01409314acb3b245cea9500ece3f6fd4d70ea30",
-    "des_in": 8,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -2402,6 +2392,16 @@
     "des_in": 8,
     "symbol_out": "BNT",
     "sc_out": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol_in": "WBTC",
+    "sc_in": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
     "status": true
   },
@@ -16447,6 +16447,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "ADX",
+    "sc_in": "0xade00c28244d5ce17d72e40330b1c318cd12b7c3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "AERGO",
     "sc_in": "0x91af0fbb28aba7e31403cb457106ce79397fd4e6",
     "des_in": 18,
@@ -16807,16 +16817,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "ASD",
-    "sc_in": "0xff742d05420B6Aca4481F635aD8341F81A6300C2",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "ASM",
     "sc_in": "0x2565ae0385659badcada1031db704442e1b69982",
     "des_in": 18,
@@ -17118,7 +17118,7 @@
   {
     "cex": "GATE",
     "symbol_in": "BDXN",
-    "sc_in": "#REF!",
+    "sc_in": "0xBdBDBDd0c22888E63CB9098aD6D68439197CB091",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -17139,6 +17139,16 @@
     "cex": "GATE",
     "symbol_in": "BEAR",
     "sc_in": "0x17837004eA685690b32dbEaD02a274Ec4333A26a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "BEEFI",
+    "sc_in": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -17169,6 +17179,16 @@
     "cex": "GATE",
     "symbol_in": "BEPRO",
     "sc_in": "0xcf3c8be2e2c42331da80ef210e9b1b307c03d36a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "BETA",
+    "sc_in": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -17307,16 +17327,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "BMI",
-    "sc_in": "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "BN",
     "sc_in": "0xf385905e56db4d8a208b20aa8a88dbb225f773d4",
     "des_in": 18,
@@ -17329,16 +17339,6 @@
     "cex": "GATE",
     "symbol_in": "BNT",
     "sc_in": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "BNTY",
-    "sc_in": "0xd2d6158683aeE4Cc838067727209a0aAF4359de3",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -17539,16 +17539,6 @@
     "cex": "GATE",
     "symbol_in": "CAGA",
     "sc_in": "0xbddc20ed7978b7d59ef190962f441cd18c14e19f",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "CARE",
-    "sc_in": "0x329cf160F30D21006bCD24b67EAde561E54CDE4c",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -17767,6 +17757,26 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "COPI",
+    "sc_in": "0x42Baf1f659D765C65ADE5BB7E08eb2C680360d9d",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "CORN",
+    "sc_in": "0x44f49ff0da2498bCb1D3Dc7C0f999578F67FD8C6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "COVAL",
     "sc_in": "0x3d658390460295fb963f54dc0899cfb1c30776df",
     "des_in": 8,
@@ -17909,16 +17919,6 @@
     "cex": "GATE",
     "symbol_in": "CTRC",
     "sc_in": "0x923b83c26B3809d960fF80332Ed00aA46D7Ed375",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "CTRL",
-    "sc_in": "0xe50e009ddb1a4d8ec668eac9d8b2df1f96348707",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -18077,8 +18077,8 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "DDD",
-    "sc_in": "0x9f5f3cfd7a32700c93f971637407ff17b91c7342",
+    "symbol_in": "DC",
+    "sc_in": "0x7b4328c127b85369d9f82ca0503b000d09cf9180",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -18120,6 +18120,16 @@
     "symbol_in": "DENT",
     "sc_in": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
     "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "DEP",
+    "sc_in": "0x1a3496c18d558bd9c6c8f609e1b129f67ab08163",
+    "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -18309,6 +18319,16 @@
     "cex": "GATE",
     "symbol_in": "DNOW",
     "sc_in": "0x8074836637eB9cC73a01a65D5700907Fc639c4E9",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "DNT",
+    "sc_in": "0x0abdace70d3790235af448c88547603b945604ea",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -18609,6 +18629,16 @@
     "cex": "GATE",
     "symbol_in": "ENS",
     "sc_in": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "EPIC",
+    "sc_in": "0x94314a14df63779c99c0764a30e0cd22fa78fc0e",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -19007,6 +19037,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "FXS",
+    "sc_in": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "FYDE",
     "sc_in": "0x8a462e6a0051d006e33152fbeadfb9a14198de30",
     "des_in": 18,
@@ -19028,6 +19068,16 @@
   {
     "cex": "GATE",
     "symbol_in": "GALA",
+    "sc_in": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
+    "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "GALAX",
     "sc_in": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
     "des_in": 8,
     "symbol_out": "ETH",
@@ -19060,6 +19110,16 @@
     "symbol_in": "GAMESTOP",
     "sc_in": "0xc56c7a0eaa804f854b536a5f3d5f49d2ec4b12b8",
     "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "GAMMA",
+    "sc_in": "0x6bea7cfef803d1e3d5f7c0103f7ded065644e197",
+    "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -19517,16 +19577,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "ICONS",
-    "sc_in": "0x3F68e7B44e9bCB486C2FeAdB7A2289D9cdFC9088",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "ID",
     "sc_in": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
     "des_in": 18,
@@ -19737,6 +19787,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "KAN",
+    "sc_in": "0x1410434b0346f5be678d0fb554e5c7ab620f8f4a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "KAON",
     "sc_in": "0x8ab7404063ec4dbcfd4598215992dc3f8ec853d7",
     "des_in": 18,
@@ -19829,6 +19889,16 @@
     "cex": "GATE",
     "symbol_in": "KFT",
     "sc_in": "0xef53462838000184f35f7d991452e5f25110b207",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "KIBA",
+    "sc_in": "0x005d1123878fc55fbd56b54c73963b234a64af3c",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -19958,7 +20028,7 @@
   {
     "cex": "GATE",
     "symbol_in": "LA",
-    "sc_in": "#REF!",
+    "sc_in": "0x0fc2a55d5BD13033f1ee0cdd11f60F7eFe66f467",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -20019,16 +20089,6 @@
     "cex": "GATE",
     "symbol_in": "LEASH",
     "sc_in": "0x27c70cd1946795b66be9d954418546998b546634",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "LEGEND",
-    "sc_in": "0x1B1FF83AE0751ffb7ce0224e9C330e859E95dD16",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -20287,16 +20347,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "LTD",
-    "sc_in": "0x1fdb29ad49330b07ae5a87483f598aa6b292039e",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "LTO",
     "sc_in": "0xd01409314acb3b245cea9500ece3f6fd4d70ea30",
     "des_in": 8,
@@ -20469,16 +20519,6 @@
     "cex": "GATE",
     "symbol_in": "MBLK",
     "sc_in": "0xF47245e9A3Ba3dCa8B004E34afc1290B1d435a52",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "MCG",
-    "sc_in": "0xc9e503562d0db0a2629288a5d3b1c94ea7741869",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -20767,6 +20807,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "MV",
+    "sc_in": "0xae788f80f2756a86aa2f410c651f2af83639b95b",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "MVL",
     "sc_in": "0xa849eaae994fb86afa73382e9bd88c2b6b18dc71",
     "des_in": 18,
@@ -20799,6 +20849,16 @@
     "cex": "GATE",
     "symbol_in": "NAOS",
     "sc_in": "0x4a615bb7166210cce20e6642a6f8fb5d4d044496",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "NAVI",
+    "sc_in": "0xfc1c93a2507975e98b9d0e9260ded61a00152bf1",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -21067,6 +21127,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "OCTO",
+    "sc_in": "0x7240aC91f01233BaAf8b064248E80feaA5912BA3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "ODDZ",
     "sc_in": "0xcd2828fc4d8e8a0ede91bb38cf64b1a81de65bf6",
     "des_in": 18,
@@ -21089,6 +21159,16 @@
     "cex": "GATE",
     "symbol_in": "OGPU",
     "sc_in": "0x067def80d66fb69c276e53b641f37ff7525162f6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "OIK",
+    "sc_in": "0x6e7f11641c1ec71591828e531334192d622703f7",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -21247,16 +21327,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "OPAI",
-    "sc_in": "0xf8e57ac2730d3088d98b79209739b0d5ba085a03",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "OPN1",
     "sc_in": "0xc28eb2250d1ae32c7e74cfb6d6b86afc9beb6509",
     "des_in": 18,
@@ -21299,16 +21369,6 @@
     "cex": "GATE",
     "symbol_in": "ORBS",
     "sc_in": "0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "ORC",
-    "sc_in": "0x662b67d00a13faf93254714dd601f5ed49ef2f51",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -21469,16 +21529,6 @@
     "cex": "GATE",
     "symbol_in": "PANDO",
     "sc_in": "0x252b9F56359901a0BDE52d0675b1f1130d86F471",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "PANDORA",
-    "sc_in": "0x9e9fbde7c7a83c43913bddc8779158f1368f0413",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -21717,6 +21767,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "PLA",
+    "sc_in": "0x3a4f40631a4f906c2BaD353Ed06De7A5D3fCb430",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "PLANET",
     "sc_in": "0x2ad9addd0d97ec3cdba27f92bf6077893b76ab0b",
     "des_in": 18,
@@ -21757,6 +21817,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "POLC",
+    "sc_in": "0xaa8330fb2b4d5d07abfe7a72262752a8505c6b37",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "POLK",
     "sc_in": "0xd478161c952357f05f0292b56012cd8457f1cfbf",
     "des_in": 18,
@@ -21769,6 +21839,16 @@
     "cex": "GATE",
     "symbol_in": "POLS",
     "sc_in": "0x83e6f1E41cdd28eAcEB20Cb649155049Fac3D5Aa",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "POLY",
+    "sc_in": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -21947,16 +22027,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "PUMPBTC",
-    "sc_in": "#REF!",
-    "des_in": "#REF!",
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "PUNDIAI",
     "sc_in": "0x075f23b9cdfce2cc0ca466f4ee6cb4bd29d83bef",
     "des_in": 18,
@@ -22057,6 +22127,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "QTCON",
+    "sc_in": "0xa00a4d5786a6E955e9539d01D78Bf68f3271C050",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "RAD",
     "sc_in": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
     "des_in": 18,
@@ -22079,6 +22159,16 @@
     "cex": "GATE",
     "symbol_in": "RAGE",
     "sc_in": "0x94804dc4948184ffd7355f62ccbb221c9765886f",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "RAI",
+    "sc_in": "0xc575BD129848Ce06A460A19466c30E1D0328F52C",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -22137,16 +22227,6 @@
   },
   {
     "cex": "GATE",
-    "symbol_in": "REAP",
-    "sc_in": "0x1fc5ef0337aea85c5f9198853a6e3a579a7a6987",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
     "symbol_in": "RED",
     "sc_in": "0xc43c6bfeda065fe2c4c11765bf838789bd0bb5de",
     "des_in": 18,
@@ -22179,6 +22259,16 @@
     "cex": "GATE",
     "symbol_in": "REP",
     "sc_in": "0x221657776846890989a759ba2973e427dff5c9bb",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "REPV1",
+    "sc_in": "0x1985365e9f78359a9b6ad760e32412f4a445e862",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -22317,6 +22407,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "RMV",
+    "sc_in": "0x423352f2c6e0e72422b69af03aba259310146d90",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "ROOBEE",
     "sc_in": "0xa31b1767e09f842ecfd4bc471fe44f830e3891aa",
     "des_in": 18,
@@ -22359,16 +22459,6 @@
     "cex": "GATE",
     "symbol_in": "RSS3",
     "sc_in": "0xc98d64da73a6616c42117b582e832812e7b8d57f",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "RUBY",
-    "sc_in": "0xb30240d48c05a4b950c470e2d6aefc9117a50624",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -22478,6 +22568,16 @@
   {
     "cex": "GATE",
     "symbol_in": "SASHIMI",
+    "sc_in": "0xC28E27870558cF22ADD83540d2126da2e4b464c2",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "SASHIMI0",
     "sc_in": "0xC28E27870558cF22ADD83540d2126da2e4b464c2",
     "des_in": 18,
     "symbol_out": "ETH",
@@ -22707,6 +22807,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "SIMPSON",
+    "sc_in": "0x44aAd22aFbB2606d7828Ca1f8f9E5af00e779AE1",
+    "des_in": 9,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "SIS",
     "sc_in": "0xd38bb40815d2b0c2d2c866e0c72c5728ffc76dd9",
     "des_in": 18,
@@ -22738,7 +22848,7 @@
   {
     "cex": "GATE",
     "symbol_in": "SKATE",
-    "sc_in": "#REF!",
+    "sc_in": "0x61DBbBb552dc893ab3aAd09F289f811E67cEf285",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -22957,6 +23067,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "SPAY",
+    "sc_in": "0x58FaD9E3C3AE54c9BA98c3f0E4bF88aB3E8Cf3c5",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "SPEC",
     "sc_in": "0xAdF7C35560035944e805D98fF17d58CDe2449389",
     "des_in": 18,
@@ -23030,16 +23150,6 @@
     "symbol_in": "SRM",
     "sc_in": "0x476c5e26a75bd202a9683ffd34359c0cc15be0ff",
     "des_in": 6,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "SSNC",
-    "sc_in": "0x6715515f5aa98e8bd3624922e1ba91e6f5fc4402",
-    "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -23197,6 +23307,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "SUP",
+    "sc_in": "0xf5ec1A08902Ae0aE5323466C35ea49A37409e4Ca",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "SUPER",
     "sc_in": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
     "des_in": 18,
@@ -23270,6 +23390,16 @@
     "symbol_in": "SWGT",
     "sc_in": "0xc8bf8bc34874e07f6a0d4abc8be22ba9e372631b",
     "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "SWINGBY",
+    "sc_in": "0x8287C7b963b405b7B8D467DB9d79eEC40625b13A",
+    "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -23487,8 +23617,28 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "TOMOE0",
+    "sc_in": "0x05d3606d5c81eb9b7b18530995ec9b29da05faba",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "TONC",
     "sc_in": "0x6a6c2ada3ce053561c2fbc3ee211f23d9b8c520a",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "TORN",
+    "sc_in": "0x77777feddddffc19ff86db637967013e6c6a116c",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -23599,16 +23749,6 @@
     "cex": "GATE",
     "symbol_in": "TRUF",
     "sc_in": "0x243c9be13faba09f945ccc565547293337da0ad7",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "TRUMPCOIN",
-    "sc_in": "0x03dcee0d21ab39614c768dab67bfc33b0fc0a047",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -23837,6 +23977,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "USDE",
+    "sc_in": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "USDP",
     "sc_in": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
     "des_in": 18,
@@ -23977,6 +24127,16 @@
   },
   {
     "cex": "GATE",
+    "symbol_in": "VRTX",
+    "sc_in": "0xbbee07b3e8121227afcfe1e2b82772246226128e",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
     "symbol_in": "VT",
     "sc_in": "0x69cade383df52ec02562869da8aa146be08c5c3c",
     "des_in": 18,
@@ -24030,6 +24190,16 @@
     "symbol_in": "WBTC",
     "sc_in": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     "des_in": 8,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol_in": "WEETH",
+    "sc_in": "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee",
+    "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "des_out": 18,
@@ -24209,16 +24379,6 @@
     "cex": "GATE",
     "symbol_in": "XCN",
     "sc_in": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "GATE",
-    "symbol_in": "XED",
-    "sc_in": "0xee573a945b01b788b9287ce062a0cfc15be9fd86",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -30477,16 +30637,6 @@
   },
   {
     "cex": "MEXC",
-    "symbol_in": "LAK 3",
-    "sc_in": "0x13d074303C95a34d304F29928dC8A16dEc797e9E",
-    "des_in": 18,
-    "symbol_out": "ETH",
-    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "des_out": 18,
-    "status": true
-  },
-  {
-    "cex": "MEXC",
     "symbol_in": "1CAT",
     "sc_in": "0x508E00D5ceF397B02d260D035e5EE80775e4C821",
     "des_in": 18,
@@ -33539,6 +33689,16 @@
     "cex": "MEXC",
     "symbol_in": "LAIKAL2",
     "sc_in": "0x19E1F2f837a3b90EBd0730cb6111189Be0E1b6D6",
+    "des_in": 18,
+    "symbol_out": "ETH",
+    "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "des_out": 18,
+    "status": true
+  },
+  {
+    "cex": "MEXC",
+    "symbol_in": "LAK 3",
+    "sc_in": "0x13d074303C95a34d304F29928dC8A16dEc797e9E",
     "des_in": 18,
     "symbol_out": "ETH",
     "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -37596,4 +37756,4 @@
     "status": true
   }
 ]
-  }
+}
