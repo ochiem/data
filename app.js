@@ -2206,12 +2206,12 @@ $('#CheckPrice').on('click', async () => {
             const cexBadgeColor = this.getBadgeColor(cexName, 'cex');
             
              const directionLabel = direction === 'cex_to_dex'
-                ? `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${fromSide.toUpperCase()}</span><span class="text-success fw-bold fs-8">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`
-                : `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${toSide.toUpperCase()}</span><span class="text-danger fw-bold fs-8">[${toSymbol}⇄${fromSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`;
+                ? `<span class="ps-1 pe-1 ${cexColor} fw-bold">${fromSide.toUpperCase()}</span><span class="text-success fw-bold">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`
+                : `<span class="ps-1 pe-1 ${cexColor} fw-bold">${toSide.toUpperCase()}</span><span class="text-danger fw-bold ">[${toSymbol}⇄${fromSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`;
 
             const signalText = `
-                <a href="#${rowId}" class="text-decoration-none text-dark text-break">
-                    ${directionLabel}:<span class="text-dark fs-8 fw-bold">${modal}$</span>→<span class="fs-7 fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}$</span>
+                |<a href="#${rowId}" class="text-decoration-none text-dark text-break">
+                    ${directionLabel}:<span class="text-dark fw-bold">${modal}$</span>→<span class="fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}$</span>
                 </a> `;
 
             const signalKey = `${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}_${direction}`;
@@ -2226,8 +2226,8 @@ $('#CheckPrice').on('click', async () => {
 
                 if (listEl) {
                     const highlightClass = pnlNetto > parseFloat(this.settings.PNLFilter)
-                        ? "highlight ms-2"
-                        : "";
+                        ? "highlight fw-bold"
+                        : "fs-8";
 
                     const div = document.createElement("div");
                     div.className = `signal-box ${highlightClass}`;
@@ -2329,7 +2329,7 @@ $('#CheckPrice').on('click', async () => {
                         style="width: 100px; white-space: nowrap; line-height: 1.4;">
                         ${dexId} :
                     </div>
-                    <div id="${listId}" class="d-flex flex-wrap gap-0 align-items-start flex-grow-1" style="line-height: 1.4;"></div>
+                    <div id="${listId}" class="d-flex flex-wrap gap-1 align-items-start flex-grow-1" ></div>
                 </div>
             `);
 

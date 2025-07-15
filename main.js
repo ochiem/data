@@ -2344,7 +2344,7 @@ $('#CheckPrice').on('click', async () => {
                         </div>
 
                         <!-- BODY: abu-abu muda -->
-                        <div class="card-body p-1 pt-1 pb-1 bg-warning-subtle">
+                        <div class="card-body p-1 pt-1 pb-1 ">
                             <div id="${collapseId}" class="collapse show">
                                <ul id="${listId}" class="mb-1 small text-start" ></ul>
                             </div>
