@@ -1,1 +1,2855 @@
-const _0x79b4aa=_0x323e;function _0x323e(_0x294a0c,_0x5cf508){const _0x2f4941=_0x2f49();return _0x323e=function(_0x323e1f,_0x3d2d53){_0x323e1f=_0x323e1f-0x1ce;let _0x16c15c=_0x2f4941[_0x323e1f];return _0x16c15c;},_0x323e(_0x294a0c,_0x5cf508);}(function(_0x4daca7,_0x585e7e){const _0x61a2db=_0x323e,_0x51f1c2=_0x4daca7();while(!![]){try{const _0x166a61=-parseInt(_0x61a2db(0x2f9))/0x1*(-parseInt(_0x61a2db(0x3cd))/0x2)+parseInt(_0x61a2db(0x4bc))/0x3*(-parseInt(_0x61a2db(0x3c4))/0x4)+-parseInt(_0x61a2db(0x4a2))/0x5+-parseInt(_0x61a2db(0x278))/0x6+parseInt(_0x61a2db(0x1d1))/0x7+-parseInt(_0x61a2db(0x1e1))/0x8*(parseInt(_0x61a2db(0x277))/0x9)+parseInt(_0x61a2db(0x3a7))/0xa;if(_0x166a61===_0x585e7e)break;else _0x51f1c2['push'](_0x51f1c2['shift']());}catch(_0x5abbc9){_0x51f1c2['push'](_0x51f1c2['shift']());}}}(_0x2f49,0x51502));const DexList=['KyberSwap',_0x79b4aa(0x436),'OKXDEX',_0x79b4aa(0x1ec),_0x79b4aa(0x2fc),'Lifi'],CexList=[_0x79b4aa(0x2b7),'MEXC',_0x79b4aa(0x289),_0x79b4aa(0x31b)],ChainList=[_0x79b4aa(0x342),_0x79b4aa(0x430),_0x79b4aa(0x41a),'Arbitrum','Base'],chainCodeMap={'bsc':0x38,'ethereum':0x1,'polygon':0x89,'arbitrum':0xa4b1,'base':0x2105,'solana':0x1f5},CexShortMap={'Binance':_0x79b4aa(0x32a),'MEXC':'MXC','Gateio':'GTX','INDODAX':_0x79b4aa(0x40c)},chainShortMap={'BSC':_0x79b4aa(0x342),'ETHEREUM':_0x79b4aa(0x484),'POLYGON':'POLY','ARBITRUM':'ARB','BASE':_0x79b4aa(0x304)},explorerUrls={'1':_0x79b4aa(0x241),'56':_0x79b4aa(0x45c),'137':_0x79b4aa(0x387),'42161':'https://arbiscan.io','8453':'https://basescan.org/','501':_0x79b4aa(0x3b1)},ratePrice={};class TokenPriceMonitor{constructor(){const _0x22a3fb=_0x79b4aa;this[_0x22a3fb(0x4c0)]=window[_0x22a3fb(0x41b)]['origin']+_0x22a3fb(0x4a6),this[_0x22a3fb(0x3c1)]=this[_0x22a3fb(0x26a)](),this[_0x22a3fb(0x403)]=this[_0x22a3fb(0x37b)](),this[_0x22a3fb(0x213)]=null,this[_0x22a3fb(0x318)]='',this['sortAscending']=!![],this['selectedChains']=JSON[_0x22a3fb(0x39e)](localStorage[_0x22a3fb(0x2e2)](_0x22a3fb(0x368)))||[],this[_0x22a3fb(0x3db)]=![],this['autorunTimer']=null,this[_0x22a3fb(0x347)]();}[_0x79b4aa(0x347)](){const _0x548eb4=_0x79b4aa;this[_0x548eb4(0x293)]=JSON[_0x548eb4(0x39e)](localStorage[_0x548eb4(0x2e2)](_0x548eb4(0x368)))||[],this[_0x548eb4(0x333)](),this['updateStats'](),this[_0x548eb4(0x36d)](),this[_0x548eb4(0x451)](),this[_0x548eb4(0x1fe)](),this[_0x548eb4(0x4a0)](),this[_0x548eb4(0x351)](),this[_0x548eb4(0x234)](),this[_0x548eb4(0x495)](),this['initPairSymbolAutocomplete']();const _0x6c8e26=0x1388,_0x12ee30=this[_0x548eb4(0x403)]?.['TimeoutCount']||_0x6c8e26;window[_0x548eb4(0x477)]=_0x12ee30;const _0x44831b=localStorage[_0x548eb4(0x2e2)]('MULTI_ACTIONS');$('#infostatus')[_0x548eb4(0x45b)](_0x44831b?_0x44831b:_0x548eb4(0x392));}['bindEvents'](){const _0x4cd655=_0x79b4aa;$(_0x4cd655(0x3a5))['on']('click',()=>{const _0x515e30=_0x4cd655;this[_0x515e30(0x3db)]=!this[_0x515e30(0x3db)];const _0x3c49da=$(_0x515e30(0x3a5)),_0x3a0b0a=this['isAutorun']?'ON':'OFF';_0x3c49da['html'](_0x515e30(0x2a2)+_0x3a0b0a)[_0x515e30(0x31d)](this[_0x515e30(0x3db)]?_0x515e30(0x29e):'btn-primary')['addClass'](this['isAutorun']?_0x515e30(0x37d):_0x515e30(0x29e));}),$('#tokenSearch')['on'](_0x4cd655(0x22d),()=>{const _0x3f34cd=_0x4cd655;this[_0x3f34cd(0x333)]();}),$(_0x4cd655(0x383))['on'](_0x4cd655(0x445),()=>{const _0x231c2a=_0x4cd655;this[_0x231c2a(0x333)]();}),$(document)[_0x4cd655(0x33d)](_0x4cd655(0x279),_0x4cd655(0x49a))['on']('click',_0x4cd655(0x49a),_0x15df09=>{const _0x1ba026=_0x4cd655,_0x5425eb=$(_0x15df09[_0x1ba026(0x2aa)]),_0x2d1f38=_0x5425eb['data'](_0x1ba026(0x3b8)),_0x301e7f=this[_0x1ba026(0x3c1)][_0x1ba026(0x216)](_0x603d48=>_0x603d48['id'][_0x1ba026(0x3dc)]()===_0x2d1f38[_0x1ba026(0x3dc)]());if(!_0x301e7f)return;const _0x18844b=_0x5425eb[_0x1ba026(0x367)]('td'),_0x195fa4=_0x18844b[_0x1ba026(0x216)](_0x1ba026(0x3ce));_0x195fa4[_0x1ba026(0x2f5)]((_0x1b7391,_0x430fc4)=>{const _0x52d1b0=_0x1ba026,_0x2742c1=$(_0x430fc4),_0x499a1b=_0x2742c1[_0x52d1b0(0x35e)](_0x52d1b0(0x25c)),_0x332a3=_0x2742c1[_0x52d1b0(0x29a)]();if([_0x52d1b0(0x3bf),_0x52d1b0(0x481),_0x52d1b0(0x22a),_0x52d1b0(0x262)][_0x52d1b0(0x2f6)](_0x499a1b)){const _0x24defb=parseFloat(_0x332a3);!isNaN(_0x24defb)&&(_0x301e7f[_0x499a1b]=_0x24defb);}else _0x301e7f[_0x499a1b]=_0x332a3;}),this[_0x1ba026(0x2d6)](!![]),this[_0x1ba026(0x1fa)](_0x1ba026(0x22e)+_0x301e7f['symbol']+'\x20berhasil!',_0x1ba026(0x2a3)),this[_0x1ba026(0x2ef)](_0x1ba026(0x38f)+_0x301e7f[_0x1ba026(0x25d)][_0x1ba026(0x306)]()),console[_0x1ba026(0x455)](_0x1ba026(0x2bb)+_0x301e7f[_0x1ba026(0x25d)]+':',_0x301e7f),this[_0x1ba026(0x333)](),this['updateStats']();}),$(document)['off'](_0x4cd655(0x445),_0x4cd655(0x379))['on'](_0x4cd655(0x445),_0x4cd655(0x379),_0x310ce0=>{const _0x2e01e5=_0x4cd655,_0x907de5=$(_0x310ce0[_0x2e01e5(0x42a)]),_0x213709=_0x907de5['data'](_0x2e01e5(0x3b8)),_0x2b2e23=_0x907de5[_0x2e01e5(0x35e)](_0x2e01e5(0x3ad)),_0x505bc8=_0x907de5['is'](':checked'),_0x1881c6=this[_0x2e01e5(0x3c1)][_0x2e01e5(0x2a1)](_0x5c786f=>_0x5c786f['id'][_0x2e01e5(0x3dc)]()===_0x213709['toString']());if(_0x1881c6===-0x1)return;const _0x49accc=this[_0x2e01e5(0x3c1)][_0x1881c6];_0x505bc8?!_0x49accc['selectedCexs'][_0x2e01e5(0x2f6)](_0x2b2e23)&&_0x49accc[_0x2e01e5(0x452)]['push'](_0x2b2e23):_0x49accc[_0x2e01e5(0x452)]=_0x49accc[_0x2e01e5(0x452)][_0x2e01e5(0x223)](_0x461e3f=>_0x461e3f!==_0x2b2e23);this[_0x2e01e5(0x2d6)](!![]);const _0x52edad=_0x505bc8?'✅':'❌',_0x12894f=_0x505bc8?_0x2e01e5(0x1d8):_0x2e01e5(0x474);this[_0x2e01e5(0x1fa)](_0x52edad+'\x20'+_0x2b2e23+'\x20'+(_0x505bc8?_0x2e01e5(0x3ec):_0x2e01e5(0x46e))+_0x2e01e5(0x3c0)+_0x49accc['symbol'],_0x12894f),this[_0x2e01e5(0x2ef)]('UBAH\x20DATA\x20KOIN');}),$(document)[_0x4cd655(0x33d)](_0x4cd655(0x445),_0x4cd655(0x431))['on']('change',_0x4cd655(0x431),_0x407af3=>{const _0x57b20b=_0x4cd655,_0x4280d9=$(_0x407af3[_0x57b20b(0x42a)]),_0x55181b=_0x4280d9['data']('token-id'),_0x3b6d81=_0x4280d9[_0x57b20b(0x35e)](_0x57b20b(0x1dd)),_0x36a0f6=_0x4280d9['is'](_0x57b20b(0x39b)),_0x23ffd9=this[_0x57b20b(0x3c1)][_0x57b20b(0x2a1)](_0x2bc2d4=>_0x2bc2d4['id'][_0x57b20b(0x3dc)]()===_0x55181b['toString']());if(_0x23ffd9===-0x1)return;const _0x4b76e4=this[_0x57b20b(0x3c1)][_0x23ffd9];_0x36a0f6?!_0x4b76e4['selectedDexs'][_0x57b20b(0x2f6)](_0x3b6d81)&&_0x4b76e4[_0x57b20b(0x1d4)][_0x57b20b(0x1de)](_0x3b6d81):_0x4b76e4[_0x57b20b(0x1d4)]=_0x4b76e4[_0x57b20b(0x1d4)]['filter'](_0xe29c09=>_0xe29c09!==_0x3b6d81);this[_0x57b20b(0x2d6)](!![]);const _0x370a62=_0x36a0f6?'✅':'❌',_0x32a7a3=_0x36a0f6?_0x57b20b(0x1d8):'danger';this[_0x57b20b(0x1fa)](_0x370a62+'\x20'+_0x3b6d81+'\x20'+(_0x36a0f6?_0x57b20b(0x3ec):_0x57b20b(0x46e))+_0x57b20b(0x3c0)+_0x4b76e4[_0x57b20b(0x25d)],_0x32a7a3),this[_0x57b20b(0x2ef)](_0x57b20b(0x422));}),$(document)['on'](_0x4cd655(0x445),'.chainFilterCheckbox',()=>{const _0x4edf52=_0x4cd655,_0x17c4be=$(_0x4edf52(0x239))[_0x4edf52(0x3b4)](function(){const _0x28cbe8=_0x4edf52;return $(this)[_0x28cbe8(0x29a)]();})[_0x4edf52(0x3ac)]();localStorage[_0x4edf52(0x28e)](_0x4edf52(0x368),JSON[_0x4edf52(0x47b)](_0x17c4be)),this[_0x4edf52(0x293)]=_0x17c4be,this['generateEmptyTable'](),this[_0x4edf52(0x25e)](),location[_0x4edf52(0x37e)]();}),$('#CheckPriceLAMA')['on'](_0x4cd655(0x279),async()=>{const _0xc3a339=_0x4cd655;$('#mainTabs\x20a[href=\x22#priceMonitoring\x22]')[_0xc3a339(0x399)](_0xc3a339(0x354));const _0x155225=$('#mainTabs\x20.nav-item:has(a[href=\x22#tokenManagement\x22])'),_0x2d6fbe=$(_0xc3a339(0x314)),_0x2a7f70=$('#mainTabs\x20.nav-item:has(a[href=\x22#portfolioTab\x22])'),_0x56f0a5=$(_0xc3a339(0x332));_0x155225[_0xc3a339(0x438)](),_0x2d6fbe[_0xc3a339(0x438)](),_0x2a7f70[_0xc3a339(0x438)](),$(_0xc3a339(0x405))[_0xc3a339(0x354)](),$('#sortByToken')[_0xc3a339(0x260)]('disabled',!![]),$('#StopScan')[_0xc3a339(0x31d)](_0xc3a339(0x3e2)),this[_0xc3a339(0x230)](),this['sendStatusTELE'](this['settings'][_0xc3a339(0x4bf)],_0xc3a339(0x38c)),this[_0xc3a339(0x351)](),$('#CheckPrice')['prop'](_0xc3a339(0x25b),!![])[_0xc3a339(0x3d6)](_0xc3a339(0x496)),$('#autorunBtn')['prop'](_0xc3a339(0x25b),!![]),$('#monitoringSearch')[_0xc3a339(0x260)](_0xc3a339(0x25b),!![])[_0xc3a339(0x29a)](''),await this[_0xc3a339(0x2f2)](),this[_0xc3a339(0x3db)]&&($(_0xc3a339(0x493))['prop'](_0xc3a339(0x25b),!![]),$(_0xc3a339(0x3a5))[_0xc3a339(0x260)](_0xc3a339(0x25b),!![]),$(_0xc3a339(0x48a))[_0xc3a339(0x260)]('disabled',!![]),$(_0xc3a339(0x2c0))[_0xc3a339(0x260)](_0xc3a339(0x25b),!![]),$(_0xc3a339(0x264))['prop'](_0xc3a339(0x25b),!![]),$(_0xc3a339(0x402))[_0xc3a339(0x31d)](_0xc3a339(0x3e2))['prop']('disabled',![])),_0x155225[_0xc3a339(0x354)](),_0x2d6fbe['show'](),_0x2a7f70[_0xc3a339(0x354)](),_0x56f0a5[_0xc3a339(0x354)](),$(_0xc3a339(0x402))[_0xc3a339(0x487)](_0xc3a339(0x3e2)),$('#monitoringSearch')[_0xc3a339(0x260)](_0xc3a339(0x25b),![]),$('#sortByToken')[_0xc3a339(0x260)](_0xc3a339(0x25b),![]),$(_0xc3a339(0x493))[_0xc3a339(0x260)](_0xc3a339(0x25b),![])[_0xc3a339(0x3d6)](_0xc3a339(0x244)),this[_0xc3a339(0x3db)]&&this['startAutorunCountdown'](()=>$(_0xc3a339(0x493))[_0xc3a339(0x26c)]('click'));}),$(_0x4cd655(0x493))['on'](_0x4cd655(0x279),async()=>{const _0x416d41=_0x4cd655;$(_0x416d41(0x215))[_0x416d41(0x399)]('show');const _0x4aaf53=$(_0x416d41(0x415)),_0xc14d4a=$(_0x416d41(0x314)),_0x180891=$('#mainTabs\x20.nav-item:has(a[href=\x22#portfolioTab\x22])'),_0x1e2010=$(_0x416d41(0x332));_0x4aaf53[_0x416d41(0x438)](),_0xc14d4a[_0x416d41(0x438)](),_0x180891['hide'](),_0x1e2010['hide'](),$(_0x416d41(0x405))[_0x416d41(0x354)](),$('#CheckPrice')[_0x416d41(0x260)](_0x416d41(0x25b),!![])[_0x416d41(0x3d6)](_0x416d41(0x496)),$('#autorunBtn')[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$(_0x416d41(0x48a))['prop'](_0x416d41(0x25b),!![])[_0x416d41(0x29a)](''),$(_0x416d41(0x2c0))[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$(_0x416d41(0x264))['prop'](_0x416d41(0x25b),!![]),$(_0x416d41(0x402))[_0x416d41(0x31d)](_0x416d41(0x3e2))[_0x416d41(0x260)](_0x416d41(0x25b),![]),this['initPNLSignalStructure'](),this[_0x416d41(0x3ba)](this['settings'][_0x416d41(0x4bf)],_0x416d41(0x38c)),this[_0x416d41(0x351)](),await this[_0x416d41(0x2f2)](),this[_0x416d41(0x3db)]?($(_0x416d41(0x493))[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$(_0x416d41(0x3a5))[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$(_0x416d41(0x48a))[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$('#sortByToken')[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$(_0x416d41(0x264))[_0x416d41(0x260)](_0x416d41(0x25b),!![]),$('#StopScan')[_0x416d41(0x31d)]('d-none')[_0x416d41(0x260)](_0x416d41(0x25b),![]),this[_0x416d41(0x361)](()=>$(_0x416d41(0x493))[_0x416d41(0x26c)](_0x416d41(0x279)))):(_0x4aaf53[_0x416d41(0x354)](),_0xc14d4a[_0x416d41(0x354)](),_0x180891[_0x416d41(0x354)](),_0x1e2010[_0x416d41(0x354)](),$('#StopScan')[_0x416d41(0x487)](_0x416d41(0x3e2)),$(_0x416d41(0x48a))[_0x416d41(0x260)]('disabled',![]),$('#sortByToken')[_0x416d41(0x260)](_0x416d41(0x25b),![]),$(_0x416d41(0x264))[_0x416d41(0x260)](_0x416d41(0x25b),![]),$('#CheckPrice')['prop']('disabled',![])[_0x416d41(0x3d6)](_0x416d41(0x244)),$('#autorunBtn')['prop']('disabled',![]),$(_0x416d41(0x494))['text'](''));}),$(_0x4cd655(0x432))['on']('click',()=>{const _0x1d41ea=_0x4cd655;clearInterval(this[_0x1d41ea(0x340)]),$(_0x1d41ea(0x494))[_0x1d41ea(0x2fe)](),$(_0x1d41ea(0x493))[_0x1d41ea(0x260)](_0x1d41ea(0x25b),![]),$(_0x1d41ea(0x3a5))[_0x1d41ea(0x260)](_0x1d41ea(0x25b),![]),$(_0x1d41ea(0x48a))['prop']('disabled',![]),$(_0x1d41ea(0x2c0))[_0x1d41ea(0x260)](_0x1d41ea(0x25b),![]),$(_0x1d41ea(0x264))[_0x1d41ea(0x260)](_0x1d41ea(0x25b),![]),location['reload']();}),$(_0x4cd655(0x3e3))['on'](_0x4cd655(0x279),()=>{confirm('Apakah\x20Anda\x20yakin\x20ingin\x20UPDATE\x20WALLET\x20CEX?')&&checkAllCEXWalletsPerChain();}),$(_0x4cd655(0x284))['on']('click',()=>{this['saveToken']();}),$(document)['on'](_0x4cd655(0x279),'a.nav-link.active[href=\x22#priceMonitoring\x22]',function(_0xe6373){const _0x4d0b9a=_0x4cd655;_0xe6373[_0x4d0b9a(0x217)](),location[_0x4d0b9a(0x37e)]();}),$(_0x4cd655(0x3c7))['on'](_0x4cd655(0x279),()=>{const _0x5827f7=_0x4cd655;this[_0x5827f7(0x3bd)]();}),$(_0x4cd655(0x263))['on'](_0x4cd655(0x229),()=>{const _0x4e911f=_0x4cd655;!this['currentEditingToken']&&this[_0x4e911f(0x26e)]();}),$('#tokenModal')['on'](_0x4cd655(0x27d),()=>{const _0x20c803=_0x4cd655;this['currentEditingToken']=null,$(_0x20c803(0x2b8))[_0x20c803(0x45b)](_0x20c803(0x409));}),$(_0x4cd655(0x23d))['on'](_0x4cd655(0x279),()=>{const _0x5432f1=_0x4cd655,_0x25e858=app[_0x5432f1(0x3c1)];if(!_0x25e858['length'])return app[_0x5432f1(0x1fa)](_0x5432f1(0x400),_0x5432f1(0x3f0));const _0x51a635=['id',_0x5432f1(0x25d),_0x5432f1(0x252),_0x5432f1(0x3f9),_0x5432f1(0x41f),_0x5432f1(0x22a),'pairDecimals',_0x5432f1(0x472),_0x5432f1(0x3bf),'modalDexToCex',...CexList,...DexList,_0x5432f1(0x46c)],_0x2e0db5=_0x25e858['map'](_0x56337a=>{const _0x416053=_0x5432f1,_0xd65040=[_0x56337a['id'],_0x56337a[_0x416053(0x25d)],_0x56337a[_0x416053(0x252)],_0x56337a['contractAddress'],_0x56337a[_0x416053(0x41f)],_0x56337a[_0x416053(0x22a)],_0x56337a[_0x416053(0x262)],_0x56337a['chain'],_0x56337a[_0x416053(0x3bf)],_0x56337a[_0x416053(0x481)]];return CexList[_0x416053(0x313)](_0x2e1c00=>_0xd65040['push'](_0x56337a[_0x416053(0x452)][_0x416053(0x2f6)](_0x2e1c00)['toString']())),DexList[_0x416053(0x313)](_0x3e7002=>_0xd65040[_0x416053(0x1de)](_0x56337a[_0x416053(0x1d4)][_0x416053(0x2f6)](_0x3e7002)[_0x416053(0x3dc)]())),_0xd65040[_0x416053(0x1de)](_0x56337a[_0x416053(0x46c)]),_0xd65040;}),_0x4c730f=[_0x51a635[_0x5432f1(0x33f)]('\x09'),..._0x2e0db5[_0x5432f1(0x3b4)](_0x49a3c9=>_0x49a3c9[_0x5432f1(0x33f)]('\x09'))][_0x5432f1(0x33f)]('\x0a'),_0x462f32=new Blob([_0x4c730f],{'type':_0x5432f1(0x21c)}),_0x4145ab=document[_0x5432f1(0x4b7)]('a');_0x4145ab[_0x5432f1(0x3a0)]=URL['createObjectURL'](_0x462f32),_0x4145ab[_0x5432f1(0x376)]=_0x5432f1(0x3c8),app['logAction'](_0x5432f1(0x3a2)),_0x4145ab['click']();}),$(_0x4cd655(0x3fb))['on'](_0x4cd655(0x279),()=>{const _0x2957f5=_0x4cd655;$(_0x2957f5(0x419))[_0x2957f5(0x279)]();}),$(_0x4cd655(0x419))['on'](_0x4cd655(0x445),_0x4c02ed=>{const _0x359eae=_0x4cd655,_0x8fc135=_0x4c02ed[_0x359eae(0x42a)][_0x359eae(0x1e7)][0x0];if(!_0x8fc135)return;const _0x2e6234=new FileReader();_0x2e6234[_0x359eae(0x288)]=_0x5f90fd=>{const _0x27da3a=_0x359eae,_0x102aea=_0x5f90fd[_0x27da3a(0x42a)][_0x27da3a(0x453)],_0x563fe9=_0x102aea[_0x27da3a(0x22f)]('\x0a')['map'](_0x3b0e51=>_0x3b0e51[_0x27da3a(0x28c)]())[_0x27da3a(0x223)](Boolean);if(_0x563fe9[_0x27da3a(0x32c)]<0x2){app[_0x27da3a(0x1fa)]('❌\x20Format\x20file\x20tidak\x20valid\x20atau\x20kosong.',_0x27da3a(0x474));return;}const _0x435d55=_0x563fe9[0x0][_0x27da3a(0x2f6)]('\x09')?'\x09':_0x563fe9[0x0][_0x27da3a(0x2f6)](',')?',':null;if(!_0x435d55){app[_0x27da3a(0x1fa)](_0x27da3a(0x21d),_0x27da3a(0x474));return;}const _0x2df612=_0x563fe9[0x0][_0x27da3a(0x22f)](_0x435d55),_0x53af02=[];let _0xcb4726=0x0;_0x563fe9[_0x27da3a(0x320)](0x1)[_0x27da3a(0x313)]((_0x8d90de,_0xdbbd71)=>{const _0x39a896=_0x27da3a,_0x43c152=_0x8d90de[_0x39a896(0x22f)](_0x435d55),_0x236974={},_0x2d0910=[],_0x2c2a86=[];_0x2df612['forEach']((_0x2d1325,_0x23098f)=>{const _0x569be6=_0x39a896,_0x196423=_0x43c152[_0x23098f]?.[_0x569be6(0x28c)]()??'';if(CexList[_0x569be6(0x2f6)](_0x2d1325)){if(_0x196423[_0x569be6(0x2b9)]()===_0x569be6(0x412))_0x2d0910[_0x569be6(0x1de)](_0x2d1325);}else{if(DexList['includes'](_0x2d1325)){if(_0x196423[_0x569be6(0x2b9)]()==='true')_0x2c2a86[_0x569be6(0x1de)](_0x2d1325);}else{if(_0x2d1325===_0x569be6(0x46c))_0x236974[_0x2d1325]=_0x196423[_0x569be6(0x2b9)]()==='true';else[_0x569be6(0x3bf),'modalDexToCex','decimals',_0x569be6(0x262),'id'][_0x569be6(0x2f6)](_0x2d1325)?_0x236974[_0x2d1325]=Number(_0x196423):_0x236974[_0x2d1325]=_0x196423;}}}),_0x236974['selectedCexs']=_0x2d0910,_0x236974['selectedDexs']=_0x2c2a86;if(!_0x236974[_0x39a896(0x25d)]||!_0x236974['chain']){console['warn'](_0x39a896(0x1ff)+(_0xdbbd71+0x2)+'\x20dilewati\x20(symbol/chain\x20kosong):',_0x236974),_0xcb4726++;return;}_0x53af02[_0x39a896(0x1de)](_0x236974);});if(_0x53af02['length']===0x0){app[_0x27da3a(0x1fa)]('❌\x20Semua\x20baris\x20gagal\x20diimpor.\x20Periksa\x20format\x20dan\x20isi\x20file.','danger');return;}localStorage['setItem']('MULTI_TOKENS',JSON['stringify'](_0x53af02)),app[_0x27da3a(0x3c1)]=_0x53af02,app[_0x27da3a(0x333)](),app[_0x27da3a(0x25e)]();const _0x4e2c38=_0xcb4726>0x0?_0x27da3a(0x326)+_0x53af02[_0x27da3a(0x32c)]+_0x27da3a(0x1d2)+_0xcb4726+_0x27da3a(0x48f):_0x27da3a(0x437)+_0x53af02[_0x27da3a(0x32c)]+'\x20token\x20dimuat.';this[_0x27da3a(0x2ef)](_0x27da3a(0x226)),app[_0x27da3a(0x1fa)](_0x4e2c38,_0x27da3a(0x474));},_0x2e6234['readAsText'](_0x8fc135);}),$(_0x4cd655(0x2c0))['on']('click',()=>{const _0x5ce4f8=_0x4cd655;this[_0x5ce4f8(0x26f)]=!this['sortAscending'];const _0x242424=this['sortAscending']?_0x5ce4f8(0x2a8):_0x5ce4f8(0x385);$(_0x5ce4f8(0x1eb))['attr'](_0x5ce4f8(0x2db),_0x5ce4f8(0x256)+_0x242424),this[_0x5ce4f8(0x3c1)][_0x5ce4f8(0x370)]((_0x41ae20,_0x27b5d0)=>this[_0x5ce4f8(0x26f)]?_0x41ae20['symbol'][_0x5ce4f8(0x358)](_0x27b5d0[_0x5ce4f8(0x25d)]):_0x27b5d0[_0x5ce4f8(0x25d)][_0x5ce4f8(0x358)](_0x41ae20['symbol'])),this[_0x5ce4f8(0x351)]();});}[_0x79b4aa(0x495)](){const _0x26e612=_0x79b4aa;$(_0x26e612(0x3e6))['each']((_0x462556,_0x4b3612)=>{const _0x5a561b=_0x26e612,_0x403298=$(_0x4b3612)['val']();this['selectedChains']['includes'](_0x403298)&&$(_0x4b3612)[_0x5a561b(0x260)]('checked',!![]);});}['startAutorunCountdown'](_0x4d2d99){const _0x518b0d=_0x79b4aa;clearInterval(this[_0x518b0d(0x340)]);let _0x53e275=0x19;const _0x1997e6=$(_0x518b0d(0x494));_0x1997e6['text'](_0x518b0d(0x406)+_0x53e275+'s')[_0x518b0d(0x354)](),this[_0x518b0d(0x340)]=setInterval(()=>{const _0x1c539c=_0x518b0d;_0x53e275--,_0x1997e6[_0x1c539c(0x45b)]('⏳\x20Autorun\x20in\x20'+_0x53e275+'s'),_0x53e275<=0x0&&(clearInterval(this[_0x1c539c(0x340)]),_0x1997e6[_0x1c539c(0x45b)](''),_0x4d2d99());},0x3e8);}[_0x79b4aa(0x2b5)](){const _0x418590=_0x79b4aa,_0x8003f=[{'symbolPair':_0x418590(0x1f9),'scAddressPair':'0xc2132D05D31c914a87C6611C10748AEb04B58e8F','desPair':'6','chain':_0x418590(0x3be)},{'symbolPair':_0x418590(0x491),'scAddressPair':_0x418590(0x42e),'desPair':'18','chain':_0x418590(0x3be)},{'symbolPair':_0x418590(0x2be),'scAddressPair':_0x418590(0x35f),'desPair':'18','chain':_0x418590(0x3ed)},{'symbolPair':'USDT','scAddressPair':_0x418590(0x1f2),'desPair':'6','chain':_0x418590(0x3ed)},{'symbolPair':_0x418590(0x2be),'scAddressPair':'0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','desPair':'18','chain':_0x418590(0x2ea)},{'symbolPair':_0x418590(0x1f9),'scAddressPair':_0x418590(0x42c),'desPair':'6','chain':_0x418590(0x2ea)},{'symbolPair':_0x418590(0x1ef),'scAddressPair':_0x418590(0x3d5),'desPair':'6','chain':_0x418590(0x2ea)},{'symbolPair':'BNB','scAddressPair':_0x418590(0x296),'desPair':'18','chain':_0x418590(0x342)},{'symbolPair':_0x418590(0x1f9),'scAddressPair':'0x55d398326f99059fF775485246999027B3197955','desPair':'18','chain':_0x418590(0x342)},{'symbolPair':_0x418590(0x2be),'scAddressPair':_0x418590(0x339),'desPair':'18','chain':_0x418590(0x304)},{'symbolPair':_0x418590(0x1ef),'scAddressPair':'0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913','desPair':'6','chain':_0x418590(0x304)}],_0x19326c=$(_0x418590(0x1d0)),_0x45b1ee=$(_0x418590(0x32d));_0x19326c[_0x418590(0x3bc)](_0x45b1ee),_0x19326c['on'](_0x418590(0x1cf),()=>{const _0x5e8ce2=_0x418590,_0x431f86=_0x19326c[_0x5e8ce2(0x29a)]()[_0x5e8ce2(0x306)]()[_0x5e8ce2(0x28c)]();_0x45b1ee['empty']();const _0x275ab8=_0x8003f[_0x5e8ce2(0x223)](_0x4c2584=>!_0x431f86||_0x4c2584['symbolPair'][_0x5e8ce2(0x306)]()[_0x5e8ce2(0x246)](_0x431f86));if(!_0x275ab8[_0x5e8ce2(0x32c)]){_0x45b1ee[_0x5e8ce2(0x438)]();return;}_0x275ab8[_0x5e8ce2(0x313)](_0x23de48=>{const _0x14dcb=_0x5e8ce2,_0x4c8cdf=$(_0x14dcb(0x435))[_0x14dcb(0x45b)](_0x23de48[_0x14dcb(0x364)]+'\x20['+_0x23de48[_0x14dcb(0x472)]+']')[_0x14dcb(0x35e)](_0x14dcb(0x1e9),_0x23de48)[_0x14dcb(0x321)](_0x45b1ee);}),_0x45b1ee[_0x5e8ce2(0x354)]();}),_0x45b1ee['on'](_0x418590(0x279),'li',function(){const _0x477f15=_0x418590,_0x4388f2=$(this)['data']('pair');$(_0x477f15(0x1d0))[_0x477f15(0x29a)](_0x4388f2[_0x477f15(0x364)]),$(_0x477f15(0x23c))['val'](_0x4388f2['scAddressPair']),$(_0x477f15(0x345))['val'](_0x4388f2[_0x477f15(0x388)]),_0x45b1ee[_0x477f15(0x438)]();}),$(document)['on'](_0x418590(0x279),function(_0x52563e){const _0x2409f0=_0x418590;!$(_0x52563e[_0x2409f0(0x42a)])['closest']('#pairSymbol,\x20#pairSuggestions')[_0x2409f0(0x32c)]&&_0x45b1ee['hide']();});}['fetchGasTokenPrices'](){const _0x3a40a9=_0x79b4aa;$[_0x3a40a9(0x227)]('https://data-api.binance.vision/api/v3/ticker/price?symbols=[\x22BNBUSDT\x22,\x22ETHUSDT\x22,\x22MATICUSDT\x22,\x22SOLUSDT\x22]')['done'](_0x113602=>{const _0x5f3b8f=_0x3a40a9;for(const _0xd4bf7e of _0x113602){const _0x206d99=parseFloat(_0xd4bf7e[_0x5f3b8f(0x401)]);_0xd4bf7e['symbol']===_0x5f3b8f(0x3ff)&&(GasPriceUSD[_0x5f3b8f(0x342)]=_0x206d99,$(_0x5f3b8f(0x457))[_0x5f3b8f(0x45b)]('$'+_0x206d99[_0x5f3b8f(0x3b7)](0x2))),_0xd4bf7e[_0x5f3b8f(0x25d)]===_0x5f3b8f(0x24c)&&(GasPriceUSD[_0x5f3b8f(0x430)]=_0x206d99,GasPriceUSD[_0x5f3b8f(0x26b)]=_0x206d99,GasPriceUSD[_0x5f3b8f(0x31c)]=_0x206d99,$('#ethPrice')[_0x5f3b8f(0x45b)]('$'+_0x206d99[_0x5f3b8f(0x3b7)](0x2))),_0xd4bf7e[_0x5f3b8f(0x25d)]===_0x5f3b8f(0x1db)&&(GasPriceUSD[_0x5f3b8f(0x41a)]=_0x206d99,$('#maticPrice')[_0x5f3b8f(0x45b)]('$'+_0x206d99['toFixed'](0x2)));}})[_0x3a40a9(0x3cf)](_0x451376=>{const _0x3fa493=_0x3a40a9;console[_0x3fa493(0x2c9)]('[✘]\x20Failed\x20to\x20fetch\x20gas\x20token\x20prices',_0x451376);});}['fetchUSDTtoIDRRate'](){const _0x51013c=_0x79b4aa;$[_0x51013c(0x227)]('https://indodax.com/api/ticker/usdtidr')[_0x51013c(0x1f7)](_0x2fe21f=>{const _0x3f2d3c=_0x51013c,_0x4f4977=parseFloat(_0x2fe21f[_0x3f2d3c(0x34c)][_0x3f2d3c(0x305)]);window[_0x3f2d3c(0x290)]=window[_0x3f2d3c(0x290)]||{},window[_0x3f2d3c(0x290)][_0x3f2d3c(0x295)]=_0x4f4977,$(_0x3f2d3c(0x222))[_0x3f2d3c(0x45b)](_0x3f2d3c(0x446)+_0x4f4977[_0x3f2d3c(0x47a)]('id-ID'));})['fail'](_0x4f8d12=>{const _0x9138ad=_0x51013c;console[_0x9138ad(0x2c9)](_0x9138ad(0x20a),_0x4f8d12);});}[_0x79b4aa(0x351)](){const _0x3b5bde=_0x79b4aa,_0xc5185e=$(_0x3b5bde(0x3a3));_0xc5185e[_0x3b5bde(0x27c)]();typeof this[_0x3b5bde(0x26f)]===_0x3b5bde(0x37a)&&(this['sortAscending']=!![]);const _0x4a9e56=this['tokens'][_0x3b5bde(0x223)](_0x27a30e=>_0x27a30e[_0x3b5bde(0x46c)])[_0x3b5bde(0x223)](_0x3ae6ad=>this[_0x3b5bde(0x293)][_0x3b5bde(0x2f6)](_0x3ae6ad[_0x3b5bde(0x472)]))[_0x3b5bde(0x223)](_0xacf834=>{const _0x32638f=_0x3b5bde,_0x200e2f=(this[_0x32638f(0x318)]||'')[_0x32638f(0x2b9)]();return _0xacf834[_0x32638f(0x25d)][_0x32638f(0x2b9)]()['includes'](_0x200e2f)||_0xacf834[_0x32638f(0x252)][_0x32638f(0x2b9)]()[_0x32638f(0x2f6)](_0x200e2f);})['sort']((_0x4ccc55,_0x291da7)=>{const _0x58f6e4=_0x3b5bde,_0x485dd3=_0x4ccc55['symbol'][_0x58f6e4(0x2b9)](),_0x2701ce=_0x291da7[_0x58f6e4(0x25d)][_0x58f6e4(0x2b9)]();return this[_0x58f6e4(0x26f)]?_0x485dd3[_0x58f6e4(0x358)](_0x2701ce):_0x2701ce['localeCompare'](_0x485dd3);});if(_0x4a9e56['length']===0x0){_0xc5185e[_0x3b5bde(0x3d6)](_0x3b5bde(0x2e5));return;}let _0x2da635=0x0;for(const _0x28b0f6 of _0x4a9e56){for(const _0x431005 of _0x28b0f6['selectedCexs']){const _0x2fc178='token-row-'+_0x28b0f6['id']+'-'+_0x431005[_0x3b5bde(0x3f5)](/\W+/g,'')['toLowerCase'](),_0x4bb3ba=DexList['map'](_0x568089=>{const _0x4c4256=_0x3b5bde,_0x532b34=_0x28b0f6[_0x4c4256(0x1d4)]?.[_0x4c4256(0x2f6)](_0x568089),_0x1c942e=_0x532b34?'🔒':'⛔',_0x5ac016=_0x532b34?'':_0x4c4256(0x2c3),_0xde7518=(_0x4c4256(0x390)+_0x28b0f6[_0x4c4256(0x25d)]+'_'+_0x28b0f6[_0x4c4256(0x252)]+'_'+_0x28b0f6['chain']+'_'+_0x431005+'_'+_0x568089)[_0x4c4256(0x2b9)]()['replace'](/\W+/g,'');return _0x4c4256(0x3cb)+_0xde7518+_0x4c4256(0x30c)+_0x5ac016+'\x22>'+_0x1c942e+'</td>';})[_0x3b5bde(0x33f)](''),_0xafdbf8=DexList[_0x3b5bde(0x3b4)](_0x255a81=>{const _0x44d281=_0x3b5bde,_0x48f2ad=_0x28b0f6[_0x44d281(0x1d4)]?.[_0x44d281(0x2f6)](_0x255a81),_0x439715=_0x48f2ad?'🔒':'⛔',_0x46e32d=_0x48f2ad?'':_0x44d281(0x2c3),_0x32b82a=('cell_'+_0x28b0f6['pairSymbol']+'_'+_0x28b0f6[_0x44d281(0x25d)]+'_'+_0x28b0f6[_0x44d281(0x472)]+'_'+_0x255a81+'_'+_0x431005)[_0x44d281(0x2b9)]()['replace'](/\W+/g,'');return _0x44d281(0x3cb)+_0x32b82a+_0x44d281(0x30c)+_0x46e32d+'\x22>'+_0x439715+_0x44d281(0x2e0);})[_0x3b5bde(0x33f)](''),_0xec98ca=this[_0x3b5bde(0x1f5)](_0x28b0f6,_0x431005),_0xc7e53f='orderbook_cex_to_dex_'+_0x431005+'_'+_0x28b0f6[_0x3b5bde(0x472)]+'_'+_0x28b0f6[_0x3b5bde(0x25d)]+'_'+_0x28b0f6['pairSymbol'],_0x45e206=_0x3b5bde(0x489)+_0x431005+'_'+_0x28b0f6[_0x3b5bde(0x472)]+'_'+_0x28b0f6[_0x3b5bde(0x252)]+'_'+_0x28b0f6[_0x3b5bde(0x25d)],_0x491d68=_0x2da635%0x2===0x0?_0x3b5bde(0x4b1):_0x3b5bde(0x35d),_0x4f62af=_0x3b5bde(0x4a8)+_0x2fc178+_0x3b5bde(0x3f3)+_0x491d68+_0x3b5bde(0x31e)+_0xc7e53f[_0x3b5bde(0x2b9)]()+_0x3b5bde(0x1e2)+_0x431005+_0x3b5bde(0x427)+_0x4bb3ba+_0x3b5bde(0x4bb)+_0xec98ca+_0x3b5bde(0x38d)+_0xafdbf8+_0x3b5bde(0x300)+_0x45e206['toLowerCase']()+_0x3b5bde(0x1e2)+_0x431005+'🔒</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';_0xc5185e[_0x3b5bde(0x25f)](_0x4f62af),_0x2da635++;}}}['generateOrderBook'](_0x164b38,_0x327ac9,_0x4ec89d,_0x2415a0){const _0x4d996b=_0x79b4aa,_0x1b2c39=_0x164b38[_0x4d996b(0x25d)][_0x4d996b(0x306)](),_0x43e5c7=_0x164b38[_0x4d996b(0x252)][_0x4d996b(0x306)](),_0x5a5cfb=_0x164b38[_0x4d996b(0x472)][_0x4d996b(0x2b9)](),_0x1b51c4=_0x327ac9[_0x4d996b(0x20e)]?.[_0x2415a0]?.[_0x4ec89d];if(!_0x1b51c4)return;const _0x1fe6d6=_0x1b51c4[_0x1b2c39+'ToUSDT']||{},_0x51f908=_0x4ec89d[_0x4d996b(0x2b9)]()===_0x4d996b(0x381),_0x1e95d0=(_0x4e4246=[],_0x1e9f6b=_0x4d996b(0x325),_0x1b6921='')=>{const _0x1ca361=_0x4d996b;let _0x596648;_0x51f908?_0x596648=_0x1e9f6b===_0x1ca361(0x359)?_0x1ca361(0x337):'text-success':_0x596648=_0x1e9f6b===_0x1ca361(0x359)?_0x1ca361(0x49c):_0x1ca361(0x337);if(_0x1b6921==='USDT'){const _0x5d1520='<span\x20class=\x22'+_0x596648+_0x1ca361(0x356);return _0x5d1520+_0x1ca361(0x43e)+_0x5d1520+'<br>'+_0x5d1520;}const _0x14f47a=[..._0x4e4246||[]][_0x1ca361(0x370)]((_0x56cb88,_0x41ffca)=>{const _0x2513b9=_0x1ca361,_0x516471=parseFloat(_0x56cb88[_0x2513b9(0x401)]),_0x1b7d7a=parseFloat(_0x41ffca[_0x2513b9(0x401)]);return _0x51f908?_0x1e9f6b===_0x2513b9(0x325)?_0x516471-_0x1b7d7a:_0x1b7d7a-_0x516471:_0x1e9f6b===_0x2513b9(0x325)?_0x1b7d7a-_0x516471:_0x516471-_0x1b7d7a;});return _0x14f47a[_0x1ca361(0x320)](0x0,0x5)['map'](_0x4abe31=>{const _0xfda40f=_0x1ca361,_0x2d8b50=parseFloat(_0x4abe31['price']),_0x30330d=parseFloat(_0x4abe31[_0xfda40f(0x247)]),_0xa4f8e=_0x4abe31[_0xfda40f(0x355)]!==undefined?parseFloat(_0x4abe31[_0xfda40f(0x355)]):_0x2d8b50*_0x30330d,_0x22327a=PriceUtils[_0xfda40f(0x273)](_0x2d8b50),_0x4a8ccf=_0xa4f8e[_0xfda40f(0x3b7)](0x2);return _0xfda40f(0x44f)+_0x596648+'\x22>'+_0x22327a+_0xfda40f(0x1d7)+_0x4a8ccf+'$</span>';})[_0x1ca361(0x33f)](_0x1ca361(0x43e));};let _0x5ed54e,_0x2ca42c;_0x51f908?(_0x5ed54e=[_0x4d996b(0x458)+_0x1b2c39+_0x4d996b(0x35b)+_0x43e5c7+_0x4d996b(0x3f1),_0x1e95d0(_0x1fe6d6[_0x4d996b(0x36f)],_0x4d996b(0x359),_0x1b2c39)][_0x4d996b(0x223)](Boolean)[_0x4d996b(0x33f)]('<br>'),_0x2ca42c=[_0x4d996b(0x458)+_0x43e5c7+_0x4d996b(0x35b)+_0x1b2c39+_0x4d996b(0x3f1),_0x1e95d0(_0x1fe6d6[_0x4d996b(0x39d)],_0x4d996b(0x325),_0x1b2c39)][_0x4d996b(0x223)](Boolean)[_0x4d996b(0x33f)](_0x4d996b(0x43e))):(_0x5ed54e=[_0x4d996b(0x458)+_0x1b2c39+'\x20→\x20'+_0x43e5c7+_0x4d996b(0x3f1),_0x1e95d0(_0x1fe6d6['topBids'],'buy',_0x1b2c39)]['filter'](Boolean)[_0x4d996b(0x33f)](_0x4d996b(0x43e)),_0x2ca42c=[_0x4d996b(0x458)+_0x43e5c7+_0x4d996b(0x35b)+_0x1b2c39+'</span>',_0x1e95d0(_0x1fe6d6[_0x4d996b(0x36f)],'sell',_0x1b2c39)]['filter'](Boolean)[_0x4d996b(0x33f)]('<br>'));const _0x303e7f=_0x4d996b(0x489)+_0x4ec89d['toLowerCase']()+'_'+_0x5a5cfb+'_'+_0x43e5c7['toLowerCase']()+'_'+_0x1b2c39[_0x4d996b(0x2b9)](),_0x3c630e='orderbook_cex_to_dex_'+_0x4ec89d[_0x4d996b(0x2b9)]()+'_'+_0x5a5cfb+'_'+_0x1b2c39['toLowerCase']()+'_'+_0x43e5c7[_0x4d996b(0x2b9)]();if(_0x2415a0===_0x4d996b(0x3d0))$('#'+_0x303e7f)[_0x4d996b(0x3d6)](_0x5ed54e||'-');else _0x2415a0===_0x4d996b(0x3df)&&$('#'+_0x3c630e)[_0x4d996b(0x3d6)](_0x2ca42c||'-');}['loadTokens'](){const _0x5e0e75=_0x79b4aa,_0x1fe25f=JSON[_0x5e0e75(0x39e)](localStorage[_0x5e0e75(0x2e2)](_0x5e0e75(0x49f))||'[]');return _0x1fe25f[_0x5e0e75(0x3b4)](_0x12afe7=>({..._0x12afe7,'id':String(_0x12afe7['id'])}));}[_0x79b4aa(0x2d6)](_0x2e7f55=![]){const _0x7fce92=_0x79b4aa;localStorage['setItem'](_0x7fce92(0x49f),JSON[_0x7fce92(0x47b)](this[_0x7fce92(0x3c1)])),this[_0x7fce92(0x25e)](),_0x2e7f55&&(this['loadTokenTable'](),this[_0x7fce92(0x36d)]());}[_0x79b4aa(0x37b)](){const _0xb7e6ef=_0x79b4aa,_0x26a039=localStorage['getItem']('MULTI_SETTING'),_0x57f23c=_0x26a039?JSON[_0xb7e6ef(0x39e)](_0x26a039):{'tokensPerBatch':0x3,'UserName':_0xb7e6ef(0x439),'delayBetweenGrup':0x7d0,'TimeoutCount':0xbb8,'PNLFilter':0x0,'WalletAddress':'-'};return console[_0xb7e6ef(0x455)]('DATA\x20SETTING:\x20',_0x57f23c),_0x57f23c;}[_0x79b4aa(0x34b)](){const _0x2278f6=_0x79b4aa;localStorage[_0x2278f6(0x28e)]('MULTI_SETTING',JSON[_0x2278f6(0x47b)](this['settings']));}[_0x79b4aa(0x1f1)](_0x376239){const _0x358e7c=_0x79b4aa,_0x75054e={'id':Date['now']()[_0x358e7c(0x3dc)](),'symbol':_0x376239[_0x358e7c(0x25d)],'pairSymbol':_0x376239[_0x358e7c(0x252)],'contractAddress':_0x376239['contractAddress'],'pairContractAddress':_0x376239[_0x358e7c(0x41f)],'decimals':parseInt(_0x376239[_0x358e7c(0x22a)]),'pairDecimals':parseInt(_0x376239[_0x358e7c(0x262)]),'chain':_0x376239[_0x358e7c(0x472)],'modalCexToDex':parseFloat(_0x376239['modalCexToDex']),'modalDexToCex':parseFloat(_0x376239[_0x358e7c(0x481)]),'selectedCexs':_0x376239[_0x358e7c(0x452)],'selectedDexs':_0x376239[_0x358e7c(0x1d4)],'isActive':!![],'createdAt':new Date()[_0x358e7c(0x482)]()};return this['tokens'][_0x358e7c(0x1de)](_0x75054e),this[_0x358e7c(0x2d6)](),this[_0x358e7c(0x333)](),this['updateStats'](),this['showAlert'](_0x358e7c(0x30f)+_0x75054e[_0x358e7c(0x25d)]+_0x358e7c(0x323),_0x358e7c(0x2a3)),_0x75054e;}['SearchCTokenMonitoring'](){const _0x53e2e6=_0x79b4aa;$(_0x53e2e6(0x48a))['on'](_0x53e2e6(0x35a),()=>{const _0x3f2f5b=_0x53e2e6,_0x49de6c=$(_0x3f2f5b(0x48a))[_0x3f2f5b(0x29a)]()[_0x3f2f5b(0x2b9)](),_0x1b5363=$(_0x3f2f5b(0x380));_0x1b5363['each'](function(){const _0x3eeac4=_0x3f2f5b,_0x39e29e=$(this)[_0x3eeac4(0x216)](_0x3eeac4(0x4b5))[_0x3eeac4(0x45b)]()[_0x3eeac4(0x2b9)]();$(this)[_0x3eeac4(0x269)](_0x39e29e[_0x3eeac4(0x2f6)](_0x49de6c));});});}[_0x79b4aa(0x23b)](_0x4a7e20,_0x5e87f5){const _0x12a566=_0x79b4aa,_0x523e74=this[_0x12a566(0x3c1)]['findIndex'](_0x550eb5=>_0x550eb5['id']===_0x4a7e20);if(_0x523e74!==-0x1)return this[_0x12a566(0x3c1)][_0x523e74]={...this[_0x12a566(0x3c1)][_0x523e74],..._0x5e87f5,'updatedAt':new Date()[_0x12a566(0x482)]()},this[_0x12a566(0x2d6)](),this['tokens'][_0x523e74];return this[_0x12a566(0x1fa)]('Token\x20tidak\x20ditemukan',_0x12a566(0x474)),this[_0x12a566(0x333)](),this[_0x12a566(0x25e)](),null;}[_0x79b4aa(0x365)](_0x3c39c9){const _0x460c93=_0x79b4aa,_0x2c530b=this['tokens']['find'](_0x961477=>_0x961477['id']===_0x3c39c9);if(!_0x2c530b)return this[_0x460c93(0x1fa)](_0x460c93(0x43c),'danger'),![];const _0x49b874=confirm(_0x460c93(0x3e9)+_0x2c530b[_0x460c93(0x25d)]+'\x20on\x20'+_0x2c530b['chain']+_0x460c93(0x492));if(!_0x49b874)return![];return this[_0x460c93(0x3c1)]=this[_0x460c93(0x3c1)][_0x460c93(0x223)](_0x28671d=>_0x28671d['id']!==_0x3c39c9),this['saveTokensToStorage'](),this[_0x460c93(0x1fa)](_0x460c93(0x30f)+_0x2c530b[_0x460c93(0x25d)]+_0x460c93(0x221),_0x460c93(0x3f0)),this['loadTokenTable'](),this[_0x460c93(0x25e)](),!![];}['toggleTokenStatus'](_0x24e2e6){const _0x109695=_0x79b4aa,_0x1554e8=this['tokens']['find'](_0x1a3575=>_0x1a3575['id']===_0x24e2e6);if(_0x1554e8){_0x1554e8[_0x109695(0x46c)]=!_0x1554e8[_0x109695(0x46c)],this[_0x109695(0x2d6)](),this[_0x109695(0x333)](),this[_0x109695(0x25e)]();const _0xdb1612=_0x1554e8[_0x109695(0x46c)]?_0x109695(0x408):_0x109695(0x4ae);return this[_0x109695(0x1fa)](_0x109695(0x30f)+_0x1554e8[_0x109695(0x25d)]+_0x109695(0x23f)+_0xdb1612,'info'),this[_0x109695(0x2ef)](_0x109695(0x3fd)),_0x1554e8;}return this[_0x109695(0x1fa)](_0x109695(0x43c),_0x109695(0x474)),null;}[_0x79b4aa(0x3a1)](){return CexList;}[_0x79b4aa(0x1df)](){return DexList;}[_0x79b4aa(0x24d)](){return ChainList;}[_0x79b4aa(0x333)](){const _0x4d7e1f=_0x79b4aa,_0x37bdd8=$(_0x4d7e1f(0x232));_0x37bdd8[_0x4d7e1f(0x27c)]();const _0x3b8a7a=$(_0x4d7e1f(0x264))[_0x4d7e1f(0x29a)]()?.['toLowerCase']()['trim']()||'',_0x4d599f=$(_0x4d7e1f(0x238))['map'](function(){const _0x48af56=_0x4d7e1f;return this[_0x48af56(0x29f)][_0x48af56(0x2b9)]();})[_0x4d7e1f(0x3ac)](),_0x920ca2=this[_0x4d7e1f(0x3c1)][_0x4d7e1f(0x223)](_0x4821e8=>{const _0x28d80d=_0x4d7e1f,_0x3aee46=_0x4d599f[_0x28d80d(0x32c)]===0x0||_0x4d599f[_0x28d80d(0x2f6)](_0x4821e8[_0x28d80d(0x472)][_0x28d80d(0x2b9)]()),_0x41da5c=[_0x4821e8[_0x28d80d(0x25d)],_0x4821e8[_0x28d80d(0x252)],_0x4821e8[_0x28d80d(0x472)],_0x4821e8[_0x28d80d(0x3f9)],_0x4821e8[_0x28d80d(0x41f)],_0x4821e8['isActive']?_0x28d80d(0x1f3):_0x28d80d(0x2de),..._0x4821e8['selectedCexs']||[],..._0x4821e8[_0x28d80d(0x1d4)]||[]]['map'](_0x1f8758=>(_0x1f8758||'')[_0x28d80d(0x2b9)]()),_0x3347e9=_0x3b8a7a===''||_0x41da5c['some'](_0x9c30b3=>_0x9c30b3[_0x28d80d(0x2f6)](_0x3b8a7a));return _0x3aee46&&_0x3347e9;});if(_0x920ca2[_0x4d7e1f(0x32c)]===0x0){_0x37bdd8[_0x4d7e1f(0x25f)](_0x4d7e1f(0x4a3));return;}const _0x12aa5a=_0x920ca2[_0x4d7e1f(0x320)]()[_0x4d7e1f(0x370)]((_0x58b9d9,_0x196390)=>(_0x196390[_0x4d7e1f(0x46c)]===!![])-(_0x58b9d9[_0x4d7e1f(0x46c)]===!![]));_0x12aa5a[_0x4d7e1f(0x313)]((_0x29db16,_0x16df0f)=>{const _0x13bbc9=_0x4d7e1f,_0x1c7056=this['getCexList']()[_0x13bbc9(0x3b4)](_0xe6e69=>{const _0x471e33=_0x13bbc9,_0x207e5a=_0x29db16[_0x471e33(0x452)][_0x471e33(0x2f6)](_0xe6e69),_0x552e1a=_0x207e5a?_0x471e33(0x38b):'',_0x27d374=_0x29db16[_0x471e33(0x25d)][_0x471e33(0x306)](),_0x28c24c=_0x29db16[_0x471e33(0x252)]['toUpperCase'](),_0x22d22f=_0xe6e69['toUpperCase'](),_0x4315fa=Object[_0x471e33(0x308)](_0x29db16[_0x471e33(0x30a)]||{})[_0x471e33(0x216)](_0x3fbc2f=>_0x3fbc2f['toUpperCase']()===_0x22d22f),_0x3753c4=_0x29db16[_0x471e33(0x30a)]?.[_0x4315fa]||{},_0x38c2be=_0x3753c4[_0x27d374]||{},_0x4e07a7=_0x3753c4[_0x28c24c]||{},_0x378929=(_0x461950,_0x1052e1,_0x2f070b)=>{const _0x130422=_0x471e33;if(_0x461950===!![])return _0x130422(0x1ce)+_0x1052e1+_0x130422(0x3f1);if(_0x461950===![])return _0x130422(0x444)+_0x2f070b+_0x130422(0x3f1);return _0x130422(0x2b6);},_0x2f31be=_0x378929(_0x38c2be['wd'],'WD','WX'),_0x382d03=_0x378929(_0x38c2be[_0x471e33(0x1ee)],'DP','DX'),_0xd6fdb=_0x378929(_0x4e07a7['wd'],'WD','WX'),_0x5689e0=_0x378929(_0x4e07a7[_0x471e33(0x1ee)],'DP','DX'),_0x3b8490=this[_0x471e33(0x2d5)](this[_0x471e33(0x231)](_0xe6e69,_0x471e33(0x3ad)));return _0x471e33(0x2ae)+_0x3b8490+_0x471e33(0x3fc)+_0x29db16['id']+_0x471e33(0x476)+_0xe6e69+_0x471e33(0x48c)+_0xe6e69+'\x22\x20'+_0x552e1a+_0x471e33(0x3da)+_0x3b8490+'\x22>'+_0x22d22f+_0x471e33(0x398)+(_0x207e5a?_0x471e33(0x357)+_0x27d374+_0x471e33(0x266)+_0x2f31be+'|'+_0x382d03+_0x471e33(0x374)+_0x28c24c+_0x471e33(0x266)+_0xd6fdb+'|'+_0x5689e0+_0x471e33(0x32f):'')+_0x471e33(0x287);})['join'](''),_0x2971e4=this[_0x13bbc9(0x1df)]();let _0x717ceb='';_0x2971e4[_0x13bbc9(0x313)]((_0x1eaaa3,_0x36092c)=>{const _0x5b222d=_0x13bbc9,_0x3bbf96=_0x29db16[_0x5b222d(0x1d4)][_0x5b222d(0x2f6)](_0x1eaaa3),_0x2e488f=_0x3bbf96?_0x5b222d(0x38b):'',_0x56e78e=this['getTextColorClassFromBadge'](this[_0x5b222d(0x231)](_0x1eaaa3,_0x5b222d(0x1dd)));_0x717ceb+=_0x5b222d(0x251)+_0x56e78e+_0x5b222d(0x4b9)+_0x29db16['id']+_0x5b222d(0x416)+_0x1eaaa3+_0x5b222d(0x48c)+_0x1eaaa3+'\x22\x20'+_0x2e488f+_0x5b222d(0x285)+_0x1eaaa3[_0x5b222d(0x306)]()+_0x5b222d(0x1d3),(_0x36092c+0x1)%0x3===0x0&&(_0x717ceb+=_0x5b222d(0x369));});const _0x587fe=this[_0x13bbc9(0x24d)]()[_0x13bbc9(0x3b4)](_0x531f6d=>{const _0x48657a=_0x13bbc9,_0x52997b=_0x531f6d===_0x29db16[_0x48657a(0x472)]?_0x48657a(0x39a):'';return _0x48657a(0x233)+_0x531f6d+'\x22\x20'+_0x52997b+'>'+_0x531f6d+_0x48657a(0x315);})[_0x13bbc9(0x33f)](''),_0x19ae35=_0x13bbc9(0x417)+_0x29db16['id']+'\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-field=\x22chain\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20style=\x22width:\x20120px;\x20height:\x2032px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x587fe+_0x13bbc9(0x3ea)+_0x29db16['id']+_0x13bbc9(0x391),_0x43deab=_0x29db16[_0x13bbc9(0x46c)],_0x18dd6f=_0x43deab?_0x13bbc9(0x45a):_0x13bbc9(0x2dd),_0x42dff8=_0x29db16[_0x13bbc9(0x46c)]?_0x13bbc9(0x2da):_0x13bbc9(0x219);_0x37bdd8[_0x13bbc9(0x25f)](_0x13bbc9(0x283)+(_0x16df0f+0x1)+_0x13bbc9(0x4ad)+_0x29db16['id']+_0x13bbc9(0x2a7)+_0x29db16['symbol']+'\x22\x20style=\x22width:100px;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22'+_0x29db16['id']+_0x13bbc9(0x497)+_0x29db16[_0x13bbc9(0x3f9)]+'\x22\x20style=\x22width:360px;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22'+_0x29db16['id']+_0x13bbc9(0x225)+_0x29db16[_0x13bbc9(0x22a)]+_0x13bbc9(0x2ac)+_0x29db16['id']+_0x13bbc9(0x272)+_0x29db16['id']+_0x13bbc9(0x271)+_0x29db16[_0x13bbc9(0x252)]+_0x13bbc9(0x2d4)+_0x29db16['id']+_0x13bbc9(0x3a9)+_0x29db16[_0x13bbc9(0x41f)]+_0x13bbc9(0x386)+_0x29db16['id']+_0x13bbc9(0x456)+_0x29db16['pairDecimals']+_0x13bbc9(0x2ac)+_0x29db16['id']+_0x13bbc9(0x31a)+(_0x43deab?_0x13bbc9(0x49c):'text-danger')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x18dd6f+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20'+_0x42dff8+'\x20btn-sm\x20px-2\x20py-0\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20onclick=\x22app.toggleTokenStatus(\x27'+_0x29db16['id']+_0x13bbc9(0x2b3)+_0x29db16['id']+_0x13bbc9(0x214)+_0x19ae35+_0x13bbc9(0x4be)+_0x29db16['id']+_0x13bbc9(0x4a7)+_0x29db16[_0x13bbc9(0x3bf)]+'\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-success\x20btn-save-inline\x20btn-sm\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22'+_0x29db16['id']+_0x13bbc9(0x2d0)+_0x29db16['id']+_0x13bbc9(0x421)+_0x29db16[_0x13bbc9(0x481)]+'\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-success\x20btn-save-inline\x20btn-sm\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22'+_0x29db16['id']+_0x13bbc9(0x377)+_0x1c7056+_0x13bbc9(0x1d5)+_0x717ceb+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20');});}[_0x79b4aa(0x4c7)](_0x4a51cb,_0x1016cc=0x6,_0x20fd11=0x6){const _0x4c44e0=_0x79b4aa;if(!_0x4a51cb||_0x4a51cb['length']<=_0x1016cc+_0x20fd11)return _0x4a51cb;return _0x4a51cb[_0x4c44e0(0x447)](0x0,_0x1016cc)+_0x4c44e0(0x2ca)+_0x4a51cb[_0x4c44e0(0x447)](_0x4a51cb['length']-_0x20fd11);}[_0x79b4aa(0x231)](_0x4e5b71,_0x391959){const _0x3eb6e8=_0x79b4aa;if(_0x391959===_0x3eb6e8(0x3ad)){const _0xe184a={'Binance':_0x3eb6e8(0x410),'MEXC':_0x3eb6e8(0x371),'Gateio':_0x3eb6e8(0x490),'INDODAX':'bg-info\x20text-dark'};return _0xe184a[_0x4e5b71]||_0x3eb6e8(0x3a4);}if(_0x391959===_0x3eb6e8(0x1dd)){const _0x3bfde1={'Lifi':_0x3eb6e8(0x463),'KyberSwap':_0x3eb6e8(0x21f),'Matcha':_0x3eb6e8(0x3a4),'ODOS':_0x3eb6e8(0x43a),'Magpie':_0x3eb6e8(0x297),'ParaSwap':_0x3eb6e8(0x2bd),'OKXDEX':_0x3eb6e8(0x20d)};return _0x3bfde1[_0x4e5b71]||'bg-secondary';}if(_0x391959===_0x3eb6e8(0x472)){const _0x131f37={'bsc':_0x3eb6e8(0x410),'ethereum':_0x3eb6e8(0x3a4),'polygon':_0x3eb6e8(0x45d),'arbitrum':_0x3eb6e8(0x3fe),'base':_0x3eb6e8(0x3fa)};return _0x131f37[_0x4e5b71['toLowerCase']()]||_0x3eb6e8(0x20d);}return _0x3eb6e8(0x2bd);}[_0x79b4aa(0x2d5)](_0x56eb6f=''){const _0x580a3c=_0x79b4aa,_0x37e1fb={'bg-success':_0x580a3c(0x49c),'bg-primary':_0x580a3c(0x413),'bg-danger':_0x580a3c(0x337),'bg-light':_0x580a3c(0x39f),'bg-info':'text-info','bg-secondary':_0x580a3c(0x396),'bg-dark':'text-dark','bg-warning':_0x580a3c(0x29b)},_0x572146=_0x56eb6f['split']('\x20')[_0x580a3c(0x216)](_0x413941=>_0x413941[_0x580a3c(0x246)](_0x580a3c(0x36b)));return _0x37e1fb[_0x572146]||_0x580a3c(0x396);}[_0x79b4aa(0x451)](){const _0x4e2927=_0x79b4aa;$(_0x4e2927(0x449))[_0x4e2927(0x29a)](this['settings'][_0x4e2927(0x459)]),$('#UserName')['val'](this[_0x4e2927(0x403)]['UserName']),$(_0x4e2927(0x434))[_0x4e2927(0x29a)](this['settings']['delayBetweenGrup']),$(_0x4e2927(0x328))[_0x4e2927(0x29a)](this[_0x4e2927(0x403)][_0x4e2927(0x2d9)]),$(_0x4e2927(0x33e))[_0x4e2927(0x29a)](this[_0x4e2927(0x403)]['PNLFilter']),$(_0x4e2927(0x253))[_0x4e2927(0x29a)](this[_0x4e2927(0x403)][_0x4e2927(0x258)]);}[_0x79b4aa(0x25e)](){const _0x59f80c=_0x79b4aa,_0x256ece=this[_0x59f80c(0x3c1)][_0x59f80c(0x32c)],_0x5109b3=this[_0x59f80c(0x3c1)][_0x59f80c(0x223)](_0xb3f8c1=>_0xb3f8c1[_0x59f80c(0x46c)]),_0x5e92d9=this['tokens'][_0x59f80c(0x223)](_0x321056=>!_0x321056[_0x59f80c(0x46c)]),_0x30e8e0=['BSC',_0x59f80c(0x430),_0x59f80c(0x41a),_0x59f80c(0x26b),_0x59f80c(0x31c)],_0xcbe91a={'BSC':_0x59f80c(0x4ba),'Ethereum':'eth','Polygon':_0x59f80c(0x22c),'Base':_0x59f80c(0x329),'Arbitrum':'arb'},_0x54ff56=['Monitoring',_0x59f80c(0x448)];for(const _0x28364d of _0x54ff56){$(_0x59f80c(0x475)+_0x28364d)[_0x59f80c(0x45b)](_0x256ece),$(_0x59f80c(0x268)+_0x28364d)[_0x59f80c(0x45b)](_0x5109b3[_0x59f80c(0x32c)]),$(_0x59f80c(0x483)+_0x28364d)['text'](_0x5e92d9[_0x59f80c(0x32c)]);for(const _0x36d8e1 of _0x30e8e0){const _0x441b6a=_0xcbe91a[_0x36d8e1],_0x464fed=this['tokens']['filter'](_0x500896=>_0x500896[_0x59f80c(0x472)]===_0x36d8e1)[_0x59f80c(0x32c)];$('#'+_0x441b6a+_0x59f80c(0x2cf)+_0x28364d)['text'](_0x464fed);}}let _0x5dd106=0x0;_0x5109b3['forEach'](_0x13b289=>{const _0x150e3c=_0x59f80c;if(!this[_0x150e3c(0x293)][_0x150e3c(0x2f6)](_0x13b289[_0x150e3c(0x472)]))return;Array[_0x150e3c(0x428)](_0x13b289[_0x150e3c(0x452)])&&(_0x5dd106+=_0x13b289[_0x150e3c(0x452)][_0x150e3c(0x223)](_0x22d236=>_0x22d236)[_0x150e3c(0x32c)]);}),$(_0x59f80c(0x40e))[_0x59f80c(0x45b)](_0x5dd106);}['resetTokenForm'](){const _0x1e86e9=_0x79b4aa;$(_0x1e86e9(0x32e))[0x0][_0x1e86e9(0x1e5)](),$(_0x1e86e9(0x1e6))[_0x1e86e9(0x29a)](0x12),$('#pairDecimals')[_0x1e86e9(0x29a)](0x12),$('#modalCexToDex')['val'](0x64),$(_0x1e86e9(0x41e))[_0x1e86e9(0x29a)](0x64),$(_0x1e86e9(0x31f))[_0x1e86e9(0x260)]('checked',![]);}['saveToken'](){const _0xbe28fd=_0x79b4aa,_0x473bca=this[_0xbe28fd(0x1da)]();if(!this['validateTokenForm'](_0x473bca))return;try{this[_0xbe28fd(0x213)]?(this[_0xbe28fd(0x23b)](this['currentEditingToken']['id'],_0x473bca),this['showAlert'](_0xbe28fd(0x34e),_0xbe28fd(0x2a3)),this[_0xbe28fd(0x2ef)]('UBAH\x20DATA\x20KOIN')):(this[_0xbe28fd(0x1f1)](_0x473bca),this[_0xbe28fd(0x1fa)](_0xbe28fd(0x479),_0xbe28fd(0x2a3)),this['logAction'](_0xbe28fd(0x40d))),$(_0xbe28fd(0x263))['modal'](_0xbe28fd(0x438)),this['resetTokenForm']();}catch(_0x440239){this[_0xbe28fd(0x1fa)](_0xbe28fd(0x34d)+_0x440239[_0xbe28fd(0x425)],_0xbe28fd(0x474));}}[_0x79b4aa(0x1da)](){const _0x5d4065=_0x79b4aa,_0x3d039a=[];$(_0x5d4065(0x382))[_0x5d4065(0x2f5)](function(){const _0x2e1466=_0x5d4065;_0x3d039a['push']($(this)[_0x2e1466(0x29a)]());});const _0x54b1fc=[];return $(_0x5d4065(0x2c8))[_0x5d4065(0x2f5)](function(){const _0x4e806a=_0x5d4065;_0x54b1fc[_0x4e806a(0x1de)]($(this)[_0x4e806a(0x29a)]());}),{'symbol':$(_0x5d4065(0x2f7))[_0x5d4065(0x29a)]()[_0x5d4065(0x28c)]()[_0x5d4065(0x306)](),'pairSymbol':$('#pairSymbol')[_0x5d4065(0x29a)]()[_0x5d4065(0x28c)]()['toUpperCase'](),'contractAddress':$(_0x5d4065(0x30e))['val']()[_0x5d4065(0x28c)](),'pairContractAddress':$('#pairContract')[_0x5d4065(0x29a)]()[_0x5d4065(0x28c)](),'decimals':$(_0x5d4065(0x1e6))[_0x5d4065(0x29a)](),'pairDecimals':$(_0x5d4065(0x345))[_0x5d4065(0x29a)](),'chain':$(_0x5d4065(0x366))[_0x5d4065(0x29a)](),'modalCexToDex':$(_0x5d4065(0x331))[_0x5d4065(0x29a)](),'modalDexToCex':$(_0x5d4065(0x41e))[_0x5d4065(0x29a)](),'selectedCexs':_0x3d039a,'selectedDexs':_0x54b1fc};}['validateTokenForm'](_0x1cfbca){const _0x3aaa98=_0x79b4aa;if(!_0x1cfbca['symbol']||!_0x1cfbca[_0x3aaa98(0x252)])return this[_0x3aaa98(0x1fa)]('Please\x20enter\x20token\x20and\x20pair\x20symbols',_0x3aaa98(0x3f0)),![];if(!_0x1cfbca['contractAddress']||!_0x1cfbca['pairContractAddress'])return this['showAlert']('Please\x20enter\x20contract\x20addresses',_0x3aaa98(0x3f0)),![];if(!_0x1cfbca['chain'])return this[_0x3aaa98(0x1fa)](_0x3aaa98(0x467),'warning'),![];if(!_0x1cfbca[_0x3aaa98(0x452)]||_0x1cfbca[_0x3aaa98(0x452)][_0x3aaa98(0x32c)]===0x0)return this[_0x3aaa98(0x1fa)](_0x3aaa98(0x1ea),_0x3aaa98(0x3f0)),![];if(!_0x1cfbca[_0x3aaa98(0x1d4)]||_0x1cfbca[_0x3aaa98(0x1d4)]['length']===0x0)return this[_0x3aaa98(0x1fa)](_0x3aaa98(0x341),'warning'),![];const _0x47947c=$(_0x3aaa98(0x3f6))[_0x3aaa98(0x29a)]()?.[_0x3aaa98(0x28c)](),_0x44c960=parseInt($(_0x3aaa98(0x449))[_0x3aaa98(0x29a)]()),_0x28a44a=parseInt($(_0x3aaa98(0x434))['val']()),_0x45f9ee=parseInt($(_0x3aaa98(0x328))[_0x3aaa98(0x29a)]()),_0x152122=parseFloat($('#PNLFilter')['val']()),_0x111c1b=$(_0x3aaa98(0x253))[_0x3aaa98(0x29a)]()?.[_0x3aaa98(0x28c)]();if(!_0x47947c||_0x47947c==='XXX')return this['showAlert'](_0x3aaa98(0x44e),_0x3aaa98(0x474)),![];if(!_0x111c1b||_0x111c1b==='-')return this[_0x3aaa98(0x1fa)](_0x3aaa98(0x46d),'danger'),![];if(!_0x44c960||_0x44c960<0x1||_0x44c960>0x5)return this[_0x3aaa98(0x1fa)]('Jumlah\x20Anggota\x20(Tokens\x20Per\x20Batch)\x20harus\x20antara\x201-5',_0x3aaa98(0x474)),![];if(!_0x28a44a||_0x28a44a<0x12c||_0x28a44a>0x1388)return this['showAlert'](_0x3aaa98(0x310),_0x3aaa98(0x474)),![];if(!_0x45f9ee||_0x45f9ee<0x3e8||_0x45f9ee>0x1388)return this['showAlert'](_0x3aaa98(0x372),_0x3aaa98(0x474)),![];return!![];}[_0x79b4aa(0x3d3)](_0x277f04){const _0x326dd0=_0x79b4aa,_0xc8fdc5=this[_0x326dd0(0x3c1)][_0x326dd0(0x216)](_0x4bd75e=>_0x4bd75e['id']===_0x277f04);if(!_0xc8fdc5)return;this[_0x326dd0(0x213)]=_0xc8fdc5,$(_0x326dd0(0x2b8))[_0x326dd0(0x45b)](_0x326dd0(0x281)),$(_0x326dd0(0x2f7))['val'](_0xc8fdc5[_0x326dd0(0x25d)]),$(_0x326dd0(0x1d0))[_0x326dd0(0x29a)](_0xc8fdc5[_0x326dd0(0x252)]),$(_0x326dd0(0x30e))[_0x326dd0(0x29a)](_0xc8fdc5[_0x326dd0(0x3f9)]),$(_0x326dd0(0x23c))['val'](_0xc8fdc5[_0x326dd0(0x41f)]),$('#tokenDecimals')[_0x326dd0(0x29a)](_0xc8fdc5[_0x326dd0(0x22a)]),$('#pairDecimals')['val'](_0xc8fdc5[_0x326dd0(0x262)]),$(_0x326dd0(0x366))[_0x326dd0(0x29a)](_0xc8fdc5[_0x326dd0(0x472)]),$(_0x326dd0(0x331))[_0x326dd0(0x29a)](_0xc8fdc5['modalCexToDex']),$(_0x326dd0(0x41e))['val'](_0xc8fdc5[_0x326dd0(0x481)]),$(_0x326dd0(0x31f))[_0x326dd0(0x260)]('checked',![]),_0xc8fdc5['selectedCexs'][_0x326dd0(0x313)](_0x450ffe=>{const _0xa3f899=_0x326dd0;$(_0xa3f899(0x46b)+_0x450ffe+'\x22]')['prop']('checked',!![]);}),_0xc8fdc5[_0x326dd0(0x1d4)]['forEach'](_0x46e67d=>{const _0x366cb1=_0x326dd0;$('input[value=\x22'+_0x46e67d+'\x22]')[_0x366cb1(0x260)](_0x366cb1(0x38b),!![]);}),$(_0x326dd0(0x263))[_0x326dd0(0x488)](_0x326dd0(0x354));}[_0x79b4aa(0x3bd)](){const _0x2d5ed4=_0x79b4aa;this[_0x2d5ed4(0x403)]={'tokensPerBatch':parseInt($(_0x2d5ed4(0x449))[_0x2d5ed4(0x29a)]()),'UserName':$('#UserName')['val'](),'delayBetweenGrup':parseInt($(_0x2d5ed4(0x434))[_0x2d5ed4(0x29a)]()),'TimeoutCount':parseInt($(_0x2d5ed4(0x328))[_0x2d5ed4(0x29a)]()),'PNLFilter':parseFloat($(_0x2d5ed4(0x33e))[_0x2d5ed4(0x29a)]()),'WalletAddress':$(_0x2d5ed4(0x253))[_0x2d5ed4(0x29a)]()},this[_0x2d5ed4(0x34b)](),this[_0x2d5ed4(0x1fa)](_0x2d5ed4(0x2f3),'success'),$(_0x2d5ed4(0x420))['modal']('hide'),this[_0x2d5ed4(0x2ef)](_0x2d5ed4(0x24e));}async['CheckPrices'](){const _0x52db86=_0x79b4aa;$(_0x52db86(0x3e6))[_0x52db86(0x260)]('disabled',!![]);const _0xcf01bb=this[_0x52db86(0x37b)]();if(!_0xcf01bb||_0xcf01bb[_0x52db86(0x258)]==='-'||_0xcf01bb[_0x52db86(0x4bf)]==='XXX'){this['showAlert']('SILAKAN\x20SETTING\x20APLIKASI',_0x52db86(0x474));return;}const _0x37652d=_0xcf01bb[_0x52db86(0x459)]||0x3,_0xc41ad3=_0xcf01bb[_0x52db86(0x302)]||0x7d0,_0x4f5450=[];for(const _0x466a99 of this[_0x52db86(0x3c1)]){if(!_0x466a99[_0x52db86(0x46c)]||!this['selectedChains'][_0x52db86(0x2f6)](_0x466a99[_0x52db86(0x472)]))continue;for(const _0xae5ed5 of _0x466a99[_0x52db86(0x452)]){_0x4f5450['push']({..._0x466a99,'cexName':_0xae5ed5});}}_0x4f5450['sort']((_0xf72fc9,_0x3043b7)=>{const _0x17ad90=_0x52db86,_0x19b79a=_0xf72fc9[_0x17ad90(0x25d)]['toLowerCase'](),_0x19b01c=_0x3043b7['symbol']['toLowerCase']();return this[_0x17ad90(0x26f)]?_0x19b79a[_0x17ad90(0x358)](_0x19b01c):_0x19b01c[_0x17ad90(0x358)](_0x19b79a);});if(_0x4f5450[_0x52db86(0x32c)]===0x0){this['showAlert'](_0x52db86(0x242),'info'),$(_0x52db86(0x3a3))[_0x52db86(0x3d6)](_0x52db86(0x4aa));return;}const _0xd65ba4=(_0x404641,_0x24d272)=>{const _0x36dc54=_0x52db86,_0x5d9c37=[];for(let _0x224682=0x0;_0x224682<_0x404641[_0x36dc54(0x32c)];_0x224682+=_0x24d272){_0x5d9c37['push'](_0x404641[_0x36dc54(0x320)](_0x224682,_0x224682+_0x24d272));}return _0x5d9c37;},_0x136a9b=_0xd65ba4(_0x4f5450,_0x37652d),_0x35ceb8=_0x4f5450[_0x52db86(0x32c)];let _0x48335e=0x0;const _0x57cdd1=new Date(),_0x247261=_0x57cdd1['toLocaleTimeString']();$('#scanTimeInfo')[_0x52db86(0x3d6)]('<span\x20class=\x22text-dark\x22>&nbsp;🕒\x20Mulai\x20Scan\x20:\x20'+_0x247261+_0x52db86(0x4c6));for(const _0x2406e4 of _0x136a9b){await Promise['allSettled'](_0x2406e4[_0x52db86(0x3b4)](async _0xe3a8e4=>{const _0x397e29=_0x52db86;_0x48335e++;const _0x1689b6=Math[_0x397e29(0x1ed)](_0x48335e/_0x35ceb8*0x64);$(_0x397e29(0x2dc))[_0x397e29(0x45b)](_0x1689b6+'%'),$(_0x397e29(0x20f))['css'](_0x397e29(0x25a),_0x1689b6+'%');const _0x4260c1={'token':_0xe3a8e4,'analisis_data':{'cex_to_dex':{},'dex_to_cex':{}}},_0x22675b=_0x2406e4[0x0];_0x22675b&&this[_0x397e29(0x4a5)](_0x22675b);const _0x432f8b=async()=>{const _0x100e07=_0x397e29,_0x19b23c=_0x100e07(0x3df);await this['fetchCEXPrices'](_0xe3a8e4,_0x4260c1,_0xe3a8e4[_0x100e07(0x210)],_0x19b23c),this[_0x100e07(0x21b)](_0xe3a8e4,_0x4260c1,_0xe3a8e4[_0x100e07(0x210)],_0x19b23c),await new Promise(_0x37015e=>setTimeout(_0x37015e,0x64));for(const _0x410176 of _0xe3a8e4[_0x100e07(0x1d4)]){$(_0x100e07(0x40f))[_0x100e07(0x3d6)]('🔄\x20'+_0xe3a8e4[_0x100e07(0x210)][_0x100e07(0x306)]()+_0x100e07(0x312)+_0xe3a8e4[_0x100e07(0x25d)]+_0x100e07(0x423)+_0xe3a8e4[_0x100e07(0x472)]+_0x100e07(0x2f0)+_0x410176[_0x100e07(0x306)]()+'\x20');try{await this[_0x100e07(0x203)](_0xe3a8e4,_0x4260c1,_0x410176,_0xe3a8e4['cexName'],_0x19b23c);}catch(_0x138826){console[_0x100e07(0x2c9)](_0x100e07(0x245)+_0x410176+'\x20'+_0xe3a8e4['symbol']+'\x20('+_0x19b23c+'):\x20'+_0x138826[_0x100e07(0x425)]);}await new Promise(_0x350ed2=>setTimeout(_0x350ed2,0xc8));}},_0x316b11=async()=>{const _0x387367=_0x397e29,_0x4ada7c=_0x387367(0x3d0);await new Promise(_0x1610af=>setTimeout(_0x1610af,0x1f4)),await this[_0x387367(0x294)](_0xe3a8e4,_0x4260c1,_0xe3a8e4[_0x387367(0x210)],_0x4ada7c),this['generateOrderBook'](_0xe3a8e4,_0x4260c1,_0xe3a8e4[_0x387367(0x210)],_0x4ada7c),await new Promise(_0x53c96e=>setTimeout(_0x53c96e,0x64));for(const _0x5f04e1 of _0xe3a8e4[_0x387367(0x1d4)]){$('#scanProgressText')[_0x387367(0x3d6)](_0x387367(0x4b4)+_0x5f04e1[_0x387367(0x306)]()+_0x387367(0x312)+_0xe3a8e4[_0x387367(0x25d)]+_0x387367(0x423)+_0xe3a8e4['chain']+_0x387367(0x2f0)+_0xe3a8e4[_0x387367(0x210)][_0x387367(0x306)]()+'\x20');try{await this[_0x387367(0x203)](_0xe3a8e4,_0x4260c1,_0x5f04e1,_0xe3a8e4[_0x387367(0x210)],_0x4ada7c);}catch(_0x12e286){console[_0x387367(0x2c9)](_0x387367(0x245)+_0x5f04e1+'\x20'+_0xe3a8e4[_0x387367(0x25d)]+'\x20('+_0x4ada7c+_0x387367(0x235)+_0x12e286['message']);}await new Promise(_0x5504ed=>setTimeout(_0x5504ed,0xc8));}};await Promise[_0x397e29(0x330)]([_0x432f8b(),_0x316b11()]);})),await new Promise(_0x1c4c42=>setTimeout(_0x1c4c42,_0xc41ad3));}const _0x5396dd=new Date(),_0x3cbf6b=Math[_0x52db86(0x1f4)]((_0x5396dd-_0x57cdd1)/0x3e8),_0x3c06aa=Math[_0x52db86(0x1f4)](_0x3cbf6b/0x3c)[_0x52db86(0x3dc)]()[_0x52db86(0x44c)](0x2,'0'),_0x418e93=(_0x3cbf6b%0x3c)[_0x52db86(0x3dc)]()['padStart'](0x2,'0');$(_0x52db86(0x40f))['html'](''),$(_0x52db86(0x324))['append'](_0x52db86(0x280)+_0x3c06aa+':'+_0x418e93+_0x52db86(0x4c6)),this['showAlertWithAudio'](),$(_0x52db86(0x3e6))['prop'](_0x52db86(0x25b),![]);}async[_0x79b4aa(0x32b)](){const _0x39a2f2=_0x79b4aa,_0x4cc656=document[_0x39a2f2(0x404)](_0x39a2f2(0x4b3));var _0x45430f=new Audio(_0x39a2f2(0x4c1));_0x45430f[_0x39a2f2(0x28a)](),_0x4cc656[_0x39a2f2(0x29c)][_0x39a2f2(0x4ac)]=_0x39a2f2(0x1fd),setTimeout(()=>{const _0x359dc7=_0x39a2f2;_0x4cc656[_0x359dc7(0x29c)][_0x359dc7(0x4ac)]='none';},0xfa0);}[_0x79b4aa(0x2ec)](_0x19ed14,_0x68be3c,_0x162d49,_0x395766){const _0x377042=_0x79b4aa,_0x361bf6=_0x395766===_0x377042(0x3df)?_0x377042(0x390)+_0x19ed14[_0x377042(0x25d)]+'_'+_0x19ed14['pairSymbol']+'_'+_0x19ed14[_0x377042(0x472)]+'_'+_0x68be3c+'_'+_0x162d49:_0x377042(0x390)+_0x19ed14[_0x377042(0x252)]+'_'+_0x19ed14[_0x377042(0x25d)]+'_'+_0x19ed14[_0x377042(0x472)]+'_'+_0x162d49+'_'+_0x68be3c,_0x22627f=_0x361bf6[_0x377042(0x2b9)]()[_0x377042(0x3f5)](/\W+/g,''),_0x37e699=$('#'+_0x22627f);_0x37e699[_0x377042(0x32c)]&&_0x37e699[_0x377042(0x31d)]()[_0x377042(0x487)](_0x377042(0x2bf))[_0x377042(0x3d6)](_0x377042(0x44d)+_0x162d49+_0x377042(0x275));}async['fetchCEXPrices'](_0x2808d3,_0xac3428,_0x28f8df,_0x35d969){const _0x2e4e45=_0x79b4aa;if(!this['gasTokenPrices'])this[_0x2e4e45(0x3b6)]={};const _0x874f05=[],_0x166956=_0x2808d3[_0x2e4e45(0x25d)][_0x2e4e45(0x306)](),_0xc15885=_0x2808d3[_0x2e4e45(0x252)]['toUpperCase']();if(_0x166956==='USDT')this['gasTokenPrices'][_0x2e4e45(0x1f9)]=0x1;if(_0xc15885===_0x2e4e45(0x1f9))this[_0x2e4e45(0x3b6)][_0x2e4e45(0x1f9)]=0x1;_0xac3428['analisis_data']=_0xac3428[_0x2e4e45(0x20e)]||{},_0xac3428[_0x2e4e45(0x20e)][_0x35d969]=_0xac3428[_0x2e4e45(0x20e)][_0x35d969]||{},_0xac3428[_0x2e4e45(0x20e)][_0x35d969][_0x28f8df]=_0xac3428['analisis_data'][_0x35d969][_0x28f8df]||{};const _0x45356b=[_0x166956,_0xc15885];for(const _0x145314 of _0x45356b){const _0x32cf94={'baseSymbol':_0x145314,'quoteSymbol':_0x2e4e45(0x1f9)},_0x59c2d2=_0x28661f=>{const _0x115573=_0x2e4e45;_0xac3428[_0x115573(0x20e)][_0x35d969][_0x28f8df][_0x145314+_0x115573(0x34f)]=_0x28661f;if(_0x28661f[_0x115573(0x325)])this[_0x115573(0x3b6)][_0x145314]=_0x28661f['buy'];};switch(_0x28f8df){case _0x2e4e45(0x2b7):_0x874f05[_0x2e4e45(0x1de)](CEXAPIs[_0x2e4e45(0x424)](_0x32cf94)[_0x2e4e45(0x322)](_0x59c2d2)['catch'](_0x2f7d5f=>console['warn'](_0x2e4e45(0x36c)+_0x145314+_0x2e4e45(0x3ae)+_0x2f7d5f[_0x2e4e45(0x425)])));break;case _0x2e4e45(0x2f1):_0x874f05[_0x2e4e45(0x1de)](CEXAPIs[_0x2e4e45(0x1f6)](_0x32cf94)['then'](_0x59c2d2)[_0x2e4e45(0x2fd)](_0x58a9ab=>console[_0x2e4e45(0x2c9)]('MEXC\x20'+_0x145314+_0x2e4e45(0x3ae)+_0x58a9ab[_0x2e4e45(0x425)])));break;case _0x2e4e45(0x289):_0x874f05[_0x2e4e45(0x1de)](CEXAPIs['getGateOrderBook'](_0x32cf94)['then'](_0x59c2d2)[_0x2e4e45(0x2fd)](_0x198d9d=>console[_0x2e4e45(0x2c9)]('Gateio\x20'+_0x145314+_0x2e4e45(0x3ae)+_0x198d9d[_0x2e4e45(0x425)])));break;case _0x2e4e45(0x31b):_0x874f05[_0x2e4e45(0x1de)](CEXAPIs[_0x2e4e45(0x24b)](_0x32cf94)[_0x2e4e45(0x322)](_0x59c2d2)[_0x2e4e45(0x2fd)](_0x1cd6b4=>console['warn']('INDODAX\x20'+_0x145314+'/USDT\x20error:\x20'+_0x1cd6b4[_0x2e4e45(0x425)])));break;}}await Promise[_0x2e4e45(0x330)](_0x874f05);}async[_0x79b4aa(0x203)](_0x1f97f1,_0xe6cd2c,_0x4c49e3,_0x51aae2,_0x17aa40){const _0x435d11=_0x79b4aa,_0xee5091=PriceUtils['getChainId'](_0x1f97f1[_0x435d11(0x472)]),_0x387ea3=_0x1f97f1['chain'][_0x435d11(0x2b9)](),_0x5bee57=_0x1f97f1[_0x435d11(0x22a)],_0x29f5b3=_0x1f97f1[_0x435d11(0x262)],_0x2b0659=PriceUtils['getGasFeeUSD'](_0x1f97f1[_0x435d11(0x472)],0x33450,0x5),_0x3adffa=_0x1f97f1[_0x435d11(0x25d)]['toUpperCase'](),_0x5859ed=_0x1f97f1[_0x435d11(0x252)]['toUpperCase'](),_0x408bf7=_0x17aa40==='cex_to_dex'?_0x1f97f1['modalCexToDex']:_0x1f97f1['modalDexToCex'],_0x353bec=_0x3adffa===_0x435d11(0x1f9),_0x550525=_0x5859ed===_0x435d11(0x1f9),_0x306a5a=_0xe6cd2c[_0x435d11(0x20e)]?.[_0x17aa40]?.[_0x51aae2];if(!_0x306a5a||Object[_0x435d11(0x308)](_0x306a5a)[_0x435d11(0x32c)]===0x0){console[_0x435d11(0x2c9)](_0x435d11(0x47f)+_0x1f97f1['symbol']+'/'+_0x1f97f1[_0x435d11(0x252)]+_0x435d11(0x2ba)+_0x51aae2);const _0x36216b=_0x17aa40===_0x435d11(0x3df)?_0x435d11(0x390)+_0x1f97f1['symbol']+'_'+_0x1f97f1[_0x435d11(0x252)]+'_'+_0x1f97f1['chain']+'_'+_0x51aae2+'_'+_0x4c49e3:_0x435d11(0x390)+_0x1f97f1['pairSymbol']+'_'+_0x1f97f1['symbol']+'_'+_0x1f97f1[_0x435d11(0x472)]+'_'+_0x4c49e3+'_'+_0x51aae2;$('#'+_0x36216b[_0x435d11(0x2b9)]()[_0x435d11(0x3f5)](/\W+/g,''))[_0x435d11(0x3d6)](_0x435d11(0x292)+_0x51aae2+_0x435d11(0x3d7));return;}const _0x120fe2=(_0x2cc54a,_0x3cd967=_0x435d11(0x325))=>{const _0x1e7317=_0x435d11,_0x224c94=Object['keys'](_0x306a5a)[_0x1e7317(0x216)](_0x380d1b=>_0x380d1b[_0x1e7317(0x306)]()[_0x1e7317(0x2f6)](_0x2cc54a));return Number(_0x306a5a?.[_0x224c94]?.[_0x3cd967]||0x0);},_0x19e57d=_0x353bec?0x1:_0x120fe2(_0x3adffa,_0x435d11(0x325)),_0x2be398=_0x353bec?0x1:_0x120fe2(_0x3adffa,_0x435d11(0x359)),_0x392022=_0x550525?0x1:_0x120fe2(_0x5859ed,_0x435d11(0x325)),_0x3e92c9=_0x550525?0x1:_0x120fe2(_0x5859ed,_0x435d11(0x359));if(!_0x19e57d||!_0x2be398||!_0x392022||!_0x3e92c9){console[_0x435d11(0x2c9)](_0x51aae2+'\x20Harga\x20tidak\x20lengkap:',{'baseBuy':_0x19e57d,'baseSell':_0x2be398,'quoteBuy':_0x392022,'quoteSell':_0x3e92c9});return;}let _0x254e6e,_0xf59045,_0x107854,_0xbb2494;_0x17aa40===_0x435d11(0x3df)?(_0x254e6e=_0x1f97f1[_0x435d11(0x3f9)],_0xf59045=_0x1f97f1['pairContractAddress'],_0x107854=_0x5bee57,_0xbb2494=_0x29f5b3):(_0x254e6e=_0x1f97f1[_0x435d11(0x41f)],_0xf59045=_0x1f97f1[_0x435d11(0x3f9)],_0x107854=_0x29f5b3,_0xbb2494=_0x5bee57);const _0x176eb2=_0x17aa40==='cex_to_dex'?_0x353bec?_0x408bf7:_0x408bf7/_0x19e57d:_0x550525?_0x408bf7:_0x408bf7/_0x392022,_0x2734a6=PriceUtils[_0x435d11(0x352)](_0x176eb2,_0x107854),_0x592d10=_0x17aa40===_0x435d11(0x3df)?_0x392022:_0x2be398;this['setDexCellLoading'](_0x1f97f1,_0x51aae2,_0x4c49e3,_0x17aa40);const _0x38ce64=(_0x5458a2,_0x978728,_0x174a9a=_0x435d11(0x3f8))=>{const _0x26fd05=_0x435d11,_0x1458da=_0x978728[_0x174a9a]||'0',_0x28209a=_0x176eb2,_0x571349=PriceUtils[_0x26fd05(0x20b)](_0x1458da,_0xbb2494);let _0x5ea81f=0x0;_0x17aa40===_0x26fd05(0x3df)?_0x5ea81f=_0x571349/_0x28209a:_0x5ea81f=_0x571349>0x0?_0x408bf7/_0x571349:0x0;const _0x56bd20=_0x5ea81f*_0x592d10,_0x441a03=_0x3adffa+'To'+_0x5859ed;_0xe6cd2c[_0x26fd05(0x20e)][_0x17aa40][_0x4c49e3]=_0xe6cd2c[_0x26fd05(0x20e)][_0x17aa40][_0x4c49e3]||{},_0xe6cd2c[_0x26fd05(0x20e)][_0x17aa40][_0x4c49e3][_0x441a03]={'exchange':_0x978728[_0x26fd05(0x301)]||_0x4c49e3,'amountIn':_0x2734a6,'amountOut':_0x1458da,'price':_0x56bd20,'rawRate':_0x5ea81f,'fee':_0x978728[_0x26fd05(0x45f)]||_0x2b0659,'from':_0x17aa40==='cex_to_dex'?_0x3adffa:_0x5859ed,'to':_0x17aa40===_0x26fd05(0x3df)?_0x5859ed:_0x3adffa,'rateSymbol':(_0x17aa40===_0x26fd05(0x3df)?_0x5859ed:_0x3adffa)+'/'+(_0x17aa40===_0x26fd05(0x3df)?_0x3adffa:_0x5859ed),'quotePriceUSDT':_0x592d10,'baseBuy':_0x19e57d,'baseSell':_0x2be398,'quoteBuy':_0x392022,'quoteSell':_0x3e92c9,'gasEstimate':_0x978728[_0x26fd05(0x2fb)]||0x0,'gasPrice':_0x978728[_0x26fd05(0x3ca)]||0x0,'isFallback':_0x978728[_0x26fd05(0x2ce)]||![],'hasilUSDT':_0x571349*_0x592d10,'normalizedOut':_0x571349,'normalizedIn':_0x28209a,'inputAmountToken':_0x176eb2,'timestamp':Date['now']()};const _0x1e483d=_0x408bf7*0.0015,_0x215af4=Object[_0x26fd05(0x308)](_0x1f97f1['cexInfo']||{})[_0x26fd05(0x216)](_0x2c4c15=>_0x2c4c15['toUpperCase']()===_0x51aae2[_0x26fd05(0x306)]()),_0x12ed2d=_0x1f97f1[_0x26fd05(0x30a)]?.[_0x215af4]?.[_0x1f97f1['symbol'][_0x26fd05(0x306)]()]?.['feewd']??0x0,_0xf3a0d6=_0x12ed2d*_0x19e57d,_0x3fc3f7=_0x978728[_0x26fd05(0x45f)]||0x0,_0x9f1387=_0x1e483d+_0xf3a0d6+_0x3fc3f7;if(_0x17aa40==='cex_to_dex'){const _0x2a2b3b=(_0x571349*_0x592d10)[_0x26fd05(0x3b7)](0x6),_0xa8eaac=(_0x571349*_0x592d10/_0x176eb2)[_0x26fd05(0x3b7)](0x6),_0x34b88c=_0x2a2b3b-_0x408bf7-_0x9f1387,_0x2aeacd=(_0x34b88c/_0x408bf7*0x64)[_0x26fd05(0x3b7)](0x2);if(_0x34b88c>parseFloat(this[_0x26fd05(0x403)]['PNLFilter'])){const _0x5fe917=(_0x26fd05(0x1e3)+_0x1f97f1[_0x26fd05(0x472)][_0x26fd05(0x306)]()+'\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20💹\x20CEX:\x20'+_0x51aae2[_0x26fd05(0x306)]()+_0x26fd05(0x317)+_0x4c49e3[_0x26fd05(0x306)]()+_0x26fd05(0x433)+_0x408bf7+_0x26fd05(0x21a)+_0x1f97f1[_0x26fd05(0x25d)]+'→'+_0x1f97f1['pairSymbol']+_0x26fd05(0x4af)+_0x34b88c['toFixed'](0x2)+'\x20('+_0x2aeacd+_0x26fd05(0x2d1))['replace'](/\s{2,}/g,'\x20')['trim']();this['showAlert'](_0x5fe917,'success');}}else{const _0x2535f7=_0x571349[_0x26fd05(0x3b7)](0x6),_0x41f784=(_0x408bf7/_0x571349)[_0x26fd05(0x3b7)](0x6),_0x4e919e=(_0x571349*_0x2be398)[_0x26fd05(0x3b7)](0x6),_0x1e1c2c=_0x571349*_0x2be398-_0x408bf7-_0x9f1387,_0x3591b9=(_0x1e1c2c/_0x408bf7*0x64)[_0x26fd05(0x3b7)](0x2);if(_0x1e1c2c>parseFloat(this[_0x26fd05(0x403)][_0x26fd05(0x466)])){const _0x1a6c2f=(_0x26fd05(0x1e3)+_0x1f97f1[_0x26fd05(0x472)][_0x26fd05(0x306)]()+_0x26fd05(0x28f)+_0x4c49e3[_0x26fd05(0x306)]()+'\x20→\x20CEX:\x20'+_0x51aae2['toUpperCase']()+_0x26fd05(0x433)+_0x408bf7+'\x20</span>\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:blue;\x20font-weight:bold;\x22>🚀\x20'+_0x1f97f1[_0x26fd05(0x25d)]+'→'+_0x1f97f1[_0x26fd05(0x252)]+'</span>\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:green;\x20font-weight:bold;\x22>💰\x20PROFIT:\x20$'+_0x1e1c2c[_0x26fd05(0x3b7)](0x2)+'\x20('+_0x3591b9+'%)</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20')['replace'](/\s{2,}/g,'\x20')['trim']();this[_0x26fd05(0x1fa)](_0x1a6c2f,'success');}}const _0x199285=_0xe6cd2c[_0x26fd05(0x20e)][_0x17aa40][_0x4c49e3][_0x441a03],_0x527cb7=this[_0x26fd05(0x3ab)](_0x1f97f1,_0x306a5a,_0x199285,_0x17aa40,_0x51aae2,_0x4c49e3),_0x475874=_0x17aa40===_0x26fd05(0x3df)?_0x26fd05(0x390)+_0x1f97f1[_0x26fd05(0x25d)][_0x26fd05(0x2b9)]()+'_'+_0x1f97f1['pairSymbol']['toLowerCase']()+'_'+_0x1f97f1[_0x26fd05(0x472)][_0x26fd05(0x2b9)]()+'_'+_0x51aae2['toLowerCase']()+'_'+_0x4c49e3[_0x26fd05(0x2b9)]():_0x26fd05(0x390)+_0x1f97f1['pairSymbol'][_0x26fd05(0x2b9)]()+'_'+_0x1f97f1[_0x26fd05(0x25d)]['toLowerCase']()+'_'+_0x1f97f1[_0x26fd05(0x472)][_0x26fd05(0x2b9)]()+'_'+_0x4c49e3[_0x26fd05(0x2b9)]()+'_'+_0x51aae2[_0x26fd05(0x2b9)]();$('#'+_0x475874)[_0x26fd05(0x3d6)](_0x527cb7);},_0x579683={'KyberSwap':_0x435d11(0x2d2),'Matcha':'0x','OKXDEX':'okx','ODOS':_0x435d11(0x1f0),'ParaSwap':'paraswap'};try{const _0x539a74=_0x17aa40===_0x435d11(0x3df)?_0x435d11(0x390)+_0x1f97f1[_0x435d11(0x25d)]+'_'+_0x1f97f1[_0x435d11(0x252)]+'_'+_0x1f97f1['chain']+'_'+_0x51aae2+'_'+_0x4c49e3:_0x435d11(0x390)+_0x1f97f1['pairSymbol']+'_'+_0x1f97f1[_0x435d11(0x25d)]+'_'+_0x1f97f1[_0x435d11(0x472)]+'_'+_0x4c49e3+'_'+_0x51aae2,_0x4fa2ac=_0x539a74[_0x435d11(0x2b9)]()['replace'](/\W+/g,''),_0x1672c8=timeoutApi;switch(_0x4c49e3){case'Lifi':_0x38ce64('Lifi',await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs[_0x435d11(0x473)](_0x254e6e,_0xf59045,_0x2734a6,_0x107854,_0xbb2494,_0xee5091,_0x1f97f1,_0x17aa40),_0x1672c8));break;case _0x435d11(0x49b):_0x38ce64(_0x435d11(0x49b),await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs[_0x435d11(0x2d3)](_0x254e6e,_0xf59045,_0x2734a6,_0x387ea3),_0x1672c8));break;case _0x435d11(0x436):_0x38ce64('Matcha',await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs[_0x435d11(0x30b)](_0x254e6e,_0xf59045,_0x2734a6,_0xee5091),_0x1672c8),_0x435d11(0x2f8));break;case _0x435d11(0x469):_0x38ce64(_0x435d11(0x469),await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs['getOKXDEXPrice'](_0x254e6e,_0xf59045,_0x2734a6,_0x387ea3),_0x1672c8));break;case'ParaSwap':_0x38ce64(_0x435d11(0x2fc),await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs[_0x435d11(0x3d2)](_0x254e6e,_0xf59045,_0x2734a6,_0x107854,_0xbb2494,_0xee5091,_0x17aa40),_0x1672c8));break;case _0x435d11(0x1ec):{const _0x480dee=[{'tokenAddress':_0x254e6e,'amount':_0x2734a6[_0x435d11(0x3dc)]()}],_0x4669a5=[{'tokenAddress':_0xf59045,'proportion':0x1}],_0xad0e8c=this[_0x435d11(0x403)]?.[_0x435d11(0x258)]||_0x435d11(0x360);let _0x1d2ae3;_0x17aa40===_0x435d11(0x3df)?_0x1d2ae3=await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs['getODOSPrice'](_0x480dee,_0x4669a5,_0xad0e8c,_0x2734a6[_0x435d11(0x3dc)](),_0xee5091),_0x1672c8):_0x1d2ae3=await fetchWithCountdown(_0x4fa2ac,_0x4c49e3,()=>DEXAPIs[_0x435d11(0x2cc)](_0x480dee,_0x4669a5,_0xad0e8c,_0x2734a6[_0x435d11(0x3dc)](),_0xee5091),_0x1672c8);if(_0x1d2ae3?.[_0x435d11(0x4b2)]==='timeout'||_0x1d2ae3?.[_0x435d11(0x3a6)])throw new Error(_0x435d11(0x38e)+(_0x1d2ae3[_0x435d11(0x3a6)]||_0x1d2ae3[_0x435d11(0x4b2)]));_0x38ce64('ODOS',{..._0x1d2ae3,'amountOut':_0x1d2ae3[_0x435d11(0x334)]?.[0x0]||'0'});break;}default:console['warn']('[⚠️\x20fetchDEXPrices]\x20DEX\x20tidak\x20dikenal:\x20'+_0x4c49e3);break;}}catch(_0x489b9d){const _0x269941=_0x579683[_0x4c49e3],_0x2fe6b3=typeof _0x489b9d==='string'?_0x489b9d:_0x489b9d?.[_0x435d11(0x3a6)]||_0x489b9d?.[_0x435d11(0x425)]||JSON[_0x435d11(0x47b)](_0x489b9d)||'Unknown\x20error';this[_0x435d11(0x3ab)](_0x1f97f1,_0x306a5a,{'isFallbackLoading':!![]},_0x17aa40,_0x51aae2,_0x4c49e3);if(!_0x269941){this['CellResult'](_0x1f97f1,_0x306a5a,{'error':_0x2fe6b3},_0x17aa40,_0x51aae2,_0x4c49e3);return;}DEXAPIs[_0x435d11(0x206)](_0x269941,_0x17aa40,_0x254e6e,_0xf59045,_0x2734a6,_0x107854,_0xbb2494,_0xee5091,this[_0x435d11(0x403)]?.[_0x435d11(0x258)]||'0x0000000000000000000000000000000000000000',_0x592d10)[_0x435d11(0x322)](_0x500ee2=>{_0x38ce64(_0x4c49e3,_0x500ee2,'amountOut');})[_0x435d11(0x2fd)](_0x1f5e28=>{const _0x4a0e45=_0x435d11,_0x5337bb=typeof _0x1f5e28===_0x4a0e45(0x259)?_0x1f5e28:_0x1f5e28?.[_0x4a0e45(0x3a6)]||_0x1f5e28?.[_0x4a0e45(0x425)]||JSON['stringify'](_0x1f5e28)||'Unknown\x20fallback\x20error';console[_0x4a0e45(0x3a6)](_0x4a0e45(0x478)+_0x4c49e3+_0x4a0e45(0x207)+_0x1f97f1[_0x4a0e45(0x25d)]+'/'+_0x1f97f1['pairSymbol'],_0x5337bb),this[_0x4a0e45(0x3ab)](_0x1f97f1,_0x306a5a,{'error':_0x5337bb},_0x17aa40,_0x51aae2,_0x4c49e3);});}}[_0x79b4aa(0x3ab)](_0x26f2dc,_0x3edc82,_0x2878dc,_0x346d5b,_0x46bdcf,_0x1316b5){const _0xbc328b=_0x79b4aa;let _0x387a2d=_0x346d5b==='cex_to_dex'?_0xbc328b(0x390)+_0x26f2dc[_0xbc328b(0x25d)]+'_'+_0x26f2dc['pairSymbol']+'_'+_0x26f2dc['chain']+'_'+_0x46bdcf+'_'+_0x1316b5:_0xbc328b(0x390)+_0x26f2dc[_0xbc328b(0x252)]+'_'+_0x26f2dc[_0xbc328b(0x25d)]+'_'+_0x26f2dc[_0xbc328b(0x472)]+'_'+_0x1316b5+'_'+_0x46bdcf;const _0x2daa5b=_0x387a2d['toLowerCase']()[_0xbc328b(0x3f5)](/\W+/g,''),_0x515698=$('#'+_0x2daa5b);if(!_0x515698[_0xbc328b(0x32c)])return;if(!_0x2878dc||_0x2878dc[_0xbc328b(0x3a6)]||_0x2878dc['isFallbackLoading']||!_0x2878dc[_0xbc328b(0x1fc)]||_0x2878dc[_0xbc328b(0x1fc)]<=0x0||_0x2878dc[_0xbc328b(0x440)]<=0x0){let _0x1df84c='';if(_0x2878dc?.[_0xbc328b(0x2f4)]){_0x1df84c=_0xbc328b(0x3af),_0x515698[_0xbc328b(0x31d)]()[_0xbc328b(0x487)](_0xbc328b(0x384))['html'](_0x1df84c);return;}const _0x2d89a5=(_0x2878dc?.[_0xbc328b(0x3a6)]?.[_0xbc328b(0x425)]||_0x2878dc?.['error']||_0xbc328b(0x3ef))['toString']()[_0xbc328b(0x447)](0x0,0x78);_0x1df84c=_0xbc328b(0x2b4)+_0x1316b5+':\x20'+_0x2d89a5+'\x22>⚠️</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22pnl-info\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',_0x515698[_0xbc328b(0x31d)]()['addClass'](_0xbc328b(0x2b1))[_0xbc328b(0x3d6)](_0x1df84c);return;}const _0x1538b3=_0x346d5b==='cex_to_dex'?_0x26f2dc[_0xbc328b(0x3bf)]:_0x26f2dc[_0xbc328b(0x481)],_0x42cc2d=_0x2878dc[_0xbc328b(0x45f)]||0x0,_0x49e58a=_0x2878dc['baseBuy']||0x0,_0x41d249=_0x2878dc[_0xbc328b(0x2ee)]||0x0,_0x5baaa4=_0x2878dc[_0xbc328b(0x429)]||_0x2878dc['price']||0x0,_0x4652c8=_0x2878dc[_0xbc328b(0x471)]||0x0;let _0x48fa90=_0x346d5b===_0xbc328b(0x3df)?_0x49e58a:_0x4652c8,_0x67b235=_0x346d5b==='cex_to_dex'?_0x4652c8:_0x41d249;if(_0x346d5b==='cex_to_dex'){const _0x52f15d=_0x26f2dc[_0xbc328b(0x252)][_0xbc328b(0x306)](),_0x1961cb=_0x3edc82?.[_0x52f15d+_0xbc328b(0x34f)]?.['buy']||_0x3edc82?.[_0x52f15d+_0xbc328b(0x34f)]?.['sell']||0x0;_0x4652c8&&_0x1961cb&&(_0x67b235=_0x4652c8*_0x1961cb);}const _0x1f8237=_0x2878dc['normalizedIn']||_0x1538b3/_0x49e58a,_0x44ffd0=_0x2878dc['normalizedOut']||0x0,_0x97167c=_0x2878dc['hasilUSDT']||_0x44ffd0*_0x5baaa4,_0x2ca2a6=Object[_0xbc328b(0x308)](_0x26f2dc[_0xbc328b(0x30a)]||{})[_0xbc328b(0x216)](_0x1c527a=>_0x1c527a['toUpperCase']()===_0x46bdcf[_0xbc328b(0x306)]()),_0x3b844e=_0x26f2dc[_0xbc328b(0x30a)]?.[_0x2ca2a6]?.[_0x26f2dc[_0xbc328b(0x25d)][_0xbc328b(0x306)]()]?.[_0xbc328b(0x3e5)]??0x0,_0x29c8b6=_0x1538b3*0.0013,_0xd0383f=_0x3b844e*_0x49e58a,_0xe58237=_0x29c8b6+_0xd0383f+_0x42cc2d,_0x46e87c=_0x97167c-_0x1538b3,_0x25a0e8=_0x46e87c-_0xe58237,_0x43268d=_0x25a0e8>0x0?_0xbc328b(0x2e6):_0xbc328b(0x2c7),_0x35eb83=_0x25a0e8>0x0?_0xbc328b(0x3c2):'',_0x116bed=_0x346d5b===_0xbc328b(0x3df)?_0x26f2dc[_0xbc328b(0x25d)]:_0x26f2dc[_0xbc328b(0x252)],_0x5cfa18=_0x346d5b===_0xbc328b(0x3df)?_0x26f2dc[_0xbc328b(0x252)]:_0x26f2dc[_0xbc328b(0x25d)],_0x5c9c0a=_0x5cfa18,_0x50d334=_0x346d5b===_0xbc328b(0x3df)?_0x26f2dc[_0xbc328b(0x262)]:_0x26f2dc[_0xbc328b(0x22a)],_0x1f020e=_0x346d5b===_0xbc328b(0x3df)?this['generateDexLink'](_0x1316b5,_0x26f2dc[_0xbc328b(0x472)],_0x26f2dc[_0xbc328b(0x25d)],_0x26f2dc[_0xbc328b(0x3f9)],_0x26f2dc[_0xbc328b(0x252)],_0x26f2dc[_0xbc328b(0x41f)]):this[_0xbc328b(0x1e8)](_0x1316b5,_0x26f2dc[_0xbc328b(0x472)],_0x26f2dc['pairSymbol'],_0x26f2dc[_0xbc328b(0x41f)],_0x26f2dc[_0xbc328b(0x25d)],_0x26f2dc[_0xbc328b(0x3f9)]),_0xe6557a=_0x26f2dc[_0xbc328b(0x25d)][_0xbc328b(0x306)](),_0x22760b=this[_0xbc328b(0x4b0)](_0x46bdcf['toUpperCase'](),_0xe6557a,_0xe6557a),_0xf636b6=_0x22760b[_0xbc328b(0x208)]||'#',_0x3067bd=_0x346d5b===_0xbc328b(0x3df)?_0xf636b6:_0x1f020e,_0x5592b2=_0x346d5b===_0xbc328b(0x3df)?_0x1f020e:_0xf636b6,_0x451718=_0x3edc82?.[_0x5c9c0a[_0xbc328b(0x306)]()+_0xbc328b(0x34f)]?.[_0xbc328b(0x325)]||_0x3edc82?.[_0x5c9c0a[_0xbc328b(0x306)]()+_0xbc328b(0x34f)]?.[_0xbc328b(0x359)]||0x0,_0x347fa5=_0x44ffd0*_0x451718,_0x283f2e=window[_0xbc328b(0x290)]?.[_0xbc328b(0x295)]||0x3e80,_0x10be15=_0x48fa90*_0x283f2e,_0x44117a=_0x67b235*_0x283f2e,_0x1f2e80=_0x44ffd0/_0x1f8237,_0x8b1437=_0x346d5b===_0xbc328b(0x3df)?(_0x44ffd0/_0x1f8237*_0x5baaa4)['toFixed'](0x6):(_0x1538b3/_0x44ffd0)[_0xbc328b(0x3b7)](0x6),_0x561ad7=(_0x46e87c/_0x1538b3*0x64)[_0xbc328b(0x3b7)](0x2),_0x15ae94=_0x346d5b==='cex_to_dex'?(_0xbc328b(0x24f)+_0x26f2dc[_0xbc328b(0x25d)]+_0xbc328b(0x35b)+_0x26f2dc[_0xbc328b(0x252)]+_0xbc328b(0x423)+_0x26f2dc['chain'][_0xbc328b(0x306)]()+_0xbc328b(0x441)+_0x46bdcf[_0xbc328b(0x306)]()+_0xbc328b(0x35b)+_0x2878dc[_0xbc328b(0x301)][_0xbc328b(0x306)]()+_0xbc328b(0x44a)+_0x1538b3+_0xbc328b(0x218)+_0x46bdcf+'\x20@\x20$'+_0x49e58a[_0xbc328b(0x3b7)](0x6)+_0xbc328b(0x35b)+_0x1f8237['toFixed'](0x6)+'\x20'+_0x26f2dc[_0xbc328b(0x25d)]+_0xbc328b(0x2e7)+_0x46bdcf['toUpperCase']()+_0xbc328b(0x4c2)+Math[_0xbc328b(0x1ed)](_0x10be15)['toLocaleString'](_0xbc328b(0x480))+'\x0a\x0a\x20\x20\x20\x20💰\x20Swap\x20di\x20'+_0x1316b5+_0xbc328b(0x42d)+_0x8b1437+_0xbc328b(0x2ff)+_0x26f2dc[_0xbc328b(0x25d)]+_0xbc328b(0x2cb)+_0x97167c[_0xbc328b(0x3b7)](0x6)+_0xbc328b(0x24a)+_0x1316b5[_0xbc328b(0x306)]()+_0xbc328b(0x4c2)+Math['round'](_0x44117a)['toLocaleString']('id-ID')+_0xbc328b(0x20c)+_0xd0383f[_0xbc328b(0x3b7)](0x2)+_0xbc328b(0x2a0)+_0x42cc2d['toFixed'](0x2)+_0xbc328b(0x442)+_0xe58237[_0xbc328b(0x3b7)](0x2)+_0xbc328b(0x3cc)+(_0x46e87c>=0x0?'+':'')+_0x46e87c[_0xbc328b(0x3b7)](0x2)+_0xbc328b(0x4c3)+_0x561ad7+_0xbc328b(0x485)+_0x25a0e8[_0xbc328b(0x3b7)](0x2)+'\x20USDT\x0a\x20\x20\x20\x20')[_0xbc328b(0x28c)]():(_0xbc328b(0x343)+_0x26f2dc['pairSymbol']+_0xbc328b(0x35b)+_0x26f2dc['symbol']+_0xbc328b(0x423)+_0x26f2dc[_0xbc328b(0x472)][_0xbc328b(0x306)]()+_0xbc328b(0x441)+_0x46bdcf[_0xbc328b(0x306)]()+_0xbc328b(0x35b)+_0x2878dc[_0xbc328b(0x301)][_0xbc328b(0x306)]()+_0xbc328b(0x44a)+_0x1538b3+_0xbc328b(0x249)+_0x1316b5+'\x20→\x20'+_0x44ffd0[_0xbc328b(0x3b7)](0x6)+'\x20'+_0x26f2dc[_0xbc328b(0x25d)]+_0xbc328b(0x1fb)+_0x8b1437+'/'+_0x26f2dc[_0xbc328b(0x25d)]+_0xbc328b(0x2e7)+_0x1316b5[_0xbc328b(0x306)]()+_0xbc328b(0x4c2)+Math['round'](_0x10be15)[_0xbc328b(0x47a)]('id-ID')+_0xbc328b(0x3d4)+_0x46bdcf+_0xbc328b(0x426)+_0x41d249[_0xbc328b(0x3b7)](0x6)+'/'+_0x26f2dc['symbol']+_0xbc328b(0x2cb)+_0x97167c+_0xbc328b(0x24a)+_0x46bdcf[_0xbc328b(0x306)]()+_0xbc328b(0x4c2)+Math[_0xbc328b(0x1ed)](_0x44117a)[_0xbc328b(0x47a)](_0xbc328b(0x480))+_0xbc328b(0x257)+_0x42cc2d[_0xbc328b(0x3b7)](0x2)+'\x0a\x20\x20\x20\x20🧾\x20Total\x20Fee:\x20~$'+_0xe58237[_0xbc328b(0x3b7)](0x2)+'\x0a\x0a\x20\x20\x20\x20📈\x20PNL:\x20'+(_0x46e87c>=0x0?'+':'')+_0x46e87c[_0xbc328b(0x3b7)](0x2)+'\x20USDT\x20('+_0x561ad7+_0xbc328b(0x485)+_0x25a0e8['toFixed'](0x2)+_0xbc328b(0x37c))['trim']();if(_0x25a0e8>0x0){this[_0xbc328b(0x205)]=this['pnlSignals']||{};const _0x7e70c7=_0x1316b5[_0xbc328b(0x306)]();this['pnlSignals'][_0x7e70c7]=this['pnlSignals'][_0x7e70c7]||[];const _0x4582a5=_0x346d5b===_0xbc328b(0x3df)?_0x46bdcf:_0x1316b5,_0x45ba19=_0x346d5b===_0xbc328b(0x3df)?_0x1316b5:_0x46bdcf,_0x4ea390=CexShortMap[_0x4582a5]||_0x4582a5,_0x13c199=CexShortMap[_0x45ba19]||_0x45ba19,_0x4f5462=chainShortMap[_0x26f2dc[_0xbc328b(0x472)]?.[_0xbc328b(0x306)]()]||'CHAIN',_0x29f4e2=this[_0xbc328b(0x2d5)](this[_0xbc328b(0x231)](_0x46bdcf,'cex')),_0x4e5bd6=this[_0xbc328b(0x2d5)](this[_0xbc328b(0x231)](_0x26f2dc['chain'],'chain')),_0x5e3732='token-row-'+_0x26f2dc['id']+'-'+_0x46bdcf[_0xbc328b(0x3f5)](/\W+/g,'')[_0xbc328b(0x2b9)](),_0x56568d=this[_0xbc328b(0x231)](_0x46bdcf,_0xbc328b(0x3ad)),_0x154b40=_0x346d5b==='cex_to_dex'?_0xbc328b(0x47e)+_0x29f4e2+_0xbc328b(0x338)+_0x4ea390[_0xbc328b(0x306)]()+_0xbc328b(0x2a6)+_0x116bed+'⇄'+_0x5cfa18+_0xbc328b(0x265)+_0x4e5bd6+_0xbc328b(0x248)+_0x4f5462+']</span>':_0xbc328b(0x47e)+_0x29f4e2+_0xbc328b(0x338)+_0x13c199[_0xbc328b(0x306)]()+'</span><span\x20class=\x22text-danger\x20fw-bold\x20fs-8\x22>['+_0x5cfa18+'⇄'+_0x116bed+_0xbc328b(0x265)+_0x4e5bd6+_0xbc328b(0x248)+_0x4f5462+_0xbc328b(0x27b),_0x39cac5=_0xbc328b(0x48b)+_0x5e3732+'\x22\x20class=\x22text-decoration-none\x20text-dark\x20text-break\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x154b40+_0xbc328b(0x307)+_0x1538b3+_0xbc328b(0x200)+_0x25a0e8[_0xbc328b(0x3b7)](0x2)+_0xbc328b(0x2c4),_0x5198a3=_0x26f2dc[_0xbc328b(0x25d)]+'_'+_0x26f2dc[_0xbc328b(0x252)]+'_'+_0x26f2dc[_0xbc328b(0x472)]+'_'+_0x46bdcf+'_'+_0x1316b5+'_'+_0x346d5b,_0x356913=document[_0xbc328b(0x404)](_0xbc328b(0x3b0)+_0x7e70c7),_0x19c940=_0x356913?.['querySelector'](_0xbc328b(0x4a4)+_0x5198a3+'\x22]');if(!this[_0xbc328b(0x205)][_0x7e70c7][_0x5198a3]&&!_0x19c940){this[_0xbc328b(0x205)][_0x7e70c7][_0x5198a3]={'html':_0x39cac5,'pnlNetto':_0x25a0e8};if(_0x356913){_0x356913[_0xbc328b(0x3dd)][_0xbc328b(0x2b0)](_0xbc328b(0x2d7));const _0x14700f=_0x25a0e8>parseFloat(this[_0xbc328b(0x403)][_0xbc328b(0x466)])?_0xbc328b(0x224):'',_0x419708=document[_0xbc328b(0x4b7)]('li');_0x419708[_0xbc328b(0x2c1)]=_0x14700f,_0x419708[_0xbc328b(0x243)](_0xbc328b(0x498),_0x5198a3),_0x419708[_0xbc328b(0x499)]=_0x39cac5,_0x356913['append'](_0x419708);}}const _0xb54536=this[_0xbc328b(0x403)]['UserName']||_0xbc328b(0x2df),_0x24a8de=parseFloat(_0x1538b3),_0x392949=parseFloat(this['settings'][_0xbc328b(0x466)]);if(_0x346d5b===_0xbc328b(0x3df)){const _0xcd9454=new Audio(_0x25a0e8>_0x392949?_0xbc328b(0x3e0):'MULTI/sinyal.mp3');_0xcd9454[_0xbc328b(0x28a)](),_0x25a0e8>_0x392949&&this['sendInfoSignal'](_0xb54536,_0x26f2dc,_0x46bdcf,_0x1316b5,_0x49e58a,_0x8b1437,_0xd0383f,_0x42cc2d,_0xe58237,_0x46e87c,_0x25a0e8,_0x346d5b,_0x24a8de);}else{if(_0x346d5b===_0xbc328b(0x3d0)){const _0x2a7b86=new Audio(_0x25a0e8>_0x392949?_0xbc328b(0x3e0):_0xbc328b(0x1f8));_0x2a7b86[_0xbc328b(0x28a)](),_0x25a0e8>_0x392949&&this[_0xbc328b(0x220)](_0xb54536,_0x26f2dc,_0x46bdcf,_0x1316b5,_0x8b1437,_0x41d249,_0xd0383f,_0x42cc2d,_0xe58237,_0x46e87c,_0x25a0e8,_0x346d5b,_0x24a8de);}}}_0x515698[_0xbc328b(0x454)](_0xbc328b(0x29c),_0x35eb83)[_0xbc328b(0x454)](_0xbc328b(0x267),_0x15ae94)[_0xbc328b(0x31d)]()[_0xbc328b(0x487)](_0xbc328b(0x3b2))[_0xbc328b(0x3d6)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22price-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22small\x20text-muted\x20fw-bold\x22>\x20'+(_0x2878dc[_0xbc328b(0x301)][_0xbc328b(0x306)]()||_0x1316b5[_0xbc328b(0x306)]())+_0xbc328b(0x378)+_0x3067bd+_0xbc328b(0x43b)+PriceUtils[_0xbc328b(0x273)](_0x48fa90)+_0xbc328b(0x201)+_0x5592b2+_0xbc328b(0x28d)+PriceUtils[_0xbc328b(0x273)](_0x67b235)+_0xbc328b(0x35c)+(_0x346d5b===_0xbc328b(0x3df)?_0xbc328b(0x362)+_0x22760b['withdrawUrl']+_0xbc328b(0x4bd)+PriceUtils[_0xbc328b(0x46f)](_0xd0383f)+_0xbc328b(0x1e0):'<a\x20href=\x22'+_0x22760b[_0xbc328b(0x27e)]+'\x22\x20target=\x22_blank\x22\x20class=\x22text-primary\x22>📤DP['+_0x5cfa18+_0xbc328b(0x3c6))+_0xbc328b(0x3e1)+PriceUtils[_0xbc328b(0x46f)](_0x42cc2d)+_0xbc328b(0x393)+PriceUtils['formatPNL'](_0x46e87c)+'-'+_0xe58237['toFixed'](0x2)+_0xbc328b(0x375)+_0x43268d+'\x22><strong>💰\x20NET:\x20'+PriceUtils['formatPNL'](_0x25a0e8)+'</strong></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20');}[_0x79b4aa(0x230)](){const _0x2945f0=_0x79b4aa,_0x2a1acb=$(_0x2945f0(0x405));_0x2a1acb['empty']();const _0x488204={'Lifi':_0x2945f0(0x39f),'KyberSwap':'text-success','Matcha':_0x2945f0(0x413),'ODOS':_0x2945f0(0x337),'Magpie':_0x2945f0(0x363),'ParaSwap':_0x2945f0(0x396),'OKXDEX':_0x2945f0(0x3b9)};this[_0x2945f0(0x205)]={};const _0x460dfb=$(_0x2945f0(0x261));for(const _0x22b019 of DexList){this['pnlSignals'][_0x22b019]=[];const _0x265797=_0x488204[_0x22b019]||_0x2945f0(0x394),_0x64fc69=_0x22b019['toUpperCase'](),_0x50c51d=_0x2945f0(0x36e)+_0x64fc69,_0x3c648e='pnl-list-'+_0x64fc69,_0x42c4f1=$(_0x2945f0(0x2fa)+_0x265797+'\x22\x20style=\x22font-size:\x200.85rem;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x64fc69+_0x2945f0(0x470)+_0x64fc69+_0x2945f0(0x3de)+_0x50c51d+_0x2945f0(0x282)+_0x50c51d+_0x2945f0(0x21e)+_0x50c51d+_0x2945f0(0x468)+_0x3c648e+_0x2945f0(0x250));_0x460dfb[_0x2945f0(0x25f)](_0x42c4f1);}_0x2a1acb[_0x2945f0(0x25f)](_0x460dfb),_0x2a1acb['on']('shown.bs.collapse',function(_0x4412d3){const _0x3fd0ce=_0x2945f0,_0x5e2842=$(_0x4412d3[_0x3fd0ce(0x42a)])[_0x3fd0ce(0x454)]('id'),_0x47fa44=_0x5e2842[_0x3fd0ce(0x3f5)](_0x3fd0ce(0x36e),'');$(_0x3fd0ce(0x36a)+_0x47fa44)[_0x3fd0ce(0x31d)](_0x3fd0ce(0x395))[_0x3fd0ce(0x487)]('bi-caret-down-fill');}),_0x2a1acb['on']('hidden.bs.collapse',function(_0x5c15ce){const _0x57cbea=_0x2945f0,_0x1a7900=$(_0x5c15ce[_0x57cbea(0x42a)])['attr']('id'),_0x2cf8f8=_0x1a7900[_0x57cbea(0x3f5)](_0x57cbea(0x36e),'');$(_0x57cbea(0x36a)+_0x2cf8f8)[_0x57cbea(0x31d)](_0x57cbea(0x2e3))[_0x57cbea(0x487)](_0x57cbea(0x395));});}[_0x79b4aa(0x1e8)](_0x452039,_0x2b195c,_0x5ddde3,_0x24098c,_0x5aa192,_0x1e68e6){const _0x25245d=_0x79b4aa,_0x2a22fc=_0x2b195c[_0x25245d(0x2b9)](),_0x5749a3=chainCodeMap[_0x2a22fc]||0x1,_0x43c091={'kyberswap':_0x25245d(0x202)+_0x2a22fc+'/'+_0x24098c+_0x25245d(0x414)+_0x1e68e6,'matcha':_0x25245d(0x3b3)+_0x2a22fc+'/'+_0x24098c[_0x25245d(0x2b9)]()+_0x25245d(0x240)+_0x5749a3+'&buyAddress='+_0x1e68e6[_0x25245d(0x2b9)](),'magpie':_0x25245d(0x286)+_0x2a22fc+'/'+_0x5ddde3[_0x25245d(0x306)]()+'/'+_0x2a22fc+'/'+_0x5aa192['toUpperCase'](),'odos':'https://app.odos.xyz','okxdex':_0x25245d(0x44b)+_0x5749a3+_0x25245d(0x389)+_0x24098c+'&outputChain=501&outputCurrency='+_0x1e68e6,'paraswap':_0x25245d(0x254)+_0x24098c+'-'+_0x1e68e6+_0x25245d(0x27a)+_0x2a22fc,'lifi':_0x25245d(0x3eb)+_0x5749a3+_0x25245d(0x2e9)+_0x24098c+'&toChain='+_0x5749a3+_0x25245d(0x4b8)+_0x1e68e6};return _0x43c091[_0x452039[_0x25245d(0x2b9)]()]||null;}[_0x79b4aa(0x462)](_0x473236,_0x4ab88b,_0x370b95){const _0x9f6f2b=_0x79b4aa,_0x40d64e=_0x4ab88b[_0x9f6f2b(0x2b9)](),_0xdf96e4=_0x370b95[_0x9f6f2b(0x306)](),_0x4bcafb=CEXWallets[_0x40d64e];if(!_0x4bcafb)return _0x9f6f2b(0x23e);const _0xf2e092=_0x4bcafb[_0x9f6f2b(0x298)]?.[_0xdf96e4]?.[_0x9f6f2b(0x303)],_0x5963b8=explorerUrls[_0x4bcafb['Kode_Chain']]||explorerUrls['1'];if(!_0xf2e092)return'#STOK';return _0x5963b8+_0x9f6f2b(0x48e)+_0x473236+'?a='+_0xf2e092;}[_0x79b4aa(0x4b0)](_0x565ee8,_0x456f75,_0x5d2a49,_0x28186e=_0x79b4aa(0x3df)){const _0xc701f4=_0x79b4aa,_0x5049dc=_0x456f75[_0xc701f4(0x306)](),_0x568237=_0x5d2a49[_0xc701f4(0x306)](),_0x5d4de8=_0x28186e[_0xc701f4(0x2b9)]();let _0x3ef3bb='#',_0x4bd891=null,_0x44b77a=null,_0x4d7acf=_0x5049dc,_0x43b261=_0x5049dc,_0x329581='BTC';if(_0x5049dc===_0xc701f4(0x1f9))_0x329581=_0x568237;else _0x568237===_0xc701f4(0x1f9)?_0x329581=_0x5049dc:_0x329581=_0x568237;switch(_0x565ee8[_0xc701f4(0x306)]()){case _0xc701f4(0x211):_0x3ef3bb=_0xc701f4(0x42b)+_0x329581+_0xc701f4(0x4ab),_0x4bd891=_0xc701f4(0x2c6)+_0x4d7acf,_0x44b77a=_0xc701f4(0x2e4)+_0x43b261;break;case _0xc701f4(0x2c2):_0x3ef3bb=_0xc701f4(0x2cd)+_0x329581+'_USDT',_0x4bd891=_0xc701f4(0x237)+_0x4d7acf,_0x44b77a='https://www.gate.io/myaccount/deposit/'+_0x43b261;break;case _0xc701f4(0x2f1):_0x3ef3bb=_0xc701f4(0x335)+_0x329581+_0xc701f4(0x43d),_0x4bd891='https://www.mexc.com/assets/withdraw/'+_0x4d7acf,_0x44b77a=_0xc701f4(0x3d9)+_0x43b261;break;case _0xc701f4(0x31b):_0x3ef3bb=_0xc701f4(0x461)+_0x329581+_0xc701f4(0x2a5),_0x4bd891=_0xc701f4(0x34a)+_0x4d7acf+'#kirim',_0x44b77a=_0xc701f4(0x34a)+_0x43b261;break;}return{'tradeLink':_0x3ef3bb,'withdrawUrl':_0x4bd891,'depositUrl':_0x44b77a};}[_0x79b4aa(0x1f5)](_0x23c867,_0x2e6c06){const _0x365efa=_0x79b4aa,_0x5ca955=PriceUtils['getChainId'](_0x23c867[_0x365efa(0x472)]),_0x42b36f=explorerUrls[_0x5ca955]||explorerUrls['1'],_0x5c68db=_0x23c867[_0x365efa(0x25d)][_0x365efa(0x306)](),_0x9d97ca=_0x23c867[_0x365efa(0x252)][_0x365efa(0x306)](),_0x5a2b79=_0x23c867['chain'][_0x365efa(0x306)](),_0x466bf8=_0x2e6c06[_0x365efa(0x306)](),_0x269057=this[_0x365efa(0x231)](_0x2e6c06,'cex'),_0x15bc72=this[_0x365efa(0x231)](_0x23c867[_0x365efa(0x472)],'chain'),_0x516a27=this[_0x365efa(0x2d5)](this[_0x365efa(0x231)](_0x23c867[_0x365efa(0x472)],'chain')),_0x1f343e=this['GeturlExchanger'](_0x466bf8,_0x5c68db,_0x9d97ca,_0x365efa(0x3df)),_0x3747ec=this['GeturlExchanger'](_0x466bf8,_0x9d97ca,_0x5c68db,_0x365efa(0x3d0)),_0x2f857a=_0x365efa(0x362)+_0x3747ec[_0x365efa(0x208)]+'\x22\x20class=\x22fs-7\x20bg-light\x20badge\x20'+_0x516a27+_0x365efa(0x212)+_0x5c68db+_0x365efa(0x2e8),_0x2ff741=_0x365efa(0x362)+_0x1f343e[_0x365efa(0x208)]+'\x22\x20class=\x22fs-7\x22\x20target=\x22_blank\x22>'+_0x9d97ca+'</a>',_0x1abe48=this[_0x365efa(0x462)](_0x23c867[_0x365efa(0x3f9)],_0x23c867['chain'],_0x466bf8),_0x122d02=this[_0x365efa(0x462)](_0x23c867[_0x365efa(0x41f)],_0x23c867[_0x365efa(0x472)],_0x466bf8),_0x1df793=chainShortMap[_0x23c867[_0x365efa(0x472)]?.['toUpperCase']()]||_0x365efa(0x3e7),_0x2c1ff0=_0x365efa(0x362)+_0x42b36f+_0x365efa(0x48e)+_0x23c867[_0x365efa(0x3f9)]+_0x365efa(0x1d6),_0x5df361=_0x365efa(0x362)+_0x42b36f+_0x365efa(0x48e)+_0x23c867[_0x365efa(0x41f)]+_0x365efa(0x1d6),_0x5aeb41=_0x365efa(0x353)+_0x5ca955+_0x365efa(0x389)+_0x23c867[_0x365efa(0x3f9)]+'&outputChain=501&outputCurrency='+_0x23c867[_0x365efa(0x41f)]+_0x365efa(0x349),_0x4582b4='<a\x20href=\x22https://app.unidex.exchange/?chain='+_0x23c867[_0x365efa(0x472)]+_0x365efa(0x255)+_0x23c867[_0x365efa(0x3f9)]+_0x365efa(0x3ee)+_0x23c867[_0x365efa(0x41f)]+'\x22\x20target=\x22_blank\x22\x20class=\x22text-warning\x22>#UNX</a>',_0x5c8e4e=_0x365efa(0x37f)+_0x23c867[_0x365efa(0x472)]+_0x365efa(0x255)+_0x23c867[_0x365efa(0x3f9)]+_0x365efa(0x3ee)+_0x23c867[_0x365efa(0x41f)]+_0x365efa(0x47d),_0x51e05d='<a\x20href=\x22https://app.1inch.io/advanced/swap?network='+_0x5ca955+_0x365efa(0x450)+_0x23c867[_0x365efa(0x3f9)]+_0x365efa(0x397)+_0x23c867[_0x365efa(0x41f)]+_0x365efa(0x2bc),_0xbfddb1=_0x365efa(0x327)+_0x5ca955+'&fromToken='+_0x23c867['contractAddress']+_0x365efa(0x29d)+_0x5ca955+_0x365efa(0x4b8)+_0x23c867['pairContractAddress']+_0x365efa(0x4a9),_0xf39ca1=Object[_0x365efa(0x308)](_0x23c867[_0x365efa(0x30a)]||{})[_0x365efa(0x216)](_0x31632d=>_0x31632d[_0x365efa(0x306)]()===_0x466bf8),_0x18cf52=_0x23c867['cexInfo']?.[_0xf39ca1]||{},_0x43072c=_0x18cf52[_0x5c68db]||{},_0x526ffc=_0x18cf52[_0x9d97ca]||{},_0x14f664=_0x43072c['wd']===!![]?'<a\x20href=\x22'+(_0x1f343e[_0x365efa(0x2eb)]||'#')+_0x365efa(0x46a):_0x43072c['wd']===![]?'<span\x20class=\x22fw-bold\x20text-danger\x22>WX</span>':'<span\x20class=\x22text-warning\x22>⚠️</span>',_0x46d805=_0x43072c[_0x365efa(0x1ee)]===!![]?_0x365efa(0x362)+(_0x1f343e[_0x365efa(0x27e)]||'#')+_0x365efa(0x2af):_0x43072c[_0x365efa(0x1ee)]===![]?_0x365efa(0x42f):'<span\x20class=\x22text-warning\x22>⚠️</span>',_0x5f3ce3=_0x526ffc['wd']===!![]?_0x365efa(0x362)+(_0x3747ec[_0x365efa(0x2eb)]||'#')+'\x22\x20target=\x22_blank\x22\x20class=\x22text-success\x22>WD</a>':_0x526ffc['wd']===![]?_0x365efa(0x3c3):'<span\x20class=\x22text-warning\x22>⚠️</span>',_0x2d2af7=_0x526ffc['depo']===!![]?_0x365efa(0x362)+(_0x3747ec[_0x365efa(0x27e)]||'#')+_0x365efa(0x2af):_0x526ffc[_0x365efa(0x1ee)]===![]?_0x365efa(0x42f):_0x365efa(0x2b6);return _0x365efa(0x2a9)+_0x23c867['id']+_0x365efa(0x40b)+_0x23c867[_0x365efa(0x3bf)]+_0x365efa(0x1e4)+_0x23c867[_0x365efa(0x481)]+_0x365efa(0x1d9)+_0x23c867['id']+_0x365efa(0x411)+_0x23c867['id']+'\x27)\x22\x20title=\x22Hapus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-trash\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20CEX\x20&\x20Chain\x20badge\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22d-block\x20mb-0\x20text-secondary\x20fs-6\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20'+_0x269057+'\x22>'+_0x466bf8+_0x365efa(0x319)+_0x15bc72+'\x22>'+_0x1df793+_0x365efa(0x48d)+_0x2f857a+_0x365efa(0x362)+_0x1abe48+_0x365efa(0x30d)+_0x2ff741+_0x365efa(0x336)+_0x122d02+_0x365efa(0x3f7)+_0x2c1ff0+'['+_0x14f664+'\x20'+_0x46d805+_0x365efa(0x3e8)+_0x5df361+'['+_0x5f3ce3+'\x20'+_0x2d2af7+']\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Link-link\x20DEX\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22d-block\x20fw-bold\x20fs-9\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x51e05d+'\x20'+_0x5aeb41+'\x20'+_0x5c8e4e+'\x20'+_0x4582b4+_0x365efa(0x27f);}[_0x79b4aa(0x486)](_0x2988ef){const _0x2d16ad=_0x79b4aa,_0x288603=confirm(_0x2d16ad(0x47c));_0x288603&&(this[_0x2d16ad(0x4a1)](_0x2988ef),alert('Status\x20berhasil\x20diganti.\x20Silakan\x20refresh\x20halaman\x20untuk\x20melihat\x20perubahan.'));}[_0x79b4aa(0x43f)](_0x28ad06){return new Promise(_0x1f462e=>setTimeout(_0x1f462e,_0x28ad06));}[_0x79b4aa(0x1fa)](_0x2a9e80,_0x514520=_0x79b4aa(0x2ab)){const _0x15074e=_0x79b4aa,_0x5eb0f1=_0x15074e(0x28b)+Date[_0x15074e(0x4b6)](),_0x51b440='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22'+_0x5eb0f1+_0x15074e(0x23a)+_0x514520+_0x15074e(0x49e)+_0x2a9e80+_0x15074e(0x274);$(_0x15074e(0x3d8))[_0x15074e(0x25f)](_0x51b440),setTimeout(()=>{const _0x1b7087=_0x15074e;$('#'+_0x5eb0f1)[_0x1b7087(0x311)]('close');},0x1388);}[_0x79b4aa(0x2ef)](_0x10bcc1){const _0x2c4384=_0x79b4aa,_0x4fb461=new Date(),_0x2a3423=String(_0x4fb461[_0x2c4384(0x236)]())['padStart'](0x2,'0'),_0xf262a7=String(_0x4fb461['getMonth']()+0x1)[_0x2c4384(0x44c)](0x2,'0'),_0x2532f9=_0x4fb461['getFullYear'](),_0x1d620a=String(_0x4fb461[_0x2c4384(0x33b)]())['padStart'](0x2,'0'),_0x7ec53f=String(_0x4fb461['getMinutes']())[_0x2c4384(0x44c)](0x2,'0'),_0x705b71=String(_0x4fb461[_0x2c4384(0x45e)]())[_0x2c4384(0x44c)](0x2,'0'),_0x295c6a=_0x2a3423+'-'+_0xf262a7+'-'+_0x2532f9+'\x20'+_0x1d620a+':'+_0x7ec53f+':'+_0x705b71,_0x14e518=_0x295c6a+'\x20['+_0x10bcc1+']';localStorage[_0x2c4384(0x28e)](_0x2c4384(0x41c),_0x14e518),$('#infostatus')[_0x2c4384(0x45b)](_0x14e518),console['log'](_0x2c4384(0x4c4),_0x14e518);}['sendStatusTELE'](_0x2d80ac,_0x5039de){const _0x1e9dbd=_0x79b4aa;var _0x383181=[{'chat_id':-0xe950947de9}];const _0x48fec6=this[_0x1e9dbd(0x3c1)][_0x1e9dbd(0x223)](_0x441303=>_0x441303[_0x1e9dbd(0x46c)]),_0x446ae7=_0x48fec6[_0x1e9dbd(0x223)](_0x5b2172=>_0x5b2172[_0x1e9dbd(0x472)]===_0x1e9dbd(0x342))[_0x1e9dbd(0x32c)],_0xc1a4ba=_0x48fec6[_0x1e9dbd(0x223)](_0x1e3e37=>_0x1e3e37[_0x1e9dbd(0x472)]===_0x1e9dbd(0x430))['length'],_0x426dd3=_0x48fec6[_0x1e9dbd(0x223)](_0x37d7d1=>_0x37d7d1[_0x1e9dbd(0x472)]===_0x1e9dbd(0x41a))[_0x1e9dbd(0x32c)],_0x41b144=_0x48fec6[_0x1e9dbd(0x223)](_0x56f869=>_0x56f869[_0x1e9dbd(0x472)]===_0x1e9dbd(0x26b))[_0x1e9dbd(0x32c)],_0x256209=_0x48fec6[_0x1e9dbd(0x223)](_0x3cfeb9=>_0x3cfeb9[_0x1e9dbd(0x472)]===_0x1e9dbd(0x31c))['length'];var _0x150561='https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';let _0x4fd679='#'+_0x2d80ac['toUpperCase']()+_0x1e9dbd(0x40a)+_0x5039de+_0x1e9dbd(0x3f4)+'-------------------------------------------\x0a'+(_0x1e9dbd(0x3aa)+_0x446ae7+'\x20')+(_0x1e9dbd(0x460)+_0xc1a4ba+'\x20\x0a')+(_0x1e9dbd(0x228)+_0x426dd3+'\x20')+(_0x1e9dbd(0x350)+_0x41b144+'\x20\x0a')+('•\x20<b>Arbitrum</b>:\x20'+_0x256209+'\x20');for(var _0x5c8ec9=0x0;_0x5c8ec9<_0x383181['length'];_0x5c8ec9++){var _0x2d80ac=_0x383181[_0x5c8ec9],_0xd79f11=_0x2d80ac['chat_id'];$[_0x1e9dbd(0x2d8)]({'url':_0x150561,'method':_0x1e9dbd(0x2c5),'data':{'chat_id':_0xd79f11,'text':_0x4fd679,'parse_mode':_0x1e9dbd(0x2ed),'disable_web_page_preview':!![]},'success':function(_0x4b2520){},'error':function(_0x297422,_0x10bbef,_0x3dbb67){const _0x3da2f5=_0x1e9dbd;console[_0x3da2f5(0x455)](_0x3da2f5(0x464),_0x3dbb67);}});}}[_0x79b4aa(0x220)](_0xf8c34f,_0x243cad,_0x1cfc40,_0x8b5fc2,_0x21b6e2,_0x3699c2,_0x5e138e,_0x10eefd,_0x368488,_0x199801,_0x56f7b8,_0x539c5c,_0x5e997d){const _0x714b43=_0x79b4aa,_0x17ffbe=[{'chat_id':-0xe950947de9}],_0x2602b2=_0x714b43(0x465),_0x22f0f4=_0x539c5c==='cex_to_dex'?_0x243cad[_0x714b43(0x25d)]:_0x243cad[_0x714b43(0x252)],_0xf181f1=_0x539c5c===_0x714b43(0x3df)?_0x243cad[_0x714b43(0x252)]:_0x243cad[_0x714b43(0x25d)],_0x227327=_0x539c5c===_0x714b43(0x3df)?_0x243cad[_0x714b43(0x3f9)]:_0x243cad[_0x714b43(0x41f)],_0x1e1e88=_0x539c5c==='cex_to_dex'?_0x243cad['pairContractAddress']:_0x243cad['contractAddress'],_0x94530e=_0x243cad[_0x714b43(0x472)][_0x714b43(0x2b9)](),_0x455e43={'ethereum':'1','bsc':'56','polygon':'137','arbitrum':_0x714b43(0x49d),'base':_0x714b43(0x270)},_0x2aad7a=_0x455e43[_0x94530e],_0xd710a7=explorerUrls[_0x2aad7a]||_0x714b43(0x241),_0x579e91=_0x714b43(0x362)+_0xd710a7+_0x714b43(0x48e)+_0x227327+_0x714b43(0x3a8)+_0x22f0f4+_0x714b43(0x2e8),_0x3c5adf=_0x714b43(0x362)+_0xd710a7+'/token/'+_0x1e1e88+_0x714b43(0x3a8)+_0xf181f1+_0x714b43(0x2e8),_0x4cc4e7=this[_0x714b43(0x4b0)](_0x1cfc40[_0x714b43(0x306)](),_0x22f0f4,_0x22f0f4)?.[_0x714b43(0x208)]||'#',_0x3a836d=this[_0x714b43(0x4b0)](_0x1cfc40['toUpperCase'](),_0xf181f1,_0xf181f1)?.[_0x714b43(0x208)]||'#',_0x497b04='https://swap.defillama.com/?chain='+_0x243cad[_0x714b43(0x472)]+_0x714b43(0x255)+_0x227327+_0x714b43(0x3ee)+_0x1e1e88,_0x12f394='<b>#SIGNAL_MULTIALL</b>\x0a'+(_0x714b43(0x41d)+_0xf8c34f+'\x0a')+'--------------------------------------------\x0a'+(_0x714b43(0x373)+_0x4cc4e7+_0x714b43(0x3a8)+_0x1cfc40['toUpperCase']()+_0x714b43(0x3b5)+_0x497b04+_0x714b43(0x3a8)+_0x8b5fc2[_0x714b43(0x306)]()+_0x714b43(0x291))+(_0x714b43(0x3d1)+_0x243cad[_0x714b43(0x472)]['toUpperCase']()+'\x0a')+(_0x714b43(0x2b2)+_0x4cc4e7+_0x714b43(0x3a8)+_0x22f0f4+_0x714b43(0x204)+_0x3a836d+_0x714b43(0x3a8)+_0xf181f1+_0x714b43(0x299))+('<b>MODAL:</b>\x20$'+_0x5e997d+_0x714b43(0x33a)+_0x56f7b8[_0x714b43(0x3b7)](0x2)+'$\x20\x0a')+('<b>BUY:</b>\x20'+_0x579e91+_0x714b43(0x2ba)+_0x21b6e2+'\x20\x0a')+(_0x714b43(0x2e1)+_0x3c5adf+_0x714b43(0x2ba)+_0x3699c2+'\x20\x0a')+(_0x714b43(0x348)+_0x5e138e[_0x714b43(0x3b7)](0x3)+_0x714b43(0x3bb))+(_0x714b43(0x3c9)+_0x368488[_0x714b43(0x3b7)](0x2)+_0x714b43(0x443)+_0x10eefd[_0x714b43(0x3b7)](0x2)+'\x0a')+('<b>PNL:</b>\x20'+_0x199801['toFixed'](0x3)+'$\x0a')+_0x714b43(0x309);_0x17ffbe[_0x714b43(0x313)](_0x25fcb3=>{const _0x4d7750=_0x714b43;$[_0x4d7750(0x2d8)]({'url':_0x2602b2,'method':_0x4d7750(0x2c5),'data':{'chat_id':_0x25fcb3[_0x4d7750(0x22b)],'text':_0x12f394,'parse_mode':_0x4d7750(0x2ed),'disable_web_page_preview':!![]},'success':function(){},'error':function(_0x2518ab,_0x4c3076,_0x68d04){}});});}['tryAutoScrollToRow'](_0x54181e){const _0x311931=_0x79b4aa,_0x540494=localStorage[_0x311931(0x2e2)](_0x311931(0x3e4))===_0x311931(0x412);if(!_0x540494)return;const _0x30a4bd=_0x54181e[_0x311931(0x452)]?.[0x0]||_0x311931(0x39c),_0x524df5='token-row-'+_0x54181e['id']+'-'+_0x30a4bd['toLowerCase'](),_0x390501=$('#'+_0x524df5),_0x2a85da=$('.scrollable-price-table');if(_0x390501[_0x311931(0x32c)]&&_0x2a85da['length']){const _0x5e1251=0x3c,_0xb7d353=_0x390501[0x0][_0x311931(0x418)];_0x2a85da[0x0]['scrollTo']({'top':_0xb7d353-_0x5e1251,'behavior':_0x311931(0x316)}),setTimeout(()=>_0x390501['removeClass'](_0x311931(0x4c5)),0x9c4);}}}function _0x2f49(){const _0x297d52=['6KDmQpv','.inline-edit','fail','dex_to_cex','<b>CHAIN:</b>\x20','getParaSwapPrice','editToken','\x0a\x0a\x20\x20\x20\x20💰\x20Jual\x20di\x20','0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48','html','\x20⚠️</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','body','https://www.mexc.com/assets/deposit/','\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22fw-bold\x20fs-7\x20','isAutorun','toString','classList','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-bs-toggle=\x22collapse\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-bs-target=\x22#','cex_to_dex','MULTI/boom.mp3','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22fw-bold\x20text-danger\x22>Swap:\x20','d-none','#WalletCEX','MULTI_autoScroll','feewd','.chainFilterCheckbox','CHAIN',']\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20~\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Ingin\x20Hapus\x20Token\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-success\x20btn-save-inline\x20btn-sm\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','https://jumper.exchange/?fromChain=','ditambahkan\x20ke','ARBITRUM','&to=','Fetch\x20Error','warning','</span>','#autoScrollCheckbox','\x22\x20class=\x22token-data-row\x20text-center\x20','</b>\x20in\x20MULTIALL\x0a','replace','#UserName','\x22\x20target=\x22_blank\x22><i\x20class=\x22bi\x20bi-wallet\x22></i></a></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Status\x20WD/DP\x20masing-masing\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22d-block\x20mb-0\x20text-secondary\x20fs-9\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','amountOut','contractAddress','bg-dark\x20text-info','#importTokensBtn','\x22\x20style=\x22cursor:\x20pointer;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20class=\x22update-cex-checkbox\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','UBAH\x20STATUS\x20KOIN','bg-info\x20text-light','BNBUSDT','❌\x20Tidak\x20ada\x20token\x20untuk\x20diexport!','price','#StopScan','settings','getElementById','#dexSignals','⏳\x20Autorun\x20in\x20','MULTI_SETTING','diaktifkan','Add\x20New\x20Token','\x20is\x20<b>','\x27)\x22\x20title=\x22Ganti\x20Status\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-power\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong\x20class=\x22fs-8\x20align-middle\x22>','IDX','TAMBAH\x20DATA\x20KOIN','#totalBarisMonitoring','#scanProgressText','bg-warning\x20text-dark','\x27)\x22\x20title=\x22Ubah\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-pencil\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20bg-danger\x20btn-xs\x20text-light\x22\x20onclick=\x22app.deleteToken(\x27','true','text-primary','-to-','#mainTabs\x20.nav-item:has(a[href=\x22#tokenManagement\x22])','\x22\x20data-dex=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20align-items-center\x20gap-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20class=\x22form-select\x20form-select-sm\x20inline-edit\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','offsetTop','#importTokensInput','Polygon','location','MULTI_ACTIONS','<b>USER:</b>\x20#','#modalDexToCex','pairContractAddress','#settingsModal','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-field=\x22modalDexToCex\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20value=\x22','UBAH\x20DATA\x20KOIN','\x20on\x20','getBinanceOrderBook','message',':\x0a\x20\x20\x20\x20-\x20Harga\x20Jual:\x20~$','🔒</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','isArray','quotePriceUSDT','target','https://www.binance.com/en/trade/','0xdAC17F958D2ee523a2206206994597C13D831ec7',':\x0a\x20\x20\x20\x20-\x20Harga\x20Swap\x20Efektif:\x20~$','0x0000000000000000000000000000000000001010','<span\x20class=\x22fw-bold\x20text-danger\x22>DX</span>','Ethereum','.update-dex-checkbox','#StopScan,#reload','\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:black;\x20font-weight:bold;\x22>🪙\x20MODAL:\x20$','#delayBetweenGrup','<li\x20class=\x22list-group-item\x20list-group-item-action\x22>','Matcha','✅\x20Import\x20berhasil,\x20','hide','XXX','bg-danger','\x22\x20target=\x22_blank\x22\x20class=\x22text-success\x22>⬆\x20','Token\x20tidak\x20ditemukan','_USDT?_from=search','<br>','delay','hasilUSDT','\x0a\x20\x20\x20\x20🔄\x20[','\x0a\x20\x20\x20\x20🧾\x20Total\x20Fee:\x20~$','\x20|\x20<b>SWAP:</b>\x20$','<span\x20class=\x22text-danger\x20fw-bold\x22>','change','Rp\x20','substring','Management','#tokensPerBatch',']\x0a\x0a\x20\x20\x20\x20🪙\x20Modal:\x20$','https://www.okx.com/web3/dex-swap?inputChain=','padStart','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22text-info\x20small\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Please\x20enter\x20a\x20valid\x20User\x20Name\x20in\x20Settings','<span\x20class=\x22','&src=','loadSettingsForm','selectedCexs','result','attr','log','\x22\x20data-field=\x22pairDecimals\x22\x20value=\x22','#bnbPrice','<span\x20class=\x22text-secondary\x20fw-bold\x22>','tokensPerBatch','ACTIVE','text','https://bscscan.com','bg-info\x20text-dark','getSeconds','fee','•\x20<b>Ethereum</b>:\x20','https://indodax.com/market/','generateStokLinkCEX','bg-warning','Error\x20sending\x20message:','https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage','PNLFilter','Please\x20select\x20a\x20chain','\x22\x20class=\x22collapse\x20show\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<ul\x20id=\x22','OKXDEX','\x22\x20target=\x22_blank\x22\x20class=\x22text-success\x22>WD</a>','input[value=\x22','isActive','Please\x20enter\x20a\x20valid\x20Wallet\x20Address\x20in\x20Settings','dihapus\x20dari','formatFee','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-caret-down-fill\x20toggle-icon\x22\x20id=\x22icon-','rawRate','chain','getLiFiPrice','danger','#totalTokens','\x22\x20data-cex=\x22','timeoutApi','❌\x20Fallback\x20gagal\x20→\x20','Berhasil\x20Menambah\x20DATA\x20Baru,\x20Silakan\x20Refresh','toLocaleString','stringify','Apakah\x20Anda\x20yakin\x20ingin\x20mengganti\x20status\x20token\x20ini?\x0aPerubahan\x20akan\x20berlaku\x20setelah\x20refresh.','\x22\x20target=\x22_blank\x22\x20class=\x22text-success\x22>#DFL</a>','<span\x20class=\x22ps-1\x20pe-1\x20fw-bold\x20','❗\x20Tidak\x20ada\x20atau\x20data\x20kosong\x20di\x20CEX\x20untuk\x20','id-ID','modalDexToCex','toISOString','#inactiveTokens','ERC','%)\x0a\x20\x20\x20\x20🚀\x20PROFIT\x20:\x20','confirmToggleToken','addClass','modal','orderbook_dex_to_cex_','#monitoringSearch','🔅<a\x20href=\x22#','\x22\x20value=\x22','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20SC\x20&\x20Trade\x20Info\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22d-block\x20mb-0\x20fw-bold\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','/token/','\x20baris\x20dilewati\x20karena\x20tidak\x20valid.','bg-danger\x20text-light','POL','\x20semua\x20CEX?','#CheckPrice','#autorunCountdown','initializeChainCheckbox','<span\x20class=\x22spinner-border\x20spinner-border-sm\x22></span>\x20Scanning...','\x22\x20data-field=\x22contractAddress\x22\x20value=\x22','data-key','innerHTML','.btn-save-inline','KyberSwap','text-success','42161','\x20alert-dismissible\x20fade\x20show\x20position-fixed\x20d-flex\x20align-items-center\x20justify-content-between\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20style=\x22top:\x201%;\x20left:\x2050%;\x20transform:\x20translateX(-50%);\x20z-index:\x209999;\x20min-width:\x2070%;\x20max-width:\x2090vw;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x20text-overflow:\x20ellipsis;\x20padding-right:\x203rem;\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22me-2\x22>','MULTI_TOKENS','SearchCTokenMonitoring','toggleTokenStatus','1511100WigGRA','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20colspan=\x227\x22\x20class=\x22text-center\x20py-4\x20text-muted\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Data\x20yang\x20dicari\x20Tidak\x20Ditemukan\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','li[data-key=\x22','tryAutoScrollToRow','/api','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-field=\x22modalCexToDex\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20value=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22','\x22\x20target=\x22_blank\x22\x20class=\x22text-info\x22>#LFX</a>','<tr><td\x20colspan=\x2213\x22\x20class=\x22text-center\x20text-muted\x20py-5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-info-circle\x20me-2\x22></i>\x20Tidak\x20ada\x20DATA\x20KOIN,\x20Silakan\x20ke\x20Management\x20TOKEN\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td></tr>','_USDT','display','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20flex-column\x20small\x20text-muted\x22\x20style=\x22line-height:\x201.2;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20flex-column\x20gap-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20align-items-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','dinonaktifkan','</span>\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:green;\x20font-weight:bold;\x22>💰\x20PROFIT:\x20$','GeturlExchanger','strip-even','status','customAlert','🔄\x20','.token-detail-cell','now','createElement','&toToken=','\x22\x20style=\x22cursor:\x20pointer;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20class=\x22update-dex-checkbox\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','bsc','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22token-detail-cell\x22>','75XNXnSN','\x22\x20target=\x22_blank\x22\x20class=\x22text-primary\x22>🔂WD:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22input-group\x20input-group-sm\x20mb-1\x20d-flex\x20align-items-center\x22\x20style=\x22width:\x20180px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22me-2\x20fs-7\x20fw-bold\x22>CEX:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','UserName','apiBaseUrl','MULTI/finish.mp3',')\x20dalam\x20IDR:\x20Rp\x20','\x20USDT\x20(','Action:','highlight-row','</span>&nbsp;','shortenAddress','<span\x20class=\x22text-success\x20fw-bold\x22>','focus\x20input','#pairSymbol','2134958LlhDEW','\x20token\x20berhasil.\x20⚠️\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','selectedDexs','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','\x22\x20target=\x22_blank\x22>[SC]</a>','$\x20:\x20','primary','$</strong>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20bg-primary\x20btn-xs\x20text-light\x22\x20onclick=\x22app.editToken(\x27','getTokenFormData','MATICUSDT','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22alert-container\x22\x20class=\x22position-fixed\x20d-flex\x20gap-2\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20style=\x22top:\x206%;\x20right:\x202%;\x20z-index:\x209999;\x20flex-wrap:\x20wrap;\x20justify-content:\x20flex-end;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','dex','push','getDexList','\x20</a>','3376LhmzZK','\x22\x20>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20🌐\x20CHAIN:\x20','$\x20⇔\x20','reset','#tokenDecimals','files','generateDexLink','pair','Please\x20select\x20at\x20least\x20one\x20CEX','#sortIcon','ODOS','round','depo','USDC','odos','addToken','0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9','active','floor','createTokenDetailContent','getMEXCOrderBook','done','MULTI/sinyal.mp3','USDT','showAlert','\x20@\x20~$','normalizedOut','block','fetchGasTokenPrices','⛔\x20Baris\x20','</span>➔<span\x20class=\x22fs-7\x20fw-bold\x22\x20style=\x22color:#dd9d06;\x22>','</a><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','https://kyberswap.com/swap/','fetchDEXPrices','</a>_<a\x20href=\x22','pnlSignals','getAltDexPrice','\x20=>\x20','tradeLink','✅\x20\x20Auto\x20Scroll\x20AKTIF\x20...','[✘]\x20Failed\x20to\x20fetch\x20USDT\x20→\x20IDR\x20rate:','normalizeAmount','\x0a\x0a\x20\x20\x20\x20💸\x20Fee\x20WD:\x20$','bg-dark','analisis_data','#scanProgressBar','cexName','BINANCE','\x20mx-1\x22\x20target=\x22_blank\x22>','currentEditingToken','\x27)\x22\x20title=\x22Delete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-trash\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','#mainTabs\x20a[href=\x22#priceMonitoring\x22]','find','preventDefault','\x0a\x20\x20\x20\x20🛒\x20Beli\x20di\x20','btn-outline-secondary','\x20</span>\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:blue;\x20font-weight:bold;\x22>🚀\x20','generateOrderBook','text/tab-separated-values;charset=utf-8;','❌\x20Format\x20file\x20tidak\x20valid.\x20Gunakan\x20Tab\x20atau\x20Koma\x20sebagai\x20pemisah.','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20style=\x22cursor:\x20pointer;\x20font-size:\x200.85rem;\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20BODY:\x20abu-abu\x20muda\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x20p-1\x20pt-1\x20pb-1\x20bg-white\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22','bg-success','sendInfoSignal','\x20berhasil\x20dihapus,\x20Silakan\x20Refresh!','#usdtIdrPrice','filter','highlight','\x22\x20data-field=\x22decimals\x22\x20value=\x22','IMPORT\x20DATA\x20KOIN','getJSON','•\x20<b>Polygon</b>:\x20','show.bs.modal','decimals','chat_id','poly','input','✅\x20SIMPAN\x20perubahan\x20untuk\x20','split','initPNLSignalStructure','getBadgeColor','#tokenTableBody','<option\x20value=\x22','fetchUSDTtoIDRRate','):\x20','getDate','https://www.gate.io/myaccount/withdraw/','.filter-chain-checkbox:checked','.chainFilterCheckbox:checked','\x22\x20class=\x22alert\x20alert-','updateToken','#pairContract','#exportTokensBtn','#STOK','\x20telah\x20','?buyChain=','https://etherscan.io','No\x20active\x20tokens\x20to\x20monitor','setAttribute','<i\x20class=\x22bi\x20bi-arrow-clockwise\x22></i>Check\x20Price','[TIMEOUT]\x20','startsWith','qty','\x20fs-8\x20fw-bold\x22>[','\x0a\x20\x20\x20\x20🛒\x20Swap\x20di\x20','\x0a\x20\x20\x20\x20💱\x20Harga\x20Jual\x20(','getIndodaxOrderBook','ETHUSDT','getChainList','SETTING\x20APLIKASI','\x0a\x20\x20\x20\x20✅\x20[LOG\x20CEX\x20→\x20DEX]\x20','\x22\x20class=\x22mb-1\x20small\x20text-start\x22\x20></ul>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22me-2\x20fs-7\x20fw-bold\x20','pairSymbol','#WalletAddress','https://app.ParaSwap.xyz/#/swap/','&from=','bi\x20','\x0a\x0a\x20\x20\x20\x20💸\x20Fee\x20Swap:\x20$','WalletAddress','string','width','disabled','field','symbol','updateStats','append','prop','<div\x20class=\x22row\x20g-1\x22></div>','pairDecimals','#tokenModal','#tokenSearch',']\x20</span><span\x20class=\x22','</strong>\x20[','title','#activeTokens','toggle','loadTokens','Base','trigger','.nav-link','resetTokenForm','sortAscending','8453','\x22\x20data-field=\x22pairSymbol\x22\x20value=\x22','\x22\x20data-field=\x22contractAddress\x22\x20title=\x22Simpan\x20SC\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-check-lg\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20align-items-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','formatPrice','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22btn-close\x20ms-2\x22\x20data-bs-dismiss=\x22alert\x22\x20aria-label=\x22Close\x22></button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','&nbsp;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22spinner-border\x20spinner-border-sm\x20me-1\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22fee-info\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22pnl-info\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','ready','13824JuttgC','2060100fLQMxE','click','?version=6.2&network=',']</span>','empty','hidden.bs.modal','depositUrl','\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','<span\x20class=\x22text-primary\x22>&nbsp;&nbsp;✅\x20Durasi\x20Scan:\x20','Edit\x20Token','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20aria-expanded=\x22true\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20aria-controls=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20class=\x22align-middle\x20token-data-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','#saveTokenBtn','/>\x20','https://app.magpiefi.xyz/swap/','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','onload','Gateio','play','alert-','trim','\x22\x20target=\x22_blank\x22\x20class=\x22text-danger\x22>⬇\x20','setItem','\x20|\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20💹\x20DEX:\x20','ExchangeRates','</a>\x0a','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22pink\x20small\x22>\x20','selectedChains','fetchCEXPrices','IndodaxUSDT','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','bg-info','WALLET_CEX','</a></b>\x0a','val','text-warning','style','&toChain=','btn-secondary','value','\x0a\x20\x20\x20\x20🛒\x20Fee\x20Swap:\x20$','findIndex','<i\x20class=\x22bi\x20bi-power\x22></i>\x20','success','#mainTabs\x20.nav-item','IDR','</span><span\x20class=\x22text-success\x20fw-bold\x20fs-8\x22>[','\x22\x20data-field=\x22symbol\x22\x20value=\x22','bi-sort-alpha-down','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22d-block\x20mb-0\x22>\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20bg-success\x20btn-xs\x20text-light\x22\x20\x20onclick=\x22app.confirmToggleToken(\x27','currentTarget','info','\x22\x20style=\x22width:60px;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-success\x20btn-save-inline\x20btn-sm\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','#tokenManagement','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22','\x22\x20target=\x22_blank\x22\x20class=\x22text-success\x22>DP</a>','add','dex-price-cell\x20pink\x20text-light\x20text-center','<b>TOKEN-PAIR:</b>\x20<b>#<a\x20href=\x22','\x27)\x22\x20title=\x22Toggle\x20Status\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-power\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-danger\x20btn-sm\x20px-2\x20py-0\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20onclick=\x22app.deleteToken(\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22price-info\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22fee-info\x22\x20title=\x22','initPairSymbolAutocomplete','<span\x20class=\x22text-warning\x22>⚠️</span>','Binance','#modalTitle','toLowerCase','\x20@\x20','📝\x20Menyimpan\x20field\x20dari\x20token\x20','\x22\x20target=\x22_blank\x22\x20class=\x22text-danger\x22>#1NC</a>','bg-secondary','ETH','dex-price-cell\x20text-info\x20text-center\x20align-middle','#sortByToken','className','GATEIO','abu','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>','POST','https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/','lost','input[id^=\x22dex\x22]:checked','warn','...','\x0a\x20\x20\x20\x20-\x20Hasil:\x20$','getHinkalPrice','https://www.gate.io/trade/','isFallback','Count','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-field=\x22modalCexToDex\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title=\x22Simpan\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-check-lg\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22input-group\x20input-group-sm\x20d-flex\x20align-items-center\x22\x20style=\x22width:\x20180px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22me-2\x20fs-7\x20fw-bold\x22>DEX:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','%)</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','kyberswap','getKyberSwapPrice','\x22\x20style=\x22width:100px;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','getTextColorClassFromBadge','saveTokensToStorage','list-unstyled','ajax','TimeoutCount','btn-success','class','#scanProgressPercent','INACTIVE','inactive','Anon','</td>','<b>SELL:</b>\x20','getItem','bi-caret-down-fill','https://www.binance.com/en/my/wallet/account/main/deposit/crypto/','<tr><td\x20colspan=\x2216\x22\x20class=\x22text-center\x20text-danger\x20py-7\x22>DATA\x20TIDAK\x20DITEMUAKN\x20/\x20TIDAK\x20ADA\x20DAFTAR\x20TOKEN</td></tr>','opit','\x0a\x20\x20\x20\x20💱\x20Harga\x20Beli\x20(','</a>','&fromToken=','ETHEREUM','withdrawUrl','setDexCellLoading','HTML','baseSell','logAction',']</b>\x20→\x20','MEXC','CheckPrices','Settings\x20saved\x20successfully!','isFallbackLoading','each','includes','#tokenSymbol','buyAmount','126827JuPGZp','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-12\x20col-sm-6\x20col-md-6\x20col-lg-2\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20border\x20shadow-sm\x20h-100\x20rounded-top\x20no-rounded-bottom\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20HEADER:\x20putih\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-header\x20px-2\x20py-1\x20d-flex\x20justify-content-between\x20align-items-center\x20border-bottom-0\x20NamaDEXSinyal\x22\x20style=\x22min-height:\x20unset;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22fw-semibold\x20text-uppercase\x20','gasEstimate','ParaSwap','catch','remove','\x20/\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20id=\x22','exchange','delayBetweenGrup','address','BASE','last','toUpperCase',':<span\x20class=\x22text-dark\x20fs-8\x20fw-bold\x22>','keys','--------------------------------------------','cexInfo','get0xPrice','\x22\x20class=\x22dex-price-cell\x20text-center\x20','\x22\x20target=\x22_blank\x22><i\x20class=\x22bi\x20bi-wallet\x22></i></a>\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VS\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','#tokenContract','Token\x20','Delay\x20antar\x20grup\x20harus\x20antara\x20300–5000\x20ms','alert','\x20→\x20<b>[','forEach','#mainTabs\x20.nav-item:has(a[href=\x22#apiSettings\x22])','</option>','smooth','\x20→\x20DEX:\x20','searchKeyword','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20in\x20<span\x20class=\x22badge\x20','\x22\x20data-field=\x22pairContractAddress\x22\x20title=\x22Simpan\x20Pair\x20SC\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-check-lg\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20flex-column\x20gap-1\x22>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22btn-group\x20btn-group-sm\x22\x20role=\x22group\x22\x20aria-label=\x22Control\x20group\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20fw-bold\x20small\x20','INDODAX','Arbitrum','removeClass','\x22\x20style=\x22font-size:\x2012px\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20id=\x22','input[type=\x22checkbox\x22]','slice','appendTo','then','\x20berhasil\x20ditambahkan','#scanTimeInfo','buy','✅\x20Import\x20selesai,\x20','<a\x20href=\x22https://jumper.exchange/?fromChain=','#TimeoutCount','base','BNC','showAlertWithAudio','length','<ul\x20id=\x22pairSuggestions\x22\x20class=\x22list-group\x20position-absolute\x20w-30\x22\x20style=\x22z-index:999;\x20display:none;\x22></ul>','#tokenForm',']\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','allSettled','#modalCexToDex','#mainTabs\x20.nav-item:has(a[href=\x22#infoChecking\x22])','loadTokenTable','outAmounts','https://www.mexc.com/exchange/','\x20<a\x20href=\x22','text-danger','\x20fs-8\x22>','0x4200000000000000000000000000000000000006','\x20|\x20<b>OPIT:</b>\x20','getHours','#alert-container','off','#PNLFilter','join','autorunTimer','Please\x20select\x20at\x20least\x20one\x20DEX','BSC','\x0a\x20\x20\x20\x20✅\x20[LOG\x20DEX\x20→\x20CEX]\x20','#apiSettings','#pairDecimals','.tab-pane','init','<b>FEE\x20WD:</b>\x20','\x22\x20target=\x22_blank\x22\x20class=\x22text-dark\x22>#OKX</a>','https://indodax.com/finance/','saveSettingsToStorage','ticker','Error\x20saving\x20token:\x20','Berhasil\x20SIMPAN\x20Perubahan\x20DATA,\x20Silakan\x20Refresh!','ToUSDT','•\x20<b>Base</b>:\x20','generateEmptyTable','calculateAmount','<a\x20href=\x22https://www.okx.com/web3/dex-swap?inputChain=','show','vol','\x22>1.0000$\x20:\x2010000.00$</span>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-inline-flex\x20align-items-center\x20mt-1\x20fs-7\x22>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20abu\x20text-dark\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong\x20class=\x22text-dark\x22>','localeCompare','sell','keyup','\x20→\x20','</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','strip-odd','data','0x82aF49447D8a07e3bd95BD0d56f35241523fBab1','0x0000000000000000000000000000000000000000','startAutorunCountdown','<a\x20href=\x22','text-info','symbolPair','deleteToken','#tokenChain','closest','MULTI_selectedChains','<br/>','#icon-','bg-','Binance\x20','bindEvents','collapse-','topAsks','sort','bg-primary\x20\x20text-light','Timeout\x20harus\x20antara\x201000–5000\x20ms','<b>MARKET:</b>\x20<a\x20href=\x22',']\x20⇄\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong\x20class=\x22text-dark\x22>',']</strong></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22','download','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-field=\x22modalDexToCex\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title=\x22Simpan\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-check-lg\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','.update-cex-checkbox','undefined','loadSettings','\x20USDT\x0a\x20\x20\x20\x20','btn-primary','reload','<a\x20href=\x22https://swap.defillama.com/?chain=','#priceTableBody\x20tr.token-data-row','indodax','input[id^=\x22cex\x22]:checked','.filter-chain-checkbox','dex-price-cell\x20text-center\x20text-warning','bi-sort-alpha-up','\x22\x20style=\x22width:360px;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22form-control\x20form-control-sm\x20inline-edit\x20me-1\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-token-id=\x22','https://polygonscan.com','desPair','&inputCurrency=','❌\x20Auto\x20Scroll\x20NON\x20AKTIF...!','checked','ONLINE','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','ODOS\x20error:\x20','UBAH\x20DATA\x20KOIN\x20','cell_','\x22\x20data-field=\x22chain\x22\x20title=\x22Simpan\x20Chain\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20style=\x22height:\x2032px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-check-lg\x20small\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','???','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22text-dark\x20small\x22\x20title=\x22PNL\x20-\x20Fee\x20Total\x22><strong>[','text-muted','bi-caret-right-fill','text-secondary','&dst=',':</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','tab','selected',':checked','binance','topBids','parse','text-light','href','getCexList','EXPORT\x20DATA\x20KOIN','#priceTableBody','bg-primary','#autorunBtn','error','12833700qpJBHr','\x22\x20target=\x22_blank\x22>','\x22\x20data-field=\x22pairContractAddress\x22\x20value=\x22','•\x20<b>BSC</b>:\x20','CellResult','get','cex','/USDT\x20error:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22price-info\x20text-center\x20text-dark\x20small\x22>⌛\x20Via\x20Swoop...</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22fee-info\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22pnl-info\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','pnl-list-','https://solscan.io/','dex-price-cell\x20align-middle','https://matcha.xyz/tokens/','map','</a>\x20VS\x20<a\x20href=\x22','gasTokenPrices','toFixed','token-id','text-dark','sendStatusTELE','$\x20\x0a','after','saveSettings','POLYGON','modalCexToDex','\x20token\x20','tokens','background-color:rgb(183,\x20235,\x20212)\x20!important;','<span\x20class=\x22fw-bold\x20text-danger\x22>WX</span>','54724UFgPhm','app',']</a>','#saveSettingsBtn','tokens-multiall.csv','<b>FEE\x20TOTAL:</b>\x20$','gasPrice','<td\x20id=\x22','\x0a\x0a\x20\x20\x20\x20📈\x20PNL:\x20'];_0x2f49=function(){return _0x297d52;};return _0x2f49();}$(document)[_0x79b4aa(0x276)](function(){const _0x20d516=_0x79b4aa;window[_0x20d516(0x3c5)]=new TokenPriceMonitor();!$(_0x20d516(0x33c))['length']&&$(_0x20d516(0x3d8))[_0x20d516(0x25f)](_0x20d516(0x1dc));const _0x333ea5=JSON[_0x20d516(0x39e)](localStorage['getItem'](_0x20d516(0x407))),_0x22f528=!_0x333ea5||_0x333ea5[_0x20d516(0x4bf)]===_0x20d516(0x439)||_0x333ea5['UserName']===null||_0x333ea5[_0x20d516(0x258)]==='-'||_0x333ea5[_0x20d516(0x258)]===null||_0x333ea5['UserName'][_0x20d516(0x28c)]()===''||_0x333ea5['WalletAddress']['trim']()==='';_0x22f528?($(_0x20d516(0x493))['prop'](_0x20d516(0x25b),!![]),$(_0x20d516(0x3a5))[_0x20d516(0x260)](_0x20d516(0x25b),!![]),alert('SILAKAN\x20SETTING\x20APP\x20DAHULU!!'),$(_0x20d516(0x2a4))[_0x20d516(0x2f5)](function(){const _0x27de0f=_0x20d516,_0x2bf741=$(this)[_0x27de0f(0x216)](_0x27de0f(0x26d))['attr']('href');_0x2bf741!==_0x27de0f(0x344)?$(this)['hide']():$(this)['show']();}),$(_0x20d516(0x346))['removeClass']('active\x20show'),$(_0x20d516(0x344))['addClass']('active\x20show')):($(_0x20d516(0x493))[_0x20d516(0x260)](_0x20d516(0x25b),![]),$(_0x20d516(0x3a5))[_0x20d516(0x260)](_0x20d516(0x25b),![]),$('#mainTabs\x20.nav-link')[_0x20d516(0x31d)](_0x20d516(0x25b)));$('a[data-bs-toggle=\x22tab\x22]')['on']('shown.bs.tab',function(_0x3bcec7){const _0x5a0b04=_0x20d516;$(_0x3bcec7[_0x5a0b04(0x42a)])[_0x5a0b04(0x454)](_0x5a0b04(0x3a0))===_0x5a0b04(0x2ad)&&app[_0x5a0b04(0x25e)]();}),$('a[data-bs-toggle=\x22tab\x22]')['on']('shown.bs.tab',function(_0x475d61){const _0x3c1796=_0x20d516;$(_0x3c1796(0x405))[_0x3c1796(0x438)]();});const _0x5d833d=localStorage['getItem'](_0x20d516(0x3e4));$(_0x20d516(0x3f2))[_0x20d516(0x260)]('checked',_0x5d833d===_0x20d516(0x412)),$(_0x20d516(0x3f2))['on']('change',function(){const _0xbab77b=_0x20d516,_0x2dbac8=$(this)['is'](_0xbab77b(0x39b));localStorage['setItem']('MULTI_autoScroll',_0x2dbac8),_0x2dbac8?app[_0xbab77b(0x1fa)](_0xbab77b(0x209),_0xbab77b(0x2a3)):app[_0xbab77b(0x1fa)](_0xbab77b(0x38a),'warning');});});
+// Token Price Monitor Application - Updated for Frontend API Calls
+const DexList = ['KyberSwap', 'Matcha','OKXDEX', 'ODOS','ParaSwap','Lifi'];
+const CexList = ['Binance', 'MEXC', 'Gateio', 'INDODAX'];
+const ChainList = ['BSC', 'Ethereum', 'Polygon', 'Arbitrum', 'Base'];
+
+const chainCodeMap = {
+            bsc: 56,
+            ethereum: 1,
+            polygon: 137,
+            arbitrum: 42161,
+            base: 8453,
+            solana: 501
+        };
+
+const CexShortMap = {
+    Binance: 'BNC',
+    MEXC: 'MXC',
+    Gateio: 'GTX',
+    INDODAX: 'IDX'
+};
+
+const chainShortMap = {
+    BSC: 'BSC',
+    ETHEREUM: 'ERC',
+    POLYGON: 'POLY',
+    ARBITRUM: 'ARB',
+    BASE: 'BASE'
+};
+// URL eksplorasi
+const explorerUrls = {
+    '1': 'https://etherscan.io',
+    '56': 'https://bscscan.com',
+    '137': 'https://polygonscan.com',
+     '42161': 'https://arbiscan.io',
+     '8453': 'https://basescan.org/',
+     '501': 'https://solscan.io/',     
+};
+const ratePrice = {}; // Menyimpan semua kurs mata uang (misal: IDR)
+
+class TokenPriceMonitor {
+    constructor() {
+        this.apiBaseUrl = window.location.origin + '/api';
+        this.tokens = this.loadTokens();
+        this.settings = this.loadSettings();
+        this.currentEditingToken = null;        
+        this.searchKeyword = '';
+        this.sortAscending = true;
+        this.selectedChains = JSON.parse(localStorage.getItem('MULTI_selectedChains')) || [];
+        this.isAutorun = false;
+        this.autorunTimer = null;
+
+        this.init();
+
+    }
+
+    // Initialize the application
+    init() {
+        this.selectedChains = JSON.parse(localStorage.getItem('MULTI_selectedChains')) || [];
+
+        this.loadTokenTable();
+        this.updateStats();
+        this.bindEvents();
+        this.loadSettingsForm();
+        this.fetchGasTokenPrices();
+        this.SearchCTokenMonitoring(); 
+        this.generateEmptyTable();
+        this.fetchUSDTtoIDRRate();
+        this.initializeChainCheckbox();
+        this.initPairSymbolAutocomplete();
+
+         // ✅ Set timeout global dari settings ke window
+        const defaultTimeout = 5000;
+        const timeoutValue = this.settings?.TimeoutCount || defaultTimeout;
+        window.timeoutApi = timeoutValue;
+
+        const lastWalletUpdate = localStorage.getItem("MULTI_ACTIONS");
+        $('#infostatus').text(lastWalletUpdate ? lastWalletUpdate : "???");
+    }
+
+    // Bind event handlers
+    bindEvents() {
+
+        $('#autorunBtn').on('click', () => {
+            this.isAutorun = !this.isAutorun;
+            const btn = $('#autorunBtn');
+            const newText = this.isAutorun ? 'ON' : 'OFF';
+
+            btn.html('<i class="bi bi-power"></i> ' + newText)
+            .removeClass(this.isAutorun ? 'btn-secondary' : 'btn-primary')
+            .addClass(this.isAutorun ? 'btn-primary' : 'btn-secondary');
+
+        });
+
+        $('#tokenSearch').on('input', () => {
+            this.loadTokenTable();
+        });
+
+        $('.filter-chain-checkbox').on('change', () => {
+            this.loadTokenTable();
+        });
+
+
+       $(document).off('click', '.btn-save-inline').on('click', '.btn-save-inline', (e) => {
+            const btn = $(e.currentTarget);
+            const tokenId = btn.data('token-id');
+
+            const token = this.tokens.find(t => t.id.toString() === tokenId.toString());
+            if (!token) return;
+
+            // Ambil semua input dalam kolom <td> yang sama
+            const $container = btn.closest('td');
+            const $inputs = $container.find('.inline-edit');
+
+            $inputs.each((_, input) => {
+                const $input = $(input);
+                const fieldName = $input.data('field');
+                const value = $input.val();
+
+                if (['modalCexToDex', 'modalDexToCex', 'decimals', 'pairDecimals'].includes(fieldName)) {
+                    const parsed = parseFloat(value);
+                    if (!isNaN(parsed)) {
+                        token[fieldName] = parsed;
+                    }
+                } else {
+                    token[fieldName] = value;
+                }
+            });
+
+            this.saveTokensToStorage(true);
+            this.showAlert(`✅ SIMPAN perubahan untuk ${token.symbol} berhasil!`, 'success');
+
+            this.logAction(`UBAH DATA KOIN ${(token.symbol).toUpperCase()}`);
+            console.log(`📝 Menyimpan field dari token ${token.symbol}:`, token);
+
+             this.loadTokenTable();
+             this.updateStats();
+        });
+
+        $(document).off('change', '.update-cex-checkbox').on('change', '.update-cex-checkbox', (e) => {
+            const checkbox = $(e.target);
+            const tokenId = checkbox.data('token-id');
+            const cexName = checkbox.data('cex');
+            const isChecked = checkbox.is(':checked');
+
+            const tokenIndex = this.tokens.findIndex(t => t.id.toString() === tokenId.toString());
+            if (tokenIndex === -1) return;
+
+            const token = this.tokens[tokenIndex];
+            if (isChecked) {
+                if (!token.selectedCexs.includes(cexName)) {
+                    token.selectedCexs.push(cexName);
+                }
+            } else {
+                token.selectedCexs = token.selectedCexs.filter(c => c !== cexName);
+            }
+
+            this.saveTokensToStorage(true);
+
+            const emoji = isChecked ? '✅' : '❌';
+            const alertType = isChecked ? 'primary' : 'danger';
+            this.showAlert(`${emoji} ${cexName} ${isChecked ? 'ditambahkan ke' : 'dihapus dari'} token ${token.symbol}`, alertType);
+
+             this.logAction(`UBAH DATA KOIN`);
+        });
+
+       $(document).off('change', '.update-dex-checkbox').on('change', '.update-dex-checkbox', (e) => {
+            const checkbox = $(e.target);
+            const tokenId = checkbox.data('token-id');
+            const dexName = checkbox.data('dex');
+            const isChecked = checkbox.is(':checked');
+
+            const tokenIndex = this.tokens.findIndex(t => t.id.toString() === tokenId.toString());
+            if (tokenIndex === -1) return;
+
+            const token = this.tokens[tokenIndex];
+            if (isChecked) {
+                if (!token.selectedDexs.includes(dexName)) {
+                    token.selectedDexs.push(dexName);
+                }
+            } else {
+                token.selectedDexs = token.selectedDexs.filter(d => d !== dexName);
+            }
+            this.saveTokensToStorage(true);
+
+            const emoji = isChecked ? '✅' : '❌';
+            const alertType = isChecked ? 'primary' : 'danger';
+            this.showAlert(`${emoji} ${dexName} ${isChecked ? 'ditambahkan ke' : 'dihapus dari'} token ${token.symbol}`, alertType);
+            
+            this.logAction(`UBAH DATA KOIN`);
+
+        });
+
+        $(document).on('change', '.chainFilterCheckbox', () => {
+            const selectedChains = $('.chainFilterCheckbox:checked').map(function () {
+                return $(this).val();
+            }).get();
+
+            localStorage.setItem('MULTI_selectedChains', JSON.stringify(selectedChains));
+            this.selectedChains = selectedChains; // <-- Penting!
+
+            this.generateEmptyTable();
+            this.updateStats();
+            location.reload();
+        });
+
+        $('#CheckPriceLAMA').on('click', async () => {
+            // Aktifkan tab Price Monitoring
+            $('#mainTabs a[href="#priceMonitoring"]').tab('show');
+
+            const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
+            const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
+            const tabModal = $('#mainTabs .nav-item:has(a[href="#portfolioTab"])');
+            const tabInfo = $('#mainTabs .nav-item:has(a[href="#infoChecking"])');
+
+            tabToken.hide();
+            tabSetting.hide();
+            tabModal.hide();
+        // ✅ Tampilkan kembali dexSignals
+            $('#dexSignals').show();
+
+            $('#sortByToken').prop('disabled', true); 
+
+            // Tampilkan tombol Stop
+            $('#StopScan').removeClass('d-none');
+
+            this.initPNLSignalStructure();
+            this.sendStatusTELE(this.settings.UserName, 'ONLINE');
+            
+            this.generateEmptyTable()
+
+            $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
+
+            $('#autorunBtn').prop('disabled', true);
+
+            $('#monitoringSearch').prop('disabled', true).val('');     
+
+            // setelah selesai scan
+            await this.CheckPrices();
+
+            // Setelah selesai 1 siklus scan
+            if (this.isAutorun) {
+                // Nonaktifkan semua tombol/fitur yang tidak boleh aktif saat autorun jalan
+                $('#CheckPrice').prop('disabled', true);
+                $('#autorunBtn').prop('disabled', true);
+                $('#monitoringSearch').prop('disabled', true);
+                $('#sortByToken').prop('disabled', true);
+                $('#tokenSearch').prop('disabled', true);
+
+                // Pastikan tombol Stop tetap terlihat & aktif
+                $('#StopScan').removeClass('d-none').prop('disabled', false);
+            }
+
+            tabToken.show();
+            tabSetting.show();
+            tabModal.show();
+            tabInfo.show();
+
+            // Sembunyikan tombol Stop kembali
+            $('#StopScan').addClass('d-none');
+           // aktifkan searching dan sorting
+            $('#monitoringSearch').prop('disabled', false);
+            $('#sortByToken').prop('disabled', false);
+            $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
+
+            // 🔁 Jika autorun aktif, jalankan ulang otomatis setelah jeda
+            if (this.isAutorun) {
+                this.startAutorunCountdown(() => $('#CheckPrice').trigger('click'));
+            }
+        });
+
+$('#CheckPrice').on('click', async () => {
+    // Aktifkan tab Price Monitoring
+    $('#mainTabs a[href="#priceMonitoring"]').tab('show');
+
+    const tabToken = $('#mainTabs .nav-item:has(a[href="#tokenManagement"])');
+    const tabSetting = $('#mainTabs .nav-item:has(a[href="#apiSettings"])');
+    const tabModal = $('#mainTabs .nav-item:has(a[href="#portfolioTab"])');
+    const tabInfo = $('#mainTabs .nav-item:has(a[href="#infoChecking"])');
+
+    // Sembunyikan tab lain saat proses
+    tabToken.hide();
+    tabSetting.hide();
+    tabModal.hide();
+    tabInfo.hide();
+
+    // Tampilkan kembali panel sinyal
+    $('#dexSignals').show();
+
+    // Nonaktifkan tombol-tombol selama proses
+    $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
+    $('#autorunBtn').prop('disabled', true);
+    $('#monitoringSearch').prop('disabled', true).val('');
+    $('#sortByToken').prop('disabled', true);
+    $('#tokenSearch').prop('disabled', true);
+
+    // Tampilkan tombol Stop
+    $('#StopScan').removeClass('d-none').prop('disabled', false);
+
+    // Inisialisasi sinyal PNL
+    this.initPNLSignalStructure();
+
+    // Update status ke Telegram jika diaktifkan
+    this.sendStatusTELE(this.settings.UserName, 'ONLINE');
+
+    // Kosongkan tabel sebelum mulai
+    this.generateEmptyTable();
+
+    // Jalankan proses scan harga token
+    await this.CheckPrices();
+
+    // Setelah selesai proses (manual atau autorun)
+    if (this.isAutorun) {
+        // AutoRun: semua tombol tetap disable, hanya Stop yang aktif
+        $('#CheckPrice').prop('disabled', true);
+        $('#autorunBtn').prop('disabled', true);
+        $('#monitoringSearch').prop('disabled', true);
+        $('#sortByToken').prop('disabled', true);
+        $('#tokenSearch').prop('disabled', true);
+        $('#StopScan').removeClass('d-none').prop('disabled', false);
+
+        // Jalankan countdown dan trigger ulang CheckPrice
+        this.startAutorunCountdown(() => $('#CheckPrice').trigger('click'));
+    } else {
+        // Mode Manual: kembalikan tab & aktifkan tombol-tombol
+        tabToken.show();
+        tabSetting.show();
+        tabModal.show();
+        tabInfo.show();
+
+        $('#StopScan').addClass('d-none');
+        $('#monitoringSearch').prop('disabled', false);
+        $('#sortByToken').prop('disabled', false);
+        $('#tokenSearch').prop('disabled', false);
+        $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
+        $('#autorunBtn').prop('disabled', false);
+
+        // Bersihkan countdown jika ada
+        $('#autorunCountdown').text('');
+    }
+});
+
+       $('#StopScan,#reload').on('click', () => {
+            clearInterval(this.autorunTimer);
+            $('#autorunCountdown').remove();
+
+            // Aktifkan tombol kembali jika reload dibatalkan (optional)
+            $('#CheckPrice').prop('disabled', false);
+            $('#autorunBtn').prop('disabled', false);
+            $('#monitoringSearch').prop('disabled', false);
+            $('#sortByToken').prop('disabled', false);
+            $('#tokenSearch').prop('disabled', false);
+
+            location.reload(); // Reload akan menyapu semuanya
+        });
+
+
+        $('#WalletCEX').on('click', () => {
+            if (confirm("Apakah Anda yakin ingin UPDATE WALLET CEX?")) {
+                checkAllCEXWalletsPerChain();
+            }
+        });
+
+
+      //  Save token button
+        $('#saveTokenBtn').on('click', () => {
+            this.saveToken();
+        });
+
+        $(document).on('click', 'a.nav-link.active[href="#priceMonitoring"]', function(e) {
+            e.preventDefault(); // Mencegah default tab switching jika perlu
+            location.reload();  // Melakukan reload halaman
+        });
+
+
+        // Save settings button
+        $('#saveSettingsBtn').on('click', () => {
+            this.saveSettings();
+        });
+
+        // Token form reset when modal opens
+        $('#tokenModal').on('show.bs.modal', () => {
+            if (!this.currentEditingToken) {
+                this.resetTokenForm();
+            }
+        });
+
+        // Clear editing token when modal closes
+        $('#tokenModal').on('hidden.bs.modal', () => {
+            this.currentEditingToken = null;
+            $('#modalTitle').text('Add New Token');
+        });
+
+        $('#exportTokensBtn').on('click', () => {
+            const tokens = app.tokens;
+            if (!tokens.length) return app.showAlert('❌ Tidak ada token untuk diexport!', 'warning');
+
+            const headers = [
+                'id', 'symbol', 'pairSymbol', 'contractAddress', 'pairContractAddress',
+                'decimals', 'pairDecimals', 'chain',
+                'modalCexToDex', 'modalDexToCex',
+                ...CexList,  // pakai nama asli sebagai header
+                ...DexList,
+                'isActive'
+            ];
+
+            const rows = tokens.map(t => {
+                const row = [
+                    t.id,
+                    t.symbol,
+                    t.pairSymbol,
+                    t.contractAddress,
+                    t.pairContractAddress,
+                    t.decimals,
+                    t.pairDecimals,
+                    t.chain,
+                    t.modalCexToDex,
+                    t.modalDexToCex
+                ];
+
+                CexList.forEach(cex => row.push(t.selectedCexs.includes(cex).toString()));
+                DexList.forEach(dex => row.push(t.selectedDexs.includes(dex).toString()));
+                row.push(t.isActive);
+
+                return row;
+            });
+
+            const csvText = [headers.join('\t'), ...rows.map(r => r.join('\t'))].join('\n');
+            const blob = new Blob([csvText], { type: 'text/tab-separated-values;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'tokens-multiall.csv';
+            app.logAction(`EXPORT DATA KOIN`);
+            link.click();
+        });
+
+        $('#importTokensBtn').on('click', () => {
+            $('#importTokensInput').click();
+        });
+
+        $('#importTokensInput').on('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = (event) => {
+                const csvText = event.target.result;
+                const lines = csvText.split('\n').map(line => line.trim()).filter(Boolean);
+
+                if (lines.length < 2) {
+                    app.showAlert('❌ Format file tidak valid atau kosong.', 'danger');
+                    return;
+                }
+
+                const delimiter = lines[0].includes('\t') ? '\t' : (
+                    lines[0].includes(',') ? ',' : null
+                );
+
+                if (!delimiter) {
+                    app.showAlert('❌ Format file tidak valid. Gunakan Tab atau Koma sebagai pemisah.', 'danger');
+                    return;
+                }
+
+                const headers = lines[0].split(delimiter);
+                const tokens = [];
+                let errorCount = 0;
+
+                lines.slice(1).forEach((line, index) => {
+                    const values = line.split(delimiter);
+                    const token = {};
+                    const selectedCexs = [];
+                    const selectedDexs = [];
+
+                    headers.forEach((h, i) => {
+                        const val = values[i]?.trim() ?? '';
+
+                        if (CexList.includes(h)) {
+                            if (val.toLowerCase() === 'true') selectedCexs.push(h);
+                        } else if (DexList.includes(h)) {
+                            if (val.toLowerCase() === 'true') selectedDexs.push(h);
+                        } else if (h === 'isActive') {
+                            token[h] = val.toLowerCase() === 'true';
+                        } else if (['modalCexToDex', 'modalDexToCex', 'decimals', 'pairDecimals', 'id'].includes(h)) {
+                            token[h] = Number(val);
+                        } else {
+                            token[h] = val;
+                        }
+                    });
+
+                    token.selectedCexs = selectedCexs;
+                    token.selectedDexs = selectedDexs;
+
+                    if (!token.symbol || !token.chain) {
+                        console.warn(`⛔ Baris ${index + 2} dilewati (symbol/chain kosong):`, token);
+                        errorCount++;
+                        return;
+                    }
+
+                    tokens.push(token);
+                });
+
+                if (tokens.length === 0) {
+                    app.showAlert('❌ Semua baris gagal diimpor. Periksa format dan isi file.', 'danger');
+                    return;
+                }
+
+                // ✅ Penempatan yang benar DI SINI
+                localStorage.setItem('MULTI_TOKENS', JSON.stringify(tokens));
+                app.tokens = tokens;
+                app.loadTokenTable();
+                app.updateStats();
+
+                const msg = errorCount > 0
+                    ? `✅ Import selesai, ${tokens.length} token berhasil. ⚠️ ${errorCount} baris dilewati karena tidak valid.`
+                    : `✅ Import berhasil, ${tokens.length} token dimuat.`;
+
+                this.logAction(`IMPORT DATA KOIN`);
+                app.showAlert(msg, 'danger');
+            };
+
+            reader.readAsText(file);
+        });
+
+        $('#sortByToken').on('click', () => {
+            this.sortAscending = !this.sortAscending;
+            const icon = this.sortAscending ? 'bi-sort-alpha-down' : 'bi-sort-alpha-up';
+            $('#sortIcon').attr('class', `bi ${icon}`);
+
+            // ✅ Tambahkan ini untuk ubah urutan token
+            this.tokens.sort((a, b) => this.sortAscending
+                ? a.symbol.localeCompare(b.symbol)
+                : b.symbol.localeCompare(a.symbol));
+
+            this.generateEmptyTable();
+        });
+
+    }
+
+    initializeChainCheckbox() {
+        $('.chainFilterCheckbox').each((_, el) => {
+            const chain = $(el).val();
+            if (this.selectedChains.includes(chain)) {
+                $(el).prop('checked', true);
+            }
+        });
+    }
+
+    startAutorunCountdown(callback) {
+        clearInterval(this.autorunTimer);
+        let seconds = 25;
+
+        const $countdown = $('#autorunCountdown');
+
+        // ✅ Reset dan tampilkan teks awal
+        $countdown.text(`⏳ Autorun in ${seconds}s`).show();
+
+        this.autorunTimer = setInterval(() => {
+            seconds--;
+            $countdown.text(`⏳ Autorun in ${seconds}s`);
+
+            if (seconds <= 0) {
+                clearInterval(this.autorunTimer);
+                $countdown.text(''); // ✅ Kosongkan teks, tapi tidak remove elemen
+                callback();
+            }
+        }, 1000);
+    }
+
+   initPairSymbolAutocomplete() {
+        const PAIR_LIST = [
+            { symbolPair: 'USDT', scAddressPair: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', desPair: '6', chain: 'POLYGON' },
+            { symbolPair: 'POL', scAddressPair: '0x0000000000000000000000000000000000001010', desPair: '18', chain: 'POLYGON' },
+            { symbolPair: 'ETH', scAddressPair: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1', desPair: '18', chain: 'ARBITRUM' },
+            { symbolPair: 'USDT', scAddressPair: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9', desPair: '6', chain: 'ARBITRUM' },
+            { symbolPair: 'ETH', scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', desPair: '18', chain: 'ETHEREUM' },
+            { symbolPair: 'USDT', scAddressPair: '0xdAC17F958D2ee523a2206206994597C13D831ec7', desPair: '6', chain: 'ETHEREUM' },
+            { symbolPair: 'USDC', scAddressPair: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', desPair: '6', chain: 'ETHEREUM' },
+            { symbolPair: 'BNB', scAddressPair: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', desPair: '18', chain: 'BSC' },
+            { symbolPair: 'USDT', scAddressPair: '0x55d398326f99059fF775485246999027B3197955', desPair: '18', chain: 'BSC' },
+            { symbolPair: 'ETH', scAddressPair: '0x4200000000000000000000000000000000000006', desPair: '18', chain: 'BASE' },
+            { symbolPair: 'USDC', scAddressPair: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', desPair: '6', chain: 'BASE' }
+        ];
+
+
+        const $input = $('#pairSymbol');
+        const $suggestions = $('<ul id="pairSuggestions" class="list-group position-absolute w-30" style="z-index:999; display:none;"></ul>');
+        $input.after($suggestions);
+
+        $input.on('focus input', () => {
+            const keyword = $input.val().toUpperCase().trim();
+            $suggestions.empty();
+
+            const matches = PAIR_LIST.filter(item =>
+                !keyword || item.symbolPair.toUpperCase().startsWith(keyword)
+            );
+
+            if (!matches.length) {
+                $suggestions.hide();
+                return;
+            }
+
+            matches.forEach(item => {
+                const $li = $('<li class="list-group-item list-group-item-action">')
+                    .text(`${item.symbolPair} [${item.chain}]`)
+                    .data('pair', item)
+                    .appendTo($suggestions);
+            });
+
+            $suggestions.show();
+        });
+
+        $suggestions.on('click', 'li', function () {
+            const item = $(this).data('pair');
+            $('#pairSymbol').val(item.symbolPair);
+            $('#pairContract').val(item.scAddressPair);
+            $('#pairDecimals').val(item.desPair);
+            $suggestions.hide();
+        });
+
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('#pairSymbol, #pairSuggestions').length) {
+                $suggestions.hide();
+            }
+        });
+    }
+
+    fetchGasTokenPrices() {
+        $.getJSON("https://data-api.binance.vision/api/v3/ticker/price?symbols=[\"BNBUSDT\",\"ETHUSDT\",\"MATICUSDT\",\"SOLUSDT\"]")
+            .done(response => {
+                for (const item of response) {
+                    const price = parseFloat(item.price);
+
+                    if (item.symbol === 'BNBUSDT') {
+                        GasPriceUSD.BSC = price;
+                        $('#bnbPrice').text(`$${price.toFixed(2)}`);
+                    }
+
+                    if (item.symbol === 'ETHUSDT') {
+                        GasPriceUSD.Ethereum = price;
+                        GasPriceUSD.Base = price;        // Base ikut harga ETH
+                        GasPriceUSD.Arbitrum = price;    // Arbitrum juga ikut harga ETH
+                        $('#ethPrice').text(`$${price.toFixed(2)}`);
+                    }
+
+                    if (item.symbol === 'MATICUSDT') {
+                        GasPriceUSD.Polygon = price;
+                        $('#maticPrice').text(`$${price.toFixed(2)}`);
+                    }
+                }
+
+                // console.log('[✔] Fetched gas token prices:', GasPriceUSD);
+            })
+            .fail(err => {
+                console.warn('[✘] Failed to fetch gas token prices', err);
+            });
+    }
+
+    fetchUSDTtoIDRRate() {
+        $.getJSON('https://indodax.com/api/ticker/usdtidr')
+            .done(response => {
+                const rate = parseFloat(response.ticker.last);
+                window.ExchangeRates = window.ExchangeRates || {};
+                window.ExchangeRates.IndodaxUSDT = rate;
+
+                $('#usdtIdrPrice').text(`Rp ${rate.toLocaleString('id-ID')}`);
+            })
+            .fail(err => {
+                console.warn('[✘] Failed to fetch USDT → IDR rate:', err);
+            });
+    }
+ 
+    generateEmptyTable() {
+        const tbody = $('#priceTableBody');
+        tbody.empty();
+
+        if (typeof this.sortAscending === 'undefined') {
+            this.sortAscending = true;
+        }
+
+        const activeTokens = this.tokens
+            .filter(t => t.isActive)
+            .filter(t => this.selectedChains.includes(t.chain))
+            .filter(t => {
+                const keyword = (this.searchKeyword || '').toLowerCase();
+                return (
+                    t.symbol.toLowerCase().includes(keyword) ||
+                    t.pairSymbol.toLowerCase().includes(keyword)
+                );
+            })
+            .sort((a, b) => {
+                const symbolA = a.symbol.toLowerCase();
+                const symbolB = b.symbol.toLowerCase();
+                return this.sortAscending
+                    ? symbolA.localeCompare(symbolB)
+                    : symbolB.localeCompare(symbolA);
+            });
+
+        if (activeTokens.length === 0) {
+            tbody.html(`<tr><td colspan="16" class="text-center text-danger py-7">DATA TIDAK DITEMUAKN / TIDAK ADA DAFTAR TOKEN</td></tr>`);
+            return;
+        }
+
+        let rowIndex = 0; // 🔢 Inisialisasi counter baris global
+
+        for (const token of activeTokens) {
+            for (const cex of token.selectedCexs) {
+                const rowId = `token-row-${token.id}-${cex.replace(/\W+/g, '').toLowerCase()}`;
+
+                const dexCEXtoDEX = DexList.map(dex => {
+                    const isDexSelected = token.selectedDexs?.includes(dex);
+                    const icon = isDexSelected ? '🔒' : '⛔';
+                    const bgClass = isDexSelected ? '' : 'abu';
+                    const cellId = `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cex}_${dex}`.toLowerCase().replace(/\W+/g, '');
+
+                    return `<td id="${cellId}" class="dex-price-cell text-center ${bgClass}">${icon}</td>`;
+                }).join('');
+
+                const dexDEXtoCEX = DexList.map(dex => {
+                    const isDexSelected = token.selectedDexs?.includes(dex);
+                    const icon = isDexSelected ? '🔒' : '⛔';
+                    const bgClass = isDexSelected ? '' : 'abu';
+                    const cellId = `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dex}_${cex}`.toLowerCase().replace(/\W+/g, '');
+
+                    return `<td id="${cellId}" class="dex-price-cell text-center ${bgClass}">${icon}</td>`;
+                }).join('');
+
+                const detailHTML = this.createTokenDetailContent(token, cex);
+                const orderbookLeftId = `orderbook_cex_to_dex_${cex}_${token.chain}_${token.symbol}_${token.pairSymbol}`;
+                const orderbookRightId = `orderbook_dex_to_cex_${cex}_${token.chain}_${token.pairSymbol}_${token.symbol}`;
+
+                // 🔄 Tentukan kelas strip berdasarkan indeks baris
+                const stripClass = rowIndex % 2 === 0 ? 'strip-even' : 'strip-odd';
+
+                const rowHTML = `
+                    <tr id="${rowId}" class="token-data-row text-center ${stripClass}" style="font-size: 12px">
+                        <td id="${orderbookLeftId.toLowerCase()}" >${cex}🔒</td>
+                        ${dexCEXtoDEX}
+                        <td class="token-detail-cell">${detailHTML}</td>
+                        ${dexDEXtoCEX}
+                        <td id="${orderbookRightId.toLowerCase()}" >${cex}🔒</td>
+                    </tr>
+                `;
+
+                tbody.append(rowHTML);
+                rowIndex++; // ⬆️ Tambah index baris
+            }
+        }
+    }
+
+    generateOrderBook(token, priceData, cexName, direction) {
+        const base = token.symbol.toUpperCase();        // e.g. AUCTION
+        const quote = token.pairSymbol.toUpperCase();   // e.g. BNB
+        const chain = token.chain.toLowerCase();        // e.g. bsc
+
+        const cexData = priceData.analisis_data?.[direction]?.[cexName];
+        if (!cexData) return;
+
+        const baseToUSDT = cexData[`${base}ToUSDT`] || {};
+        const isIndodax = cexName.toLowerCase() === 'indodax';
+
+        // 🛠️ Format orderbook 5 baris
+        const formatOrder = (orders = [], type = 'buy', tokenSymbol = '') => {
+            // ✅ Warna khusus Indodax dibalik
+            let colorClass;
+            if (isIndodax) {
+                colorClass = type === 'sell' ? 'text-danger' : 'text-success';  // SELL → merah, BUY → hijau
+            } else {
+                colorClass = type === 'sell' ? 'text-success' : 'text-danger';  // SELL → hijau, BUY → merah
+            }
+
+            // Dummy jika token = USDT
+            if (tokenSymbol === 'USDT') {
+                const dummy = `<span class="${colorClass}">1.0000$ : 10000.00$</span>`;
+                return `${dummy}<br>${dummy}<br>${dummy}`;
+            }
+
+            // ✅ Sorting order sesuai jenis dan CEX
+            const sorted = [...(orders || [])].sort((a, b) => {
+                const pa = parseFloat(a.price);
+                const pb = parseFloat(b.price);
+                if (isIndodax) {
+                    return type === 'buy' ? pa - pb : pb - pa;  // BUY → ASC, SELL → DESC
+                } else {
+                    return type === 'buy' ? pb - pa : pa - pb;  // BUY → DESC, SELL → ASC
+                }
+            });
+
+            return sorted.slice(0, 5).map(o => {
+                const price = parseFloat(o.price);
+                const qty = parseFloat(o.qty);
+                const vol = o.vol !== undefined ? parseFloat(o.vol) : price * qty;
+                const priceStr = PriceUtils.formatPrice(price);
+                const volumeStr = vol.toFixed(2);
+                return `<span class="${colorClass}">${priceStr}$ : ${volumeStr}$</span>`;
+            }).join('<br>');
+        };
+
+        // 🔁 Orderbook Teks (dibalik untuk Indodax)
+        let leftText, rightText;
+
+        if (isIndodax) {
+            leftText = [
+                `<span class="text-secondary fw-bold">${base} → ${quote}</span>`,
+                formatOrder(baseToUSDT.topAsks, 'sell', base)  // SELL base di kiri
+            ].filter(Boolean).join('<br>');
+
+            rightText = [
+                `<span class="text-secondary fw-bold">${quote} → ${base}</span>`,
+                formatOrder(baseToUSDT.topBids, 'buy', base)   // BUY base di kanan
+            ].filter(Boolean).join('<br>');
+        } else {
+            leftText = [
+                `<span class="text-secondary fw-bold">${base} → ${quote}</span>`,
+                formatOrder(baseToUSDT.topBids, 'buy', base)
+            ].filter(Boolean).join('<br>');
+
+            rightText = [
+                `<span class="text-secondary fw-bold">${quote} → ${base}</span>`,
+                formatOrder(baseToUSDT.topAsks, 'sell', base)
+            ].filter(Boolean).join('<br>');
+        }
+
+        // 🧩 ID target kolom
+        
+        const orderbookRightId = `orderbook_dex_to_cex_${cexName.toLowerCase()}_${chain}_${quote.toLowerCase()}_${base.toLowerCase()}`;
+        const orderbookLeftId = `orderbook_cex_to_dex_${cexName.toLowerCase()}_${chain}_${base.toLowerCase()}_${quote.toLowerCase()}`;
+
+        if (direction === 'dex_to_cex') {
+            $(`#${orderbookRightId}`).html(leftText || '-');
+        } else if (direction === 'cex_to_dex') {
+            $(`#${orderbookLeftId}`).html(rightText || '-');
+        }
+    }
+
+    // LocalStorage operations
+    loadTokens() {
+        const tokens = JSON.parse(localStorage.getItem('MULTI_TOKENS') || '[]');
+        return tokens.map(t => ({ ...t, id: String(t.id) }));
+    }
+
+    saveTokensToStorage(updateUI = false) {
+        localStorage.setItem('MULTI_TOKENS', JSON.stringify(this.tokens));
+        this.updateStats();
+        if (updateUI) {
+            this.loadTokenTable();
+            this.bindEvents();
+        }
+    }
+
+    loadSettings() {
+        const settings = localStorage.getItem('MULTI_SETTING');
+        const parsedSettings = settings ? JSON.parse(settings) : {
+            tokensPerBatch: 3, // jumlah anggota
+            UserName: 'XXX', // jeda antar member
+            delayBetweenGrup: 2000, // jeda batch
+            TimeoutCount: 3000,
+            PNLFilter: 0,
+            WalletAddress: '-'
+        };
+
+        console.log("DATA SETTING: ",parsedSettings); // ← log sebelum return
+        return parsedSettings;
+    }
+
+    saveSettingsToStorage() {
+        localStorage.setItem('MULTI_SETTING', JSON.stringify(this.settings));
+    }
+
+   // Token management
+    addToken(tokenData) {
+        const token = {
+            id: Date.now().toString(),
+            symbol: tokenData.symbol,
+            pairSymbol: tokenData.pairSymbol,
+            contractAddress: tokenData.contractAddress,
+            pairContractAddress: tokenData.pairContractAddress,
+            decimals: parseInt(tokenData.decimals),
+            pairDecimals: parseInt(tokenData.pairDecimals),
+            chain: tokenData.chain,
+            modalCexToDex: parseFloat(tokenData.modalCexToDex),
+            modalDexToCex: parseFloat(tokenData.modalDexToCex),
+            selectedCexs: tokenData.selectedCexs,
+            selectedDexs: tokenData.selectedDexs,
+            isActive: true,
+            createdAt: new Date().toISOString()
+        };
+
+        this.tokens.push(token);
+        this.saveTokensToStorage();
+        this.loadTokenTable();      // ⬅️ update tabel tampilan
+        this.updateStats();         // ⬅️ update statistik
+        this.showAlert(`Token ${token.symbol} berhasil ditambahkan`, 'success');
+        return token;
+    }
+
+    SearchCTokenMonitoring() {
+        $('#monitoringSearch').on('keyup', () => {
+            const keyword = $('#monitoringSearch').val().toLowerCase();
+            const rows = $('#priceTableBody tr.token-data-row');
+            rows.each(function() {
+                const detailCell = $(this).find('.token-detail-cell').text().toLowerCase();
+                $(this).toggle(detailCell.includes(keyword));
+            });
+        });
+    }
+
+    updateToken(tokenId, tokenData) {
+        const index = this.tokens.findIndex(t => t.id === tokenId);
+        if (index !== -1) {
+            this.tokens[index] = {
+                ...this.tokens[index],
+                ...tokenData,
+                updatedAt: new Date().toISOString()
+            };
+            this.saveTokensToStorage();
+          //  this.showAlert(`Token ${this.tokens[index].symbol} berhasil diperbarui`, 'info');
+            return this.tokens[index];
+        }
+        this.showAlert(`Token tidak ditemukan`, 'danger');
+        this.loadTokenTable();
+        this.updateStats();
+        return null;
+    }
+
+    deleteToken(tokenId) {
+        const token = this.tokens.find(t => t.id === tokenId);
+        if (!token) {
+            this.showAlert(`Token tidak ditemukan`, 'danger');
+            return false;
+        }
+
+        const konfirmasi = confirm(`Ingin Hapus Token ${token.symbol} on ${token.chain} semua CEX?`);
+        if (!konfirmasi) return false;
+
+        this.tokens = this.tokens.filter(t => t.id !== tokenId);
+        this.saveTokensToStorage();
+        this.showAlert(`Token ${token.symbol} berhasil dihapus, Silakan Refresh!`, 'warning');
+        this.loadTokenTable();
+        this.updateStats();
+        return true;
+    }
+
+    toggleTokenStatus(tokenId) {
+        const token = this.tokens.find(t => t.id === tokenId);
+        if (token) {
+            token.isActive = !token.isActive;
+            this.saveTokensToStorage();
+
+            // ⬅️ Tambahkan ini agar tabel langsung ter-update:
+            this.loadTokenTable(); 
+            this.updateStats();
+
+            const status = token.isActive ? 'diaktifkan' : 'dinonaktifkan';
+            this.showAlert(`Token ${token.symbol} telah ${status}`, 'info');
+
+            this.logAction(`UBAH STATUS KOIN`);
+            return token;
+        }
+
+        this.showAlert(`Token tidak ditemukan`, 'danger');
+        return null;
+    }
+
+    getCexList() {
+        return CexList;
+    }
+
+    getDexList() {
+        return DexList;
+    }
+
+    getChainList() {
+        return ChainList;
+    }
+
+    loadTokenTable() {
+        const tbody = $('#tokenTableBody');
+        tbody.empty();
+
+        const keyword = $('#tokenSearch').val()?.toLowerCase().trim() || '';
+        const selectedChains = $('.filter-chain-checkbox:checked').map(function () {
+            return this.value.toLowerCase();
+        }).get();
+
+        const filteredTokens = this.tokens.filter(token => {
+            const chainMatch = selectedChains.length === 0 || selectedChains.includes(token.chain.toLowerCase());
+
+            const searchableFields = [
+                token.symbol,
+                token.pairSymbol,
+                token.chain,
+                token.contractAddress,
+                token.pairContractAddress,
+                token.isActive ? 'active' : 'inactive', // ✔️ status ON/OFF ikut dicari
+                ...(token.selectedCexs || []),
+                ...(token.selectedDexs || [])
+            ].map(val => (val || '').toLowerCase());
+
+            const keywordMatch = keyword === '' || searchableFields.some(val => val.includes(keyword));
+
+            return chainMatch && keywordMatch;
+        });
+
+        if (filteredTokens.length === 0) {
+            tbody.append(`
+                <tr>
+                    <td colspan="7" class="text-center py-4 text-muted">
+                    Data yang dicari Tidak Ditemukan
+                    </td>
+                </tr>
+            `);
+            return;
+        }
+
+        const sortedTokens = filteredTokens.slice().sort((a, b) => (b.isActive === true) - (a.isActive === true));
+
+        sortedTokens.forEach((token, index) => {
+            const cexTextList = this.getCexList().map(cex => {
+                const isChecked = token.selectedCexs.includes(cex);
+                const checkedAttr = isChecked ? 'checked' : '';
+                const tokenSymbol = token.symbol.toUpperCase();
+                const pairSymbol = token.pairSymbol.toUpperCase();
+                const cexUpper = cex.toUpperCase();
+
+                const matchedCEXKey = Object.keys(token.cexInfo || {}).find(k => k.toUpperCase() === cexUpper);
+                const info = token.cexInfo?.[matchedCEXKey] || {};
+
+                const tokenInfo = info[tokenSymbol] || {};
+                const pairInfo = info[pairSymbol] || {};
+
+                const formatStatus = (value, openText, closeText) => {
+                    if (value === true) return `<span class="text-success fw-bold">${openText}</span>`;
+                    if (value === false) return `<span class="text-danger fw-bold">${closeText}</span>`;
+                    return `<span class="text-warning">⚠️</span>`;
+                };
+
+                const wdToken = formatStatus(tokenInfo.wd, 'WD', 'WX');
+                const dpToken = formatStatus(tokenInfo.depo, 'DP', 'DX');
+                const wdPair = formatStatus(pairInfo.wd, 'WD', 'WX');
+                const dpPair = formatStatus(pairInfo.depo, 'DP', 'DX');
+
+                const textColorClass = this.getTextColorClassFromBadge(this.getBadgeColor(cex, 'cex'));
+
+                return `
+                    <div>
+                        <label class="${textColorClass}" style="cursor: pointer;">
+                            <input type="checkbox" class="update-cex-checkbox me-1"
+                                data-token-id="${token.id}" data-cex="${cex}" value="${cex}" ${checkedAttr} />
+                            <span class="fw-bold fs-7 ${textColorClass}">${cexUpper}:</span>
+                        </label>
+                        ${isChecked ? `
+                            <div class="d-inline-flex align-items-center mt-1 fs-7">                                
+                                <span class="badge abu text-dark">
+                                    <strong class="text-dark">${tokenSymbol}</strong> [${wdToken}|${dpToken}] ⇄ 
+                                    <strong class="text-dark">${pairSymbol}</strong> [${wdPair}|${dpPair}]
+                                </span>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            const allDexs = this.getDexList();
+            let dexCheckboxes = '';
+
+            allDexs.forEach((dex, index) => {
+                const isChecked = token.selectedDexs.includes(dex);
+                const checkedAttr = isChecked ? 'checked' : '';
+                const colorClass = this.getTextColorClassFromBadge(this.getBadgeColor(dex, 'dex'));
+
+                dexCheckboxes += `
+                    <label class="me-2 fs-7 fw-bold ${colorClass}" style="cursor: pointer;">
+                        <input type="checkbox" class="update-dex-checkbox me-1"
+                            data-token-id="${token.id}" data-dex="${dex}" value="${dex}" ${checkedAttr}/> ${dex.toUpperCase()}
+                    </label>
+                `;
+
+                if ((index + 1) % 3 === 0) {
+                    dexCheckboxes += '<br/>';
+                }
+            });
+
+            const chainOptions = this.getChainList().map(chain => {
+                const selected = chain === token.chain ? 'selected' : '';
+                return `<option value="${chain}" ${selected}>${chain}</option>`;
+            }).join('');
+
+            const chainSelect = `
+                <div class="d-flex align-items-center gap-1">
+                    <select class="form-select form-select-sm inline-edit"
+                        data-token-id="${token.id}"
+                        data-field="chain"
+                        style="width: 120px; height: 32px;">
+                        ${chainOptions}
+                    </select>
+                    <button class="btn btn-outline-success btn-save-inline btn-sm"
+                            data-token-id="${token.id}" data-field="chain" title="Simpan Chain"
+                            style="height: 32px;">
+                        <i class="bi bi-check-lg small"></i>
+                    </button>
+                </div>
+            `;
+
+            const isActive = token.isActive;
+            const statusText = isActive ? 'ACTIVE' : 'INACTIVE';
+            const statusBtnClass = token.isActive ? 'btn-success' : 'btn-outline-secondary';
+
+            tbody.append(`
+                <tr class="align-middle token-data-row">
+                    <td>${index + 1}</td>
+                    <td>
+                        <div class="d-flex flex-column small text-muted" style="line-height: 1.2;">
+                            <div class="d-flex flex-column gap-1">
+                                <div class="d-flex align-items-center">
+                                    <input type="text" class="form-control form-control-sm inline-edit me-1"
+                                    data-token-id="${token.id}" data-field="symbol" value="${token.symbol}" style="width:100px;" />
+                                    <input type="text" class="form-control form-control-sm inline-edit me-1"
+                                        data-token-id="${token.id}" data-field="contractAddress" value="${token.contractAddress}" style="width:360px;" />
+                                    <input type="text" class="form-control form-control-sm inline-edit me-1"
+                                        data-token-id="${token.id}" data-field="decimals" value="${token.decimals}" style="width:60px;" />
+                                    <button class="btn btn-outline-success btn-save-inline btn-sm"
+                                            data-token-id="${token.id}" data-field="contractAddress" title="Simpan SC">
+                                        <i class="bi bi-check-lg small"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="text" class="form-control form-control-sm inline-edit me-1"
+                                    data-token-id="${token.id}" data-field="pairSymbol" value="${token.pairSymbol}" style="width:100px;" />
+                                    <input type="text" class="form-control form-control-sm inline-edit me-1"
+                                        data-token-id="${token.id}" data-field="pairContractAddress" value="${token.pairContractAddress}" style="width:360px;" />
+                                    <input type="text" class="form-control form-control-sm inline-edit me-1"
+                                        data-token-id="${token.id}" data-field="pairDecimals" value="${token.pairDecimals}" style="width:60px;" />
+                                    <button class="btn btn-outline-success btn-save-inline btn-sm"
+                                            data-token-id="${token.id}" data-field="pairContractAddress" title="Simpan Pair SC">
+                                        <i class="bi bi-check-lg small"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="d-flex flex-column gap-1">                        
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Control group">
+                                <span class="badge fw-bold small ${isActive ? 'text-success' : 'text-danger'}">
+                                    ${statusText}
+                                </span>
+                                <button class="btn ${statusBtnClass} btn-sm px-2 py-0"
+                                        onclick="app.toggleTokenStatus('${token.id}')" title="Toggle Status">
+                                    <i class="bi bi-power small"></i>
+                                </button>
+                                <button class="btn btn-outline-danger btn-sm px-2 py-0"
+                                        onclick="app.deleteToken('${token.id}')" title="Delete">
+                                    <i class="bi bi-trash small"></i>
+                                </button>
+                            </div>
+                            ${chainSelect}
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="input-group input-group-sm mb-1 d-flex align-items-center" style="width: 180px;">
+                            <span class="me-2 fs-7 fw-bold">CEX:</span>
+                            <input type="text"
+                                class="form-control form-control-sm inline-edit"
+                                data-token-id="${token.id}"
+                                data-field="modalCexToDex"
+                                value="${token.modalCexToDex}" />
+                            <button class="btn btn-outline-success btn-save-inline btn-sm"
+                                    data-token-id="${token.id}"
+                                    data-field="modalCexToDex"
+                                    title="Simpan">
+                                <i class="bi bi-check-lg small"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-group input-group-sm d-flex align-items-center" style="width: 180px;">
+                            <span class="me-2 fs-7 fw-bold">DEX:</span>
+                            <input type="text"
+                                class="form-control form-control-sm inline-edit"
+                                data-token-id="${token.id}"
+                                data-field="modalDexToCex"
+                                value="${token.modalDexToCex}" />
+                            <button class="btn btn-outline-success btn-save-inline btn-sm"
+                                    data-token-id="${token.id}"
+                                    data-field="modalDexToCex"
+                                    title="Simpan">
+                                <i class="bi bi-check-lg small"></i>
+                            </button>
+                        </div>
+                    </td>
+
+                    <td>${cexTextList}</td>
+                    <td>${dexCheckboxes}</td>
+                </tr>
+            `);
+        });
+    }
+
+    shortenAddress(address, start = 6, end = 6) {
+        if (!address || address.length <= start + end) return address;
+        return address.substring(0, start) + "..." + address.substring(address.length - end);
+    }
+
+    getBadgeColor(name, type) {
+        if (type === 'cex') {
+            const colors = {
+                Binance: 'bg-warning text-dark',
+                MEXC: 'bg-primary  text-light',
+                Gateio: 'bg-danger text-light',
+                INDODAX: 'bg-info text-dark',
+            };
+            return colors[name] || 'bg-primary';
+        }
+        if (type === 'dex') {
+            const colors = {
+                Lifi: 'bg-warning',
+                KyberSwap: 'bg-success',
+                Matcha: 'bg-primary',
+                ODOS: 'bg-danger',
+                Magpie: 'bg-info',
+                ParaSwap: 'bg-secondary',
+                OKXDEX: 'bg-dark',
+            };
+            return colors[name] || 'bg-secondary';
+        }
+        if (type === 'chain') {
+            const colors = {
+                bsc: 'bg-warning text-dark',
+                ethereum: 'bg-primary',
+                polygon: 'bg-info text-dark',
+                arbitrum: 'bg-info text-light',
+                base: 'bg-dark text-info',
+            };
+            return colors[name.toLowerCase()] || 'bg-dark';
+        }
+        return 'bg-secondary';
+    }
+
+    getTextColorClassFromBadge(badgeClass = '') {
+        const map = {
+            'bg-success': 'text-success',
+            'bg-primary': 'text-primary',
+            'bg-danger': 'text-danger',
+            'bg-light': 'text-light',
+            'bg-info': 'text-info',
+            'bg-secondary': 'text-secondary',
+            'bg-dark': 'text-dark',
+            'bg-warning': 'text-warning',
+        };
+
+        // Ambil class pertama yg dimulai dengan "bg-"
+        const bgClass = badgeClass.split(' ').find(cls => cls.startsWith('bg-'));
+        return map[bgClass] || 'text-secondary'; // fallback jika tidak cocok
+    }
+
+    loadSettingsForm() {
+        $('#tokensPerBatch').val(this.settings.tokensPerBatch);
+        $('#UserName').val(this.settings.UserName);
+        $('#delayBetweenGrup').val(this.settings.delayBetweenGrup);
+        $('#TimeoutCount').val(this.settings.TimeoutCount);
+        $('#PNLFilter').val(this.settings.PNLFilter);
+        $('#WalletAddress').val(this.settings.WalletAddress);
+    }
+
+    updateStats() {
+        const totalTokens = this.tokens.length;
+        const activeTokens = this.tokens.filter(t => t.isActive);
+        const inactiveTokens = this.tokens.filter(t => !t.isActive);
+
+        // Sesuai <option value="..."> pada <select id="tokenChain">
+        const chainList = ['BSC', 'Ethereum', 'Polygon', 'Base', 'Arbitrum'];
+
+        // Pemetaan ke ID HTML yang dipakai
+        const idMap = {
+            BSC: 'bsc',
+            Ethereum: 'eth',
+            Polygon: 'poly',
+            Base: 'base',
+            Arbitrum: 'arb'
+        };
+
+        const targets = ['Monitoring', 'Management'];
+
+        for (const target of targets) {
+            // Total, aktif, tidak aktif
+            $(`#totalTokens${target}`).text(totalTokens);
+            $(`#activeTokens${target}`).text(activeTokens.length);
+            $(`#inactiveTokens${target}`).text(inactiveTokens.length);
+
+            // Jumlah token per chain
+            for (const chainName of chainList) {
+                const htmlId = idMap[chainName]; // Misal "eth" dari "Ethereum"
+                const count = this.tokens.filter(t => t.chain === chainName).length;
+                $(`#${htmlId}Count${target}`).text(count);
+            }
+        }
+
+        // Total baris monitoring = jumlah token aktif × banyaknya selectedCEX
+        let totalBaris = 0;
+        activeTokens.forEach(token => {
+            // Lewati token yang chain-nya tidak ada di filter
+            if (!this.selectedChains.includes(token.chain)) return;
+
+            if (Array.isArray(token.selectedCexs)) {
+                totalBaris += token.selectedCexs.filter(c => c).length;
+            }
+        });
+
+        $('#totalBarisMonitoring').text(totalBaris);
+    }
+
+    // Form operations
+    resetTokenForm() {
+        $('#tokenForm')[0].reset();
+        $('#tokenDecimals').val(18);
+        $('#pairDecimals').val(18);
+        $('#modalCexToDex').val(100);
+        $('#modalDexToCex').val(100);
+        $('input[type="checkbox"]').prop('checked', false);
+    }
+
+    saveToken() {
+        const formData = this.getTokenFormData();
+        
+        if (!this.validateTokenForm(formData)) {
+            return;
+        }
+
+        try {
+            if (this.currentEditingToken) {
+                this.updateToken(this.currentEditingToken.id, formData);
+                this.showAlert('Berhasil SIMPAN Perubahan DATA, Silakan Refresh!', 'success');
+
+                this.logAction(`UBAH DATA KOIN`);
+            } else {
+                this.addToken(formData);
+                this.showAlert('Berhasil Menambah DATA Baru, Silakan Refresh', 'success');
+
+                this.logAction(`TAMBAH DATA KOIN`);
+            }
+
+            $('#tokenModal').modal('hide');
+            this.resetTokenForm();
+            
+        } catch (error) {
+            this.showAlert('Error saving token: ' + error.message, 'danger');
+        }
+    }
+
+    getTokenFormData() {
+        const selectedCexs = [];
+        $('input[id^="cex"]:checked').each(function() {
+            selectedCexs.push($(this).val());
+        });
+
+        const selectedDexs = [];
+        $('input[id^="dex"]:checked').each(function() {
+            selectedDexs.push($(this).val());
+        });
+
+        return {
+            symbol: $('#tokenSymbol').val().trim().toUpperCase(),
+            pairSymbol: $('#pairSymbol').val().trim().toUpperCase(),
+            contractAddress: $('#tokenContract').val().trim(),
+            pairContractAddress: $('#pairContract').val().trim(),
+            decimals: $('#tokenDecimals').val(),
+            pairDecimals: $('#pairDecimals').val(),
+            chain: $('#tokenChain').val(),
+            modalCexToDex: $('#modalCexToDex').val(),
+            modalDexToCex: $('#modalDexToCex').val(),
+            selectedCexs: selectedCexs,
+            selectedDexs: selectedDexs
+        };
+    }
+
+    validateTokenForm(formData) {
+        // 🔸 Validasi token
+        if (!formData.symbol || !formData.pairSymbol) {
+            this.showAlert('Please enter token and pair symbols', 'warning');
+            return false;
+        }
+
+        if (!formData.contractAddress || !formData.pairContractAddress) {
+            this.showAlert('Please enter contract addresses', 'warning');
+            return false;
+        }
+
+        if (!formData.chain) {
+            this.showAlert('Please select a chain', 'warning');
+            return false;
+        }
+
+        if (!formData.selectedCexs || formData.selectedCexs.length === 0) {
+            this.showAlert('Please select at least one CEX', 'warning');
+            return false;
+        }
+
+        if (!formData.selectedDexs || formData.selectedDexs.length === 0) {
+            this.showAlert('Please select at least one DEX', 'warning');
+            return false;
+        }
+
+        // 🔸 Ambil nilai dari form #settingsForm
+        const userName = $('#UserName').val()?.trim();
+        const tokensPerBatch = parseInt($('#tokensPerBatch').val());
+        const delayBetweenGrup = parseInt($('#delayBetweenGrup').val());
+        const timeoutCount = parseInt($('#TimeoutCount').val());
+        const PNLFilter = parseFloat($('#PNLFilter').val());        
+        const walletAddress = $('#WalletAddress').val()?.trim(); // catatan: ID inputnya retryDelay
+
+        // 🔸 Validasi form settings
+        if (!userName || userName === 'XXX') {
+            this.showAlert('Please enter a valid User Name in Settings', 'danger');
+            return false;
+        }
+
+        if (!walletAddress || walletAddress === '-') {
+            this.showAlert('Please enter a valid Wallet Address in Settings', 'danger');
+            return false;
+        }
+
+        if (!tokensPerBatch || tokensPerBatch < 1 || tokensPerBatch > 5) {
+            this.showAlert('Jumlah Anggota (Tokens Per Batch) harus antara 1-5', 'danger');
+            return false;
+        }
+
+        if (!delayBetweenGrup || delayBetweenGrup < 300 || delayBetweenGrup > 5000) {
+            this.showAlert('Delay antar grup harus antara 300–5000 ms', 'danger');
+            return false;
+        }
+
+        if (!timeoutCount || timeoutCount < 1000 || timeoutCount > 5000) {
+            this.showAlert('Timeout harus antara 1000–5000 ms', 'danger');
+            return false;
+        }
+
+        // ✅ Semua valid
+        return true;
+    }
+
+    editToken(tokenId) {
+        const token = this.tokens.find(t => t.id === tokenId);
+
+        if (!token) return;
+
+        this.currentEditingToken = token;
+        $('#modalTitle').text('Edit Token');
+
+        // Populate form
+        $('#tokenSymbol').val(token.symbol);
+        $('#pairSymbol').val(token.pairSymbol);
+        $('#tokenContract').val(token.contractAddress);
+        $('#pairContract').val(token.pairContractAddress);
+        $('#tokenDecimals').val(token.decimals);
+        $('#pairDecimals').val(token.pairDecimals);
+        $('#tokenChain').val(token.chain);
+        $('#modalCexToDex').val(token.modalCexToDex);
+        $('#modalDexToCex').val(token.modalDexToCex);
+
+        // Set checkboxes
+        $('input[type="checkbox"]').prop('checked', false);
+        token.selectedCexs.forEach(cex => {
+            $(`input[value="${cex}"]`).prop('checked', true);
+        });
+        token.selectedDexs.forEach(dex => {
+            $(`input[value="${dex}"]`).prop('checked', true);
+        });
+
+        $('#tokenModal').modal('show');
+    }
+
+    saveSettings() {
+        this.settings = {
+            tokensPerBatch: parseInt($('#tokensPerBatch').val()),
+            UserName: $('#UserName').val(),
+            delayBetweenGrup: parseInt($('#delayBetweenGrup').val()),
+            TimeoutCount: parseInt($('#TimeoutCount').val()),
+            PNLFilter: parseFloat($('#PNLFilter').val()),
+            WalletAddress: $('#WalletAddress').val()
+        };
+
+        this.saveSettingsToStorage();
+        this.showAlert('Settings saved successfully!', 'success');
+        $('#settingsModal').modal('hide');
+
+        this.logAction(`SETTING APLIKASI`);
+    }
+
+    async CheckPrices() {
+        $('.chainFilterCheckbox').prop('disabled', true);
+
+        const settings = this.loadSettings();
+        if (!settings || settings.WalletAddress === '-' || settings.UserName === 'XXX') {
+            this.showAlert('SILAKAN SETTING APLIKASI', 'danger');
+            return;
+        }
+
+        const tokensPerBatch = settings.tokensPerBatch || 3;
+        const delayBetweenGrup = settings.delayBetweenGrup || 2000;
+
+        const allTokenUnits = [];
+
+        for (const token of this.tokens) {
+            if (!token.isActive || !this.selectedChains.includes(token.chain)) continue;
+            for (const cexName of token.selectedCexs) {
+                allTokenUnits.push({ ...token, cexName });
+            }
+        }
+
+        allTokenUnits.sort((a, b) => {
+            const symbolA = a.symbol.toLowerCase();
+            const symbolB = b.symbol.toLowerCase();
+            return this.sortAscending ? symbolA.localeCompare(symbolB) : symbolB.localeCompare(symbolA);
+        });
+
+        if (allTokenUnits.length === 0) {
+            this.showAlert('No active tokens to monitor', 'info');
+            $('#priceTableBody').html(`<tr><td colspan="13" class="text-center text-muted py-5">
+                <i class="bi bi-info-circle me-2"></i> Tidak ada DATA KOIN, Silakan ke Management TOKEN
+            </td></tr>`);
+            return;
+        }
+
+        const chunkArray = (arr, size) => {
+            const result = [];
+            for (let i = 0; i < arr.length; i += size) {
+                result.push(arr.slice(i, i + size));
+            }
+            return result;
+        };
+
+        const unitBatches = chunkArray(allTokenUnits, tokensPerBatch);
+        const totalUnits = allTokenUnits.length;
+        let currentIndex = 0;
+
+        const startTime = new Date();
+        const startStr = startTime.toLocaleTimeString();
+        $('#scanTimeInfo').html(`<span class="text-dark">&nbsp;🕒 Mulai Scan : ${startStr}</span>&nbsp;`);
+
+        for (const batch of unitBatches) {
+            await Promise.allSettled(batch.map(async tokenUnit => {
+                currentIndex++;
+                const percent = Math.round((currentIndex / totalUnits) * 100);
+                $('#scanProgressPercent').text(`${percent}%`);
+                $('#scanProgressBar').css('width', `${percent}%`);
+
+                const priceData = {
+                    token: tokenUnit,
+                    analisis_data: {
+                        cex_to_dex: {},
+                        dex_to_cex: {}
+                    }
+                };
+
+                 // Scroll ke token pertama di batch, setelah semua selesai
+                const firstToken = batch[0];
+                if (firstToken) {
+                    this.tryAutoScrollToRow(firstToken);
+                }
+
+                // Jalankan arah cex_to_dex
+                const run_cex_to_dex = async () => {
+                    const direction = 'cex_to_dex';
+                    await this.fetchCEXPrices(tokenUnit, priceData, tokenUnit.cexName, direction);
+                    this.generateOrderBook(tokenUnit, priceData, tokenUnit.cexName, direction);
+                    await new Promise(r => setTimeout(r, 100));
+
+                    for (const dexName of tokenUnit.selectedDexs) {
+                        $('#scanProgressText').html(`🔄 ${(tokenUnit.cexName).toUpperCase()} → <b>[${tokenUnit.symbol} on ${tokenUnit.chain}]</b> → ${dexName.toUpperCase()} `);
+                        try {
+                            await this.fetchDEXPrices(tokenUnit, priceData, dexName, tokenUnit.cexName, direction);
+                        } catch (err) {
+                            console.warn(`[TIMEOUT] ${dexName} ${tokenUnit.symbol} (${direction}): ${err.message}`);
+                        }
+                        await new Promise(r => setTimeout(r, 200));
+                    }
+                };
+
+                // Jalankan arah dex_to_cex dengan jeda setelah cex_to_dex
+                const run_dex_to_cex = async () => {
+                    const direction = 'dex_to_cex';
+                    await new Promise(r => setTimeout(r, 500)); // jeda antar arah dex yang sama
+                    await this.fetchCEXPrices(tokenUnit, priceData, tokenUnit.cexName, direction);
+                    this.generateOrderBook(tokenUnit, priceData, tokenUnit.cexName, direction);
+                    await new Promise(r => setTimeout(r, 100));
+
+                    for (const dexName of tokenUnit.selectedDexs) {
+                        $('#scanProgressText').html(`🔄 ${dexName.toUpperCase()} → <b>[${tokenUnit.symbol} on ${tokenUnit.chain}]</b> → ${(tokenUnit.cexName).toUpperCase()} `);
+                        try {
+                            await this.fetchDEXPrices(tokenUnit, priceData, dexName, tokenUnit.cexName, direction);
+                        } catch (err) {
+                            console.warn(`[TIMEOUT] ${dexName} ${tokenUnit.symbol} (${direction}): ${err.message}`);
+                        }
+                        await new Promise(r => setTimeout(r, 200));
+                    }
+                };
+
+                await Promise.allSettled([run_cex_to_dex(), run_dex_to_cex()]);
+            }));
+
+            await new Promise(resolve => setTimeout(resolve, delayBetweenGrup));
+        }
+
+        const endTime = new Date();
+        const durationSec = Math.floor((endTime - startTime) / 1000);
+        const minutes = Math.floor(durationSec / 60).toString().padStart(2, '0');
+        const seconds = (durationSec % 60).toString().padStart(2, '0');
+        
+        $('#scanProgressText').html(``);
+        $('#scanTimeInfo').append(`<span class="text-primary">&nbsp;&nbsp;✅ Durasi Scan: ${minutes}:${seconds}</span>&nbsp;`);
+        this.showAlertWithAudio();
+        $('.chainFilterCheckbox').prop('disabled', false);
+    }
+
+    async showAlertWithAudio() {
+        const alertBox = document.getElementById("customAlert");
+        
+        var audio = new Audio('MULTI/finish.mp3');  // Ganti dengan path file suara yang sesuai
+        audio.play();
+        
+        // Tampilkan alert
+        alertBox.style.display = "block";
+
+        // Sembunyikan setelah 4 detik
+        setTimeout(() => {
+            alertBox.style.display = "none";
+        }, 4000);
+    }
+
+    setDexCellLoading(token, cexName, dexName, direction) {
+        const cellId = direction === 'cex_to_dex'
+            ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
+            : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
+
+        const safeId = cellId.toLowerCase().replace(/\W+/g, '');
+        const $cell = $('#' + safeId);
+
+        if ($cell.length) {
+            $cell
+                .removeClass()
+                .addClass('dex-price-cell text-info text-center align-middle')
+                .html(`
+                    <div class="text-info small">
+                        ${dexName}&nbsp;
+                        <span class="spinner-border spinner-border-sm me-1"></span>
+                    </div>
+                    <div class="fee-info">&nbsp;</div>
+                    <div class="pnl-info">&nbsp;</div>
+                `);
+        }
+    }
+
+    async fetchCEXPrices(token, tokenPriceData, cexName, direction) {
+        if (!this.gasTokenPrices) this.gasTokenPrices = {};
+        const promises = [];
+
+        const baseSymbol = token.symbol.toUpperCase();
+        const quoteSymbol = token.pairSymbol.toUpperCase();
+
+        if (baseSymbol === 'USDT') this.gasTokenPrices['USDT'] = 1;
+        if (quoteSymbol === 'USDT') this.gasTokenPrices['USDT'] = 1;
+
+        // ✅ Siapkan struktur penyimpanan
+        tokenPriceData.analisis_data = tokenPriceData.analisis_data || {};
+        tokenPriceData.analisis_data[direction] = tokenPriceData.analisis_data[direction] || {};
+        tokenPriceData.analisis_data[direction][cexName] = tokenPriceData.analisis_data[direction][cexName] || {};
+
+        const symbols = [baseSymbol, quoteSymbol];
+
+        for (const symbol of symbols) {
+            const pair = { baseSymbol: symbol, quoteSymbol: 'USDT' };
+
+            const assignData = (data) => {
+                tokenPriceData.analisis_data[direction][cexName][`${symbol}ToUSDT`] = data;
+                if (data.buy) this.gasTokenPrices[symbol] = data.buy;
+            };
+
+            switch (cexName) {
+                case 'Binance':
+                    promises.push(
+                        CEXAPIs.getBinanceOrderBook(pair).then(assignData).catch(err =>
+                            console.warn(`Binance ${symbol}/USDT error: ${err.message}`)
+                        )
+                    );
+                    break;
+                case 'MEXC':
+                    promises.push(
+                        CEXAPIs.getMEXCOrderBook(pair).then(assignData).catch(err =>
+                            console.warn(`MEXC ${symbol}/USDT error: ${err.message}`)
+                        )
+                    );
+                    break;
+                case 'Gateio':
+                    promises.push(
+                        CEXAPIs.getGateOrderBook(pair).then(assignData).catch(err =>
+                            console.warn(`Gateio ${symbol}/USDT error: ${err.message}`)
+                        )
+                    );
+                    break;
+                case 'INDODAX':
+                    promises.push(
+                        CEXAPIs.getIndodaxOrderBook(pair).then(assignData).catch(err =>
+                            console.warn(`INDODAX ${symbol}/USDT error: ${err.message}`)
+                        )
+                    );
+                break;
+            }
+        }
+
+        await Promise.allSettled(promises);
+    }
+
+    async fetchDEXPrices(token, tokenPriceData, dexName, cexName, direction) {
+        const chainId = PriceUtils.getChainId(token.chain);
+        const network = token.chain.toLowerCase();
+        const tokenDecimals = token.decimals;
+        const pairDecimals = token.pairDecimals;
+        const gasFeeUSD = PriceUtils.getGasFeeUSD(token.chain, 210000, 5);
+
+        const baseSymbol = token.symbol.toUpperCase();
+        const quoteSymbol = token.pairSymbol.toUpperCase();
+        const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
+
+        const isBaseUSDT = baseSymbol === 'USDT';
+        const isQuoteUSDT = quoteSymbol === 'USDT';
+
+        const cexData = tokenPriceData.analisis_data?.[direction]?.[cexName];
+        
+        if (!cexData || Object.keys(cexData).length === 0) {
+            console.warn(`❗ Tidak ada atau data kosong di CEX untuk ${token.symbol}/${token.pairSymbol} @ ${cexName}`);
+            const cellId = direction === 'cex_to_dex'
+                ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
+                : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
+
+            $(`#${cellId.toLowerCase().replace(/\W+/g, '')}`).html(`
+                <div class="pink small"> ${cexName} ⚠️</div>
+            `);
+            return;
+        }
+
+        const getCEXRate = (symbol, type = 'buy') => {
+            const key = Object.keys(cexData).find(k => k.toUpperCase().includes(symbol));
+            return Number(cexData?.[key]?.[type] || 0);
+        };
+
+        const baseBuy = isBaseUSDT ? 1 : getCEXRate(baseSymbol, 'buy');
+        const baseSell = isBaseUSDT ? 1 : getCEXRate(baseSymbol, 'sell');
+        const quoteBuy = isQuoteUSDT ? 1 : getCEXRate(quoteSymbol, 'buy');
+        const quoteSell = isQuoteUSDT ? 1 : getCEXRate(quoteSymbol, 'sell');
+
+        if (!baseBuy || !baseSell || !quoteBuy || !quoteSell) {
+            console.warn(`${cexName} Harga tidak lengkap:`, { baseBuy, baseSell, quoteBuy, quoteSell });
+            return;
+        }
+
+        let inputContract, outputContract, inputDecimals, outputDecimals;
+        if (direction === 'cex_to_dex') {
+            inputContract = token.contractAddress;
+            outputContract = token.pairContractAddress;
+            inputDecimals = tokenDecimals;
+            outputDecimals = pairDecimals;
+        } else {
+            inputContract = token.pairContractAddress;
+            outputContract = token.contractAddress;
+            inputDecimals = pairDecimals;
+            outputDecimals = tokenDecimals;
+        }
+
+        const inputAmountToken = direction === 'cex_to_dex'
+            ? (isBaseUSDT ? modal : modal / baseBuy)
+            : (isQuoteUSDT ? modal : modal / quoteBuy);
+
+        const rawAmountIn = PriceUtils.calculateAmount(inputAmountToken, inputDecimals);
+        const quotePriceUSDT = direction === 'cex_to_dex' ? quoteBuy : baseSell;
+
+        this.setDexCellLoading(token, cexName, dexName, direction);
+
+        const handleResult = (dexNameDisplay, data, rawOutProp = 'amountOut') => {
+            const outRaw = data[rawOutProp] || '0';
+            const normalizedIn = inputAmountToken;
+            const normalizedOut = PriceUtils.normalizeAmount(outRaw, outputDecimals);
+
+            let price = 0;
+            if (direction === 'cex_to_dex') {
+                price = normalizedOut / normalizedIn;
+            } else {
+                price = normalizedOut > 0 ? modal / normalizedOut : 0;
+            }
+
+            const priceInUSDT = price * quotePriceUSDT;
+            const pairKey = `${baseSymbol}To${quoteSymbol}`;
+
+            tokenPriceData.analisis_data[direction][dexName] = tokenPriceData.analisis_data[direction][dexName] || {};
+            tokenPriceData.analisis_data[direction][dexName][pairKey] = {
+                exchange: data.exchange || dexName,
+                amountIn: rawAmountIn,
+                amountOut: outRaw,
+                price: priceInUSDT,
+                rawRate: price,
+                fee: data.fee || gasFeeUSD,
+                from: direction === 'cex_to_dex' ? baseSymbol : quoteSymbol,
+                to: direction === 'cex_to_dex' ? quoteSymbol : baseSymbol,
+                rateSymbol: `${direction === 'cex_to_dex' ? quoteSymbol : baseSymbol}/${direction === 'cex_to_dex' ? baseSymbol : quoteSymbol}`,
+                quotePriceUSDT,
+                baseBuy, baseSell, quoteBuy, quoteSell,
+                gasEstimate: data.gasEstimate || 0,
+                gasPrice: data.gasPrice || 0,
+                isFallback: data.isFallback || false,
+                hasilUSDT: (normalizedOut * quotePriceUSDT),
+                normalizedOut,
+                normalizedIn,
+                inputAmountToken,
+                timestamp: Date.now()
+            };
+                // ✅ LOG
+                const feeTrade = modal * 0.0015;
+                const matchedCEXKey = Object.keys(token.cexInfo || {}).find(k => k.toUpperCase() === cexName.toUpperCase());
+                const feeWDToken = token.cexInfo?.[matchedCEXKey]?.[token.symbol.toUpperCase()]?.feewd ?? 0;
+
+                const feeWD = feeWDToken * baseBuy;
+                const feeDEX = data.fee || 0;
+                const totalFee = feeTrade + feeWD  + feeDEX;
+
+            if (direction === 'cex_to_dex') {
+                const hasilUSDT = (normalizedOut * quotePriceUSDT).toFixed(6); // ✅ BENAR
+                const hargaSwapEfektif = ((normalizedOut * quotePriceUSDT) / inputAmountToken).toFixed(6);
+
+                const pnl = hasilUSDT - modal - totalFee;
+                const pnlPersen = ((pnl / modal) * 100).toFixed(2);
+                /*
+                console.log(`✅ [LOG CEX → DEX] ${token.symbol} → ${token.pairSymbol} on ${(token.chain).toUpperCase()}`);
+                console.log(`🔄 [${cexName.toUpperCase()} → ${dexName.toUpperCase()}]`);
+                console.log(`🪙 Modal: $${modal}`);
+                console.log(`🛒 Beli di ${cexName} @ $${baseBuy.toFixed(6)} → ${inputAmountToken.toFixed(6)} ${token.symbol}`);
+                console.log(`💰 Swap di ${dexName}:`);
+                console.log(`   - Harga Swap Efektif: ~$${hargaSwapEfektif} / ${token.symbol}`);
+                console.log(`   - Hasil: $${hasilUSDT}`);
+                console.log(`   - Fee Swap: $${feeDEX}`);
+                console.log(`   - Total Fee: ~$${totalFee.toFixed(2)}`);
+                console.log(`📈 PNL: ${pnl >= 0 ? '+' : ''}${pnl.toFixed(2)} USDT (${pnlPersen}%)`);
+                console.log(`----------------------------------------`);
+                */
+
+                // if (pnl > 0) {
+                //     const alertMsg = [
+                //         `🚀 DETECT SIGNAL (CEX → DEX)`,
+                //         `PAIR      : ${token.symbol} → ${token.pairSymbol}`,
+                //         `CHAIN     : ${(token.chain).toUpperCase()}`,
+                //         `CEX       : ${cexName.toUpperCase()}`,
+                //         `DEX       : ${dexName.toUpperCase()}`,
+                //         `MODAL     : $${modal}`,
+                //         `NET PROFIT: $${pnl.toFixed(2)} (${pnlPersen}%)`
+                //     ].join('<br>');
+
+                //     this.showAlert(alertMsg, 'success');
+                // }
+                if (pnl > parseFloat(this.settings.PNLFilter)) {
+                    const alertMsg = `
+                        🌐 CHAIN: ${token.chain.toUpperCase()} | 
+                        💹 CEX: ${cexName.toUpperCase()} → DEX: ${dexName.toUpperCase()} | 
+                        <span style="color:black; font-weight:bold;">🪙 MODAL: $${modal} </span> | 
+                        <span style="color:blue; font-weight:bold;">🚀 ${token.symbol}→${token.pairSymbol}</span> | 
+                        <span style="color:green; font-weight:bold;">💰 PROFIT: $${pnl.toFixed(2)} (${pnlPersen}%)</span>
+                    `.replace(/\s{2,}/g, ' ').trim(); // Hilangkan spasi berlebih
+
+                    this.showAlert(alertMsg, 'success');
+                }
+
+
+            } else {
+                const jumlahToken = normalizedOut.toFixed(6);
+                const hargaSwapEfektif = (modal / normalizedOut).toFixed(6);
+                const hasilUSDT = (normalizedOut * baseSell).toFixed(6);
+                const pnl = normalizedOut * baseSell - modal - totalFee;
+                const pnlPersen = ((pnl / modal) * 100).toFixed(2);
+                /*
+                console.log(`✅ [LOG DEX → CEX] ${token.pairSymbol} → ${token.symbol} on ${(token.chain).toUpperCase()}`);
+                console.log(`🔄 [${dexName.toUpperCase()} → ${cexName.toUpperCase()}]`);
+                console.log(`🪙 Modal: $${modal}`);
+                console.log(`🛒 Swap di ${dexName} → ${jumlahToken} ${token.symbol} @ ~$${hargaSwapEfektif}/${token.symbol}`);
+                console.log(`💰 Jual di ${cexName}:`);
+                console.log(`   - Harga Jual: ~$${baseSell.toFixed(6)}/${token.symbol}`);
+                console.log(`   - Hasil: $${hasilUSDT}`);
+                console.log(`   - Fee Swap: $${feeDEX}`);
+                console.log(`   - Total Fee: ~$${totalFee.toFixed(2)}`);
+                console.log(`📈 PNL: ${pnl >= 0 ? '+' : ''}${pnl.toFixed(2)} USDT (${pnlPersen}%)`);
+                console.log(`----------------------------------------`);
+                */
+
+                // if (pnl > 0) {
+                //     const alertMsg = [
+                //         `🚀 DETECT SIGNAL (DEX → CEX)`,
+                //         `PAIR      : ${token.pairSymbol} → ${token.symbol}`,
+                //         `CHAIN     : ${(token.chain).toUpperCase()}`,
+                //         `CEX       : ${cexName.toUpperCase()}`,
+                //         `DEX       : ${dexName.toUpperCase()}`,
+                //         `MODAL     : $${modal}`,
+                //         `NET PROFIT: $${pnl.toFixed(2)} (${pnlPersen}%)`
+                //     ].join('<br>');
+
+                //     this.showAlert(alertMsg, 'success');
+                // }
+                 if (pnl >  parseFloat(this.settings.PNLFilter)) {
+                    const alertMsg = `
+                        🌐 CHAIN: ${token.chain.toUpperCase()} | 
+                        💹 DEX: ${dexName.toUpperCase()} → CEX: ${cexName.toUpperCase()} | 
+                        <span style="color:black; font-weight:bold;">🪙 MODAL: $${modal} </span> | 
+                        <span style="color:blue; font-weight:bold;">🚀 ${token.symbol}→${token.pairSymbol}</span> | 
+                        <span style="color:green; font-weight:bold;">💰 PROFIT: $${pnl.toFixed(2)} (${pnlPersen}%)</span>
+                    `.replace(/\s{2,}/g, ' ').trim(); // Hilangkan spasi berlebih
+
+                    this.showAlert(alertMsg, 'success');
+                }
+
+            }
+            const dexInfo = tokenPriceData.analisis_data[direction][dexName][pairKey];
+            const html = this.CellResult(token, cexData, dexInfo, direction, cexName, dexName);
+
+            const cellId = direction === 'cex_to_dex'
+                ? `cell_${token.symbol.toLowerCase()}_${token.pairSymbol.toLowerCase()}_${token.chain.toLowerCase()}_${cexName.toLowerCase()}_${dexName.toLowerCase()}`
+                : `cell_${token.pairSymbol.toLowerCase()}_${token.symbol.toLowerCase()}_${token.chain.toLowerCase()}_${dexName.toLowerCase()}_${cexName.toLowerCase()}`;
+
+            $(`#${cellId}`).html(html);
+        };
+
+        const fallbackSlugMap = {
+            'KyberSwap': 'kyberswap',
+            'Matcha': '0x',
+            'OKXDEX': 'okx',
+            'ODOS': 'odos',
+            'ParaSwap': 'paraswap',
+        };
+       
+        try {
+            const cellId = direction === 'cex_to_dex'
+                ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
+                : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
+            const safeCellId = cellId.toLowerCase().replace(/\W+/g, '');
+            const timeoutLimit = timeoutApi;
+
+           switch (dexName) {
+                case 'Lifi':
+                    handleResult('Lifi', await fetchWithCountdown(
+                        safeCellId, dexName,
+                        () => DEXAPIs.getLiFiPrice(inputContract, outputContract,  rawAmountIn,  inputDecimals, outputDecimals, chainId,token,direction ),
+                        timeoutLimit
+                    ));
+                    break;
+
+                case 'KyberSwap':
+                    handleResult('KyberSwap', await fetchWithCountdown(
+                        safeCellId,dexName,
+                        () => DEXAPIs.getKyberSwapPrice(inputContract, outputContract, rawAmountIn, network),
+                        timeoutLimit
+                    ));
+                    break;
+
+                case 'Matcha':
+                    handleResult('Matcha', await fetchWithCountdown(
+                        safeCellId,dexName,
+                        () => DEXAPIs.get0xPrice(inputContract, outputContract, rawAmountIn, chainId),
+                        timeoutLimit
+                    ), 'buyAmount');
+                    break;
+
+                case 'OKXDEX':
+                    handleResult('OKXDEX', await fetchWithCountdown(
+                        safeCellId,dexName,
+                        () => DEXAPIs.getOKXDEXPrice(inputContract, outputContract, rawAmountIn, network),
+                        timeoutLimit
+                    ));
+                    break;
+
+                case 'ParaSwap':
+                    handleResult('ParaSwap', await fetchWithCountdown(
+                        safeCellId,dexName,
+                        () => DEXAPIs.getParaSwapPrice(inputContract, outputContract, rawAmountIn, inputDecimals, outputDecimals, chainId,direction),
+                        timeoutLimit
+                    ));
+                    break;
+
+                case 'ODOS': {
+                    const odosIn = [{ tokenAddress: inputContract, amount: rawAmountIn.toString() }];
+                    const odosOut = [{ tokenAddress: outputContract, proportion: 1 }];
+                    const wallet = this.settings?.WalletAddress || '0x0000000000000000000000000000000000000000';
+
+                    let odosData;
+                    if (direction === 'cex_to_dex') {
+                        odosData = await fetchWithCountdown(
+                            safeCellId,dexName,
+                            () => DEXAPIs.getODOSPrice(odosIn, odosOut, wallet, rawAmountIn.toString(), chainId),
+                            timeoutLimit
+                        );
+                    } else {
+                        odosData = await fetchWithCountdown(
+                            safeCellId,dexName,
+                            () => DEXAPIs.getHinkalPrice(odosIn, odosOut, wallet, rawAmountIn.toString(), chainId),
+                            timeoutLimit
+                        );
+                    }
+
+                    if (odosData?.status === 'timeout' || odosData?.error) {
+                        throw new Error(`ODOS error: ${odosData.error || odosData.status}`);
+                    }
+
+                    handleResult('ODOS', { ...odosData, amountOut: odosData.outAmounts?.[0] || '0' });
+                    break;
+                }
+
+                default:
+                    console.warn(`[⚠️ fetchDEXPrices] DEX tidak dikenal: ${dexName}`);
+                    break;
+            }
+
+         }  catch (err) {
+            const slug = fallbackSlugMap[dexName];
+            
+            // ✅ Konversi error menjadi string dengan pengecekan properti umum
+            const errorMessage = typeof err === 'string'
+                ? err
+                : err?.error || err?.message || JSON.stringify(err) || 'Unknown error';
+
+            this.CellResult(token, cexData, { isFallbackLoading: true }, direction, cexName, dexName);
+
+            if (!slug) {
+//                console.warn(`⛔ Tidak ada fallback tersedia untuk ${dexName}`);
+                this.CellResult(token, cexData, { error: errorMessage }, direction, cexName, dexName);
+                return;
+            }
+           // if(err.message=="Request timeout"){
+                DEXAPIs.getAltDexPrice( slug, direction,  inputContract,  outputContract, rawAmountIn,  inputDecimals, outputDecimals,  chainId, this.settings?.WalletAddress || '0x0000000000000000000000000000000000000000',  quotePriceUSDT )
+                .then(fallbackData => {
+                    handleResult(dexName, fallbackData, 'amountOut');
+                }).catch(fallbackErr => {
+                    const fallbackErrorMessage = typeof fallbackErr === 'string'
+                        ? fallbackErr
+                        : fallbackErr?.error || fallbackErr?.message || JSON.stringify(fallbackErr) || 'Unknown fallback error';
+
+                    console.error(`❌ Fallback gagal → ${dexName} => ${token.symbol}/${token.pairSymbol}`, fallbackErrorMessage);
+                    this.CellResult(token, cexData, { error: fallbackErrorMessage }, direction, cexName, dexName);
+                });
+           // }
+        }
+
+    }
+
+    CellResult(token, cexInfo, dexInfo, direction, cexName, dexName) {
+        let cellId = direction === 'cex_to_dex'
+            ? `cell_${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}`
+            : `cell_${token.pairSymbol}_${token.symbol}_${token.chain}_${dexName}_${cexName}`;
+        const cleanCellId = cellId.toLowerCase().replace(/\W+/g, '');
+        const $cell = $('#' + cleanCellId);
+        if (!$cell.length) return;
+
+        if (!dexInfo || dexInfo.error || dexInfo.isFallbackLoading || !dexInfo.normalizedOut || dexInfo.normalizedOut <= 0 || dexInfo.hasilUSDT <= 0) {
+            let content = '';
+            if (dexInfo?.isFallbackLoading) {
+                content = `
+                    <div class="price-info text-center text-dark small">⌛ Via Swoop...</div>
+                    <div class="fee-info">&nbsp;</div>
+                    <div class="pnl-info">&nbsp;</div>
+                `;
+                $cell.removeClass().addClass('dex-price-cell text-center text-warning').html(content);
+                return;
+            }
+
+            const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
+            content = `
+                <div class="price-info">&nbsp;</div>
+                <div class="fee-info" title="${dexName}: ${errorMsg}">⚠️</div>
+                <div class="pnl-info">&nbsp;</div>
+            `;
+            $cell.removeClass().addClass('dex-price-cell pink text-light text-center').html(content);
+            return;
+        }
+
+        const modal = direction === 'cex_to_dex' ? token.modalCexToDex : token.modalDexToCex;
+        const fee = dexInfo.fee || 0;
+        const baseBuy = dexInfo.baseBuy || 0;
+        const baseSell = dexInfo.baseSell || 0;
+        const quoteUSDT = dexInfo.quotePriceUSDT || dexInfo.price || 0;
+        const rawRate = dexInfo.rawRate || 0;
+
+        let buyPrice = direction === 'cex_to_dex' ? baseBuy : rawRate;
+        let sellPrice = direction === 'cex_to_dex' ? rawRate : baseSell;
+
+        // 🔁 Convert DEX price to USDT if direction is CEX → DEX
+        if (direction === 'cex_to_dex') {
+            const quoteSymbol = token.pairSymbol.toUpperCase();
+            const quoteToUSDT = cexInfo?.[`${quoteSymbol}ToUSDT`]?.buy || cexInfo?.[`${quoteSymbol}ToUSDT`]?.sell || 0;
+            if (rawRate && quoteToUSDT) {
+                sellPrice = rawRate * quoteToUSDT;
+            }
+        }
+
+        const qty = dexInfo.normalizedIn || (modal / baseBuy);
+        const resultQty = dexInfo.normalizedOut || 0;
+        const hasilUSDT = dexInfo.hasilUSDT || (resultQty * quoteUSDT);
+
+        // Fee Detail
+        const matchedCEXKey = Object.keys(token.cexInfo || {}).find(k => k.toUpperCase() === cexName.toUpperCase());
+        const feeWDToken = token.cexInfo?.[matchedCEXKey]?.[token.symbol.toUpperCase()]?.feewd ?? 0;
+
+        const feeTrade = modal * 0.0013;
+        const feeWD = feeWDToken * baseBuy;
+        const totalFee = feeTrade + feeWD + fee;
+
+        const pnl = hasilUSDT - modal;
+        const pnlNetto = pnl - totalFee;
+        const pnlClass = pnlNetto > 0 ? 'opit' : 'lost';
+        const tdStyle = pnlNetto > 0 ? 'background-color:rgb(183, 235, 212) !important;' : '';
+
+        const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+        const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+        const resultSymbol = toSymbol;
+        const resultDecimals = direction === 'cex_to_dex' ? token.pairDecimals : token.decimals;
+
+        const linkSwap = direction === 'cex_to_dex'
+            ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
+            : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
+        const mainSymbol = token.symbol.toUpperCase();
+        const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), mainSymbol, mainSymbol);
+        const cexLink = cexLinks.tradeLink || '#';
+        const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
+        const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
+
+        // Konversi harga ke IDR
+        const resultPriceUSDT = (
+            cexInfo?.[`${resultSymbol.toUpperCase()}ToUSDT`]?.buy ||
+            cexInfo?.[`${resultSymbol.toUpperCase()}ToUSDT`]?.sell ||
+            0
+        );
+        const usdtValueFinal = resultQty * resultPriceUSDT;
+        const usdtToIDR = window.ExchangeRates?.IndodaxUSDT || 16000;
+        const buyPriceIDR = buyPrice * usdtToIDR;
+        const sellPriceIDR = sellPrice * usdtToIDR;
+        const swapRate = resultQty / qty;
+
+        // Tooltip versi LOG 
+        const hargaSwapEfektif = direction === 'cex_to_dex'
+        ? ((resultQty / qty) * quoteUSDT).toFixed(6)
+        : (modal / resultQty).toFixed(6);
+
+    const pnlPersen = ((pnl / modal) * 100).toFixed(2);
+
+    const tooltip = direction === 'cex_to_dex'
+        ? `
+    ✅ [LOG CEX → DEX] ${token.symbol} → ${token.pairSymbol} on ${(token.chain).toUpperCase()}
+    🔄 [${cexName.toUpperCase()} → ${(dexInfo.exchange).toUpperCase()}]
+
+    🪙 Modal: $${modal}
+    🛒 Beli di ${cexName} @ $${baseBuy.toFixed(6)} → ${qty.toFixed(6)} ${token.symbol}
+    💱 Harga Beli (${cexName.toUpperCase()}) dalam IDR: Rp ${Math.round(buyPriceIDR).toLocaleString('id-ID')}
+
+    💰 Swap di ${dexName}:
+    - Harga Swap Efektif: ~$${hargaSwapEfektif} / ${token.symbol}
+    - Hasil: $${hasilUSDT.toFixed(6)}
+    💱 Harga Jual (${dexName.toUpperCase()}) dalam IDR: Rp ${Math.round(sellPriceIDR).toLocaleString('id-ID')}
+
+    💸 Fee WD: $${feeWD.toFixed(2)}
+    🛒 Fee Swap: $${fee.toFixed(2)}
+    🧾 Total Fee: ~$${totalFee.toFixed(2)}
+
+    📈 PNL: ${pnl >= 0 ? '+' : ''}${pnl.toFixed(2)} USDT (${pnlPersen}%)
+    🚀 PROFIT : ${pnlNetto.toFixed(2)} USDT
+    `.trim()
+        : `
+    ✅ [LOG DEX → CEX] ${token.pairSymbol} → ${token.symbol} on ${(token.chain).toUpperCase()}
+    🔄 [${cexName.toUpperCase()} → ${(dexInfo.exchange).toUpperCase()}]
+
+    🪙 Modal: $${modal}
+    🛒 Swap di ${dexName} → ${resultQty.toFixed(6)} ${token.symbol} @ ~$${hargaSwapEfektif}/${token.symbol}
+    💱 Harga Beli (${dexName.toUpperCase()}) dalam IDR: Rp ${Math.round(buyPriceIDR).toLocaleString('id-ID')}
+
+    💰 Jual di ${cexName}:
+    - Harga Jual: ~$${baseSell.toFixed(6)}/${token.symbol}
+    - Hasil: $${hasilUSDT}
+    💱 Harga Jual (${cexName.toUpperCase()}) dalam IDR: Rp ${Math.round(sellPriceIDR).toLocaleString('id-ID')}
+
+    💸 Fee Swap: $${fee.toFixed(2)}
+    🧾 Total Fee: ~$${totalFee.toFixed(2)}
+
+    📈 PNL: ${pnl >= 0 ? '+' : ''}${pnl.toFixed(2)} USDT (${pnlPersen}%)
+    🚀 PROFIT : ${pnlNetto.toFixed(2)} USDT
+    `.trim();
+
+        // ➕ Kirim sinyal jika PNL positif
+        if (pnlNetto > 0) {
+            this.pnlSignals = this.pnlSignals || {};
+            const dexKey = dexName.toUpperCase();
+            this.pnlSignals[dexKey] = this.pnlSignals[dexKey] || [];
+
+            const fromSideRaw = direction === 'cex_to_dex' ? cexName : dexName;
+            const toSideRaw = direction === 'cex_to_dex' ? dexName : cexName;
+
+            const fromSide = CexShortMap[fromSideRaw] || fromSideRaw;
+            const toSide = CexShortMap[toSideRaw] || toSideRaw;
+
+            const shortChain = chainShortMap[token.chain?.toUpperCase()] || 'CHAIN';
+
+            const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(cexName, 'cex'));
+            const chainColor = this.getTextColorClassFromBadge(this.getBadgeColor(token.chain, 'chain'));
+            const rowId = `token-row-${token.id}-${cexName.replace(/\W+/g, '').toLowerCase()}`;
+            
+            const cexBadgeColor = this.getBadgeColor(cexName, 'cex');
+            
+            const directionLabel = direction === 'cex_to_dex'
+                ? `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${fromSide.toUpperCase()}</span><span class="text-success fw-bold fs-8">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`
+                : `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${toSide.toUpperCase()}</span><span class="text-danger fw-bold fs-8">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`;
+
+             const signalText = `🔅<a href="#${rowId}" class="text-decoration-none text-dark text-break">
+                ${directionLabel}:<span class="text-dark fs-8 fw-bold">${modal}</span>➔<span class="fs-7 fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}</span>
+            </a>`;
+
+            const signalKey = `${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}_${direction}`;
+            const listEl = document.getElementById(`pnl-list-${dexKey}`);
+            const existingLI = listEl?.querySelector(`li[data-key="${signalKey}"]`);
+
+            if (!this.pnlSignals[dexKey][signalKey] && !existingLI) {
+                this.pnlSignals[dexKey][signalKey] = {
+                    html:signalText,
+                    pnlNetto: pnlNetto
+                };
+
+                if (listEl) {
+                    listEl.classList.add('list-unstyled');
+
+                    const highlightClass = pnlNetto > parseFloat(this.settings.PNLFilter)
+                        ? "highlight"
+                        : "";
+
+                    const li = document.createElement("li");
+                    li.className = highlightClass;
+                    li.setAttribute("data-key", signalKey);  // ✅ mencegah duplikat
+
+                    li.innerHTML = signalText;
+
+                    listEl.append(li);
+                }
+            }
+
+            const username = this.settings.UserName || 'Anon';
+            const modalParsed = parseFloat(modal);
+            const pnlFilter = parseFloat(this.settings.PNLFilter);
+
+           if (direction === 'cex_to_dex') {
+                const audio = new Audio(pnlNetto > pnlFilter ? 'MULTI/boom.mp3' : 'MULTI/sinyal.mp3');
+                audio.play();
+
+                if (pnlNetto > pnlFilter) {
+                    // CEX → DEX: baseBuy vs hargaSwapEfektif
+                    this.sendInfoSignal(
+                        username, token, cexName, dexName,
+                        baseBuy, hargaSwapEfektif,
+                        feeWD, fee, totalFee, pnl, pnlNetto,
+                        direction, modalParsed
+                    );
+                }
+
+            } else if (direction === 'dex_to_cex') {
+                const audio = new Audio(pnlNetto > pnlFilter ? 'MULTI/boom.mp3' : 'MULTI/sinyal.mp3');
+                audio.play();
+
+                if (pnlNetto > pnlFilter) {
+                    // DEX → CEX: hargaSwapEfektif vs baseSell
+                    this.sendInfoSignal(
+                        username, token, cexName, dexName,
+                        hargaSwapEfektif, baseSell,
+                        feeWD, fee, totalFee, pnl, pnlNetto,
+                        direction, modalParsed
+                    );
+                }
+            }
+
+
+        }
+
+        // 🎯 Render ke dalam cell
+        $cell
+            .attr('style', tdStyle)
+            .attr('title', tooltip)
+            .removeClass()
+            .addClass('dex-price-cell align-middle')
+            .html(`
+                <div class="price-info">
+                    <div class="small text-muted fw-bold"> ${(dexInfo.exchange).toUpperCase() || dexName.toUpperCase()}</div>
+                    <a href="${buyLink}" target="_blank" class="text-success">⬆ ${PriceUtils.formatPrice(buyPrice)}</a><br>
+                    <a href="${sellLink}" target="_blank" class="text-danger">⬇ ${PriceUtils.formatPrice(sellPrice)}</a>
+                </div>
+                ${
+                    direction === 'cex_to_dex'
+                        ? `<a href="${cexLinks.withdrawUrl}" target="_blank" class="text-primary">🔂WD: ${PriceUtils.formatFee(feeWD)} </a>`
+                        : `<a href="${cexLinks.depositUrl}" target="_blank" class="text-primary">📤DP[${toSymbol}]</a>`
+                }
+                <div class="fw-bold text-danger">Swap: ${PriceUtils.formatFee(fee)}</div>
+                <div class="text-dark small" title="PNL - Fee Total"><strong>[${PriceUtils.formatPNL(pnl)}-${(totalFee).toFixed(2)}]</strong></div>
+                <div class="${pnlClass}"><strong>💰 NET: ${PriceUtils.formatPNL(pnlNetto)}</strong></div>
+            `);
+
+    }
+
+    initPNLSignalStructure() {
+        const container = $('#dexSignals');
+        container.empty();
+
+        const map = {
+            Lifi: 'text-light',
+            KyberSwap: 'text-success',
+            Matcha: 'text-primary',
+            ODOS: 'text-danger',
+            Magpie: 'text-info',
+            ParaSwap: 'text-secondary',
+            OKXDEX: 'text-dark',
+        };
+
+        this.pnlSignals = {};
+        const row = $('<div class="row g-1"></div>');
+
+        for (const dex of DexList) {
+            this.pnlSignals[dex] = [];
+
+            const textColor = map[dex] || 'text-muted';
+            const dexId = dex.toUpperCase();
+            const collapseId = `collapse-${dexId}`;
+            const listId = `pnl-list-${dexId}`;
+
+            const card = $(`
+                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+
+                    <div class="card border shadow-sm h-100 rounded-top no-rounded-bottom">
+
+                        <!-- HEADER: putih -->
+                        <div class="card-header px-2 py-1 d-flex justify-content-between align-items-center border-bottom-0 NamaDEXSinyal" style="min-height: unset;">
+                            <div class="fw-semibold text-uppercase ${textColor}" style="font-size: 0.85rem;">
+                                ${dexId}
+                            </div>
+                            <i class="bi bi-caret-down-fill toggle-icon" id="icon-${dexId}"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#${collapseId}"
+                            aria-expanded="true"
+                            aria-controls="${collapseId}"
+                            style="cursor: pointer; font-size: 0.85rem;"></i>
+                        </div>
+
+                        <!-- BODY: abu-abu muda -->
+                        <div class="card-body p-1 pt-1 pb-1 bg-white">
+                            <div id="${collapseId}" class="collapse show">
+                               <ul id="${listId}" class="mb-1 small text-start" ></ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            `);
+
+
+            row.append(card);
+        }
+
+        container.append(row);
+
+        // Gunakan event resmi Bootstrap: shown.bs.collapse dan hidden.bs.collapse
+        container.on('shown.bs.collapse', function (e) {
+            const targetId = $(e.target).attr('id'); // contoh: collapse-KYBERSWAP
+            const dexId = targetId.replace('collapse-', '');
+            $(`#icon-${dexId}`).removeClass('bi-caret-right-fill').addClass('bi-caret-down-fill');
+        });
+
+        container.on('hidden.bs.collapse', function (e) {
+            const targetId = $(e.target).attr('id');
+            const dexId = targetId.replace('collapse-', '');
+            $(`#icon-${dexId}`).removeClass('bi-caret-down-fill').addClass('bi-caret-right-fill');
+        });
+    }
+
+    generateDexLink(dex, tokenChain, tokenSymbol, tokenAddress, pairSymbol, pairAddress) {
+        const chainName = tokenChain.toLowerCase(); // e.g. 'bsc', 'ethereum'        
+        const chainCode = chainCodeMap[chainName] || 1;
+
+        const links = {
+            kyberswap: `https://kyberswap.com/swap/${chainName}/${tokenAddress}-to-${pairAddress}`,
+            matcha: `https://matcha.xyz/tokens/${chainName}/${tokenAddress.toLowerCase()}?buyChain=${chainCode}&buyAddress=${pairAddress.toLowerCase()}`,
+            magpie: `https://app.magpiefi.xyz/swap/${chainName}/${tokenSymbol.toUpperCase()}/${chainName}/${pairSymbol.toUpperCase()}`,
+            odos: "https://app.odos.xyz",
+            okxdex: `https://www.okx.com/web3/dex-swap?inputChain=${chainCode}&inputCurrency=${tokenAddress}&outputChain=501&outputCurrency=${pairAddress}`,
+            paraswap: `https://app.ParaSwap.xyz/#/swap/${tokenAddress}-${pairAddress}?version=6.2&network=${chainName}`,
+            lifi : `https://jumper.exchange/?fromChain=${chainCode}&fromToken=${tokenAddress}&toChain=${chainCode}&toToken=${pairAddress}`,
+        };
+
+        return links[dex.toLowerCase()] || null;
+    }
+
+    generateStokLinkCEX(tokenAddress, chain, cex) {
+        const chainKey = chain.toLowerCase();
+        const cexKey = cex.toUpperCase();
+        const chainData = CEXWallets[chainKey];
+        if (!chainData) return '#STOK';
+
+        const wallet = chainData.WALLET_CEX?.[cexKey]?.address;
+        const explorer = explorerUrls[chainData.Kode_Chain] || explorerUrls['1'];
+
+        if (!wallet) return '#STOK';
+
+        return `${explorer}/token/${tokenAddress}?a=${wallet}`;
+    }
+
+    // ✅ Tambahkan fungsi ini dalam class
+    GeturlExchanger(cex, NameToken, NamePair, direction = 'cex_to_dex') {
+        const token = NameToken.toUpperCase();
+        const pair = NamePair.toUpperCase();
+        const dir = direction.toLowerCase();
+
+        let tradeLink = '#';
+        let withdrawUrl = null;
+        let depositUrl = null;
+        let symbolWD = token;
+        let symbolDP = token;
+
+        // ✅ Tentukan simbol untuk trade berdasarkan arah dan posisi USDT
+        let symbolForTrade = 'BTC'; // fallback jika tidak ada pilihan
+
+        if (token === 'USDT') {
+            symbolForTrade = pair;
+        } else if (pair === 'USDT') {
+            symbolForTrade = token;
+        } else {
+            symbolForTrade = pair;
+        }
+
+        switch (cex.toUpperCase()) {
+            case 'BINANCE':
+                tradeLink = `https://www.binance.com/en/trade/${symbolForTrade}_USDT`;
+                withdrawUrl = `https://www.binance.com/en/my/wallet/account/main/withdrawal/crypto/${symbolWD}`;
+                depositUrl = `https://www.binance.com/en/my/wallet/account/main/deposit/crypto/${symbolDP}`;
+                break;
+
+            case 'GATEIO':
+                tradeLink = `https://www.gate.io/trade/${symbolForTrade}_USDT`;
+                withdrawUrl = `https://www.gate.io/myaccount/withdraw/${symbolWD}`;
+                depositUrl = `https://www.gate.io/myaccount/deposit/${symbolDP}`;
+                break;
+
+            case 'MEXC':
+                tradeLink = `https://www.mexc.com/exchange/${symbolForTrade}_USDT?_from=search`;
+                withdrawUrl = `https://www.mexc.com/assets/withdraw/${symbolWD}`;
+                depositUrl = `https://www.mexc.com/assets/deposit/${symbolDP}`;
+                break;
+
+            case 'INDODAX':
+                tradeLink = `https://indodax.com/market/${symbolForTrade}IDR`;
+                withdrawUrl = `https://indodax.com/finance/${symbolWD}#kirim`;
+                depositUrl = `https://indodax.com/finance/${symbolDP}`;
+                break;
+            }
+
+        return {
+            tradeLink,
+            withdrawUrl,
+            depositUrl
+        };
+    }
+
+    // Create token detail content
+    createTokenDetailContent(token, cex) {
+        const chainId = PriceUtils.getChainId(token.chain);
+        const explorerUrl = explorerUrls[chainId] || explorerUrls['1'];
+
+        const tokenSymbol = token.symbol.toUpperCase();
+        const pairSymbol = token.pairSymbol.toUpperCase();
+        const chain = token.chain.toUpperCase();
+        const cexUpper = cex.toUpperCase();
+
+        const cexBadgeColor = this.getBadgeColor(cex, 'cex');
+        const chainBadgeColor = this.getBadgeColor(token.chain, 'chain');
+        const chainColor = this.getTextColorClassFromBadge(this.getBadgeColor(token.chain, 'chain'));
+
+        const url = this.GeturlExchanger(cexUpper, tokenSymbol, pairSymbol, 'cex_to_dex');
+        const url2 = this.GeturlExchanger(cexUpper, pairSymbol, tokenSymbol, 'dex_to_cex');
+
+        const tokenSC = `<a href="${url2.tradeLink}" class="fs-7 bg-light badge ${chainColor} mx-1" target="_blank">${tokenSymbol}</a>`;
+        const pairSC = `<a href="${url.tradeLink}" class="fs-7" target="_blank">${pairSymbol}</a>`;
+
+        const stokTokenLink = this.generateStokLinkCEX(token.contractAddress, token.chain, cexUpper);
+        const stokPairLink = this.generateStokLinkCEX(token.pairContractAddress, token.chain, cexUpper);
+        const shortChain = chainShortMap[token.chain?.toUpperCase()] || 'CHAIN';
+
+        const tokenStok = `<a href="${explorerUrl}/token/${token.contractAddress}" target="_blank">[SC]</a>`;
+        const pairStok = `<a href="${explorerUrl}/token/${token.pairContractAddress}" target="_blank">[SC]</a>`;
+
+        const linkOKDEX = `<a href="https://www.okx.com/web3/dex-swap?inputChain=${chainId}&inputCurrency=${token.contractAddress}&outputChain=501&outputCurrency=${token.pairContractAddress}" target="_blank" class="text-dark">#OKX</a>`;
+        const linkUNIDEX = `<a href="https://app.unidex.exchange/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="text-warning">#UNX</a>`;
+        const linkDEFIL = `<a href="https://swap.defillama.com/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="text-success">#DFL</a>`;
+        const link1INCH = `<a href="https://app.1inch.io/advanced/swap?network=${chainId}&src=${token.contractAddress}&dst=${token.pairContractAddress}" target="_blank" class="text-danger">#1NC</a>`;
+        const linkLIFI = `<a href="https://jumper.exchange/?fromChain=${chainId}&fromToken=${token.contractAddress}&toChain=${chainId}&toToken=${token.pairContractAddress}" target="_blank" class="text-info">#LFX</a>`;
+
+        // 🔍 Ambil info token & pair dari token.cexInfo
+        const matchedCEXKey = Object.keys(token.cexInfo || {}).find(k => k.toUpperCase() === cexUpper);
+        const infoCEX = token.cexInfo?.[matchedCEXKey] || {};
+        const tokenInfo = infoCEX[tokenSymbol] || {};
+        const pairInfo = infoCEX[pairSymbol] || {};
+
+        // === STATUS BADGE ===
+
+        const wdBadgeToken = (tokenInfo.wd === true)
+            ? `<a href="${url.withdrawUrl || '#'}" target="_blank" class="text-success">WD</a>`
+            : (tokenInfo.wd === false)
+                ? `<span class="fw-bold text-danger">WX</span>`
+                : `<span class="text-warning">⚠️</span>`;
+
+        const dpBadgeToken = (tokenInfo.depo === true)
+            ? `<a href="${url.depositUrl || '#'}" target="_blank" class="text-success">DP</a>`
+            : (tokenInfo.depo === false)
+                ? `<span class="fw-bold text-danger">DX</span>`
+                : `<span class="text-warning">⚠️</span>`;
+
+        const wdBadgePair = (pairInfo.wd === true)
+            ? `<a href="${url2.withdrawUrl || '#'}" target="_blank" class="text-success">WD</a>`
+            : (pairInfo.wd === false)
+                ? `<span class="fw-bold text-danger">WX</span>`
+                : `<span class="text-warning">⚠️</span>`;
+
+        const dpBadgePair = (pairInfo.depo === true)
+            ? `<a href="${url2.depositUrl || '#'}" target="_blank" class="text-success">DP</a>`
+            : (pairInfo.depo === false)
+                ? `<span class="fw-bold text-danger">DX</span>`
+                : `<span class="text-warning">⚠️</span>`;
+      return `
+          <div>
+                <span class="d-block mb-0">   
+                    <button class="btn bg-success btn-xs text-light"  onclick="app.confirmToggleToken('${token.id}')" title="Ganti Status">
+                        <i class="bi bi-power"></i>
+                    </button>
+
+                     <strong class="fs-8 align-middle">${token.modalCexToDex}$ ⇔ ${token.modalDexToCex}$</strong>
+                    <button class="btn bg-primary btn-xs text-light" onclick="app.editToken('${token.id}')" title="Ubah">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                     <button class="btn bg-danger btn-xs text-light" onclick="app.deleteToken('${token.id}')" title="Hapus">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </span>
+
+                <!-- CEX & Chain badge -->
+                <span class="d-block mb-0 text-secondary fs-6">
+                    <span class="badge ${cexBadgeColor}">${cexUpper}</span>
+                    in <span class="badge ${chainBadgeColor}">${shortChain}</span>
+                </span>
+
+                <!-- SC & Trade Info -->
+                <span class="d-block mb-0 fw-bold">
+                    <span>${tokenSC}<a href="${stokTokenLink}" target="_blank"><i class="bi bi-wallet"></i></a> </span>
+                    VS 
+                    <span>${pairSC} <a href="${stokPairLink}" target="_blank"><i class="bi bi-wallet"></i></a></span>
+                </span>
+
+                <!-- Status WD/DP masing-masing -->
+                <span class="d-block mb-0 text-secondary fs-9">
+                    ${tokenStok}[${wdBadgeToken} ${dpBadgeToken}]
+                    ~
+                    ${pairStok}[${wdBadgePair} ${dpBadgePair}]
+                </span>
+
+                <!-- Link-link DEX -->
+                <span class="d-block fw-bold fs-9">
+                    ${link1INCH} ${linkOKDEX} ${linkDEFIL} ${linkUNIDEX} 
+                </span>
+            </div>
+            `;
+    }
+
+    confirmToggleToken(tokenId) {
+        const userConfirmed = confirm("Apakah Anda yakin ingin mengganti status token ini?\nPerubahan akan berlaku setelah refresh.");
+        if (userConfirmed) {
+            this.toggleTokenStatus(tokenId);
+            alert("Status berhasil diganti. Silakan refresh halaman untuk melihat perubahan.");
+        }
+    }
+
+    // Utility functions
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    showAlert(message, type = 'info') {
+        const alertId = 'alert-' + Date.now();
+
+        const alertHtml = `
+            <div id="${alertId}" class="alert alert-${type} alert-dismissible fade show position-fixed d-flex align-items-center justify-content-between"
+                style="top: 1%; left: 50%; transform: translateX(-50%); z-index: 9999; min-width: 70%; max-width: 90vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 3rem;">
+
+                <div class="me-2">${message}</div>
+                <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+
+        $('body').append(alertHtml);
+
+        setTimeout(() => {
+            $(`#${alertId}`).alert('close');
+        }, 5000);
+    }
+
+     logAction(message) {
+        const now = new Date();
+
+        const dd = String(now.getDate()).padStart(2, '0');
+        const mm = String(now.getMonth() + 1).padStart(2, '0'); // Bulan dimulai dari 0
+        const yyyy = now.getFullYear();
+
+        const hh = String(now.getHours()).padStart(2, '0');
+        const min = String(now.getMinutes()).padStart(2, '0');
+        const ss = String(now.getSeconds()).padStart(2, '0');
+
+        const timestamp = `${dd}-${mm}-${yyyy} ${hh}:${min}:${ss}`;
+        const fullMessage = `${timestamp} [${message}]`;
+
+        // Simpan ke localStorage
+        localStorage.setItem("MULTI_ACTIONS", fullMessage);
+
+        // Update tampilan
+        $('#infostatus').text(fullMessage);
+
+        // Logging ke console (opsional)
+        console.log("Action:", fullMessage);
+    }
+
+    sendStatusTELE(user, status) {
+        var users = [
+            { chat_id: -1002079288809 }
+        ];
+
+         // Ambil hanya token yang aktif
+        const activeTokens = this.tokens.filter(t => t.isActive);
+
+        // Hitung jumlah per chain
+        const bscCount = activeTokens.filter(t => t.chain === 'BSC').length;
+        const ethCount = activeTokens.filter(t => t.chain === 'Ethereum').length;
+        const polyCount = activeTokens.filter(t => t.chain === 'Polygon').length;
+        const baseCount = activeTokens.filter(t => t.chain === 'Base').length;
+        const arbCount = activeTokens.filter(t => t.chain === 'Arbitrum').length;
+        
+        var apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
+
+       // var message = "MULTI ARBITRAGE: #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>";
+        let message =
+        `#${user.toUpperCase()} is <b>${status}</b> in MULTIALL\n` +
+        `-------------------------------------------\n` +
+        `• <b>BSC</b>: ${bscCount} ` +
+        `• <b>Ethereum</b>: ${ethCount} \n` +
+        `• <b>Polygon</b>: ${polyCount} ` +
+        `• <b>Base</b>: ${baseCount} \n` +
+        `• <b>Arbitrum</b>: ${arbCount} ` ;
+        // Loop melalui daftar pengguna
+        for (var i = 0; i < users.length; i++) {
+            var user = users[i];
+            var chatId = user.chat_id; // Ganti dengan ID chat pengguna
+
+            // Membuat permintaan POST menggunakan jQuery
+            $.ajax({
+            url: apiUrl,
+            method: "POST",
+            data: {
+                chat_id: chatId,
+                text: message,
+                parse_mode: "HTML",
+                disable_web_page_preview: true
+            },
+            success: function(response) {
+                // console.log("Message sent successfully");
+            },
+            error: function(xhr, status, error) {
+                console.log("Error sending message:", error);
+            }
+            });
+          }
+    }
+
+    sendInfoSignal(user, token, cex, dex, buyPrice, sellPrice, feeWD, feeSwap,totalFee, pnl,netto, direction, modal) {
+        const users = [
+            { chat_id: -1002079288809 }
+        ];
+
+        const apiUrl = 'https://api.telegram.org/bot8053447166:AAH7YYbyZ4eBoPX31D8h3bCYdzEeIaiG4JU/sendMessage';
+
+        const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
+        const toSymbol   = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
+        const scIn       = direction === 'cex_to_dex' ? token.contractAddress : token.pairContractAddress;
+        const scOut      = direction === 'cex_to_dex' ? token.pairContractAddress : token.contractAddress;
+
+        const chainName  = token.chain.toLowerCase();
+        const chainIdMap = {
+            'ethereum': '1',
+            'bsc': '56',
+            'polygon': '137',
+            'arbitrum': '42161',
+            'base': '8453',
+        };
+        const chainId = chainIdMap[chainName];
+        const explorerBase = explorerUrls[chainId] || 'https://etherscan.io';
+
+        const linkBuy  = `<a href="${explorerBase}/token/${scIn}" target="_blank">${fromSymbol}</a>`;
+        const linkSell = `<a href="${explorerBase}/token/${scOut}" target="_blank">${toSymbol}</a>`;
+
+        // ✅ Ambil link trade CEX masing-masing simbol
+        const cexLinkFrom = this.GeturlExchanger(cex.toUpperCase(), fromSymbol, fromSymbol)?.tradeLink || '#';
+        const cexLinkTo   = this.GeturlExchanger(cex.toUpperCase(), toSymbol, toSymbol)?.tradeLink || '#';
+
+        const dexTradeLink = `https://swap.defillama.com/?chain=${token.chain}&from=${scIn}&to=${scOut}`;
+       // console.log("isi pesan : ");
+
+        const message =
+            `<b>#SIGNAL_MULTIALL</b>\n` +
+            `<b>USER:</b> #${user}\n` +
+            `--------------------------------------------\n` +
+             `<b>MARKET:</b> <a href="${cexLinkFrom}" target="_blank">${cex.toUpperCase()}</a> VS <a href="${dexTradeLink}" target="_blank">${dex.toUpperCase()}</a>\n` +
+             `<b>CHAIN:</b> ${token.chain.toUpperCase()}\n` +
+             `<b>TOKEN-PAIR:</b> <b>#<a href="${cexLinkFrom}" target="_blank">${fromSymbol}</a>_<a href="${cexLinkTo}" target="_blank">${toSymbol}</a></b>\n` +
+             `<b>MODAL:</b> $${modal} | <b>OPIT:</b> ${netto.toFixed(2)}$ \n` +
+             `<b>BUY:</b> ${linkBuy} @ ${buyPrice} \n` +
+             `<b>SELL:</b> ${linkSell} @ ${sellPrice} \n` +
+             `<b>FEE WD:</b> ${feeWD.toFixed(3)}$ \n` +
+             `<b>FEE TOTAL:</b> $${totalFee.toFixed(2)} | <b>SWAP:</b> $${feeSwap.toFixed(2)}\n` +
+            `<b>PNL:</b> ${pnl.toFixed(3)}$\n` +
+            `--------------------------------------------`;
+      //  console.log(message);
+
+        users.forEach(user => {
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: user.chat_id,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function () {
+                  //   console.log("✅ Signal berhasil dikirim ke Telegram");
+                },
+                error: function (xhr, status, error) {
+                  //  console.error("❌ Gagal kirim ke Telegram:", error);
+                }
+            });
+        });
+    }
+
+    tryAutoScrollToRow(firstToken) {
+        const isAutoScroll = localStorage.getItem('MULTI_autoScroll') === 'true';
+        if (!isAutoScroll) return;
+
+        const firstCEX = (firstToken).selectedCexs?.[0] || 'binance';
+        const rowId = `token-row-${firstToken.id}-${firstCEX.toLowerCase()}`;
+        const $row = $('#' + rowId);
+        const $wrapper = $('.scrollable-price-table');
+
+        if ($row.length && $wrapper.length) {
+            const headerOffset = 60; // Ubah sesuai tinggi header table kamu
+            const rowTop = $row[0].offsetTop;
+            $wrapper[0].scrollTo({
+                top: rowTop - headerOffset,
+                behavior: 'smooth'
+            });
+            setTimeout(() => $row.removeClass('highlight-row'), 2500);
+        }
+    }
+
+}
+
+// Initialize the application when DOM is ready
+$(document).ready(function() {
+    window.app = new TokenPriceMonitor();
+    
+    if (!$('#alert-container').length) {
+        $('body').append(`
+            <div id="alert-container" class="position-fixed d-flex gap-2"
+                style="top: 6%; right: 2%; z-index: 9999; flex-wrap: wrap; justify-content: flex-end;">
+            </div>
+        `);
+    }
+
+    //const settings = localStorage.getItem('MULTI_SETTING');
+    // const parsed = settings ? JSON.parse(settings) : null;
+
+    // if (!parsed || parsed.UserName === 'XXX' || parsed.UserName === null || parsed.WalletAddress === '-' || parsed.WalletAddress === null || parsed.UserName === '' || parsed.WalletAddress === '') {
+    //     $('#CheckPrice').prop('disabled', true); 
+    //     $('#autorunBtn').prop('disabled', true);
+
+    //     alert("SILAKAN SETTING APP DAHULU!!");
+    // }
+
+    const parsed = JSON.parse(localStorage.getItem('MULTI_SETTING'));
+    const isInvalid = !parsed || parsed.UserName === 'XXX' || parsed.UserName === null || 
+                    parsed.WalletAddress === '-' || parsed.WalletAddress === null || 
+                    parsed.UserName.trim() === '' || parsed.WalletAddress.trim() === '';
+
+    if (isInvalid) {
+        $('#CheckPrice').prop('disabled', true);
+        $('#autorunBtn').prop('disabled', true);
+        alert("SILAKAN SETTING APP DAHULU!!");
+        // Sembunyikan semua tab-item kecuali #apiSettings
+        $('#mainTabs .nav-item').each(function () {
+            const href = $(this).find('.nav-link').attr('href');
+            if (href !== '#apiSettings') {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+        });
+
+        // Tampilkan hanya tab content Settings
+        $('.tab-pane').removeClass('active show');
+        $('#apiSettings').addClass('active show');
+
+    } else {
+        $('#CheckPrice').prop('disabled', false);
+        $('#autorunBtn').prop('disabled', false);
+
+        // Enable semua tab
+        $('#mainTabs .nav-link').removeClass('disabled');
+    }
+
+    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+        if ($(e.target).attr('href') === '#tokenManagement') {
+            app.updateStats();
+        }
+    });
+
+    // Saat tab apapun diklik dan ditampilkan
+    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('#dexSignals').hide(); // Sembunyikan elemen dexSignals
+    });
+
+      // Inisialisasi nilai dari localStorage
+    const saved = localStorage.getItem('MULTI_autoScroll');
+    $('#autoScrollCheckbox').prop('checked', saved === 'true');
+
+    // Simpan perubahan ke localStorage saat dicentang/ubah
+    $('#autoScrollCheckbox').on('change', function () {
+        const isChecked = $(this).is(':checked');
+        localStorage.setItem('MULTI_autoScroll', isChecked);
+
+        // Tambahkan alert berdasarkan status
+        if (isChecked) {
+            //alert('✅ Auto Scroll diaktifkan.');
+            app.showAlert('✅  Auto Scroll AKTIF ...', 'success');
+        } else {
+            //alert('⛔ Auto Scroll dimatikan.');
+            app.showAlert('❌ Auto Scroll NON AKTIF...!', 'warning');
+        }
+    });
+   
+
+});
+
