@@ -2331,7 +2331,7 @@ $('#CheckPrice').on('click', async () => {
                     <div class="card border shadow-sm h-100 rounded-top no-rounded-bottom">
 
                         <!-- HEADER: putih -->
-                        <div class="card-header px-2 py-1 d-flex justify-content-between align-items-center border-bottom-0 NamaDEXSinyal" style="min-height: unset;">
+                        <div class="card-header px-2 py-1 d-flex justify-content-center align-items-center border-bottom-0 NamaDEXSinyal" style="min-height: unset;">
                             <div class="fw-semibold text-uppercase ${textColor}" style="font-size: 0.85rem;">
                                 ${dexId}
                             </div>
@@ -2344,7 +2344,7 @@ $('#CheckPrice').on('click', async () => {
                         </div>
 
                         <!-- BODY: abu-abu muda -->
-                        <div class="card-body p-1 pt-1 pb-1 bg-white">
+                        <div class="card-body p-1 pt-1 pb-1 bg-warning-subtle">
                             <div id="${collapseId}" class="collapse show">
                                <ul id="${listId}" class="mb-1 small text-start" ></ul>
                             </div>
